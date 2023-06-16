@@ -1,0 +1,113 @@
+/*Ingreso*/
+.login-page,
+.register-page {
+  background: #fff;
+}
+.btn-primary {
+  background-color: #88d600;
+  border: #88d600;
+}
+.btn-primary:focus {
+  background-color: #88d600;
+  border: #88d600;
+}
+.btn-primary:hover {
+  background-color: #79b909;
+}
+/*Inicio*/
+.skin-blue .wrapper,
+.skin-blue .main-sidebar,
+.skin-blue .left-side {
+  background-color: #fff;
+}
+.skin-blue .sidebar a {
+  color: #000;
+}
+.skin-blue .main-header .navbar {
+  background-color: #fff;
+}
+.skin-blue .main-header .navbar .sidebar-toggle {
+  color: #000;
+}
+.skin-blue .main-header .navbar .sidebar-toggle:hover {
+  background: #88d600;
+}
+.skin-blue .main-header .navbar .nav > li > a {
+  color: #000;
+}
+.skin-blue .sidebar-menu > li.active > a {
+  border-left-color: #88d600;
+}
+.skin-blue .main-header .logo {
+  background: #88d600;
+}
+.skin-blue .main-header .logo:hover {
+  background: #79b909;
+}
+.pagination > .active > a,
+.pagination > .active > a:focus,
+.pagination > .active > a:hover,
+.pagination > .active > span,
+.pagination > .active > span:focus,
+.pagination > .active > span:hover {
+  background-color: #88d600;
+  border-color: #88d600;
+}
+.btn-danger {
+  background-color: #000;
+  border-color: #fff;
+}
+.btn-danger:hover {
+  background-color: #000;
+  border-color: #fff;
+}
+.skin-blue .sidebar-menu > li:hover > a,
+.skin-blue .sidebar-menu > li.active > a,
+.skin-blue .sidebar-menu > li.menu-open > a {
+  color: rgb(0, 0, 0);
+  background: #e7ebec;
+}
+/*Editar cliente*/
+
+element.style {
+  background: #88d600 !important;
+  color: white;
+}
+.modal-header {
+  background: #88d600 !important;
+}
+.btn-success {
+  background-color: #000 !important;
+  border-color: #000000 !important;
+}
+.btn-info {
+  background-color: #000000 !important;
+  border-color: #000000 !important;
+}
+
+/* Footer */
+footer > p > strong > a {
+  color: #88d600 !important;
+}
+
+/* Estilos integrador parrilla */
+.entidad {
+  color: #88d600 !important;
+}
+
+/*responsive de image*/
+@media (max-width: 575px) {
+  .main-header .logo {
+    height: 105px !important;
+  }
+}
+@media (max-width: 452px) {
+  .main-header .logo {
+    height: 75px !important;
+  }
+}
+@media (max-width: 300px) {
+  .main-header .logo {
+    height: 50px !important;
+  }
+}

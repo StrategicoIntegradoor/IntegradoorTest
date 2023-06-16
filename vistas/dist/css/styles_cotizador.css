@@ -1,0 +1,394 @@
+
+
+.conten-conocesPlaca {
+    padding-top: 5px;
+}
+
+#contenCeroKM {
+    display: none;
+}
+
+.conten-ceroKM {
+    padding-top: 5px;
+}
+
+.conten-dia{
+    padding-right: 0px !important;
+}
+
+.conten-mes{
+    padding-right: 0px !important;
+    padding-left: 0px !important;
+}
+
+.conten-anio{
+    padding-left: 0px !important;
+}
+
+/* .fecha-nacimiento {
+    width: 96%;
+    padding: 8px 0px;
+    border-radius: 2px;
+    border-color: #ebebeb;
+    background-color: #E8E8E8 !important;
+} */
+
+.fecnacimiento.select2-container .select2-selection--single{
+    width: 96%;
+    height: 34px !important;
+    background-color: #E8E8E8 !important;
+}
+
+.fecnacimiento.select2-container--bootstrap .select2-selection--single .select2-selection__rendered {
+    padding-top: 5px;
+}
+
+.fecnacimiento.select2-container--bootstrap .select2-selection--single .select2-selection__arrow b {
+    border-color: #000000 transparent transparent;
+}
+
+
+
+.nomAseg, .apeAseg {
+    padding-bottom: 0px;
+}
+
+#contenBtnConsultarPlaca {
+    padding-top: 25px;
+}
+
+#headerAsegurado {
+    display: none;
+}
+
+#formularioVehiculo {
+    display: none;
+}
+
+#headerFormVeh {
+    padding-top: 15px;
+}
+
+.row-formVehManual {
+    border-bottom: solid #dedede;
+}
+
+.form-consulVeh {
+    padding-top: 20px;
+}
+
+#loaderVehiculo {
+    padding-top: 25px;
+}
+
+.btnConsultarVeh {
+    padding-top: 25px;
+}
+
+
+#formularioResumen {
+    display: block;
+}
+
+.row-aseg {
+    border-bottom: solid #dedede;
+}
+
+#masAsegurado {
+    text-align: right;
+}
+
+#menosAsegurado {
+    display: none;
+    text-align: right;
+}
+
+#masVehiculo {
+    display: none;
+    text-align: right;
+}
+
+#menosVehiculo {
+    text-align: right;
+}
+
+#masAgrOferta {
+    display: none;
+    text-align: right;
+}
+
+#menosAgrOferta {
+    text-align: right;
+}
+
+.form-resumAseg {
+    padding-top: 15px;
+}
+
+#resumenVehiculo {
+    display: none;
+}
+
+#headerVehiculo {
+    padding-top: 20px;
+}
+
+.row-veh {
+    border-bottom: solid #dedede;
+}
+
+.form-resumVeh {    
+    padding-top: 15px;
+}
+
+
+.dpto.select2-container .select2-selection--single{
+    height: 35px !important;
+}
+
+.dpto.select2-container--bootstrap .select2-selection--single .select2-selection__rendered {
+    padding-top: 4px;
+}
+
+.dpto.select2-container--bootstrap .select2-selection--single .select2-selection__arrow b {
+    border-color: #000000 transparent transparent;
+}
+
+
+.ciudad.select2-container .select2-selection--single{
+    height: 35px !important;
+}
+
+.ciudad.select2-container--bootstrap .select2-selection--single .select2-selection__rendered {
+    padding-top: 4px;
+}
+
+.ciudad.select2-container--bootstrap .select2-selection--single .select2-selection__arrow b {
+    border-color: #000000 transparent transparent;
+}
+
+
+.conten-oneroso {
+    padding-top: 5px;
+}
+
+#contenBenefOneroso {
+    display: none;
+}
+
+#contenBtnCotizar {
+    display: none;
+}
+
+.conten-cotizar {
+    padding-top: 15px;
+}
+
+#contenRecotizarYAgregar {
+    display: none;
+}
+
+.recotizarYAgregar {
+    padding-top: 30px;
+}
+
+#formularioCotizacionManual {
+    display: none;
+}
+
+.form-agregarOferta {
+    padding-top: 15px;
+}
+
+.agregar-oferta {
+    padding-top: 0px;
+}
+
+.row-agregar {
+    border-bottom: solid #dedede;
+}
+
+.btnAgregar {
+    /* padding-top: 25px;
+    padding-bottom: 15px; */
+}
+
+#contenParrilla {
+    display: none;
+}
+
+.form-parrilla {    
+    padding-top: 20px;
+    padding-bottom: 10px;
+}
+
+.row-parrilla {
+    border-bottom: solid #dedede;
+}
+
+
+.card-ofertas {
+    margin: 1% 0% 1% 0%;
+    background-color: #fff;
+    box-shadow: 0px 0px 5px 0px rgb(0 0 0 / 44%);
+    border-radius: 0.5em;
+}
+
+.list-group {
+    padding-left: 0;
+    margin: 15px 0px;
+}
+
+.list-group-item {
+    padding: 5px 5px;
+    margin-bottom: -5px;
+    border: 0px solid #ddd;
+}
+
+.badge {
+    display: inline-block;
+    min-width: 10px;
+    padding: 3px 7px;
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 1;
+    color: #000000;
+    text-align: left !important;
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+}
+
+.oferta-logo img {
+    width: 100px;
+    height: auto;
+    margin-top: 50px;
+    margin-left: 25px;
+}
+
+.oferta-header {
+    padding-top: 24px;
+}
+
+.entidad {
+    font-size: 16px;
+    font-weight:600;
+    color:#24b5d6;
+}
+
+.precio {
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.title-precio {
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.selec-oferta {
+    padding-top: 35px;
+    text-align:right
+}
+
+.selec-oferta label {
+    font-size: 16px;
+    font-weight: 600;
+    color: #3c8dbc;
+}
+
+.recom-oferta {
+    padding-top: 35px;
+    text-align:right
+}
+
+.recom-oferta label {
+    font-size: 16px;
+    font-weight: 600;
+    color: #3c8dbc;
+}
+
+.verpdf-oferta {
+    padding-top: 60px;
+    text-align:center
+}
+
+
+
+@media only screen and (min-width: 736px) and (max-width: 992px) {
+    .verpdf-oferta {
+        padding-top: 21px;
+        padding-bottom: 30px;
+        text-align: center;
+        width: 100%;
+    }
+
+}
+
+
+
+@media only screen and (min-width: 320px) and (max-width: 736px) {
+
+    .nomAseg, .apeAseg {
+        padding-bottom: 10px;
+    }
+
+    #loaderVehiculo {
+        padding-top: 0px;
+        padding-bottom: 10px;
+    }
+
+    .btnConsultarVeh {
+        padding-top: 0px;
+    }
+
+    .agregar-oferta {
+        padding-top: 10px;
+    }
+
+    .card-ofertas {
+        margin: 10% 0% 10% 0%;
+    }
+
+    .list-group-item {
+        padding: 6px 20px;
+    }
+
+    .oferta-logo img {
+        width: 100px;
+        height: auto;
+        display: block;
+        margin: 30px auto;
+    }
+
+    .oferta-header {
+        padding-top: 0px;
+        margin-top: -15px;
+        text-align: center;
+    }
+
+    .selec-oferta {
+        padding-top: 10px;
+        text-align:center
+    }
+
+    .recom-oferta {
+        padding-top: 15px;
+        padding-bottom: 30px;
+        text-align:center
+    }
+    
+    .verpdf-oferta {
+        padding-top: 0px;
+        padding-bottom: 30px;
+        text-align:center
+    }
+
+    .recotizarYAgregar {
+        padding-top: 0px;
+    }
+
+    .btnAgregar {
+        padding-top: 10px;
+    }
+
+}

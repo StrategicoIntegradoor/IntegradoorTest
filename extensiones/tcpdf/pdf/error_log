@@ -1,0 +1,498 @@
+[20-Aug-2022 11:36:53 America/Bogota] PHP Warning:  mysqli_connect(): (28000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/pdf/comparador.php on line 19
+[22-Aug-2022 10:32:29 America/Bogota] PHP Warning:  mysqli_connect(): (28000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/pdf/comparador.php on line 19
+[22-Aug-2022 10:32:39 America/Bogota] PHP Warning:  mysqli_connect(): (28000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/pdf/comparador.php on line 19
+[22-Aug-2022 10:32:47 America/Bogota] PHP Warning:  mysqli_connect(): (28000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/pdf/comparador.php on line 19
+[22-Aug-2022 10:32:56 America/Bogota] PHP Warning:  mysqli_connect(): (28000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/pdf/comparador.php on line 19
+[22-Aug-2022 10:33:11 America/Bogota] PHP Warning:  mysqli_connect(): (28000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/pdf/comparador.php on line 19
+[22-Aug-2022 10:33:25 America/Bogota] PHP Warning:  mysqli_connect(): (28000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/pdf/comparador.php on line 19
+[22-Aug-2022 10:35:53 America/Bogota] PHP Warning:  mysqli_connect(): (28000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/pdf/comparador.php on line 19
+[22-Aug-2022 10:56:09 America/Bogota] PHP Warning:  mysqli_connect(): (28000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/pdf/comparador.php on line 19
+[22-Aug-2022 14:13:00 America/Bogota] PHP Warning:  mysqli_connect(): (28000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/pdf/comparador.php on line 19
+[23-Aug-2022 09:51:25 America/Bogota] PHP Warning:  mysqli_connect(): (28000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/pdf/comparador.php on line 19
+[24-Aug-2022 20:58:56 America/Bogota] PHP Warning:  mysqli_connect(): (28000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/pdf/comparador.php on line 19
+[25-Aug-2022 14:27:05 America/Bogota] PHP Warning:  mysqli_connect(): (28000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/pdf/comparador.php on line 19
+[27-Aug-2022 09:42:20 America/Bogota] PHP Warning:  mysqli_connect(): (28000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/pdf/comparador.php on line 19
+[10-Sep-2022 10:59:48 America/Bogota] PHP Notice:  Undefined index: startcolumn in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/tcpdf.php on line 19537
+[10-Sep-2022 10:59:48 America/Bogota] PHP Notice:  Undefined index: startx in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/tcpdf.php on line 19538
+[10-Sep-2022 10:59:48 America/Bogota] PHP Notice:  Undefined index: startpage in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/tcpdf.php on line 19541
+[10-Sep-2022 10:59:48 America/Bogota] PHP Notice:  Undefined index: startpage in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/tcpdf.php on line 19544
+[10-Sep-2022 10:59:48 America/Bogota] PHP Notice:  Undefined index:  in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/tcpdf.php on line 19544
+[10-Sep-2022 10:59:48 America/Bogota] PHP Notice:  Undefined index: startpage in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/tcpdf.php on line 19545
+[10-Sep-2022 10:59:48 America/Bogota] PHP Notice:  Undefined index:  in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/tcpdf.php on line 19545
+[10-Sep-2022 10:59:48 America/Bogota] PHP Notice:  Undefined variable: cellspacingx in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/tcpdf.php on line 18178
+[10-Sep-2022 10:59:48 America/Bogota] PHP Notice:  Undefined variable: cellspacing in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/tcpdf.php on line 18245
+[10-Sep-2022 10:59:48 America/Bogota] PHP Notice:  Undefined variable: cellspacing in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/tcpdf.php on line 18271
+[10-Sep-2022 10:59:48 America/Bogota] PHP Notice:  Undefined variable: cellspacingx in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/tcpdf.php on line 18326
+[10-Sep-2022 10:59:48 America/Bogota] PHP Notice:  Undefined offset: -1 in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/tcpdf.php on line 19600
+[10-Sep-2022 10:59:48 America/Bogota] PHP Notice:  Undefined index: startx in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/tcpdf.php on line 19797
+[10-Sep-2022 10:59:48 America/Bogota] PHP Notice:  Undefined variable: startpage in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/tcpdf.php on line 19798
+[10-Sep-2022 10:59:48 America/Bogota] PHP Notice:  Undefined variable: endpage in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/tcpdf.php on line 19798
+[10-Sep-2022 10:59:50 America/Bogota] PHP Notice:  Undefined index: startcolumn in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/tcpdf.php on line 19537
+[10-Sep-2022 10:59:50 America/Bogota] PHP Notice:  Undefined index: startx in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/tcpdf.php on line 19538
+[10-Sep-2022 10:59:50 America/Bogota] PHP Notice:  Undefined index: startpage in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/tcpdf.php on line 19541
+[10-Sep-2022 10:59:50 America/Bogota] PHP Notice:  Undefined index: startpage in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/tcpdf.php on line 19544
+[10-Sep-2022 10:59:50 America/Bogota] PHP Notice:  Undefined index:  in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/tcpdf.php on line 19544
+[10-Sep-2022 10:59:50 America/Bogota] PHP Notice:  Undefined index: startpage in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/tcpdf.php on line 19545
+[10-Sep-2022 10:59:50 America/Bogota] PHP Notice:  Undefined index:  in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/tcpdf.php on line 19545
+[10-Sep-2022 10:59:50 America/Bogota] PHP Notice:  Undefined variable: cellspacingx in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/tcpdf.php on line 18178
+[10-Sep-2022 10:59:50 America/Bogota] PHP Notice:  Undefined variable: cellspacing in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/tcpdf.php on line 18245
+[10-Sep-2022 10:59:50 America/Bogota] PHP Notice:  Undefined variable: cellspacing in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/tcpdf.php on line 18271
+[10-Sep-2022 10:59:50 America/Bogota] PHP Notice:  Undefined variable: cellspacingx in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/tcpdf.php on line 18326
+[10-Sep-2022 10:59:50 America/Bogota] PHP Notice:  Undefined offset: -1 in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/tcpdf.php on line 19600
+[10-Sep-2022 10:59:50 America/Bogota] PHP Notice:  Undefined index: startx in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/tcpdf.php on line 19797
+[10-Sep-2022 10:59:50 America/Bogota] PHP Notice:  Undefined variable: startpage in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/tcpdf.php on line 19798
+[10-Sep-2022 10:59:50 America/Bogota] PHP Notice:  Undefined variable: endpage in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/tcpdf.php on line 19798
+[10-Sep-2022 11:00:15 America/Bogota] PHP Notice:  Undefined index: startcolumn in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/tcpdf.php on line 19537
+[10-Sep-2022 11:00:16 America/Bogota] PHP Notice:  Undefined index: startx in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/tcpdf.php on line 19538
+[10-Sep-2022 11:00:16 America/Bogota] PHP Notice:  Undefined index: startpage in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/tcpdf.php on line 19541
+[10-Sep-2022 11:00:16 America/Bogota] PHP Notice:  Undefined index: startpage in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/tcpdf.php on line 19544
+[10-Sep-2022 11:00:16 America/Bogota] PHP Notice:  Undefined index:  in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/tcpdf.php on line 19544
+[10-Sep-2022 11:00:16 America/Bogota] PHP Notice:  Undefined index: startpage in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/tcpdf.php on line 19545
+[10-Sep-2022 11:00:16 America/Bogota] PHP Notice:  Undefined index:  in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/tcpdf.php on line 19545
+[10-Sep-2022 11:00:16 America/Bogota] PHP Notice:  Undefined variable: cellspacingx in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/tcpdf.php on line 18178
+[10-Sep-2022 11:00:16 America/Bogota] PHP Notice:  Undefined variable: cellspacing in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/tcpdf.php on line 18245
+[10-Sep-2022 11:00:16 America/Bogota] PHP Notice:  Undefined variable: cellspacing in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/tcpdf.php on line 18271
+[10-Sep-2022 11:00:16 America/Bogota] PHP Notice:  Undefined variable: cellspacingx in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/tcpdf.php on line 18326
+[10-Sep-2022 11:00:16 America/Bogota] PHP Notice:  Undefined offset: -1 in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/tcpdf.php on line 19600
+[10-Sep-2022 11:00:16 America/Bogota] PHP Notice:  Undefined index: startx in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/tcpdf.php on line 19797
+[10-Sep-2022 11:00:16 America/Bogota] PHP Notice:  Undefined variable: startpage in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/tcpdf.php on line 19798
+[10-Sep-2022 11:00:16 America/Bogota] PHP Notice:  Undefined variable: endpage in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/tcpdf.php on line 19798
+[10-Sep-2022 11:00:17 America/Bogota] PHP Notice:  Undefined index: startcolumn in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/tcpdf.php on line 19537
+[10-Sep-2022 11:00:17 America/Bogota] PHP Notice:  Undefined index: startx in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/tcpdf.php on line 19538
+[10-Sep-2022 11:00:17 America/Bogota] PHP Notice:  Undefined index: startpage in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/tcpdf.php on line 19541
+[10-Sep-2022 11:00:17 America/Bogota] PHP Notice:  Undefined index: startpage in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/tcpdf.php on line 19544
+[10-Sep-2022 11:00:17 America/Bogota] PHP Notice:  Undefined index:  in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/tcpdf.php on line 19544
+[10-Sep-2022 11:00:17 America/Bogota] PHP Notice:  Undefined index: startpage in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/tcpdf.php on line 19545
+[10-Sep-2022 11:00:17 America/Bogota] PHP Notice:  Undefined index:  in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/tcpdf.php on line 19545
+[10-Sep-2022 11:00:17 America/Bogota] PHP Notice:  Undefined variable: cellspacingx in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/tcpdf.php on line 18178
+[10-Sep-2022 11:00:17 America/Bogota] PHP Notice:  Undefined variable: cellspacing in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/tcpdf.php on line 18245
+[10-Sep-2022 11:00:17 America/Bogota] PHP Notice:  Undefined variable: cellspacing in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/tcpdf.php on line 18271
+[10-Sep-2022 11:00:17 America/Bogota] PHP Notice:  Undefined variable: cellspacingx in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/tcpdf.php on line 18326
+[10-Sep-2022 11:00:17 America/Bogota] PHP Notice:  Undefined offset: -1 in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/tcpdf.php on line 19600
+[10-Sep-2022 11:00:17 America/Bogota] PHP Notice:  Undefined index: startx in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/tcpdf.php on line 19797
+[10-Sep-2022 11:00:17 America/Bogota] PHP Notice:  Undefined variable: startpage in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/tcpdf.php on line 19798
+[10-Sep-2022 11:00:17 America/Bogota] PHP Notice:  Undefined variable: endpage in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/tcpdf.php on line 19798
+[10-Sep-2022 11:30:37 America/Bogota] PHP Notice:  Undefined index: cols in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/tcpdf.php on line 16992
+[10-Sep-2022 11:30:37 America/Bogota] PHP Notice:  Undefined index: thead in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/tcpdf.php on line 16549
+[10-Sep-2022 11:30:37 America/Bogota] PHP Notice:  Undefined index: thead in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/tcpdf.php on line 16562
+[10-Sep-2022 11:32:57 America/Bogota] PHP Notice:  Undefined index: cols in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/tcpdf.php on line 16992
+[10-Sep-2022 11:32:57 America/Bogota] PHP Notice:  Undefined index: thead in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/tcpdf.php on line 16549
+[10-Sep-2022 11:32:57 America/Bogota] PHP Notice:  Undefined index: thead in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/tcpdf.php on line 16562
+[10-Sep-2022 11:34:49 America/Bogota] PHP Notice:  Undefined index: cols in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/tcpdf.php on line 16992
+[10-Sep-2022 11:34:49 America/Bogota] PHP Notice:  Undefined index: thead in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/tcpdf.php on line 16549
+[10-Sep-2022 11:34:49 America/Bogota] PHP Notice:  Undefined index: thead in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/tcpdf.php on line 16562
+[22-Dec-2022 09:43:04 America/Bogota] PHP Warning:  imagecreatefrompng(): '../../../vistas/img/logosIntermediario/jpeg (1).jpg' is not a valid PNG file in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/tcpdf.php on line 7066
+[22-Dec-2022 09:44:21 America/Bogota] PHP Warning:  imagecreatefrompng(): '../../../vistas/img/logosIntermediario/jpeg (1).jpg' is not a valid PNG file in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/tcpdf.php on line 7066
+[22-Dec-2022 09:54:56 America/Bogota] PHP Warning:  imagecreatefrompng(): '../../../vistas/img/logosIntermediario/jpeg (1).jpg' is not a valid PNG file in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/tcpdf.php on line 7066
+[22-Dec-2022 09:56:43 America/Bogota] PHP Warning:  imagecreatefrompng(): '../../../vistas/img/logosIntermediario/jpeg (1).jpg' is not a valid PNG file in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/tcpdf.php on line 7066
+[22-Dec-2022 10:00:01 America/Bogota] PHP Warning:  imagecreatefrompng(): '../../../vistas/img/logosIntermediario/jpeg (1).jpg' is not a valid PNG file in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/tcpdf.php on line 7066
+[22-Dec-2022 10:03:04 America/Bogota] PHP Warning:  imagecreatefrompng(): '../../../vistas/img/logosIntermediario/jpeg (1).jpg' is not a valid PNG file in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/tcpdf.php on line 7066
+[22-Dec-2022 10:06:42 America/Bogota] PHP Warning:  imagecreatefrompng(): '../../../vistas/img/logosIntermediario/Lob&amp;.jpg' is not a valid PNG file in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/tcpdf.php on line 7066
+[22-Dec-2022 10:07:22 America/Bogota] PHP Warning:  imagecreatefrompng(): '../../../vistas/img/logosIntermediario/Lob&amp;.jpg' is not a valid PNG file in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/tcpdf.php on line 7066
+[22-Dec-2022 10:09:06 America/Bogota] PHP Warning:  imagecreatefrompng(): '../../../vistas/img/logosIntermediario/Lob&amp; (1).jpg' is not a valid PNG file in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/tcpdf.php on line 7066
+[22-Dec-2022 10:10:06 America/Bogota] PHP Warning:  imagecreatefrompng(): '../../../vistas/img/logosIntermediario/Lob&amp; (1).jpg' is not a valid PNG file in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/tcpdf.php on line 7066
+[22-Dec-2022 10:11:07 America/Bogota] PHP Warning:  imagecreatefrompng(): '../../../vistas/img/logosIntermediario/SegurosJose.jpg' is not a valid PNG file in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/tcpdf.php on line 7066
+[22-Dec-2022 10:12:01 America/Bogota] PHP Warning:  imagecreatefrompng(): '../../../vistas/img/logosIntermediario/SegurosJose.jpg' is not a valid PNG file in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/tcpdf.php on line 7066
+[22-Dec-2022 10:12:02 America/Bogota] PHP Warning:  imagecreatefrompng(): '../../../vistas/img/logosIntermediario/SegurosJose.jpg' is not a valid PNG file in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/tcpdf.php on line 7066
+[22-Dec-2022 10:25:51 America/Bogota] PHP Warning:  A non-numeric value encountered in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/tcpdf.php on line 6995
+[22-Dec-2022 10:25:51 America/Bogota] PHP Warning:  A non-numeric value encountered in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/tcpdf.php on line 6996
+[22-Dec-2022 10:25:51 America/Bogota] PHP Warning:  imagecreatetruecolor(): Invalid image dimensions in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/tcpdf.php on line 7069
+[22-Dec-2022 10:25:51 America/Bogota] PHP Warning:  imagecolorallocate() expects parameter 1 to be resource, bool given in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/include/tcpdf_images.php on line 109
+[22-Dec-2022 10:25:51 America/Bogota] PHP Warning:  imagefill() expects parameter 1 to be resource, bool given in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/include/tcpdf_images.php on line 110
+[22-Dec-2022 10:25:51 America/Bogota] PHP Warning:  imagecolortransparent() expects parameter 1 to be resource, bool given in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/include/tcpdf_images.php on line 111
+[22-Dec-2022 10:25:51 America/Bogota] PHP Warning:  imagecopyresampled() expects parameter 1 to be resource, bool given in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/tcpdf.php on line 7073
+[22-Dec-2022 10:25:51 America/Bogota] PHP Warning:  imageinterlace() expects parameter 1 to be resource, bool given in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/include/tcpdf_images.php on line 126
+[22-Dec-2022 10:25:51 America/Bogota] PHP Warning:  imagepng() expects parameter 1 to be resource, bool given in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/include/tcpdf_images.php on line 128
+[22-Dec-2022 10:25:51 America/Bogota] PHP Warning:  imagedestroy() expects parameter 1 to be resource, bool given in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/include/tcpdf_images.php on line 130
+[22-Dec-2022 10:25:58 America/Bogota] PHP Warning:  A non-numeric value encountered in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/tcpdf.php on line 6995
+[22-Dec-2022 10:25:58 America/Bogota] PHP Warning:  A non-numeric value encountered in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/tcpdf.php on line 6996
+[22-Dec-2022 10:25:58 America/Bogota] PHP Warning:  imagecreatetruecolor(): Invalid image dimensions in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/tcpdf.php on line 7069
+[22-Dec-2022 10:25:58 America/Bogota] PHP Warning:  imagecolorallocate() expects parameter 1 to be resource, bool given in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/include/tcpdf_images.php on line 109
+[22-Dec-2022 10:25:58 America/Bogota] PHP Warning:  imagefill() expects parameter 1 to be resource, bool given in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/include/tcpdf_images.php on line 110
+[22-Dec-2022 10:25:58 America/Bogota] PHP Warning:  imagecolortransparent() expects parameter 1 to be resource, bool given in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/include/tcpdf_images.php on line 111
+[22-Dec-2022 10:25:58 America/Bogota] PHP Warning:  imagecopyresampled() expects parameter 1 to be resource, bool given in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/tcpdf.php on line 7073
+[22-Dec-2022 10:25:58 America/Bogota] PHP Warning:  imageinterlace() expects parameter 1 to be resource, bool given in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/include/tcpdf_images.php on line 126
+[22-Dec-2022 10:25:58 America/Bogota] PHP Warning:  imagepng() expects parameter 1 to be resource, bool given in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/include/tcpdf_images.php on line 128
+[22-Dec-2022 10:25:58 America/Bogota] PHP Warning:  imagedestroy() expects parameter 1 to be resource, bool given in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/include/tcpdf_images.php on line 130
+[22-Dec-2022 10:26:46 America/Bogota] PHP Warning:  imagecreatefrompng(): '../../../vistas/img/logosIntermediario/Lob&amp;.jpg' is not a valid PNG file in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/tcpdf.php on line 7066
+[22-Dec-2022 10:27:39 America/Bogota] PHP Warning:  imagecreatefrompng(): '../../../vistas/img/logosIntermediario/Lob&amp;.jpg' is not a valid PNG file in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/tcpdf.php on line 7066
+[23-Dec-2022 16:14:05 America/Bogota] PHP Warning:  Division by zero in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/pdf/comparador.php on line 696
+[23-Dec-2022 16:14:06 America/Bogota] PHP Notice:  Undefined index: startcolumn in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/tcpdf.php on line 19537
+[23-Dec-2022 16:14:06 America/Bogota] PHP Notice:  Undefined index: startx in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/tcpdf.php on line 19538
+[23-Dec-2022 16:14:06 America/Bogota] PHP Notice:  Undefined index: startpage in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/tcpdf.php on line 19541
+[23-Dec-2022 16:14:06 America/Bogota] PHP Notice:  Undefined index: startpage in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/tcpdf.php on line 19544
+[23-Dec-2022 16:14:06 America/Bogota] PHP Notice:  Undefined index:  in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/tcpdf.php on line 19544
+[23-Dec-2022 16:14:06 America/Bogota] PHP Notice:  Undefined index: startpage in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/tcpdf.php on line 19545
+[23-Dec-2022 16:14:06 America/Bogota] PHP Notice:  Undefined index:  in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/tcpdf.php on line 19545
+[23-Dec-2022 16:14:06 America/Bogota] PHP Notice:  Undefined index: startcolumn in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/tcpdf.php on line 19537
+[23-Dec-2022 16:14:06 America/Bogota] PHP Notice:  Undefined index: startx in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/tcpdf.php on line 19538
+[23-Dec-2022 16:14:06 America/Bogota] PHP Notice:  Undefined index: startpage in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/tcpdf.php on line 19541
+[23-Dec-2022 16:14:06 America/Bogota] PHP Notice:  Undefined index: startpage in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/tcpdf.php on line 19544
+[23-Dec-2022 16:14:06 America/Bogota] PHP Notice:  Undefined index:  in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/tcpdf.php on line 19544
+[23-Dec-2022 16:14:06 America/Bogota] PHP Notice:  Undefined index: startpage in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/tcpdf.php on line 19545
+[23-Dec-2022 16:14:06 America/Bogota] PHP Notice:  Undefined index:  in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/tcpdf.php on line 19545
+[23-Dec-2022 16:14:06 America/Bogota] PHP Notice:  Undefined index: startpage in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/tcpdf.php on line 19577
+[23-Dec-2022 16:14:06 America/Bogota] PHP Notice:  Undefined offset: -1 in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/tcpdf.php on line 19600
+[23-Dec-2022 16:14:06 America/Bogota] PHP Notice:  Undefined index: startx in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/tcpdf.php on line 19797
+[23-Dec-2022 16:14:06 America/Bogota] PHP Notice:  Undefined variable: startpage in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/tcpdf.php on line 19798
+[23-Dec-2022 16:14:06 America/Bogota] PHP Notice:  Undefined variable: endpage in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/tcpdf.php on line 19798
+[23-Dec-2022 16:14:06 America/Bogota] PHP Notice:  Undefined offset: -1 in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/tcpdf.php on line 19600
+[23-Dec-2022 16:14:06 America/Bogota] PHP Notice:  Undefined index: startx in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/tcpdf.php on line 19797
+[23-Dec-2022 16:14:06 America/Bogota] PHP Notice:  Undefined variable: startpage in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/tcpdf.php on line 19798
+[23-Dec-2022 16:14:06 America/Bogota] PHP Notice:  Undefined variable: endpage in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/tcpdf.php on line 19798
+[28-Dec-2022 08:54:14 America/Bogota] PHP Notice:  Undefined index: intermediario in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/pdf/comparador.php on line 31
+[28-Dec-2022 08:54:14 America/Bogota] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, bool given in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/pdf/comparador.php on line 34
+[28-Dec-2022 08:54:14 America/Bogota] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, bool given in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/pdf/comparador.php on line 40
+[30-Dec-2022 11:45:39 America/Bogota] PHP Notice:  Undefined index: intermediario in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/pdf/comparador.php on line 31
+[30-Dec-2022 11:45:39 America/Bogota] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, bool given in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/pdf/comparador.php on line 34
+[30-Dec-2022 11:45:39 America/Bogota] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, bool given in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/pdf/comparador.php on line 40
+[30-Dec-2022 12:23:00 America/Bogota] PHP Notice:  Undefined index: intermediario in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/pdf/comparador.php on line 31
+[30-Dec-2022 12:23:00 America/Bogota] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, bool given in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/pdf/comparador.php on line 34
+[30-Dec-2022 12:23:00 America/Bogota] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, bool given in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/pdf/comparador.php on line 40
+[30-Dec-2022 17:21:01 America/Bogota] PHP Notice:  Undefined index: intermediario in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/pdf/comparador.php on line 31
+[30-Dec-2022 17:21:01 America/Bogota] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, bool given in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/pdf/comparador.php on line 34
+[30-Dec-2022 17:21:01 America/Bogota] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, bool given in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/pdf/comparador.php on line 40
+[03-Jan-2023 11:08:49 America/Bogota] PHP Notice:  Undefined index: intermediario in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/pdf/comparador.php on line 31
+[03-Jan-2023 11:08:49 America/Bogota] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, bool given in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/pdf/comparador.php on line 34
+[03-Jan-2023 11:08:49 America/Bogota] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, bool given in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/pdf/comparador.php on line 40
+[10-Jan-2023 07:58:10 America/Bogota] PHP Notice:  Undefined index: intermediario in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/pdf/comparador.php on line 31
+[10-Jan-2023 07:58:10 America/Bogota] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, bool given in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/pdf/comparador.php on line 34
+[10-Jan-2023 07:58:10 America/Bogota] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, bool given in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/pdf/comparador.php on line 40
+[18-Jan-2023 14:44:33 America/Bogota] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, bool given in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/pdf/comparador.php on line 28
+[18-Jan-2023 14:44:33 America/Bogota] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, bool given in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/pdf/comparador.php on line 45
+[18-Jan-2023 14:44:33 America/Bogota] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, bool given in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/pdf/comparador.php on line 50
+[18-Jan-2023 14:44:33 America/Bogota] PHP Fatal error:  Uncaught Error: Call to a member function fetch_assoc() on bool in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/pdf/comparador.php:77
+Stack trace:
+#0 {main}
+  thrown in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/pdf/comparador.php on line 77
+[19-Jan-2023 07:44:13 America/Bogota] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, bool given in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/pdf/comparador.php on line 28
+[19-Jan-2023 07:44:13 America/Bogota] PHP Notice:  Undefined index: intermediario in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/pdf/comparador.php on line 31
+[19-Jan-2023 07:44:13 America/Bogota] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, bool given in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/pdf/comparador.php on line 34
+[19-Jan-2023 07:44:13 America/Bogota] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, bool given in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/pdf/comparador.php on line 40
+[19-Jan-2023 07:44:13 America/Bogota] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, bool given in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/pdf/comparador.php on line 45
+[19-Jan-2023 07:44:13 America/Bogota] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, bool given in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/pdf/comparador.php on line 50
+[19-Jan-2023 07:44:13 America/Bogota] PHP Fatal error:  Uncaught Error: Call to a member function fetch_assoc() on bool in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/pdf/comparador.php:77
+Stack trace:
+#0 {main}
+  thrown in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/pdf/comparador.php on line 77
+[13-Jun-2023 10:44:20 America/Bogota] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, bool given in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/pdf/comparador.php on line 28
+[13-Jun-2023 10:44:20 America/Bogota] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, bool given in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/pdf/comparador.php on line 39
+[13-Jun-2023 10:44:20 America/Bogota] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, bool given in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/pdf/comparador.php on line 44
+[13-Jun-2023 10:44:20 America/Bogota] PHP Fatal error:  Uncaught Error: Call to a member function fetch_assoc() on bool in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/pdf/comparador.php:71
+Stack trace:
+#0 {main}
+  thrown in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/pdf/comparador.php on line 71
+[13-Jun-2023 10:44:23 America/Bogota] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, bool given in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/pdf/comparador.php on line 28
+[13-Jun-2023 10:44:23 America/Bogota] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, bool given in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/pdf/comparador.php on line 39
+[13-Jun-2023 10:44:23 America/Bogota] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, bool given in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/pdf/comparador.php on line 44
+[13-Jun-2023 10:44:23 America/Bogota] PHP Fatal error:  Uncaught Error: Call to a member function fetch_assoc() on bool in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/pdf/comparador.php:71
+Stack trace:
+#0 {main}
+  thrown in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/pdf/comparador.php on line 71
+[13-Jun-2023 10:44:24 America/Bogota] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, bool given in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/pdf/comparador.php on line 28
+[13-Jun-2023 10:44:24 America/Bogota] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, bool given in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/pdf/comparador.php on line 39
+[13-Jun-2023 10:44:24 America/Bogota] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, bool given in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/pdf/comparador.php on line 44
+[13-Jun-2023 10:44:24 America/Bogota] PHP Fatal error:  Uncaught Error: Call to a member function fetch_assoc() on bool in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/pdf/comparador.php:71
+Stack trace:
+#0 {main}
+  thrown in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/pdf/comparador.php on line 71
+[13-Jun-2023 11:07:24 America/Bogota] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, bool given in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/pdf/comparador.php on line 28
+[13-Jun-2023 11:07:24 America/Bogota] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, bool given in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/pdf/comparador.php on line 39
+[13-Jun-2023 11:07:24 America/Bogota] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, bool given in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/pdf/comparador.php on line 44
+[13-Jun-2023 11:07:24 America/Bogota] PHP Fatal error:  Uncaught Error: Call to a member function fetch_assoc() on bool in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/pdf/comparador.php:71
+Stack trace:
+#0 {main}
+  thrown in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/pdf/comparador.php on line 71
+[13-Jun-2023 11:19:49 America/Bogota] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, bool given in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/pdf/comparador.php on line 28
+[13-Jun-2023 11:19:49 America/Bogota] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, bool given in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/pdf/comparador.php on line 39
+[13-Jun-2023 11:19:49 America/Bogota] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, bool given in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/pdf/comparador.php on line 44
+[13-Jun-2023 11:19:49 America/Bogota] PHP Fatal error:  Uncaught Error: Call to a member function fetch_assoc() on bool in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/pdf/comparador.php:71
+Stack trace:
+#0 {main}
+  thrown in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/pdf/comparador.php on line 71
+[13-Jun-2023 11:56:25 America/Bogota] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, bool given in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/pdf/comparador.php on line 28
+[13-Jun-2023 11:56:25 America/Bogota] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, bool given in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/pdf/comparador.php on line 39
+[13-Jun-2023 11:56:25 America/Bogota] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, bool given in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/pdf/comparador.php on line 44
+[13-Jun-2023 11:56:25 America/Bogota] PHP Fatal error:  Uncaught Error: Call to a member function fetch_assoc() on bool in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/pdf/comparador.php:71
+Stack trace:
+#0 {main}
+  thrown in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/pdf/comparador.php on line 71
+[13-Jun-2023 11:56:25 America/Bogota] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, bool given in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/pdf/comparador.php on line 28
+[13-Jun-2023 11:56:25 America/Bogota] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, bool given in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/pdf/comparador.php on line 39
+[13-Jun-2023 11:56:25 America/Bogota] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, bool given in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/pdf/comparador.php on line 44
+[13-Jun-2023 11:56:25 America/Bogota] PHP Fatal error:  Uncaught Error: Call to a member function fetch_assoc() on bool in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/pdf/comparador.php:71
+Stack trace:
+#0 {main}
+  thrown in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/pdf/comparador.php on line 71
+[13-Jun-2023 11:56:26 America/Bogota] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, bool given in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/pdf/comparador.php on line 28
+[13-Jun-2023 11:56:26 America/Bogota] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, bool given in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/pdf/comparador.php on line 39
+[13-Jun-2023 11:56:26 America/Bogota] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, bool given in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/pdf/comparador.php on line 44
+[13-Jun-2023 11:56:26 America/Bogota] PHP Fatal error:  Uncaught Error: Call to a member function fetch_assoc() on bool in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/pdf/comparador.php:71
+Stack trace:
+#0 {main}
+  thrown in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/pdf/comparador.php on line 71
+[13-Jun-2023 14:12:16 America/Bogota] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, bool given in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/pdf/comparador.php on line 28
+[13-Jun-2023 14:12:16 America/Bogota] PHP Notice:  Undefined index: intermediario in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/pdf/comparador.php on line 31
+[13-Jun-2023 14:12:16 America/Bogota] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, bool given in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/pdf/comparador.php on line 34
+[13-Jun-2023 14:12:16 America/Bogota] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, bool given in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/pdf/comparador.php on line 39
+[13-Jun-2023 14:12:16 America/Bogota] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, bool given in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/pdf/comparador.php on line 44
+[13-Jun-2023 14:12:16 America/Bogota] PHP Fatal error:  Uncaught Error: Call to a member function fetch_assoc() on bool in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/pdf/comparador.php:71
+Stack trace:
+#0 {main}
+  thrown in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/pdf/comparador.php on line 71
+[13-Jun-2023 14:12:50 America/Bogota] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, bool given in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/pdf/comparador.php on line 28
+[13-Jun-2023 14:12:50 America/Bogota] PHP Notice:  Undefined index: intermediario in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/pdf/comparador.php on line 31
+[13-Jun-2023 14:12:50 America/Bogota] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, bool given in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/pdf/comparador.php on line 34
+[13-Jun-2023 14:12:50 America/Bogota] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, bool given in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/pdf/comparador.php on line 39
+[13-Jun-2023 14:12:50 America/Bogota] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, bool given in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/pdf/comparador.php on line 44
+[13-Jun-2023 14:12:50 America/Bogota] PHP Fatal error:  Uncaught Error: Call to a member function fetch_assoc() on bool in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/pdf/comparador.php:71
+Stack trace:
+#0 {main}
+  thrown in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/pdf/comparador.php on line 71
+[13-Jun-2023 15:09:39 America/Bogota] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, bool given in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/pdf/comparador.php on line 28
+[13-Jun-2023 15:09:39 America/Bogota] PHP Notice:  Undefined index: intermediario in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/pdf/comparador.php on line 31
+[13-Jun-2023 15:09:39 America/Bogota] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, bool given in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/pdf/comparador.php on line 34
+[13-Jun-2023 15:09:39 America/Bogota] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, bool given in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/pdf/comparador.php on line 39
+[13-Jun-2023 15:09:39 America/Bogota] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, bool given in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/pdf/comparador.php on line 44
+[13-Jun-2023 15:09:39 America/Bogota] PHP Fatal error:  Uncaught Error: Call to a member function fetch_assoc() on bool in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/pdf/comparador.php:71
+Stack trace:
+#0 {main}
+  thrown in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/pdf/comparador.php on line 71
+[13-Jun-2023 15:09:42 America/Bogota] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, bool given in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/pdf/comparador.php on line 28
+[13-Jun-2023 15:09:42 America/Bogota] PHP Notice:  Undefined index: intermediario in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/pdf/comparador.php on line 31
+[13-Jun-2023 15:09:42 America/Bogota] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, bool given in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/pdf/comparador.php on line 34
+[13-Jun-2023 15:09:42 America/Bogota] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, bool given in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/pdf/comparador.php on line 39
+[13-Jun-2023 15:09:42 America/Bogota] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, bool given in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/pdf/comparador.php on line 44
+[13-Jun-2023 15:09:42 America/Bogota] PHP Fatal error:  Uncaught Error: Call to a member function fetch_assoc() on bool in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/pdf/comparador.php:71
+Stack trace:
+#0 {main}
+  thrown in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/pdf/comparador.php on line 71
+[13-Jun-2023 15:09:44 America/Bogota] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, bool given in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/pdf/comparador.php on line 28
+[13-Jun-2023 15:09:44 America/Bogota] PHP Notice:  Undefined index: intermediario in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/pdf/comparador.php on line 31
+[13-Jun-2023 15:09:44 America/Bogota] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, bool given in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/pdf/comparador.php on line 34
+[13-Jun-2023 15:09:44 America/Bogota] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, bool given in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/pdf/comparador.php on line 39
+[13-Jun-2023 15:09:44 America/Bogota] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, bool given in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/pdf/comparador.php on line 44
+[13-Jun-2023 15:09:44 America/Bogota] PHP Fatal error:  Uncaught Error: Call to a member function fetch_assoc() on bool in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/pdf/comparador.php:71
+Stack trace:
+#0 {main}
+  thrown in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/pdf/comparador.php on line 71
+[13-Jun-2023 15:10:01 America/Bogota] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, bool given in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/pdf/comparador.php on line 28
+[13-Jun-2023 15:10:01 America/Bogota] PHP Notice:  Undefined index: intermediario in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/pdf/comparador.php on line 31
+[13-Jun-2023 15:10:01 America/Bogota] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, bool given in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/pdf/comparador.php on line 34
+[13-Jun-2023 15:10:01 America/Bogota] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, bool given in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/pdf/comparador.php on line 39
+[13-Jun-2023 15:10:01 America/Bogota] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, bool given in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/pdf/comparador.php on line 44
+[13-Jun-2023 15:10:01 America/Bogota] PHP Fatal error:  Uncaught Error: Call to a member function fetch_assoc() on bool in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/pdf/comparador.php:71
+Stack trace:
+#0 {main}
+  thrown in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/pdf/comparador.php on line 71
+[13-Jun-2023 15:10:03 America/Bogota] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, bool given in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/pdf/comparador.php on line 28
+[13-Jun-2023 15:10:03 America/Bogota] PHP Notice:  Undefined index: intermediario in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/pdf/comparador.php on line 31
+[13-Jun-2023 15:10:03 America/Bogota] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, bool given in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/pdf/comparador.php on line 34
+[13-Jun-2023 15:10:03 America/Bogota] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, bool given in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/pdf/comparador.php on line 39
+[13-Jun-2023 15:10:03 America/Bogota] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, bool given in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/pdf/comparador.php on line 44
+[13-Jun-2023 15:10:03 America/Bogota] PHP Fatal error:  Uncaught Error: Call to a member function fetch_assoc() on bool in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/pdf/comparador.php:71
+Stack trace:
+#0 {main}
+  thrown in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/pdf/comparador.php on line 71
+[13-Jun-2023 15:10:05 America/Bogota] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, bool given in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/pdf/comparador.php on line 28
+[13-Jun-2023 15:10:05 America/Bogota] PHP Notice:  Undefined index: intermediario in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/pdf/comparador.php on line 31
+[13-Jun-2023 15:10:05 America/Bogota] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, bool given in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/pdf/comparador.php on line 34
+[13-Jun-2023 15:10:05 America/Bogota] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, bool given in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/pdf/comparador.php on line 39
+[13-Jun-2023 15:10:05 America/Bogota] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, bool given in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/pdf/comparador.php on line 44
+[13-Jun-2023 15:10:05 America/Bogota] PHP Fatal error:  Uncaught Error: Call to a member function fetch_assoc() on bool in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/pdf/comparador.php:71
+Stack trace:
+#0 {main}
+  thrown in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/pdf/comparador.php on line 71
+[13-Jun-2023 15:57:49 America/Bogota] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, bool given in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/pdf/comparador.php on line 28
+[13-Jun-2023 15:57:49 America/Bogota] PHP Notice:  Undefined index: intermediario in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/pdf/comparador.php on line 31
+[13-Jun-2023 15:57:49 America/Bogota] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, bool given in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/pdf/comparador.php on line 34
+[13-Jun-2023 15:57:49 America/Bogota] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, bool given in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/pdf/comparador.php on line 39
+[13-Jun-2023 15:57:49 America/Bogota] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, bool given in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/pdf/comparador.php on line 44
+[13-Jun-2023 15:57:49 America/Bogota] PHP Fatal error:  Uncaught Error: Call to a member function fetch_assoc() on bool in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/pdf/comparador.php:71
+Stack trace:
+#0 {main}
+  thrown in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/pdf/comparador.php on line 71
+[13-Jun-2023 15:57:51 America/Bogota] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, bool given in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/pdf/comparador.php on line 28
+[13-Jun-2023 15:57:51 America/Bogota] PHP Notice:  Undefined index: intermediario in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/pdf/comparador.php on line 31
+[13-Jun-2023 15:57:51 America/Bogota] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, bool given in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/pdf/comparador.php on line 34
+[13-Jun-2023 15:57:51 America/Bogota] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, bool given in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/pdf/comparador.php on line 39
+[13-Jun-2023 15:57:51 America/Bogota] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, bool given in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/pdf/comparador.php on line 44
+[13-Jun-2023 15:57:51 America/Bogota] PHP Fatal error:  Uncaught Error: Call to a member function fetch_assoc() on bool in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/pdf/comparador.php:71
+Stack trace:
+#0 {main}
+  thrown in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/pdf/comparador.php on line 71
+[13-Jun-2023 16:55:40 America/Bogota] PHP Notice:  Undefined index: intermediario in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/pdf/comparador.php on line 31
+[13-Jun-2023 16:55:40 America/Bogota] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, bool given in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/pdf/comparador.php on line 34
+[14-Jun-2023 07:18:25 America/Bogota] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, bool given in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/pdf/comparador.php on line 28
+[14-Jun-2023 07:18:25 America/Bogota] PHP Notice:  Undefined index: intermediario in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/pdf/comparador.php on line 31
+[14-Jun-2023 07:18:25 America/Bogota] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, bool given in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/pdf/comparador.php on line 34
+[14-Jun-2023 07:18:25 America/Bogota] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, bool given in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/pdf/comparador.php on line 39
+[14-Jun-2023 07:18:25 America/Bogota] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, bool given in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/pdf/comparador.php on line 44
+[14-Jun-2023 07:18:25 America/Bogota] PHP Fatal error:  Uncaught Error: Call to a member function fetch_assoc() on bool in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/pdf/comparador.php:71
+Stack trace:
+#0 {main}
+  thrown in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/pdf/comparador.php on line 71
+[14-Jun-2023 07:22:49 America/Bogota] PHP Notice:  Undefined index: intermediario in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/pdf/comparador.php on line 31
+[14-Jun-2023 07:22:49 America/Bogota] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, bool given in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/pdf/comparador.php on line 34
+[14-Jun-2023 09:41:54 America/Bogota] PHP Notice:  Undefined index: intermediario in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/pdf/comparador.php on line 31
+[14-Jun-2023 09:41:54 America/Bogota] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, bool given in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/pdf/comparador.php on line 34
+[14-Jun-2023 09:43:22 America/Bogota] PHP Notice:  Undefined index: intermediario in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/pdf/comparador.php on line 31
+[14-Jun-2023 09:43:22 America/Bogota] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, bool given in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/pdf/comparador.php on line 34
+[14-Jun-2023 09:46:56 America/Bogota] PHP Notice:  Undefined index: intermediario in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/pdf/comparador.php on line 31
+[14-Jun-2023 09:46:56 America/Bogota] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, bool given in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/pdf/comparador.php on line 34
+[14-Jun-2023 14:54:12 America/Bogota] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, bool given in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/pdf/comparador.php on line 28
+[14-Jun-2023 14:54:12 America/Bogota] PHP Notice:  Undefined index: intermediario in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/pdf/comparador.php on line 31
+[14-Jun-2023 14:54:12 America/Bogota] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, bool given in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/pdf/comparador.php on line 34
+[14-Jun-2023 14:54:12 America/Bogota] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, bool given in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/pdf/comparador.php on line 39
+[14-Jun-2023 14:54:12 America/Bogota] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, bool given in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/pdf/comparador.php on line 44
+[14-Jun-2023 14:54:12 America/Bogota] PHP Fatal error:  Uncaught Error: Call to a member function fetch_assoc() on bool in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/pdf/comparador.php:71
+Stack trace:
+#0 {main}
+  thrown in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/pdf/comparador.php on line 71
+[14-Jun-2023 14:54:15 America/Bogota] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, bool given in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/pdf/comparador.php on line 28
+[14-Jun-2023 14:54:15 America/Bogota] PHP Notice:  Undefined index: intermediario in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/pdf/comparador.php on line 31
+[14-Jun-2023 14:54:15 America/Bogota] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, bool given in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/pdf/comparador.php on line 34
+[14-Jun-2023 14:54:15 America/Bogota] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, bool given in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/pdf/comparador.php on line 39
+[14-Jun-2023 14:54:15 America/Bogota] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, bool given in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/pdf/comparador.php on line 44
+[14-Jun-2023 14:54:15 America/Bogota] PHP Fatal error:  Uncaught Error: Call to a member function fetch_assoc() on bool in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/pdf/comparador.php:71
+Stack trace:
+#0 {main}
+  thrown in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/pdf/comparador.php on line 71
+[14-Jun-2023 14:54:19 America/Bogota] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, bool given in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/pdf/comparador.php on line 28
+[14-Jun-2023 14:54:19 America/Bogota] PHP Notice:  Undefined index: intermediario in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/pdf/comparador.php on line 31
+[14-Jun-2023 14:54:19 America/Bogota] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, bool given in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/pdf/comparador.php on line 34
+[14-Jun-2023 14:54:19 America/Bogota] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, bool given in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/pdf/comparador.php on line 39
+[14-Jun-2023 14:54:19 America/Bogota] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, bool given in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/pdf/comparador.php on line 44
+[14-Jun-2023 14:54:19 America/Bogota] PHP Fatal error:  Uncaught Error: Call to a member function fetch_assoc() on bool in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/pdf/comparador.php:71
+Stack trace:
+#0 {main}
+  thrown in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/pdf/comparador.php on line 71
+[14-Jun-2023 14:54:35 America/Bogota] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, bool given in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/pdf/comparador.php on line 28
+[14-Jun-2023 14:54:35 America/Bogota] PHP Notice:  Undefined index: intermediario in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/pdf/comparador.php on line 31
+[14-Jun-2023 14:54:35 America/Bogota] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, bool given in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/pdf/comparador.php on line 34
+[14-Jun-2023 14:54:35 America/Bogota] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, bool given in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/pdf/comparador.php on line 39
+[14-Jun-2023 14:54:35 America/Bogota] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, bool given in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/pdf/comparador.php on line 44
+[14-Jun-2023 14:54:35 America/Bogota] PHP Fatal error:  Uncaught Error: Call to a member function fetch_assoc() on bool in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/pdf/comparador.php:71
+Stack trace:
+#0 {main}
+  thrown in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/pdf/comparador.php on line 71
+[14-Jun-2023 15:05:49 America/Bogota] PHP Notice:  Undefined index: cotizacion in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/pdf/comparador.php on line 12
+[14-Jun-2023 15:05:49 America/Bogota] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, bool given in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/pdf/comparador.php on line 28
+[14-Jun-2023 15:05:49 America/Bogota] PHP Notice:  Undefined index: intermediario in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/pdf/comparador.php on line 31
+[14-Jun-2023 15:05:49 America/Bogota] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, bool given in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/pdf/comparador.php on line 34
+[14-Jun-2023 15:05:49 America/Bogota] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, bool given in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/pdf/comparador.php on line 39
+[14-Jun-2023 15:05:49 America/Bogota] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, bool given in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/pdf/comparador.php on line 44
+[14-Jun-2023 15:05:49 America/Bogota] PHP Fatal error:  Uncaught Error: Call to a member function fetch_assoc() on bool in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/pdf/comparador.php:71
+Stack trace:
+#0 {main}
+  thrown in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/pdf/comparador.php on line 71
+[14-Jun-2023 16:27:50 America/Bogota] PHP Notice:  Undefined index: intermediario in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/pdf/comparador.php on line 31
+[14-Jun-2023 16:27:50 America/Bogota] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, bool given in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/pdf/comparador.php on line 34
+[14-Jun-2023 16:28:05 America/Bogota] PHP Notice:  Undefined index: intermediario in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/pdf/comparador.php on line 31
+[14-Jun-2023 16:28:05 America/Bogota] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, bool given in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/pdf/comparador.php on line 34
+[14-Jun-2023 18:09:09 America/Bogota] PHP Notice:  Undefined index: intermediario in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/pdf/comparador.php on line 31
+[14-Jun-2023 18:09:09 America/Bogota] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, bool given in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/pdf/comparador.php on line 34
+[14-Jun-2023 18:10:59 America/Bogota] PHP Notice:  Undefined index: intermediario in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/pdf/comparador.php on line 31
+[14-Jun-2023 18:10:59 America/Bogota] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, bool given in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/pdf/comparador.php on line 34
+[15-Jun-2023 08:11:44 America/Bogota] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, bool given in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/pdf/comparador.php on line 28
+[15-Jun-2023 08:11:44 America/Bogota] PHP Notice:  Undefined index: intermediario in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/pdf/comparador.php on line 31
+[15-Jun-2023 08:11:44 America/Bogota] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, bool given in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/pdf/comparador.php on line 34
+[15-Jun-2023 08:11:44 America/Bogota] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, bool given in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/pdf/comparador.php on line 39
+[15-Jun-2023 08:11:44 America/Bogota] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, bool given in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/pdf/comparador.php on line 44
+[15-Jun-2023 08:11:44 America/Bogota] PHP Fatal error:  Uncaught Error: Call to a member function fetch_assoc() on bool in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/pdf/comparador.php:71
+Stack trace:
+#0 {main}
+  thrown in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/pdf/comparador.php on line 71
+[15-Jun-2023 08:11:50 America/Bogota] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, bool given in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/pdf/comparador.php on line 28
+[15-Jun-2023 08:11:50 America/Bogota] PHP Notice:  Undefined index: intermediario in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/pdf/comparador.php on line 31
+[15-Jun-2023 08:11:50 America/Bogota] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, bool given in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/pdf/comparador.php on line 34
+[15-Jun-2023 08:11:50 America/Bogota] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, bool given in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/pdf/comparador.php on line 39
+[15-Jun-2023 08:11:50 America/Bogota] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, bool given in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/pdf/comparador.php on line 44
+[15-Jun-2023 08:11:50 America/Bogota] PHP Fatal error:  Uncaught Error: Call to a member function fetch_assoc() on bool in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/pdf/comparador.php:71
+Stack trace:
+#0 {main}
+  thrown in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/pdf/comparador.php on line 71
+[15-Jun-2023 08:12:00 America/Bogota] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, bool given in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/pdf/comparador.php on line 28
+[15-Jun-2023 08:12:00 America/Bogota] PHP Notice:  Undefined index: intermediario in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/pdf/comparador.php on line 31
+[15-Jun-2023 08:12:00 America/Bogota] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, bool given in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/pdf/comparador.php on line 34
+[15-Jun-2023 08:12:00 America/Bogota] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, bool given in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/pdf/comparador.php on line 39
+[15-Jun-2023 08:12:00 America/Bogota] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, bool given in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/pdf/comparador.php on line 44
+[15-Jun-2023 08:12:00 America/Bogota] PHP Fatal error:  Uncaught Error: Call to a member function fetch_assoc() on bool in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/pdf/comparador.php:71
+Stack trace:
+#0 {main}
+  thrown in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/pdf/comparador.php on line 71
+[15-Jun-2023 08:12:05 America/Bogota] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, bool given in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/pdf/comparador.php on line 28
+[15-Jun-2023 08:12:05 America/Bogota] PHP Notice:  Undefined index: intermediario in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/pdf/comparador.php on line 31
+[15-Jun-2023 08:12:05 America/Bogota] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, bool given in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/pdf/comparador.php on line 34
+[15-Jun-2023 08:12:05 America/Bogota] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, bool given in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/pdf/comparador.php on line 39
+[15-Jun-2023 08:12:05 America/Bogota] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, bool given in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/pdf/comparador.php on line 44
+[15-Jun-2023 08:12:05 America/Bogota] PHP Fatal error:  Uncaught Error: Call to a member function fetch_assoc() on bool in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/pdf/comparador.php:71
+Stack trace:
+#0 {main}
+  thrown in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/pdf/comparador.php on line 71
+[15-Jun-2023 08:12:09 America/Bogota] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, bool given in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/pdf/comparador.php on line 28
+[15-Jun-2023 08:12:09 America/Bogota] PHP Notice:  Undefined index: intermediario in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/pdf/comparador.php on line 31
+[15-Jun-2023 08:12:09 America/Bogota] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, bool given in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/pdf/comparador.php on line 34
+[15-Jun-2023 08:12:09 America/Bogota] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, bool given in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/pdf/comparador.php on line 39
+[15-Jun-2023 08:12:09 America/Bogota] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, bool given in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/pdf/comparador.php on line 44
+[15-Jun-2023 08:12:09 America/Bogota] PHP Fatal error:  Uncaught Error: Call to a member function fetch_assoc() on bool in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/pdf/comparador.php:71
+Stack trace:
+#0 {main}
+  thrown in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/pdf/comparador.php on line 71
+[15-Jun-2023 08:17:31 America/Bogota] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, bool given in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/pdf/comparador.php on line 28
+[15-Jun-2023 08:17:31 America/Bogota] PHP Notice:  Undefined index: intermediario in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/pdf/comparador.php on line 31
+[15-Jun-2023 08:17:31 America/Bogota] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, bool given in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/pdf/comparador.php on line 34
+[15-Jun-2023 08:17:31 America/Bogota] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, bool given in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/pdf/comparador.php on line 39
+[15-Jun-2023 08:17:31 America/Bogota] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, bool given in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/pdf/comparador.php on line 44
+[15-Jun-2023 08:17:31 America/Bogota] PHP Fatal error:  Uncaught Error: Call to a member function fetch_assoc() on bool in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/pdf/comparador.php:71
+Stack trace:
+#0 {main}
+  thrown in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/pdf/comparador.php on line 71
+[15-Jun-2023 08:45:39 America/Bogota] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, bool given in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/pdf/comparador.php on line 28
+[15-Jun-2023 08:45:39 America/Bogota] PHP Notice:  Undefined index: intermediario in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/pdf/comparador.php on line 31
+[15-Jun-2023 08:45:39 America/Bogota] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, bool given in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/pdf/comparador.php on line 34
+[15-Jun-2023 08:45:39 America/Bogota] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, bool given in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/pdf/comparador.php on line 39
+[15-Jun-2023 08:45:39 America/Bogota] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, bool given in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/pdf/comparador.php on line 44
+[15-Jun-2023 08:45:39 America/Bogota] PHP Fatal error:  Uncaught Error: Call to a member function fetch_assoc() on bool in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/pdf/comparador.php:71
+Stack trace:
+#0 {main}
+  thrown in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/pdf/comparador.php on line 71
+[15-Jun-2023 08:48:39 America/Bogota] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, bool given in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/pdf/comparador.php on line 28
+[15-Jun-2023 08:48:39 America/Bogota] PHP Notice:  Undefined index: intermediario in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/pdf/comparador.php on line 31
+[15-Jun-2023 08:48:39 America/Bogota] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, bool given in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/pdf/comparador.php on line 34
+[15-Jun-2023 08:48:39 America/Bogota] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, bool given in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/pdf/comparador.php on line 39
+[15-Jun-2023 08:48:39 America/Bogota] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, bool given in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/pdf/comparador.php on line 44
+[15-Jun-2023 08:48:39 America/Bogota] PHP Fatal error:  Uncaught Error: Call to a member function fetch_assoc() on bool in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/pdf/comparador.php:71
+Stack trace:
+#0 {main}
+  thrown in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/pdf/comparador.php on line 71
+[15-Jun-2023 09:51:17 America/Bogota] PHP Notice:  Undefined index: intermediario in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/pdf/comparador.php on line 31
+[15-Jun-2023 09:51:17 America/Bogota] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, bool given in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/pdf/comparador.php on line 34
+[15-Jun-2023 11:38:21 America/Bogota] PHP Notice:  Undefined index: intermediario in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/pdf/comparador.php on line 31
+[15-Jun-2023 11:38:21 America/Bogota] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, bool given in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/pdf/comparador.php on line 34
+[15-Jun-2023 11:46:19 America/Bogota] PHP Notice:  Undefined index: intermediario in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/pdf/comparador.php on line 31
+[15-Jun-2023 11:46:19 America/Bogota] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, bool given in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/pdf/comparador.php on line 34
+[15-Jun-2023 14:37:44 America/Bogota] PHP Warning:  Division by zero in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/pdf/comparador.php on line 700
+[15-Jun-2023 14:37:46 America/Bogota] PHP Notice:  Undefined index: startcolumn in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/tcpdf.php on line 19537
+[15-Jun-2023 14:37:46 America/Bogota] PHP Notice:  Undefined index: startx in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/tcpdf.php on line 19538
+[15-Jun-2023 14:37:46 America/Bogota] PHP Notice:  Undefined index: startpage in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/tcpdf.php on line 19541
+[15-Jun-2023 14:37:46 America/Bogota] PHP Notice:  Undefined index: startpage in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/tcpdf.php on line 19544
+[15-Jun-2023 14:37:46 America/Bogota] PHP Notice:  Undefined index:  in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/tcpdf.php on line 19544
+[15-Jun-2023 14:37:46 America/Bogota] PHP Notice:  Undefined index: startpage in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/tcpdf.php on line 19545
+[15-Jun-2023 14:37:46 America/Bogota] PHP Notice:  Undefined index:  in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/tcpdf.php on line 19545
+[15-Jun-2023 14:37:46 America/Bogota] PHP Notice:  Undefined index: startcolumn in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/tcpdf.php on line 19537
+[15-Jun-2023 14:37:46 America/Bogota] PHP Notice:  Undefined index: startx in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/tcpdf.php on line 19538
+[15-Jun-2023 14:37:46 America/Bogota] PHP Notice:  Undefined index: startpage in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/tcpdf.php on line 19541
+[15-Jun-2023 14:37:46 America/Bogota] PHP Notice:  Undefined index: startpage in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/tcpdf.php on line 19544
+[15-Jun-2023 14:37:46 America/Bogota] PHP Notice:  Undefined index:  in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/tcpdf.php on line 19544
+[15-Jun-2023 14:37:46 America/Bogota] PHP Notice:  Undefined index: startpage in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/tcpdf.php on line 19545
+[15-Jun-2023 14:37:46 America/Bogota] PHP Notice:  Undefined index:  in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/tcpdf.php on line 19545
+[15-Jun-2023 14:37:46 America/Bogota] PHP Notice:  Undefined index: startpage in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/tcpdf.php on line 19577
+[15-Jun-2023 14:37:46 America/Bogota] PHP Notice:  Undefined offset: -1 in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/tcpdf.php on line 19600
+[15-Jun-2023 14:37:46 America/Bogota] PHP Notice:  Undefined index: startx in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/tcpdf.php on line 19797
+[15-Jun-2023 14:37:46 America/Bogota] PHP Notice:  Undefined variable: startpage in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/tcpdf.php on line 19798
+[15-Jun-2023 14:37:46 America/Bogota] PHP Notice:  Undefined variable: endpage in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/tcpdf.php on line 19798
+[15-Jun-2023 14:37:46 America/Bogota] PHP Notice:  Undefined offset: -1 in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/tcpdf.php on line 19600
+[15-Jun-2023 14:37:46 America/Bogota] PHP Notice:  Undefined index: startx in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/tcpdf.php on line 19797
+[15-Jun-2023 14:37:46 America/Bogota] PHP Notice:  Undefined variable: startpage in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/tcpdf.php on line 19798
+[15-Jun-2023 14:37:46 America/Bogota] PHP Notice:  Undefined variable: endpage in /home3/grupoasi/public_html/integradoor.com/app/extensiones/tcpdf/tcpdf.php on line 19798

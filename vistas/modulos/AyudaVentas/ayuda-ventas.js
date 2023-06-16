@@ -1,0 +1,465 @@
+$(document).ready(function () {
+    obtenerAyudaVentas()
+});
+
+// Funciones
+const construirHtmlCentrosDeInspeccion = centrosDeInspeccion => {
+    if (centrosDeInspeccion.length === 0) return ''
+    let html = '<ul style="margin-top: 60px;" >'
+    centrosDeInspeccion.forEach(centro => {
+        if (centro !== '') html += `<li>- ${centro}</li>`
+    })
+    html += '</ul>'
+
+    return html
+}
+const construirHtmlContinuidad = continuidades => {
+    if (continuidades.length === 0) return ''
+    let html = '<ul style="margin-top: 60px;">'
+    continuidades.forEach(continuidad => {
+        if (continuidad !== '') html += `<li>- ${continuidad}</li>`
+    })
+    html += '</ul>'
+
+    return html
+}
+const construirHtmlFormasDePago = formasDePago => {
+    if (formasDePago.length === 0) return ''
+    let html = '<ul>'
+    formasDePago.forEach(formaDePago => {
+        if (formaDePago !== '') html += `<li>- ${formaDePago}</li>`
+    })
+    html += '</ul>'
+
+    return html
+}
+document.querySelector('#editarAyudaVenta').addEventListener('click', e => {
+    editarAyudaVenta()
+})
+const editarAyudaVenta = async () => {
+    const d = document
+    const issetSarlaft = d.querySelector('#sarlaft').files.length > 0
+    const issetSarlaft2 = d.querySelector('#sarlaft2').files.length > 0
+    const formData = new FormData()
+    formData.append('funcion', 'editarAyudaVenta');
+    formData.append('linea_de_atencion', d.querySelector('#linea_atencion').value)
+    formData.append('id_ayuda_venta', d.querySelector('#id_ayuda_venta').value)
+    formData.append('clausulado', d.querySelector('#clausulado').value)
+    if (issetSarlaft) {
+        formData.append('sarlaft', d.querySelector('#sarlaft').files[0])
+    }
+    if (issetSarlaft2) {
+        formData.append('sarlaft2', d.querySelector('#sarlaft2').files[0])
+    }
+    formData.append('aseguradora', d.querySelector('#aseguradora').value)
+    formData.append('centro_de_inspeccion', centros.join('-').toString())
+    formData.append('continuidad', continuidades.join('-').toString())
+    formData.append('formas_de_pago', formasDePago.join('-').toString())
+    formData.append('tips_expedicion', d.querySelector('#tips_expedicion').value)
+
+    await editarAyudaVentaRequest(formData);
+}
+const editarAyudaVentaRequest = async _formData => {
+    const req = await fetch('./vistas/modulos/AyudaVentas/AyudaVentasController.php', {
+        method: 'POST',
+        headers: {
+            'Accept': 'application/json',
+        },
+        body: _formData
+    }).then(() => {
+        obtenerAyudaVentas()
+        document.querySelector('.form-editar-ayuda-venta').style.display = 'none';
+    })
+}
+const editar = async _id => {
+    const data = await obtenerAyudaVenta(_id)
+    llenarFormulario(data)
+}
+const obtenerAyudaVenta = async _id => {
+    const formData = new FormData();
+    formData.append('funcion', 'obtenerAyudaVenta')
+    formData.append('id', _id)
+    const _data = await fetch('./vistas/modulos/AyudaVentas/AyudaVentasController.php', {
+        method: 'POST',
+        headers: {
+            'Accept': 'application/json',
+        },
+        body: formData
+    })
+    .then(res => res.json())
+    .then(data => {
+        return data
+    })
+    return _data
+}
+const llenarFormulario = _data => {
+    const d = document
+    if (_data.centro_de_inspeccion != null) {
+        centros = _data.centro_de_inspeccion.split('-')
+        llenarCentrosDeInspeccion(centros)
+    }
+    if (_data.continuidad != null) {
+        continuidades = _data.continuidad.split('-')
+        llenarContinuidades(continuidades)
+    }
+    if (_data.formas_de_pago != null) {
+        formasDePago = _data.formas_de_pago.split('-')
+        llenarFormasDePago(formasDePago)
+    }
+    d.querySelector('#aseguradora').value = _data.aseguradora
+    d.querySelector('#id_ayuda_venta').value = _data.id 
+    d.querySelector('#linea_atencion').value = _data.linea_de_atencion
+    d.querySelector('#clausulado').value = _data.link_clausulado
+    d.querySelector('#continuidad').innerText = _data.continuidad
+    d.querySelector('#tips_expedicion').innerText = _data.tips_de_expedicion
+    d.querySelector('.form-editar-ayuda-venta').style.display = 'block'
+    window.scroll(0, 0)
+}
+const obtenerAyudaVentas = async () => {
+    const formData = new FormData();
+    formData.append('funcion', 'obtenerAyudaVentas')
+    await fetch('./vistas/modulos/AyudaVentas/AyudaVentasController.php', {
+        method: 'POST',
+        headers: {
+            'Accept': 'application/json'
+        },
+        body: formData
+    })
+    .then(res => {
+        const test = res.json()
+        //return res.json()
+        return test
+    })
+    .then(data => {
+
+        let fecha_max1 = '0000-00-00 00:00:00';
+
+        let rol = document.getElementById("rol").value;
+        let template = ''
+        data.forEach(ayudaVenta => {
+
+            const fecha_base = ayudaVenta.Fecha_Ultima_modificacion;
+
+            if(compare_dates(fecha_base, fecha_max1)){
+
+                fecha_base
+
+                fecha_max1 = fecha_base
+            }
+            
+
+            const centrosDeInspeccion = (ayudaVenta.centro_de_inspeccion != null) 
+                                            ? ayudaVenta.centro_de_inspeccion.split('-') : []
+            const continuidades = (ayudaVenta.continuidad != null) 
+                                            ? ayudaVenta.continuidad.split('-') : []
+            const formasDePago = (ayudaVenta.formas_de_pago != null) 
+                                            ? ayudaVenta.formas_de_pago.split('-') : []
+            let partTemplate = `
+                <tr >
+                    <td ><img src="./vistas/modulos/AyudaVentas/src/logos/${ayudaVenta.aseguradora}.png" style="margin-top: 100%;" class="img-responsive" width="80"></td>
+                    <td style="line-height: 200px;">${ayudaVenta.linea_de_atencion}</td>`
+            if (ayudaVenta.link_clausulado) {
+                partTemplate += `<td style="line-height: 200px;"><button class="btn btn-alert"  style="border-color: #88d600; width: 205px; color: #88d600; font-weight: 500;" onclick="validarPermisoClausulado('${ayudaVenta.link_clausulado}')">${ayudaVenta.link_clausulado.substring(0,27)}</button></td>`
+            } else {
+                partTemplate += '<td></td>'
+            }
+            if (ayudaVenta.path_sarlaft || ayudaVenta.path_sarlaft2) {
+                let sarlaftButtons = '<td style="line-height: 200px;">'
+                sarlaftButtons += ayudaVenta.path_sarlaft ? `<button class="btn btn-alert" style="background: red; color: #fff; font-weight: 500;" onclick="onclick="validarPermisoPdfPersonaNatural('./vistas/modulos/AyudaVentas/pdf/sarlaft/${ayudaVenta.path_sarlaft}')">PDF PN</button>` : ''
+                partTemplate += sarlaftButtons + '</td>'
+                let sarlaftButtons2 = '<td style="line-height: 200px;">'
+                sarlaftButtons2 += ayudaVenta.path_sarlaft2 ? `<button class="btn btn-alert" style="background: red; color: #fff; font-weight: 500;" onclick="validarPermisoPdfPersonaJuridica('./vistas/modulos/AyudaVentas/pdf/sarlaft2/${ayudaVenta.path_sarlaft2}')">PDF PJ</button>` : ''
+                partTemplate += sarlaftButtons2 + '</td>'
+            } else {
+                partTemplate += '<td></td>'
+                partTemplate += '<td></td>'
+            }
+            partTemplate += `
+                <td >${construirHtmlCentrosDeInspeccion(centrosDeInspeccion)}</td>
+                <td >${construirHtmlContinuidad(continuidades)}</td>
+                <td>${construirHtmlFormasDePago(formasDePago)}</td>`
+            if(permisos.Editarinformaciondelayudaventas == 'x'){
+                partTemplate += `<td style="line-height: 200px;">
+                    <button 
+                        onclick="editar(${ayudaVenta.id})"
+                        class="btn btn-primary"
+                    >
+                        Editar
+                    </button>
+                </td>
+            </tr>`
+            }
+            template += partTemplate
+        })
+
+        let fecha_max2 =  fecha_max1.split(' ')
+        let fecha_max3 = fecha_max2[0];
+        let fecha_max4 = fecha_max3.split('-')
+        let fecha_max = fecha_max4[2]+'-'+fecha_max4[1]+'-'+fecha_max4[0];
+        let men_fech = "<b>Fecha ultima actualización: </b>" + fecha_max
+        document.querySelector('#fech_ult').innerHTML = men_fech
+        document.querySelector('.ayuda-ventas-body').innerHTML = template   
+    })
+}
+/* CENTROS DE INSPECCIÓN */
+/* Agregar centro */
+let centros = []
+document.querySelector('#agregarCentroDeInspeccion').addEventListener('click', e => {
+    e.preventDefault()
+    agregarCentroDeInspeccion()
+})
+const agregarCentroDeInspeccion = () => {
+    const d = document
+    const centro = d.querySelector('#centro_inspeccion').value
+    if (centro === '') return;
+    centros.push(centro)
+    const index = (centros.length - 1)
+    template = `
+    <div class="form-group">
+        <input type="hidden" value="${index}" />
+        <input class="form-control" type="text" id="centro_value_${index}" value="${centro}" />
+        <button class="btn btn-danger" onclick="editarCentroInspeccion(${index}, 'centro_value_${index}')">Editar   </button>
+    </div>
+    `
+    d.querySelector('#centros_de_inspeccion').innerHTML += template
+    d.querySelector('#centro_inspeccion').value = ''
+}
+
+const llenarCentrosDeInspeccion = _centros => {
+    const d = document
+    let template = ''
+    _centros.forEach((centro, index) => {
+        template += `
+        <div class="form-group">
+            <input type="hidden" value="${index}" />
+            <input class="form-control" type="text" id="centro_value_${index}" value="${centro}" />
+            <button class="btn btn-danger" onclick="editarCentroInspeccion(${index}, 'centro_value_${index}')">Editar   </button>
+        </div>
+        `
+    })
+    d.querySelector('#centros_de_inspeccion').innerHTML = template
+}
+const editarCentroInspeccion = (_index, _centro_value_index) => {
+    const d = document
+    centros[_index] = d.querySelector('#' + _centro_value_index).value
+}
+/* END - CENTROS DE INSPECCIÓN */
+
+/* CONTINUIDAD */
+let continuidades = []
+document.querySelector('#agregarContinuidad').addEventListener('click', e => {
+    e.preventDefault()
+    agregarContinuidad()
+})
+const agregarContinuidad = () => {
+    const d = document
+    const continuidad = d.querySelector('#continuidad').value
+    if (continuidad === '') return;
+    continuidades.push(continuidad)
+    const index = (continuidades.length - 1)
+    template = `
+    <div class="form-group">
+        <input type="hidden" value="${index}" />
+        <input class="form-control" type="text" id="continuidad_value_${index}" value="${continuidad}" />
+        <button class="btn btn-danger" onclick="editarContinuidad(${index}, 'continuidad_value_${index}')">Editar   </button>
+    </div>
+    `
+    d.querySelector('#continuidades').innerHTML += template
+    d.querySelector('#continuidad').value = ''
+}
+const llenarContinuidades = _continuidades => {
+    const d = document
+    let template = ''
+    _continuidades.forEach((continuidad, index) => {
+        template += `
+        <div class="form-group">
+            <input type="hidden" value="${index}" />
+            <input class="form-control" type="text" id="continuidad_value_${index}" value="${continuidad}" />
+            <button class="btn btn-danger" onclick="editarContinuidad(${index}, 'continuidad_value_${index}')">Editar   </button>
+        </div>
+        `
+    })
+    d.querySelector('#continuidades').innerHTML = template
+}
+const editarContinuidad = (_index, _continuidad_value_index) => {
+    const d = document
+    continuidades[_index] = d.querySelector('#' + _continuidad_value_index).value
+}
+/* END - CONTINUIDAD */
+
+/* FORMAS DE PAGO */
+let formasDePago = []
+document.querySelector('#agregarFormaDePago').addEventListener('click', e => {
+    e.preventDefault()
+    agregarFormaDePago()
+})
+const agregarFormaDePago = () => {
+    const d = document
+    const formaDePago = d.querySelector('#forma_de_pago').value
+    if (formaDePago === '') return;
+    formasDePago.push(formaDePago)
+    const index = (formasDePago.length - 1)
+    template = `
+    <div class="form-group">
+        <input type="hidden" value="${index}" />
+        <input class="form-control" type="text" id="forma_de_pago_value_${index}" value="${formaDePago}" />
+        <button class="btn btn-danger" onclick="editarFormaDePago(${index}, 'forma_de_pago_value_${index}')">Editar   </button>
+    </div>
+    `
+    d.querySelector('#formas_de_pago').innerHTML += template
+    d.querySelector('#forma_de_pago').value  = ''
+}
+
+const llenarFormasDePago = _formasDePago => {
+    const d = document
+    let template = ''
+    _formasDePago.forEach((formaDePago, index) => {
+        template += `
+            <div class="form-group">
+                <input type="hidden" value="${index}" />
+                <input class="form-control" type="text" id="forma_de_pago_value_${index}" value="${formaDePago}" />
+                <button class="btn btn-danger" onclick="editarFormaDePago(${index}, 'forma_de_pago_value_${index}')">Editar   </button>
+            </div>
+            `
+    })
+    d.querySelector('#formas_de_pago').innerHTML = template
+}
+const editarFormaDePago = (_index, _forma_de_pago_value_index) => {
+    const d = document
+    formasDePago[_index] = d.querySelector('#' + _forma_de_pago_value_index).value
+}
+/* END - FORMAS DE PAGO */
+
+
+/* editar sarlaf generico1*/
+
+document.querySelector('#btn_edit_generic1').addEventListener('click', e => {
+
+    $(".form-editar-generic1").show();
+})
+
+document.querySelector('#editargeneric1').addEventListener('click', e => {
+
+    Edit_sarlaf_generico1();
+    
+})
+
+const Edit_sarlaf_generico1 =async () => {
+
+    const d = document
+    const issetSarlaft = d.querySelector('#sarlaftGeneric1').files.length > 0
+    if (issetSarlaft) {
+        const formData = new FormData()
+        formData.append('funcion', 'editarSarlaftGeneric1');
+        formData.append('sarlaft', d.querySelector('#sarlaftGeneric1').files[0])
+
+        const req = await fetch('./vistas/modulos/AyudaVentas/AyudaVentasController.php', {
+            method: 'POST',
+            headers: {
+                'Accept': 'application/json',
+            },
+            body: formData
+        }).then(() => {
+
+            Swal.fire('¡Documento actualizado con exíto!')
+
+
+            setTimeout(function(){
+                location.reload();
+            }, 3000);
+            
+        })
+    }else{
+        Swal.fire('¡Seleccione un archivo!')
+    }
+
+}
+
+
+/*comprarar fechas*/
+
+function compare_dates(fecha, fecha2)  
+  {  
+   
+    var xMonth=fecha.substring(3, 5);  
+    var xDay=fecha.substring(0, 2);  
+    var xYear=fecha.substring(6,10);  
+    var yMonth=fecha2.substring(3, 5);  
+    var yDay=fecha2.substring(0, 2);  
+    var yYear=fecha2.substring(6,10);  
+    if (xYear> yYear)  
+    {  
+        return(true)  
+    }  
+    else  
+    {  
+      if (xYear == yYear)  
+      {   
+        if (xMonth> yMonth)  
+        {  
+            return(true)  
+        }  
+        else  
+        {   
+          if (xMonth == yMonth)  
+          {  
+            if (xDay> yDay)  
+              return(true);  
+            else  
+              return(false);  
+          }  
+          else  
+            return(false);  
+        }  
+      }  
+      else  
+        return(false);  
+    }  
+} 
+
+/* editar sarlaf generico2*/
+
+document.querySelector('#btn_edit_generic2').addEventListener('click', e => {
+
+    $(".form-editar-generic2").show();
+})
+
+document.querySelector('#editargeneric2').addEventListener('click', e => {
+
+    Edit_sarlaf_generico2();
+    
+})
+
+
+
+const Edit_sarlaf_generico2 =async () => {
+
+    const d = document
+    const issetSarlaft = d.querySelector('#sarlaftGeneric2').files.length > 0
+    if (issetSarlaft) {
+        const formData = new FormData()
+        formData.append('funcion', 'editarSarlaftGeneric2');
+        formData.append('sarlaft', d.querySelector('#sarlaftGeneric2').files[0])
+
+        const req = await fetch('./vistas/modulos/AyudaVentas/AyudaVentasController.php', {
+            method: 'POST',
+            headers: {
+                'Accept': 'application/json',
+            },
+            body: formData
+        }).then(() => {
+
+
+            Swal.fire('¡Documento actualizado con exíto!')
+
+            setTimeout(function(){
+                location.reload();
+            }, 3000);
+        })
+    }else{
+        Swal.fire('¡Seleccione un archivo!')
+    }
+
+}
+
+   
