@@ -1,21 +1,6 @@
-<?php
-if ($_SESSION["permisos"]["veradministracionintegradoor"] != "x") {
-
-    echo '<script>
-  
-      window.location = "inicio";
-  
-    </script>';
-  
-    return;
-  }
-?>
-
-
 <head>
 <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"> -->
 <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v6.0.0-beta2/css/all.css" integrity="sha384-OA4SkQ1hW5kfQF3/OBdzK99bg7sQKT6+yXxq5Iu7QvGrrkrBsX3p5SRy9CrJ0+Gx" crossorigin="anonymous">
-
 
 </head>
 <style>
@@ -170,25 +155,25 @@ if ($_SESSION["permisos"]["veradministracionintegradoor"] != "x") {
       
           <!-- Tabla de Políticas -->
           <div class="card mt-4"  style="padding: 15px;">
-            <button id="btnAgregarPolitica" class="btnAgregarInter" data-toggle="modal" data-target="#modalAgregarPolitica" onclick="abrirModalAgregarPolitica('0', '0', '0','0','agregar')">
-              Agregar Politica
-            </button>
-              <div class="card-body">
-                  <table  id="politicsTable" class="table table-bordered table-striped dt-responsive tablas" width="100%">
-                      <thead>
-                          <tr>
-                            <th>Id política</th>
-                            <th>Descripción política</th>
-                            <th>Dias para renovar</th>
-                            <th>Dias máx. mora</th>
-                            <th>Dias cancelación</th>
-                            <th>Acciones</th>
-                          </tr>
-                      </thead>    
-                      <tbody>
-                      </tbody>
-                  </table>
-              </div>
+              <button id="btnAgregarPolitica" class="btnAgregarInter" data-toggle="modal" data-target="#modalAgregarPolitica" onclick="abrirModalAgregarPolitica('0', '0', '0','0','agregar')">
+                Agregar Politica
+              </button>
+                  <div class="card-body">
+                      <table  id="politicsTable" class="table table-bordered table-striped dt-responsive tablas-cotizaciones" width="100%">
+                            <thead>
+                              <tr>
+                                <th>Id política</th>
+                                <th>Descripción política</th>
+                                <th>Dias para renovar</th>
+                                <th>Dias máx. mora</th>
+                                <th>Dias cancelación</th>
+                                <th>Acciones</th>
+                              </tr>
+                            </thead>    
+                          <tbody>
+                          </tbody>
+                      </table>
+                  </div>
           </div>
 
           <!-- Tabla de Estados -->
@@ -198,7 +183,7 @@ if ($_SESSION["permisos"]["veradministracionintegradoor"] != "x") {
                 Crear Estado Contrato
               </button>
               <div class="card-body">
-                  <table  id="stateTable" class="table table-bordered table-striped dt-responsive tablas" width="100%">
+                  <table  id="stateTable" class="table table-bordered table-striped dt-responsive tablas-cotizaciones" width="100%">
                       <thead>
                           <tr>
                             <th>Id Estado contrato</th>
@@ -220,7 +205,7 @@ if ($_SESSION["permisos"]["veradministracionintegradoor"] != "x") {
                 Crear Tipo Contrato
               </button>
                 <div class="card-body">
-                    <table  id="typeTable" class="table table-bordered table-striped dt-responsive tablas" width="100%">
+                    <table  id="typeTable" class="table table-bordered table-striped dt-responsive tablas-cotizaciones" width="100%">
                         <thead>
                             <tr>
                               <th>Id Tipo Contrato</th>
