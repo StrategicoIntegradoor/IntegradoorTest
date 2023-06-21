@@ -11,23 +11,20 @@
 				</a>
 			</li>
 
-		
-	<?php	
-	    /*=============================================
-		CONFIGURAR POLÍTICIAS
-		=============================================*/
-		if($_SESSION["permisos"]["veradministracionintegradoor"] == "x"){	
-			echo '<li class="dropdown user user-menu">
+		<!-- /*=============================================
+		CONFIGURAR POL脥TICIAS
+		=============================================*/-->
+		<li class="dropdown user user-menu">
 			<a href="#" class="dropdown-toggle" data-toggle="dropdown">
 			<i class="fa fa-wrench" aria-hidden="true"></i>
 				<span >Administrador Integradoor</span>
 			</a>			
 				<ul class="dropdown-menu right">
 					<li class="user-body">			
-						<a href="politicas" class="btn btn-default btn-flat"><i class="" style="color: red;"></i>Políticas</a>
+						<a href="politicas" class="btn btn-default btn-flat"><i class="" style="color: red;"></i>Pol铆ticas</a>
 					</li>
 					<li class="user-body">	
-						<a href="inicio" class="btn btn-default btn-flat"><i class="" style="color: red;"></i>Planes</a>
+						<a href="planes" class="btn btn-default btn-flat"><i class="" style="color: red;"></i>Planes</a>
 					</li>
 					<li class="user-body">	
 						<a href="inicio" class="btn btn-default btn-flat"><i class="" style="color: red;"></i>Contratos</a>
@@ -37,10 +34,8 @@
 					</li>
 
 				</ul>
-		</li>';
-			}
-	
-	
+		</li>
+	<?php	
 		/*=============================================
 		ADMINISTRAR COTIZACIONES
 		=============================================*/
@@ -59,7 +54,7 @@
 			echo '<!--<li>
 				<a href="autogestion">
 					<i class="fa fa-user"></i>
-					<span>Autogestión</span>
+					<span>Autogesti贸n</span>
 				</a>
 			</li>-->';
 		}
@@ -91,7 +86,7 @@
 		/*=============================================
 		COTIZACIONES MASIVAS
 		=============================================*/
-		if($_SESSION["permisos"]["Cotizacionesmasivas"] == "x"){	
+		if($_SESSION["permisos"]["administracionCotizaciones"] == "x"){	
 			echo  '<li>
 				<a href="livianoMasivas">
 					<i class="fa fa-file-archive-o"></i>
@@ -147,37 +142,51 @@
 		AYUDA VENTAS
 		=============================================*/		
 	?>
-		<!--<li>-->
-		<!--	<a id="ayuda-ventas">-->
-		<!--		<i class="fa fa-book"></i>-->
-		<!--		<span>Ayuda Ventas</span>-->
-		<!--	</a>-->
-		<!--</li>-->
+		<li>
+			<a id="ayuda-ventas">
+				<i class="fa fa-book"></i>
+				<span>Ayuda Ventas</span>
+			</a>
+		</li>
 	<?php
 		/*=============================================
 		INTERMEDIARIO
 		=============================================*/	
-		if($_SESSION["permisos"]["Agregarintermediario"] == "x"){	
+		if($_SESSION["permisos"]["administracionCotizaciones"] == "x"){	
 			echo '<li>
 				<a href="intermediario">
 					<i class="fa fa-briefcase"></i>
 					<span>Intermediario</span>
 				</a>
 			</li>';
-		}
-		/*=============================================
-		CONFIGURAR PDF
-		=============================================*/	
-// 			if($_SESSION["permisos"]["Configuraciondeplantillasdepdf"] == "x"){	
-// 			echo '<li>
-// 				<a id="configuracion-pdf">
-// 					<i class="fa fa-cog" aria-hidden="true"></i>
-// 					<span>Configuracion</span>
-// 				</a>
-// 			</li>';
-// 		}
-	?>
 		
+		}
+	?>
+		<!--/*=============================================
+		INVITACI脫N
+		=============================================*/	-->
+		
+		<li>
+				<a href="invitar">
+				<i class="fa fa-paper-plane" aria-hidden="true"></i>
+					<span>Invitaci贸n</span>
+				</a>
+			</li>
+
+
+
+			
+
+		<!--/*=============================================
+		CONFIGURAR PDF
+		=============================================*/-->
+
+			<li>
+				<a id="configuracion-pdf">
+					<i class="fa fa-cog" aria-hidden="true"></i>
+					<span>Configuracion</span>
+				</a>
+			</li>
 	
 
 	</ul>
