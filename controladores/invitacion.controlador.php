@@ -33,6 +33,8 @@ class invitationController{
                 $contrasena = $requestData['contrasena'];
                 $confirmar_contrasena = $requestData['confirmar_contrasena'];
                 $accion = $requestData['accion'];
+                
+                if($contrasena === $confirmar_contrasena){
 
                 $response = ModeloRegistroFreeLancer::mdlBuscarCodigo($clave, $nombre, $apellido, $tipo_documento, $identificacion, $dia_nacimiento, $mes_nacimiento, $anio_nacimiento, $genero, $direccion, $ciudad, $telefono, $celular, $correo_electronico, $contrasena, $confirmar_contrasena, $accion, $tabla, $item) ;
 
@@ -44,15 +46,20 @@ class invitationController{
                     if($response == true){
                         $item = ModeloRegistroFreeLancer::mdlEliminarToken($usuario, $tabla);
                     } else {
-                        echo json_encode(['error' => 'Error de registro']);
+                        echo $response;
+                        // echo json_encode(['error' => 'Error de registro']);
                     }
                 }
-            }
+                
+            }else{$response = array('error' => 'Fallo contrasenas');
+                        $jsonResponse = json_encode($response);
+                        echo $jsonResponse;
+                        }
         }
     }
 
 
-}
+}}
 
 $validate = new invitationController();
 $validate->authValidate();  

@@ -154,3 +154,12 @@ Stack trace:
 [15-Jun-2023 22:34:49 UTC] PHP Notice:  Undefined variable: nombre in /home3/grupoasi/public_html/integradoor.com/app/modelos/password.modelo.php on line 159
 [15-Jun-2023 22:40:36 UTC] PHP Notice:  Undefined variable: nombre in /home3/grupoasi/public_html/integradoor.com/app/modelos/password.modelo.php on line 159
 [15-Jun-2023 23:24:38 UTC] PHP Notice:  Undefined variable: nombre in /home3/grupoasi/public_html/integradoor.com/app/modelos/password.modelo.php on line 159
+[22-Jun-2023 16:19:55 UTC] PHP Parse error:  syntax error, unexpected '$stmt' (T_VARIABLE) in /home3/grupoasi/public_html/integradoor.com/Test/modelos/invitacion.modelo.php on line 81
+[22-Jun-2023 16:21:07 UTC] PHP Parse error:  syntax error, unexpected '$stmt' (T_VARIABLE) in /home3/grupoasi/public_html/integradoor.com/Test/modelos/invitacion.modelo.php on line 81
+[22-Jun-2023 16:29:46 UTC] PHP Parse error:  syntax error, unexpected '$stmt' (T_VARIABLE) in /home3/grupoasi/public_html/integradoor.com/Test/modelos/invitacion.modelo.php on line 81
+[22-Jun-2023 16:31:51 UTC] PHP Parse error:  syntax error, unexpected '$stmt' (T_VARIABLE) in /home3/grupoasi/public_html/integradoor.com/Test/modelos/invitacion.modelo.php on line 81
+[22-Jun-2023 16:33:36 UTC] PHP Parse error:  syntax error, unexpected '$stmt' (T_VARIABLE) in /home3/grupoasi/public_html/integradoor.com/Test/modelos/invitacion.modelo.php on line 81
+[23-Jun-2023 13:24:07 UTC] PHP Notice:  Array to string conversion in /home3/grupoasi/public_html/integradoor.com/Test/controladores/invitacion.controlador.php on line 53
+[23-Jun-2023 13:24:12 UTC] PHP Notice:  Array to string conversion in /home3/grupoasi/public_html/integradoor.com/Test/controladores/invitacion.controlador.php on line 53
+[23-Jun-2023 13:26:35 UTC] PHP Parse error:  syntax error, unexpected '}', expecting ',' or ';' in /home3/grupoasi/public_html/integradoor.com/Test/controladores/invitacion.controlador.php on line 53
+[26-Jun-2023 14:39:29 UTC] PHP Notice:  Undefined variable: nombre in /home3/grupoasi/public_html/integradoor.com/Test/modelos/password.modelo.php on line 159

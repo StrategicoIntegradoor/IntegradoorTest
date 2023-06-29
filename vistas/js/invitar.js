@@ -1,3 +1,12 @@
+$("#name").keyup(function () {
+  var cliNombres = document.getElementById("name").value.toLowerCase();
+  $("#name").val(
+    cliNombres.replace(/^(.)|\s(.)/g, function ($1) {
+      return $1.toUpperCase();
+    })
+  );
+});
+
 async function authCedula(){
 
 
@@ -23,9 +32,12 @@ async function authCedula(){
     };
 
     var url = 'controladores/invitar.controlador.php';
-
+    $("#loaderOferta").html(
+      '<img src="vistas/img/plantilla/loader-update.gif" width="34" height="34"><strong> Cargando pre_registro...</strong>'
+    );
     fetch(url, options)
     .then(function(response) {
+    $("#loaderOferta").html("");
     if (response.ok) {
       return response.text();
         } else {
@@ -36,22 +48,22 @@ async function authCedula(){
         console.log(data);
         data = JSON.parse(data);
         if(data.success == "Registro exitoso"){
-            Swal.fire(
-                'Good job!',
-                'Registro realizado exitosamente',
-                'success'
-              ).then(function() {
+            Swal.fire({
+                icon: '<img src="vistas/img/plantilla/ofertas.png" width="84" height="84">',
+                title: '<img src="vistas/img/plantilla/ofertas.png" width="84" height="84">',
+                text: 'Invitacion enviada exitosamente',
+              }).then(function() {
                 location.reload(); // Refrescar la página
             });
         }else if(data.error === 'Documento existente en la BDD'){
             Swal.fire(
-                'HEY! :(',
-                'No fue posible crear pre_registro, documento existente en la BDD',
+                'El documento ingresado ya se encuentra registrado',
+                'Verifica la información y vuelve a intentar',
                 'error'
               ) 
         }else{
             Swal.fire(
-                'HEY! :(',
+                'Alerta! :(',
                 'Error interno, contactese con servicio técnico',
                 'error'
               ) 
