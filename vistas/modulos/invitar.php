@@ -12,11 +12,11 @@
     background: #ddd;
   }
 
-  .contentnav {
+  /* .contentnav {
     display: table;
     justify-content: space-around;
     margin: auto;
-  }
+  } */
 
   .gray-header {
         color: #82d600;
@@ -157,40 +157,59 @@
 </style>
 
 <div class="content-wrapper">
+    <section class="content-header">
+
+        <h1>
+
+        Invitación de registro Freelance 
+
+        </h1>
+
+        <ol class="breadcrumb">
+
+        <li><a href="inicio"><i class="fa fa-dashboard"></i>Inicio</a></li>
+
+        <li class="active">Cotizar Vehiculo liviano</li>
+
+        </ol>
+
+    </section>
     <section class="content">
-        <h3>Invitación de registro freelance</h3>
         <div class="box">
-        <h3 class="login-head text-info text-center gray-header" style="font-size: 24px; color: darkgreen; text-transform: uppercase; font-weight: bold; text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);">Enviar invitación de registro</h3>
+        <!-- <h3 class="login-head text-info text-center gray-header" style="font-family: 'Comic Sans MS', cursive;">Enviar invitación de registro</h3> -->
             <br>
             <div class="form-container text-center">
                 <form style="width: 50%; margin: 0 auto;">
                     <div class="row">
                         <div class="col-md-12 offset-md-3">
+                        <label for="correo" style="display: block; text-align: left;">No Identificación</label>   
                             <div class="input-group" style="margin-bottom: 10px;">
                                 <span class="input-group-addon">
                                     <i class="fa fa-id-card-o" aria-hidden="true"></i>
                                 </span>
-                                <input type="text" class="form-control text-left" placeholder="Número de identificación" id="cc">
+                                <input type="text" class="form-control text-left" placeholder="Número de identificación" id="cc" style="font-size: 15px; font-weight: bold; font-style: italic;">
                             </div>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-md-12 offset-md-3">
+                        <label for="correo" style="display: block; text-align: left;">Nombre Completo</label>   
                             <div class="input-group" style="margin-bottom: 10px;">
                                 <span class="input-group-addon">
                                     <i class="fa fa-pencil" aria-hidden="true"></i>
                                 </span>
-                                <input type="text" class="form-control text-left" placeholder="Nombre Completo" id="name">
+                                <input type="text" class="form-control text-left" placeholder="Nombre Completo" id="name" style="font-size: 15px; font-weight: bold; font-style: italic;">
                             </div>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-md-12 offset-md-3">
+                            <label for="correo" style="display: block; text-align: left;">Correo electrónico</label>   
                             <div class="input-group" style="margin-bottom: 10px;">
                                 <span class="input-group-addon">
                                     <i class="fa fa-envelope" aria-hidden="true"></i>
                                 </span>
-                                <input type="text" class="form-control text-left" placeholder="Correo electrónico" id="mail">
+                                <input type="text" class="form-control text-left" placeholder="Correo electrónico" id="mail" style="font-size: 15px; font-weight: bold; font-style: italic;">
                             </div>
                         </div>
                     </div>
@@ -198,7 +217,7 @@
                     <div class="row">
                         <div class="text-center" style="margin-bottom: 6px;">
                             <div style="width: 30%; margin: 0 auto;">
-                                <button type="button" class="btn btn-primary btn-block" onclick="authCedula()">Enviar</button>
+                                <button type="button" class="btn btn-primary btn-block" onclick="authCedula()" style="font-size: 18px;">Enviar</button>
                             </div>
                         </div>
                     </div>
