@@ -77,28 +77,38 @@ if (clave_registro !== '' &&
         }
     })
     .then(function(data) {
-        console.log(data);
+        // console.log(data);
         data = JSON.parse(data);
-
+    console.log(data);
         if(data.success === "Registro exitoso"){
-            Swal.fire(
-                'Good job!',
-                'Registro realizado exitosamente',
-                'success'
-              )
+            Swal.fire({
+                icon: '<img src="vistas/img/plantilla/ofertas.png" width="84" height="84">',
+                title: '<img src="vistas/img/plantilla/ofertas.png" width="84" height="84">',
+                text: 'Bienvenido!, nuevo usuario Freelance creado exitosamente, ya puedes ingresar a la plataforma y el usuario es tu número de documento',
+              });
+              setTimeout(function() {
+            Swal.close();
+            window.location.href = 'https://integradoor.com/Test';
+          }, 4000);
             //   .then(function() {
                 // location.reload(); // Refrescar la página
             // });
-        }else if(data.error === 'No se encuentra clave de seguridad'){
+        }else if(data.error === 'Clave incorrecta'){
             Swal.fire(
-                'HEY! :(',
+                'Alerta!',
                 'No fue posible crear registro, clave de seguridad incorrecta',
                 'error'
               ) 
         }else if(data.error === 'No se encuentra el usuario'){
+             Swal.fire({
+                icon: '<img src="vistas/img/plantilla/buscar.png" width="84" height="84">',
+                title: '<img src="vistas/img/plantilla/buscar.png" width="84" height="84">',
+                text: 'No fue posible crear el registro, el número de documento no corresponde al usuario invitado',
+              });
+        }else if(data.error === 'Fallo contrasenas'){
             Swal.fire(
-                'HEY! :(',
-                'No fue posible crear registro, usuario sin pre_registro',
+                'Alerta!',
+                'Alerta, no coinciden tus contraseñas',
                 'error'
               ) 
         }

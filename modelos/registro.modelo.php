@@ -19,7 +19,7 @@ class ModeloRegistroFreeLancer{
             // Comparar la clave con la registrada en la base de datos
             if ($resultado['tokenGuest'] === $clave) {
                 $registro = new ModeloRegistroFreeLancer();
-                $response = $registro->mdlRegistrarFreeLancer($nombre, $apellido, $direccion, $ciudad, $identificacion, $confirmar_contrasena, $genero, $telefono, $correo_electronico, $dia_nacimiento, $mes_nacimiento, $anio_nacimiento, $tabla, $clave);
+                $response = $registro->mdlRegistrarFreeLancer($nombre, $apellido, $direccion, $ciudad, $identificacion, $confirmar_contrasena, $genero, $celular, $correo_electronico, $dia_nacimiento, $mes_nacimiento, $anio_nacimiento, $tabla, $clave);
             } else {
                 $response = array('error' => 'Clave incorrecta');
                 $jsonResponse = json_encode($response);

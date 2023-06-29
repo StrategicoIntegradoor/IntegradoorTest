@@ -1754,11 +1754,14 @@ function cotizarOfertas() {
                                                             <button type="button" class="btn btn-danger btn-block" id="btnParrillaPDF">
                                                                 <span class="fa fa-file-text"></span> Generar PDF de Cotización
                                                             </button>
-                                                        </div>`
+                                                        </div>
+                                                        <input type="checkbox" id="checkboxAsesor">
+                                                        <label for="checkboxAsesor">Asesor Digital</label>`
               $("#btnParrillaPDF").click(function () {
                 const todosOn = $(".classSelecOferta:checked").length;
                 const idCotizacionPDF = idCotizacion;
-              
+                const checkboxAsesor = $("#checkboxAsesor");
+
                 if(permisos.Generarpdfdecotizacion != "x"){
       
                   Swal.fire({
@@ -1784,8 +1787,15 @@ function cotizarOfertas() {
                         title: "¡Debes seleccionar mínimo una oferta!",
                       });
                     } else {
-                      window.open("extensiones/tcpdf/pdf/comparador.php?cotizacion="+idCotizacionPDF, "_blank");
-                    
+                        
+                    let url = `extensiones/tcpdf/pdf/comparador.php?cotizacion=${idCotizacionPDF}`;
+                    if (checkboxAsesor.is(":checked")) {
+                        url += "&generar_pdf=1";
+                      }
+                    window.open(url, "_blank");
+                        
+                    //   window.open("extensiones/tcpdf/pdf/comparador.php?cotizacion=" + idCotizacionPDF,"_blank");
+
                     }
                   }
               });

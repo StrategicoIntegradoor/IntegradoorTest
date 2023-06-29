@@ -112,15 +112,15 @@
     align-items: center;
 } */
 
-.placeholder {
-    position: absolute;
-    top: 0;
-    left: 0;
-    padding: 6px;
-    color: #aaa;
-    pointer-events: none;
-    transition: all 0.2s;
-}
+/*.placeholder {*/
+/*    position: absolute;*/
+/*    top: 0;*/
+/*    left: 0;*/
+/*    padding: 6px;*/
+/*    color: #aaa;*/
+/*    pointer-events: none;*/
+/*    transition: all 0.2s;*/
+/*}*/
 
 .input-container {
         display: flex;
@@ -157,15 +157,32 @@
 </style>
 
 <div class="content-wrapper">
+    <section class="content-header">
+
+        <h1>
+
+        Invitación de registro Freelance 
+
+        </h1>
+
+        <ol class="breadcrumb">
+
+        <li><a href="inicio"><i class="fa fa-dashboard"></i>Inicio</a></li>
+
+        <li class="active">Cotizar Vehiculo liviano</li>
+
+        </ol>
+
+    </section>
     <section class="content">
-        <h3>Invitación de registro freelance</h3>
         <div class="box">
-        <h3 class="login-head text-info text-center gray-header" style="font-size: 24px; color: darkgreen; text-transform: uppercase; font-weight: bold; text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);">Enviar invitación de registro</h3>
+        <!-- <h3 class="login-head text-info text-center gray-header" style="font-family: 'Comic Sans MS', cursive;">Enviar invitación de registro</h3> -->
             <br>
             <div class="form-container text-center">
                 <form style="width: 50%; margin: 0 auto;">
                     <div class="row">
                         <div class="col-md-12 offset-md-3">
+                        <label for="correo" style="display: block; text-align: left;">No Identificación</label>   
                             <div class="input-group" style="margin-bottom: 10px;">
                                 <span class="input-group-addon">
                                     <i class="fa fa-id-card-o" aria-hidden="true"></i>
@@ -176,6 +193,7 @@
                     </div>
                     <div class="row">
                         <div class="col-md-12 offset-md-3">
+                        <label for="correo" style="display: block; text-align: left;">Nombre Completo</label>   
                             <div class="input-group" style="margin-bottom: 10px;">
                                 <span class="input-group-addon">
                                     <i class="fa fa-pencil" aria-hidden="true"></i>
@@ -186,6 +204,7 @@
                     </div>
                     <div class="row">
                         <div class="col-md-12 offset-md-3">
+                            <label for="correo" style="display: block; text-align: left;">Correo electrónico</label>   
                             <div class="input-group" style="margin-bottom: 10px;">
                                 <span class="input-group-addon">
                                     <i class="fa fa-envelope" aria-hidden="true"></i>
@@ -198,7 +217,11 @@
                     <div class="row">
                         <div class="text-center" style="margin-bottom: 6px;">
                             <div style="width: 30%; margin: 0 auto;">
-                                <button type="button" class="btn btn-primary btn-block" onclick="authCedula()">Enviar</button>
+                                <button type="button" class="btn btn-primary btn-block" onclick="authCedula()" style="font-size: 18px;">Enviar</button>
+                            </div>
+                            <br>
+                            <div>
+                                <div id="loaderOferta"></div>
                             </div>
                         </div>
                     </div>
@@ -209,194 +232,78 @@
     </section>
 </div>
 
+<!--<div class="content-wrapper">-->
+<!--    <section class="content-header">-->
 
-<!-- <div class="content-wrapper">
-    <section class="content">
-        <h3>FORMULARIO</h3>
-        <div class="box">
-            <h3 class="login-head text-info text-center gray-header">Enviar invitación de registro</h3>
-            <br>
-            <div class="form-container text-center">
-                <form style="width: 50%; margin: 0 auto;">
-                    <div class="row">
-                        <div class="col-md-12 offset-md-3">
-                            <div class="input-group" style="margin-bottom: 10px;">
-                                <span class="input-group-addon">
-                                    <i class="fa fa-id-card-o" aria-hidden="true"></i>
-                                </span>
-                                <input type="text" class="form-control text-right" placeholder="Número de identificación" id="cc">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-12 offset-md-3">
-                            <div class="input-group" style="margin-bottom: 10px;">
-                                <span class="input-group-addon">
-                                    <i class="fa fa-pencil" aria-hidden="true"></i>
-                                </span>
-                                <input type="text" class="form-control text-right" placeholder="Nombre Completo" id="name">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-12 offset-md-3">
-                            <div class="input-group" style="margin-bottom: 10px;">
-                                <span class="input-group-addon">
-                                    <i class="fa fa-envelope" aria-hidden="true"></i>
-                                </span>
-                                <input type="text" class="form-control text-right" placeholder="Correo electrónico" id="mail">
-                            </div>
-                        </div>
-                    </div>
-                    <br>
-                    <div class="row">
-                        <div class="text-center" style="margin-bottom: 20px;">
-                            <button type="button" class="btn btn-primary">Enviar</button>
-                        </div>
-                    </div>
-                </form>
-            </div>
-            <br>
-        </div>
-    </section>
-</div> -->
+<!--        <h1>-->
 
+<!--        Invitación de registro Freelance -->
 
+<!--        </h1>-->
 
+<!--        <ol class="breadcrumb">-->
 
+<!--        <li><a href="inicio"><i class="fa fa-dashboard"></i>Inicio</a></li>-->
 
+<!--        <li class="active">Cotizar Vehiculo liviano</li>-->
 
+<!--        </ol>-->
 
-
-
-
-
-
-
-<!-- <div class="content-wrapper">
-    <section class="content">
-        <h3>FORMULARIO</h3>
-        <div class="box">
-            <h3 class="login-head text-info text-center gray-header">Enviar invitación de registro</h3>
-            <br>
-            <div class="input-container" style="margin-bottom: 10px; max-width: 350px; margin: 0 auto;">
-                <input type="text" class="form-control" id="cc">
-                <span class="input-addon">
-                    <i class="fa fa-id-card-o" aria-hidden="true"></i>
-                </span>
-                <label for="cc" class="placeholder">Número de identificación</label>
-            </div>
-            <br>
-            <br>
-            <div class="input-container" style="margin-bottom: 10px; max-width: 350px; margin: 0 auto;">
-                <input type="text" class="form-control" id="name">
-                <span class="input-addon">
-                    <i class="fa fa-pencil" aria-hidden="true"></i>
-                </span>
-                <label for="name" class="placeholder">Nombre Completo</label>
-            </div>
-            <br>
-            <br>
-            <div class="input-container" style="margin-bottom: 10px; max-width: 350px; margin: 0 auto;">
-                <input type="text" class="form-control" id="mail">
-                <span class="input-addon">
-                    <i class="fa fa-envelope" aria-hidden="true"></i>
-                </span>
-                <label for="mail" class="placeholder">Correo electrónico</label>
-            </div>
-            <br>
-            <br>
-            <div class="text-center" style="margin-bottom: 20px;">
-                <button type="button" class="btn btn-primary">Enviar</button>
-            </div>
-            <div><br></div>
-        </div>
-    </section>
-</div> -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!-- 
-
-
-<div class="content">
-    <div class="content-wrapper">
-        <section class="content">
-            <section class="content-header">
-                <h1>Invitación freelance</h1>
-            </section>
-            <div class="box">
-            <h3 class="login-head text-info text-center gray-header">Enviar invitación de registro</h3>
-                <div style="padding: 15px; display: flex; flex-direction: column; align-items: center;">
-                    <div style="margin-bottom: 20px;">
-                        <div class="row">
-                            <div class="col-md-4 offset-md-4">
-                                <div class="input-group">
-                                    <span class="input-group-addon">
-                                        <i class="fa fa-id-card-o" aria-hidden="true"></i>
-                                    </span>
-                                    <input type="text" class="form-control" style="width: 700%;" placeholder="Número de identificación" id='cc'>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div style="margin-bottom: 20px;">
-                        <div class="row">
-                            <div class="col-md-4 offset-md-4">
-                                <div class="input-group">
-                                    <span class="input-group-addon">
-                                        <i class="fa fa-pencil" aria-hidden="true"></i>
-                                    </span>
-                                    <input type="text" class="form-control" style="width: 700%;" placeholder="Nombre Completo" id='name'>
-                                </div>
-                            </div>
-                        </div>    
-                    </div>
-
-                    <div style="margin-bottom: 20px;">
-                        <div class="row">
-                            <div class="col-md-4 offset-md-4">
-                                <div class="input-group">
-                                    <span class="input-group-addon">
-                                        <i class="fa fa-envelope" aria-hidden="true"></i>
-                                    </span>
-                                    <input type="text" class="form-control" style="width: 700%;" placeholder="Correo electrónico" id='mail'>
-                                </div>
-                            </div>
-                        </div>    
-                    </div>
-    
-                    <div style="margin-bottom: 10px;">
-                        <div class="row">
-                            <div class="col-md-4 offset-md-4">
-                                <button type="button" class="btn btn-primary" onclick="authCedula()">Enviar</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </div>
-</div> -->
-
+<!--    </section>-->
+<!--    <section class="content">-->
+<!--        <div class="box">-->
+<!--            <br>-->
+<!--            <div class="form-container text-center">-->
+<!--                <form style="width: 50%; margin: 0 auto;">-->
+<!--                    <div class="row">-->
+<!--                        <div class="col-md-12 offset-md-3">-->
+<!--                            <label for="correo" style="display: block; text-align: left;">No Identificación</label>   -->
+<!--                            <div class="input-group" style="margin-bottom: 10px;">-->
+<!--                                <span class="input-group-addon">-->
+<!--                                    <i class="fa fa-id-card-o" aria-hidden="true"></i>-->
+<!--                                </span>-->
+<!--                                <input type="text" class="form-control text-left" placeholder="Número de identificación" id="cc" style="font-size: 15px; font-weight: bold; font-style: italic;">-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                    <br>-->
+<!--                    <div class="row">-->
+<!--                        <div class="col-md-12 offset-md-3">-->
+<!--                            <label for="correo" style="display: block; text-align: left;">Nombre Completo</label>   -->
+<!--                            <div class="input-group" style="margin-bottom: 10px;">-->
+<!--                                <span class="input-group-addon">-->
+<!--                                    <i class="fa fa-pencil" aria-hidden="true"></i>-->
+<!--                                </span>-->
+<!--                                <input type="text" class="form-control text-left" placeholder="Nombre Completo" id="name" style="font-size: 15px; font-weight: bold; font-style: italic;">-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                    <br>-->
+<!--                    <div class="row">-->
+<!--                        <div class="col-md-12 offset-md-3">-->
+<!--                            <label for="correo" style="display: block; text-align: left;">Correo electrónico</label>-->
+<!--                            <div class="input-group" style="margin-bottom: 10px;">-->
+<!--                                <span class="input-group-addon">-->
+<!--                                    <i class="fa fa-envelope" aria-hidden="true"></i>-->
+<!--                                </span>-->
+<!--                                <input type="text" class="form-control text-left" placeholder="Correo electrónico" id="mail" style="font-size: 15px; font-weight: bold; font-style: italic;">-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                    <br>-->
+<!--                    <div class="row">-->
+<!--                        <div class="text-center" style="margin-bottom: 6px;">-->
+<!--                            <div style="width: 30%; margin: 0 auto;">-->
+<!--                                <button type="button" class="btn btn-primary btn-block" onclick="authCedula()" style="font-size: 18px;">Enviar</button>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </form>-->
+<!--            </div>-->
+<!--            <br>-->
+<!--        </div>-->
+<!--    </section>-->
+<!--</div>-->
 
 
 
