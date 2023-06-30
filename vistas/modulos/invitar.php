@@ -190,8 +190,8 @@
                                 <input type="text" class="form-control text-left" placeholder="Número de identificación" id="cc">
                             </div>
                         </div>
-                    </div>
-                    <div class="row">
+                    <!-- </div> -->
+                    <!-- <div class="row"> -->
                         <div class="col-xs-12 col-sm-6 col-md-3 form-group">
                         <label for="correo" style="display: block; text-align: left;">Nombre Completo</label>   
                             <div class="input-group" style="margin-bottom: 10px;">
@@ -201,8 +201,8 @@
                                 <input type="text" class="form-control text-left" placeholder="Nombre Completo" id="name">
                             </div>
                         </div>
-                    </div>
-                    <div class="row">
+                    <!-- </div> -->
+                    <!-- <div class="row"> -->
                         <div class="col-xs-12 col-sm-6 col-md-3 form-group">
                             <label for="correo" style="display: block; text-align: left;">Correo electrónico</label>   
                             <div class="input-group" style="margin-bottom: 10px;">
