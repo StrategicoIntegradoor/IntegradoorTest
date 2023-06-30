@@ -178,7 +178,7 @@
         <div class="box">
         <!-- <h3 class="login-head text-info text-center gray-header" style="font-family: 'Comic Sans MS', cursive;">Enviar invitación de registro</h3> -->
             <br>
-            <div class="form-container text-center">
+            <div class="form-container">
                 <form style="width: 50%; margin: 0 auto;">
                     <div class="row">
                         <div class="col-xs-12 col-sm-6 col-md-3 form-group">
