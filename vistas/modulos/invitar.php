@@ -187,7 +187,7 @@
                                 <span class="input-group-addon">
                                     <i class="fa fa-id-card-o" aria-hidden="true"></i>
                                 </span>
-                                <input type="text" class="form-control text-left" placeholder="Número de identificación" id="cc" style="font-size: 15px; font-weight: bold; font-style: italic;">
+                                <input type="text" class="form-control text-left" placeholder="Número de identificación" id="cc">
                             </div>
                         </div>
                     </div>
@@ -198,7 +198,7 @@
                                 <span class="input-group-addon">
                                     <i class="fa fa-pencil" aria-hidden="true"></i>
                                 </span>
-                                <input type="text" class="form-control text-left" placeholder="Nombre Completo" id="name" style="font-size: 15px; font-weight: bold; font-style: italic;">
+                                <input type="text" class="form-control text-left" placeholder="Nombre Completo" id="name">
                             </div>
                         </div>
                     </div>
@@ -209,7 +209,7 @@
                                 <span class="input-group-addon">
                                     <i class="fa fa-envelope" aria-hidden="true"></i>
                                 </span>
-                                <input type="text" class="form-control text-left" placeholder="Correo electrónico" id="mail" style="font-size: 15px; font-weight: bold; font-style: italic;">
+                                <input type="text" class="form-control text-left" placeholder="Correo electrónico" id="mail">
                             </div>
                         </div>
                     </div>
