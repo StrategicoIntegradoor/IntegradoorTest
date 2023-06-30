@@ -189,7 +189,7 @@
                         </div>
                         <div class="col-xs-12 col-sm-6 col-md-3 form-group">
                             <label for="correo" style="display: block; text-align: left;">Correo electrónico</label>   
-                                <input type="text" maxlength="10" class="form-control" placeholder="Correo electrónico" id="mail">
+                                <input type="text" class="form-control" placeholder="Correo electrónico" id="mail">
                         </div>
                     </div>
                     <br>
