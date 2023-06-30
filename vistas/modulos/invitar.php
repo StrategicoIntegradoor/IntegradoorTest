@@ -181,8 +181,8 @@
             <div class="form-container text-center">
                 <form style="width: 50%; margin: 0 auto;">
                     <div class="row">
-                        <div class="col-md-4 col-sm-12">
-                        <label for="correo" style="display: block; text-align: left;">No Identificación</label>   
+                        <div class="col-xs-12 col-sm-6 col-md-3 form-group">
+                          <label for="correo" style="display: block; text-align: left;">No Identificación</label>   
                             <div class="input-group" style="margin-bottom: 10px;">
                                 <span class="input-group-addon">
                                     <i class="fa fa-id-card-o" aria-hidden="true"></i>
@@ -192,7 +192,7 @@
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col-md-4 col-sm-12">
+                        <div class="col-xs-12 col-sm-6 col-md-3 form-group">
                         <label for="correo" style="display: block; text-align: left;">Nombre Completo</label>   
                             <div class="input-group" style="margin-bottom: 10px;">
                                 <span class="input-group-addon">
@@ -203,7 +203,7 @@
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col-md-4 col-sm-12">
+                        <div class="col-xs-12 col-sm-6 col-md-3 form-group">
                             <label for="correo" style="display: block; text-align: left;">Correo electrónico</label>   
                             <div class="input-group" style="margin-bottom: 10px;">
                                 <span class="input-group-addon">
@@ -221,7 +221,7 @@
                             </div>
                             <br>
                             <div>
-                                <div id="loaderOferta"></div>
+                              <div id="loaderOferta"></div>
                             </div>
                         </div>
                     </div>
