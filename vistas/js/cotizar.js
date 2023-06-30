@@ -1750,13 +1750,16 @@ function cotizarOfertas() {
                     /* Se monta el botón para generar el pdf con 
                     el valor de la variable idCotizacion */
                     const contentCotizacionPDF = document.querySelector('#contenCotizacionPDF')
-                    contentCotizacionPDF.innerHTML = `  <div class="col-xs-12 col-sm-6 col-md-3">
-                                                            <button type="button" class="btn btn-danger btn-block" id="btnParrillaPDF">
-                                                                <span class="fa fa-file-text"></span> Generar PDF de Cotización
-                                                            </button>
+                    contentCotizacionPDF.innerHTML = `  
+                                                        <div class="col-xs-12 col-sm-6 col-md-3">
+                                                          <label for="checkboxAsesor">¿Deseas agregar tus datos como asesor en la cotizacion?</label>
+                                                          <input type="checkbox" id="checkboxAsesor">
                                                         </div>
-                                                        <input type="checkbox" id="checkboxAsesor">
-                                                        <label for="checkboxAsesor">Asesor Digital</label>`
+                                                        <div class="col-xs-12 col-sm-6 col-md-3">
+                                                          <button type="button" class="btn btn-danger btn-block" id="btnParrillaPDF">
+                                                              <span class="fa fa-file-text"></span> Generar PDF de Cotización
+                                                          </button>
+                                                        </div>`
               $("#btnParrillaPDF").click(function () {
                 const todosOn = $(".classSelecOferta:checked").length;
                 const idCotizacionPDF = idCotizacion;
