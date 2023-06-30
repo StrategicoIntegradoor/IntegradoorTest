@@ -98,41 +98,41 @@
   .smaller-input {
   max-width: 200px;
   margin: 0 auto;
-}
+  }
 
-.input-addon {
+  .input-addon {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
     right: 325px;
     z-index: 1;
-}
-/* .input-group {
-    display: flex;
-    align-items: center;
-} */
+  }
+  /* .input-group {
+      display: flex;
+      align-items: center;
+  } */
 
-/*.placeholder {*/
-/*    position: absolute;*/
-/*    top: 0;*/
-/*    left: 0;*/
-/*    padding: 6px;*/
-/*    color: #aaa;*/
-/*    pointer-events: none;*/
-/*    transition: all 0.2s;*/
-/*}*/
+  /*.placeholder {*/
+  /*    position: absolute;*/
+  /*    top: 0;*/
+  /*    left: 0;*/
+  /*    padding: 6px;*/
+  /*    color: #aaa;*/
+  /*    pointer-events: none;*/
+  /*    transition: all 0.2s;*/
+  /*}*/
 
-.input-container {
+  .input-container {
         display: flex;
         align-items: center;
         justify-content: flex-end;
-    }
+  }
 
-.input-container .form-control {
+  .input-container .form-control {
         margin-left: 10px;
-    }
+  }
 
-.form {
+  .form {
   width: 100%;
   max-width: 600px;
   margin: 0 auto;
@@ -140,20 +140,20 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-}
+  }
 
-.form input {
+  .form input {
   width: 90%;
   height: 80px;
   margin: 0.5rem;
-}
+  }
 
-.form button {
+  .form button {
   padding: 0.5em 1em;
   border: none;
   background: rgb(100, 200, 255);
   cursor: pointer;
-}
+  }
 </style>
 
 <div class="content-wrapper">
@@ -176,56 +176,31 @@
     </section>
     <section class="content">
         <div class="box">
-                      <!-- <h3 class="login-head text-info text-center gray-header" style="font-family: 'Comic Sans MS', cursive;">Enviar invitación de registro</h3> -->
-            <br>
-            <div class="form-container">
-                <!-- <form style="width: 50%; margin: 0 auto;"> -->
+            <div class="box-body">
+                <div id="formularioInvitacion" class="col-lg-12 form-resumAseg">
                     <div class="row">
                         <div class="col-xs-12 col-sm-6 col-md-3 form-group">
                           <label for="correo" style="display: block; text-align: left;">No Identificación</label>   
-                            <div class="input-group" style="margin-bottom: 10px;">
-                                <span class="input-group-addon">
-                                    <i class="fa fa-id-card-o" aria-hidden="true"></i>
-                                </span>
-                                <input type="text" class="form-control text-left" placeholder="Número de identificación" id="cc">
-                            </div>
-                        </div>
-                    <!-- </div> -->
-                    <!-- <div class="row"> -->
+                                <input type="text" maxlength="10" class="form-control" placeholder="Número de identificación" id="cc">
+                        </div>  
                         <div class="col-xs-12 col-sm-6 col-md-3 form-group">
                         <label for="correo" style="display: block; text-align: left;">Nombre Completo</label>   
-                            <div class="input-group" style="margin-bottom: 10px;">
-                                <span class="input-group-addon">
-                                    <i class="fa fa-pencil" aria-hidden="true"></i>
-                                </span>
-                                <input type="text" class="form-control text-left" placeholder="Nombre Completo" id="name">
-                            </div>
+                                <input type="text" maxlength="10" class="form-control" placeholder="Nombre Completo" id="name">
                         </div>
-                    <!-- </div> -->
-                    <!-- <div class="row"> -->
                         <div class="col-xs-12 col-sm-6 col-md-3 form-group">
                             <label for="correo" style="display: block; text-align: left;">Correo electrónico</label>   
-                            <div class="input-group" style="margin-bottom: 10px;">
-                                <span class="input-group-addon">
-                                    <i class="fa fa-envelope" aria-hidden="true"></i>
-                                </span>
-                                <input type="text" class="form-control text-left" placeholder="Correo electrónico" id="mail">
-                            </div>
+                                <input type="text" maxlength="10" class="form-control" placeholder="Correo electrónico" id="mail">
                         </div>
                     </div>
                     <br>
                     <div class="row">
-                        <div class="text-left" style="margin-bottom: 6px;">
-                            <div style="width: 30%; margin: 0 auto;">
-                                <button type="button" class="btn btn-primary btn-block" onclick="authCedula()" style="font-size: 18px;">Enviar</button>
-                            </div>
+                        <div class="col-xs-12 col-sm-6 col-md-3 form-group" style="margin-bottom: 0px;">
+                            <button type="button" class="btn btn-primary btn-block" onclick="authCedula()" style="font-size: 13px;">Enviar</button>
                             <br>
-                            <div>
-                              <div id="loaderOferta"></div>
-                            </div>
+                            <div id="loaderOferta"></div>
                         </div>
                     </div>
-                <!-- </form> -->
+                </div>
             </div>
             <br>
         </div>
