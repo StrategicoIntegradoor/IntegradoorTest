@@ -181,7 +181,7 @@
             <div class="form-container text-center">
                 <form style="width: 50%; margin: 0 auto;">
                     <div class="row">
-                        <div class="col-md-12 offset-md-3">
+                        <div class="col-md-4 col-sm-12">
                         <label for="correo" style="display: block; text-align: left;">No Identificación</label>   
                             <div class="input-group" style="margin-bottom: 10px;">
                                 <span class="input-group-addon">
@@ -192,7 +192,7 @@
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col-md-12 offset-md-3">
+                        <div class="col-md-4 col-sm-12">
                         <label for="correo" style="display: block; text-align: left;">Nombre Completo</label>   
                             <div class="input-group" style="margin-bottom: 10px;">
                                 <span class="input-group-addon">
@@ -203,7 +203,7 @@
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col-md-12 offset-md-3">
+                        <div class="col-md-4 col-sm-12">
                             <label for="correo" style="display: block; text-align: left;">Correo electrónico</label>   
                             <div class="input-group" style="margin-bottom: 10px;">
                                 <span class="input-group-addon">
