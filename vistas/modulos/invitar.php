@@ -215,7 +215,7 @@
                     </div>
                     <br>
                     <div class="row">
-                        <div class="text-center" style="margin-bottom: 6px;">
+                        <!-- <div class="text-center" style="margin-bottom: 6px;"> -->
                             <div style="width: 30%; margin: 0 auto;">
                                 <button type="button" class="btn btn-primary btn-block" onclick="authCedula()" style="font-size: 18px;">Enviar</button>
                             </div>
@@ -223,7 +223,7 @@
                             <div>
                               <div id="loaderOferta"></div>
                             </div>
-                        </div>
+                        <!-- </div> -->
                     </div>
                 <!-- </form> -->
             </div>
