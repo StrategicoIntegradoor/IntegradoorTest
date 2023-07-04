@@ -180,12 +180,12 @@
                 <div id="formularioInvitacion" class="col-lg-12 form-resumAseg">
                     <div class="row">
                         <div class="col-xs-12 col-sm-6 col-md-3 form-group">
-                          <label for="correo" style="display: block; text-align: left;">No Identificación</label>   
-                                <input type="text" maxlength="10" class="form-control" placeholder="Número de identificación" id="cc">
+                          <label for="correo" style="display: block; text-align: left;">No. Identificación</label>   
+                                <input type="text" class="form-control" placeholder="Número de identificación" id="cc">
                         </div>  
                         <div class="col-xs-12 col-sm-6 col-md-3 form-group">
                         <label for="correo" style="display: block; text-align: left;">Nombre Completo</label>   
-                                <input type="text" maxlength="10" class="form-control" placeholder="Nombre Completo" id="name">
+                                <input type="text" class="form-control" placeholder="Nombre Completo" id="name">
                         </div>
                         <div class="col-xs-12 col-sm-6 col-md-3 form-group">
                             <label for="correo" style="display: block; text-align: left;">Correo electrónico</label>   
