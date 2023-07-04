@@ -142,9 +142,9 @@ class ModeloInvitacion{
                             <tr>
                                 <td>
                                     <h1 class="h1-name">Hola ' . $nombre . ',</h1>
-                                    <p style="color:#2e2e2e !important;">A continuacion te ha sido enviada una solicitud de registro para usuarios freelance. En el presente correo se adjunta un token de seguridad junto con el enlace para llenar el formulario y empezar a disfrutar de los beneficios .</p>
+                                    <p style="color:#2e2e2e !important;">Estas a punto de ser parte de nuestro equipo y dar un paso importante como empresario. En el presente correo se adjunta una clave de registro junto con el enlace para completar el formulario y registrarte.</p>
                                     <h4 class="h4-name">Token: ' . $token . '</h4>
-                                    <h4 class="h4-name">Haga click en el siguiente enlace para cambiar contraseña: https://integradoor.com/Test/invitacion</h4>
+                                    <h4 class="h4-name">Haga click en el siguiente enlace para cambiar contrase锟�0锟�9a: https://integradoor.com/Test/invitacion</h4>
                                 </td>
                             </tr>
                          
