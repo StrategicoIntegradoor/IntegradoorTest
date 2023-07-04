@@ -234,7 +234,7 @@ $(document).ready(function () {
 
     var idCotizacionPDF = idCotizacion;
 
-
+    var checkboxAsesorEditar = $("#checkboxAsesorEditar")
 
 
 
@@ -290,15 +290,19 @@ $(document).ready(function () {
 
         } else {
 
+          let url = `extensiones/tcpdf/pdf/comparador.php?cotizacion=${idCotizacionPDF}`;
+
+          if (checkboxAsesorEditar.is(":checked")) {
+            url += "&generar_pdf=1";
+          }
+
+          window.open(url, "_blank");
+
           // window.open("comparador.php?cotizacion="+idCotizacionPDF, "_blank");
-
-          window.open(
-
-            "extensiones/tcpdf/pdf/comparador.php?cotizacion=" + idCotizacionPDF,
-
-            "_blank"
-
-          );
+          // window.open(
+          //   "extensiones/tcpdf/pdf/comparador.php?cotizacion=" + idCotizacionPDF,
+          //   "_blank"
+          // );
 
         }
 
