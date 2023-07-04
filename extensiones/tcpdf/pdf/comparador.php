@@ -90,9 +90,9 @@ if ($genero == 1) {
 $generarPDF = $_GET['generar_pdf'] ?? '';
 $ocultarAsesor = ($generarPDF == 1);
 if ($ocultarAsesor) {
-    $nomAsesor = 'ASESOR DIGITAL';
-    $telAsesor = 'NO APLICA';
-    $emailAsesor = 'NO APLICA';
+    $nomAsesor = '   ASESOR DIGITAL';
+    $telAsesor = '   NO APLICA';
+    $emailAsesor = '   NO APLICA';
 }else{
 
 $idUsuario = $fila["id_usuario"];
