@@ -30,7 +30,7 @@ if (clave_registro !== '' &&
     genero !== '' &&
     direccion !== '' &&
     // ciudad !== '' &&
-    telefono !== '' &&
+    // telefono !== '' &&
     celular !== '' &&
     correo_electronico !== '' &&
     contrasena !== '' &&
