@@ -101,7 +101,7 @@
 
                     <div class="row">
                             <div class="col-xs-12 col-sm-12 col-md-12 form-group">
-                                <label for="">Fecha de Nacimiento</label>
+                                <label for="">Fecha de Nacimiento <strong class="text-danger">*</strong></label>
                                 <div class="row">
                                     <div class="col-xs-4 col-sm-4 col-md-4 text-left mb-3" >
                                         <select class="form-control fecha-nacimiento" name="dia_nacimiento" id="dia_nacimiento" required>
