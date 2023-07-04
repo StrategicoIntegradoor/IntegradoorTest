@@ -164,9 +164,8 @@ class ModeloInvitacion{
                         $jsonResponse = json_encode($response);
                         echo $jsonResponse;
                     } else {
-                        $response = array('success' => false, 'message' => 'Error al enviar el correo');
-                        $jsonResponse = json_encode($response);
-                        return $jsonResponse;
+                        $preRegistro = new ModeloInvitacion();
+                        $request = $preRegistro-> mdlEliminarPreRegistro($cedula, $tabla);
                     }
             }else{
                 $response = array('error' => 'Error de conexion');
@@ -197,4 +196,24 @@ class ModeloInvitacion{
         }
     }
 
+    public static function mdlEliminarPreRegistro($cedula, $tabla){
+
+        $stmt = Conexion::conectar()->prepare("DELETE FROM $tabla WHERE usu_documento = :id");
+        $stmt->bindParam(':id', $cedula);
+        $stmt -> execute();
+        $rowCount = $stmt->rowCount(); // Número de filas afectadas por la eliminación
+
+        if ($rowCount > 0) {
+            // Se eliminó exitosamente
+            $response = array('error' => 'Error al enviar el correo');
+            $jsonResponse = json_encode($response);
+            echo $jsonResponse;
+            
+        } else {
+        
+            $response = array('error' => 'Error al borrar pre-registro');
+            $jsonResponse = json_encode($response);
+            return $jsonResponse;
+        }        
+    }
 }
