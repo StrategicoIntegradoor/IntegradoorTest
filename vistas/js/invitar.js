@@ -56,26 +56,32 @@ async function authCedula(){
                 location.reload(); // Refrescar la página
             });
         }else if(data.error === 'Documento existente en la BDD'){
-            Swal.fire(
-                'El documento ingresado ya se encuentra registrado',
-                'Verifica la información y vuelve a intentar',
-                'error'
-              ) 
-        }else{
-            Swal.fire(
-                'Alerta! :(',
-                'Error interno, contactese con servicio técnico',
-                'error'
-              ) 
-        }
+            Swal.fire({
+              icon: '<img src="vistas/img/plantilla/advertir.png" width="104" height="104">',
+              title: '<img src="vistas/img/plantilla/advertir.png" width="104" height="104">',
+              text: 'El documento ingresado ya se encuentra registrado, verifica la información y vuelve a intentar',
+            }) 
+        }else if(data.error === 'Error de conexion'){
+            Swal.fire({
+              icon: '<img src="vistas/img/plantilla/advertir.png" width="104" height="104">',
+              title: '<img src="vistas/img/plantilla/advertir.png" width="104" height="104">',
+              text: 'Ocurrio un error al crear la invitacion, estamos presentando problemas de conexion, comunicate con servicio tecnico',
+            }) 
+        }else if(data.error === 'Error al enviar el correo'){
+          Swal.fire({
+            icon: '<img src="vistas/img/plantilla/advertir.png" width="104" height="104">',
+            title: '<img src="vistas/img/plantilla/advertir.png" width="104" height="104">',
+            text: 'El correo registrado es invalido, no se pudo crear la invitacion, verificar informacion',
+          }) 
+      }
     })
     .catch(function(error) {
         console.log(error);
-        Swal.fire(
-            'HEY! :(',
-            'Error de solicitud, no pudo crearse el pre_registro',
-            'error'
-          )
+        Swal.fire({
+          icon: '<img src="vistas/img/plantilla/advertir.png" width="104" height="104">',
+          title: '<img src="vistas/img/plantilla/advertir.png" width="104" height="104">',
+          text: 'Ocurrio un error al crear la invitacion, estamos presentando problemas de conexion, comunicate con servicio tecnico',
+        }) 
         });
     }else{
         console.error('Completa todos los campos para enviar el registro');
