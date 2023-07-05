@@ -261,14 +261,16 @@ echo'<a href="https://web.whatsapp.com/send?phone=+573153539141" target="_blank"
     if (isset($_GET['codigo']) && $_GET['codigo'] != '') {
       $_SESSION["codigo"] = $_GET['codigo'];
       include "modulos/cambio-password.php";
-    }else if(isset($_GET["ruta"])){
-      if($_GET['ruta'] == 'change'){
-        include "modulos/change.php";
-      }
+    }
+      // else if(isset($_GET["ruta"])){
+      //   if($_GET['ruta'] == 'change'){
+      //     include "modulos/change.php";
+      //   }
       // else if($_GET['ruta'] == 'invitacion'){
       //   include "modulos/invitacion.php";
       // }
-    }else {
+    // }
+    else {
       include "modulos/login.php";
     }
   }
