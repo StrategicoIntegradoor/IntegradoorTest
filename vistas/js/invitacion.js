@@ -1,18 +1,71 @@
+  // Carga los Departamentos disponibles
+  $("#DptoCirculacion").select({
+    theme: "bootstrap dpto",
+    language: "es",
+    width: "100%",
+  });
+  $("#DptoCirculacion").change(function () {
+    consultarCiudad();
+  });
+
+  // Carga las Ciudades disponibles
+  $("#ciudadCirculacion").select({
+    theme: "bootstrap ciudad",
+    language: "es",
+    width: "100%",
+  });
+
+
+  function consultarCiudad() {
+    var codigoDpto = document.getElementById("DptoCirculacion").value;
+  
+    //if (codigoDpto == 1 || codigoDpto == 3 || codigoDpto == 10 || codigoDpto == 11 || codigoDpto == 12 || codigoDpto == 14 || codigoDpto == 17
+    //|| codigoDpto == 19 || codigoDpto == 25 || codigoDpto == 28 || codigoDpto == 33 || codigoDpto == 34) {
+  
+    //	swal({ text: '! El Departamento de circulación no posee cobertura. ¡' });
+  
+    //} else {
+  
+    $.ajax({
+      type: "POST",
+      url: "src/consultarCiudad.php",
+      dataType: "json",
+      data: { data: codigoDpto },
+      cache: false,
+      success: function (data) {
+        // console.log(data);
+        var ciudadesVeh = `<option value="">Seleccionar Ciudad</option>`;
+  
+        data.forEach(function (valor, i) {
+          var valorNombre = valor.Nombre.split("-");
+          var nombreMinusc = valorNombre[0].toLowerCase();
+          var ciudad = nombreMinusc.replace(/^(.)|\s(.)/g, function ($1) {
+            return $1.toUpperCase();
+          });
+  
+          ciudadesVeh += `<option value="${valor.Codigo}">${ciudad}</option>`;
+        });
+        document.getElementById("ciudadCirculacion").innerHTML = ciudadesVeh;
+      },
+    });
+  
+    //}
+  }
 
 async function registerGuest(){
 
 const clave_registro = document.getElementById('clave_registro').value;
 const nombre = document.getElementById('nombre').value;
 const apellido = document.getElementById('apellido').value;
-// const tipo_documento = document.getElementById('tipo_documento').value;
+const tipo_documento = document.getElementById('tipo_documento').value;
 const identificacion = document.getElementById('identificacion').value;
 const dia_nacimiento = document.getElementById('dia_nacimiento').value;
 const mes_nacimiento = document.getElementById('mes_nacimiento').value;
 const anio_nacimiento = document.getElementById('anio_nacimiento').value;
 const genero = document.getElementById('genero').value;
 const direccion = document.getElementById('direccion').value;
-// const ciudad = document.getElementById('ciudad').value;
-const telefono = document.getElementById('telefono').value;
+const ciudad = document.getElementById('ciudadCirculacion').value;
+// const telefono = document.getElementById('telefono').value;
 const celular = document.getElementById('celular').value;
 const correo_electronico = document.getElementById('correo_electronico').value;
 const contrasena = document.getElementById('contrasena').value;
@@ -22,14 +75,14 @@ const aceptoTermino = document.getElementById('acepto_termino').checked;
 if (clave_registro !== '' &&
     nombre !== '' &&
     apellido !== '' &&
-    // tipo_documento !== '' &&
+    tipo_documento !== '' &&
     identificacion !== '' &&
     dia_nacimiento !== '' &&
     mes_nacimiento !== '' &&
     anio_nacimiento !== '' &&
     genero !== '' &&
     direccion !== '' &&
-    // ciudad !== '' &&
+    ciudad !== '' &&
     // telefono !== '' &&
     celular !== '' &&
     correo_electronico !== '' &&
@@ -48,7 +101,7 @@ if (clave_registro !== '' &&
             anio_nacimiento: anio_nacimiento,
             genero: genero,
             direccion: direccion,
-            // ciudad: ciudad,
+            ciudad: ciudad,
             telefono: telefono,
             celular: celular,
             correo_electronico: correo_electronico,
@@ -94,11 +147,11 @@ if (clave_registro !== '' &&
                 // location.reload(); // Refrescar la página
             // });
         }else if(data.error === 'Clave incorrecta'){
-            Swal.fire(
-                'Alerta!',
-                'No fue posible crear registro, clave de seguridad incorrecta',
-                'error'
-              ) 
+            Swal.fire({
+                icon: '<img src="vistas/img/plantilla/advertir.png" width="104" height="104">',
+                title: '<img src="vistas/img/plantilla/advertir.png" width="104" height="104">',
+                text: 'Clave de registro incorrecta, verifica si dejaste espacios y vuelve a intentar',
+              }) 
         }else if(data.error === 'No se encuentra el usuario'){
              Swal.fire({
                 icon: '<img src="vistas/img/plantilla/buscar.png" width="84" height="84">',
@@ -106,11 +159,11 @@ if (clave_registro !== '' &&
                 text: 'No fue posible crear el registro, el número de documento no corresponde al usuario invitado',
               });
         }else if(data.error === 'Fallo contrasenas'){
-            Swal.fire(
-                'Alerta!',
-                'Alerta, no coinciden tus contraseñas',
-                'error'
-              ) 
+            Swal.fire({
+                icon: '<img src="vistas/img/plantilla/advertir.png" width="104" height="104">',
+                title: '<img src="vistas/img/plantilla/advertir.png" width="104" height="104">',
+                text: 'Ocurrió un error, tus contraseñas no coinciden, por favor verifica la informacion',
+              }) 
         }
         else{
             Swal.fire(
