@@ -11,20 +11,23 @@
 				</a>
 			</li>
 
-		<!-- /*=============================================
+
+	<?php
+		/*=============================================
 		CONFIGURAR POLÍTICIAS
-		=============================================*/-->
-		<li class="dropdown user user-menu">
+		=============================================*/
+		if($_SESSION["permisos"]["veradministracionintegradoor"] == "x"){	
+			echo '<li class="dropdown user user-menu">
 			<a href="#" class="dropdown-toggle" data-toggle="dropdown">
 			<i class="fa fa-wrench" aria-hidden="true"></i>
 				<span >Administrador Integradoor</span>
 			</a>			
 				<ul class="dropdown-menu right">
 					<li class="user-body">			
-						<a href="politicas" class="btn btn-default btn-flat"><i class="" style="color: red;"></i>Políticas</a>
+						<a href="politicas" class="btn btn-default btn-flat"><i class="" style="color: red;"></i>Politicas</a>
 					</li>
 					<li class="user-body">	
-						<a href="planes" class="btn btn-default btn-flat"><i class="" style="color: red;"></i>Planes</a>
+						<a href="inicio" class="btn btn-default btn-flat"><i class="" style="color: red;"></i>Planes</a>
 					</li>
 					<li class="user-body">	
 						<a href="inicio" class="btn btn-default btn-flat"><i class="" style="color: red;"></i>Contratos</a>
@@ -34,8 +37,9 @@
 					</li>
 
 				</ul>
-		</li>
-	<?php	
+		</li>';
+			}
+		
 		/*=============================================
 		ADMINISTRAR COTIZACIONES
 		=============================================*/
@@ -156,17 +160,17 @@
 		AYUDA VENTAS
 		=============================================*/		
 	?>
-		<li>
+		<!-- <li>
 			<a id="ayuda-ventas">
 				<i class="fa fa-book"></i>
 				<span>Ayuda Ventas</span>
 			</a>
-		</li>
+		</li> -->
 	<?php
 		/*=============================================
 		INTERMEDIARIO
 		=============================================*/	
-		if($_SESSION["permisos"]["administracionCotizaciones"] == "x"){	
+		if($_SESSION["permisos"]["Agregarintermediario"] == "x"){	
 			echo '<li>
 				<a href="intermediario">
 					<i class="fa fa-briefcase"></i>
@@ -175,33 +179,31 @@
 			</li>';
 		
 		}
-	?>
-		<!--/*=============================================
+	
+		/*=============================================
 		INVITACIÓN
-		=============================================*/	-->
+		=============================================*/
 		
-		<li>
+		if($_SESSION["permisos"]["veradministracionintegradoor"] == "x"){
+		echo'<li>
 				<a href="invitar">
 				<i class="fa fa-paper-plane" aria-hidden="true"></i>
 					<span>Invitación</span>
 				</a>
-			</li>
+			</li>';
+		}
 
-
-
-			
-
-		<!--/*=============================================
+		/*=============================================
 		CONFIGURAR PDF
-		=============================================*/-->
+		=============================================*/
 
-			<li>
-				<a id="configuracion-pdf">
-					<i class="fa fa-cog" aria-hidden="true"></i>
-					<span>Configuracion</span>
-				</a>
-			</li>
-	
+			// <li>
+			// 	<a id="configuracion-pdf">
+			// 		<i class="fa fa-cog" aria-hidden="true"></i>
+			// 		<span>Configuracion</span>
+			// 	</a>
+			// </li>
+	?>
 
 	</ul>
 	</section>
