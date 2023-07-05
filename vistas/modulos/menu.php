@@ -90,7 +90,7 @@
 		/*=============================================
 		COTIZACIONES MASIVAS
 		=============================================*/
-		if($_SESSION["permisos"]["administracionCotizaciones"] == "x"){	
+		if($_SESSION["permisos"]["Cotizacionesmasivas"] == "x"){	
 			echo  '<li>
 				<a href="livianoMasivas">
 					<i class="fa fa-file-archive-o"></i>
