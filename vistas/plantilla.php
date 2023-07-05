@@ -263,9 +263,9 @@ echo'<a href="https://web.whatsapp.com/send?phone=+573153539141" target="_blank"
       include "modulos/cambio-password.php";
     }
       // else if(isset($_GET["ruta"])){
-      //   if($_GET['ruta'] == 'change'){
-      //     include "modulos/change.php";
-      //   }
+      else if($_GET['ruta'] == 'change'){
+          include "modulos/change.php";
+        }
       else if($_GET['ruta'] == 'invitacion'){
         include "modulos/invitacion.php";
       }
