@@ -26,8 +26,8 @@ class invitationController{
                 $anio_nacimiento = $requestData['anio_nacimiento'];
                 $genero = $requestData['genero'];
                 $direccion = $requestData['direccion'];
-                $ciudad = '0';
-                $telefono = $requestData['telefono'];
+                $ciudad = $requestData['ciudad'];
+                $telefono = '0';
                 $celular = $requestData['celular'];
                 $correo_electronico = $requestData['correo_electronico'];
                 $contrasena = $requestData['contrasena'];
