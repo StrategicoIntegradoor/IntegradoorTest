@@ -142,7 +142,7 @@ if (clave_registro !== '' &&
               setTimeout(function() {
             Swal.close();
             window.location.href = 'https://integradoor.com/Test';
-          }, 4000);
+          }, 7000);
             //   .then(function() {
                 // location.reload(); // Refrescar la página
             // });
