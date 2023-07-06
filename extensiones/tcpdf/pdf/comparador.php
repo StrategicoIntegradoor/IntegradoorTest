@@ -99,9 +99,9 @@ $idUsuario = $fila["id_usuario"];
 $respAsesor = $conexion->query("SELECT usu_nombre, usu_apellido, usu_telefono, usu_email FROM usuarios WHERE id_usuario = $idUsuario");
 $asesor = $respAsesor->fetch_assoc();
 
-$nomAsesor = '   ' . $asesor["usu_nombre"] . ' ' . $asesor["usu_apellido"];
-$telAsesor = '   ' . $asesor["usu_telefono"];
-$emailAsesor = '   ' . $asesor["usu_email"];
+$nomAsesor = '  ' . $asesor["usu_nombre"] . ' ' . $asesor["usu_apellido"];
+$telAsesor = '  ' . $asesor["usu_telefono"];
+$emailAsesor = '  ' . $asesor["usu_email"];
 }
 
 // $fecha = $fila["f_registro"];
