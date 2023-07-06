@@ -1751,15 +1751,19 @@ function cotizarOfertas() {
                     el valor de la variable idCotizacion */
                     const contentCotizacionPDF = document.querySelector('#contenCotizacionPDF')
                     contentCotizacionPDF.innerHTML = `  
-                                                        <div class="col-xs-12 col-sm-6 col-md-3">
+                                                      <div class="col-xs-12 col-sm-6 col-md-7">
+                                                        <div class="row">
+                                                          <div class="col-xs-6">
                                                           <label for="checkboxAsesor">¿Deseas agregar tus datos como asesor en la cotizacion?</label>
-                                                          <input type="checkbox" id="checkboxAsesor">
-                                                        </div>
-                                                        <div class="col-xs-12 col-sm-6 col-md-3">
-                                                          <button type="button" class="btn btn-danger btn-block" id="btnParrillaPDF">
+                                                            <input type="checkbox" id="checkboxAsesor">
+                                                          </div>
+                                                          <div class="col-xs-6">
+                                                            <button type="button" class="btn btn-danger btn-block" id="btnParrillaPDF">
                                                               <span class="fa fa-file-text"></span> Generar PDF de Cotización
-                                                          </button>
-                                                        </div>`
+                                                            </button>
+                                                          </div>
+                                                        </div>
+                                                    </div>`
               $("#btnParrillaPDF").click(function () {
                 const todosOn = $(".classSelecOferta:checked").length;
                 const idCotizacionPDF = idCotizacion;
