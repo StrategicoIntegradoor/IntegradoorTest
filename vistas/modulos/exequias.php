@@ -385,8 +385,8 @@
                 <hr>
                 <div class="row">
                     <div class="col-xs-12 col-sm-6 col-md-3 form-group" style="margin-bottom: 0;">
-                        <label for="correo">No Identificación</label>
-                        <input type="text" class="form-control" id="txtCorreo" placeholder="# Documento">
+                        <label for="correo">Nombre Titular</label>
+                        <input type="text" class="form-control" id="nombreTitular" placeholder="Nombre completo">
                     </div>
                     <div class="col-xs-12 col-sm-6 col-md-3 form-group" style="margin-bottom: 0;">
                         <label for="edadTitularID">Edad Titular</label>
@@ -394,14 +394,17 @@
                     </div>
                     <div class="col-xs-12 col-sm-6 col-md-3 form-group" style="margin-bottom: 0;">
                         <label for="tipoPlanExequialID">Tipo plan exequial</label>
-                        <input type="text" class="form-control" id="tipoPlanExequialID" required placeholder="Tipo Plan Exequial">
+                        <select type="text" class="form-control" id="tipoPlanExequialID">
+                            <option value="" selected>Tipo de plan</option>
+                            <option value="1">Plan muy personal</option>
+                            <option value="2">Plan familiar</option>
+                        </select>
                     </div>
                     <div class="col-xs-12 col-sm-6 col-md-3 form-group" style="margin-bottom: 0;" id="contenBtnConsultarExequial">
-                        <button class="btn btn-primary btn-block" id="btnConsultarPlaca">Cotizar</button>
+                        <button class="btn btn-primary btn-block" id="btnExequial" type="button">Cotizar</button>
                     </div>
                 </div>
             </div>
-            <!-- </div>  -->
         </div>           
     </section>
 </div>
