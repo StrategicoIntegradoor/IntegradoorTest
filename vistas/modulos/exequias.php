@@ -247,29 +247,29 @@
                             </div>
                         </div>
                         <!-- //PLAN MUY PERSONAL// -->
-                            <br>
-                            <div class="col-md-4 col-sm-12" style="text-align: center; margin-bottom: 7px;">
-                                <div class="rounded-container">
-                                    <br>
-                                        <div class="row card-body">
-                                            <div class="col-md-6 col-sm-6" style="margin-left: 15px;">
-                                                <div class="circle" style="position: relative; top: 15px;">
-                                                    <img src="vistas/img/plantilla/plan_personal.jpg">
-                                                </div>
+                        <br>
+                        <div class="col-md-4 col-sm-12" style="text-align: center; margin-bottom: 7px;">
+                            <div class="rounded-container">
+                                <br>
+                                    <div class="row card-body">
+                                        <div class="col-md-6 col-sm-6" style="margin-left: 15px;">
+                                            <div class="circle" style="position: relative; top: 15px;">
+                                                <img src="vistas/img/plantilla/plan_personal.jpg">
                                             </div>
-                                            <div class="col-md-6 col-sm-6" style="margin-left: 180px; margin-top: -140px;">
-                                                <h4 style="margin-bottom: 5px;  font-family: 'Arial Narrow OS Bold', Arial, sans-serif; font-size: 15px;"><strong>PLAN MUY PERSONAL</strong></h4>
-                                                <h3><strong style="color: #82d600;">$ 72.000</strong></h3>
-                                                <p style="margin-bottom: 5px; margin-top: 0;">Pago anual</p>
-                                                <br>
-                                                <p style="margin-bottom: 0px; margin-top: 0; font-size: 15px; font-family: 'Arial Arabic', Arial, sans-serif;">AFILIADO TITULAR:</p>
-                                                <P style="margin-bottom: 0px; margin-top: 0; font-size: 15px; font-family: 'Arial Arabic', Arial, sans-serif;">Titular hasta los 60 años</P>
-                                            </div>         
                                         </div>
-                                    <br>
-                                    <p style="margin-bottom: 35px; margin-top: 24px; font-size: 15px; font-family: 'Arial Arabic', Arial, sans-serif;">Máx. 8 afiliados adicionales por titular</p>
-                                </div>
+                                        <div class="col-md-6 col-sm-6" style="margin-left: 180px; margin-top: -140px;">
+                                            <h4 style="margin-bottom: 5px;  font-family: 'Arial Narrow OS Bold', Arial, sans-serif; font-size: 15px;"><strong>PLAN MUY PERSONAL</strong></h4>
+                                            <h3><strong style="color: #82d600;">$ 72.000</strong></h3>
+                                            <p style="margin-bottom: 5px; margin-top: 0;">Pago anual</p>
+                                            <br>
+                                            <p style="margin-bottom: 0px; margin-top: 0; font-size: 15px; font-family: 'Arial Arabic', Arial, sans-serif;">AFILIADO TITULAR:</p>
+                                            <P style="margin-bottom: 0px; margin-top: 0; font-size: 15px; font-family: 'Arial Arabic', Arial, sans-serif;">Titular hasta los 60 años</P>
+                                        </div>         
+                                    </div>
+                                <br>
+                                <p style="margin-bottom: 35px; margin-top: 24px; font-size: 15px; font-family: 'Arial Arabic', Arial, sans-serif;">Máx. 8 afiliados adicionales por titular</p>
                             </div>
+                        </div>
 
 
                         <!-- //PLAN NUESTRA FAMILIA -->
