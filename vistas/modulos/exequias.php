@@ -414,7 +414,18 @@ select:invalid + .error-message {
                         </div>
                         <div class="col-xs-12 col-sm-6 col-md-3 form-group" style="margin-bottom: 0;">
                             <label for="edadTitularID">Edad Titular</label>
-                            <input type="text" class="form-control" id="edadTitularID" placeholder="Edad Titular" required>
+                            <select type="text" class="form-control" id="edadTitularID" placeholder="Edad Titular" required>
+                                <option value="">Dia</option>
+                                <?php
+                                for ($i = 10; $i <= 60; $i++) {
+                                if (strlen($i) == 1) { ?>
+                                    <option value="<?php echo "0" . $i ?>"><?php echo "0" . $i ?></option><?php
+                                                                                                        } else { ?>
+                                    <option value="<?php echo $i ?>"><?php echo $i ?></option><?php
+                                                                                                        }
+                                                                                                    }
+                                                                                            ?>
+                            </select>
                         </div>
                         <div class="col-xs-12 col-sm-6 col-md-3 form-group" style="margin-bottom: 0;">
                             <label for="tipoPlanExequialID">Tipo plan exequial</label>
