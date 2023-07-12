@@ -436,7 +436,7 @@ select:invalid + .error-message {
                             </select>
                         </div>
                         <div class="col-xs-12 col-sm-6 col-md-3 form-group" style="margin-bottom: 0;" id="contenBtnConsultarExequial">
-                            <submit class="btn btn-primary btn-block" id="btnExequial">Cotizar</submit>
+                            <button class="btn btn-primary btn-block" id="btnExequial">Cotizar</button>
                         </div>
                     </div>
                 </form>
