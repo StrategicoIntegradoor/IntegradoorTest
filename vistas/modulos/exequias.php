@@ -415,7 +415,7 @@ select:invalid + .error-message {
                         <div class="col-xs-12 col-sm-6 col-md-3 form-group" style="margin-bottom: 0;">
                             <label for="edadTitularID">Edad Titular</label>
                             <select type="text" class="form-control" id="edadTitularID" placeholder="Edad Titular" required>
-                                <option value="">Dia</option>
+                                <option value="">Edad</option>
                                 <?php
                                 for ($i = 10; $i <= 60; $i++) {
                                 if (strlen($i) == 1) { ?>
