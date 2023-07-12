@@ -13,6 +13,7 @@ $("#btnExequial").click(function() {
 
 async function cotizarExequial(){
 
+console.log('stop');
 let registro = 0;
 const txtNombre = document.getElementById('nombreTitular').value;
 const edadTitularID = document.getElementById('edadTitularID').value;
