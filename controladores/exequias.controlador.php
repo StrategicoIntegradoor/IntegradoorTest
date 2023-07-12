@@ -30,6 +30,8 @@ class olivosController{
                         echo "Error al parsear la fecha.";
                     }
                     
+                    echo 'aqui,llegue';
+                    die();
 					$registro = ModelOlivos::mdlAgregarCoti($tabla, $numeroCoti, $nombre, $edad, $tipo, $usuario, $fecha_registro);
 					
                 }
