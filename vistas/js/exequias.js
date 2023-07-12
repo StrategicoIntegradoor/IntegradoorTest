@@ -1,7 +1,14 @@
 // Ejectura la funcion Generar pdf de ofertas
-$("#btnExequial").click(function() {
-  cotizarExequial();
+// $("#btnExequial").click(function() {
+//   cotizarExequial();
+// });
+
+$(document).ready(function() {
+  $("#btnExequial").click(function() {
+    cotizarExequial();
+  });
 });
+
 
 //  // Obtiene los datos de cada campo del formulario y Valida que no esten Vacios
 //  $("#formResumTitu").on(
