@@ -40,7 +40,7 @@ $pdf->Cell(0, 40.5, 'Hola '.$identificador.' !', 0, 1, '');
 $pdf->SetFontSize(8); // Reducir el tamaño de la letra a 10
 $pdf->SetTextColor(0, 128, 0); 
 $pdf->SetXY($x, 0); // Establecer la posición X nuevamente
-$pdf->Cell(0, 35, 'Cotizacion# '.$cotizacion, 0, 1, '');
+$pdf->Cell(0, 35, 'Cotizacion #'.$cotizacion, 0, 1, '');
 
 $imagen1 = '../../../vistas/img/logos/10.png';
 
@@ -106,7 +106,7 @@ $pdf->Cell(0, 40.5, 'Hola '.$identificador.' !', 0, 1, '');
 $pdf->SetFontSize(8); // Reducir el tamaño de la letra a 10
 $pdf->SetTextColor(0, 128, 0); 
 $pdf->SetXY($x, 0); // Establecer la posición X nuevamente
-$pdf->Cell(0, 35, 'Cotizacion# '.$cotizacion, 0, 1, '');
+$pdf->Cell(0, 35, 'Cotizacion #'.$cotizacion, 0, 1, '');
 
 $imagen1 = '../../../vistas/img/logos/10.png';
 
