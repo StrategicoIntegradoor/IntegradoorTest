@@ -13,7 +13,6 @@ $("#btnExequial").click(function() {
 
 async function cotizarExequial(){
 
-console.log('stop');
 let registro = 0;
 const txtNombre = document.getElementById('nombreTitular').value;
 const edadTitularID = document.getElementById('edadTitularID').value;
@@ -29,6 +28,8 @@ const usuarioID = document.getElementById('idUsuario').value;
           text: 'Usuario fuera del rango de edad permitido',
         }) 
       }else{
+
+      console.log('stop');
       registro++;
       var data = {
         registro: registro,
