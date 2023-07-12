@@ -3,13 +3,13 @@ $("#btnExequial").click(function() {
   cotizarExequial();
 });
 
- // Obtiene los datos de cada campo del formulario y Valida que no esten Vacios
- $("#formResumTitu").on(
-  "submit",
-  function (e) {
-    e.preventDefault(); // Evita que la pagina se recargue
-  }
-);
+//  // Obtiene los datos de cada campo del formulario y Valida que no esten Vacios
+//  $("#formResumTitu").on(
+//   "submit",
+//   function (e) {
+//     e.preventDefault(); // Evita que la pagina se recargue
+//   }
+// );
 
 async function cotizarExequial(){
 
