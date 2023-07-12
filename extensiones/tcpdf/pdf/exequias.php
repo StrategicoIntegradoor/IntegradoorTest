@@ -71,12 +71,12 @@ $pdf->Output('cotizacionPlanExequialPersonal'.$identificador.'.pdf', 'I');
 // $pdf->Output(__DIR__ . '/ensayos 9.pdf', 'D');
 exit; // Asegúrate de finalizar la ejecución del script después de enviar el PDF
 
-
+// SEGUNDA HOJA
 }else if($tipoPlan == 2){
 
+$identificador = $_GET['txtNombre'];
 $imagen = '../../../vistas/img/logos/11.png';
-$nombreUsuario = 'Usuario';
-$identificador = $_GET['cotizacion'];
+$cotizacion = $_GET['cotizacion'];
 
 $pdf = new TCPDF(PDF_PAGE_ORIENTATION, PDF_UNIT, 'A4', true, 'UTF-8', false);
 
@@ -92,9 +92,21 @@ $alto = $imagenData[1];
 $pdf->Image($imagen, 0, 0, $ancho, $alto, '', '', '', false, 300, '', false, false, 0);
 
 $pdf->SetFontSize(12);
+
+$pageWidth = $pdf->GetPageWidth();
+$mensajeWidth = $pdf->GetStringWidth('# '.$cotizacion);
+
+
+$x = $pageWidth - $mensajeWidth - 33;
+
+
 $pdf->SetXY(10.5, 0);
 $pdf->Cell(0, 40.5, 'Hola '.$identificador.' !', 0, 1, '');
 
+$pdf->SetFontSize(8); // Reducir el tamaño de la letra a 10
+$pdf->SetTextColor(0, 128, 0); 
+$pdf->SetXY($x, 0); // Establecer la posición X nuevamente
+$pdf->Cell(0, 35, 'Cotizacion# '.$cotizacion, 0, 1, '');
 
 $imagen1 = '../../../vistas/img/logos/10.png';
 
