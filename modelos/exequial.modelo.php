@@ -8,9 +8,7 @@ class ModelOlivos{
 
         $stmt = Conexion::conectar()->prepare("INSERT INTO $tabla (numeroCotizacion, nombreTitular, edad, tipoPlan, usuario, fechaCoti) 
         VALUES ('$numeroCoti', '$nombre', '$edad', '$tipo', '$usuario', '$fecha')");
-        $prueba = $stmt->execute();
-        var_dump($prueba);
-        die();
+        
         if($stmt->execute()){
             
             $numeroCoti = Conexion::conectar()->prepare("SELECT MAX(id) FROM segurosexequiales");
