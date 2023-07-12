@@ -6,9 +6,6 @@ class olivosController{
 
     public static function agregarOlivos(){
 
-        echo 'aqui,llegue';
-        die();
-        
         if ($_SERVER['REQUEST_METHOD'] === 'POST'){
 
             $requestData = json_decode(file_get_contents('php://input'), true);
