@@ -29,7 +29,6 @@ const usuarioID = document.getElementById('idUsuario').value;
         }) 
       }else{
 
-      console.log('stop');
       registro++;
       var data = {
         registro: registro,

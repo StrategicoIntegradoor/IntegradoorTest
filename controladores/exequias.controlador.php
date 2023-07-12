@@ -6,6 +6,9 @@ class olivosController{
 
     public static function agregarOlivos(){
 
+        echo 'aqui,llegue';
+        die();
+        
         if ($_SERVER['REQUEST_METHOD'] === 'POST'){
 
             $requestData = json_decode(file_get_contents('php://input'), true);
@@ -30,8 +33,7 @@ class olivosController{
                         echo "Error al parsear la fecha.";
                     }
                     
-                    echo 'aqui,llegue';
-                    die();
+                    
 					$registro = ModelOlivos::mdlAgregarCoti($tabla, $numeroCoti, $nombre, $edad, $tipo, $usuario, $fecha_registro);
 					
                 }
