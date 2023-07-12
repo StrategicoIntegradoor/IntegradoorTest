@@ -49,6 +49,11 @@ const usuarioID = document.getElementById('idUsuario').value;
 
       var enlace = 'controladores/exequial.controlador.php';
 
+      function(event) {
+        event.preventDefault(); // Evitar la actualización de la página
+        
+        // Realizar la solicitud Fetch aquí
+      
       fetch(enlace, options)
       .then(function(response) {
       if (response.ok) {
@@ -80,7 +85,7 @@ const usuarioID = document.getElementById('idUsuario').value;
           title: '<img src="vistas/img/plantilla/advertir.png" width="104" height="104">',
           text: 'Ocurrio un error al crear la invitacion, estamos presentando problemas de conexion, comunicate con servicio tecnico',
         }) 
-        });
+        });}
         
       }
   }
