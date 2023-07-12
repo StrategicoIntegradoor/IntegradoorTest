@@ -47,9 +47,8 @@ const usuarioID = document.getElementById('idUsuario').value;
         body: JSON.stringify(data)
       };
 
-      var enlace = 'controladores/exequial.controlador.php';
+      var enlace = 'controladores/exequias.controlador.php';
 
-      
       fetch(enlace, options)
       .then(function(response) {
       if (response.ok) {
