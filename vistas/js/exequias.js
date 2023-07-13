@@ -11,12 +11,19 @@
 //   }
 // );
 
-$(document).ready(function() {
-  // Evitar envío automático del formulario y recarga de la página
-  $("#formResumTitu").submit(function(e) {
-    e.preventDefault();
-  });
+// $(document).ready(function() {
+//   // Evitar envío automático del formulario y recarga de la página
+//   $("#formResumTitu").submit(function(e) {
+//     e.preventDefault();
+//   });
 
+//   // Llamar a la función cotizarExequial al hacer clic en el botón
+//   $("#btnExequial").click(function() {
+//     cotizarExequial();
+//   });
+// });
+
+$(document).ready(function() {
   // Llamar a la función cotizarExequial al hacer clic en el botón
   $("#btnExequial").click(function() {
     cotizarExequial();
