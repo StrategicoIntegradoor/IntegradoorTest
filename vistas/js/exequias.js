@@ -25,7 +25,8 @@
 
 $(document).ready(function() {
   // Llamar a la función cotizarExequial al hacer clic en el botón
-  $("#btnExequial").click(function() {
+  $("#btnExequial").click(function(event) {
+    event.preventDefault(); // Evitar la acción predeterminada del botón
     cotizarExequial();
   });
 });
