@@ -4,14 +4,15 @@
 // });
 
 $(document).ready(function() {
+
+  $("#formResumTitu").submit(function(e) {
+    e.preventDefault(); // Evitar envío automático del formulario y recarga de la página
+  });
   $("#btnExequial").click(function() {
     cotizarExequial();
   });
 });
 
-$("#formResumTitu").submit(function(e) {
-  e.preventDefault(); // Evitar envío automático del formulario y recarga de la página
-});
 
 
 //  // Obtiene los datos de cada campo del formulario y Valida que no esten Vacios
