@@ -366,7 +366,6 @@ select:invalid + .error-message {
                             <div class="row-card-end">
                                 <p style="margin-bottom: 0px; margin-top: 0; font-size: 13px; font-family: 'Arial Arabic', Arial, sans-serif;">Cobertura Internacional</p>
                                 <p style="margin-bottom: 0px; margin-top: 0; font-size: 13px; font-family: 'Arial Arabic', Arial, sans-serif;">Se debe contar con un plan exequial para incluirlo como un adicional</p>
-                                <p style="margin-bottom: 0px; margin-top: 0; font-size: 13px; font-family: 'Arial Arabic', Arial, sans-serif; color: transparent;">.</p>
                             </div>
                         </div>
                     </div>
