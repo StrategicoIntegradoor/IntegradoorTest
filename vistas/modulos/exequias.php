@@ -380,7 +380,7 @@ select:invalid + .error-message {
                 <h4 style="font-family: 'Arial Arabic', Arial; text-align: left; font-weight: bold; margin-bottom: -12px; margin-top: -3px;">Generar cotización en PDF</h4>
                 <hr>
                 <div class="col-xs-12 col-sm-6 col-md-12 form-group">
-                    <form>
+                    <form id="formResumTitu">
                         <div class="row">
                             <div class="col-xs-12 col-sm-6 col-md-3 form-group" style="margin-bottom: 0;">
                                 <label for="nombreTitular">Nombre Titular</label>
