@@ -178,7 +178,7 @@ select:invalid + .error-message {
 
         <h1 style="margin-bottom: 0%;">
 
-        Cotización Plan exequial Los Olivos
+        Cotización Plan Exequial Los Olivos
 
         </h1>
 
@@ -280,7 +280,6 @@ select:invalid + .error-message {
                                 <div style="text-align: center;">
                                     <p style="margin-bottom: 0px; margin-top: 0; font-size: 13px; font-family: 'Arial Arabic', Arial, sans-serif;">AFILIADO TITULAR:</p>
                                     <P style="margin-bottom: 5%; margin-top: 0; font-size: 13px; font-family: 'Arial Arabic', Arial, sans-serif;">Titular hasta los 60 años</P>
-                                    <p style="font-size: 13px; font-family: 'Arial Arabic', Arial, sans-serif;">Máx. 8 afiliados adicionales por titular</p>
                                     <p style="margin-bottom: 0px; margin-top: 0; font-size: 13px; font-family: 'Arial Arabic', Arial, sans-serif;">2 Beneficiarios hasta 72 años (Padres o suegros)</p>
                                     <p style="margin-bottom: 0px; margin-top: 0; font-size: 13px; font-family: 'Arial Arabic', Arial, sans-serif;">4 Beneficiarios hasta 55 años (Hijos, Hermanos,</p>
                                     <p style="margin-bottom: 0px; margin-top: 0; font-size: 13px; font-family: 'Arial Arabic', Arial, sans-serif;">Nietos, Cónyuge)</p>
@@ -408,11 +407,11 @@ select:invalid + .error-message {
                 <form method="post" id="formResumTitu">
                     <div class="row">
                         <input type="hidden" class="form-control" id="idUsuario" value="<?php echo $_SESSION["idUsuario"];?>">
-                        <div class="col-xs-12 col-sm-6 col-md-3 form-group" style="margin-bottom: 0;">
+                        <div class="col-xs-12 col-sm-6 col-md-2 form-group" style="margin-bottom: 0;">
                             <label for="nombreTitular">Nombre Titular</label>
                             <input type="text" class="form-control" id="nombreTitular" name="nombreTitular" placeholder="Nombre completo" required>
                         </div>
-                        <div class="col-xs-12 col-sm-6 col-md-3 form-group" style="margin-bottom: 0;">
+                        <div class="col-xs-12 col-sm-6 col-md-2 form-group" style="margin-bottom: 0;">
                             <label for="edadTitularID">Edad Titular</label>
                             <select type="text" class="form-control fecha-nacimiento" id="edadTitularID" placeholder="Edad Titular" required>
                                 <option value="">Edad</option>
@@ -427,7 +426,7 @@ select:invalid + .error-message {
                                                                                             ?>
                             </select>
                         </div>
-                        <div class="col-xs-12 col-sm-6 col-md-3 form-group" style="margin-bottom: 0;">
+                        <div class="col-xs-12 col-sm-6 col-md-2 form-group" style="margin-bottom: 0;">
                             <label for="tipoPlanExequialID">Tipo plan exequial</label>
                             <select class="form-control" id="tipoPlanExequialID" required>
                                 <option value="" selected>Tipo de plan</option>
@@ -435,7 +434,7 @@ select:invalid + .error-message {
                                 <option value="2">Plan Nuestra Familia</option>
                             </select>
                         </div>
-                        <div class="col-xs-12 col-sm-6 col-md-3 form-group" style="margin-bottom: 0;" id="contenBtnConsultarExequial">
+                        <div class="col-xs-12 col-sm-6 col-md-2 form-group" style="margin-bottom: 0;" id="contenBtnConsultarExequial">
                             <button class="btn btn-primary btn-block" id="btnExequial">Cotizar</button>
                         </div>
                     </div>
