@@ -1,27 +1,27 @@
-// // Ejectura la funcion Generar pdf de ofertas
-// $("#btnExequial").click(function() {
-//   cotizarExequial();
-// });
-
-//  // Obtiene los datos de cada campo del formulario y Valida que no esten Vacios
-//  $("#formResumTitu").on(
-//   "submit",
-//   function (e) {
-//     e.preventDefault(); // Evita que la pagina se recargue
-//   }
-// );
-
-$(document).ready(function() {
-  // Evitar envío automático del formulario y recarga de la página
-  $("#formResumTitu").submit(function(e) {
-    e.preventDefault();
-  });
-
-  // Llamar a la función cotizarExequial al hacer clic en el botón
-  $("#btnExequial").click(function() {
-    cotizarExequial();
-  });
+// Ejectura la funcion Generar pdf de ofertas
+$("#btnExequial").click(function() {
+  cotizarExequial();
 });
+
+ // Obtiene los datos de cada campo del formulario y Valida que no esten Vacios
+ $("#formResumTitu").on(
+  "submit",
+  function (e) {
+    e.preventDefault(); // Evita que la pagina se recargue
+  }
+);
+
+// $(document).ready(function() {
+//   // Evitar envío automático del formulario y recarga de la página
+//   $("#formResumTitu").submit(function(e) {
+//     e.preventDefault();
+//   });
+
+//   // Llamar a la función cotizarExequial al hacer clic en el botón
+//   $("#btnExequial").click(function() {
+//     cotizarExequial();
+//   });
+// });
 
 async function cotizarExequial(){
 
