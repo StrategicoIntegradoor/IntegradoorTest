@@ -67,7 +67,7 @@ const tipoPlanExequialID = document.getElementById('tipoPlanExequialID').value;
         body: JSON.stringify(data)
       };
 
-      var enlace = 'controladores/exequial.controlador.php';
+      var enlace = 'controladores/exequias.controlador.php';
 
       fetch(enlace, options)
       .then(function(response) {
