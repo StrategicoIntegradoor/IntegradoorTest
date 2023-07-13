@@ -358,7 +358,7 @@ select:invalid + .error-message {
                                 </div>
                                 <div class="col-md-8 col-sm-8" style="text-align: center;">
                                     <h4 style="margin-bottom: 5px;  font-family: 'Arial Narrow OS Bold', Arial, sans-serif; font-size: 15px;"><strong>REPATRIACIÓN</strong></h4>
-                                    <p><strong style="color: #82d600; font-size: 15px">$ 144.000</strong></p>
+                                    <h4><strong style="color: #82d600; font-size: 15px">$ 144.000</strong></h4>
                                     <p style="margin-bottom: 0px; margin-top: 0;">Pago anual</p>
                                 </div>         
                             </div>
