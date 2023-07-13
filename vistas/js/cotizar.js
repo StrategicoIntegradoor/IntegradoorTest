@@ -95,6 +95,13 @@ $(document).ready(function () {
     width: "100%",
   });
 
+    // Carga la edad
+    $("#edad").select2({
+      theme: "bootstrap edad",
+      language: "es",
+      width: "100%",
+    });
+
   // Conviete la letras iniciales del Nombre y el Apellido deL Cliente en Mayusculas
   $("#txtNombres").keyup(function () {
     var cliNombres = document.getElementById("txtNombres").value.toLowerCase();
