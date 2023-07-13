@@ -1,35 +1,23 @@
 // Ejectura la funcion Generar pdf de ofertas
-// $("#btnExequial").click(function() {
-//   cotizarExequial();
-// });
-
-$(document).ready(function() {
-
-  $("#formResumTitu").submit(function(e) {
-    e.preventDefault(); // Evitar envío automático del formulario y recarga de la página
-  });
-  $("#btnExequial").click(function() {
-    cotizarExequial();
-  });
+$("#btnExequial").click(function() {
+  cotizarExequial();
 });
 
-
-
-//  // Obtiene los datos de cada campo del formulario y Valida que no esten Vacios
-//  $("#formResumTitu").on(
-//   "submit",
-//   function (e) {
-//     e.preventDefault(); // Evita que la pagina se recargue
-//   }
-// );
+ // Obtiene los datos de cada campo del formulario y Valida que no esten Vacios
+ $("#formResumTitu").on(
+  "submit",
+  function (e) {
+    e.preventDefault(); // Evita que la pagina se recargue
+  }
+);
 
 async function cotizarExequial(){
 
 let registro = 0;
 const txtNombre = document.getElementById('nombreTitular').value;
-const edadTitularID = document.getElementById('edadTitularID').value;
+const edadTitularID = document.getElementById('edad').value;
 const tipoPlanExequialID = document.getElementById('tipoPlanExequialID').value;
-const usuarioID = document.getElementById('idUsuario').value;
+// const usuarioID = document.getElementById('idUsuario').value;
 
   if(txtNombre !== "" && edadTitularID !== "" && tipoPlanExequialID !== ""){
 
@@ -40,14 +28,13 @@ const usuarioID = document.getElementById('idUsuario').value;
           text: 'Usuario fuera del rango de edad permitido',
         }) 
       }else{
-
       registro++;
       var data = {
         registro: registro,
         nombre: txtNombre,
         edad: edadTitularID,
         tipo: tipoPlanExequialID,
-        usuario: usuarioID,
+        // usuario: usuarioID,
         accion: 'nuevaCotizacion'
       };
 
@@ -59,7 +46,7 @@ const usuarioID = document.getElementById('idUsuario').value;
         body: JSON.stringify(data)
       };
 
-      var enlace = 'controladores/exequias.controlador.php';
+      var enlace = 'controladores/exequial.controlador.php';
 
       fetch(enlace, options)
       .then(function(response) {
@@ -74,6 +61,7 @@ const usuarioID = document.getElementById('idUsuario').value;
         console.log(data);
         data = JSON.parse(data);
         if(data.success === "Registro exitoso"){
+          console.log('aqui llegue')
           const url = "extensiones/tcpdf/pdf/exequias.php?cotizacion=" + data.numeroCotizacion + "&txtNombre=" + txtNombre + "&tipoPlan=" + tipoPlanExequialID;
           window.open(url, "_blank");
             Swal.fire({
