@@ -81,7 +81,7 @@ const usuarioID = document.getElementById('idUsuario').value;
               title: '<img src="vistas/img/plantilla/ofertas.png" width="104" height="104">',
               text: 'Cotización generada exitosamente',
             }).then(function() {
-              // location.reload(); // Refrescar la página
+              location.reload(); // Refrescar la página
           });
         }
       })
