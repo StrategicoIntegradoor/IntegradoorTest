@@ -34,7 +34,7 @@ const tipoPlanExequialID = document.getElementById('tipoPlanExequialID').value;
 
   if(txtNombre !== "" && edadTitularID !== "" && tipoPlanExequialID !== ""){
 
-      if(edadTitularID >= 60 || edadTitularID <= 10){
+      if(edadTitularID >= 65 || edadTitularID <= 17){
         Swal.fire({
           icon: '<img src="vistas/img/plantilla/advertir.png" width="104" height="104">',
           title: '<img src="vistas/img/plantilla/advertir.png" width="104" height="104">',
