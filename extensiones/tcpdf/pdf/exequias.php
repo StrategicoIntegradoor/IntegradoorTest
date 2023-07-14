@@ -67,7 +67,7 @@ $pdf->SetXY(141, $pdf->GetY());
 $pdf->Write(0, 'https://cali.losolivos.co/pagos-pse/');
 
 
-$pdf->Output('Plan_Exequial_Personal_'.$identificador.'.pdf', 'D');
+$pdf->Output('Plan_Exequial_Personal_'.$identificador.'.pdf', 'I');
 // $pdf->Output(__DIR__ . '/ensayos 9.pdf', 'D');
 exit; // Asegúrate de finalizar la ejecución del script después de enviar el PDF
 
@@ -133,7 +133,7 @@ $pdf->SetXY(141, $pdf->GetY());
 $pdf->Write(0, 'https://cali.losolivos.co/pagos-pse/');
 
 
-$pdf->Output('Plan_Exequial_Familia_'.$identificador.'.pdf', 'D');
+$pdf->Output('Plan_Exequial_Familia_'.$identificador.'.pdf', 'I');
 // $pdf->Output(__DIR__ . '/ensayos 9.pdf', 'D');
 exit; // Asegúrate de finalizar la ejecución del script después de enviar el PDF
 
