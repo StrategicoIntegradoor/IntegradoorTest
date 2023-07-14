@@ -390,7 +390,7 @@ select:invalid + .error-message {
                                 <label for="">Edad Nuevo</label>
                                 <div class="row">
                                     <div class="col-xs-12 col-sm-6 col-md-12 conten-dia">
-                                        <select class="form-control edad" name="edad" id="dianacimiento" required>
+                                        <select class="form-control edad" name="edad" id="edad" required>
                                             <option value="">Edad Titular</option>
                                             <?php
                                             for ($i = 18; $i <= 61; $i++) {
