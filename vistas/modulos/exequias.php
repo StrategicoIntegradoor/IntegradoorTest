@@ -273,13 +273,11 @@ select:invalid + .error-message {
                                         </div>
                                     </div>
                                     <div class="col-md-8 col-sm-8" style="text-align: center;">
-                                        <h3 style="font-family: 'Arial Narrow OS Bold', Arial, sans-serif; font-size: 16px; text-align: center;  margin-top: 0%;"><strong>PLAN NUESTRA FAMILIA</strong></h3>
-                                        <div>
-                                            <h3 style="text-align: center;"><strong style="color: #82d600;">$264.000</strong></h3>
-                                            <p style="margin-top: 0px; text-align: center;">Pago anual</p>
-                                            <br>
-                                        </div>
-                                    </div>
+                                        <h4 style="font-family: 'Arial Narrow OS Bold', Arial, sans-serif; font-size: 15px;"><strong>PLAN NUESTRA FAMILIA</strong></h4>
+                                        <h3><strong style="color: #82d600;">$264.000</strong></h3>
+                                        <p style="margin-bottom: 0px; margin-top: 0;">Pago anual</p>
+                                        <br>
+                                    </div>         
                                 </div>
                                 <div class="row-card-end">
                                     <div style="text-align: center;">
