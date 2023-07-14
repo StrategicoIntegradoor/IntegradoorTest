@@ -315,7 +315,7 @@ select:invalid + .error-message {
                                 </div>
                                 <div class="col-md-8 col-sm-8" style="text-align: center;">
                                     <h4 style="font-family: 'Arial Narrow OS Bold', Arial, sans-serif; font-size: 15px;"><strong>AFILIADO ADICIONAL</strong></h4>
-                                    <h4><strong style="color: #82d600;">$ 72.000</strong></h4>
+                                    <h3><strong style="color: #82d600;">$ 72.000</strong></h3>
                                     <p style="margin-bottom: 0px; margin-top: 0;">Pago anual</p>
                                 </div>         
                             </div>
@@ -337,7 +337,7 @@ select:invalid + .error-message {
                                 </div>
                                 <div class="col-md-8 col-sm-8" style="text-align: center;">
                                     <h4 style="font-family: 'Arial Narrow OS Bold', Arial, sans-serif; font-size: 15px;"><strong>MASCOTAS ADICIONAL</strong></h4>
-                                    <h4><strong style="color: #82d600;">$ 114.000</strong></h4>
+                                    <h3><strong style="color: #82d600;">$ 114.000</strong></h3>
                                     <p style="margin-bottom: 0px; margin-top: 0;">Pago anual</p>
                                 </div>         
                             </div>
@@ -359,7 +359,7 @@ select:invalid + .error-message {
                                 </div>
                                 <div class="col-md-8 col-sm-8" style="text-align: center;">
                                     <h4 style="margin-bottom: 5px;  font-family: 'Arial Narrow OS Bold', Arial, sans-serif; font-size: 15px;"><strong>REPATRIACIÓN</strong></h4>
-                                    <h4><strong style="color: #82d600;">$ 144.000</strong></h4>
+                                    <h3><strong style="color: #82d600;">$ 144.000</strong></h3>
                                     <p style="margin-bottom: 0px; margin-top: 0;">Pago anual</p>
                                 </div>         
                             </div>
