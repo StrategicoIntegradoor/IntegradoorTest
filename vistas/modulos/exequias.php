@@ -258,7 +258,7 @@ select:invalid + .error-message {
                                         <p style="margin-bottom: 0px; margin-top: 0; font-size: 13px; font-family: 'Arial Arabic', Arial, sans-serif;">AFILIADO TITULAR:</p>
                                         <P style="margin-bottom: 5%; margin-top: 0; font-size: 13px; font-family: 'Arial Arabic', Arial, sans-serif;">Titular hasta los 60 años</P>
                                         <p style="margin-bottom: 0px; font-size: 13px; font-family: 'Arial Arabic', Arial, sans-serif;">Máx. 8 afiliados adicionales por titular</p>
-                                        <p style="margin-bottom: 0px; margin-top: 0; font-size: 13px; font-family: 'Arial Arabic', Arial, sans-serif; color: transparent;">.</p>
+                                        <!-- <p style="margin-bottom: 0px; margin-top: 0; font-size: 13px; font-family: 'Arial Arabic', Arial, sans-serif; color: transparent;">.</p> -->
                                     </div>
                                 </div>
                             </div>
