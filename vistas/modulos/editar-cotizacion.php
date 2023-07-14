@@ -606,7 +606,7 @@
           </div>
           <div id="contenCotizacionPDF">
             <div class="col-xs-12 col-sm-6 col-md-10">
-              <div class="row; col-md-10">
+              <!-- <div class="row"> -->
                 <div class="col-xs-3">
                   <label for="checkboxAsesor">¿Deseas agregar tus datos como asesor en la cotizacion?</label>
                 </div>
@@ -618,7 +618,7 @@
                     <span class="fa fa-file-text"></span> Generar PDF de Cotización
                   </button>
                 </div>
-              </div>
+              <!-- </div> -->
             </div>
           </div>
         </div>
