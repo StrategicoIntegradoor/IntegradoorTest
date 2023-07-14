@@ -48,7 +48,7 @@ class ModeloInvitacion{
                 $mail->addAddress($emailString, 'Usuario');
 
                 //Configuración asunto y cuerpo del correo
-                $mail->Subject = 'Registrate como asesor freelance con Grupo Asistencia';
+                $mail->Subject = 'Registrate como Asesor Freelance con Grupo Asistencia';
                 $message = '
                 <!DOCTYPE html>
                 <html lang="es">
@@ -143,8 +143,8 @@ class ModeloInvitacion{
                                 <td>
                                     <h1 class="h1-name">Hola ' . $nombre . ',</h1>
                                     <p style="color:#2e2e2e !important;">Estas a punto de ser parte de nuestro equipo y dar un paso importante como empresario. En el presente correo se adjunta una clave de registro junto con el enlace para completar el formulario y registrarte.</p>
-                                    <h4 class="h4-name">Token: ' . $token . '</h4>
-                                    <h4 class="h4-name">Haga click en el siguiente enlace para cambiar contrase�0�9a: https://integradoor.com/Test/invitacion</h4>
+                                    <h4 class="h4-name">Clave de registro: ' . $token . '</h4>
+                                    <h4 class="h4-name">Haz click en el siguiente enlace para registrarte: https://integradoor.com/Test/invitacion</h4>
                                 </td>
                             </tr>
                          
