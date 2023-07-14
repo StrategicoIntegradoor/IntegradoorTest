@@ -48,19 +48,17 @@
 }
 
 
+
 .edad.select2-container .select2-selection--single{
-    width: 96%;
-    height: 34px !important;
-    background-color: #E8E8E8 !important;
+    height: 35px !important;
 }
 
 .edad.select2-container--bootstrap .select2-selection--single .select2-selection__rendered {
-    padding-top: 5px;
+    padding-top: 4px;
 }
 
 .edad.select2-container--bootstrap .select2-selection--single .select2-selection__arrow b {
     border-color: #000000 transparent transparent;
-    margin-left: -15px; 
 }
 
 .nomAseg, .apeAseg {
