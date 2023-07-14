@@ -1,32 +1,24 @@
-// // Ejectura la funcion Generar pdf de ofertas
-// $("#btnExequial").click(function() {
-//   cotizarExequial();
-// });
-
-//  // Obtiene los datos de cada campo del formulario y Valida que no esten Vacios
-//  $("#formResumTitu").on(
-//   "submit",
-//   function (e) {
-//     e.preventDefault(); // Evita que la pagina se recargue
-//   }
-// );
-
 // $(document).ready(function() {
-//   // Evitar envío automático del formulario y recarga de la página
-//   $("#formResumTitu").submit(function(e) {
-//     e.preventDefault();
-//   });
-
 //   // Llamar a la función cotizarExequial al hacer clic en el botón
-//   $("#btnExequial").click(function() {
+//   $("#btnExequial").click(function(event) {
+//     event.preventDefault(); // Evitar la acción predeterminada del botón
 //     cotizarExequial();
 //   });
 // });
 
+$("#nombreTitular").keyup(function () {
+  var cliNombres = document.getElementById("nombreTitular").value.toLowerCase();
+  $("#nombreTitular").val(
+    cliNombres.replace(/^(.)|\s(.)/g, function ($1) {
+      return $1.toUpperCase();
+    })
+  );
+});
+
 $(document).ready(function() {
-  // Llamar a la función cotizarExequial al hacer clic en el botón
-  $("#btnExequial").click(function(event) {
-    event.preventDefault(); // Evitar la acción predeterminada del botón
+  // Asociar la función cotizarExequial al evento submit del formulario
+  $("#formResumTitu").submit(function(event) {
+    event.preventDefault(); // Evitar el envío automático del formulario
     cotizarExequial();
   });
 });
