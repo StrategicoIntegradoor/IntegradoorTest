@@ -216,11 +216,60 @@
                         <select class="form-control" id="ciudadCirculacion"></select>
                         <div id="listaCiudades"></div>
                     </div>
+
+                    <div class="col-xs-12 col-sm-6 col-md-3 form-group">
+                      <label for="DptoCirculacion">Departamento de Circulación</label>
+                      <select class="form-control" id="DptoCirculacion" required>
+                        <option value=""></option>
+                        <option value="1">Amazonas</option>
+                        <option value="2">Antioquia</option>
+                        <option value="3">Arauca</option>
+                        <option value="4">Atlántico</option>
+                        <option value="5">Barranquilla</option>
+
+                        <option value="6">Bogotá</option>
+                        <option value="7">Bolívar</option>
+                        <option value="8">Boyacá</option>
+                        <option value="9">Caldas</option>
+                        <option value="10">Caquetá</option>
+
+                        <option value="11">Casanare</option>
+                        <option value="12">Cauca</option>
+                        <option value="13">Cesar</option>
+                        <option value="14">Chocó</option>
+                        <option value="15">Córdoba</option>
+
+                        <option value="16">Cundinamarca</option>
+                        <option value="17">Guainía</option>
+                        <option value="18">La Guajira</option>
+                        <option value="19">Guaviare</option>
+                        <option value="20">Huila</option>
+
+                        <option value="21">Magdalena</option>
+                        <option value="22">Meta</option>
+                        <option value="23">Nariño</option>
+                        <option value="24">Norte de Santander</option>
+                        <option value="25">Putumayo</option>
+
+                        <option value="26">Quindío</option>
+                        <option value="27">Risaralda</option>
+                        <option value="28">San Andrés</option>
+                        <option value="29">Santander</option>
+                        <option value="30">Sucre</option>
+
+                        <option value="31">Tolima</option>
+                        <option value="32">Valle del Cauca</option>
+                        <option value="33">Vaupés</option>
+                        <option value="34">Vichada</option>
+                      </select>
+                    </div>
+
                     <div class="col-xs-12 col-sm-6 col-md-3 form-group">
                       <label for="ciudadCirculacion">Ciudad de Circulación</label>
                       <select class="form-control" id="ciudadCirculacion" required></select>
                       <div id="listaCiudades"></div>
                     </div>
+                    
                     <div class="form-group col-md-6 col-sm-12">
                         <label for="">Dirección <strong class="text-danger">*</strong></label>
                         <input class="form-control" type="text" name="direccion" id="direccion" >
