@@ -250,7 +250,6 @@ select:invalid + .error-message {
                                         <h4 style="font-family: 'Arial Narrow OS Bold', Arial, sans-serif; font-size: 15px;"><strong>PLAN MUY PERSONAL</strong></h4>
                                         <h3><strong style="color: #82d600;">$72.000</strong></h3>
                                         <p style="margin-bottom: 0px; margin-top: 0;">Pago anual</p>
-                                        <br>
                                     </div>         
                                 </div>
                                 <div class="row-card-end">
