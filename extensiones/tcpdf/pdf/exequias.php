@@ -130,7 +130,7 @@ $pdf->SetTextColor(0, 0, 255);
 
 $pdf->SetFont('helvetica', '', 10);
 $pdf->SetXY(141, $pdf->GetY());
-$pdf->Write(0, '<a href="https://cali.losolivos.co/pagos-pse/" target="_blank">https://cali.losolivos.co/pagos-pse/</a>');
+$pdf->Write(0, 'https://cali.losolivos.co/pagos-pse/');
 
 
 $pdf->Output('Plan_Exequial_Familia_'.$identificador.'.pdf', 'D');
