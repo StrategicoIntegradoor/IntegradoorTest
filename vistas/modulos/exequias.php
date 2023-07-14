@@ -249,7 +249,7 @@ select:invalid + .error-message {
                                     <div class="col-md-8 col-sm-8" style="text-align: center;">
                                         <h3 style="font-family: 'Arial Narrow OS Bold', Arial, sans-serif; font-size: 16px; text-align: center;  margin-top: 0%;"><strong>PLAN MUY PERSONAL</strong></h3>
                                         <div>
-                                            <h3 style="text-align: center;"><strong style="color: #82d600;">$ 72.000</strong></h3>
+                                            <h3 style="text-align: center;"><strong style="color: #82d600;">$72.000</strong></h3>
                                             <p style="margin-top: 0px; text-align: center;">Pago anual</p>
                                             <br>
                                         </div>
@@ -277,7 +277,7 @@ select:invalid + .error-message {
                                     <div class="col-md-8 col-sm-8" style="text-align: center;">
                                         <h3 style="font-family: 'Arial Narrow OS Bold', Arial, sans-serif; font-size: 16px; text-align: center;  margin-top: 0%;"><strong>PLAN NUESTRA FAMILIA</strong></h3>
                                         <div>
-                                            <h3 style="text-align: center;"><strong style="color: #82d600;">$ 264.000</strong></h3>
+                                            <h3 style="text-align: center;"><strong style="color: #82d600;">$264.000</strong></h3>
                                             <p style="margin-top: 0px; text-align: center;">Pago anual</p>
                                             <br>
                                         </div>
@@ -315,7 +315,7 @@ select:invalid + .error-message {
                                 </div>
                                 <div class="col-md-8 col-sm-8" style="text-align: center;">
                                     <h4 style="font-family: 'Arial Narrow OS Bold', Arial, sans-serif; font-size: 15px;"><strong>AFILIADO ADICIONAL</strong></h4>
-                                    <h3><strong style="color: #82d600;">$ 72.000</strong></h3>
+                                    <h3><strong style="color: #82d600;">$72.000</strong></h3>
                                     <p style="margin-bottom: 0px; margin-top: 0;">Pago anual</p>
                                 </div>         
                             </div>
@@ -359,7 +359,7 @@ select:invalid + .error-message {
                                 </div>
                                 <div class="col-md-8 col-sm-8" style="text-align: center;">
                                     <h4 style="margin-bottom: 5px;  font-family: 'Arial Narrow OS Bold', Arial, sans-serif; font-size: 15px;"><strong>REPATRIACIÓN</strong></h4>
-                                    <h3><strong style="color: #82d600;">$ 144.000</strong></h3>
+                                    <h3><strong style="color: #82d600;">$144.000</strong></h3>
                                     <p style="margin-bottom: 0px; margin-top: 0;">Pago anual</p>
                                 </div>         
                             </div>
