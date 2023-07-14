@@ -131,8 +131,8 @@
 
 
 .circle {
-        width: 80%;
-        height: 80%;
+        width: 77%;
+        height: 77%;
         border-radius: 100%;
         overflow: hidden;
         /* margin-right: 5px; */
