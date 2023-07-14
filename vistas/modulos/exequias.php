@@ -163,8 +163,8 @@
 .row-card {
 
   padding-top: 3%;
-  padding-left: 2%;
-  padding-right: 2%;
+  padding-left: 3%;
+  padding-right: 3%;
   display: flex;
 
 }
