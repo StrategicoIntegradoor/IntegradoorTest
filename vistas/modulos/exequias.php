@@ -239,7 +239,7 @@ select:invalid + .error-message {
                         </div>
                         <!-- //PLAN MUY PERSONAL// -->
                         <div class="col-md-4 col-sm-12" style="margin-bottom: 10px;">
-                            <div class="rounded-container" style="min-height: 280px;">
+                            <div class="rounded-container" style="min-height: 260px;">
                                 <div class="row-card" style="display: flex; align-items: start;">
                                     <div class="col-md-4 col-sm-4" style="display: flex; align-items: center; justify-content: center;">
                                         <div class="circle" style="aspect-ratio: 1/1; max-width: 250px;">
@@ -265,7 +265,7 @@ select:invalid + .error-message {
                         </div>
                         <!-- //PLAN NUESTRA FAMILIA -->
                         <div class="col-md-4 col-sm-12" style="margin-bottom: 10px;">
-                            <div class="rounded-container" style="min-height: 280px;">
+                            <div class="rounded-container" style="min-height: 260px;">
                                 <div class="row-card" style="display: flex; align-items: start;">
                                     <div class="col-md-4 col-sm-4" style="display: flex; align-items: center; justify-content: center;">
                                         <div class="circle" style="aspect-ratio: 1/1; max-width: 250px;">
