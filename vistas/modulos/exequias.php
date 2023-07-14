@@ -252,7 +252,7 @@ select:invalid + .error-message {
                                         <p style="margin-bottom: 0px; margin-top: 0;">Pago anual</p>
                                     </div>         
                                 </div>
-                                <div class="row-card-end" style="text-align: center; margin-top: -10px;">
+                                <div class="row-card-end" style="text-align: center;">
                                     <!-- <div style="text-align: center;"> -->
                                         <p style="margin-bottom: 0px; margin-top: -40px; font-size: 13px; font-family: 'Arial Arabic', Arial, sans-serif;">AFILIADO TITULAR:</p>
                                         <P style="margin-bottom: 5%; margin-top: 0; font-size: 13px; font-family: 'Arial Arabic', Arial, sans-serif;">Titular hasta los 60 años</P>
@@ -260,6 +260,7 @@ select:invalid + .error-message {
                                         <!-- <p style="margin-bottom: 0px; margin-top: 0; font-size: 13px; font-family: 'Arial Arabic', Arial, sans-serif; color: transparent;">.</p> -->
                                     <!-- </div> -->
                                 </div>
+                                <div></div>
                             </div>
                         </div>
                         <!-- //PLAN NUESTRA FAMILIA -->
