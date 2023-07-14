@@ -216,6 +216,11 @@
                         <select class="form-control" id="ciudadCirculacion"></select>
                         <div id="listaCiudades"></div>
                     </div>
+                    <div class="col-xs-12 col-sm-6 col-md-3 form-group">
+                      <label for="ciudadCirculacion">Ciudad de Circulación</label>
+                      <select class="form-control" id="ciudadCirculacion" required></select>
+                      <div id="listaCiudades"></div>
+                    </div>
                     <div class="form-group col-md-6 col-sm-12">
                         <label for="">Dirección <strong class="text-danger">*</strong></label>
                         <input class="form-control" type="text" name="direccion" id="direccion" >
