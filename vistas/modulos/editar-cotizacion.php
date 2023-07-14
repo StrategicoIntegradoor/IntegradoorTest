@@ -605,19 +605,21 @@
           <div id="cardAgregarCotizacion">
           </div>
           <div id="contenCotizacionPDF">
-            <div class="col-xs-12 col-sm-6 col-md-7">
-                <div class="row">
-                  <div class="col-xs-6">
+            <div class="col-xs-12 col-sm-6 col-md-8">
+              <div class="row">
+                <div class="col-xs-5">
                   <label for="checkboxAsesor">¿Deseas agregar tus datos como asesor en la cotizacion?</label>
-                    <input type="checkbox" id="checkboxAsesorEditar">
-                  </div>
-                  <div class="col-xs-6">
-                    <button type="button" class="btn btn-danger btn-block" id="btnParrillaPDF">
-                      <span class="fa fa-file-text"></span> Generar PDF de Cotización
-                    </button>
-                  </div>
+                </div>
+                <div class="col-xs-1">
+                  <input type="checkbox" id="checkboxAsesorEditar">
+                </div>
+                <div class="col-xs-6">
+                  <button type="button" class="btn btn-danger btn-block" id="btnParrillaPDF">
+                    <span class="fa fa-file-text"></span> Generar PDF de Cotización
+                  </button>
                 </div>
               </div>
+            </div>
           </div>
         </div>
 
