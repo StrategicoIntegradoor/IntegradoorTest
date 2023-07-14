@@ -404,7 +404,7 @@ select:invalid + .error-message {
                                     <select class="form-control edad" name="edad" id="edad" required>
                                         <option value="">Edad Titular</option>
                                         <?php
-                                        for ($i = 18; $i <= 61; $i++) {
+                                        for ($i = 18; $i <= 60; $i++) {
                                         if (strlen($i) == 1) { ?>
                                             <option value="<?php echo "0" . $i ?>"><?php echo "0" . $i ?></option><?php
                                                                                                                 } else { ?>
