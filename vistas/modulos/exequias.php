@@ -337,14 +337,14 @@ select:invalid + .error-message {
                                 </div>
                                 <div class="col-md-8 col-sm-8" style="text-align: center;">
                                     <h4 style="font-family: 'Arial Narrow OS Bold', Arial, sans-serif; font-size: 15px;"><strong>AFILIADO ADICIONAL</strong></h4>
-                                    <h4><strong style="color: #82d600;">$ 72.000</strong></h4>
+                                    <h4><strong style="color: #82d600;">$ 114.000</strong></h4>
                                     <p style="margin-bottom: 0px; margin-top: 0;">Pago anual</p>
                                 </div>         
                             </div>
                             <br>
                             <div class="row-card-end">
-                                <p style="margin-bottom: 0px; margin-top: 0; font-size: 13px; font-family: 'Arial Arabic', Arial, sans-serif;">Máx. 8 afiliados adicionales por titular</p>
-                                <p style="margin-bottom: 0px; margin-top: 0; font-size: 13px; font-family: 'Arial Arabic', Arial, sans-serif;">Para alguno de los planes hasta los 60 años y sin restricción de parentesco</p>
+                                <p style="margin-bottom: 0px; margin-top: 0; font-size: 13px; font-family: 'Arial Arabic', Arial, sans-serif;">Sólo para perros y gatos</p>
+                                <p style="margin-bottom: 0px; margin-top: 0; font-size: 13px; font-family: 'Arial Arabic', Arial, sans-serif;">Se debe contar con un plan exequial para incluir a la mascota como un adicional</p>
                             </div>
                         </div>
                     </div>
