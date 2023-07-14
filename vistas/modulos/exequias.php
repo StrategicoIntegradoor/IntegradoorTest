@@ -164,7 +164,7 @@
 
   padding-top: 3%;
   padding-left: 5%;
-  padding-right: 5%;
+  padding-right: 4%;
   display: flex;
 
 }
