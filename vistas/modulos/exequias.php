@@ -306,7 +306,7 @@ select:invalid + .error-message {
                     </div>
                     <!-- //AFILIADO ADICIONAL -->
                     <div class="col-md-4 col-sm-12" style="text-align: center;  margin-bottom: 7px;">
-                        <div class="rounded-container">
+                        <div class="rounded-container"  style="height: 100%;">
                             <div class="row-card" style="display: flex; align-items: start;">
                                 <div class="col-md-4 col-sm-4" style="display: flex; align-items: center; justify-content: center;">
                                     <div class="circle" style="aspect-ratio: 1/1; max-width: 250px;">
