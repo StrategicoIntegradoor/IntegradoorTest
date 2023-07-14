@@ -242,7 +242,7 @@ select:invalid + .error-message {
                             <div class="rounded-container" style="height: 100%;">
                                 <div class="row-card" style="display: flex; align-items: start;">
                                     <div class="col-md-4 col-sm-4" style="display: flex; align-items: center; justify-content: center;">
-                                        <div class="circle" style="aspect-ratio: 1/1;">
+                                        <div class="circle" style="aspect-ratio: 1/1; max-width: 100px;">
                                             <img src="vistas/img/plantilla/plan_personal.jpg" style="max-width: 100%; max-height: 100%; object-fit: contain;">
                                         </div>
                                     </div>
