@@ -424,8 +424,8 @@ select:invalid + .error-message {
                             <label for="tipoPlanExequialID">Tipo plan exequial</label>
                             <select class="form-control" id="tipoPlanExequialID" required>
                                 <option value="" selected>Tipo de plan</option>
-                                <option value="1">Plan muy personal</option>
-                                <option value="2">Plan familiar</option>
+                                <option value="1">Plan Muy Personal</option>
+                                <option value="2">Plan Familiar</option>
                             </select>
                         </div>
                         <div class="col-xs-12 col-sm-6 col-lg-3 form-group" style="margin-bottom: 0;" id="contenBtnConsultarExequial">
