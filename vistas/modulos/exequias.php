@@ -252,6 +252,7 @@ select:invalid + .error-message {
                                         <p style="margin-bottom: 0px; margin-top: 0;">Pago anual</p>
                                         <br>
                                         <br>
+                                        <br>
                                     </div>         
                                 </div>
                                 <div class="row-card-end" style="text-align: center;">
