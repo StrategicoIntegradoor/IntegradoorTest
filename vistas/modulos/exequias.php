@@ -332,12 +332,12 @@ select:invalid + .error-message {
                             <div class="row-card" style="display: flex; align-items: start;">
                                 <div class="col-md-4 col-sm-4" style="display: flex; align-items: center; justify-content: center;">
                                     <div class="circle" style="aspect-ratio: 1/1; max-width: 250px;">
-                                        <img src="vistas/img/plantilla/plan_familiar.jpg" style="max-width: 100%; max-height: 100%; object-fit: contain;">
+                                        <img src="vistas/img/plantilla/mascotas.jpg">
                                     </div>
                                 </div>
                                 <div class="col-md-8 col-sm-8" style="text-align: center;">
                                     <h4 style="font-family: 'Arial Narrow OS Bold', Arial, sans-serif; font-size: 15px;"><strong>MASCOTAS</strong></h4>
-                                    <h3><strong style="color: #82d600;">$ 114.000</strong></h3>
+                                    <h3><strong style="color: #82d600;">$114.000</strong></h3>
                                     <p style="margin-bottom: 0px; margin-top: 0;">Pago anual</p>
                                 </div>         
                             </div>
