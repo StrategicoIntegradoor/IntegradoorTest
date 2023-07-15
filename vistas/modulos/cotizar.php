@@ -2,7 +2,9 @@
 
 require_once "conexion.php";
 
-$_SESSION["intermediario"]
+echo $_SESSION["intermediario"];
+
+
 
 if ($_SESSION["permisos"]["Cotizarlivianos"] != "x") {
 
