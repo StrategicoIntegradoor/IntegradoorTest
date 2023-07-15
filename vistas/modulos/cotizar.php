@@ -10,7 +10,7 @@ if (!$enlace) {
 
   die("Conexion Fallida " . mysqli_connect_error());
 }
-$query = "SELECT cre_sbs_usuario AS cre_sbs_usuario, cre_sbs_contraseña AS cre_sbs_contrasena,  FROM `Credenciales_SBS` WHERE `id_intermediario` = '" . $_SESSION["intermediario"] . "'";
+$query = "SELECT cre_sbs_usuario AS cre_sbs_usuario, cre_sbs_contrasena AS cre_sbs_contrasena,  FROM `Credenciales_SBS2` WHERE `id_intermediario` = '" . $_SESSION["intermediario"] . "'";
 
 $ejecucion = mysqli_query($enlace, $query);
 // echo mysqli_num_rows($ejecucion);
