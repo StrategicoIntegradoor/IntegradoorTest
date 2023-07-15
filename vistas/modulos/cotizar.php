@@ -1,10 +1,6 @@
 <?php
 
-//require_once "conexion.php";
-
-// $_SESSION["intermediario"];
-
-print_r($_SESSION["intermediario"]);
+require_once "modelos/conexion.php";
 
 
 
