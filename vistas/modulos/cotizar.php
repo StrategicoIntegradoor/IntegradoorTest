@@ -10,7 +10,7 @@ if(!$enlace ){
 
     die("Conexion Fallida ".mysqli_connect_error());
 }
-$query = "SELECT * FROM `Credenciales_SBS` WHERE `id_intermediario` = 3";
+$query = "SELECT * FROM `Credenciales_SBS` WHERE `id_intermediario` = 10";
 
 $ejecucion = mysqli_query($enlace, $query);
 // echo mysqli_num_rows($ejecucion);
