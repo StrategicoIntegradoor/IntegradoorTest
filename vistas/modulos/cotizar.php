@@ -10,7 +10,7 @@ if (!$enlace) {
 
   die("Conexion Fallida " . mysqli_connect_error());
 }
-$query = "SELECT * FROM `Credenciales_SBS` WHERE `id_intermediario` = 10";
+$query = "SELECT * FROM `Credenciales_SBS` WHERE `id_intermediario` = '" . $_SESSION["intermediario"] . "'";
 
 $ejecucion = mysqli_query($enlace, $query);
 // echo mysqli_num_rows($ejecucion);
@@ -26,13 +26,12 @@ if ($numerofilas > 0) {
   $ejecucion2 = mysqli_query($enlace, $query2);
   // echo mysqli_num_rows($ejecucion);
   $numerofilas = mysqli_num_rows($ejecucion2);
-  $fila = mysqli_fetch_assoc($ejecucion2);
+  $fila2 = mysqli_fetch_assoc($ejecucion2);
 
   $cre_sbs_usuario = $fila2['cre_sbs_usuario'];
   $cre_sbs_contrasena = $fila2['cre_sbs_contraseña'];
 }
 
-print_r($fila);
 //echo ($fila["Num_recargas"]);
 
 
@@ -61,7 +60,7 @@ if ($_SESSION["permisos"]["Cotizarlivianos"] != "x") {
 
     <h1>
 
-      Cotizar Todo Riesgo Livianos - <?php echo $_SESSION["intermediario"]; ?>
+      Cotizar Todo Riesgo Livianos
 
     </h1>
 
@@ -630,6 +629,13 @@ if ($_SESSION["permisos"]["Cotizarlivianos"] != "x") {
           <input type="text" class="form-control" id="cre_map_username" value="<?php echo $_SESSION["cre_map_username"]; ?>">
           <input type="text" class="form-control" id="cre_map_password" value="<?php echo $_SESSION["cre_map_password"]; ?>">
           <input type="text" class="form-control" id="cre_map_codigonivel3GA" value="<?php echo $_SESSION["cre_map_codigonivel3GA"]; ?>">
+
+
+          <!--SBS-->
+          <input type="text" class="form-control" id="cre_sbs_usuario" value="<?php echo $cre_sbs_usuario; ?>">
+          <input type="text" class="form-control" id="cre_sbs_contrasena" value="<?php echo $cre_sbs_contrasena; ?>">
+          
+
 
 
 
