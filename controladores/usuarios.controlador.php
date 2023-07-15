@@ -19,6 +19,27 @@ class ControladorUsuarios{
 				$tabla3 = "intermediario";
 				$tabla4 = "permisosintegradoor";
 
+				/**
+				 * tablas aseguradoras para el llamado de web service
+				 */
+
+
+				$tablaAseguradora1="Credenciales_Allianz";
+				$tablaAseguradora2="Credenciales_AXA";
+				$tablaAseguradora3="Credenciales_Bolivar";
+				$tablaAseguradora4="Credenciales_Equidad";
+				$tablaAseguradora5="Credenciales_Estado";
+
+
+				$tablaAseguradora6="Credenciales_HDI";
+				$tablaAseguradora7="Credenciales_Liberty";
+				$tablaAseguradora8="Credenciales_Mapfre";
+				$tablaAseguradora9="Credenciales_Previsora";
+
+				$tablaAseguradora10="Credenciales_SBS";
+				$tablaAseguradora11="Credenciales_Solidaria";
+				$tablaAseguradora12="Credenciales_Zurich";
+
 				$item = "usu_usuario";
 				$valor = $_POST["ingUsuario"];
 
