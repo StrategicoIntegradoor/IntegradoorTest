@@ -2,7 +2,9 @@
 
 //require_once "conexion.php";
 
-echo $_SESSION["intermediario"];
+// $_SESSION["intermediario"];
+
+print_r($_SESSION["intermediario"]);
 
 
 
@@ -32,7 +34,7 @@ if ($_SESSION["permisos"]["Cotizarlivianos"] != "x") {
 
     <h1>
 
-      Cotizar Todo Riesgo Livianos -Pruebas
+      Cotizar Todo Riesgo Livianos - <?php echo $_SESSION["intermediario"]; ?>
 
     </h1>
 
