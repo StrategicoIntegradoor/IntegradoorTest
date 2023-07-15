@@ -2,10 +2,19 @@
 
 require_once "config/conexion.php";
 
+$DB_host = "localhost";
+$DB_user = "grupoasi_cotizautos";
+$DB_pass = "M1graci0n123";
+$DB_name = "grupoasi_cotizautos";
 
+ $enlace = mysqli_connect("$DB_host", "$DB_user", "$DB_pass", "$DB_name");
+if(!$enlace ){
+
+    die("Conexion Fallida ".mysqli_connect_error());
+}
 $query = "SELECT * FROM `Credenciales_SBS` WHERE `id_intermediario` = 3";
 
-$ejecucion = mysqli_query($con, $query);
+$ejecucion = mysqli_query($enlace, $query);
 // echo mysqli_num_rows($ejecucion);
 
 $fila = mysqli_fetch_assoc($ejecucion);
