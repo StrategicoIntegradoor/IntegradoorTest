@@ -10,7 +10,7 @@ if (!$enlace) {
 
   die("Conexion Fallida " . mysqli_connect_error());
 }
-$query = "SELECT * FROM `Credenciales_SBS` WHERE `id_intermediario` = '" . $_SESSION["intermediario"] . "'";
+$query = "SELECT cre_sbs_usuario AS cre_sbs_usuario, cre_sbs_contraseña AS cre_sbs_contrasena,  FROM `Credenciales_SBS` WHERE `id_intermediario` = '" . $_SESSION["intermediario"] . "'";
 
 $ejecucion = mysqli_query($enlace, $query);
 // echo mysqli_num_rows($ejecucion);
@@ -19,7 +19,7 @@ $fila = mysqli_fetch_assoc($ejecucion);
 
 if ($numerofilas > 0) {
   $cre_sbs_usuario = $fila['cre_sbs_usuario'];
-  $cre_sbs_contrasena = $fila['cre_sbs_contraseña'];
+  $cre_sbs_contrasena = $fila['cre_sbs_contrasena'];
 } else {
   $query2 = "SELECT * FROM `Credenciales_SBS` WHERE `id_intermediario` = 3";
 
@@ -29,7 +29,7 @@ if ($numerofilas > 0) {
   $fila2 = mysqli_fetch_assoc($ejecucion2);
 
   $cre_sbs_usuario = $fila2['cre_sbs_usuario'];
-  $cre_sbs_contrasena = $fila2['cre_sbs_contraseña'];
+  $cre_sbs_contrasena = $fila2['cre_sbs_contrasena'];
 }
 
 //echo ($fila["Num_recargas"]);
@@ -609,10 +609,6 @@ if ($_SESSION["permisos"]["Cotizarlivianos"] != "x") {
           <input type="text" class="form-control" id="cre_sol_Cookie_token" value="<?php echo $_SESSION["cre_sol_Cookie_token"]; ?>">
           <input type="text" class="form-control" id="cre_sol_token" value="<?php echo $_SESSION["cre_sol_token"]; ?>">
           <input type="text" class="form-control" id="cre_sol_fecha_token" value="<?php echo $_SESSION["cre_sol_fecha_token"]; ?>">
-
-          <!--SBS-->
-          <input type="text" class="form-control" id="cre_sbs_usuario" value="<?php echo $_SESSION["cre_sbs_usuario"]; ?>">
-          <input type="text" class="form-control" id="cre_sbs_contraseña" value="<?php echo $_SESSION["cre_sbs_contraseña"]; ?>">
 
           <!--PREVISORA-->
           <input type="text" class="form-control" id="cre_pre_AgentCodeListCoin" value="<?php echo $_SESSION["cre_pre_AgentCodeListCoin"]; ?>">
