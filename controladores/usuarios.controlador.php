@@ -167,16 +167,6 @@ class ControladorUsuarios
 
 
 
-
-						
-						
-
-
-
-
-
-
-
 						/*=============================================
 						REGISTRAR FECHA PARA SABER EL ÚLTIMO LOGIN
 						=============================================*/

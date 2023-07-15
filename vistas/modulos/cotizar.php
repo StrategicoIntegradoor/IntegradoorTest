@@ -549,6 +549,48 @@ if ($_SESSION["permisos"]["Cotizarlivianos"] != "x") {
           <input type="text" name="Estrato" id="Estrato" value="3">
           <label>TokenPrevisora</label>
           <input type="text" name="previsoraToken" id="previsoraToken">
+
+          <!--ZURICH-->
+          <input type="text" class="form-control" id="cre_zur_nomUsu" value="<?php echo $_SESSION["cre_zur_nomUsu"];?>">
+          <input type="text" class="form-control" id="cre_zur_passwd" value="<?php echo $_SESSION["cre_zur_passwd"];?>">
+          <input type="text" class="form-control" id="cre_zur_intermediaryEmail" value="<?php echo $_SESSION["cre_zur_intermediaryEmail"];?>">
+          <input type="text" class="form-control" id="cre_zur_Cookie" value="<?php echo $_SESSION["cre_zur_Cookie"];?>">
+          <input type="text" class="form-control" id="cre_zur_token" value="<?php echo $_SESSION["cre_zur_token"];?>">
+          <input type="text" class="form-control" id="cre_zur_fecha_token" value="<?php echo $_SESSION["cre_zur_fecha_token"];?>">
+               
+          <!--SOLIDARIA-->
+          <input type="text" class="form-control" id="cre_sol_cod_sucursal" value="<?php echo $_SESSION["cre_sol_cod_sucursal"];?>">
+          <input type="text" class="form-control" id="cre_sol_cod_per" value="<?php echo $_SESSION["cre_sol_cod_per"];?>">
+          <input type="text" class="form-control" id="cre_sol_cod_tipo_agente" value="<?php echo $_SESSION["cre_sol_cod_tipo_agente"];?>">
+          <input type="text" class="form-control" id="cre_sol_cod_agente" value="<?php echo $_SESSION["cre_sol_cod_agente"];?>">
+          <input type="text" class="form-control" id="cre_sol_cod_pto_vta" value="<?php echo $_SESSION["cre_sol_cod_pto_vta"];?>">
+          <input type="text" class="form-control" id="cre_sol_grant_type" value="<?php echo $_SESSION["cre_sol_grant_type"];?>">
+          <input type="text" class="form-control" id="cre_sol_Cookie_token" value="<?php echo $_SESSION["cre_sol_Cookie_token"];?>">
+          <input type="text" class="form-control" id="cre_sol_token" value="<?php echo $_SESSION["cre_sol_token"];?>">
+          <input type="text" class="form-control" id="cre_sol_fecha_token" value="<?php echo $_SESSION["cre_sol_fecha_token"];?>">
+         
+         <!--SBS-->
+          <input type="text" class="form-control" id="cre_sbs_usuario" value="<?php echo $_SESSION["cre_sbs_usuario"];?>">
+          <input type="text" class="form-control" id="cre_sbs_contraseña" value="<?php echo $_SESSION["cre_sbs_contraseña"];?>">
+          
+         <!--PREVISORA-->
+         <input type="text" class="form-control" id="cre_pre_AgentCodeListCoin" value="<?php echo $_SESSION["cre_pre_AgentCodeListCoin"];?>">
+          <input type="text" class="form-control" id="cre_pre_AgentAgencyTypeCode" value="<?php echo $_SESSION["cre_pre_AgentAgencyTypeCode"];?>">
+          <input type="text" class="form-control" id="cre_pre_ParticipationCia" value="<?php echo $_SESSION["cre_pre_ParticipationCia"];?>">
+          <input type="text" class="form-control" id="cre_pre_AgentCode" value="<?php echo $_SESSION["cre_pre_AgentCode"];?>">
+          <input type="text" class="form-control" id="cre_pre_Username" value="<?php echo $_SESSION["cre_pre_Username"];?>">
+          <input type="text" class="form-control" id="cre_pre_Password" value="<?php echo $_SESSION["cre_pre_Password"];?>">
+
+          <!--MAPFRE-->
+          <input type="text" class="form-control" id="cre_map_codCliente" value="<?php echo $_SESSION["cre_map_codCliente"];?>">
+          <input type="text" class="form-control" id="cre_map_codigoOficinaAsociado" value="<?php echo $_SESSION["cre_map_codigoOficinaAsociado"];?>">
+          <input type="text" class="form-control" id="cre_map_codigoIntermediario" value="<?php echo $_SESSION["cre_map_codigoIntermediario"];?>">
+          <input type="text" class="form-control" id="cre_map_username" value="<?php echo $_SESSION["cre_map_username"];?>">
+          <input type="text" class="form-control" id="cre_map_password" value="<?php echo $_SESSION["cre_map_password"];?>">
+          <input type="text" class="form-control" id="cre_map_codigonivel3GA" value="<?php echo $_SESSION["cre_map_codigonivel3GA"];?>">
+          
+
+
         </div>
 
       </div>
