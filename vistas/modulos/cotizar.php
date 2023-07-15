@@ -2,13 +2,14 @@
 
 require_once "modelos/conexion.php";
 
-$stmtSBS = Conexion::conectar()->prepare("SELECT * FROM `Credenciales_SBS` WHERE `id_intermediario` = '" . $_SESSION["intermediario"] . "'");
 
-$stmtSBS->execute();
+$stmt = Conexion::conectar()->prepare("SELECT * FROM Credenciales_SBS WHERE id_intermediario = '" . $_SESSION["intermediario"] . "'");
 
-$stmtSBS->fetch(PDO::FETCH_ASSOC);
+$stmt->execute();
 
-print_r($stmtSBS);
+$stmt->fetchAll(PDO::FETCH_ASSOC);
+
+print_r($stmt);
 
 
 
