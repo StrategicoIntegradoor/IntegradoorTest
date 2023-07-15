@@ -1,5 +1,9 @@
 <?php
 
+require_once "conexion.php";
+
+$_SESSION["intermediario"]
+
 if ($_SESSION["permisos"]["Cotizarlivianos"] != "x") {
 
   echo '<script>
