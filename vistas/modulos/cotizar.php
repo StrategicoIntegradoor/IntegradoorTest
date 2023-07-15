@@ -1,15 +1,17 @@
 <?php
 
-require_once "modelos/conexion.php";
+require_once "config/conexion.php";
 
 
-$stmt = Conexion::conectar()->prepare("SELECT * FROM Credenciales_SBS WHERE id_intermediario = '" . $_SESSION["intermediario"] . "'");
+$query = "SELECT * FROM `Credenciales_SBS` WHERE `id_intermediario` = 3";
 
-$stmt->execute();
+$ejecucion = mysqli_query($enlace, $query);
+// echo mysqli_num_rows($ejecucion);
 
-$stmt->fetchAll(PDO::FETCH_ASSOC);
+$fila = mysqli_fetch_assoc($ejecucion);
 
-print_r($stmt);
+print_r($fila);
+//echo ($fila["Num_recargas"]);
 
 
 
