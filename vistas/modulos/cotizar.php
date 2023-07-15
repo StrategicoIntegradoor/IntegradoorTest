@@ -9,7 +9,14 @@ if ($_SESSION["permisos"]["Cotizarlivianos"] != "x") {
   </script>';
 
   return;
+
+
 }
+
+
+
+
+
 
 ?>
 

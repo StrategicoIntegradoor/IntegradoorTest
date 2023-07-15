@@ -52,7 +52,7 @@ class ModeloUsuarios
 	PERMISOS USUARIOS
 	=============================================*/
 
-	static public function mdlUsuariosLogin($tabla, $tabla2, $tabla3, $tabla4, $item, $valor, $tablaAseguradora1)
+	static public function mdlUsuariosLogin($tabla, $tabla2, $tabla3, $tabla4, $item, $valor)
 	{
 
 
@@ -61,23 +61,7 @@ class ModeloUsuarios
 		$tabla3 = "intermediario";
 		$tabla4 = "permisosintegradoor";
 
-		$tablaAseguradora1 = "Credenciales_Allianz";
-		$tablaAseguradora2 = "Credenciales_AXA";
-		$tablaAseguradora3 = "Credenciales_Bolivar";
-		$tablaAseguradora4 = "Credenciales_Equidad";
-		$tablaAseguradora5 = "Credenciales_Estado";
-
-
-		$tablaAseguradora6 = "Credenciales_HDI";
-		$tablaAseguradora7 = "Credenciales_Liberty";
-		$tablaAseguradora8 = "Credenciales_Mapfre";
-		$tablaAseguradora9 = "Credenciales_Previsora";
-
-		$tablaAseguradora10 = "Credenciales_SBS";
-		$tablaAseguradora11 = "Credenciales_Solidaria";
-		$tablaAseguradora12 = "Credenciales_Zurich";
-
-		$stmt = Conexion::conectar()->prepare("SELECT * FROM $tabla, $tabla2,$tabla4,$tablaAseguradora1, $tablaAseguradora2, $tablaAseguradora3, $tablaAseguradora4, $tablaAseguradora5, $tablaAseguradora6, $tablaAseguradora7, $tablaAseguradora8, $tablaAseguradora8, $tablaAseguradora9, $tablaAseguradora10, $tablaAseguradora11, $tablaAseguradora12 WHERE $tabla.id_rol = $tabla2.id_rol AND $tabla.id_rol = $tabla4.idRol AND $tablaAseguradora1.id_Intermediario = $tabla.id_Intermediario AND $tablaAseguradora2.id_Intermediario = $tabla.id_Intermediario AND $tablaAseguradora3.id_Intermediario = $tabla.id_Intermediario AND $tablaAseguradora4.id_Intermediario = $tabla.id_Intermediario AND $tablaAseguradora5.id_Intermediario = $tabla.id_Intermediario AND $tablaAseguradora6.id_Intermediario = $tabla.id_Intermediario AND $tablaAseguradora7.id_Intermediario = $tabla.id_Intermediario AND $tablaAseguradora8.id_Intermediario = $tabla.id_Intermediario AND $tablaAseguradora9.id_Intermediario = $tabla.id_Intermediario AND $tablaAseguradora10.id_Intermediario = $tabla.id_Intermediario AND $tablaAseguradora11.id_Intermediario = $tabla.id_Intermediario AND $tablaAseguradora12.id_Intermediario = $tabla.id_Intermediario AND $item = :$item");
+		$stmt = Conexion::conectar()->prepare("SELECT * FROM $tabla, $tabla2,$tabla4 WHERE $tabla.id_rol = $tabla2.id_rol AND $tabla.id_rol = $tabla4.idRol AND $item = :$item");
 		$stmt->bindParam(":" . $item, $valor, PDO::PARAM_STR);
 		$stmt->execute();
 

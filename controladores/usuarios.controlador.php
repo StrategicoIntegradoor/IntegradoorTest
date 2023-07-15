@@ -25,27 +25,10 @@ class ControladorUsuarios
 				 * tablas aseguradoras para el llamado de web service
 				 */
 
-
-				$tablaAseguradora1 = "Credenciales_Allianz";
-				$tablaAseguradora2 = "Credenciales_AXA";
-				$tablaAseguradora3 = "Credenciales_Bolivar";
-				$tablaAseguradora4 = "Credenciales_Equidad";
-				$tablaAseguradora5 = "Credenciales_Estado";
-
-
-				$tablaAseguradora6 = "Credenciales_HDI";
-				$tablaAseguradora7 = "Credenciales_Liberty";
-				$tablaAseguradora8 = "Credenciales_Mapfre";
-				$tablaAseguradora9 = "Credenciales_Previsora";
-
-				$tablaAseguradora10 = "Credenciales_SBS";
-				$tablaAseguradora11 = "Credenciales_Solidaria";
-				$tablaAseguradora12 = "Credenciales_Zurich";
-
 				$item = "usu_usuario";
 				$valor = $_POST["ingUsuario"];
 
-				$respuesta = ModeloUsuarios::mdlUsuariosLogin($tabla, $tabla2, $tabla3, $tabla4, $item, $valor, $tablaAseguradora1, $tablaAseguradora2, $tablaAseguradora3, $tablaAseguradora4, $tablaAseguradora5, $tablaAseguradora6, $tablaAseguradora7, $tablaAseguradora8, $tablaAseguradora9, $tablaAseguradora10, $tablaAseguradora11, $tablaAseguradora12);
+				$respuesta = ModeloUsuarios::mdlUsuariosLogin($tabla, $tabla2, $tabla3, $tabla4, $item, $valor);
 
 				if ($respuesta["usu_usuario"] == $_POST["ingUsuario"] && $respuesta["usu_password"] === $encriptar) {
 					if ($respuesta["usu_estado"] == 1) {
