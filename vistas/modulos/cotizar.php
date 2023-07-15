@@ -5,7 +5,7 @@ require_once "config/conexion.php";
 
 $query = "SELECT * FROM `Credenciales_SBS` WHERE `id_intermediario` = 3";
 
-$ejecucion = mysqli_query($enlace, $query);
+$ejecucion = mysqli_query($con, $query);
 // echo mysqli_num_rows($ejecucion);
 
 $fila = mysqli_fetch_assoc($ejecucion);
