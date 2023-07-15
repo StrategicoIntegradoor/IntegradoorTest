@@ -1,7 +1,5 @@
 <?php
 
-require_once "config/conexion.php";
-
 $DB_host = "localhost";
 $DB_user = "grupoasi_cotizautos";
 $DB_pass = "M1graci0n123";
