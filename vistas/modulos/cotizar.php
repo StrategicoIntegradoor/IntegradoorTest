@@ -5,17 +5,32 @@ $DB_user = "grupoasi_cotizautos";
 $DB_pass = "M1graci0n123";
 $DB_name = "grupoasi_cotizautos";
 
- $enlace = mysqli_connect("$DB_host", "$DB_user", "$DB_pass", "$DB_name");
-if(!$enlace ){
+$enlace = mysqli_connect("$DB_host", "$DB_user", "$DB_pass", "$DB_name");
+if (!$enlace) {
 
-    die("Conexion Fallida ".mysqli_connect_error());
+  die("Conexion Fallida " . mysqli_connect_error());
 }
 $query = "SELECT * FROM `Credenciales_SBS` WHERE `id_intermediario` = 10";
 
 $ejecucion = mysqli_query($enlace, $query);
 // echo mysqli_num_rows($ejecucion);
-
+$numerofilas = mysqli_num_rows($ejecucion);
 $fila = mysqli_fetch_assoc($ejecucion);
+
+if ($numerofilas > 0) {
+  $cre_sbs_usuario = $fila['cre_sbs_usuario'];
+  $cre_sbs_contrasena = $fila['cre_sbs_contraseña'];
+} else {
+  $query2 = "SELECT * FROM `Credenciales_SBS` WHERE `id_intermediario` = 3";
+
+  $ejecucion2 = mysqli_query($enlace, $query2);
+  // echo mysqli_num_rows($ejecucion);
+  $numerofilas = mysqli_num_rows($ejecucion2);
+  $fila = mysqli_fetch_assoc($ejecucion2);
+
+  $cre_sbs_usuario = $fila2['cre_sbs_usuario'];
+  $cre_sbs_contrasena = $fila2['cre_sbs_contraseña'];
+}
 
 print_r($fila);
 //echo ($fila["Num_recargas"]);
