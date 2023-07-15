@@ -32,7 +32,7 @@ if ($_SESSION["permisos"]["Cotizarlivianos"] != "x") {
 
     <h1>
 
-      Cotizar Todo Riesgo Livianos 
+      Cotizar Todo Riesgo Livianos -Pruebas
 
     </h1>
 
