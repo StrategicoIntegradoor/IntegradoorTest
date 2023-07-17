@@ -619,7 +619,7 @@
                 <div class="col-xs-2">
                   <div class="text-left checkbox-adjust">
                     <div class="form-check">
-                      <input class="form-check-input" type="checkbox" id="checkboxAsesorEditar">
+                      <input class="form-check-input" type="checkbox" id="checkboxAsesorEditar" checked>
                     </div>
                   </div>
                 </div>
