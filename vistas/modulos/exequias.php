@@ -382,40 +382,23 @@ select:invalid + .error-message {
                             <label for="nombreTitular">Nombre Titular</label>
                             <input type="text" class="form-control" id="nombreTitular" name="nombreTitular" placeholder="Nombre completo" required>
                         </div>
-                        <!-- <div class="col-xs-12 col-sm-6 col-md-3 conten-dia" style="margin-bottom: 0;">
-                            <label for="edadTitularID">Edad Titular</label>
-                            <select type="text" class="form-control fecha-nacimiento" id="edadTitularID" placeholder="Edad Titular" required>
-                                <option value="">Edad</option>
-                                <?php
-                                for ($i = 18; $i <= 60; $i++) {
-                                if (strlen($i) == 1) { ?>
-                                    <option value="<?php echo "0" . $i ?>"><?php echo "0" . $i ?></option><?php
-                                                                                                        } else { ?>
-                                    <option value="<?php echo $i ?>"><?php echo $i ?></option><?php
-                                                                                                        }
-                                                                                                    }
-                                                                                            ?>
-                            </select>
-                        </div> -->
-                        <div class="col-xs-12 col-sm-6 col-lg-3 form-group">
+                        
+                        <div class="col-xs-12 col-sm-6 col-lg-3 form-group" style="margin-bottom: 0;">
                             <label for="">Edad Nuevo</label>
-                            <div class="row">
-                                <div class="col-xs-12 col-sm-6 col-md-12 conten-dia">
-                                    <select class="form-control edad" name="edad" id="edad" required>
-                                        <option value="">Edad Titular</option>
-                                        <?php
-                                        for ($i = 18; $i <= 60; $i++) {
-                                        if (strlen($i) == 1) { ?>
-                                            <option value="<?php echo "0" . $i ?>"><?php echo "0" . $i ?></option><?php
-                                                                                                                } else { ?>
-                                            <option value="<?php echo $i ?>"><?php echo $i ?></option><?php
-                                                                                                                }
+                                <select class="form-control edad" name="edad" id="edad" required>
+                                    <option value="">Edad Titular</option>
+                                    <?php
+                                    for ($i = 18; $i <= 61; $i++) {
+                                    if (strlen($i) == 1) { ?>
+                                        <option value="<?php echo "0" . $i ?>"><?php echo "0" . $i ?></option><?php
+                                                                                                            } else { ?>
+                                        <option value="<?php echo $i ?>"><?php echo $i ?></option><?php
                                                                                                             }
-                                                                                                    ?>
-                                    </select>
-                                </div>
-                            </div>
+                                                                                                        }
+                                                                                                ?>
+                                </select>
                         </div>
+
                         <div class="col-xs-12 col-sm-6 col-lg-3 form-group" style="margin-bottom: 0;">
                             <label for="tipoPlanExequialID">Tipo plan exequial</label>
                             <select class="form-control" id="tipoPlanExequialID" required>
