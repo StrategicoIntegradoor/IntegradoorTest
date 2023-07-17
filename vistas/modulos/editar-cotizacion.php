@@ -17,6 +17,10 @@
   .botones-agregar-manual {
     margin-top: 20px;
   }
+
+  .checkbox-adjust {
+  margin-left: -35px;
+}
 </style>
 
 <div class="content-wrapper">
