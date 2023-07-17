@@ -384,7 +384,7 @@ select:invalid + .error-message {
                         </div>
                         
                         <div class="col-xs-12 col-sm-6 col-lg-3 form-group" style="margin-bottom: 0;">
-                            <label for="">Edad Nuevo</label>
+                            <label for="">Edad Titular</label>
                                 <select class="form-control edad" name="edad" id="edad" required>
                                     <option value="">Edad Titular</option>
                                     <?php
@@ -400,11 +400,11 @@ select:invalid + .error-message {
                         </div>
 
                         <div class="col-xs-12 col-sm-6 col-lg-3 form-group" style="margin-bottom: 0;">
-                            <label for="tipoPlanExequialID">Tipo plan exequial</label>
+                            <label for="tipoPlanExequialID">Tipo Plan exequial</label>
                             <select class="form-control" id="tipoPlanExequialID" required>
                                 <option value="" selected>Tipo de plan</option>
                                 <option value="1">Plan Muy Personal</option>
-                                <option value="2">Plan Familiar</option>
+                                <option value="2">Plan Nuestra Familia</option>
                             </select>
                         </div>
                         <div class="col-xs-12 col-sm-6 col-lg-3 form-group" style="margin-bottom: 0;" id="contenBtnConsultarExequial">
