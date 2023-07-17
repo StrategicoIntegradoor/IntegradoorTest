@@ -21,6 +21,7 @@ class olivosController{
                     $edad = $requestData['edad'];
                     $tipo = $requestData['tipo'];
                     $usuario = $requestData['usuario'];
+                    $idUsuario = $requestData['idUsuario'];
                     $fecha = date("d-m-Y h:i:s");
                     $formatoFecha = "d-m-Y H:i:s";
                     $fecha = DateTime::createFromFormat($formatoFecha, $fecha);
@@ -30,7 +31,7 @@ class olivosController{
                         echo "Error al parsear la fecha.";
                     }
                     
-					$registro = ModelOlivos::mdlAgregarCoti($tabla, $numeroCoti, $nombre, $edad, $tipo, $usuario, $fecha_registro);
+					$registro = ModelOlivos::mdlAgregarCoti($tabla, $numeroCoti, $nombre, $edad, $tipo, $usuario, $fecha_registro, $idUsuario);
 					
                 }
 

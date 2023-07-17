@@ -4,10 +4,10 @@ require_once "conexion.php";
 
 class ModelOlivos{
 
-    public static function mdlAgregarCoti($tabla, $numeroCoti, $nombre, $edad, $tipo, $usuario, $fecha){
+    public static function mdlAgregarCoti($tabla, $numeroCoti, $nombre, $edad, $tipo, $usuario, $fecha, $idUsuario){
 
-        $stmt = Conexion::conectar()->prepare("INSERT INTO $tabla (numeroCotizacion, nombreTitular, edad, tipoPlan, usuario, fechaCoti) 
-        VALUES ('$numeroCoti', '$nombre', '$edad', '$tipo', '$usuario', '$fecha')");
+        $stmt = Conexion::conectar()->prepare("INSERT INTO $tabla (numeroCotizacion, nombreTitular, edad, tipoPlan, usuario, fechaCoti, id_usuario) 
+        VALUES ('$numeroCoti', '$nombre', '$edad', '$tipo', '$usuario', '$fecha', '$idUsuario')");
         
         if($stmt->execute()){
             

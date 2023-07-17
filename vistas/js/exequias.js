@@ -33,6 +33,7 @@ const tipoPlanExequialID = document.getElementById('tipoPlanExequialID').value;
 const nombreUsuario = document.getElementById('nombre').value;
 const apellidoUsuario = document.getElementById('apellido').value;
 const usuario = nombreUsuario + ' ' + apellidoUsuario;
+const idUsuario = document.getElementById('idUsuario').value;
 
   if(txtNombre !== "" && edadTitularID !== "" && tipoPlanExequialID !== ""){
 
@@ -50,6 +51,7 @@ const usuario = nombreUsuario + ' ' + apellidoUsuario;
         edad: edadTitularID,
         tipo: tipoPlanExequialID,
         usuario: usuario,
+        idUsuario: idUsuario,
         accion: 'nuevaCotizacion'
       };
 

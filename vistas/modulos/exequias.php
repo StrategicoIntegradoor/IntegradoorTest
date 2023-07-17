@@ -380,6 +380,7 @@ select:invalid + .error-message {
                     <div class="row">
                             <input type="hidden" id="nombre" value="<?php echo $_SESSION['nombre']; ?>">
                             <input type="hidden" id="apellido" value="<?php echo $_SESSION['apellido']; ?>">
+                            <input type="hidden" id="nombre" value="<?php echo $_SESSION['idUsuario']; ?>">
                         <div class="col-xs-12 col-sm-6 col-lg-3 form-group" style="margin-bottom: 0;">
                             <label for="nombreTitular">Nombre Titular</label>
                             <input type="text" class="form-control" id="nombreTitular" name="nombreTitular" placeholder="Nombre completo" required>
