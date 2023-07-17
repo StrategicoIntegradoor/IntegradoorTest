@@ -30,7 +30,9 @@ let registro = 0;
 const txtNombre = document.getElementById('nombreTitular').value;
 const edadTitularID = document.getElementById('edad').value;
 const tipoPlanExequialID = document.getElementById('tipoPlanExequialID').value;
-// const usuarioID = document.getElementById('idUsuario').value;
+const nombreUsuario = document.getElementById('nombre').value;
+const apellidoUsuario = document.getElementById('apellido').value;
+const usuario = nombreUsuario + ' ' + apellidoUsuario;
 
   if(txtNombre !== "" && edadTitularID !== "" && tipoPlanExequialID !== ""){
 
@@ -47,7 +49,7 @@ const tipoPlanExequialID = document.getElementById('tipoPlanExequialID').value;
         nombre: txtNombre,
         edad: edadTitularID,
         tipo: tipoPlanExequialID,
-        // usuario: usuarioID,
+        usuario: usuario,
         accion: 'nuevaCotizacion'
       };
 

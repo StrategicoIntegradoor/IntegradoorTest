@@ -6,7 +6,7 @@ date_default_timezone_set('America/Bogota');
 require_once('tcpdf_include.php');
 
 $tipoPlan = $_GET['tipoPlan'];
-if($tipoPlan == 1){
+if($tipoPlan == 'Plan Muy Personal'){
 
 $imagen = '../../../vistas/img/logos/9.png';
 $identificador = $_GET['txtNombre'];
@@ -72,7 +72,7 @@ $pdf->Output('Plan_Exequial_Personal_'.$identificador.'.pdf', 'I');
 exit; // Asegúrate de finalizar la ejecución del script después de enviar el PDF
 
 // SEGUNDA HOJA
-}else if($tipoPlan == 2){
+}else if($tipoPlan == 'Plan Nuestra Familia'){
 
 $identificador = $_GET['txtNombre'];
 $imagen = '../../../vistas/img/logos/11.png';

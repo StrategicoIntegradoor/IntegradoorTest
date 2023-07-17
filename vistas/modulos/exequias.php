@@ -378,6 +378,8 @@ select:invalid + .error-message {
                 <hr>
                 <form class="form-group" id="formResumTitu">
                     <div class="row">
+                            <input type="hidden" id="nombre" value="<?php echo $_SESSION['nombre']; ?>">
+                            <input type="hidden" id="apellido" value="<?php echo $_SESSION['apellido']; ?>">
                         <div class="col-xs-12 col-sm-6 col-lg-3 form-group" style="margin-bottom: 0;">
                             <label for="nombreTitular">Nombre Titular</label>
                             <input type="text" class="form-control" id="nombreTitular" name="nombreTitular" placeholder="Nombre completo" required>
@@ -403,55 +405,16 @@ select:invalid + .error-message {
                             <label for="tipoPlanExequialID">Tipo Plan exequial</label>
                             <select class="form-control" id="tipoPlanExequialID" required>
                                 <option value="" selected>Tipo de plan</option>
-                                <option value="1">Plan Muy Personal</option>
-                                <option value="2">Plan Nuestra Familia</option>
+                                <option value="Plan Muy Personal">Plan Muy Personal</option>
+                                <option value="Plan Nuestra Familia">Plan Nuestra Familia</option>
                             </select>
                         </div>
+
                         <div class="col-xs-12 col-sm-6 col-lg-3 form-group" style="margin-bottom: 0;" id="contenBtnConsultarExequial">
                             <button type="submit" class="btn btn-primary btn-block" id="btnExequial">Cotizar</button>
                         </div>
                     </div>
                 </form>
-                <!-- <div class="col-xs-12 col-sm-6 col-md-12 form-group">
-                    <form id="formResumTitu">
-                        <div class="row">
-                            <div class="col-xs-12 col-sm-6 col-md-3 form-group" style="margin-bottom: 0;">
-                                <label for="nombreTitular">Nombre Titular</label>
-                                <input type="text" class="form-control" id="nombreTitular" name="nombreTitular" placeholder="Nombre completo" required>
-                            </div>
-                            <div class="col-xs-12 col-sm-6 col-md-3 form-group">
-                                <label for="">Edad Nuevo</label>
-                                <div class="row">
-                                    <div class="col-xs-12 col-sm-6 col-md-12 conten-dia">
-                                        <select class="form-control edad" name="edad" id="edad" required>
-                                            <option value="">Edad Titular</option>
-                                            <?php
-                                            for ($i = 18; $i <= 61; $i++) {
-                                            if (strlen($i) == 1) { ?>
-                                                <option value="<?php echo "0" . $i ?>"><?php echo "0" . $i ?></option><?php
-                                                                                                                    } else { ?>
-                                                <option value="<?php echo $i ?>"><?php echo $i ?></option><?php
-                                                                                                                    }
-                                                                                                                }
-                                                                                                        ?>
-                                        </select>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-xs-12 col-sm-6 col-md-3 form-group" style="margin-bottom: 0;">
-                                <label for="tipoPlanExequialID">Tipo plan exequial</label>
-                                <select class="form-control" id="tipoPlanExequialID" required>
-                                    <option value="" selected>Tipo de plan</option>
-                                    <option value="1">Plan Muy personal</option>
-                                    <option value="2">Plan Familiar</option>
-                                </select>
-                            </div>
-                            <div class="col-xs-12 col-sm-6 col-md-3 form-group" style="margin-bottom: 0;" id="contenBtnConsultarExequial">
-                                <button class="btn btn-primary btn-block" id="btnExequial">Cotizar</button>
-                            </div>
-                        </div>
-                    <form>
-                </div> -->
             </div>
         </div>           
     </section>

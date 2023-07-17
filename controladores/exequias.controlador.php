@@ -20,7 +20,7 @@ class olivosController{
                     $nombre = $requestData['nombre'];
                     $edad = $requestData['edad'];
                     $tipo = $requestData['tipo'];
-                    $usuario = '0';
+                    $usuario = $requestData['usuario'];
                     $fecha = date("d-m-Y h:i:s");
                     $formatoFecha = "d-m-Y H:i:s";
                     $fecha = DateTime::createFromFormat($formatoFecha, $fecha);
