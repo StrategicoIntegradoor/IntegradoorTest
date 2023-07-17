@@ -1768,19 +1768,28 @@ function cotizarOfertas() {
               el valor de la variable idCotizacion */
               const contentCotizacionPDF = document.querySelector('#contenCotizacionPDF')
               contentCotizacionPDF.innerHTML = `  
-                                                      <div class="col-xs-12 col-sm-6 col-md-7">
-                                                        <div class="row">
-                                                          <div class="col-xs-6">
-                                                          <label for="checkboxAsesor">¿Deseas agregar tus datos como asesor en la cotizacion?</label>
-                                                            <input type="checkbox" id="checkboxAsesor">
-                                                          </div>
-                                                          <div class="col-xs-6">
-                                                            <button type="button" class="btn btn-danger btn-block" id="btnParrillaPDF">
-                                                              <span class="fa fa-file-text"></span> Generar PDF de Cotización
-                                                            </button>
-                                                          </div>
+                                                <div class="col-xs-12 col-sm-6 col-md-4">
+                                                  <div class="row">
+                                                    <div class="col-xs-10">
+                                                      <div class="text-left">
+                                                        <label for="checkboxAsesorEditar">¿Deseas agregar tus datos como asesor en la cotización?</label>
+                                                      </div>
+                                                    </div>
+                                                    <div class="col-xs-2">
+                                                      <div class="text-left">
+                                                        <div class="form-check">
+                                                          <input class="form-check-input" type="checkbox" id="checkboxAsesorEditar" style="margin-left: -35px;">
                                                         </div>
-                                                    </div>`
+                                                      </div>
+                                                    </div>
+                                                  </div>
+                                                </div>
+                                                <div class="col-xs-12 col-sm-6 col-md-2">
+                                                  <button type="button" class="btn btn-danger btn-block" id="btnParrillaPDF">
+                                                    <span class="fa fa-file-text"></span> Generar PDF de Cotización
+                                                  </button>
+                                                </div>
+                                                    `
               $("#btnParrillaPDF").click(function () {
                 const todosOn = $(".classSelecOferta:checked").length;
                 const idCotizacionPDF = idCotizacion;
