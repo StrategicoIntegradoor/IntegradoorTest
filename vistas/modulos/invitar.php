@@ -177,30 +177,30 @@
     <section class="content">
         <div class="box">
             <div class="box-body">
-                <div id="formularioInvitacion" class="col-lg-12 form-resumAseg">
-                    <div class="row">
-                        <div class="col-xs-12 col-sm-6 col-md-3 form-group">
-                          <label for="correo" style="display: block; text-align: left;">No. Identificación</label>   
-                                <input type="text" class="form-control" placeholder="Número de identificación" id="cc">
-                        </div>  
-                        <div class="col-xs-12 col-sm-6 col-md-3 form-group">
-                        <label for="correo" style="display: block; text-align: left;">Nombre Completo</label>   
-                                <input type="text" class="form-control" placeholder="Nombre Completo" id="name">
-                        </div>
-                        <div class="col-xs-12 col-sm-6 col-md-3 form-group">
-                            <label for="correo" style="display: block; text-align: left;">Correo electrónico</label>   
-                                <input type="text" class="form-control" placeholder="Correo electrónico" id="mail">
-                        </div>
+                <form id="formularioInvitacion" class="col-lg-12 form-resumAseg">
+                  <div class="row">
+                    <div class="col-xs-12 col-sm-6 col-md-3 form-group">
+                      <label for="correo" style="display: block; text-align: left;">No. Identificación</label>   
+                        <input type="text" class="form-control" placeholder="Número de identificación" id="cc">
+                    </div>  
+                    <div class="col-xs-12 col-sm-6 col-md-3 form-group">
+                    <label for="correo" style="display: block; text-align: left;">Nombre Completo</label>   
+                        <input type="text" class="form-control" placeholder="Nombre Completo" id="name">
                     </div>
-                    <br>
-                    <div class="row">
-                        <div class="col-xs-12 col-sm-6 col-md-3 form-group" style="margin-bottom: 0px;">
-                            <button type="button" class="btn btn-primary btn-block" onclick="authCedula()" style="font-size: 13px;">Enviar</button>
-                            <br>
-                            <div id="loaderOferta"></div>
-                        </div>
+                    <div class="col-xs-12 col-sm-6 col-md-3 form-group">
+                        <label for="correo" style="display: block; text-align: left;">Correo electrónico</label>   
+                        <input type="text" class="form-control" placeholder="Correo electrónico" id="mail">
                     </div>
-                </div>
+                  </div>
+                  <br>
+                  <div class="row">
+                      <div class="col-xs-12 col-sm-6 col-md-3 form-group" style="margin-bottom: 0px;">
+                          <button type="submit" class="btn btn-primary btn-block" id="btnInvitacion" style="font-size: 13px;">Enviar</button>
+                          <br>
+                          <div id="loaderOferta"></div>
+                      </div>
+                  </div>
+                </form>
             </div>
             <br>
         </div>

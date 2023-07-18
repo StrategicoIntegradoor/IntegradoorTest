@@ -7,6 +7,14 @@ $("#name").keyup(function () {
   );
 });
 
+$(document).ready(function() {
+  // Asociar la función cotizarExequial al evento submit del formulario
+  $("#formularioInvitacion").submit(function(event) {
+    event.preventDefault(); // Evitar el envío automático del formulario
+    authCedula();
+  });
+});
+
 async function authCedula(){
 
 
@@ -84,12 +92,12 @@ async function authCedula(){
         }) 
         });
     }else{
-        console.error('Completa todos los campos para enviar el registro');
-      Swal.fire(
-        'HEY! :/',
-        'Por favor llena todos los campos',
-        'error'
-      )
+      //   console.error('Completa todos los campos para enviar el registro');
+      // Swal.fire(
+      //   'HEY! :/',
+      //   'Por favor llena todos los campos',
+      //   'error'
+      // )
     }
 
 
