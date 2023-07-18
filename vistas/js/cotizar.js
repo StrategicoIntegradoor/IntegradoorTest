@@ -1768,22 +1768,18 @@ function cotizarOfertas() {
               el valor de la variable idCotizacion */
               const contentCotizacionPDF = document.querySelector('#contenCotizacionPDF')
               contentCotizacionPDF.innerHTML = `  
-                                                <div class="col-sm-4">
-                                                  <div class="row">
-                                                    <div class="col-xs-8">
-                                                      <label for="checkboxAsesor">¿Deseas agregar tus datos como asesor en la cotización?</label>
-                                                    </div>
-                                                    <div class="col-xs-1">
-                                                      <div class="form-check">
-                                                          <input class="form-check-input;" type="checkbox" id="checkboxAsesor" style="margin-left: -28px;" checked>
+                                                <div class="col-xs-12" style="width: 100%;">
+                                                  <div class="row align-items-center">
+                                                      <div class="col-xs-4">
+                                                          <label for="checkboxAsesor">¿Deseas agregar tus datos como asesor en la cotización?</label>
+                                                          <input class="form-check-input" type="checkbox" id="checkboxAsesor" style="margin-left: 10px;" checked>
                                                       </div>
-                                                    </div>
+                                                      <div class="col-xs-4">
+                                                          <button type="button" class="btn btn-danger" id="btnParrillaPDF">
+                                                              <span class="fa fa-file-text"></span> Generar PDF de Cotización
+                                                          </button>
+                                                      </div>
                                                   </div>
-                                                </div>
-                                                <div class="col-xs-3">
-                                                  <button type="button" class="btn btn-danger btn-block" id="btnParrillaPDF">
-                                                    <span class="fa fa-file-text"></span> Generar PDF de Cotización
-                                                  </button>
                                                 </div>
                                                     `
               $("#btnParrillaPDF").click(function () {
