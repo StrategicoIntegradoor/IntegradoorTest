@@ -137,12 +137,12 @@ if (clave_registro !== '' &&
             Swal.fire({
                 icon: '<img src="vistas/img/plantilla/ofertas.png" width="84" height="84">',
                 title: '<img src="vistas/img/plantilla/ofertas.png" width="84" height="84">',
-                text: 'Bienvenido!, nuevo usuario Freelance creado exitosamente, ya puedes ingresar a la plataforma y el usuario es tu número de documento',
+                text: 'Bienvenido! nuevo usuario Freelance, registro completado exitosamente, ya puedes ingresar a la plataforma. Tu nombre de usuario es tu número de documento',
               });
               setTimeout(function() {
             Swal.close();
             window.location.href = 'https://integradoor.com/Test';
-          }, 7000);
+          }, 9000);
             //   .then(function() {
                 // location.reload(); // Refrescar la página
             // });
