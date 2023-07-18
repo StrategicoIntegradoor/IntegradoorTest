@@ -19,7 +19,7 @@
   }
 
   .checkbox-adjust {
-  margin-left: -35px;
+  margin-left: -28px;
 }
 </style>
 
