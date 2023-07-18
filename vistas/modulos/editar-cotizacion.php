@@ -617,7 +617,7 @@
                       <input class="form-check-input" type="checkbox" id="checkboxAsesorEditar" style="margin-left: 10px;" checked>
                   </div>
                   <div class="col-xs-4">
-                      <button type="button" class="btn btn-danger">
+                      <button type="button" class="btn btn-danger" id="btnParrillaPDF">
                           <span class="fa fa-file-text"></span> Generar PDF de Cotización
                       </button>
                   </div>
@@ -625,7 +625,7 @@
             </div>
 
           </div>
-          
+
         </div>
 
       </div>
