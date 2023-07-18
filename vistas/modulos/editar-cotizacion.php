@@ -631,7 +631,7 @@
               </button>
             </div> -->
             <div class="col-sm-4">
-              <div class="row">
+              <div class="row align-items-center">
                 <div class="col-xs-12 col-sm-8">
                   <label for="checkboxAsesorEditar">¿Deseas agregar tus datos como asesor en la cotización?</label>
                 </div>
