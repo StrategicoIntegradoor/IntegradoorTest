@@ -632,17 +632,17 @@
             </div> -->
             <div class="col-sm-4">
               <div class="row">
-                <div class="col-xs-8">
+                <div class="col-xs-12 col-sm-8">
                   <label for="checkboxAsesorEditar">¿Deseas agregar tus datos como asesor en la cotización?</label>
                 </div>
-                <div class="col-xs-1">
+                <div class="col-xs-12 col-sm-1">
                   <div class="form-check  checkbox-adjust">
                       <input class="form-check-input;" type="checkbox" id="checkboxAsesorEditar" checked>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="col-xs-3">
+            <div class="col-xs-12 col-sm-3">
               <button type="button" class="btn btn-danger btn-block" id="btnParrillaPDF">
                 <span class="fa fa-file-text"></span> Generar PDF de Cotización
               </button>
