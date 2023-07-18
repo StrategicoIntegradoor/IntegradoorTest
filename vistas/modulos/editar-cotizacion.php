@@ -632,7 +632,7 @@
             </div> -->
             <div class="col-sm-4">
               <div class="row">
-                <div class="col-xs-12 col-sm-8">
+                <div class="col-xs-12 col-sm-7">
                   <label for="checkboxAsesorEditar">¿Deseas agregar tus datos como asesor en la cotización?</label>
                 </div>
                 <div class="col-xs-12 col-sm-1">
