@@ -154,6 +154,7 @@
 }
 
 
+
 .dpto.select2-container .select2-selection--single{
     height: 35px !important;
 }
@@ -179,6 +180,44 @@
     border-color: #000000 transparent transparent;
 }
 
+.dia.select2-container .select2-selection--single{
+    height: 35px !important;
+}
+
+.dia.select2-container--bootstrap .select2-selection--single .select2-selection__rendered {
+    padding-top: 4px;
+}
+
+.dia.select2-container--bootstrap .select2-selection--single .select2-selection__arrow b {
+    border-color: #000000 transparent transparent;
+}
+
+.mes.select2-container .select2-selection--single{
+    height: 35px !important;
+}
+
+.mes.select2-container--bootstrap .select2-selection--single .select2-selection__rendered {
+    padding-top: 4px;
+    text-align: left;
+}
+
+.mes.select2-container--bootstrap .select2-selection--single .select2-selection__arrow b {
+    border-color: #000000 transparent transparent;
+}
+
+.anio.select2-container .select2-selection--single{
+    height: 35px !important;
+}
+
+.anio.select2-container--bootstrap .select2-selection--single .select2-selection__rendered {
+    padding-top: 4px;
+    text-align: left;
+
+}
+
+.anio.select2-container--bootstrap .select2-selection--single .select2-selection__arrow b {
+    border-color: #000000 transparent transparent;
+}
 
 .conten-oneroso {
     padding-top: 5px;

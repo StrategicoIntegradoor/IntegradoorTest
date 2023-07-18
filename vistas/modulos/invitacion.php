@@ -105,7 +105,7 @@
                             <label for="">Fecha de Nacimiento <strong class="text-danger">*</strong></label>
                             <div class="row">
                                 <div class="col-xs-4 col-sm-4 col-md-4 text-left mb-3" >
-                                    <select class="form-control fecha-nacimiento" name="dia_nacimiento" id="dia_nacimiento" required>
+                                    <select class="form-control fecha-nacimiento" name="dia_nacimiento" id="diaCirculacion" required>
                                         <option value="">Dia</option>
                                         <?php
                                         for ($i = 1; $i <= 31; $i++) {
@@ -119,7 +119,7 @@
                                     </select>
                                 </div>
                                 <div class="col-xs-4 col-sm-4 col-md-4 text-center mb-3" >
-                                    <select class="form-control fecha-nacimiento" name="mes_nacimiento" id="mes_nacimiento" required>
+                                    <select class="form-control fecha-nacimiento" name="mes_nacimiento" id="mesCirculacion" required>
                                         <option value="">Mes</option>
                                         <option value="01">Enero</option>
                                         <option value="02">Febrero</option>
@@ -136,7 +136,7 @@
                                     </select>
                                 </div>
                                 <div class="col-xs-4 col-sm-4 col-md-4 text-right" >
-                                    <select class="form-control fecha-nacimiento" name="anio_nacimiento" id="anio_nacimiento" required>
+                                    <select class="form-control fecha-nacimiento" name="anio_nacimiento" id="anioCirculacion" required>
                                         <option value="">Año</option>
                                         <?php
                                         for ($j = 1920; $j <= 2021; $j++) {

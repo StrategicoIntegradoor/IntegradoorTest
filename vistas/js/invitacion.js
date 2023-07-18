@@ -1,12 +1,10 @@
-  // Carga los Departamentos disponibles
-  $("#DptoCirculacion").select({
-    theme: "bootstrap dpto",
-    language: "es",
-    width: "100%",
-  });
-  $("#DptoCirculacion").change(function () {
-    consultarCiudad();
-  });
+  // // Carga los Departamentos disponibles
+  // $("#DptoCirculacion").select({
+  //   theme: "bootstrap dpto",
+  //   language: "es",
+  //   width: "100%",
+  // });
+ 
 
   // Carga las Ciudades disponibles
   $("#ciudadCirculacion").select({
@@ -15,17 +13,55 @@
     width: "100%",
   });
 
+  $("#DptoCirculacion").change(function () {
+    consultarCiudad();
+  });
+
+ 
+
+    // Carga la fecha de Nacimiento
+    $("#dianacimiento, #mesnacimiento, #anionacimiento").select2({
+      theme: "bootstrap fecnacimiento",
+      language: "es",
+      width: "100%",
+    });
+
+     // Carga las Ciudades disponibles
+  $("#ciudadCirculacion").select2({
+    theme: "bootstrap ciudad",
+    language: "es",
+    width: "100%",
+  });
+  
+    // Carga los Departamentos disponibles
+    $("#DptoCirculacion").select2({
+      theme: "bootstrap dpto",
+      language: "es",
+      width: "100%",
+    });
+
+    $("#diaCirculacion").select2({
+      theme: "bootstrap dia",
+      language: "es",
+      width: "100%",
+    });
+
+    $("#mesCirculacion").select2({
+      theme: "bootstrap mes",
+      language: "es",
+      width: "100%",
+    });
+
+    $("#anioCirculacion").select2({
+      theme: "bootstrap anio",
+      language: "es",
+      width: "100%",
+    });
+
 
   function consultarCiudad() {
     var codigoDpto = document.getElementById("DptoCirculacion").value;
-  
-    //if (codigoDpto == 1 || codigoDpto == 3 || codigoDpto == 10 || codigoDpto == 11 || codigoDpto == 12 || codigoDpto == 14 || codigoDpto == 17
-    //|| codigoDpto == 19 || codigoDpto == 25 || codigoDpto == 28 || codigoDpto == 33 || codigoDpto == 34) {
-  
-    //	swal({ text: '! El Departamento de circulación no posee cobertura. ¡' });
-  
-    //} else {
-  
+
     $.ajax({
       type: "POST",
       url: "src/consultarCiudad.php",
@@ -59,9 +95,9 @@ const nombre = document.getElementById('nombre').value;
 const apellido = document.getElementById('apellido').value;
 const tipo_documento = document.getElementById('tipo_documento').value;
 const identificacion = document.getElementById('identificacion').value;
-const dia_nacimiento = document.getElementById('dia_nacimiento').value;
-const mes_nacimiento = document.getElementById('mes_nacimiento').value;
-const anio_nacimiento = document.getElementById('anio_nacimiento').value;
+const dia_nacimiento = document.getElementById('diaCirculacion').value;
+const mes_nacimiento = document.getElementById('mesCirculacion').value;
+const anio_nacimiento = document.getElementById('anioCirculacion').value;
 const genero = document.getElementById('genero').value;
 const direccion = document.getElementById('direccion').value;
 const ciudad = document.getElementById('ciudadCirculacion').value;
