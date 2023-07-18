@@ -1771,11 +1771,11 @@ function cotizarOfertas() {
                                                 <div class="col-sm-4">
                                                   <div class="row">
                                                     <div class="col-xs-8">
-                                                      <label for="checkboxAsesorEditar">¿Deseas agregar tus datos como asesor en la cotización?</label>
+                                                      <label for="checkboxAsesor">¿Deseas agregar tus datos como asesor en la cotización?</label>
                                                     </div>
                                                     <div class="col-xs-1">
-                                                      <div class="form-check; margin-left: -28px;">
-                                                          <input class="form-check-input;" type="checkbox" id="checkboxAsesorEditar" checked>
+                                                      <div class="form-check">
+                                                          <input class="form-check-input;" type="checkbox" id="checkboxAsesor" style="margin-left: -28px;" checked>
                                                       </div>
                                                     </div>
                                                   </div>
