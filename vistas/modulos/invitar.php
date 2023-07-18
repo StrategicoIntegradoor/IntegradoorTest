@@ -181,15 +181,15 @@
                   <div class="row">
                     <div class="col-xs-12 col-sm-6 col-md-3 form-group">
                       <label for="correo" style="display: block; text-align: left;">No. Identificación</label>   
-                        <input type="text" class="form-control" placeholder="Número de identificación" id="cc">
+                        <input type="text" class="form-control" placeholder="Número de identificación" id="cc" required>
                     </div>  
                     <div class="col-xs-12 col-sm-6 col-md-3 form-group">
                     <label for="correo" style="display: block; text-align: left;">Nombre Completo</label>   
-                        <input type="text" class="form-control" placeholder="Nombre Completo" id="name">
+                        <input type="text" class="form-control" placeholder="Nombre Completo" id="name" required>
                     </div>
                     <div class="col-xs-12 col-sm-6 col-md-3 form-group">
                         <label for="correo" style="display: block; text-align: left;">Correo electrónico</label>   
-                        <input type="text" class="form-control" placeholder="Correo electrónico" id="mail">
+                        <input type="text" class="form-control" placeholder="Correo electrónico" id="mail" required>
                     </div>
                   </div>
                   <br>
