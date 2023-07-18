@@ -609,45 +609,23 @@
           <div id="cardAgregarCotizacion">
           </div>
           <div id="contenCotizacionPDF">
-            <!-- <div class="col-xs-12 col-sm-6 col-md-4">
-              <div class="row">
-                <div class="col-xs-10">
-                  <div class="text-left">
-                    <label for="checkboxAsesorEditar">¿Deseas agregar tus datos como asesor en la cotización?</label>
+            
+            <div class="col-xs-12" style="width: 100%;">
+              <div class="row align-items-center">
+                  <div class="col-xs-4">
+                      <label for="checkboxAsesorEditar">¿Deseas agregar tus datos como asesor en la cotización?</label>
+                      <input class="form-check-input" type="checkbox" id="checkboxAsesorEditar" style="margin-left: 10px;" checked>
                   </div>
-                </div>
-                <div class="col-xs-2">
-                  <div class="text-left checkbox-adjust">
-                    <div class="form-check">
-                      <input class="form-check-input" type="checkbox" id="checkboxAsesorEditar" checked>
-                    </div>
+                  <div class="col-xs-4">
+                      <button type="button" class="btn btn-danger">
+                          <span class="fa fa-file-text"></span> Generar PDF de Cotización
+                      </button>
                   </div>
-                </div>
               </div>
             </div>
-            <div class="col-xs-12 col-sm-6 col-md-2">
-              <button type="button" class="btn btn-danger btn-block" id="btnParrillaPDF">
-                <span class="fa fa-file-text"></span> Generar PDF de Cotización
-              </button>
-            </div> -->
-            <div class="col-sm-4">
-              <div class="row">
-                <div class="col-xs-12 col-sm-7">
-                  <label for="checkboxAsesorEditar">¿Deseas agregar tus datos como asesor en la cotización?</label>
-                </div>
-                <div class="col-xs-12 col-sm-1">
-                  <div class="form-check  checkbox-adjust">
-                      <input class="form-check-input;" type="checkbox" id="checkboxAsesorEditar" checked>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-xs-12 col-sm-3">
-              <button type="button" class="btn btn-danger btn-block" id="btnParrillaPDF">
-                <span class="fa fa-file-text"></span> Generar PDF de Cotización
-              </button>
-            </div>
+
           </div>
+          
         </div>
 
       </div>
