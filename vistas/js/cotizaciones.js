@@ -2644,6 +2644,10 @@ function agregarCotizacion() {
 
   var GR = document.getElementById("servicioGrua").value;
 
+  var placa = document.getElementById("txtPlacaVeh").value;
+
+  var id_oferta = $_GET["idCotizacion"];
+
 
   /*
     const pdf =
@@ -2820,21 +2824,21 @@ function agregarCotizacion() {
 
 							</div>`;
 
-   /* if (pdf != null) {
-
-      cardCotizacion += `
-
-					<div class="col-xs-12 col-sm-6 col-md-2 verpdf-oferta">
-
-						<a type="button" class="btn btn-info" href="${rutaPdf}">
-
-							<div>VER PDF &nbsp;&nbsp;<span class="fa fa-file-text"></span></div>
-
-						</a>
-
-					</div>`;
-
-    }*/
+    /* if (pdf != null) {
+ 
+       cardCotizacion += `
+ 
+           <div class="col-xs-12 col-sm-6 col-md-2 verpdf-oferta">
+ 
+             <a type="button" class="btn btn-info" href="${rutaPdf}">
+ 
+               <div>VER PDF &nbsp;&nbsp;<span class="fa fa-file-text"></span></div>
+ 
+             </a>
+ 
+           </div>`;
+ 
+     }*/
 
     if (aseguradora == "Seguros Bolivar" || aseguradora == "Axa Colpatria") {
 
@@ -2884,51 +2888,52 @@ function agregarCotizacion() {
 
 
 
-
-
-    registrarOferta(
-
-      aseguradora,
-
-      prima,
-
-      producto,
-
-      numCotizOferta,
-
-      valorRC,
-
-      PT2,
-
-      PP2,
-
-      CE,
-
-      GR,
-
-      logo,
-
-      rutaPdf,
-
-      1
-
-    )
-
-      .then(() => {
-
-
-
-        if (rutaPdf === null) return;
-
-
-
-        //        guardarPdfCotizacioManual(rutaPdf, pdf);
-
-      })
-
-      .catch((err) => console.error(err));
-
-
+    /*
+        
+    
+        registrarOferta(aseguradora, prima, producto, numCotizOferta, valorRC, PT2, PP2, CE, GR, logo, rutaPdf, 1)
+          .then(() => {
+            if (rutaPdf === null) return;
+    
+            //        guardarPdfCotizacioManual(rutaPdf, pdf);
+    
+          })
+    
+          .catch((err) => console.error(err));
+    
+    */
+    $.ajax({
+      type: "POST",
+      url: "src/insertarOferta.php",
+      dataType: "json",
+      data: {
+        placa: placa,
+        idCotizOferta: id_oferta,
+        numIdentificacion: numDocumentoID,
+        aseguradora: aseguradora,
+        numCotizOferta: numCotizOferta,
+        producto: producto,
+        valorPrima: prima,
+        valorRC: valorRC,
+        PT: PT2,
+        PP: PP2,
+        CE: CE,
+        GR: GR,
+        logo: logo,
+        UrlPdf: rutaPdf,
+        manual: 1
+      },
+      success: function (data) {
+        // var datos = data.Data;
+        var message = data.Message
+        var success = data.Success
+        resolve()
+      },
+      error: function (error) {
+        console.log(error)
+        reject(error)
+      }
+    });
 
     swal({ text: "! Cotización Registrada con Exito. ¡" });
 
