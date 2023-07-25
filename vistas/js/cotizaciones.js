@@ -2931,13 +2931,13 @@ function agregarCotizacion() {
       },
       success: function (data) {
         // var datos = data.Data;
-        var message = data.Message
-        var success = data.Success
-        resolve()
+      //  var message = data.Message
+      //  var success = data.Success
+      //  resolve()
       },
       error: function (error) {
-        console.log(error)
-        reject(error)
+      //  console.log(error)
+      //  reject(error)
       }
     });
 
