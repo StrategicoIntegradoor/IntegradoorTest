@@ -2694,11 +2694,11 @@ function agregarCotizacionManual2() {
   if (aseguradora != "" && producto != "" && numCotizOferta != "" && prima != "" && valorRC != "" && PT != "" && PP != "" && CE != "" && GR != "") {
 
 
-    logo ="solidaria.png";
+    var logoasegu = "solidaria.png";
 
- //   var logo = logoOfertaManual(aseguradora);
+    //   var logo = logoOfertaManual(aseguradora);
 
- //   var primaFormat = formatNumber(prima);
+    //   var primaFormat = formatNumber(prima);
 
     var valorRCFormat = valorRC;
 
@@ -2720,7 +2720,7 @@ function agregarCotizacionManual2() {
 
     }
 
-    
+
     $.ajax({
       type: "POST",
       url: "src/insertarOferta.php",
@@ -2738,7 +2738,7 @@ function agregarCotizacionManual2() {
         PP: PP2,
         CE: CE,
         GR: GR,
-        logo: logo,
+        logo: logoasegu,
         UrlPdf: rutaPdf,
         manual: 1
       },
@@ -2931,7 +2931,7 @@ function agregarCotizacionManual2() {
     */
 
 
-   // swal({ text: "! Cotización Registrada con Exito. ¡" });
+    // swal({ text: "! Cotización Registrada con Exito. ¡" });
 
     // $("#cardAgregarCotizacion").append(cardCotizacion);
 
