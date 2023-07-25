@@ -2656,41 +2656,42 @@ function agregarCotizacionManual2() {
   var id_oferta = document.getElementById("idofertaguardarmanual").value;
 
 
-  
+
   rutaPdf = "";
 
   if (aseguradora != "" && producto != "" && numCotizOferta != "" && prima != "" && valorRC != "" && PT != "" && PP != "" && CE != "" && GR != "") {
 
+    $.ajax({
+      type: "POST",
+      url: "src/seleccionarRC.php",
+      dataType: "json",
+      data: {
+        aseguradora: aseguradora,
+        producto: producto,
+      },
+      cache: false,
+      success: function (data) {
+        // console.log(data);
+      },
+    });
 
-    alert("estamos aqui");
 
-
-    var logoasegu = "solidaria.png";
-
-    //   var logo = logoOfertaManual(aseguradora);
-
-    //   var primaFormat = formatNumber(prima);
-
-    var valorRCFormat = valorRC;
-
-    var cardCotizacion = "";
-
-/*
-
-    if (aseguradora == "SBS Seguros" && producto == "RCE Daños") {
-
-      PT = "Cubrimiento al 100% (Daños)";
-
-      PP = "Deducible 10% - 1 SMMLV (Daños)";
-
-    } else if (aseguradora == "SBS Seguros" && producto == "RCE Hurto") {
-
-      PT = "Cubrimiento al 100% (Hurto)";
-
-      PP = "Deducible 10% - 1 SMMLV (Hurto)";
-
-    }
-*/
+    /*
+    
+        if (aseguradora == "SBS Seguros" && producto == "RCE Daños") {
+    
+          PT = "Cubrimiento al 100% (Daños)";
+    
+          PP = "Deducible 10% - 1 SMMLV (Daños)";
+    
+        } else if (aseguradora == "SBS Seguros" && producto == "RCE Hurto") {
+    
+          PT = "Cubrimiento al 100% (Hurto)";
+    
+          PP = "Deducible 10% - 1 SMMLV (Hurto)";
+    
+        }
+    */
 
 
   }
