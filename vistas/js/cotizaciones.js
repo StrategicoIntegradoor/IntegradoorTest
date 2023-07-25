@@ -2820,7 +2820,7 @@ function agregarCotizacion() {
 
 							</div>`;
 
-    if (pdf != null) {
+   /* if (pdf != null) {
 
       cardCotizacion += `
 
@@ -2834,7 +2834,7 @@ function agregarCotizacion() {
 
 					</div>`;
 
-    }
+    }*/
 
     if (aseguradora == "Seguros Bolivar" || aseguradora == "Axa Colpatria") {
 
