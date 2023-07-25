@@ -2693,9 +2693,9 @@ function agregarCotizacionManual2() {
 
   if (aseguradora != "" && producto != "" && numCotizOferta != "" && prima != "" && valorRC != "" && PT != "" && PP != "" && CE != "" && GR != "") {
 
-    var logo = logoOfertaManual(aseguradora);
+ //   var logo = logoOfertaManual(aseguradora);
 
-    var primaFormat = formatNumber(prima);
+ //   var primaFormat = formatNumber(prima);
 
     var valorRCFormat = valorRC;
 
@@ -2717,6 +2717,7 @@ function agregarCotizacionManual2() {
 
     }
 
+    /*
     $.ajax({
       type: "POST",
       url: "src/insertarOferta22.php",
@@ -2748,7 +2749,7 @@ function agregarCotizacionManual2() {
         //  console.log(error)
         //  reject(error)
       }
-    });
+    });*/
 
     /*
     
