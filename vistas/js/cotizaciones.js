@@ -2717,7 +2717,7 @@ function agregarCotizacionManual2() {
 
     }
 
-    /*
+    
     $.ajax({
       type: "POST",
       url: "src/insertarOferta22.php",
@@ -2749,7 +2749,7 @@ function agregarCotizacionManual2() {
         //  console.log(error)
         //  reject(error)
       }
-    });*/
+    });
 
     /*
     
@@ -2928,7 +2928,7 @@ function agregarCotizacionManual2() {
     */
 
 
-    swal({ text: "! Cotización Registrada con Exito. ¡" });
+   // swal({ text: "! Cotización Registrada con Exito. ¡" });
 
     // $("#cardAgregarCotizacion").append(cardCotizacion);
 
