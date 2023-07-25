@@ -2733,7 +2733,7 @@ function agregarCotizacion() {
 
     }
 
-
+/*
 
     cardCotizacion += `
 
@@ -2825,7 +2825,7 @@ function agregarCotizacion() {
 
 							  </div>
 
-							</div>`;
+							</div>`;*/
 
     /* if (pdf != null) {
  
@@ -2842,6 +2842,9 @@ function agregarCotizacion() {
            </div>`;
  
      }*/
+
+
+     /*
 
     if (aseguradora == "Seguros Bolivar" || aseguradora == "Axa Colpatria") {
 
@@ -2889,7 +2892,7 @@ function agregarCotizacion() {
 
     numId++;
 
-
+*/
 
     /*
         
@@ -2940,13 +2943,13 @@ function agregarCotizacion() {
 
     swal({ text: "! Cotización Registrada con Exito. ¡" });
 
-    $("#cardAgregarCotizacion").append(cardCotizacion);
+   // $("#cardAgregarCotizacion").append(cardCotizacion);
 
-    document.querySelector(`#${idSelect}`).click();
+   // document.querySelector(`#${idSelect}`).click();
 
-    $("#aseguradora").val("");
+   // $("#aseguradora").val("");
 
-    vaciarCamposOfertaManual();
+  //  vaciarCamposOfertaManual();
 
   }
 
