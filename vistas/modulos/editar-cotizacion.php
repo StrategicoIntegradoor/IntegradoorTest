@@ -155,9 +155,9 @@
                             ?><option value="<?php echo "0" . $i ?>"><?php echo "0" . $i ?></option><?php
                                                                                                   } else {
                                                                                                     ?><option value="<?php echo $i ?>"><?php echo $i ?></option><?php
+                                                                                                                                                              }
                                                                                                                                                             }
-                                                                                                                                                          }
-                                                                                                                                                              ?>
+                                                                                                                                                                ?>
                           </select>
                         </div>
                         <div class="col-xs-4 col-sm-4 col-md-4 conten-mes">
@@ -464,6 +464,7 @@
 
 
         <!-- FORMULARIO MODIFICADO PARA AGREGAR OFERTAS -->
+        <!--
         <form method="POST" id="agregarOferta" enctype="multipart/form-data">
           <div id="formularioCotizacionManual">
             <div class="col-lg-12 agregar-oferta">
@@ -573,12 +574,139 @@
               </div>
             </div>
           </div>
-        </form>
+        </form>-->
 
         <!-- FORMULARIO AGREGAR OFERTA MANUAL -->
+        <!--
         <form method="Post" id="agregarOferta2">
 
-        </form>
+        </form>-->
+
+
+        <div class="row" id="agregarOferta">
+          <div id="formularioCotizacionManual">
+            <div class="col-lg-12 agregar-oferta">
+              <div class="row row-agregar">
+                <div class="col-xs-12 col-sm-6 col-md-3">
+                  <label for="">AGREGAR COTIZACIÓN</label>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-3">
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-3">
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-3">
+                  <div id="masAgrOferta">
+                    <p id="masAgr" onclick="masAgr();">Ver mas <i class="fa fa-plus-square-o"></i></p>
+                  </div>
+                  <div id="menosAgrOferta">
+                    <p id="menosAgr" onclick="menosAgr();">Ver menos <i class="fa fa-minus-square-o"></i></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div id="DatosAgregarOferta">
+
+              <div class="row">
+                <div class="col-xs-12 col-sm-4 col-md-4 form-group">
+                  <label for="aseguradora">Aseguradora</label>
+                  <select class="form-control" id="aseguradora" required>
+                    <option value=""></option>
+                    <option class="clsAseguradora" value="Seguros del Estado">Seguros del Estado</option>
+                    <option class="clsAseguradora" value="Seguros Bolivar">Seguros Bolivar</option>
+                    <option class="clsAseguradora" value="Axa Colpatria">Axa Colpatria</option>
+                    <option class="clsAseguradora" value="HDI Seguros">HDI Seguros</option>
+                    <option class="clsAseguradora" value="SBS Seguros">SBS Seguros</option>
+                    <option class="clsAseguradora" value="Seguros Sura">Seguros Sura</option>
+                    <option class="clsAseguradora" value="Zurich Seguros">Zurich Seguros</option>
+                    <option class="clsAseguradora" value="Allianz Seguros">Allianz Seguros</option>
+                    <option class="clsAseguradora" value="Liberty Seguros">Liberty Seguros</option>
+                    <option class="clsAseguradora" value="Seguros Mapfre">Seguros Mapfre</option>
+                    <option class="clsAseguradora" value="Equidad Seguros">Equidad Seguros</option>
+                    <option class="clsAseguradora" value="Previsora">Previsora Seguros</option>
+                    <option class="clsAseguradora" value="Aseguradora Solidaria">Aseguradora Solidaria</option>
+                  </select>
+                </div>
+
+                <div class="col-xs-12 col-sm-4 col-md-4 form-group">
+                  <label for="producto">Producto</label>
+                  <select class="form-control" id="producto" required></select>
+                </div>
+
+                <div class="col-xs-12 col-sm-4 col-md-4 form-group">
+                  <label for="valorRC">Valor RC</label>
+                  <select class="form-control" id="valorRC" required></select>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-xs-12 col-sm-6 col-md-3 form-group">
+                  <label for="numCotizacion">Numero Cotización</label>
+                  <input type="text" class="form-control" id="numCotizacion" required>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-3 form-group">
+                  <label for="valorTotal">Valor Prima Total <span style="font-size: 12px;">(con IVA)</span></label>
+                  <input type="text" class="form-control" id="valorTotal" required>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-3 form-group">
+                  <label for="valorPerdidaTotal">Cubrimiento Perdidas Total </label>
+                  <input type="text" class="form-control" id="valorPerdidaTotal" maxlength="10" required disabled>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-3 form-group">
+                  <label for="valorPerdidaParcial">Cubrimiento Perdidas Parcial</label>
+                  <input type="text" class="form-control" id="valorPerdidaParcial" required disabled>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-xs-12 col-sm-6 col-md-4 form-group">
+                  <label for="conductorElegido">Conductor Elegido</label>
+                  <input type="text" class="form-control" id="conductorElegido" required disabled>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-4 form-group">
+                  <label for="servicioGrua">Servicio de Grua</label>
+                  <input type="text" class="form-control" id="servicioGrua" required disabled>
+                </div>
+                <?php
+
+                if ($_SESSION['permisos']['Agregarpdfdecotizacionmanual'] == "x") {
+
+
+                  echo '<div class="col-xs-12 col-sm-6 col-md-4">
+                      <label for="exampleFormControlFile1">PDF de cotización</label>
+                      <input type="file" class="form-control-file" id="pdfCotizacion">
+                    </div>';
+                } else {
+                }
+                ?>
+
+              </div>
+
+              <div class="row botones-agregar-manual">
+                <div class="col-md-offset-6 col-md-3 col-xs-12 col-sm-6 form-group">
+                  <button class="btn btn-danger btn-block" id="btnCancelar">Cancelar</button>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-3 btnAgregar form-group">
+                  <button class="btn btn-primary btn-block" id="btnAgregarCotizacion">Agregar Cotización</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
         <!-- PARRILLA DE COTIZACIONES -->
         <div id="contenParrilla">
