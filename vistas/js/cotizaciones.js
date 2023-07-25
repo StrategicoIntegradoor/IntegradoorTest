@@ -2663,11 +2663,13 @@ function agregarCotizacionManual2() {
 
     $.ajax({
       type: "POST",
-      url: "src/seleccionarRC.php",
+      url: "src/agregarcotizacionmanual.php",
       dataType: "json",
       data: {
         aseguradora: aseguradora,
         producto: producto,
+        numCotizOferta: numCotizOferta,
+        prima: prima
       },
       cache: false,
       success: function (data) {
