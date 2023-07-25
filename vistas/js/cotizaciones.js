@@ -230,7 +230,7 @@ $(document).ready(function () {
 
   $("#btnAgregarCotizacionManual").click(function () {
 
-    agregarCotizacion();
+    agregarCotizacionManual2();
 
   });
 
@@ -2630,7 +2630,7 @@ FUNCION PARA AGREGAR COTIZACIONES MANUALES
 
 =============================================*/
 
-function agregarCotizacion() {
+function agregarCotizacionManual2() {
 
   var aseguradora = document.getElementById("aseguradora").value;
 
