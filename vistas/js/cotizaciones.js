@@ -2723,7 +2723,7 @@ function agregarCotizacionManual2() {
 
     $.ajax({
       type: "POST",
-      url: "src/insertarOferta.php",
+      url: "src/insertarOfertaww.php",
       dataType: "json",
       data: {
         placa: placa,
