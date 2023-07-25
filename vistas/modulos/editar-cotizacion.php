@@ -31,8 +31,10 @@
 
     $idCotizacion = $_GET['idCotizacion'];
 
-    ?>
 
+
+    ?>
+<input type="hidden" id="idofertaguardarmanual" value="<?php echo  $idCotizacion; ?>">
     <h1>
 
       Cotización # <?php echo $idCotizacion ?>

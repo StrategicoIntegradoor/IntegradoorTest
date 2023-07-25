@@ -2646,7 +2646,10 @@ function agregarCotizacion() {
 
   var placa = document.getElementById("txtPlacaVeh").value;
 
-  var id_oferta = $_GET["idCotizacion"];
+
+
+  
+  var id_oferta = document.getElementById("idofertaguardarmanual").value;
 
 
   /*
