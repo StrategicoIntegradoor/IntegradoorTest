@@ -2691,27 +2691,7 @@ function agregarCotizacionManual2() {
 
   rutaPdf = "";
 
-  if (
-
-    aseguradora != "" &&
-
-    producto != "" &&
-
-    numCotizOferta != "" &&
-
-    prima != "" &&
-
-    valorRC != "" &&
-
-    PT != "" &&
-
-    PP != "" &&
-
-    CE != "" &&
-
-    GR != ""
-
-  ) {
+  if (aseguradora != "" && producto != "" && numCotizOferta != "" && prima != "" && valorRC != "" && PT != "" && PP != "" && CE != "" && GR != "") {
 
     var logo = logoOfertaManual(aseguradora);
 
@@ -2736,6 +2716,39 @@ function agregarCotizacionManual2() {
       PP = "Deducible 10% - 1 SMMLV (Hurto)";
 
     }
+
+    $.ajax({
+      type: "POST",
+      url: "src/insertarOferta22.php",
+      dataType: "json",
+      data: {
+        placa: placa,
+        idCotizOferta: id_oferta,
+        numIdentificacion: numDocumentoID,
+        aseguradora: aseguradora,
+        numCotizOferta: numCotizOferta,
+        producto: producto,
+        valorPrima: prima,
+        valorRC: valorRC,
+        PT: PT2,
+        PP: PP2,
+        CE: CE,
+        GR: GR,
+        logo: logo,
+        UrlPdf: rutaPdf,
+        manual: 1
+      },
+      success: function (data) {
+        // var datos = data.Data;
+        //  var message = data.Message
+        //  var success = data.Success
+        //  resolve()
+      },
+      error: function (error) {
+        //  console.log(error)
+        //  reject(error)
+      }
+    });
 
     /*
     
@@ -2912,38 +2925,7 @@ function agregarCotizacionManual2() {
           .catch((err) => console.error(err));
     
     */
-    $.ajax({
-      type: "POST",
-      url: "src/insertarOferta.php",
-      dataType: "json",
-      data: {
-        placa: placa,
-        idCotizOferta: id_oferta,
-        numIdentificacion: numDocumentoID,
-        aseguradora: aseguradora,
-        numCotizOferta: numCotizOferta,
-        producto: producto,
-        valorPrima: prima,
-        valorRC: valorRC,
-        PT: PT2,
-        PP: PP2,
-        CE: CE,
-        GR: GR,
-        logo: logo,
-        UrlPdf: rutaPdf,
-        manual: 1
-      },
-      success: function (data) {
-        // var datos = data.Data;
-        //  var message = data.Message
-        //  var success = data.Success
-        //  resolve()
-      },
-      error: function (error) {
-        //  console.log(error)
-        //  reject(error)
-      }
-    });
+
 
     swal({ text: "! Cotización Registrada con Exito. ¡" });
 
