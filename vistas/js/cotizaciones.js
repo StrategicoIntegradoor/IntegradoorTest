@@ -2662,6 +2662,9 @@ function agregarCotizacionManual2() {
   if (aseguradora != "" && producto != "" && numCotizOferta != "" && prima != "" && valorRC != "" && PT != "" && PP != "" && CE != "" && GR != "") {
 
 
+    alert("estamos aqui");
+
+
     var logoasegu = "solidaria.png";
 
     //   var logo = logoOfertaManual(aseguradora);
