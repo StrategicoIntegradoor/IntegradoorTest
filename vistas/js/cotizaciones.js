@@ -2693,6 +2693,9 @@ function agregarCotizacionManual2() {
 
   if (aseguradora != "" && producto != "" && numCotizOferta != "" && prima != "" && valorRC != "" && PT != "" && PP != "" && CE != "" && GR != "") {
 
+
+    logo ="solidaria.png";
+
  //   var logo = logoOfertaManual(aseguradora);
 
  //   var primaFormat = formatNumber(prima);
@@ -2720,7 +2723,7 @@ function agregarCotizacionManual2() {
     
     $.ajax({
       type: "POST",
-      url: "src/insertarOferta22.php",
+      url: "src/insertarOferta.php",
       dataType: "json",
       data: {
         placa: placa,
