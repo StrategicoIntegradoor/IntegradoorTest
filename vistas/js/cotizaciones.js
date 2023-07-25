@@ -2622,6 +2622,8 @@ FUNCION PARA AGREGAR COTIZACIONES MANUALES
 
 function agregarCotizacion() {
 
+  alert("hola");
+
 
 
   var aseguradora = document.getElementById("aseguradora").value;

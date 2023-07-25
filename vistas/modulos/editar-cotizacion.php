@@ -583,7 +583,7 @@
         </form>-->
 
 
-        <div class="row" id="agregarOferta">
+        <div class="col-md-12" id="agregarOferta">
           <div id="formularioCotizacionManual">
             <div class="col-lg-12 agregar-oferta">
               <div class="row row-agregar">
