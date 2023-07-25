@@ -226,6 +226,16 @@ $(document).ready(function () {
 
 
 
+  // Ejectura la funcion Agregar Cotizacion Manualmente
+
+  $("#btnAgregarCotizacionManual").click(function () {
+
+    agregarCotizacion();
+
+  });
+
+
+
   // Imprimir Parrilla de Cotizaciones
 
   $("#btnParrillaPDF").click(function () {
@@ -2645,9 +2655,6 @@ function agregarCotizacion() {
   var GR = document.getElementById("servicioGrua").value;
 
   var placa = document.getElementById("txtPlacaVeh").value;
-
-
-
   
   var id_oferta = document.getElementById("idofertaguardarmanual").value;
 
@@ -2685,7 +2692,7 @@ function agregarCotizacion() {
   
   */
 
-  rutaPdf = "facebook.com"
+  rutaPdf = "";
 
   if (
 

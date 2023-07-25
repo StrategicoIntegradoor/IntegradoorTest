@@ -689,7 +689,7 @@
                   <button class="btn btn-danger btn-block" id="btnCancelar">Cancelar</button>
                 </div>
                 <div class="col-xs-12 col-sm-6 col-md-3 btnAgregar form-group">
-                  <button class="btn btn-primary btn-block" id="btnAgregarCotizacion">Agregar Cotización</button>
+                  <button class="btn btn-primary btn-block" id="btnAgregarCotizacionManual">Agregar Cotización</button>
                 </div>
               </div>
             </div>
