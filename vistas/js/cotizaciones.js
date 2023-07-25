@@ -4,87 +4,87 @@ let permisos = "";
 
 $(document).ready(function () {
 
- 
+
 
   permisos = JSON.parse(permisosPlantilla);
 
-    const aseguradorasExitosas = []
+  const aseguradorasExitosas = []
 
-    
 
-	// Mostrar alertas
 
-	const alertas = new Promise((resolve, reject) => {
+  // Mostrar alertas
 
-		const requestOptions = {
+  const alertas = new Promise((resolve, reject) => {
 
-			method: 'POST',
+    const requestOptions = {
 
-			headers: { 'Content-Type': 'application/json' },
+      method: 'POST',
 
-			body: JSON.stringify({ obtenerAlertas: true, cotizacion: idCotizacion }),
+      headers: { 'Content-Type': 'application/json' },
 
-		  };
+      body: JSON.stringify({ obtenerAlertas: true, cotizacion: idCotizacion }),
 
-		
+    };
 
-		  fetch('ajax/alerta_aseguradora.ajax.php', requestOptions)
 
-			.then((response) => response.json())
 
-			.then(result => resolve(result));
+    fetch('ajax/alerta_aseguradora.ajax.php', requestOptions)
 
-	});
+      .then((response) => response.json())
 
-	alertas.then(result => {
+      .then(result => resolve(result));
 
-	    console.log(alertas)
+  });
 
-		result.forEach(alerta => {
+  alertas.then(result => {
 
-			if (alerta.exitosa == '1') {
+    console.log(alertas)
 
-				if (!aseguradorasExitosas.includes(alerta.aseguradora)) { 
+    result.forEach(alerta => {
 
-                    document.querySelector('.exitosas').innerHTML += `<span style="margin-right: 15px;"><i class="fa fa-check" aria-hidden="true" style="color: green; margin-right: 5px;
+      if (alerta.exitosa == '1') {
+
+        if (!aseguradorasExitosas.includes(alerta.aseguradora)) {
+
+          document.querySelector('.exitosas').innerHTML += `<span style="margin-right: 15px;"><i class="fa fa-check" aria-hidden="true" style="color: green; margin-right: 5px;
 
                     "></i>${alerta.aseguradora}</span>
 
                     `
 
-                    aseguradorasExitosas.push(alerta.aseguradora)
+          aseguradorasExitosas.push(alerta.aseguradora)
 
-                }
+        }
 
-			} else {
+      } else {
 
-				document.querySelector('.fallidas').innerHTML += `<p><i class="fa fa-times" aria-hidden="true" style="color: red; margin-right: 10px;"></i>${alerta.aseguradora}: ${alerta.mensaje}</p>`
+        document.querySelector('.fallidas').innerHTML += `<p><i class="fa fa-times" aria-hidden="true" style="color: red; margin-right: 10px;"></i>${alerta.aseguradora}: ${alerta.mensaje}</p>`
 
-			}
+      }
 
-		})
+    })
 
-	})
-
- 
+  })
 
 
 
-	// Limpia los contenedores de las Cards y del Boton PDF y Recotiza
 
-	$("#btnRecotizar").click(function () {
 
-		document.getElementById("formularioCotizacionManual").style.display =
+  // Limpia los contenedores de las Cards y del Boton PDF y Recotiza
 
-		  "none";
+  $("#btnRecotizar").click(function () {
 
-		let cardCotizacion = document.querySelector("#cardCotizacion");
+    document.getElementById("formularioCotizacionManual").style.display =
 
-		cardCotizacion.innerHTML = "";
+      "none";
 
-		cotizarOfertas();
+    let cardCotizacion = document.querySelector("#cardCotizacion");
 
-	  });
+    cardCotizacion.innerHTML = "";
+
+    cotizarOfertas();
+
+  });
 
 
 
@@ -114,75 +114,75 @@ $(document).ready(function () {
 
 
 
-  
 
 
 
-    if(permisos.Agregarcotizacionmanual != "x"){
 
-      
+    if (permisos.Agregarcotizacionmanual != "x") {
 
-   Swal.fire({
 
-      icon: 'error',
 
-      title: '¡Esta versión no tiene ésta funcionalidad disponible!',
+      Swal.fire({
 
-      showCancelButton: true,
+        icon: 'error',
 
-      confirmButtonText: 'Cerrar',
+        title: '¡Esta versión no tiene ésta funcionalidad disponible!',
 
-      cancelButtonText:'Conoce más'
+        showCancelButton: true,
 
-    }).then((result) => {
+        confirmButtonText: 'Cerrar',
 
-      
+        cancelButtonText: 'Conoce más'
 
-      if (result.isConfirmed) {
+      }).then((result) => {
 
-      } else if (result.isDismissed
+
+
+        if (result.isConfirmed) {
+
+        } else if (result.isDismissed
 
         ) {
 
 
 
-          window.open('https://www.integradoor.com',"_blank")
-
-          
-
-      }
-
-    })
-
-    }else{
-
- 
+          window.open('https://www.integradoor.com', "_blank")
 
 
 
-    document.getElementById("formularioCotizacionManual").style.display =
+        }
 
-      "block";
+      })
 
-    document.querySelector(".btnAgregar").innerHTML =
+    } else {
 
-      '<button class="btn btn-primary btn-block" id="btnAgregarCotizacion">Agregar Cotización</button>';
 
-    $("#btnAgregarCotizacion").click(function () {
 
-      agregarCotizacion();
 
-    });
 
-    vaciarCamposOfertaManual();
+      document.getElementById("formularioCotizacionManual").style.display =
 
-    menosVeh();
+        "block";
 
-    masAgr(); 
+      document.querySelector(".btnAgregar").innerHTML =
 
-}
+        '<button class="btn btn-primary btn-block" id="btnAgregarCotizacion">Agregar Cotización</button>';
 
-});
+      $("#btnAgregarCotizacion").click(function () {
+
+        agregarCotizacion();
+
+      });
+
+      vaciarCamposOfertaManual();
+
+      menosVeh();
+
+      masAgr();
+
+    }
+
+  });
 
 
 
@@ -238,75 +238,75 @@ $(document).ready(function () {
 
 
 
-    if(permisos.Generarpdfdecotizacion != "x"){
+    if (permisos.Generarpdfdecotizacion != "x") {
 
-      
+
 
       Swal.fire({
 
-         icon: 'error',
+        icon: 'error',
 
-         title: '¡Esta versión no tiene ésta funcionalidad disponible!',
+        title: '¡Esta versión no tiene ésta funcionalidad disponible!',
 
-         showCancelButton: true,
+        showCancelButton: true,
 
-         confirmButtonText: 'Cerrar',
+        confirmButtonText: 'Cerrar',
 
-         cancelButtonText:'Conoce más'
+        cancelButtonText: 'Conoce más'
 
-       }).then((result) => {
-
-         
-
-         if (result.isConfirmed) {
-
-         } else if (result.isDismissed
-
-           ) {
-
-   
-
-             window.open('https://www.integradoor.com',"_blank")
-
-             
-
-         }
-
-       })
-
-       }else{
+      }).then((result) => {
 
 
 
-        if (!todosOn) {
+        if (result.isConfirmed) {
 
-          swal.fire({
+        } else if (result.isDismissed
 
-            icon: "error",
+        ) {
 
-            title: "¡Debes seleccionar minimo una oferta!",
 
-          });
 
-        } else {
+          window.open('https://www.integradoor.com', "_blank")
 
-          let url = `extensiones/tcpdf/pdf/comparador.php?cotizacion=${idCotizacionPDF}`;
 
-          if (checkboxAsesorEditar.is(":checked")) {
-            url += "&generar_pdf=1";
-          }
-
-          window.open(url, "_blank");
-
-          // window.open("comparador.php?cotizacion="+idCotizacionPDF, "_blank");
-          // window.open(
-          //   "extensiones/tcpdf/pdf/comparador.php?cotizacion=" + idCotizacionPDF,
-          //   "_blank"
-          // );
 
         }
 
+      })
+
+    } else {
+
+
+
+      if (!todosOn) {
+
+        swal.fire({
+
+          icon: "error",
+
+          title: "¡Debes seleccionar minimo una oferta!",
+
+        });
+
+      } else {
+
+        let url = `extensiones/tcpdf/pdf/comparador.php?cotizacion=${idCotizacionPDF}`;
+
+        if (checkboxAsesorEditar.is(":checked")) {
+          url += "&generar_pdf=1";
+        }
+
+        window.open(url, "_blank");
+
+        // window.open("comparador.php?cotizacion="+idCotizacionPDF, "_blank");
+        // window.open(
+        //   "extensiones/tcpdf/pdf/comparador.php?cotizacion=" + idCotizacionPDF,
+        //   "_blank"
+        // );
+
       }
+
+    }
 
   });
 
@@ -320,73 +320,73 @@ $(document).ready(function () {
 
     var idCotizacionPDF = idCotizacion;
 
-    if(permisos.Generarpdfdecotizacion != "x"){
+    if (permisos.Generarpdfdecotizacion != "x") {
 
-      
+
 
       Swal.fire({
 
-         icon: 'error',
+        icon: 'error',
 
-         title: '¡Esta versión no tiene ésta funcionalidad disponible!',
+        title: '¡Esta versión no tiene ésta funcionalidad disponible!',
 
-         showCancelButton: true,
+        showCancelButton: true,
 
-         confirmButtonText: 'Cerrar',
+        confirmButtonText: 'Cerrar',
 
-         cancelButtonText:'Conoce más'
+        cancelButtonText: 'Conoce más'
 
-       }).then((result) => {
-
-         
-
-         if (result.isConfirmed) {
-
-         } else if (result.isDismissed
-
-           ) {
-
-   
-
-             window.open('https://www.integradoor.com',"_blank")
-
-             
-
-         }
-
-       })
-
-       }else{
+      }).then((result) => {
 
 
 
-        if (!todosOn) {
+        if (result.isConfirmed) {
 
-          swal.fire({
+        } else if (result.isDismissed
 
-            icon: "error",
+        ) {
 
-            title: "¡Debes seleccionar minimo una oferta!",
 
-          });
 
-        } else {
+          window.open('https://www.integradoor.com', "_blank")
 
-          // window.open("comparador.php?cotizacion="+idCotizacionPDF, "_blank");
 
-          window.open(
-
-            "extensiones/tcpdf/pdf/comparadorPesados.php?cotizacion=" +
-
-              idCotizacionPDF,
-
-            "_blank"
-
-          );
 
         }
 
+      })
+
+    } else {
+
+
+
+      if (!todosOn) {
+
+        swal.fire({
+
+          icon: "error",
+
+          title: "¡Debes seleccionar minimo una oferta!",
+
+        });
+
+      } else {
+
+        // window.open("comparador.php?cotizacion="+idCotizacionPDF, "_blank");
+
+        window.open(
+
+          "extensiones/tcpdf/pdf/comparadorPesados.php?cotizacion=" +
+
+          idCotizacionPDF,
+
+          "_blank"
+
+        );
+
       }
+
+    }
 
   });
 
@@ -394,9 +394,9 @@ $(document).ready(function () {
 
   /*=============================================
 
-	BOTON EDITAR COTIZACIÓN
+  BOTON EDITAR COTIZACIÓN
 
-	=============================================*/
+  =============================================*/
 
   $(".tablas-cotizaciones").on("click", ".btnEditarCotizacion", function () {
 
@@ -414,9 +414,9 @@ $(document).ready(function () {
 
   /*=============================================
 
-	ELIMINAR COTIZACIÓN
+  ELIMINAR COTIZACIÓN
 
-	=============================================*/
+  =============================================*/
 
   $(".tablas-cotizaciones").on("click", ".btnEliminarCotizacion", function () {
 
@@ -458,9 +458,9 @@ $(document).ready(function () {
 
   /*===================================================
 
-	CONFIGURACION DE LA TABLA DATATABLE PARA COTIZACIONES
+  CONFIGURACION DE LA TABLA DATATABLE PARA COTIZACIONES
 
-	===================================================*/
+  ===================================================*/
 
   $(".tablas-cotizaciones").DataTable({
 
@@ -532,9 +532,9 @@ $(document).ready(function () {
 
   /*=============================================
 
-	ADICIONAR CLASES PERSONALIZADAS AL DATERANGE
+  ADICIONAR CLASES PERSONALIZADAS AL DATERANGE
 
-	=============================================*/
+  =============================================*/
 
   $("#daterange-btnCotizaciones").on("click", function () {
 
@@ -550,9 +550,9 @@ $(document).ready(function () {
 
   /*=============================================
 
-	RANGO DE FECHAS
+  RANGO DE FECHAS
 
-	=============================================*/
+  =============================================*/
 
   $("#daterange-btnCotizaciones").daterangepicker(
 
@@ -630,9 +630,9 @@ $(document).ready(function () {
 
   /*=============================================
 
-	CANCELAR RANGO DE FECHAS
+  CANCELAR RANGO DE FECHAS
 
-	=============================================*/
+  =============================================*/
 
   $("#daterange-btnCotizaciones").on(
 
@@ -654,9 +654,9 @@ $(document).ready(function () {
 
   /*=============================================
 
-	CAPTURAR HOY
+  CAPTURAR HOY
 
-	=============================================*/
+  =============================================*/
 
   $(".daterangepicker.opensleft").on("click", ".liCotizaciones", function () {
 
@@ -754,9 +754,9 @@ function editarCotizacion(id) {
 
   /*=============================================			
 
-	INFORMACION DEL ASEGURADO Y DEL VEHICULO
+  INFORMACION DEL ASEGURADO Y DEL VEHICULO
 
-	=============================================*/
+  =============================================*/
 
   $.ajax({
 
@@ -816,15 +816,15 @@ function editarCotizacion(id) {
 
         "<option value='" +
 
-          fecha[1] +
+        fecha[1] +
 
-          "' selected>" +
+        "' selected>" +
 
-          nombreMes[0].toUpperCase() +
+        nombreMes[0].toUpperCase() +
 
-          nombreMes.slice(1) +
+        nombreMes.slice(1) +
 
-          "</option>"
+        "</option>"
 
       );
 
@@ -886,13 +886,13 @@ function editarCotizacion(id) {
 
         "<option value='" +
 
-          respuesta["cot_departamento"] +
+        respuesta["cot_departamento"] +
 
-          "' selected>" +
+        "' selected>" +
 
-          departamentoVeh(respuesta["cot_departamento"]) +
+        departamentoVeh(respuesta["cot_departamento"]) +
 
-          "</option>"
+        "</option>"
 
       );
 
@@ -912,13 +912,13 @@ function editarCotizacion(id) {
 
         "<option value='" +
 
-          respuesta["cot_ciudad"] +
+        respuesta["cot_ciudad"] +
 
-          "' selected>" +
+        "' selected>" +
 
-          nomCiudad +
+        nomCiudad +
 
-          "</option>"
+        "</option>"
 
       );
 
@@ -940,11 +940,11 @@ function editarCotizacion(id) {
 
 
 
-     /*=============================================			
-
-			// CONSULTA LAS OFERTAS DE LA COTIZACION
-
-			=============================================*/
+      /*=============================================			
+ 
+       // CONSULTA LAS OFERTAS DE LA COTIZACION
+ 
+       =============================================*/
 
       var datos2 = new FormData();
 
@@ -978,7 +978,7 @@ function editarCotizacion(id) {
 
 
 
-                  
+
 
             respuesta.forEach(function (oferta, i) {
 
@@ -1049,11 +1049,11 @@ function editarCotizacion(id) {
 												
 
                       <div class='col-12' style='margin-top:2%;'>
-                        ${permisos.Vernumerodecotizacionencadaaseguradora == "x" ? 
-                          `<center>
+                        ${permisos.Vernumerodecotizacionencadaaseguradora == "x" ?
+                  `<center>
                             <label class='entidad'>N° Cot: <span style='color:black'> ${oferta.NumCotizOferta}</span></label>
-                          </center>` 
-                          : ''}
+                          </center>`
+                  : ''}
                       </div>
 
 											</div>
@@ -1196,7 +1196,7 @@ function editarCotizacion(id) {
 
 											</div>`;
 
-              }else if (
+              } else if (
 
                 oferta.Manual == "0" &&
 
@@ -1576,13 +1576,13 @@ FUNCION PARA CARGAR EL PDF OFICIAL DE LA ASEGURADORA
 
 function verPdfOferta(aseguradora, numCotizOferta, numId) {
 
-  
 
 
 
-  if(permisos.Verpdfindividuales != "x"){
 
-      
+  if (permisos.Verpdfindividuales != "x") {
+
+
 
     Swal.fire({
 
@@ -1594,31 +1594,31 @@ function verPdfOferta(aseguradora, numCotizOferta, numId) {
 
       confirmButtonText: 'Cerrar',
 
-      cancelButtonText:'Conoce más'
+      cancelButtonText: 'Conoce más'
 
     }).then((result) => {
 
-      
+
 
       if (result.isConfirmed) {
 
       } else if (result.isDismissed
 
-        ) {
+      ) {
 
 
 
-          window.open('https://www.integradoor.com',"_blank")
+        window.open('https://www.integradoor.com', "_blank")
 
-          
+
 
       }
 
     })
 
-  }else{
+  } else {
 
-  
+
 
     $("#verPdf" + numCotizOferta + numId).html(
 
@@ -1726,13 +1726,13 @@ FUNCION PARA CARGAR EL PDF OFICIAL DE SEGUROS DEL ESTADO
 
 ======================================================*/
 
-function verPdfEstado(aseguradora,numCotizOferta,numId,UrlPdf) {
+function verPdfEstado(aseguradora, numCotizOferta, numId, UrlPdf) {
 
 
 
-  if(permisos.Verpdfindividuales != "x"){
+  if (permisos.Verpdfindividuales != "x") {
 
-      
+
 
     Swal.fire({
 
@@ -1744,29 +1744,29 @@ function verPdfEstado(aseguradora,numCotizOferta,numId,UrlPdf) {
 
       confirmButtonText: 'Cerrar',
 
-      cancelButtonText:'Conoce más'
+      cancelButtonText: 'Conoce más'
 
     }).then((result) => {
 
-      
+
 
       if (result.isConfirmed) {
 
       } else if (result.isDismissed
 
-        ) {
+      ) {
 
 
 
-          window.open('https://www.integradoor.com',"_blank")
+        window.open('https://www.integradoor.com', "_blank")
 
-          
+
 
       }
 
     })
 
-  }else{
+  } else {
 
 
 
@@ -1816,85 +1816,85 @@ FUNCION PARA CARGAR EL PDF OFICIAL PREVISORA
 
 ======================================================*/
 
-  const verPdfPrevisora = async (cotizacion) => {
+const verPdfPrevisora = async (cotizacion) => {
 
-    console.log(cotizacion);
+  console.log(cotizacion);
 
-    if(permisos.Verpdfindividuales != "x"){
-
-        
-
-      Swal.fire({
-
-        icon: 'error',
-
-        title: '¡Esta versión no tiene ésta funcionalidad disponible!',
-
-        showCancelButton: true,
-
-        confirmButtonText: 'Cerrar',
-
-        cancelButtonText:'Conoce más'
-
-      }).then((result) => {
-
-        
-
-        if (result.isConfirmed) {
-
-        } else if (result.isDismissed
-
-          ) {
-
-  
-
-            window.open('https://www.integradoor.com',"_blank")
-
-            
-
-        }
-
-      })
-
-    }else{
-
-  
-
-      $("#previsora-pdf"+cotizacion).html(
-
-        "VER PDF &nbsp;&nbsp;<img src='vistas/img/plantilla/loading.gif' width='18' height='18'>"
-
-      );
-
-     
-
-      let base64 = await obtenerPdfprevisora(cotizacion);
-
-      const linkSource = `data:application/pdf;base64,${base64}`;
-
-      const downloadLink = document.createElement("a");
-
-      const fileName = cotizacion + ".pdf";
-
-      downloadLink.href = linkSource;
-
-      downloadLink.download = fileName;
-
-      downloadLink.click();
-
-      $("#previsora-pdf").html(
-
-        'VER PDF &nbsp;&nbsp;<span class="fa fa-file-text"></span>'
-
-      );
-
-    }
-
-  };
+  if (permisos.Verpdfindividuales != "x") {
 
 
 
-  
+    Swal.fire({
+
+      icon: 'error',
+
+      title: '¡Esta versión no tiene ésta funcionalidad disponible!',
+
+      showCancelButton: true,
+
+      confirmButtonText: 'Cerrar',
+
+      cancelButtonText: 'Conoce más'
+
+    }).then((result) => {
+
+
+
+      if (result.isConfirmed) {
+
+      } else if (result.isDismissed
+
+      ) {
+
+
+
+        window.open('https://www.integradoor.com', "_blank")
+
+
+
+      }
+
+    })
+
+  } else {
+
+
+
+    $("#previsora-pdf" + cotizacion).html(
+
+      "VER PDF &nbsp;&nbsp;<img src='vistas/img/plantilla/loading.gif' width='18' height='18'>"
+
+    );
+
+
+
+    let base64 = await obtenerPdfprevisora(cotizacion);
+
+    const linkSource = `data:application/pdf;base64,${base64}`;
+
+    const downloadLink = document.createElement("a");
+
+    const fileName = cotizacion + ".pdf";
+
+    downloadLink.href = linkSource;
+
+    downloadLink.download = fileName;
+
+    downloadLink.click();
+
+    $("#previsora-pdf").html(
+
+      'VER PDF &nbsp;&nbsp;<span class="fa fa-file-text"></span>'
+
+    );
+
+  }
+
+};
+
+
+
+
 
 const obtenerPdfprevisora = async (cotizacion) => {
 
@@ -1936,7 +1936,7 @@ const obtenerPdfprevisora = async (cotizacion) => {
 
 };
 
-  
+
 
 
 
@@ -1952,9 +1952,9 @@ const verPdfSolidaria = async (cotizacion) => {
 
 
 
-  if(permisos.Verpdfindividuales != "x"){
+  if (permisos.Verpdfindividuales != "x") {
 
-      
+
 
     Swal.fire({
 
@@ -1966,29 +1966,29 @@ const verPdfSolidaria = async (cotizacion) => {
 
       confirmButtonText: 'Cerrar',
 
-      cancelButtonText:'Conoce más'
+      cancelButtonText: 'Conoce más'
 
     }).then((result) => {
 
-      
+
 
       if (result.isConfirmed) {
 
       } else if (result.isDismissed
 
-        ) {
+      ) {
 
 
 
-          window.open('https://www.integradoor.com',"_blank")
+        window.open('https://www.integradoor.com', "_blank")
 
-          
+
 
       }
 
     })
 
-  }else{
+  } else {
 
 
 
@@ -2070,9 +2070,9 @@ const verPdfZurich = async (cotizacion) => {
 
 
 
-  if(permisos.Verpdfindividuales != "x"){
+  if (permisos.Verpdfindividuales != "x") {
 
-      
+
 
     Swal.fire({
 
@@ -2084,7 +2084,7 @@ const verPdfZurich = async (cotizacion) => {
 
       confirmButtonText: 'Cerrar',
 
-      cancelButtonText:'Conoce más'
+      cancelButtonText: 'Conoce más'
 
     }).then((result) => {
 
@@ -2092,23 +2092,23 @@ const verPdfZurich = async (cotizacion) => {
 
       } else if (result.isDismissed
 
-        ) {
+      ) {
 
 
 
-          window.open('https://www.integradoor.com',"_blank")
+        window.open('https://www.integradoor.com', "_blank")
 
-          
+
 
       }
 
     })
 
-  }else{
+  } else {
 
 
 
-    $("#Zurich-pdf"+cotizacion).html(
+    $("#Zurich-pdf" + cotizacion).html(
 
       "VER PDF &nbsp;&nbsp;<img src='vistas/img/plantilla/loading.gif' width='18' height='18'>"
 
@@ -2118,53 +2118,53 @@ const verPdfZurich = async (cotizacion) => {
 
     formData.append("cotizacion", cotizacion);
 
-  	const blobPdfZurich = await fetch("https://www.grupoasistencia.com/motor_webservice/WSZurich/get_pdf.php",
+    const blobPdfZurich = await fetch("https://www.grupoasistencia.com/motor_webservice/WSZurich/get_pdf.php",
 
-     {
+      {
 
         method: "POST",
 
         body: formData,
 
-	  })
+      })
 
-		.then(response => response.blob())
+      .then(response => response.blob())
 
-		.then(resBlob => {
+      .then(resBlob => {
 
-			const res = new Blob([resBlob], {
+        const res = new Blob([resBlob], {
 
-				type: "application/pdf",
+          type: "application/pdf",
 
-			})
-
-
-
-			return res
-
-		})
+        })
 
 
 
-	const downloadUrl = URL.createObjectURL(blobPdfZurich)
+        return res
 
-	const a = document.createElement('a')
+      })
 
-	a.href = downloadUrl
 
-	a.download = 'Zurich_' + cotizacion + '.pdf'
 
-	document.body.appendChild(a)
+    const downloadUrl = URL.createObjectURL(blobPdfZurich)
 
-	a.click()
+    const a = document.createElement('a')
 
-    
+    a.href = downloadUrl
 
-  $("#Zurich-pdf"+cotizacion).html(
+    a.download = 'Zurich_' + cotizacion + '.pdf'
 
-    'VER PDF &nbsp;&nbsp;<span class="fa fa-file-text"></span>'
+    document.body.appendChild(a)
 
-  );
+    a.click()
+
+
+
+    $("#Zurich-pdf" + cotizacion).html(
+
+      'VER PDF &nbsp;&nbsp;<span class="fa fa-file-text"></span>'
+
+    );
 
   }
 
@@ -2174,7 +2174,7 @@ const verPdfZurich = async (cotizacion) => {
 
 // const obtenerPdfZurich = async (cotizacion) => {
 
-  
+
 
 //   const formData = new FormData();
 
@@ -2204,7 +2204,7 @@ const verPdfZurich = async (cotizacion) => {
 
 //     });
 
-  
+
 
 
 
@@ -2338,13 +2338,13 @@ function selecRCManual() {
 
           "<option value='" +
 
-            data[0].rce +
+          data[0].rce +
 
-            "' selected>" +
+          "' selected>" +
 
-            data[0].rce +
+          data[0].rce +
 
-            "</option>"
+          "</option>"
 
         );
 
@@ -2622,10 +2622,6 @@ FUNCION PARA AGREGAR COTIZACIONES MANUALES
 
 function agregarCotizacion() {
 
-  alert("hola");
-
-
-
   var aseguradora = document.getElementById("aseguradora").value;
 
   var producto = document.getElementById("producto").value;
@@ -2633,8 +2629,6 @@ function agregarCotizacion() {
   var numCotizOferta = document.getElementById("numCotizacion").value;
 
   var prima = document.getElementById("valorTotal").value;
-
-
 
   var valorRC = document.getElementById("valorRC").value;
 
@@ -2651,38 +2645,40 @@ function agregarCotizacion() {
   var GR = document.getElementById("servicioGrua").value;
 
 
+  /*
+    const pdf =
+  
+      document.getElementById("pdfCotizacion").files[0] !== undefined
+  
+        ? document.getElementById("pdfCotizacion").files[0]
+  
+        : null;
+  
+    if (pdf !== null && pdf.type !== "application/pdf") {
+  
+      alert("Solo se admiten reportes en formato PDF");
+  
+  
+  
+      return;
+  
+    }
+  */
 
-  const pdf =
+  /*
+    const random = Math.round(Math.random() * (99999 - 10000) + 10000);
+  
+    const rutaPdf =
+  
+      pdf !== null
+  
+        ? `reportes/cotizaciones_manuales/cot_manual_${random}_${numCotizOferta}.pdf`
+  
+        : "";
+  
+  */
 
-    document.getElementById("pdfCotizacion").files[0] !== undefined
-
-      ? document.getElementById("pdfCotizacion").files[0]
-
-      : null;
-
-  if (pdf !== null && pdf.type !== "application/pdf") {
-
-    alert("Solo se admiten reportes en formato PDF");
-
-
-
-    return;
-
-  }
-
-
-
-  const random = Math.round(Math.random() * (99999 - 10000) + 10000);
-
-  const rutaPdf =
-
-    pdf !== null
-
-      ? `reportes/cotizaciones_manuales/cot_manual_${random}_${numCotizOferta}.pdf`
-
-      : "";
-
-
+  rutaPdf = "facebook.com"
 
   if (
 
@@ -2886,7 +2882,7 @@ function agregarCotizacion() {
 
     numId++;
 
-    
+
 
 
 
@@ -2920,13 +2916,13 @@ function agregarCotizacion() {
 
       .then(() => {
 
-        
+
 
         if (rutaPdf === null) return;
 
-        
 
-        guardarPdfCotizacioManual(rutaPdf, pdf);
+
+        //        guardarPdfCotizacioManual(rutaPdf, pdf);
 
       })
 
@@ -3538,7 +3534,7 @@ const deleteManualOffer = (id) => {
 
 
 
-$("#btnCancelar").click ( (e) => {
+$("#btnCancelar").click((e) => {
 
   document.getElementById("formularioCotizacionManual").style.display = "none";
 
