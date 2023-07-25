@@ -160,13 +160,10 @@ $(document).ready(function () {
 
 
 
-      document.getElementById("formularioCotizacionManual").style.display =
+      document.getElementById("formularioCotizacionManual").style.display = "block";
 
-        "block";
 
-      document.querySelector(".btnAgregar").innerHTML =
-
-        '<button class="btn btn-primary btn-block" id="btnAgregarCotizacion">Agregar Cotización</button>';
+      //document.querySelector(".btnAgregar").innerHTML = '<button class="btn btn-primary btn-block" id="btnAgregarCotizacion">Agregar Cotización</button>';
 
       $("#btnAgregarCotizacion").click(function () {
 
@@ -2655,7 +2652,7 @@ function agregarCotizacionManual2() {
   var GR = document.getElementById("servicioGrua").value;
 
   var placa = document.getElementById("txtPlacaVeh").value;
-  
+
   var id_oferta = document.getElementById("idofertaguardarmanual").value;
 
 
@@ -2740,99 +2737,99 @@ function agregarCotizacionManual2() {
 
     }
 
-/*
-
-    cardCotizacion += `
-
-				<div class='col-lg-12'>
-
-					<div class='card-ofertas'>
-
-						<div class='row card-body'>
-
-							<div class="col-xs-12 col-sm-6 col-md-2 oferta-logo">
-
-								<img src='vistas/img/logos/${logo}'>
-
-							</div>
-
-							<div class="col-xs-12 col-sm-6 col-md-2 oferta-header">
-
-								<h5 class='entidad'>${aseguradora} - ${producto}</h5>
-
-								<h5 class='precio'>Desde $ ${primaFormat}</h5>
-
-								<p class='title-precio'>Precio (IVA incluido)</p>
-
-							</div>
-
-							<div class="col-xs-12 col-sm-6 col-md-4">
-
-								<ul class="list-group">
-
-									<li class="list-group-item">
-
-										<span class="badge">* $${valorRCFormat}</span>
-
-										Responsabilidad Civil (RCE)
-
-									</li>
-
-									<li class="list-group-item">
-
-										<span class="badge">* ${PT}</span>
-
-										Pérdida Total Daños y Hurto
-
-									</li>
-
-									<li class="list-group-item">
-
-										<span class="badge">* ${PP}</span>
-
-										Pérdida Parcial Daños y Hurto
-
-									</li>
-
-									<li class="list-group-item">
-
-										<span class="badge">* ${CE}</span>
-
-										Conductor elegido
-
-									</li>
-
-									<li class="list-group-item">
-
-										<span class="badge">* ${GR}</span>
-
-										Servicio de Grúa
-
-									</li>
-
-								</ul>
-
-							</div>
-
-							<div class="col-xs-12 col-sm-6 col-md-2">
-
-							  <div class="selec-oferta">
-
-								<label for="seleccionar">SELECCIONAR</label>&nbsp;&nbsp;
-
-								<input type="checkbox" class="classSelecOferta" name="selecOferta" id="selec${numCotizOferta}${numId}${producto}\" onclick='seleccionarOferta(\"${aseguradora}\", \"${prima}\", \"${producto}\", \"${numCotizOferta}\", this);' />
-
-							  </div>
-
-							  <div class="recom-oferta">
-
-								<label for="recomendar">RECOMENDAR</label>&nbsp;&nbsp;
-
-								<input type="checkbox" class="classRecomOferta" name="recomOferta" id="recom${numCotizOferta}${numId}${producto}\" onclick='recomendarOferta(\"${aseguradora}\", \"${prima}\", \"${producto}\", \"${numCotizOferta}\", this);' />
-
-							  </div>
-
-							</div>`;*/
+    /*
+    
+        cardCotizacion += `
+    
+            <div class='col-lg-12'>
+    
+              <div class='card-ofertas'>
+    
+                <div class='row card-body'>
+    
+                  <div class="col-xs-12 col-sm-6 col-md-2 oferta-logo">
+    
+                    <img src='vistas/img/logos/${logo}'>
+    
+                  </div>
+    
+                  <div class="col-xs-12 col-sm-6 col-md-2 oferta-header">
+    
+                    <h5 class='entidad'>${aseguradora} - ${producto}</h5>
+    
+                    <h5 class='precio'>Desde $ ${primaFormat}</h5>
+    
+                    <p class='title-precio'>Precio (IVA incluido)</p>
+    
+                  </div>
+    
+                  <div class="col-xs-12 col-sm-6 col-md-4">
+    
+                    <ul class="list-group">
+    
+                      <li class="list-group-item">
+    
+                        <span class="badge">* $${valorRCFormat}</span>
+    
+                        Responsabilidad Civil (RCE)
+    
+                      </li>
+    
+                      <li class="list-group-item">
+    
+                        <span class="badge">* ${PT}</span>
+    
+                        Pérdida Total Daños y Hurto
+    
+                      </li>
+    
+                      <li class="list-group-item">
+    
+                        <span class="badge">* ${PP}</span>
+    
+                        Pérdida Parcial Daños y Hurto
+    
+                      </li>
+    
+                      <li class="list-group-item">
+    
+                        <span class="badge">* ${CE}</span>
+    
+                        Conductor elegido
+    
+                      </li>
+    
+                      <li class="list-group-item">
+    
+                        <span class="badge">* ${GR}</span>
+    
+                        Servicio de Grúa
+    
+                      </li>
+    
+                    </ul>
+    
+                  </div>
+    
+                  <div class="col-xs-12 col-sm-6 col-md-2">
+    
+                    <div class="selec-oferta">
+    
+                    <label for="seleccionar">SELECCIONAR</label>&nbsp;&nbsp;
+    
+                    <input type="checkbox" class="classSelecOferta" name="selecOferta" id="selec${numCotizOferta}${numId}${producto}\" onclick='seleccionarOferta(\"${aseguradora}\", \"${prima}\", \"${producto}\", \"${numCotizOferta}\", this);' />
+    
+                    </div>
+    
+                    <div class="recom-oferta">
+    
+                    <label for="recomendar">RECOMENDAR</label>&nbsp;&nbsp;
+    
+                    <input type="checkbox" class="classRecomOferta" name="recomOferta" id="recom${numCotizOferta}${numId}${producto}\" onclick='recomendarOferta(\"${aseguradora}\", \"${prima}\", \"${producto}\", \"${numCotizOferta}\", this);' />
+    
+                    </div>
+    
+                  </div>`;*/
 
     /* if (pdf != null) {
  
@@ -2851,53 +2848,53 @@ function agregarCotizacionManual2() {
      }*/
 
 
-     /*
+    /*
 
-    if (aseguradora == "Seguros Bolivar" || aseguradora == "Axa Colpatria") {
+   if (aseguradora == "Seguros Bolivar" || aseguradora == "Axa Colpatria") {
 
-      cardCotizacion += `
+     cardCotizacion += `
 
-							<div class="col-xs-12 col-sm-6 col-md-2 verpdf-oferta">
+             <div class="col-xs-12 col-sm-6 col-md-2 verpdf-oferta">
 
-								<button type="button" class="btn btn-info" id="btnAsegPDF${numCotizOferta}${numId}\" onclick='verPdfOferta(\"${aseguradora}\", \"${numCotizOferta}\", \"${numId}\");'>
+               <button type="button" class="btn btn-info" id="btnAsegPDF${numCotizOferta}${numId}\" onclick='verPdfOferta(\"${aseguradora}\", \"${numCotizOferta}\", \"${numId}\");'>
 
-									<div id="verPdf${numCotizOferta}${numId}\">VER PDF &nbsp;&nbsp;<span class="fa fa-file-text"></span></div>
+                 <div id="verPdf${numCotizOferta}${numId}\">VER PDF &nbsp;&nbsp;<span class="fa fa-file-text"></span></div>
 
-								</button>
+               </button>
 
-							</div>`;
+             </div>`;
 
-    } else if (aseguradora == "ASeguradora Solidaria") {
+   } else if (aseguradora == "ASeguradora Solidaria") {
 
-      cardCotizacion += `
+     cardCotizacion += `
 
-									<div class="col-xs-12 col-sm-6 col-md-2 verpdf-oferta">
+                 <div class="col-xs-12 col-sm-6 col-md-2 verpdf-oferta">
 
-										<button id="solidaria-pdf" type="button" class="btn btn-info" onclick='verPdfSolidaria(${numCotizOferta})'>
+                   <button id="solidaria-pdf" type="button" class="btn btn-info" onclick='verPdfSolidaria(${numCotizOferta})'>
 
-											<div>VER PDF &nbsp;&nbsp;<span class="fa fa-file-text"></span></div>
+                     <div>VER PDF &nbsp;&nbsp;<span class="fa fa-file-text"></span></div>
 
-										</button>
+                   </button>
 
-									</div>`;
+                 </div>`;
 
-    }
+   }
 
-    cardCotizacion += `
+   cardCotizacion += `
 
-							</div>
+             </div>
 
-						</div>
+           </div>
 
-					</div>
+         </div>
 
-				</div>
+       </div>
 
-		`;
+   `;
 
-    const idSelect = `selec${numCotizOferta}${numId}`;
+   const idSelect = `selec${numCotizOferta}${numId}`;
 
-    numId++;
+   numId++;
 
 */
 
@@ -2938,25 +2935,25 @@ function agregarCotizacionManual2() {
       },
       success: function (data) {
         // var datos = data.Data;
-      //  var message = data.Message
-      //  var success = data.Success
-      //  resolve()
+        //  var message = data.Message
+        //  var success = data.Success
+        //  resolve()
       },
       error: function (error) {
-      //  console.log(error)
-      //  reject(error)
+        //  console.log(error)
+        //  reject(error)
       }
     });
 
     swal({ text: "! Cotización Registrada con Exito. ¡" });
 
-   // $("#cardAgregarCotizacion").append(cardCotizacion);
+    // $("#cardAgregarCotizacion").append(cardCotizacion);
 
-   // document.querySelector(`#${idSelect}`).click();
+    // document.querySelector(`#${idSelect}`).click();
 
-   // $("#aseguradora").val("");
+    // $("#aseguradora").val("");
 
-  //  vaciarCamposOfertaManual();
+    //  vaciarCamposOfertaManual();
 
   }
 
