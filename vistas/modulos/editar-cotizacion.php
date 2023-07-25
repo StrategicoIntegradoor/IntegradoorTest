@@ -588,7 +588,7 @@
             <div class="col-lg-12 agregar-oferta">
               <div class="row row-agregar">
                 <div class="col-xs-12 col-sm-6 col-md-3">
-                  <label for="">AGREGAR COTIZACIÓN</label>
+                  <label for="">AGREGAR COTIZACIÓN -</label>
                 </div>
                 <div class="col-xs-12 col-sm-6 col-md-3">
                 </div>
