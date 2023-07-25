@@ -19,8 +19,8 @@
   }
 
   .checkbox-adjust {
-  margin-left: -28px;
-}
+    margin-left: -28px;
+  }
 </style>
 
 <div class="content-wrapper">
@@ -153,11 +153,11 @@
                             for ($i = 1; $i <= 31; $i++) {
                               if (strlen($i) == 1) {
                             ?><option value="<?php echo "0" . $i ?>"><?php echo "0" . $i ?></option><?php
-                                                                                                } else {
-                                                                                                  ?><option value="<?php echo $i ?>"><?php echo $i ?></option><?php
-                                                                                                }
-                                                                                              }
-                                                                                          ?>
+                                                                                                  } else {
+                                                                                                    ?><option value="<?php echo $i ?>"><?php echo $i ?></option><?php
+                                                                                                                                                            }
+                                                                                                                                                          }
+                                                                                                                                                              ?>
                           </select>
                         </div>
                         <div class="col-xs-4 col-sm-4 col-md-4 conten-mes">
@@ -454,16 +454,17 @@
               <!-- <div class="col-xs-12 col-sm-6 col-md-3 form-group">
                   <button class="btn btn-primary btn-block" id="btnRecotizar">Recotizar Parrilla</button>
                   </div> -->
-               
-                <div class="col-xs-12 col-sm-6 col-md-3 form-group">
-                  <button class="btn btn-success btn-block" id="btnMostrarFormCotManual">Agregar Cotización Manual</button>
-                </div>
+
+              <div class="col-xs-12 col-sm-6 col-md-3 form-group">
+                <button class="btn btn-success btn-block" id="btnMostrarFormCotManual">Agregar Cotización Manual</button>
+              </div>
             </div>
           </div>
         </div>
 
-        <!-- FORMULARIO AGREGAR OFERTA MANUAL -->
-        <form method="Post" id="agregarOferta">
+
+        <!-- FORMULARIO MODIFICADO PARA AGREGAR OFERTAS -->
+        <form method="POST" id="agregarOferta" enctype="multipart/form-data">
           <div id="formularioCotizacionManual">
             <div class="col-lg-12 agregar-oferta">
               <div class="row row-agregar">
@@ -547,20 +548,19 @@
                   <label for="servicioGrua">Servicio de Grua</label>
                   <input type="text" class="form-control" id="servicioGrua" required disabled>
                 </div>
-                <?php 
+                <?php
 
-                  if($_SESSION['permisos']['Agregarpdfdecotizacionmanual'] == "x"){
+                if ($_SESSION['permisos']['Agregarpdfdecotizacionmanual'] == "x") {
 
-                    
-                    echo '<div class="col-xs-12 col-sm-6 col-md-4">
+
+                  echo '<div class="col-xs-12 col-sm-6 col-md-4">
                       <label for="exampleFormControlFile1">PDF de cotización</label>
                       <input type="file" class="form-control-file" id="pdfCotizacion">
                     </div>';
-                  }else{
-
-                  }
+                } else {
+                }
                 ?>
-                
+
               </div>
 
               <div class="row botones-agregar-manual">
@@ -575,6 +575,11 @@
           </div>
         </form>
 
+        <!-- FORMULARIO AGREGAR OFERTA MANUAL -->
+        <form method="Post" id="agregarOferta2">
+
+        </form>
+
         <!-- PARRILLA DE COTIZACIONES -->
         <div id="contenParrilla">
           <div class="col-lg-12 form-parrilla">
@@ -585,7 +590,7 @@
             </div>
           </div>
 
-          <!-- Mostrar alertas -->                                                                         
+          <!-- Mostrar alertas -->
           <div class="col-lg-12" style="display: block;">
             <div class="card-ofertas">
               <div class="row card-body">
@@ -609,18 +614,18 @@
           <div id="cardAgregarCotizacion">
           </div>
           <div id="contenCotizacionPDF">
-            
+
             <div class="col-xs-12" style="width: 100%;">
               <div class="row align-items-center">
-                  <div class="col-xs-4">
-                      <label for="checkboxAsesorEditar">¿Deseas agregar tus datos como asesor en la cotización?</label>
-                      <input class="form-check-input" type="checkbox" id="checkboxAsesorEditar" style="margin-left: 10px;" checked>
-                  </div>
-                  <div class="col-xs-4">
-                      <button type="button" class="btn btn-danger" id="btnParrillaPDF">
-                          <span class="fa fa-file-text"></span> Generar PDF de Cotización
-                      </button>
-                  </div>
+                <div class="col-xs-4">
+                  <label for="checkboxAsesorEditar">¿Deseas agregar tus datos como asesor en la cotización?</label>
+                  <input class="form-check-input" type="checkbox" id="checkboxAsesorEditar" style="margin-left: 10px;" checked>
+                </div>
+                <div class="col-xs-4">
+                  <button type="button" class="btn btn-danger" id="btnParrillaPDF">
+                    <span class="fa fa-file-text"></span> Generar PDF de Cotización
+                  </button>
+                </div>
               </div>
             </div>
 
