@@ -2669,7 +2669,9 @@ function agregarCotizacionManual2() {
         aseguradora: aseguradora,
         producto: producto,
         numCotizOferta: numCotizOferta,
-        prima: prima
+        prima: prima,
+        placa:placa,
+        id_oferta:id_oferta
       },
       cache: false,
       success: function (data) {
