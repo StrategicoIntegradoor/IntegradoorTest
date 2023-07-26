@@ -2657,6 +2657,23 @@ function agregarCotizacionManual2() {
 
 
 
+  if (aseguradora == "SBS Seguros" && producto == "RCE Daños") {
+
+    PT = "Cubrimiento al 100% (Daños)";
+
+    PP = "Deducible 10% - 1 SMMLV (Daños)";
+
+  } else if (aseguradora == "SBS Seguros" && producto == "RCE Hurto") {
+
+    PT = "Cubrimiento al 100% (Hurto)";
+
+    PP = "Deducible 10% - 1 SMMLV (Hurto)";
+
+  }
+
+
+
+
   rutaPdf = "";
 
   if (aseguradora != "" && producto != "" && numCotizOferta != "" && prima != "" && valorRC != "" && PT != "" && PP != "" && CE != "" && GR != "") {
@@ -2670,8 +2687,10 @@ function agregarCotizacionManual2() {
         producto: producto,
         numCotizOferta: numCotizOferta,
         prima: prima,
-        placa:placa,
-        id_oferta:id_oferta
+        placa: placa,
+        id_oferta: id_oferta,
+        valorRC: valorRC,
+        PT: PT
       },
       cache: false,
       success: function (data) {
@@ -2680,22 +2699,7 @@ function agregarCotizacionManual2() {
     });
 
 
-    /*
-    
-        if (aseguradora == "SBS Seguros" && producto == "RCE Daños") {
-    
-          PT = "Cubrimiento al 100% (Daños)";
-    
-          PP = "Deducible 10% - 1 SMMLV (Daños)";
-    
-        } else if (aseguradora == "SBS Seguros" && producto == "RCE Hurto") {
-    
-          PT = "Cubrimiento al 100% (Hurto)";
-    
-          PP = "Deducible 10% - 1 SMMLV (Hurto)";
-    
-        }
-    */
+
 
 
   }

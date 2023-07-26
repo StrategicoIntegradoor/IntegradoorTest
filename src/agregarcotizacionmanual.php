@@ -5,17 +5,18 @@ require_once("../config/db.php"); //Contiene las variables de configuracion para
 require_once("../config/conexion.php"); //Contiene funcion que conecta a la base de datos
 
 $aseguradora = $_POST['aseguradora'];
-$valorPrima = str_replace('.', '', $_POST['valorPrima']);
+$valorPrima = str_replace('.', '', $_POST['prima']);
 $producto = $_POST['producto'];
 $numCotizOferta = $_POST['numCotizOferta'];
-
-
-
 $placa = $_POST['placa'];
-$idCotizacion = $_POST['idCotizOferta'];
+$idCotizacion = $_POST['id_oferta'];
+$valorRC = str_replace('.', '', $_POST['valorRC']);
+
+
+
 $numIdentificacion = $_POST['numIdentificacion'];
 
-$valorRC = str_replace('.', '', $_POST['valorRC']);
+
 $PT = $_POST['PT'];
 $PP = $_POST['PP'];
 $CE = $_POST['CE'];
