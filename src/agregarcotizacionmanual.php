@@ -11,16 +11,17 @@ $numCotizOferta = $_POST['numCotizOferta'];
 $placa = $_POST['placa'];
 $idCotizacion = $_POST['id_oferta'];
 $valorRC = str_replace('.', '', $_POST['valorRC']);
+$PT = $_POST['PT'];
+$PP = $_POST['PP'];
+$CE = $_POST['CE'];
+$GR = $_POST['GR'];
 
 
 
 $numIdentificacion = $_POST['numIdentificacion'];
 
 
-$PT = $_POST['PT'];
-$PP = $_POST['PP'];
-$CE = $_POST['CE'];
-$GR = $_POST['GR'];
+
 $logo = "vistas/img/logos/" . $_POST['logo'];
 $UrlPdf = $_POST['UrlPdf'];
 $manual = $_POST['manual'];

@@ -673,11 +673,11 @@
 
                 if ($_SESSION['permisos']['Agregarpdfdecotizacionmanual'] == "x") {
 
-
+                  /*
                   echo '<div class="col-xs-12 col-sm-6 col-md-4">
                       <label for="exampleFormControlFile1">PDF de cotización</label>
                       <input type="file" class="form-control-file" id="pdfCotizacion">
-                    </div>';
+                    </div>';*/
                 } else {
                 }
                 ?>

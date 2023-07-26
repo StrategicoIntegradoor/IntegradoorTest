@@ -2690,7 +2690,10 @@ function agregarCotizacionManual2() {
         placa: placa,
         id_oferta: id_oferta,
         valorRC: valorRC,
-        PT: PT
+        PT: PT,
+        PP: PP,
+        CE: CE,
+        GR: GR
       },
       cache: false,
       success: function (data) {
