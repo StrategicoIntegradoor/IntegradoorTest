@@ -2701,13 +2701,24 @@ function agregarCotizacionManual2() {
       },
       cache: false,
       success: function (data) {
-         console.log(data);
-         swal.fire({
-          type: "success",
-          title: "! Cotización registrada Exitosamente ¡",
-          showConfirmButton: true,
-          confirmButtonText: "Cerrar",
-        });
+        console.log(data);
+        if (data.Success == true) {
+          swal.fire({
+            type: "success",
+            title: "! Cotización registrada Exitosamente ¡",
+            showConfirmButton: true,
+            confirmButtonText: "Cerrar",
+          });
+          location.reload();
+        } else {
+          swal.fire({
+            type: "error",
+            title: "! Cotización no registrada¡",
+            showConfirmButton: true,
+            confirmButtonText: "Cerrar",
+          });
+        }
+
       },
     });
 
