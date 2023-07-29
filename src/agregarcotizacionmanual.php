@@ -28,9 +28,15 @@ if ($aseguradora = "Seguros Bolivar") {
 	$logo = "vistas/img/logos/axa.png";
 } elseif ($aseguradora = "SBS Seguros") {
 	$logo = "vistas/img/logos/sbs.png";
-}elseif ($aseguradora = "Allianz Seguros") {
+} elseif ($aseguradora = "Allianz Seguros") {
 	$logo = "vistas/img/logos/allianz.png";
+} elseif ($aseguradora = "Seguros Sura") {
+	$logo = "vistas/img/logos/sura.png";
+}elseif ($aseguradora = "Seguros Mapfre") {
+	$logo = "vistas/img/logos/mapfre.png";
 }
+
+
 
 
 
