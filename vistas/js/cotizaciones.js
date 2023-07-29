@@ -2655,6 +2655,8 @@ function agregarCotizacionManual2() {
 
   var id_oferta = document.getElementById("idofertaguardarmanual").value;
 
+  var numDocumentoID = document.getElementById("numDocumentoID").value;
+
 
 
   if (aseguradora == "SBS Seguros" && producto == "RCE Daños") {
@@ -2693,11 +2695,13 @@ function agregarCotizacionManual2() {
         PT: PT,
         PP: PP,
         CE: CE,
-        GR: GR
+        GR: GR,
+        manual: 1,
+        numIdentificacion: numDocumentoID
       },
       cache: false,
       success: function (data) {
-        // console.log(data);
+         console.log(data);
       },
     });
 
