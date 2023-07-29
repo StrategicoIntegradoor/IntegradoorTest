@@ -2702,6 +2702,12 @@ function agregarCotizacionManual2() {
       cache: false,
       success: function (data) {
          console.log(data);
+         swal.fire({
+          type: "success",
+          title: "! Cotización registrada Exitosamente ¡",
+          showConfirmButton: true,
+          confirmButtonText: "Cerrar",
+        });
       },
     });
 
