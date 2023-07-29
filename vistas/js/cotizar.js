@@ -1237,6 +1237,23 @@ function cotizarOfertas() {
   var cre_sbs_usuario = document.getElementById("cre_sbs_usuario").value;
   var cre_sbs_contrasena = document.getElementById("cre_sbs_contrasena").value;
 
+
+
+
+
+
+  /**
+   * Variables para allianz
+   */
+
+  var cre_alli_sslcertfile = document.getElementById("cre_alli_sslcertfile").value;
+  var cre_alli_sslkeyfile = document.getElementById("cre_alli_sslkeyfile").value;
+  var cre_alli_passphrase = document.getElementById("cre_alli_passphrase").value;
+  var cre_alli_partnerid = document.getElementById("cre_alli_partnerid").value;
+  var cre_alli_agentid = document.getElementById("cre_alli_agentid").value;
+  var cre_alli_partnercode = document.getElementById("cre_alli_partnercode").value;
+  var cre_alli_agentcode = document.getElementById("cre_alli_agentcode").value;
+
   if (ciudadCirculacion.length == 4) {
     ciudadCirculacion = "0" + ciudadCirculacion;
   } else if (ciudadCirculacion.length == 3) {
@@ -1310,7 +1327,17 @@ function cotizarOfertas() {
         SBS: {
           cre_sbs_usuario: cre_sbs_usuario,
           cre_sbs_contrasena: cre_sbs_contrasena
-        }
+        },
+        ALLIANZ: {
+          cre_alli_sslcertfile: cre_alli_sslcertfile,
+          cre_alli_sslkeyfile: cre_alli_sslkeyfile, 
+          cre_alli_passphrase: cre_alli_passphrase,
+          cre_alli_partnerid: cre_alli_partnerid,
+          cre_alli_agentid: cre_alli_agentid, 
+          cre_alli_partnercode: cre_alli_partnercode,
+          cre_alli_agentcode: cre_alli_agentcode
+        },
+        
       };
 
       var requestOptions = {

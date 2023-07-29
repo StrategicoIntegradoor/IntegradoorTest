@@ -32,6 +32,48 @@ if ($numerofilas > 0) {
   $cre_sbs_contrasena = $fila2['cre_sbs_contrasena'];
 }
 
+
+$query = "SELECT *  FROM `Credenciales_Allianz` WHERE `id_intermediario` = '" . $_SESSION["intermediario"] . "'";
+
+$ejecucion = mysqli_query($enlace, $query);
+// echo mysqli_num_rows($ejecucion);
+$numerofilas = mysqli_num_rows($ejecucion);
+$fila = mysqli_fetch_assoc($ejecucion);
+
+if ($numerofilas > 0) {
+  $cre_alli_sslcertfile = $fila['cre_alli_sslcertfile'];
+  $cre_alli_sslkeyfile = $fila['cre_alli_sslkeyfile'];
+
+  $cre_alli_passphrase = $fila['cre_alli_passphrase'];
+  $cre_alli_partnerid = $fila['cre_alli_partnerid'];
+
+  $cre_alli_agentid = $fila['cre_alli_agentid'];
+  $cre_alli_partnercode = $fila['cre_alli_partnercode'];
+
+  $cre_alli_agentcode = $fila['cre_alli_agentcode'];
+} else {
+  $query2 = "SELECT * FROM `Credenciales_Allianz` WHERE `id_intermediario` = 3";
+
+  $ejecucion2 = mysqli_query($enlace, $query2);
+  // echo mysqli_num_rows($ejecucion);
+  $numerofilas = mysqli_num_rows($ejecucion2);
+  $fila2 = mysqli_fetch_assoc($ejecucion2);
+
+  $cre_alli_sslcertfile = $fila['cre_alli_sslcertfile'];
+  $cre_alli_sslkeyfile = $fila['cre_alli_sslkeyfile'];
+
+  $cre_alli_passphrase = $fila['cre_alli_passphrase'];
+  $cre_alli_partnerid = $fila['cre_alli_partnerid'];
+
+  $cre_alli_agentid = $fila['cre_alli_agentid'];
+  $cre_alli_partnercode = $fila['cre_alli_partnercode'];
+
+  $cre_alli_agentcode = $fila['cre_alli_agentcode'];
+}
+
+
+
+
 //echo ($fila["Num_recargas"]);
 
 
@@ -630,10 +672,15 @@ if ($_SESSION["permisos"]["Cotizarlivianos"] != "x") {
           <!--SBS-->
           <input type="text" class="form-control" id="cre_sbs_usuario" value="<?php echo $cre_sbs_usuario; ?>">
           <input type="text" class="form-control" id="cre_sbs_contrasena" value="<?php echo $cre_sbs_contrasena; ?>">
-          
 
-
-
+          <!--ALLIANZ-->
+          <input type="text" class="form-control" id="cre_alli_sslcertfile" value="<?php echo $cre_alli_sslcertfile; ?>">
+          <input type="text" class="form-control" id="cre_alli_sslkeyfile" value="<?php echo $cre_alli_sslkeyfile; ?>">
+          <input type="text" class="form-control" id="cre_alli_passphrase" value="<?php echo $cre_alli_passphrase; ?>">
+          <input type="text" class="form-control" id="cre_alli_partnerid" value="<?php echo $cre_alli_partnerid; ?>">
+          <input type="text" class="form-control" id="cre_alli_agentid" value="<?php echo $cre_alli_agentid; ?>">
+          <input type="text" class="form-control" id="cre_alli_partnercode" value="<?php echo $cre_alli_partnercode; ?>">
+          <input type="text" class="form-control" id="cre_alli_agentcode" value="<?php echo $cre_alli_agentcode; ?>">
 
         </div>
 
