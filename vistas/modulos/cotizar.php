@@ -33,42 +33,40 @@ if ($numerofilas > 0) {
 }
 
 
-$query = "SELECT *  FROM `Credenciales_Allianz` WHERE `id_intermediario` = '" . $_SESSION["intermediario"] . "'";
+$query3 = "SELECT *  FROM `Credenciales_Allianz` WHERE `id_intermediario` = '" . $_SESSION["intermediario"] . "'";
 
-$ejecucion = mysqli_query($enlace, $query);
-// echo mysqli_num_rows($ejecucion);
-$numerofilas = mysqli_num_rows($ejecucion);
-$fila = mysqli_fetch_assoc($ejecucion);
+$ejecucion3 = mysqli_query($enlace, $query3);
+$numerofilas3 = mysqli_num_rows($ejecucion3);
+$fila3 = mysqli_fetch_assoc($ejecucion3);
 
-if ($numerofilas > 0) {
-  $cre_alli_sslcertfile = $fila['cre_alli_sslcertfile'];
-  $cre_alli_sslkeyfile = $fila['cre_alli_sslkeyfile'];
+if ($numerofilas3 > 0) {
+  $cre_alli_sslcertfile = $fila3['cre_alli_sslcertfile'];
+  $cre_alli_sslkeyfile = $fila3['cre_alli_sslkeyfile'];
 
-  $cre_alli_passphrase = $fila['cre_alli_passphrase'];
-  $cre_alli_partnerid = $fila['cre_alli_partnerid'];
+  $cre_alli_passphrase = $fila3['cre_alli_passphrase'];
+  $cre_alli_partnerid = $fila3['cre_alli_partnerid'];
 
-  $cre_alli_agentid = $fila['cre_alli_agentid'];
-  $cre_alli_partnercode = $fila['cre_alli_partnercode'];
+  $cre_alli_agentid = $fila3['cre_alli_agentid'];
+  $cre_alli_partnercode = $fila3['cre_alli_partnercode'];
 
-  $cre_alli_agentcode = $fila['cre_alli_agentcode'];
+  $cre_alli_agentcode = $fila3['cre_alli_agentcode'];
 } else {
   $query2 = "SELECT * FROM `Credenciales_Allianz` WHERE `id_intermediario` = 3";
 
   $ejecucion2 = mysqli_query($enlace, $query2);
-  // echo mysqli_num_rows($ejecucion);
   $numerofilas = mysqli_num_rows($ejecucion2);
   $fila2 = mysqli_fetch_assoc($ejecucion2);
 
-  $cre_alli_sslcertfile = $fila['cre_alli_sslcertfile'];
-  $cre_alli_sslkeyfile = $fila['cre_alli_sslkeyfile'];
+  $cre_alli_sslcertfile = $fila2['cre_alli_sslcertfile'];
+  $cre_alli_sslkeyfile = $fila2['cre_alli_sslkeyfile'];
 
-  $cre_alli_passphrase = $fila['cre_alli_passphrase'];
-  $cre_alli_partnerid = $fila['cre_alli_partnerid'];
+  $cre_alli_passphrase = $fila2['cre_alli_passphrase'];
+  $cre_alli_partnerid = $fila2['cre_alli_partnerid'];
 
-  $cre_alli_agentid = $fila['cre_alli_agentid'];
-  $cre_alli_partnercode = $fila['cre_alli_partnercode'];
+  $cre_alli_agentid = $fila2['cre_alli_agentid'];
+  $cre_alli_partnercode = $fila2['cre_alli_partnercode'];
 
-  $cre_alli_agentcode = $fila['cre_alli_agentcode'];
+  $cre_alli_agentcode = $fila2['cre_alli_agentcode'];
 }
 
 
