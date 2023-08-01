@@ -417,7 +417,11 @@ select:invalid + .error-message {
                     </div>
                 </form>
                 <br>
-                Consulta la presentación del producto Exequial Los Olivos <b style="font-size: 30px;"><a href="vistas/pdfs/PresentaciónComercialExequialLosOlivos.pdf" target="_blank">AQUI</a></b>
+
+                <a href="vistas/pdfs/PresentaciónComercialExequialLosOlivos.pdf" target="_blank">
+                    Consulta la presentación del producto Exequial Los Olivos <span style="font-weight: bold;">AQUI</span>
+                </a>
+                Consulta la presentación del producto Exequial Los Olivos <b style="font-size: 15px;"><a href="vistas/pdfs/PresentaciónComercialExequialLosOlivos.pdf" target="_blank">AQUI</a></b>
 
             </div>
         </div>           
