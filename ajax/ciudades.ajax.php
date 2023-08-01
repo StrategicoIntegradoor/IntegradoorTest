@@ -22,13 +22,15 @@ class AjaxCiudades{
         
 		$item = "Codigo";
         $valor = $_POST['ciudad']; // Asignar el valor de la propiedad 'valor' a una variable local
+        var_dump($valor);
+        die();
 		$respuesta = ControladorCiudades::ctrBuscarCiudades($item, $valor);
 
 		echo json_encode($respuesta);
 
 	}
 
-    
+
 }
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
