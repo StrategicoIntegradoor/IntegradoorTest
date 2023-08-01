@@ -411,13 +411,13 @@ select:invalid + .error-message {
                             </select>
                         </div>
 
-                        <div class="col-xs-12 col-sm-6 col-lg-3 form-group" style="margin-bottom: 0;" id="contenBtnConsultarExequial">
+                        <div class="col-xs-12 col-sm-6 col-lg-3 form-group" style="margin-bottom: 0px;" id="contenBtnConsultarExequial">
                             <button type="submit" class="btn btn-primary btn-block" id="btnExequial">Cotizar</button>
                         </div>
                     </div>
                 </form>
-
-                Consulta la presentación del producto Exequial Los Olivos <b><a href="file:///C:/Users/Developer/Downloads/Presentaci%C3%B3n%20comercial%20Exequial%20Los%20Olivos.pdf">AQUI</a></b>
+                <br>
+                Consulta la presentación del producto Exequial Los Olivos <b style="font-size: 15px;"><a href="vistas/pdfs/PresentaciónComercialExequialLosOlivos.pdf">AQUI</a></b>
 
             </div>
         </div>           
