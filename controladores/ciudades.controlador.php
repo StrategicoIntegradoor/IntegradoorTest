@@ -8,14 +8,14 @@ class ControladorCiudades{
 
 	static public function ctrMostrarCiudades(){
 
-        $item = "ciudadesBolivar";
+        $item = "ciudadesbolivar";
 		$respuesta = ModeloCiudades::MdlMostrarCiudades($item);
         return $respuesta;
 	}
 	
 	static public function ctrBuscarCiudades($item, $valor){
 
-        $item2 = "ciudadesBolivar";
+        $item2 = "ciudadesbolivar";
 		$respuesta = ModeloCiudades::MdlBuscarCiudades($item, $valor, $item2);
         return $respuesta;
 	}
