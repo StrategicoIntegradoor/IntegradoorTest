@@ -13,8 +13,8 @@ class AjaxCiudades{
 
     public function ajaxMostrarCiudades(){
 
-    $respuesta = ControladorCiudades::ctrMostrarCiudades();
-    echo json_encode($respuesta);
+        $respuesta = ControladorCiudades::ctrMostrarCiudades();
+        echo json_encode($respuesta);
 
     }
 
@@ -22,8 +22,6 @@ class AjaxCiudades{
         
 		$item = "Codigo";
         $valor = $_POST['ciudad']; // Asignar el valor de la propiedad 'valor' a una variable local
-        var_dump($valor);
-        die();
 		$respuesta = ControladorCiudades::ctrBuscarCiudades($item, $valor);
 
 		echo json_encode($respuesta);
