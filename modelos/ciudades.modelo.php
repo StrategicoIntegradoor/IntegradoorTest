@@ -16,12 +16,12 @@ class ModeloCiudades{
     public static function MdlBuscarCiudades($item, $valor, $item2){
 
         $stmt = Conexion::conectar()->prepare("SELECT * FROM $item2  WHERE $item =:$item");
-        $stmt -> bindParam(":".$item, $valor, PDO::PARAM_STR);
+        $stmt -> bindParam(":".$item, $valor, PDO::PARAM_INT);
 		$stmt -> execute();
 		$respuesta = $stmt -> fetch(PDO::FETCH_ASSOC);
         return $respuesta;
     }
 
 
-
+    
 }
