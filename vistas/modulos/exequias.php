@@ -372,7 +372,7 @@ select:invalid + .error-message {
 
             <!-- //GENERADOR DE PDF -->
             <br>
-            <div class="content">
+            <div class="content" style="margin-bottom: 0px;">
                 <!-- TITULO GENERADOR DE PDF -->
                 <h4 style="font-family: 'Arial Arabic', Arial; text-align: left; font-weight: bold; margin-bottom: -12px; margin-top: -3px;">Generar cotización en PDF</h4>
                 <hr>
