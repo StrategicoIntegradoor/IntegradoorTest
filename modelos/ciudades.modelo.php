@@ -15,7 +15,7 @@ class ModeloCiudades{
     
     public static function MdlBuscarCiudades($item, $valor, $item2){
 
-        $stmt = Conexion::conectar()->prepare("SELECT * FROM 'ciudadesbolivar' WHERE $item =:valor");
+        $stmt = Conexion::conectar()->prepare("SELECT * FROM $item2 WHERE $item =:valor");
         $stmt -> bindParam(":valor", $valor, PDO::PARAM_STR);
 		$stmt -> execute();
 		$respuesta = $stmt -> fetch(PDO::FETCH_ASSOC);
