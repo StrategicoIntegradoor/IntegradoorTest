@@ -418,7 +418,7 @@ select:invalid + .error-message {
                 </form>
                 <br>
                 Consulta la presentación del producto Exequial Los Olivos <b style="font-size: 15px;"><a href="vistas/pdfs/PresentaciónComercialExequialLosOlivos.pdf" target="_blank">AQUI</a></b>
-                <p style="font-size: 15px;">Consulta la presentación del producto Exequial Los Olivos <a href="vistas/pdfs/PresentaciónComercialExequialLosOlivos.pdf" target="_blank">AQUI</a></p>
+                <p style="font-size: 15px;">Consulta la presentación del producto Exequial Los Olivos <b style="font-size: 15px;"><a href="vistas/pdfs/PresentaciónComercialExequialLosOlivos.pdf" target="_blank">AQUI</a></b></p>
 
             </div>
         </div>           
