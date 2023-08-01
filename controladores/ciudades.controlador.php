@@ -14,8 +14,7 @@ class ControladorCiudades{
 	}
 	
 	static public function ctrBuscarCiudades($item, $valor){
-		var_dump($valor);
-        die();
+		
         $item2 = "ciudadesbolivar";
 		$respuesta = ModeloCiudades::MdlBuscarCiudades($item, $valor, $item2);
         return $respuesta;
