@@ -15,7 +15,7 @@ class ModeloCiudades{
     
     public static function MdlBuscarCiudades($item, $valor, $item2){
 
-        var_dump($item);
+        var_dump($valor);
         die()
         ;
         $stmt = Conexion::conectar()->prepare("SELECT * FROM 'ciudadesbolivar' WHERE $item =:$item");
