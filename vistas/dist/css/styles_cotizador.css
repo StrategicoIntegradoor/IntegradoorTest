@@ -45,9 +45,8 @@
 
 .fecnacimiento.select2-container--bootstrap .select2-selection--single .select2-selection__arrow b {
     border-color: #000000 transparent transparent;
+    /* margin-left: -10px;  */
 }
-
-
 
 .edad.select2-container .select2-selection--single{
     height: 35px !important;
@@ -60,6 +59,8 @@
 .edad.select2-container--bootstrap .select2-selection--single .select2-selection__arrow b {
     border-color: #000000 transparent transparent;
 }
+
+
 
 .nomAseg, .apeAseg {
     padding-bottom: 0px;
@@ -154,7 +155,6 @@
 }
 
 
-
 .dpto.select2-container .select2-selection--single{
     height: 35px !important;
 }
@@ -167,6 +167,20 @@
     border-color: #000000 transparent transparent;
 }
 
+.dpto1.select2-container .select2-selection--single{
+    /* height: 100% !important; */
+}
+
+.dpto1.select2-container--bootstrap .select2-selection--single .select2-selection__rendered {
+    padding-top: 7px;
+    font-size: large;
+}
+
+.dpto1.select2-container--bootstrap .select2-selection--single .select2-selection__arrow b {
+    border-color: #000000 transparent transparent;
+}
+
+
 
 .ciudad.select2-container .select2-selection--single{
     height: 35px !important;
@@ -177,6 +191,20 @@
 }
 
 .ciudad.select2-container--bootstrap .select2-selection--single .select2-selection__arrow b {
+    border-color: #000000 transparent transparent;
+}
+
+.ciudad1.select2-container .select2-selection--single{
+    /* height: 35px !important; */
+
+}
+
+.ciudad1.select2-container--bootstrap .select2-selection--single .select2-selection__rendered {
+    padding-top: 7px;
+    font-size: large;
+}
+
+.ciudad1.select2-container--bootstrap .select2-selection--single .select2-selection__arrow b {
     border-color: #000000 transparent transparent;
 }
 

@@ -214,46 +214,48 @@ MODAL AGREGAR USUARIO
         <div class="modal-body" style="padding : 3rem">
 
 
-
           <div class="row">
 
             <!-- ENTRADA PARA EL NOMBRE -->
 
             <div class="col-xs-12 col-sm-6 col-md-6 form-group">
-
               <div class="input-group">
-
                 <span class="input-group-addon"><i class="fa fa-user"></i></span>
-
                 <input type="text" class="form-control input-lg" name="nuevoNombre" placeholder="Ingresar nombre" required>
-
               </div>
-
             </div>
 
             <!-- ENTRADA PARA EL APELLIDO -->
 
             <div class="col-xs-12 col-sm-6 col-md-6 form-group">
-
-              <input type="text" class="form-control input-lg" name="nuevoApellido" placeholder="Ingresar apellidos" required>
-
+              <div class="input-group">
+                <span class="input-group-addon"><i class="fa fa-user"></i></span>
+                <input type="text" class="form-control input-lg" name="nuevoApellido" placeholder="Ingresar apellidos" required>
+              </div>
             </div>
-
-
 
           </div>
 
           <div class="row">
 
-            <!-- ENTRADA PARA EL USUARIO -->
+            <!-- ENTRADA PARA TIPO DE DOCUMENTO -->
 
             <div class="col-xs-12 col-sm-6 col-md-6 form-group">
 
               <div class="input-group">
 
-                <span class="input-group-addon"><i class="fa fa-key"></i></span>
+                <span class="input-group-addon"><i class="fa fa-id-badge"></i></span>
 
-                <input type="text" class="form-control input-lg" name="nuevoUsuario" placeholder="Ingresar usuario" id="nuevoUsuario" required>
+
+                <select class="form-control input-lg" name="agregarTipoDocumento" id="agregarTipoDocumento" required>
+
+                  <option value="">Ingresa el Tipo</option>
+                  <option value="Cedula de Ciudadania">Cedula de Ciudadania</option>
+                  <option value="Cedula de Extranjeria">Cedula de Extranjeria</option>
+                  <option value="Permiso de Proteccion Temporal">Permiso de Proteccion Temporal</option>
+                  <option value="Pasaporte">Pasaporte</option>
+
+                </select>
 
               </div>
 
@@ -277,21 +279,174 @@ MODAL AGREGAR USUARIO
 
           <div class="row">
 
+            <!-- ENTRADA PARA LA FECHA DE NACIMIENTO -->
+            <div class="col-xs-12 col-sm-6 col-md-6 form-group">
+              <div class="input-group">
+                <span class="input-group-addon"><i class="fa fa-calendar"></i></span>
+                <input type="date" class="form-control input-lg" name="AgregfechNacimiento" id="AgregfechNacimiento" placeholder="Fecha de Nacimiento" required>
+              </div>
+            </div>
+
+
+
             <!-- ENTRADA PARA EL GÉNERO -->
 
             <div class="col-xs-12 col-sm-6 col-md-6 form-group">
 
               <div class="input-group">
-
                 <span class="input-group-addon"><i class="fa fa-venus-mars"></i></span>
-
-                <select class="form-control input-lg" name="nuevoGenero" id="nuevoGenero" required>
-
-                  <option value="">Género:</option>
-
+                <select class="form-control input-lg" name="nuevoGenero" id="nuevoGenero" placeholder="Género" required>
+                  <option value="">Ingresar Género</option>
                   <option value="M">Masculino</option>
-
                   <option value="F">Femenino</option>
+                </select>
+              </div>
+
+            </div>
+
+          </div>
+
+          <div class="row">
+
+            <!-- ENTRADA PARA LA DIRECCION -->
+
+            <div class="col-xs-12 col-sm-6 col-md-6 form-group">
+
+              <div class="input-group">
+
+                <span class="input-group-addon"><i class="fa fa-home"></i></span>
+
+                <input type="text" class="form-control input-lg" name="AgregDireccion" id="AgregDireccion" placeholder="Ingresar Direccion" required>
+
+              </div>
+
+            </div>
+
+            <!-- ENTRADA PARA EL DEPARTAMENTO -->
+
+            <div class="col-xs-12 col-sm-6 col-md-6 form-group">
+
+              <div class="input-group">
+
+                <span class="input-group-addon"><i class="fa fa-home"></i></span>
+                <select class="form-control input-lg" name="DptoCirculacion" id="ingDptoCirculacion" required>
+
+                    <option value="">Ingresar Departamento</option>
+                    <option value="1">Amazonas</option>
+                    <option value="2">Antioquia</option>
+                    <option value="3">Arauca</option>
+                    <option value="4">Atlántico</option>
+                    <option value="5">Barranquilla</option>
+
+                    <option value="6">Bogotá</option>
+                    <option value="7">Bolívar</option>
+                    <option value="8">Boyacá</option>
+                    <option value="9">Caldas</option>
+                    <option value="10">Caquetá</option>
+
+                    <option value="11">Casanare</option>
+                    <option value="12">Cauca</option>
+                    <option value="13">Cesar</option>
+                    <option value="14">Chocó</option>
+                    <option value="15">Córdoba</option>
+
+                    <option value="16">Cundinamarca</option>
+                    <option value="17">Guainía</option>
+                    <option value="18">La Guajira</option>
+                    <option value="19">Guaviare</option>
+                    <option value="20">Huila</option>
+
+                    <option value="21">Magdalena</option>
+                    <option value="22">Meta</option>
+                    <option value="23">Nariño</option>
+                    <option value="24">Norte de Santander</option>
+                    <option value="25">Putumayo</option>
+
+                    <option value="26">Quindío</option>
+                    <option value="27">Risaralda</option>
+                    <option value="28">San Andrés</option>
+                    <option value="29">Santander</option>
+                    <option value="30">Sucre</option>
+
+                    <option value="31">Tolima</option>
+                    <option value="32">Valle del Cauca</option>
+                    <option value="33">Vaupés</option>
+                    <option value="34">Vichada</option>
+                </select>
+
+              </div>
+
+            </div>
+
+          </div>
+
+          <div class="row">
+
+            <!-- ENTRADA PARA LA CIUDAD -->
+            <div class="col-xs-12 col-sm-6 col-md-6 form-group">
+              <div class="input-group">
+
+                <span class="input-group-addon"><i class="fa fa-home"></i></span>
+                <select class="form-control input-lg" name="ingciudadCirculacion" id="ingciudadCirculacion"></select>
+                <div id="listaCiudades"></div>
+
+              </div>
+            </div>
+
+            <!-- ENTRADA PARA EL TELÉFONO -->
+
+            <div class="col-xs-12 col-sm-6 col-md-6 form-group">
+              <div class="input-group">
+                <span class="input-group-addon"><i class="fa fa-phone"></i></span>
+                <input type="text" class="form-control input-lg" name="nuevoTelefono" id="AgregMovil" placeholder="Ingresar teléfono movil" data-inputmask="'mask':'(999) 999-9999'" data-mask required>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="row">
+
+            <!-- ENTRADA PARA EL EMAIL -->
+
+            <div class="col-xs-12 col-sm-6 col-md-6 form-group">
+
+              <div class="input-group">
+
+                <span class="input-group-addon"><i class="fa fa-envelope"></i></span>
+
+                <input type="email" class="form-control input-lg" name="nuevoEmail" placeholder="Ingresar Email" required>
+
+              </div>
+
+            </div>
+
+            <!-- ENTRADA PARA EL CARGO -->
+
+            <div class="col-xs-12 col-sm-6 col-md-6 form-group">
+
+              <div class="input-group">
+
+                <span class="input-group-addon"><i class="fa fa-briefcase"></i></span>
+
+                <input type="text" class="form-control input-lg" name="nuevoCargo" placeholder="Ingresar cargo" required>
+
+              </div>
+
+            </div>
+
+          </div>
+
+          <div class="row">
+
+            <!-- ENTRADA PARA SELECCIONAR SU INTERMEDIARIO -->
+
+            <div class="col-xs-12 col-sm-6 col-md-6 form-group">
+
+              <div class="input-group">
+
+                <span class="input-group-addon"><i class="fa fa-users"></i></span>
+                <select class="form-control input-lg" name="Intermediario" id="idIntermediario">
+                  <option disabled selected>Selecciona una opción</option>
 
                 </select>
 
@@ -306,13 +461,10 @@ MODAL AGREGAR USUARIO
               <div class="input-group">
 
                 <span class="input-group-addon"><i class="fa fa-users"></i></span>
-
                 <select class="form-control input-lg" name="nuevoRol" id="idRoll">
 
                   <option value="">Selecionar rol</option>
-
                   <option value="1">Administrador</option>
-
                   <option value="2">Asesor</option>
 
                 </select>
@@ -320,6 +472,62 @@ MODAL AGREGAR USUARIO
               </div>
 
             </div>
+
+          </div>
+
+          <div class="row">
+
+            <!-- ENTRADA PARA EL NUMERO MAXIMO DE COTIZACIONES DIARIAS-->
+
+            <div class="col-xs-12 col-sm-6 col-md-6 form-group">
+
+              <div class="input-group">
+
+                <span class="input-group-addon"><i class="fa fa-sort-numeric-asc"></i></span>
+                <input type="text" class="form-control input-lg" name="maxCot" placeholder="Cotizaciones diarias" id="maxCot" required>
+
+              </div>
+
+            </div>
+
+            <!-- ENTRADA INGRESAR LA FECHA LIMITE DE USO -->
+
+            <div class="col-xs-12 col-sm-6 col-md-6 form-group">
+
+              <div class="input-group">
+
+                <span class="input-group-addon"><i class="fa fa-calendar"></i></span>
+                <input type="date" min="0" class="form-control input-lg" name="fecLim" id="fecLim" placeholder="Limite de uso" required>
+
+              </div>
+
+            </div>
+
+          </div>
+
+          <div class="row">
+
+            <!-- ENTRADA PARA EL USUARIO -->
+
+            <div class="col-xs-12 col-sm-6 col-md-6 form-group">
+
+              <div class="input-group">
+
+                <span class="input-group-addon"><i class="fa fa-key"></i></span>
+
+                <input type="text" class="form-control input-lg" name="nuevoUsuario" placeholder="Ingresar usuario" id="nuevoUsuario" required>
+
+              </div>
+
+            </div>
+
+          </div>
+
+          <div class="row">
+
+            
+
+            
 
             <!-- ENTRADA PARA LA CONTRASEÑA -->
 
@@ -342,107 +550,6 @@ MODAL AGREGAR USUARIO
 
           <div class="row">
 
-            <!-- ENTRADA PARA EL NUMERO MAXIMO DE COTIZACIONES DIARIAS-->
-
-            <div class="col-xs-12 col-sm-6 col-md-6 form-group">
-
-              <div class="input-group">
-
-                <span class="input-group-addon"><i class="fa fa-sort-numeric-asc"></i></span>
-
-                <input type="text" class="form-control input-lg" name="maxCot" placeholder="Cotizaciones diarias" id="maxCot" required>
-
-              </div>
-
-            </div>
-
-            <!-- ENTRADA INGRESAR LA FECHA LIMITE DE USO -->
-
-            <div class="col-xs-12 col-sm-6 col-md-6 form-group">
-
-              <div class="input-group">
-
-                <span class="input-group-addon"><i class="fa fa-id-badge"></i></span>
-
-                <input type="date" min="0" class="form-control input-lg" name="fecLim" id="fecLim" placeholder="Ingresar documento" required>
-
-              </div>
-
-            </div>
-
-          </div>
-
-
-
-          <div class="row">
-
-            <div class="col-xs-12 col-sm-6 col-md-6">
-
-              <div class="row">
-
-                <!-- ENTRADA PARA EL TELÉFONO -->
-
-                <div class="col-lg-12 form-group">
-
-                  <div class="input-group">
-
-                    <span class="input-group-addon"><i class="fa fa-phone"></i></span>
-
-                    <input type="text" class="form-control input-lg" name="nuevoTelefono" placeholder="Ingresar teléfono" data-inputmask="'mask':'(999) 999-9999'" data-mask required>
-
-                  </div>
-
-                </div>
-
-                <!-- ENTRADA PARA EL EMAIL -->
-
-                <div class="col-lg-12 form-group">
-
-                  <div class="input-group">
-
-                    <span class="input-group-addon"><i class="fa fa-envelope"></i></span>
-
-                    <input type="email" class="form-control input-lg" name="nuevoEmail" placeholder="Ingresar email" required>
-
-                  </div>
-
-                </div>
-
-                <!-- ENTRADA PARA EL CARGO -->
-
-                <div class="col-lg-12 form-group">
-
-                  <div class="input-group">
-
-                    <span class="input-group-addon"><i class="fa fa-briefcase"></i></span>
-
-                    <input type="text" class="form-control input-lg" name="nuevoCargo" placeholder="Ingresar cargo" required>
-
-                  </div>
-
-                </div>
-
-                <!-- ENTRADA PARA SELECCIONAR SU INTERMEDIARIO -->
-
-                <div class="col-lg-12 form-group">
-
-                  <div class="input-group">
-
-                    <span class="input-group-addon"><i class="fa fa-users"></i></span>
-
-                    <select class="form-control input-lg" name="Intermediario" id="idIntermediario">
-
-                    </select>
-
-                  </div>
-
-                </div>
-
-
-              </div>
-
-            </div>
-
             <!-- ENTRADA PARA SUBIR FOTO -->
 
             <div class="col-xs-12 col-sm-6 col-md-6">
@@ -458,7 +565,6 @@ MODAL AGREGAR USUARIO
             </div>
 
           </div>
-
 
 
         </div>
@@ -500,150 +606,347 @@ MODAL EDITAR USUARIO
 
     <div class="modal-content">
 
-      <form role="form" method="post" enctype="multipart/form-data">
+    <form role="form" method="post" enctype="multipart/form-data">
 
-        <!--=====================================
-        CABEZA DEL MODAL
-        ======================================-->
+      <!--=====================================
+      CABEZA DEL MODAL
+      ======================================-->
 
-        <div class="modal-header" style="background:#3c8dbc; color:white">
+      <div class="modal-header" style="background:#3c8dbc; color:white">
 
-          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
 
-          <h4 class="modal-title">Editar usuario</h4>
+        <h4 class="modal-title">Editar usuario</h4>
 
-        </div>
+      </div>
 
-        <!--=====================================
-        CUERPO DEL MODAL
-        ======================================-->
+      <!--=====================================
+      CUERPO DEL MODAL
+      ======================================-->
 
-        <div class="modal-body">
+      <div class="modal-body">
 
-          <div class="box-body">
+        <div class="box-body">
+
+          <div class="row">
 
             <!-- ENTRADA PARA EL NOMBRE -->
 
-            <div class="row">
+            <div class="col-xs-12 col-sm-6 col-md-6 form-group">
 
-              <div class="col-xs-12 col-sm-6 col-md-6 form-group">
+              <div class="input-group">
 
-                <div class="input-group">
+                <span class="input-group-addon"><i class="fa fa-user"></i></span>
 
-                  <span class="input-group-addon"><i class="fa fa-user"></i></span>
-
-                  <input type="text" class="form-control input-lg" name="editarNombre" id="editarNombre" placeholder="Actualizar nombre" required>
-                  <input type="hidden" id="idCliente" name="idCliente">
-                  <input type="hidden" id="codCliente" name="codCliente">
-
-                </div>
+                <input type="text" class="form-control input-lg" name="editarNombre" id="editarNombre" placeholder="Actualizar nombre" required>
+                <input type="hidden" id="idCliente" name="idCliente">
+                <input type="hidden" id="codCliente" name="codCliente">
 
               </div>
 
-              <!-- ENTRADA PARA EL APELLIDO -->
+            </div>
 
-              <div class="col-xs-12 col-sm-6 col-md-6 form-group">
+            <!-- ENTRADA PARA EL APELLIDO -->
 
+            <div class="col-xs-12 col-sm-6 col-md-6 form-group">
+
+              <div class="input-group">
+
+                <span class="input-group-addon"><i class="fa fa-user"></i></span>
                 <input type="text" class="form-control input-lg" name="editarApellido" id="editarApellido" placeholder="Actualizar apellido" required>
-
-              </div>
-
-            </div>
-
-            <div class="row">
-
-              <!-- ENTRADA PARA EL USUARIO -->
-
-              <div class="col-xs-12 col-sm-6 col-md-6 form-group">
-
-                <div class="input-group">
-
-                  <span class="input-group-addon"><i class="fa fa-key"></i></span>
-
-                  <input type="text" class="form-control input-lg" id="editarUsuario" name="editarUsuario" value="" readonly>
-
-                </div>
-
-              </div>
-
-              <!-- ENTRADA PARA EL DOCUMENTO ID -->
-
-              <div class="col-xs-12 col-sm-6 col-md-6 form-group">
-
-                <div class="input-group">
-
-                  <span class="input-group-addon"><i class="fa fa-id-badge"></i></span>
-
-                  <input type="number" min="0" class="form-control input-lg" name="editarDocIdUser" id="editarDocIdUser" placeholder="Actualizar documento" required>
-
-                </div>
-
-              </div>
-
-            </div>
-
-            <div class="row">
-
-              <!-- ENTRADA PARA EL GÉNERO -->
-
-              <div class="col-xs-12 col-sm-6 col-md-6 form-group">
-
-                <div class="input-group">
-
-                  <span class="input-group-addon"><i class="fa fa-venus-mars"></i></span>
-
-                  <select class="form-control input-lg" name="editarGenero" id="editarGenero" required>
-
-                    <option value="">Género:</option>
-                    <option value="M">Masculino</option>
-                    <option value="F">Femenino</option>
-
-                  </select>
-
-                </div>
-
-              </div>
-
-              <!-- ENTRADA PARA SELECCIONAR SU ROL -->
-
-              <div class="col-xs-12 col-sm-6 col-md-6 form-group">
-
-                <div class="input-group">
-
-                  <span class="input-group-addon"><i class="fa fa-users"></i></span>
-
-                  <select class="form-control input-lg" name="editarRol" id="editarRol">
-
-                    <option value="">Selecionar rol</option>
-
-                    <option value="1">Administrador</option>
-
-                    <option value="2">Asesor</option>
-
-                  </select>
-
-                </div>
-
-              </div>
-
-              <!-- ENTRADA PARA LA CONTRASEÑA -->
-
-              <!-- <div class="col-xs-12 col-sm-6 col-md-6 form-group">
               
-                <div class="input-group">
-                
-                  <span class="input-group-addon"><i class="fa fa-lock"></i></span> -->
+              </div>
+              
+            </div>
 
-              <input type="hidden" class="form-control input-lg" name="editarPassword" placeholder="Ingrese nueva contraseña" id="editarPassword">
+          </div>
 
-              <input type="hidden" id="passwordActual" name="passwordActual">
+          <div class="row">
 
-              <!-- </div>
+            <!-- ENTRADA PARA EL TIPO DE DOCUMENTO -->
 
-              </div> -->
+            <div class="col-xs-12 col-sm-6 col-md-6 form-group">
+
+              <div class="input-group">
+
+                <span class="input-group-addon"><i class="fa fa-id-badge"></i></span>
+
+
+                <select class="form-control input-lg" name="editarTipoDocumento" id="editarTipoDocumento" required>
+
+                  <option value="">Tipo de documento:</option>
+                  <option value="Cedula de Ciudadania">Cedula de Ciudadania</option>
+                  <option value="Cedula de Extranjeria">Cedula de Extranjeria</option>
+                  <option value="Permiso de Proteccion Temporal">Permiso de Proteccion Temporal</option>
+                  <option value="Pasaporte">Pasaporte</option>
+
+                </select>
+
+              </div>
 
             </div>
-            <div class="row">
+
+            <!-- ENTRADA PARA EL DOCUMENTO ID -->
+
+            <div class="col-xs-12 col-sm-6 col-md-6 form-group">
+
+              <div class="input-group">
+
+                <span class="input-group-addon"><i class="fa fa-id-badge"></i></span>
+
+                <input type="number" min="0" class="form-control input-lg" name="editarDocIdUser" id="editarDocIdUser" placeholder="Actualizar documento" required>
+
+              </div>
+
+            </div>
+
+          </div>
+
+          <div class="row">
+
+            <!-- ENTRADA PARA LA FECHA DE NACIMIENTO -->
+            <div class="col-xs-12 col-sm-6 col-md-6 form-group">
+
+              <div class="input-group">
+
+                <span class="input-group-addon"><i class="fa fa-calendar"></i></span>
+
+                <input type="date" min="0" class="form-control input-lg" name="fechNacimiento" id="fechNacimiento" placeholder="Ingresar fecha" required>
+
+              </div>
+
+            </div>
+
+            <!-- ENTRADA PARA EL GÉNERO -->
+            <div class="col-xs-12 col-sm-6 col-md-6 form-group">
+
+              <div class="input-group">
+
+                <span class="input-group-addon"><i class="fa fa-venus-mars"></i></span>
+
+                <select class="form-control input-lg" name="editarGenero" id="editarGenero" required>
+
+                  <option value="">Género:</option>
+                  <option value="M">Masculino</option>
+                  <option value="F">Femenino</option>
+
+                </select>
+
+              </div>
+
+            </div>
+
+          </div>
+
+
+          <div class="row">
+
+
+            <!-- ENTRADA PARA EL CELULAR -->
+            <div class="col-xs-12 col-sm-6 col-md-6 form-group">
+              <div class="input-group">
+
+                <span class="input-group-addon"><i class="fa fa-mobile"></i></span>
+                <input type="text" class="form-control input-lg" name="editarTelefono" id="editarTelefono" placeholder="Ingresar teléfono" data-inputmask="'mask':'(999) 999-9999'" data-mask required>
+
+              </div>
+            </div>
+
+            <!-- ENTRADA PARA LA DIRECCION -->
+
+            <div class="col-xs-12 col-sm-6 col-md-6 form-group">
+
+              <div class="input-group">
+
+                <span class="input-group-addon"><i class="fa fa-home"></i></span>
+
+                <input type="text" class="form-control input-lg" name="editarDireccion" id="editarDireccion" placeholder="Sin Direccion" required>
+
+              </div>
+
+            </div>
+
+            <!-- ENTRADA PARA EL DEPARTAMENTO -->
+
+            <!-- <div class="col-xs-12 col-sm-6 col-md-6 form-group">
+
+              <div class="input-group">
+
+                <span class="input-group-addon"><i class="fa fa-home"></i></span>
+                <select class="form-control input-lg" name="DptoCirculacion" id="DptoCirculacion" required>
+
+                  <option value=""></option>
+                  <option value="1">Amazonas</option>
+                  <option value="2">Antioquia</option>
+                  <option value="3">Arauca</option>
+                  <option value="4">Atlántico</option>
+                  <option value="5">Barranquilla</option>
+
+                  <option value="6">Bogotá</option>
+                  <option value="7">Bolívar</option>
+                  <option value="8">Boyacá</option>
+                  <option value="9">Caldas</option>
+                  <option value="10">Caquetá</option>
+
+                  <option value="11">Casanare</option>
+                  <option value="12">Cauca</option>
+                  <option value="13">Cesar</option>
+                  <option value="14">Chocó</option>
+                  <option value="15">Córdoba</option>
+
+                  <option value="16">Cundinamarca</option>
+                  <option value="17">Guainía</option>
+                  <option value="18">La Guajira</option>
+                  <option value="19">Guaviare</option>
+                  <option value="20">Huila</option>
+
+                  <option value="21">Magdalena</option>
+                  <option value="22">Meta</option>
+                  <option value="23">Nariño</option>
+                  <option value="24">Norte de Santander</option>
+                  <option value="25">Putumayo</option>
+
+                  <option value="26">Quindío</option>
+                  <option value="27">Risaralda</option>
+                  <option value="28">San Andrés</option>
+                  <option value="29">Santander</option>
+                  <option value="30">Sucre</option>
+
+                  <option value="31">Tolima</option>
+                  <option value="32">Valle del Cauca</option>
+                  <option value="33">Vaupés</option>
+                  <option value="34">Vichada</option>
+                </select>
+
+              </div>
+
+            </div> -->
+
+          </div>
+
+          <div class="row">
+
+            <!-- ENTRADA PARA LA CIUDAD -->
+
+            <!-- <div class="col-xs-12 col-sm-6 col-md-6 form-group">
+              <div class="input-group">
+
+                <span class="input-group-addon"><i class="fa fa-home"></i></span>
+                <select class="form-control" id="ciudadCirculacion"></select>
+                <div id="listaCiudades"></div>
+
+              </div>
+            </div> -->
+
+
+
+
+          </div>
+
+          <div class="row">
+
+            <!-- ENTRADA PARA LA CIUDAD ACTUAL OPCION 2-->
+            <div class="col-xs-12 col-sm-6 col-md-6 form-group">
+
+              <div class="input-group">
+
+                <span class="input-group-addon"><i class="fa fa-home"></i></span>
+                <input type="text" class="form-control input-lg" name="ciudadActual" id="ciudadActual" placeholder="Ciudad de residencia Actual" readonly>
+                <input type="hidden" id="codigoCiudadActual" name="codigoCiudadActual">
+
+              </div>
+
+            </div>
+
+            <!-- ENTRADA PARA LA CIUDAD OPCION 2-->
+            <div class="col-xs-12 col-sm-6 col-md-6 form-group">
+              <div class="input-group">
+
+                <span class="input-group-addon"><i class="fa fa-home"></i></span>
+                <select class="form-control" name="ciudad2" id="ciudad2"></select>
+                  <!-- <option></option> Opción vacía para que el buscador funcione correctamente -->
+                  <!-- <div id="listaCiudades"></div> -->
+
+              </div>
+            </div>
+
+          </div>
+
+          <div class="row">
+
+            <!-- ENTRADA PARA EL EMAIL-->
+
+            <div class="col-xs-12 col-sm-6 col-md-6 form-group">
+
+              <div class="input-group">
+
+                <span class="input-group-addon"><i class="fa fa-envelope"></i></span>
+
+                <input type="email" class="form-control input-lg" name="editarEmail" id="editarEmail" placeholder="Actualizar email" required>
+                <input type="hidden" id="idEstado" name="idEstado">
+
+              </div>
+
+            </div>
+
+            <!-- ENTRADA INGRESAR CARGO -->
+
+            <div class="col-xs-12 col-sm-6 col-md-6 form-group">
+
+              <div class="input-group">
+
+                <span class="input-group-addon"><i class="fa fa-user"></i></span>
+                <input type="text" class="form-control input-lg" name="editarCargo" id="editarCargo" placeholder="Ingresar cargo" required>
+
+              </div>
+
+            </div>
+
+          </div>
+
+          <div class="row">
+
+            <!-- ENTRADA PARA EL INTERMEDIARIO -->
+
+            <div class="col-xs-12 col-sm-6 col-md-6 form-group">
+
+              <div class="input-group">
+
+                <span class="input-group-addon"><i class="fa fa-users"></i></span>
+
+                <select class="form-control input-lg" name="Intermediario2" id="idIntermediario2">
+
+                </select>
+
+              </div>
+
+            </div>
+
+            <!-- ENTRADA PARA SELECCIONAR SU ROL -->
+
+            <div class="col-xs-12 col-sm-6 col-md-6 form-group">
+
+              <div class="input-group">
+
+                <span class="input-group-addon"><i class="fa fa-users"></i></span>
+
+                <select class="form-control input-lg" name="editarRol" id="editarRol">
+
+                  <option value="">Selecionar rol</option>
+
+                  <option value="1">Administrador</option>
+
+                  <option value="2">Asesor</option>
+
+                </select>
+
+              </div>
+
+            </div>
+
+          </div>
+
+          <div class="row">
 
             <!-- ENTRADA PARA EL NUMERO MAXIMO DE COTIZACIONES DIARIAS-->
 
@@ -652,8 +955,7 @@ MODAL EDITAR USUARIO
               <div class="input-group">
 
                 <span class="input-group-addon"><i class="fa fa-sort-numeric-asc"></i></span>
-
-                <input type="text" class="form-control input-lg" name="maxCotEdi" placeholder="Cotizaciones diarias" id="maxCotEdi" required>
+                <input type="text" min="0" class="form-control input-lg" name="maxiCot" placeholder="Cotizaciones diarias" id="maxiCot" required>
 
               </div>
 
@@ -665,8 +967,7 @@ MODAL EDITAR USUARIO
 
               <div class="input-group">
 
-                <span class="input-group-addon"><i class="fa fa-id-badge"></i></span>
-
+                <span class="input-group-addon"><i class="fa fa-calendar"></i></span>
                 <input type="date" min="0" class="form-control input-lg" name="fechaLimEdi" id="fechaLimEdi" placeholder="Ingresar documento" required>
 
               </div>
@@ -675,89 +976,29 @@ MODAL EDITAR USUARIO
 
           </div>
 
-            <div class="row">
+          <div class="row">
 
-              <div class="col-xs-12 col-sm-6 col-md-6">
+            <!-- DISPLAY USU_USUARIO -->
 
-                <div class="row">
+            <div class="col-xs-12 col-sm-6 col-md-6 form-group">
 
-                  <!-- ENTRADA PARA EL TELÉFONO -->
+              <div class="input-group">
 
-                  <div class="col-lg-12 form-group">
-
-                    <div class="input-group">
-
-                      <span class="input-group-addon"><i class="fa fa-phone"></i></span>
-
-                      <input type="text" class="form-control input-lg" name="editarTelefono" id="editarTelefono" placeholder="Ingresar teléfono" data-inputmask="'mask':'(999) 999-9999'" data-mask required>
-
-                    </div>
-
-                  </div>
-
-                  <!-- ENTRADA PARA EL EMAIL -->
-
-                  <div class="col-lg-12 form-group">
-
-                    <div class="input-group">
-
-                      <span class="input-group-addon"><i class="fa fa-envelope"></i></span>
-
-                      <input type="email" class="form-control input-lg" name="editarEmail" id="editarEmail" placeholder="Actualizar email" required>
-                      <input type="hidden" id="idEstado" name="idEstado">
-
-                    </div>
-
-                  </div>
-
-                  <!-- ENTRADA PARA EL CARGO -->
-
-                  <div class="col-lg-12 form-group">
-
-                    <div class="input-group">
-
-                      <span class="input-group-addon"><i class="fa fa-briefcase"></i></span>
-
-                      <input type="text" class="form-control input-lg" name="editarCargo" id="editarCargo" placeholder="Ingresar cargo" required>
-
-                    </div>
-
-                  </div>
-
-                  <!-- ENTRADA PARA EL INTERMEDIARIO -->
-
-                  <div class="col-lg-12 form-group">
-
-                    <div class="input-group">
-
-                      <span class="input-group-addon"><i class="fa fa-users"></i></span>
-
-                      <select class="form-control input-lg" name="Intermediario2" id="idIntermediario2">
-
-                      </select>
-
-                    </div>
-
-                  </div>
-
-
-                </div>
+                <span class="input-group-addon"><i class="fa fa-key"></i></span>
+                <input type="text" class="form-control input-lg" id="editarUsuario" name="editarUsuario" value="" readonly>
 
               </div>
 
-              <!-- ENTRADA PARA SUBIR FOTO -->
+            </div>
 
-              <div class="col-xs-12 col-sm-6 col-md-6">
+              <!-- DISPLAY USU_FCH_CREACION -->
 
-                <div class="panel">SUBIR FOTO</div>
+            <div class="col-xs-12 col-sm-6 col-md-6 form-group">
 
-                <img src="vistas/img/usuarios/default/anonymous.png" class="img-thumbnail previsualizarEditar" width="90px">
+              <div class="input-group">
 
-                <input type="file" class="nuevaFoto" name="editarFoto">
-
-                <input type="hidden" name="fotoActual" id="fotoActual">
-
-                <p class="help-block">Peso máximo de la foto 2MB</p>
+                <span class="input-group-addon"><i class="fa fa-calendar"></i></span>
+                <input type="date" min="0" class="form-control input-lg" name="fechaUserExist" id="fechaUserExist" readonly>
 
               </div>
 
@@ -765,28 +1006,50 @@ MODAL EDITAR USUARIO
 
           </div>
 
+          <!-- ENTRADA PARA SUBIR FOTO -->
+
+          <div class="row">
+
+            <div class="col-xs-12 col-sm-6 col-md-6 form-group">
+
+              <div class="panel">SUBIR FOTO</div>
+
+              <img src="vistas/img/usuarios/default/anonymous.png" class="img-thumbnail previsualizarEditar" width="90px">
+
+              <input type="file" class="nuevaFoto" name="editarFoto">
+
+              <input type="hidden" name="fotoActual" id="fotoActual">
+
+              <p class="help-block">Peso máximo de la foto 2MB</p>
+
+            </div>
+
+          </div>
+
         </div>
 
-        <!--=====================================
-        PIE DEL MODAL
-        ======================================-->
+      </div>
 
-        <div class="modal-footer">
+      <!--=====================================
+      PIE DEL MODAL
+      ======================================-->
 
-          <button type="button" class="btn btn-default pull-left" data-dismiss="modal">Salir</button>
+      <div class="modal-footer">
 
-          <button type="submit" class="btn btn-primary">Modificar usuario</button>
+        <button type="button" class="btn btn-default pull-left" data-dismiss="modal">Salir</button>
 
-        </div>
+        <button type="submit" class="btn btn-primary">Modificar usuario</button>
 
-        <?php
+      </div>
 
-        $editarUsuario = new ControladorUsuarios();
-        $editarUsuario->ctrEditarUsuario();
+      <?php
 
-        ?>
+      $editarUsuario = new ControladorUsuarios();
+      $editarUsuario->ctrEditarUsuario();
 
-      </form>
+      ?>
+
+    </form>
 
     </div>
 
@@ -801,6 +1064,51 @@ $borrarUsuario->ctrBorrarUsuario();
 
 ?>
 
+<script>
+  $(document).ready(function() {
+    const inputFecha = $("#AgregfechNacimiento");
+
+    // Cambiar el tipo de entrada a "text" al cargar la página
+    inputFecha.prop("type", "text");
+
+    // Cuando el campo de entrada obtiene el foco
+    inputFecha.focus(function() {
+      // Cambiar el tipo de entrada a "date"
+      inputFecha.prop("type", "date");
+    });
+
+    // Cuando el campo de entrada pierde el foco
+    inputFecha.blur(function() {
+      // Si el campo de entrada está vacío, restaurar el tipo de entrada a "text"
+      if (inputFecha.val() === "") {
+        inputFecha.prop("type", "text");
+      }
+    });
+  });
+</script>
+
+<script>
+  $(document).ready(function() {
+    const inputFecha = $("#fecLim");
+
+    // Cambiar el tipo de entrada a "text" al cargar la página
+    inputFecha.prop("type", "text");
+
+    // Cuando el campo de entrada obtiene el foco
+    inputFecha.focus(function() {
+      // Cambiar el tipo de entrada a "date"
+      inputFecha.prop("type", "date");
+    });
+
+    // Cuando el campo de entrada pierde el foco
+    inputFecha.blur(function() {
+      // Si el campo de entrada está vacío, restaurar el tipo de entrada a "text"
+      if (inputFecha.val() === "") {
+        inputFecha.prop("type", "text");
+      }
+    });
+  });
+</script>
 <script src="vistas/js/usuarios.js?v=<?php echo (rand()); ?>"></script>
 
 <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>

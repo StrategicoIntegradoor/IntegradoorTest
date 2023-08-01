@@ -113,13 +113,115 @@ $(".nuevaFoto").change(function(){
 /*=============================================
 EDITAR USUARIO
 =============================================*/
+
+// Carga los Departamentos disponibles para editar
+$("#DptoCirculacion").select2({
+theme: "bootstrap dpto1",
+language: "es",
+width: "100%",
+});
+
+$("#DptoCirculacion").change(function () {
+    consultarCiudad();
+  });
+
+// Carga las Ciudades disponibles para editar
+$("#ciudadCirculacion").select2({
+	theme: "bootstrap ciudad1",
+	language: "es",
+	width: "100%",
+	});
+
+// Carga los Departamentos disponibles para agregar
+$("#ingDptoCirculacion").select2({
+	theme: "bootstrap dpto1",
+	language: "es",
+	width: "100%",
+	});
+	
+$("#ingDptoCirculacion").change(function () {
+	consultarCiudadAgregar();
+	});
+
+// Carga las Ciudades disponibles para agregar
+$("#ingciudadCirculacion").select2({
+	theme: "bootstrap ciudad1",
+	language: "es",
+	width: "100%",
+	placeholder: "Ingresar ciudad", // Texto del placeholder del buscador
+
+	});
+
+// FUNCION PARA CARGAR LA CIUDAD DE CIRCULACIÓN
+function consultarCiudad() {
+	var codigoDpto = document.getElementById("DptoCirculacion").value;
+  
+	$.ajax({
+	  type: "POST",
+	  url: "src/consultarCiudad.php",
+	  dataType: "json",
+	  data: { data: codigoDpto },
+	  cache: false,
+	  success: function (data) {
+		// console.log(data);
+		var ciudadesVeh = `<option value="">Seleccionar Ciudad</option>`;
+  
+		data.forEach(function (valor, i) {
+		  var valorNombre = valor.Nombre.split("-");
+		  var nombreMinusc = valorNombre[0].toLowerCase();
+		  var ciudad = nombreMinusc.replace(/^(.)|\s(.)/g, function ($1) {
+			return $1.toUpperCase();
+		  });
+  
+		  ciudadesVeh += `<option value="${valor.Codigo}">${ciudad}</option>`;
+		});
+		document.getElementById("ciudadCirculacion").innerHTML = ciudadesVeh;
+		// document.getElementById("ingciudadCirculacion").innerHTML = ciudadesVeh;
+
+	  },
+	});
+  
+	//}
+  }
+
+// FUNCION PARA CARGAR LA CIUDAD DE CIRCULACIÓN
+function consultarCiudadAgregar() {
+	var codigoDpto = document.getElementById("ingDptoCirculacion").value;
+  
+	$.ajax({
+	  type: "POST",
+	  url: "src/consultarCiudad.php",
+	  dataType: "json",
+	  data: { data: codigoDpto },
+	  cache: false,
+	  success: function (data) {
+		// console.log(data);
+		var ciudadesVeh = `<option value="">Seleccionar Ciudad</option>`;
+  
+		data.forEach(function (valor, i) {
+		  var valorNombre = valor.Nombre.split("-");
+		  var nombreMinusc = valorNombre[0].toLowerCase();
+		  var ciudad = nombreMinusc.replace(/^(.)|\s(.)/g, function ($1) {
+			return $1.toUpperCase();
+		  });
+  
+		  ciudadesVeh += `<option value="${valor.Codigo}">${ciudad}</option>`;
+		});
+		// document.getElementById("ciudadCirculacion").innerHTML = ciudadesVeh;
+		document.getElementById("ingciudadCirculacion").innerHTML = ciudadesVeh;
+
+	  },
+	});
+  
+	//}
+  }
+
 $(".tablas").on("click", ".btnEditarUsuario", function(){
 
 	var idUsuario = $(this).attr("idUsuario");
 	
 	var datos = new FormData();
 	datos.append("idUsuario", idUsuario);
-
 	$.ajax({
 
 		url:"ajax/usuarios.ajax.php",
@@ -144,14 +246,159 @@ $(".tablas").on("click", ".btnEditarUsuario", function(){
 			$("#fotoActual").val(respuesta["usu_foto"]);
 			$("#editarRol").val(respuesta["id_rol"]);
 			$("#idIntermediario2").val(respuesta["id_Intermediario"]);
-			$("#maxCotEdi").val(respuesta["numCotizaciones"]);
+			$("#maxiCot").val(respuesta["numCotizaciones"]);
 			$("#fechaLimEdi").val(respuesta["fechaFin"]);
+			$("#fechNacimiento").val(respuesta["usu_fch_nac"]);
+			$("#editarDireccion").val(respuesta["direccion"]);
+			$("#editarTipoDocumento").val(respuesta["tipos_documentos_id"]);
 
+
+  			// Convertir la fecha ISO 8601 a un objeto Date
+
+			function formatearFechaISO8601(fechaISO8601) {
+			// Convertir la fecha ISO 8601 a un objeto Date
+			var fecha = new Date(fechaISO8601);
+			
+			// Obtener los componentes de la fecha
+			var dia = fecha.getDate();
+			var mes = fecha.getMonth() + 1; // Los meses van de 0 a 11, sumamos 1 para obtener el mes correcto
+			var anio = fecha.getFullYear();
+			
+			// Formatear la fecha en formato "yyyy-mm-dd"
+			var fechaFormateada = anio + "-" + (mes < 10 ? "0" + mes : mes) + "-" + (dia < 10 ? "0" + dia : dia);
+			
+			return fechaFormateada;
+			}
+			
+			// Supongamos que tienes la fecha en formato ISO 8601 en la variable 'fechaISO8601'
+			var fechaISO8601 = respuesta["usu_fch_creacion"];
+			
+			// Formatear la fecha
+			var fechaFormateada = formatearFechaISO8601(fechaISO8601);
+			
+			// Asignar la fecha formateada al campo de entrada
+			$("#fechaUserExist").val(fechaFormateada);
+			  
+
+  			// Logica foto de usuario
 			if(respuesta["usu_foto"] != ""){
 				$(".previsualizarEditar").attr("src", respuesta["usu_foto"]);
 			}else{
 				$(".previsualizarEditar").attr("src", "vistas/img/usuarios/default/anonymous.png");
 			}
+
+			// Crear una instancia de FormData
+			var formData = new FormData();
+
+			// Obtener el código de ciudad
+			var codigoCiudad = respuesta["ciudades_id"];
+			formData.append("ciudad", codigoCiudad);
+
+
+			// var codigoCiudad = respuesta["ciudades_id"].toString();
+
+			// console.log(codigoCiudad.length)
+			// if (codigoCiudad.length < 5) {
+				
+			// 	var nuevoCodigoCiudad = "0" + codigoCiudad;
+			// 	formData.append("ciudad", nuevoCodigoCiudad);
+
+			//   }else{
+			// 	formData.append("ciudad", codigoCiudad);
+			//   }
+
+			
+			// FUNCION BUSCAR CIUDAD #1
+
+			$.ajax({
+
+				url:"ajax/ciudades.ajax.php",
+				method: "POST",
+				data: formData, // Agrega el nombre del campo "ciudad"
+				cache: false,
+				contentType: false,
+				processData: false,
+				dataType: "json",
+				success: function(respuesta){
+				console.log("success");
+
+				// function obtenerValorDepartamento(nombreDepartamento) {
+				// var options = $("#DptoCirculacion option"); // Obtener todas las opciones del select
+				// for (var i = 0; i < options.length; i++) {
+				// 	if (options[i].text.toUpperCase() === nombreDepartamento.toUpperCase()) {
+				// 	return options[i].value; // Retornar el valor de la opción que coincide con el nombre
+				// 	}
+				// }
+				// return ""; // Valor por defecto si el nombre del departamento no coincide con ninguno
+				// }
+
+				// Supongamos que tienes el nombre del departamento en una variable llamada 'departamento'
+				var municipio = respuesta.Nombre; // Nombre del departamento obtenido desde la respuesta
+				var codigo = respuesta.Codigo;
+				
+				// Obtener el valor del select a partir del nombre del municipio
+				// var valorDepartamento = obtenerValorDepartamento(departamento);
+
+				$('#ciudadActual').val(municipio);
+				$('#codigoCiudadActual').val(codigo);
+
+				}
+		
+			});
+
+			// FUNCION BUSCAR CIUDAD #2
+
+			// $.ajax({
+			// 	url: "ajax/ciudades.ajax.php",
+			// 	method: "POST",
+			// 	dataType: "json",
+			// 	success: function (respuesta) {
+
+			// 	  console.log(respuesta);
+			// 	  const selectCiudadCirculacion2 = $("#ciudad2");
+			  
+			// 	  respuesta.forEach(function (ciudad) {
+			// 		const option = $("<option>", {
+			// 		  value: ciudad.Codigo, // Suponiendo que el código es el valor que deseas enviar al servidor
+			// 		  text: ciudad.Nombre // Utiliza la propiedad "nombre" para mostrar el nombre de la ciudad en la opción
+			// 		});
+			  
+			// 		selectCiudadCirculacion2.append(option);
+			// 	  });
+			// 	},
+			// 	error: function (xhr, status, error) {
+			// 	  console.error(error);
+			// 	}
+			//   });
+
+
+			$("#ciudad2").select2({
+				theme: "bootstrap dpto1",
+				language: "es",
+				width: "100%",
+				// data: '<?php echo json_encode($ciudadesSelect2); ?>',
+				ajax: {
+				  url: "ajax/ciudades.ajax.php", // URL del script PHP que devolverá las ciudades
+				  dataType: "json",
+				  delay: 250, // Retardo antes de realizar la búsqueda (milisegundos)
+				  data: function (params) {
+					return {
+					  q: params.term, // Término de búsqueda ingresado por el usuario
+					};
+				  },
+				  processResults: function (data) {
+					return {
+					  results: data, // Resultados obtenidos del servidor
+					};
+				  },
+				  cache: true, // Habilitar el almacenamiento en caché para reducir las solicitudes al servidor
+				},
+				minimumInputLength: 3, // Número mínimo de caracteres para comenzar la búsqueda
+				allowClear: true, // Mostrar botón para borrar la selección
+				dropdownAutoWidth: true, // Ancho automático del desplegable
+				placeholder: "Editar ciudad", // Texto del placeholder del buscador
+			  });
+			  
 
 		}
 
