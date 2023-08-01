@@ -381,12 +381,12 @@ select:invalid + .error-message {
                             <input type="hidden" id="nombre" value="<?php echo $_SESSION['nombre']; ?>">
                             <input type="hidden" id="apellido" value="<?php echo $_SESSION['apellido']; ?>">
                             <input type="hidden" id="idUsuario" value="<?php echo $_SESSION['idUsuario']; ?>">
-                        <div class="col-xs-12 col-sm-6 col-lg-3 form-group" style="margin-bottom: 0;">
+                        <div class="col-xs-12 col-sm-6 col-lg-3 form-group" style="margin-bottom: 0px;">
                             <label for="nombreTitular">Nombre Titular</label>
                             <input type="text" class="form-control" id="nombreTitular" name="nombreTitular" placeholder="Nombre completo" required>
                         </div>
                         
-                        <div class="col-xs-12 col-sm-6 col-lg-3 form-group" style="margin-bottom: 0;">
+                        <div class="col-xs-12 col-sm-6 col-lg-3 form-group" style="margin-bottom: 0px;">
                             <label for="">Edad Titular</label>
                                 <select class="form-control edad" name="edad" id="edad" required>
                                     <option value="">Edad Titular</option>
@@ -402,7 +402,7 @@ select:invalid + .error-message {
                                 </select>
                         </div>
 
-                        <div class="col-xs-12 col-sm-6 col-lg-3 form-group" style="margin-bottom: 0;">
+                        <div class="col-xs-12 col-sm-6 col-lg-3 form-group" style="margin-bottom: 0px;">
                             <label for="tipoPlanExequialID">Tipo Plan exequial</label>
                             <select class="form-control" id="tipoPlanExequialID" required>
                                 <option value="" selected>Tipo de plan</option>
@@ -417,7 +417,7 @@ select:invalid + .error-message {
                     </div>
                 </form>
                 <br>
-                <p style="font-size: 15px; margin-bottom: 0px;">Consulta la presentación del producto Exequial Los Olivos <b style="font-size: 15px;"><a href="vistas/pdfs/PresentaciónComercialExequialLosOlivos.pdf" target="_blank">AQUI</a></b></p>
+                <p style="font-size: 20px; margin-bottom: 0px;">Consulta la presentación del producto Exequial Los Olivos <b style="font-size: 20px;"><a href="vistas/pdfs/PresentaciónComercialExequialLosOlivos.pdf" target="_blank">AQUI</a></b></p>
 
             </div>
         </div>           
