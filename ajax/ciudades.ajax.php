@@ -20,7 +20,7 @@ class AjaxCiudades{
 
 	public function ajaxEditarCiudad(){
         
-		$item = "codigo";
+		$item = "Codigo";
         $valor = $_POST['ciudad']; // Asignar el valor de la propiedad 'valor' a una variable local
 		$respuesta = ControladorCiudades::ctrBuscarCiudades($item, $valor);
 
