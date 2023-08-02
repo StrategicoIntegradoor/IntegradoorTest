@@ -183,7 +183,7 @@
                 Crear Estado Contrato
               </button>
               <div class="card-body">
-                  <table  id="stateTable" class="table table-bordered table-striped dt-responsive tablas" width="100%">
+                  <table  id="stateTable" class="table table-bordered table-striped dt-responsive tablas-cotizaciones" width="100%">
                       <thead>
                           <tr>
                             <th>Id Estado contrato</th>
