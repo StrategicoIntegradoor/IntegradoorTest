@@ -10,7 +10,7 @@ class ModeloCiudades{
         $stmt -> execute();
         $resultados = $stmt->fetchAll(PDO::FETCH_ASSOC);
         return $resultados;
-
+        
     }
     
     public static function MdlBuscarCiudades($item, $valor, $item2){
