@@ -205,7 +205,7 @@
                 Crear Tipo Contrato
               </button>
                 <div class="card-body">
-                    <table  id="typeTable" class="table table-bordered table-striped dt-responsive tablas-cotizaciones2" width="100%">
+                    <table  id="typeTable" class="table table-bordered table-striped dt-responsive tablas-cotiza" width="100%">
                         <thead>
                             <tr>
                               <th>Id Tipo Contrato</th>
