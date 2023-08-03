@@ -24,10 +24,10 @@
 			</a>			
 				<ul class="dropdown-menu right">
 					<li class="user-body">			
-						<a href="politicas" class="btn btn-default btn-flat"><i class="" style="color: red;"></i>Politicas</a>
+						<a href="politicas" class="btn btn-default btn-flat"><i class="" style="color: red;"></i>Políticas</a>
 					</li>
 					<li class="user-body">	
-						<a href="inicio" class="btn btn-default btn-flat"><i class="" style="color: red;"></i>Planes</a>
+						<a href="planes" class="btn btn-default btn-flat"><i class="" style="color: red;"></i>Planes</a>
 					</li>
 					<li class="user-body">	
 						<a href="inicio" class="btn btn-default btn-flat"><i class="" style="color: red;"></i>Contratos</a>
