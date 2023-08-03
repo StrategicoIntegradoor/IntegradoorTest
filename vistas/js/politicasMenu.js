@@ -71,7 +71,46 @@ function cargar_politicas(){
               accionesCell.appendChild(separador);
               accionesCell.appendChild(actualizarBtn);
         });
+
+        /*===================================================
+        CONFIGURACION DE LA TABLA DATATABLE PARA COTIZACIONES
+        ===================================================*/
+      $("#politicsTable").DataTable({
+        "destroy": true,          // order: [
+        //   [0, "desc"],
+        //   [1, "desc"],
+        // ],
+        // "ordering": false,
+        language: {
+          sProcessing: "Procesando...",
+          sLengthMenu: "Mostrar _MENU_ registros",
+          sZeroRecords: "No se encontraron resultados",
+          sEmptyTable: "Ningún dato disponible en esta tabla",
+          sInfo: "Mostrando registros del _START_ al _END_ de un total de _TOTAL_",
+          sInfoEmpty: "Mostrando registros del 0 al 0 de un total de 0",
+          sInfoFiltered: "(filtrado de un total de _MAX_ registros)",
+          sInfoPostFix: "",
+          sSearch: "Buscar:",
+          sUrl: "",
+          sInfoThousands: ",",
+          sLoadingRecords: "Cargando...",
+          oPaginate: {
+            sFirst: "Primero",
+            sLast: "Último",
+            sNext: "Siguiente",
+            sPrevious: "Anterior",
+          },
+          oAria: {
+            sSortAscending:
+              ": Activar para ordenar la columna de manera ascendente",
+            sSortDescending:
+              ": Activar para ordenar la columna de manera descendente",
+          },
+        },
+      }); 
     })
+
+    
     .catch(error => {
         console.error(error);
     });
@@ -132,6 +171,45 @@ function cargar_politicas(){
               accionesCell.appendChild(separador);
               accionesCell.appendChild(actualizarBtn);
         });
+
+        /*===================================================
+        CONFIGURACION DE LA TABLA DATATABLE PARA COTIZACIONES
+        ===================================================*/
+        $("#stateTable").DataTable({
+            "destroy": true,          // order: [
+            //   [0, "desc"],
+            //   [1, "desc"],
+            // ],
+            // "ordering": false,
+            language: {
+              sProcessing: "Procesando...",
+              sLengthMenu: "Mostrar _MENU_ registros",
+              sZeroRecords: "No se encontraron resultados",
+              sEmptyTable: "Ningún dato disponible en esta tabla",
+              sInfo: "Mostrando registros del _START_ al _END_ de un total de _TOTAL_",
+              sInfoEmpty: "Mostrando registros del 0 al 0 de un total de 0",
+              sInfoFiltered: "(filtrado de un total de _MAX_ registros)",
+              sInfoPostFix: "",
+              sSearch: "Buscar:",
+              sUrl: "",
+              sInfoThousands: ",",
+              sLoadingRecords: "Cargando...",
+              oPaginate: {
+                sFirst: "Primero",
+                sLast: "Último",
+                sNext: "Siguiente",
+                sPrevious: "Anterior",
+              },
+              oAria: {
+                sSortAscending:
+                  ": Activar para ordenar la columna de manera ascendente",
+                sSortDescending:
+                  ": Activar para ordenar la columna de manera descendente",
+              },
+            },
+          }); 
+
+
     })
     .catch(error => {
         console.error(error);
@@ -201,6 +279,46 @@ function cargar_tipo(){
               accionesCell.appendChild(separador);
               accionesCell.appendChild(actualizarBtn);
         });
+
+        /*===================================================
+        CONFIGURACION DE LA TABLA DATATABLE PARA COTIZACIONES
+        ===================================================*/
+        $("#typeTable").DataTable({
+            "destroy": true,          // order: [
+            //   [0, "desc"],
+            //   [1, "desc"],
+            // ],
+            // "ordering": false,
+            language: {
+              sProcessing: "Procesando...",
+              sLengthMenu: "Mostrar _MENU_ registros",
+              sZeroRecords: "No se encontraron resultados",
+              sEmptyTable: "Ningún dato disponible en esta tabla",
+              sInfo: "Mostrando registros del _START_ al _END_ de un total de _TOTAL_",
+              sInfoEmpty: "Mostrando registros del 0 al 0 de un total de 0",
+              sInfoFiltered: "(filtrado de un total de _MAX_ registros)",
+              sInfoPostFix: "",
+              sSearch: "Buscar:",
+              sUrl: "",
+              sInfoThousands: ",",
+              sLoadingRecords: "Cargando...",
+              oPaginate: {
+                sFirst: "Primero",
+                sLast: "Último",
+                sNext: "Siguiente",
+                sPrevious: "Anterior",
+              },
+              oAria: {
+                sSortAscending:
+                  ": Activar para ordenar la columna de manera ascendente",
+                sSortDescending:
+                  ": Activar para ordenar la columna de manera descendente",
+              },
+            },
+          }); 
+
+
+
     })
     .catch(error => {
         console.error(error);
@@ -1396,3 +1514,896 @@ function guardarinter(){
     }
 }
 
+
+
+// //funciones para cuando marquen aseguradora se habilite el campo del codigo
+
+// $("#tieneAlli_register").click(function () {
+//     if( $('#tieneAlli_register').is(':checked') ) {
+//         $("#claveparaIAlli_register").prop('disabled', false);
+//     }else{   
+//         $("#claveparaIAlli_register").prop('disabled', true);
+//         $("#claveparaIAlli_register").val("");
+//     }
+// })
+
+// $("#tieneBoli_register").click(function () {
+//     if( $('#tieneBoli_register').is(':checked') ) {
+//         $("#claveparaBoli_register").prop('disabled', false);
+//     }else{   
+//         $("#claveparaBoli_register").prop('disabled', true);
+//         $("#claveparaBoli_register").val("");
+//     }
+// })
+
+// $("#tieneEqui_register").click(function () {
+//     if( $('#tieneEqui_register').is(':checked') ) {
+//         $("#claveparaEqui_register").prop('disabled', false);
+//     }else{   
+//         $("#claveparaEqui_register").prop('disabled', true);
+//         $("#claveparaEqui_register").val("");
+//     }
+// })
+
+// $("#tieneMap_register").click(function () {
+//     if( $('#tieneMap_register').is(':checked') ) {
+//         $("#claveparaMap_register").prop('disabled', false);
+//     }else{   
+//         $("#claveparaMap_register").prop('disabled', true);
+//         $("#claveparaMap_register").val("");
+//     }
+// })
+
+// $("#tienePrevi_register").click(function () {
+//     if( $('#tienePrevi_register').is(':checked') ) {
+//         $("#claveparaPrevi_register").prop('disabled', false);
+//     }else{   
+//         $("#claveparaPrevi_register").prop('disabled', true);
+//         $("#claveparaPrevi_register").val("");
+//     }
+// })
+
+// $("#tieneSoli_register").click(function () {
+//     if( $('#tieneSoli_register').is(':checked') ) {
+//         $("#claveparaSoli_register").prop('disabled', false);
+//     }else{   
+//         $("#claveparaSoli_register").prop('disabled', true);
+//         $("#claveparaSoli_register").val("");
+//     }
+// })
+
+// $("#tieneLibe_register").click(function () {
+//     if( $('#tieneLibe_register').is(':checked') ) {
+//         $("#claveparaLibe_register").prop('disabled', false);
+//     }else{   
+//         $("#claveparaLibe_register").prop('disabled', true);
+//         $("#claveparaLibe_register").val("");
+//     }
+// })
+
+// $("#tieneEst_register").click(function () {
+//     if( $('#tieneEst_register').is(':checked') ) {
+//         $("#claveparaEst_register").prop('disabled', false);
+//     }else{   
+//         $("#claveparaEst_register").prop('disabled', true);
+//         $("#claveparaEst_register").val("");
+//     }
+// })
+
+// $("#tieneAxa_register").click(function () {
+//     if( $('#tieneAxa_register').is(':checked') ) {
+//         $("#claveparaAxa_register").prop('disabled', false);
+//     }else{   
+//         $("#claveparaAxa_register").prop('disabled', true);
+//         $("#claveparaAxa_register").val("");
+//     }
+// })
+
+// $("#tienehdi_register").click(function () {
+//     if( $('#tienehdi_register').is(':checked') ) {
+//         $("#claveparahdi_register").prop('disabled', false);
+//     }else{   
+//         $("#claveparahdi_register").prop('disabled', true);
+//         $("#claveparahdi_register").val("");
+//     }
+// })
+
+// $("#tienesbs_register").click(function () {
+//     if( $('#tienesbs_register').is(':checked') ) {
+//         $("#claveparasbs_register").prop('disabled', false);
+//     }else{   
+//         $("#claveparasbs_register").prop('disabled', true);
+//         $("#claveparasbs_register").val("");
+//     }
+// })
+
+// $("#tienezuri_register").click(function () {
+//     if( $('#tienezuri_register').is(':checked') ) {
+//         $("#claveparazuri_register").prop('disabled', false);
+//     }else{   
+//         $("#claveparazuri_register").prop('disabled', true);
+//         $("#claveparazuri_register").val("");
+//     }
+// })
+
+// $("#tieneSura_register").click(function () {
+//     if( $('#tieneSura_register').is(':checked') ) {
+//         $("#claveparaSura_register").prop('disabled', false);
+//     }else{   
+//         $("#claveparaSura_register").prop('disabled', true);
+//         $("#claveparaSura_register").val("");
+//     }
+// })
+
+// $("#tieneMund_register").click(function () {
+//     if( $('#tieneMund_register').is(':checked') ) {
+//         $("#claveparaMund_register").prop('disabled', false);
+//     }else{   
+//         $("#claveparaMund_register").prop('disabled', true);
+//         $("#claveparaMund_register").val("");
+//     }
+// })
+
+
+// $("#balli_register").click(function(){
+//     $("#ballili_register").addClass("active");
+//     $("#allianzdiv_register").show();
+//     $("#bbolili_register").removeClass("active");
+//     $("#bolivardiv_register").hide();
+//     $("#bequili_register").removeClass("active");
+//     $("#equidaddiv_register").hide();
+//     $("#bmapli_register").removeClass("active");
+//     $("#mapfrediv_register").hide();
+//     $("#bprevili_register").removeClass("active");
+//     $("#previsoradiv_register").hide();
+//     $("#bsolili_register").removeClass("active");
+//     $("#solidariadiv_register").hide();
+//     $("#blibeli_register").removeClass("active");
+//     $("#libertydiv_register").hide();
+//     $("#bestali_register").removeClass("active");
+//     $("#estadodiv_register").hide();
+//     $("#baxali_register").removeClass("active");
+//     $("#axadiv_register").hide();
+//     $("#bhdili_register").removeClass("active");
+//     $("#hdidiv_register").hide();
+//     $("#bsbsli_register").removeClass("active");
+//     $("#sbsdiv_register").hide();
+//     $("#bzurili_register").removeClass("active");
+//     $("#zuridiv_register").hide();
+// })
+// $("#bboli_register").click(function(){
+//     $("#bbolili_register").addClass("active");
+//     $("#bolivardiv_register").show();
+//     $("#ballili_register").removeClass("active");
+//     $("#allianzdiv_register").hide();
+//     $("#bequili_register").removeClass("active");
+//     $("#equidaddiv_register").hide();
+//     $("#bmapli_register").removeClass("active");
+//     $("#mapfrediv_register").hide();
+//     $("#bprevili_register").removeClass("active");
+//     $("#previsoradiv_register").hide();
+//     $("#bsolili_register").removeClass("active");
+//     $("#solidariadiv_register").hide();
+//     $("#blibeli_register").removeClass("active");
+//     $("#libertydiv_register").hide();
+//     $("#bestali_register").removeClass("active");
+//     $("#estadodiv_register").hide();
+//     $("#baxali_register").removeClass("active");
+//     $("#axadiv_register").hide();
+//     $("#bhdili_register").removeClass("active");
+//     $("#hdidiv_register").hide();
+//     $("#bsbsli_register").removeClass("active");
+//     $("#sbsdiv_register").hide();
+//     $("#bzurili_register").removeClass("active");
+//     $("#zuridiv_register").hide();
+
+// })
+// $("#bequi_register").click(function(){
+//     $("#bequili_register").addClass("active");
+//     $("#equidaddiv_register").show();
+//     $("#bbolili_register").removeClass("active");
+//     $("#bolivardiv_register").hide();
+//     $("#ballili_register").removeClass("active");
+//     $("#allianzdiv_register").hide();
+//     $("#bmapli_register").removeClass("active");
+//     $("#mapfrediv_register").hide();
+//     $("#bprevili_register").removeClass("active");
+//     $("#previsoradiv_register").hide();
+//     $("#bsolili_register").removeClass("active");
+//     $("#solidariadiv_register").hide();
+//     $("#blibeli_register").removeClass("active");
+//     $("#libertydiv_register").hide();
+//     $("#bestali_register").removeClass("active");
+//     $("#estadodiv_register").hide();
+//     $("#baxali_register").removeClass("active");
+//     $("#axadiv_register").hide();
+//     $("#bhdili_register").removeClass("active");
+//     $("#hdidiv_register").hide();
+//     $("#bsbsli_register").removeClass("active");
+//     $("#sbsdiv_register").hide();
+//     $("#bzurili_register").removeClass("active");
+//     $("#zuridiv_register").hide();
+// })
+// $("#bmap_register").click(function(){
+//     $("#bmapli_register").addClass("active");
+//     $("#mapfrediv_register").show();
+//     $("#bbolili_register").removeClass("active");
+//     $("#bolivardiv_register").hide();
+//     $("#bequili_register").removeClass("active");
+//     $("#equidaddiv_register").hide();
+//     $("#ballili_register").removeClass("active");
+//     $("#allianzdiv_register").hide();
+//     $("#bprevili_register").removeClass("active");
+//     $("#previsoradiv_register").hide();
+//     $("#bsolili_register").removeClass("active");
+//     $("#solidariadiv_register").hide();
+//     $("#blibeli_register").removeClass("active");
+//     $("#libertydiv_register").hide();
+//     $("#bestali_register").removeClass("active");
+//     $("#estadodiv_register").hide();
+//     $("#baxali_register").removeClass("active");
+//     $("#axadiv_register").hide();
+//     $("#bhdili_register").removeClass("active");
+//     $("#hdidiv_register").hide();
+//     $("#bsbsli_register").removeClass("active");
+//     $("#sbsdiv_register").hide();
+//     $("#bzurili_register").removeClass("active");
+//     $("#zuridiv_register").hide();
+// })
+// $("#bprevi_register").click(function(){
+//     $("#bprevili_register").addClass("active");
+//     $("#previsoradiv_register").show();
+//     $("#bbolili_register").removeClass("active");
+//     $("#bolivardiv_register").hide();
+//     $("#bequili_register").removeClass("active");
+//     $("#equidaddiv_register").hide();
+//     $("#bmapli_register").removeClass("active");
+//     $("#mapfrediv_register").hide();
+//     $("#ballili_register").removeClass("active");
+//     $("#allianzdiv_register").hide();
+//     $("#bsolili_register").removeClass("active");
+//     $("#solidariadiv_register").hide();
+//     $("#blibeli_register").removeClass("active");
+//     $("#libertydiv_register").hide();
+//     $("#bestali_register").removeClass("active");
+//     $("#estadodiv_register").hide();
+//     $("#baxali_register").removeClass("active");
+//     $("#axadiv_register").hide();
+//     $("#bhdili_register").removeClass("active");
+//     $("#hdidiv_register").hide();
+//     $("#bsbsli_register").removeClass("active");
+//     $("#sbsdiv_register").hide();
+//     $("#bzurili_register").removeClass("active");
+//     $("#zuridiv_register").hide();
+// })
+// $("#bsoli_register").click(function(){
+//     $("#bsolili_register").addClass("active");
+//     $("#solidariadiv_register").show();
+//     $("#bbolili_register").removeClass("active");
+//     $("#bolivardiv_register").hide();
+//     $("#bequili_register").removeClass("active");
+//     $("#equidaddiv_register").hide();
+//     $("#bmapli_register").removeClass("active");
+//     $("#mapfrediv_register").hide();
+//     $("#bprevili_register").removeClass("active");
+//     $("#previsoradiv_register").hide();
+//     $("#ballili_register").removeClass("active");
+//     $("#allianzdiv_register").hide();
+//     $("#blibeli_register").removeClass("active");
+//     $("#libertydiv_register").hide();
+//     $("#bestali_register").removeClass("active");
+//     $("#estadodiv_register").hide();
+//     $("#baxali_register").removeClass("active");
+//     $("#axadiv_register").hide();
+//     $("#bhdili_register").removeClass("active");
+//     $("#hdidiv_register").hide();
+//     $("#bsbsli_register").removeClass("active");
+//     $("#sbsdiv_register").hide();
+//     $("#bzurili_register").removeClass("active");
+//     $("#zuridiv_register").hide();
+// })
+// $("#blibe_register").click(function(){
+//     $("#blibeli_register").addClass("active");
+//     $("#libertydiv_register").show();
+//     $("#bbolili_register").removeClass("active");
+//     $("#bolivardiv_register").hide();
+//     $("#bequili_register").removeClass("active");
+//     $("#equidaddiv_register").hide();
+//     $("#bmapli_register").removeClass("active");
+//     $("#mapfrediv_register").hide();
+//     $("#bprevili_register").removeClass("active");
+//     $("#previsoradiv_register").hide();
+//     $("#bsolili_register").removeClass("active");
+//     $("#solidariadiv_register").hide();
+//     $("#ballili_register").removeClass("active");
+//     $("#allianzdiv_register").hide();
+//     $("#bestali_register").removeClass("active");
+//     $("#estadodiv_register").hide();
+//     $("#baxali_register").removeClass("active");
+//     $("#axadiv_register").hide();
+//     $("#bhdili_register").removeClass("active");
+//     $("#hdidiv_register").hide();
+//     $("#bsbsli_register").removeClass("active");
+//     $("#sbsdiv_register").hide();
+//     $("#bzurili_register").removeClass("active");
+//     $("#zuridiv_register").hide();
+// })
+// $("#besta_register").click(function(){
+//     $("#bestali_register").addClass("active");
+//     $("#estadodiv_register").show();
+//     $("#bbolili_register").removeClass("active");
+//     $("#bolivardiv_register").hide();
+//     $("#bequili_register").removeClass("active");
+//     $("#equidaddiv_register").hide();
+//     $("#bmapli_register").removeClass("active");
+//     $("#mapfrediv_register").hide();
+//     $("#bprevili_register").removeClass("active");
+//     $("#previsoradiv_register").hide();
+//     $("#bsolili_register").removeClass("active");
+//     $("#solidariadiv_register").hide();
+//     $("#blibeli_register").removeClass("active");
+//     $("#libertydiv_register").hide();
+//     $("#ballili_register").removeClass("active");
+//     $("#allianzdiv_register").hide();
+//     $("#baxali_register").removeClass("active");
+//     $("#axadiv_register").hide();
+//     $("#bhdili_register").removeClass("active");
+//     $("#hdidiv_register").hide();
+//     $("#bsbsli_register").removeClass("active");
+//     $("#sbsdiv_register").hide();
+//     $("#bzurili_register").removeClass("active");
+//     $("#zuridiv_register").hide();
+// })
+// $("#baxa_register").click(function(){
+//     $("#baxali_register").addClass("active");
+//     $("#axadiv_register").show();
+//     $("#bbolili_register").removeClass("active");
+//     $("#bolivardiv_register").hide();
+//     $("#bequili_register").removeClass("active");
+//     $("#equidaddiv_register").hide();
+//     $("#bmapli_register").removeClass("active");
+//     $("#mapfrediv_register").hide();
+//     $("#bprevili_register").removeClass("active");
+//     $("#previsoradiv_register").hide();
+//     $("#bsolili_register").removeClass("active");
+//     $("#solidariadiv_register").hide();
+//     $("#blibeli_register").removeClass("active");
+//     $("#libertydiv_register").hide();
+//     $("#bestali_register").removeClass("active");
+//     $("#estadodiv_register").hide();
+//     $("#ballili_register").removeClass("active");
+//     $("#allianzdiv_register").hide();
+//     $("#bhdili_register_register").removeClass("active");
+//     $("#hdidiv_register").hide();
+//     $("#bsbsli_register").removeClass("active");
+//     $("#sbsdiv_register").hide();
+//     $("#bzurili_register").removeClass("active");
+//     $("#zuridiv_register").hide();
+// })
+// $("#bhdi_register").click(function(){
+//     $("#bhdili_register").addClass("active");
+//     $("#hdidiv_register").show();
+//     $("#bbolili_register").removeClass("active");
+//     $("#bolivardiv_register").hide();
+//     $("#bequili_register").removeClass("active");
+//     $("#equidaddiv_register").hide();
+//     $("#bmapli_register").removeClass("active");
+//     $("#mapfrediv_register").hide();
+//     $("#bprevili_register").removeClass("active");
+//     $("#previsoradiv_register").hide();
+//     $("#bsolili_register").removeClass("active");
+//     $("#solidariadiv_register").hide();
+//     $("#blibeli_register").removeClass("active");
+//     $("#libertydiv_register").hide();
+//     $("#bestali_register").removeClass("active");
+//     $("#estadodiv_register").hide();
+//     $("#baxali_register").removeClass("active");
+//     $("#axadiv_register").hide();
+//     $("#ballili_register").removeClass("active");
+//     $("#allianzdiv_register").hide();
+//     $("#bsbsli_register").removeClass("active");
+//     $("#sbsdiv_register").hide();
+//     $("#bzurili_register").removeClass("active");
+//     $("#zuridiv_register").hide();
+// })
+// $("#bsbs_register").click(function(){
+//     $("#bsbsli_register").addClass("active");
+//     $("#sbsdiv_register").show();
+//     $("#bbolili_register").removeClass("active");
+//     $("#bolivardiv_register").hide();
+//     $("#bequili_register").removeClass("active");
+//     $("#equidaddiv_register").hide();
+//     $("#bmapli_register").removeClass("active");
+//     $("#mapfrediv_register").hide();
+//     $("#bprevili_register").removeClass("active");
+//     $("#previsoradiv_register").hide();
+//     $("#bsolili_register").removeClass("active");
+//     $("#solidariadiv_register").hide();
+//     $("#blibeli_register").removeClass("active");
+//     $("#libertydiv_register").hide();
+//     $("#bestali_register").removeClass("active");
+//     $("#estadodiv_register").hide();
+//     $("#baxali_register").removeClass("active");
+//     $("#axadiv_register").hide();
+//     $("#bhdili_register").removeClass("active");
+//     $("#hdidiv_register").hide();
+//     $("#ballili_register").removeClass("active");
+//     $("#allianzdiv_register").hide();
+//     $("#bzurili_register").removeClass("active");
+//     $("#zuridiv_register").hide();
+// })
+// $("#bzuri_register").click(function(){
+//     $("#bzurili_register").addClass("active");
+//     $("#zuridiv_register").show();
+//     $("#bbolili_register").removeClass("active");
+//     $("#bolivardiv_register").hide();
+//     $("#bequili_register").removeClass("active");
+//     $("#equidaddiv_register").hide();
+//     $("#bmapli_register").removeClass("active");
+//     $("#mapfrediv_register").hide();
+//     $("#bprevili_register").removeClass("active");
+//     $("#previsoradiv_register").hide();
+//     $("#bsolili_register").removeClass("active");
+//     $("#solidariadiv_register").hide();
+//     $("#blibeli_register").removeClass("active");
+//     $("#libertydiv_register").hide();
+//     $("#bestali_register").removeClass("active");
+//     $("#estadodiv_register").hide();
+//     $("#baxali_register").removeClass("active");
+//     $("#axadiv_register").hide();
+//     $("#bhdili_register").removeClass("active");
+//     $("#hdidiv_register").hide();
+//     $("#bsbsli_register").removeClass("active");
+//     $("#sbsdiv_register").hide();
+//     $("#ballili_register").removeClass("active");
+//     $("#allianzdiv_register").hide();
+// })
+
+
+
+
+// //Para editar
+
+
+// //funciones para cuando marquen aseguradora se habilite el campo del codigo
+
+// $("#tieneAlli_update").click(function () {
+//     if( $('#tieneAlli_update').is(':checked') ) {
+//         $("#claveparaIAlli_update").prop('disabled', false);
+//     }else{   
+//         $("#claveparaIAlli_update").prop('disabled', true);
+//         $("#claveparaIAlli_update").val("");
+//     }
+// })
+
+// $("#tieneBoli_update").click(function () {
+//     if( $('#tieneBoli_update').is(':checked') ) {
+//         $("#claveparaBoli_update").prop('disabled', false);
+//     }else{   
+//         $("#claveparaBoli_update").prop('disabled', true);
+//         $("#claveparaBoli_update").val("");
+//     }
+// })
+
+// $("#tieneEqui_update").click(function () {
+//     if( $('#tieneEqui_update').is(':checked') ) {
+//         $("#claveparaEqui_update").prop('disabled', false);
+//     }else{   
+//         $("#claveparaEqui_update").prop('disabled', true);
+//         $("#claveparaEqui_update").val("");
+//     }
+// })
+
+// $("#tieneMap_update").click(function () {
+//     if( $('#tieneMap_update').is(':checked') ) {
+//         $("#claveparaMap_update").prop('disabled', false);
+//     }else{   
+//         $("#claveparaMap_update").prop('disabled', true);
+//         $("#claveparaMap_update").val("");
+//     }
+// })
+
+// $("#tienePrevi_update").click(function () {
+//     if( $('#tienePrevi_update').is(':checked') ) {
+//         $("#claveparaPrevi_update").prop('disabled', false);
+//     }else{   
+//         $("#claveparaPrevi_update").prop('disabled', true);
+//         $("#claveparaPrevi_update").val("");
+//     }
+// })
+
+// $("#tieneSoli_update").click(function () {
+//     if( $('#tieneSoli_update').is(':checked') ) {
+//         $("#claveparaSoli_update").prop('disabled', false);
+//     }else{   
+//         $("#claveparaSoli_update").prop('disabled', true);
+//         $("#claveparaSoli_update").val("");
+//     }
+// })
+
+// $("#tieneLibe_update").click(function () {
+//     if( $('#tieneLibe_update').is(':checked') ) {
+//         $("#claveparaLibe_update").prop('disabled', false);
+//     }else{   
+//         $("#claveparaLibe_update").prop('disabled', true);
+//         $("#claveparaLibe_update").val("");
+//     }
+// })
+
+// $("#tieneEst_update").click(function () {
+//     if( $('#tieneEst_update').is(':checked') ) {
+//         $("#claveparaEst_update").prop('disabled', false);
+//     }else{   
+//         $("#claveparaEst_update").prop('disabled', true);
+//         $("#claveparaEst_update").val("");
+//     }
+// })
+
+// $("#tieneAxa_update").click(function () {
+//     if( $('#tieneAxa_update').is(':checked') ) {
+//         $("#claveparaAxa_update").prop('disabled', false);
+//     }else{   
+//         $("#claveparaAxa_update").prop('disabled', true);
+//         $("#claveparaAxa_update").val("");
+//     }
+// })
+
+// $("#tienehdi_update").click(function () {
+//     if( $('#tienehdi_update').is(':checked') ) {
+//         $("#claveparahdi_update").prop('disabled', false);
+//     }else{   
+//         $("#claveparahdi_update").prop('disabled', true);
+//         $("#claveparahdi_update").val("");
+//     }
+// })
+
+// $("#tienesbs_update").click(function () {
+//     if( $('#tienesbs_update').is(':checked') ) {
+//         $("#claveparasbs_update").prop('disabled', false);
+//     }else{   
+//         $("#claveparasbs_update").prop('disabled', true);
+//         $("#claveparasbs_update").val("");
+//     }
+// })
+
+// $("#tienezuri_update").click(function () {
+//     if( $('#tienezuri_update').is(':checked') ) {
+//         $("#claveparazuri_update").prop('disabled', false);
+//     }else{   
+//         $("#claveparazuri_update").prop('disabled', true);
+//         $("#claveparazuri_update").val("");
+//     }
+// })
+
+// $("#tieneSura_update").click(function () {
+//     if( $('#tieneSura_update').is(':checked') ) {
+//         $("#claveparaSura_update").prop('disabled', false);
+//     }else{   
+//         $("#claveparaSura_update").prop('disabled', true);
+//         $("#claveparaSura_update").val("");
+//     }
+// })
+
+// $("#tieneMund_update").click(function () {
+//     if( $('#tieneMund_update').is(':checked') ) {
+//         $("#claveparaMund_update").prop('disabled', false);
+//     }else{   
+//         $("#claveparaMund_update").prop('disabled', true);
+//         $("#claveparaMund_update").val("");
+//     }
+// })
+
+
+// $("#balli_update").click(function(){
+//     $("#ballili_update").addClass("active");
+//     $("#allianzdiv_update").show();
+//     $("#bbolili_update").removeClass("active");
+//     $("#bolivardiv_update").hide();
+//     $("#bequili_update").removeClass("active");
+//     $("#equidaddiv_update").hide();
+//     $("#bmapli_update").removeClass("active");
+//     $("#mapfrediv_update").hide();
+//     $("#bprevili_update").removeClass("active");
+//     $("#previsoradiv_update").hide();
+//     $("#bsolili_update").removeClass("active");
+//     $("#solidariadiv_update").hide();
+//     $("#blibeli_update").removeClass("active");
+//     $("#libertydiv_update").hide();
+//     $("#bestali_update").removeClass("active");
+//     $("#estadodiv_update").hide();
+//     $("#baxali_update").removeClass("active");
+//     $("#axadiv_update").hide();
+//     $("#bhdili_update").removeClass("active");
+//     $("#hdidiv_update").hide();
+//     $("#bsbsli_update").removeClass("active");
+//     $("#sbsdiv_update").hide();
+//     $("#bzurili_update").removeClass("active");
+//     $("#zuridiv_update").hide();
+// })
+// $("#bboli_update").click(function(){
+//     $("#bbolili_update").addClass("active");
+//     $("#bolivardiv_update").show();
+//     $("#ballili_update").removeClass("active");
+//     $("#allianzdiv_update").hide();
+//     $("#bequili_update").removeClass("active");
+//     $("#equidaddiv_update").hide();
+//     $("#bmapli_update").removeClass("active");
+//     $("#mapfrediv_update").hide();
+//     $("#bprevili_update").removeClass("active");
+//     $("#previsoradiv_update").hide();
+//     $("#bsolili_update").removeClass("active");
+//     $("#solidariadiv_update").hide();
+//     $("#blibeli_update").removeClass("active");
+//     $("#libertydiv_update").hide();
+//     $("#bestali_update").removeClass("active");
+//     $("#estadodiv_update").hide();
+//     $("#baxali_update").removeClass("active");
+//     $("#axadiv_update").hide();
+//     $("#bhdili_update").removeClass("active");
+//     $("#hdidiv_update").hide();
+//     $("#bsbsli_update").removeClass("active");
+//     $("#sbsdiv_update").hide();
+//     $("#bzurili_update").removeClass("active");
+//     $("#zuridiv_update").hide();
+
+// })
+// $("#bequi_update").click(function(){
+//     $("#bequili_update").addClass("active");
+//     $("#equidaddiv_update").show();
+//     $("#bbolili_update").removeClass("active");
+//     $("#bolivardiv_update").hide();
+//     $("#ballili_update").removeClass("active");
+//     $("#allianzdiv_update").hide();
+//     $("#bmapli_update").removeClass("active");
+//     $("#mapfrediv_update").hide();
+//     $("#bprevili_update").removeClass("active");
+//     $("#previsoradiv_update").hide();
+//     $("#bsolili_update").removeClass("active");
+//     $("#solidariadiv_update").hide();
+//     $("#blibeli_update").removeClass("active");
+//     $("#libertydiv_update").hide();
+//     $("#bestali_update").removeClass("active");
+//     $("#estadodiv_update").hide();
+//     $("#baxali_update").removeClass("active");
+//     $("#axadiv_update").hide();
+//     $("#bhdili_update").removeClass("active");
+//     $("#hdidiv_update").hide();
+//     $("#bsbsli_update").removeClass("active");
+//     $("#sbsdiv_update").hide();
+//     $("#bzurili_update").removeClass("active");
+//     $("#zuridiv_update").hide();
+// })
+// $("#bmap_update").click(function(){
+//     $("#bmapli_update").addClass("active");
+//     $("#mapfrediv_update").show();
+//     $("#bbolili_update").removeClass("active");
+//     $("#bolivardiv_update").hide();
+//     $("#bequili_update").removeClass("active");
+//     $("#equidaddiv_update").hide();
+//     $("#ballili_update").removeClass("active");
+//     $("#allianzdiv_update").hide();
+//     $("#bprevili_update").removeClass("active");
+//     $("#previsoradiv_update").hide();
+//     $("#bsolili_update").removeClass("active");
+//     $("#solidariadiv_update").hide();
+//     $("#blibeli_update").removeClass("active");
+//     $("#libertydiv_update").hide();
+//     $("#bestali_update").removeClass("active");
+//     $("#estadodiv_update").hide();
+//     $("#baxali_update").removeClass("active");
+//     $("#axadiv_update").hide();
+//     $("#bhdili_update").removeClass("active");
+//     $("#hdidiv_update").hide();
+//     $("#bsbsli_update").removeClass("active");
+//     $("#sbsdiv_update").hide();
+//     $("#bzurili_update").removeClass("active");
+//     $("#zuridiv_update").hide();
+// })
+// $("#bprevi_update").click(function(){
+//     $("#bprevili_update").addClass("active");
+//     $("#previsoradiv_update").show();
+//     $("#bbolili_update").removeClass("active");
+//     $("#bolivardiv_update").hide();
+//     $("#bequili_update").removeClass("active");
+//     $("#equidaddiv_update").hide();
+//     $("#bmapli_update").removeClass("active");
+//     $("#mapfrediv_update").hide();
+//     $("#ballili_update").removeClass("active");
+//     $("#allianzdiv_update").hide();
+//     $("#bsolili_update").removeClass("active");
+//     $("#solidariadiv_update").hide();
+//     $("#blibeli_update").removeClass("active");
+//     $("#libertydiv_update").hide();
+//     $("#bestali_update").removeClass("active");
+//     $("#estadodiv_update").hide();
+//     $("#baxali_update").removeClass("active");
+//     $("#axadiv_update").hide();
+//     $("#bhdili_update").removeClass("active");
+//     $("#hdidiv_update").hide();
+//     $("#bsbsli_update").removeClass("active");
+//     $("#sbsdiv_update").hide();
+//     $("#bzurili_update").removeClass("active");
+//     $("#zuridiv_update").hide();
+// })
+// $("#bsoli_update").click(function(){
+//     $("#bsolili_update").addClass("active");
+//     $("#solidariadiv_update").show();
+//     $("#bbolili_update").removeClass("active");
+//     $("#bolivardiv_update").hide();
+//     $("#bequili_update").removeClass("active");
+//     $("#equidaddiv_update").hide();
+//     $("#bmapli_update").removeClass("active");
+//     $("#mapfrediv_update").hide();
+//     $("#bprevili_update").removeClass("active");
+//     $("#previsoradiv_update").hide();
+//     $("#ballili_update").removeClass("active");
+//     $("#allianzdiv_update").hide();
+//     $("#blibeli_update").removeClass("active");
+//     $("#libertydiv_update").hide();
+//     $("#bestali_update").removeClass("active");
+//     $("#estadodiv_update").hide();
+//     $("#baxali_update").removeClass("active");
+//     $("#axadiv_update").hide();
+//     $("#bhdili_update").removeClass("active");
+//     $("#hdidiv_update").hide();
+//     $("#bsbsli_update").removeClass("active");
+//     $("#sbsdiv_update").hide();
+//     $("#bzurili_update").removeClass("active");
+//     $("#zuridiv_update").hide();
+// })
+// $("#blibe_update").click(function(){
+//     $("#blibeli_update").addClass("active");
+//     $("#libertydiv_update").show();
+//     $("#bbolili_update").removeClass("active");
+//     $("#bolivardiv_update").hide();
+//     $("#bequili_update").removeClass("active");
+//     $("#equidaddiv_update").hide();
+//     $("#bmapli_update").removeClass("active");
+//     $("#mapfrediv_update").hide();
+//     $("#bprevili_update").removeClass("active");
+//     $("#previsoradiv_update").hide();
+//     $("#bsolili_update").removeClass("active");
+//     $("#solidariadiv_update").hide();
+//     $("#ballili_update").removeClass("active");
+//     $("#allianzdiv_update").hide();
+//     $("#bestali_update").removeClass("active");
+//     $("#estadodiv_update").hide();
+//     $("#baxali_update").removeClass("active");
+//     $("#axadiv_update").hide();
+//     $("#bhdili_update").removeClass("active");
+//     $("#hdidiv_update").hide();
+//     $("#bsbsli_update").removeClass("active");
+//     $("#sbsdiv_update").hide();
+//     $("#bzurili_update").removeClass("active");
+//     $("#zuridiv_update").hide();
+// })
+// $("#besta_update").click(function(){
+//     $("#bestali_update").addClass("active");
+//     $("#estadodiv_update").show();
+//     $("#bbolili_update").removeClass("active");
+//     $("#bolivardiv_update").hide();
+//     $("#bequili_update").removeClass("active");
+//     $("#equidaddiv_update").hide();
+//     $("#bmapli_update").removeClass("active");
+//     $("#mapfrediv_update").hide();
+//     $("#bprevili_update").removeClass("active");
+//     $("#previsoradiv_update").hide();
+//     $("#bsolili_update").removeClass("active");
+//     $("#solidariadiv_update").hide();
+//     $("#blibeli_update").removeClass("active");
+//     $("#libertydiv_update").hide();
+//     $("#ballili_update").removeClass("active");
+//     $("#allianzdiv_update").hide();
+//     $("#baxali_update").removeClass("active");
+//     $("#axadiv_update").hide();
+//     $("#bhdili_update").removeClass("active");
+//     $("#hdidiv_update").hide();
+//     $("#bsbsli_update").removeClass("active");
+//     $("#sbsdiv_update").hide();
+//     $("#bzurili_update").removeClass("active");
+//     $("#zuridiv_update").hide();
+// })
+// $("#baxa_update").click(function(){
+//     $("#baxali_update").addClass("active");
+//     $("#axadiv_update").show();
+//     $("#bbolili_update").removeClass("active");
+//     $("#bolivardiv_update").hide();
+//     $("#bequili_update").removeClass("active");
+//     $("#equidaddiv_update").hide();
+//     $("#bmapli_update").removeClass("active");
+//     $("#mapfrediv_update").hide();
+//     $("#bprevili_update").removeClass("active");
+//     $("#previsoradiv_update").hide();
+//     $("#bsolili_update").removeClass("active");
+//     $("#solidariadiv_update").hide();
+//     $("#blibeli_update").removeClass("active");
+//     $("#libertydiv_update").hide();
+//     $("#bestali_update").removeClass("active");
+//     $("#estadodiv_update").hide();
+//     $("#ballili_update").removeClass("active");
+//     $("#allianzdiv_update").hide();
+//     $("#bhdili_update_update").removeClass("active");
+//     $("#hdidiv_update").hide();
+//     $("#bsbsli_update").removeClass("active");
+//     $("#sbsdiv_update").hide();
+//     $("#bzurili_update").removeClass("active");
+//     $("#zuridiv_update").hide();
+// })
+// $("#bhdi_update").click(function(){
+//     $("#bhdili_update").addClass("active");
+//     $("#hdidiv_update").show();
+//     $("#bbolili_update").removeClass("active");
+//     $("#bolivardiv_update").hide();
+//     $("#bequili_update").removeClass("active");
+//     $("#equidaddiv_update").hide();
+//     $("#bmapli_update").removeClass("active");
+//     $("#mapfrediv_update").hide();
+//     $("#bprevili_update").removeClass("active");
+//     $("#previsoradiv_update").hide();
+//     $("#bsolili_update").removeClass("active");
+//     $("#solidariadiv_update").hide();
+//     $("#blibeli_update").removeClass("active");
+//     $("#libertydiv_update").hide();
+//     $("#bestali_update").removeClass("active");
+//     $("#estadodiv_update").hide();
+//     $("#baxali_update").removeClass("active");
+//     $("#axadiv_update").hide();
+//     $("#ballili_update").removeClass("active");
+//     $("#allianzdiv_update").hide();
+//     $("#bsbsli_update").removeClass("active");
+//     $("#sbsdiv_update").hide();
+//     $("#bzurili_update").removeClass("active");
+//     $("#zuridiv_update").hide();
+// })
+// $("#bsbs_update").click(function(){
+//     $("#bsbsli_update").addClass("active");
+//     $("#sbsdiv_update").show();
+//     $("#bbolili_update").removeClass("active");
+//     $("#bolivardiv_update").hide();
+//     $("#bequili_update").removeClass("active");
+//     $("#equidaddiv_update").hide();
+//     $("#bmapli_update").removeClass("active");
+//     $("#mapfrediv_update").hide();
+//     $("#bprevili_update").removeClass("active");
+//     $("#previsoradiv_update").hide();
+//     $("#bsolili_update").removeClass("active");
+//     $("#solidariadiv_update").hide();
+//     $("#blibeli_update").removeClass("active");
+//     $("#libertydiv_update").hide();
+//     $("#bestali_update").removeClass("active");
+//     $("#estadodiv_update").hide();
+//     $("#baxali_update").removeClass("active");
+//     $("#axadiv_update").hide();
+//     $("#bhdili_update").removeClass("active");
+//     $("#hdidiv_update").hide();
+//     $("#ballili_update").removeClass("active");
+//     $("#allianzdiv_update").hide();
+//     $("#bzurili_update").removeClass("active");
+//     $("#zuridiv_update").hide();
+// })
+// $("#bzuri_update").click(function(){
+//     $("#bzurili_update").addClass("active");
+//     $("#zuridiv_update").show();
+//     $("#bbolili_update").removeClass("active");
+//     $("#bolivardiv_update").hide();
+//     $("#bequili_update").removeClass("active");
+//     $("#equidaddiv_update").hide();
+//     $("#bmapli_update").removeClass("active");
+//     $("#mapfrediv_update").hide();
+//     $("#bprevili_update").removeClass("active");
+//     $("#previsoradiv_update").hide();
+//     $("#bsolili_update").removeClass("active");
+//     $("#solidariadiv_update").hide();
+//     $("#blibeli_update").removeClass("active");
+//     $("#libertydiv_update").hide();
+//     $("#bestali_update").removeClass("active");
+//     $("#estadodiv_update").hide();
+//     $("#baxali_update").removeClass("active");
+//     $("#axadiv_update").hide();
+//     $("#bhdili_update").removeClass("active");
+//     $("#hdidiv_update").hide();
+//     $("#bsbsli_update").removeClass("active");
+//     $("#sbsdiv_update").hide();
+//     $("#ballili_update").removeClass("active");
+//     $("#allianzdiv_update").hide();
+// })
