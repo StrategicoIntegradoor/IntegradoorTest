@@ -183,7 +183,7 @@
                 Crear Estado Contrato
               </button>
               <div class="card-body">
-                  <table  id="stateTable" class="table table-bordered table-striped dt-responsive tablas-cotizaciones1" width="100%">
+                  <table  id="stateTable" class="table table-bordered table-striped dt-responsive tablas-cotizaciones" width="100%">
                       <thead>
                           <tr>
                             <th>Id Estado contrato</th>
@@ -205,7 +205,7 @@
                 Crear Tipo Contrato
               </button>
                 <div class="card-body">
-                    <table  id="typeTable" class="table table-bordered table-striped dt-responsive tablas-cotiza" width="100%">
+                    <table  id="typeTable" class="table table-bordered table-striped dt-responsive tablas-cotizaciones" width="100%">
                         <thead>
                             <tr>
                               <th>Id Tipo Contrato</th>
