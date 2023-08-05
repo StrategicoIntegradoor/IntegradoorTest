@@ -1,5 +1,7 @@
 <?php
 session_start();
+echo $intermediario = $_SESSION['intermediario'];
+
 header('Content-Type: text/html; charset=utf-8');
 date_default_timezone_set('America/Bogota');
 
@@ -28,7 +30,7 @@ $valor2 = $conexion->query($query2);
 $fila = mysqli_fetch_array($valor2);
 
 // :::::::::::::::::::::::Query para imagen logo::::::::::::::::::::::::::.
-$intermediario = $_SESSION['intermediario'];
+
 $queryLogo = "SELECT urlLogo FROM intermediario  WHERE id_Intermediario = $intermediario";
 $valorLogo = $conexion->query($queryLogo);
 $valorLogo = mysqli_fetch_array($valorLogo);
