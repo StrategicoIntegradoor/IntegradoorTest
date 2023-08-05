@@ -17,30 +17,21 @@ $CE = $_POST['CE'];
 $GR = $_POST['GR'];
 
 
-echo $aseguradora;
-
-
-if($aseguradora = "Seguros Sura"){
-	$logo = "vistas/img/logos/estado.png";
-}
-
-
-
-if ($aseguradora = "Seguros Bolivar") {
+if ($aseguradora == "Seguros Bolivar") {
 	$logo = "vistas/img/logos/bolivar.png";
-} else if ($aseguradora = "HDI Seguros") {
+} else if ($aseguradora == "HDI Seguros") {
 	$logo = "vistas/img/logos/hdi.png";
-} else if ($aseguradora = "Seguros del Estado") {
+} else if ($aseguradora == "Seguros del Estado") {
 	$logo = "vistas/img/logos/estado.png";
-} else if ($aseguradora = "Axa Colpatria") {
+} else if ($aseguradora == "Axa Colpatria") {
 	$logo = "vistas/img/logos/axa.png";
-} else if ($aseguradora = "SBS Seguros") {
+} else if ($aseguradora == "SBS Seguros") {
 	$logo = "vistas/img/logos/sbs.png";
-} else if ($aseguradora = "Allianz Seguros") {
+} else if ($aseguradora == "Allianz Seguros") {
 	$logo = "vistas/img/logos/allianz.png";
-} else if ($aseguradora = "Seguros Sura") {
+} else if ($aseguradora == "Seguros Sura") {
 	$logo = "vistas/img/logos/sura.png";
-} else if ($aseguradora = "Seguros Mapfre") {
+} else if ($aseguradora == "Seguros Mapfre") {
 	$logo = "vistas/img/logos/mapfre.png";
 }
 
@@ -59,8 +50,6 @@ $manual = $_POST['manual'];
 
 
 $sql = "INSERT INTO `ofertas` (`id_oferta`, `Placa`, `Identificacion`, `NumCotizOferta`, `Aseguradora`, `Producto`, `Prima`,`ValorRC`, `PerdidaTotal`, `PerdidaParcial`, `ConductorElegido`, `Grua`, `logo`, `UrlPdf`, `id_cotizacion`, `Manual`) VALUES (NULL, '$placa', '$numIdentificacion', '$numCotizOferta', '$aseguradora', '$producto', '$valorPrima', '$valorRC', '$PT', '$PP', '$CE', '$GR', '$logo', '$UrlPdf', '$idCotizacion', $manual);";
-
-echo $sql;
 
 
 $res = mysqli_query($con, $sql);
