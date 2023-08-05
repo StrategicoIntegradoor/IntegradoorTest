@@ -17,22 +17,28 @@ $CE = $_POST['CE'];
 $GR = $_POST['GR'];
 
 
+echo $aseguradora;
+
+
+
+
+
 
 if ($aseguradora = "Seguros Bolivar") {
 	$logo = "vistas/img/logos/bolivar.png";
-} elseif ($aseguradora = "HDI Seguros") {
+} else if ($aseguradora = "HDI Seguros") {
 	$logo = "vistas/img/logos/hdi.png";
-} elseif ($aseguradora = "Seguros del Estado") {
+} else if ($aseguradora = "Seguros del Estado") {
 	$logo = "vistas/img/logos/estado.png";
-} elseif ($aseguradora = "Axa Colpatria") {
+} else if ($aseguradora = "Axa Colpatria") {
 	$logo = "vistas/img/logos/axa.png";
-} elseif ($aseguradora = "SBS Seguros") {
+} else if ($aseguradora = "SBS Seguros") {
 	$logo = "vistas/img/logos/sbs.png";
-} elseif ($aseguradora = "Allianz Seguros") {
+} else if ($aseguradora = "Allianz Seguros") {
 	$logo = "vistas/img/logos/allianz.png";
-} elseif ($aseguradora = "Seguros Sura") {
+} else if ($aseguradora = "Seguros Sura") {
 	$logo = "vistas/img/logos/sura.png";
-}elseif ($aseguradora = "Seguros Mapfre") {
+} else if ($aseguradora = "Seguros Mapfre") {
 	$logo = "vistas/img/logos/mapfre.png";
 }
 
