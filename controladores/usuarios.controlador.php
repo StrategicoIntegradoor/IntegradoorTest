@@ -461,7 +461,10 @@ class ControladorUsuarios{
 				}
 
 				$respuesta = ModeloUsuarios::mdlEditarUsuario($tabla, $datos);
-					
+				
+				var_dump($respuesta);
+				die();
+
 				if($respuesta == "ok"){
 
 					echo'<script>
