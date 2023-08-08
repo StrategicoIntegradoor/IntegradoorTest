@@ -162,7 +162,7 @@ class ModeloUsuarios{
 
 	static public function mdlEditarUsuario($tabla, $datos){
 		
-		$stmt = Conexion::conectar()->prepare("UPDATE $tabla SET usu_documento = :documento, tipos_documentos_id = :tipoDocumento, usu_nombre = :nombre, usu_apellido = :apellido, 
+		$stmt = Conexion::conectar()->prepare("UPDATE $tabla SET usu_documento = :documento, tipos_documentos_id = :tipoDocumento, usu_nombre = :nombre, usu_apellido = :apellido, usu_fch_nac = :fechNacimiento
 												usu_genero = :genero, direccion =:direccion, ciudades_id =:ciudad, usu_telefono = :telefono, usu_email = :email, usu_cargo = :cargo, usu_foto = :foto, id_rol = :rol, id_Intermediario = :intermediario, numCotizaciones = :maxCotEdi, fechaFin = :fechaLimEdi
 												WHERE usu_usuario = :usuario");
 
@@ -173,6 +173,7 @@ class ModeloUsuarios{
 		$stmt -> bindParam(":usuario", $datos["usuario"], PDO::PARAM_STR);
 		// $stmt -> bindParam(":password", $datos["password"], PDO::PARAM_STR);
 		$stmt -> bindParam(":genero", $datos["genero"], PDO::PARAM_STR);
+		$stmt -> bindParam(":fechNacimiento", $datos["fechNacimiento"], PDO::PARAM_STR);
 		$stmt -> bindParam(":direccion", $datos["direccion"], PDO::PARAM_STR);
 		$stmt -> bindParam(":ciudad", $datos["ciudad"], PDO::PARAM_STR);
 		$stmt -> bindParam(":telefono", $datos["telefono"], PDO::PARAM_STR);

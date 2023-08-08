@@ -515,7 +515,7 @@ MODAL AGREGAR USUARIO
 
                 <span class="input-group-addon"><i class="fa fa-key"></i></span>
 
-                <input type="text" class="form-control input-lg" name="nuevoUsuario" placeholder="Ingresar usuario" id="nuevoUsuario" required>
+                <input type="text" class="form-control input-lg" name="nuevoUsuario" placeholder="Ingresar usuario" id="nuevoUsuario" readonly>
 
               </div>
 
@@ -1107,6 +1107,17 @@ $borrarUsuario->ctrBorrarUsuario();
         inputFecha.prop("type", "text");
       }
     });
+  });
+</script>
+<script>
+  // Obtén referencias a los campos de entrada
+  const nuevoUsuarioInput = document.getElementById('nuevoDocIdUser');
+  const copiaUsuarioInput = document.getElementById('nuevoUsuario');
+
+  // Agrega un controlador de eventos para el evento 'input' en el campo nuevoUsuario
+  nuevoUsuarioInput.addEventListener('input', function() {
+    // Copia el contenido del campo nuevoUsuario al campo copiaUsuario
+    copiaUsuarioInput.value = this.value;
   });
 </script>
 <script src="vistas/js/usuarios.js?v=<?php echo (rand()); ?>"></script>
