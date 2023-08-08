@@ -234,6 +234,29 @@ class ControladorUsuarios{
 					</script>';
 
 
+				}else{
+					
+					echo '<script>
+
+					swal.fire({
+
+						type: "error",
+						title: "¡Algo ha salido mal!",
+						showConfirmButton: true,
+						confirmButtonText: "Cerrar"
+
+					}).then(function(result){
+
+						if(result.value){
+						
+							window.location = "usuarios";
+
+						}
+
+					});
+				
+
+					</script>';
 				}	
 
 
