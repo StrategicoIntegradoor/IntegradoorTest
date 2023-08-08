@@ -283,7 +283,7 @@ MODAL AGREGAR USUARIO
             <div class="col-xs-12 col-sm-6 col-md-6 form-group">
               <div class="input-group">
                 <span class="input-group-addon"><i class="fa fa-calendar"></i></span>
-                <input type="date" class="form-control input-lg" name="AgregfechNacimiento" id="AgregfechNacimiento" placeholder="Fecha de Nacimiento" required>
+                <input type="date" class="form-control input-lg" name="AgregfechNacimiento" id="AgregfechNacimiento" placeholder="Fecha de Nacimiento">
               </div>
             </div>
 
@@ -316,7 +316,7 @@ MODAL AGREGAR USUARIO
 
                 <span class="input-group-addon"><i class="fa fa-home"></i></span>
 
-                <input type="text" class="form-control input-lg" name="AgregDireccion" id="AgregDireccion" placeholder="Ingresar Direccion" required>
+                <input type="text" class="form-control input-lg" name="AgregDireccion" id="AgregDireccion" placeholder="Ingresar Direccion">
 
               </div>
 
@@ -329,7 +329,7 @@ MODAL AGREGAR USUARIO
               <div class="input-group">
 
                 <span class="input-group-addon"><i class="fa fa-home"></i></span>
-                <select class="form-control input-lg" name="DptoCirculacion" id="ingDptoCirculacion" required>
+                <select class="form-control input-lg" name="DptoCirculacion" id="ingDptoCirculacion">
 
                     <option value="">Ingresar Departamento</option>
                     <option value="1">Amazonas</option>
@@ -428,7 +428,7 @@ MODAL AGREGAR USUARIO
 
                 <span class="input-group-addon"><i class="fa fa-briefcase"></i></span>
 
-                <input type="text" class="form-control input-lg" name="nuevoCargo" placeholder="Ingresar cargo" required>
+                <input type="text" class="form-control input-lg" name="nuevoCargo" placeholder="Ingresar cargo">
 
               </div>
 
@@ -445,7 +445,7 @@ MODAL AGREGAR USUARIO
               <div class="input-group">
 
                 <span class="input-group-addon"><i class="fa fa-users"></i></span>
-                <select class="form-control input-lg" name="Intermediario" id="idIntermediario">
+                <select class="form-control input-lg" name="Intermediario" id="idIntermediario" required>
                   <option disabled selected>Selecciona una opción</option>
 
                 </select>
@@ -461,7 +461,7 @@ MODAL AGREGAR USUARIO
               <div class="input-group">
 
                 <span class="input-group-addon"><i class="fa fa-users"></i></span>
-                <select class="form-control input-lg" name="nuevoRol" id="idRoll">
+                <select class="form-control input-lg" name="nuevoRol" id="idRoll" required>
 
                   <option value="">Selecionar rol</option>
                   <option value="1">Administrador</option>
@@ -484,7 +484,7 @@ MODAL AGREGAR USUARIO
               <div class="input-group">
 
                 <span class="input-group-addon"><i class="fa fa-sort-numeric-asc"></i></span>
-                <input type="text" class="form-control input-lg" name="maxCot" placeholder="Cotizaciones diarias" id="maxCot" required>
+                <input type="text" class="form-control input-lg" name="maxCot" placeholder="Cotizaciones diarias" id="maxCot">
 
               </div>
 
@@ -497,7 +497,7 @@ MODAL AGREGAR USUARIO
               <div class="input-group">
 
                 <span class="input-group-addon"><i class="fa fa-calendar"></i></span>
-                <input type="date" min="0" class="form-control input-lg" name="fecLim" id="fecLim" placeholder="Limite de uso" required>
+                <input type="date" min="0" class="form-control input-lg" name="fecLim" id="fecLim" placeholder="Limite de uso">
 
               </div>
 
