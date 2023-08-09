@@ -59,7 +59,7 @@ class ModeloPassword{
 			// Configurar el remitente y destinatario del correo
 			$emailString = $resultado['usu_email'];
 			// echo $emailString;
-			$mail->setFrom('equipointegradoor@outlook.es', 'Equipo Integradoor');
+			$mail->setFrom('correopruebaSMTP@outlook.com', 'Equipo Integradoor');
 			$mail->addAddress($emailString, 'Usuario');
 
 			//Configuración asunto y cuerpo del correo
