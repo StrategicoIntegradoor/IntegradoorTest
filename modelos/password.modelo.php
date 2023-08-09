@@ -21,7 +21,7 @@ class ModeloPassword{
 		$stmt -> bindParam(":".$item, $valor, PDO::PARAM_STR);
 		$stmt -> execute();
 		$resultado = $stmt -> fetch(PDO::FETCH_ASSOC);
-
+        $nombre= $resultado['usu_nombre'];
 		if($resultado){
 			function generarToken() {
 
