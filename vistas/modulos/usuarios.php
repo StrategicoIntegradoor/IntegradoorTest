@@ -638,7 +638,7 @@ MODAL EDITAR USUARIO
 
                 <span class="input-group-addon"><i class="fa fa-user"></i></span>
 
-                <input type="text" class="form-control input-lg" name="editarNombre" id="editarNombre" placeholder="Actualizar nombre">
+                <input type="text" class="form-control input-lg" name="editarNombre" id="editarNombre" placeholder="Actualizar nombre" required>
                 <input type="hidden" id="idCliente" name="idCliente">
                 <input type="hidden" id="codCliente" name="codCliente">
 
@@ -653,7 +653,7 @@ MODAL EDITAR USUARIO
               <div class="input-group">
 
                 <span class="input-group-addon"><i class="fa fa-user"></i></span>
-                <input type="text" class="form-control input-lg" name="editarApellido" id="editarApellido" placeholder="Actualizar apellido">
+                <input type="text" class="form-control input-lg" name="editarApellido" id="editarApellido" placeholder="Actualizar apellido" required>
               
               </div>
               
@@ -672,7 +672,7 @@ MODAL EDITAR USUARIO
                 <span class="input-group-addon"><i class="fa fa-id-badge"></i></span>
 
 
-                <select class="form-control input-lg" name="editarTipoDocumento" id="editarTipoDocumento" required>
+                <select class="form-control input-lg" name="editarTipoDocumento" id="editarTipoDocumento">
 
                   <option value="">Tipo de documento:</option>
                   <option value="Cedula de Ciudadania">Cedula de Ciudadania</option>
