@@ -711,7 +711,7 @@ MODAL EDITAR USUARIO
 
                 <span class="input-group-addon"><i class="fa fa-calendar"></i></span>
 
-                <input type="date" min="0" class="form-control input-lg" name="fechNacimiento" id="fechNacimiento" placeholder="Ingresar fecha" required>
+                <input type="date" min="0" class="form-control input-lg" name="fechNacimiento" id="fechNacimiento" placeholder="Ingresar fecha">
 
               </div>
 
@@ -760,7 +760,7 @@ MODAL EDITAR USUARIO
 
                 <span class="input-group-addon"><i class="fa fa-home"></i></span>
 
-                <input type="text" class="form-control input-lg" name="editarDireccion" id="editarDireccion" placeholder="Sin Direccion" required>
+                <input type="text" class="form-control input-lg" name="editarDireccion" id="editarDireccion" placeholder="Sin Direccion">
 
               </div>
 
@@ -896,7 +896,7 @@ MODAL EDITAR USUARIO
               <div class="input-group">
 
                 <span class="input-group-addon"><i class="fa fa-user"></i></span>
-                <input type="text" class="form-control input-lg" name="editarCargo" id="editarCargo" placeholder="Ingresar cargo" required>
+                <input type="text" class="form-control input-lg" name="editarCargo" id="editarCargo" placeholder="Ingresar cargo">
 
               </div>
 
@@ -955,7 +955,7 @@ MODAL EDITAR USUARIO
               <div class="input-group">
 
                 <span class="input-group-addon"><i class="fa fa-sort-numeric-asc"></i></span>
-                <input type="text" min="0" class="form-control input-lg" name="maxiCot" placeholder="Cotizaciones diarias" id="maxiCot" required>
+                <input type="text" min="0" class="form-control input-lg" name="maxiCot" placeholder="Cotizaciones diarias" id="maxiCot">
 
               </div>
 
@@ -968,7 +968,7 @@ MODAL EDITAR USUARIO
               <div class="input-group">
 
                 <span class="input-group-addon"><i class="fa fa-calendar"></i></span>
-                <input type="date" min="0" class="form-control input-lg" name="fechaLimEdi" id="fechaLimEdi" placeholder="Ingresar documento" required>
+                <input type="date" min="0" class="form-control input-lg" name="fechaLimEdi" id="fechaLimEdi" placeholder="Ingresar documento">
 
               </div>
 
