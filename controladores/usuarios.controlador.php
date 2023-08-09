@@ -264,6 +264,7 @@ class ControladorUsuarios{
 
 				echo '<script>
 
+					event.preventDefault();
 					swal.fire({
 
 						type: "error",
