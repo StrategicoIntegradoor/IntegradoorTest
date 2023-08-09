@@ -178,7 +178,7 @@ class ModeloUsuarios{
 												WHERE usu_usuario = :usuario");
 
 
-		$valoresPermitidos = array('fechaNacimiento', 'fechaLimite');
+		$valoresPermitidos = array('fechNacimiento', 'fechaLimEdi');
 
 		foreach ($valoresPermitidos as $field) {
 			if (!isset($datos[$field]) || empty($datos[$field])) {
