@@ -114,7 +114,7 @@
 		EXEQUIAS
 		=============================================*/
 
-		if($_SESSION["permisos"]["Cotizarpesados"] == "x"){	
+		if($_SESSION["permisos"]["SeguroExequial"] == "x"){	
 			echo '<li>
 				<a href="exequias">
 				<i class="fa fa-umbrella" aria-hidden="true"></i>
