@@ -99,7 +99,7 @@ class ModeloUsuarios{
 
 		foreach($valoresPermitidos as $field){
 			if (!isset($datos[$field])) {
-				$datos[$field] = null;
+				$datos[$field] = '0';
 		}};
 		$stmt -> bindParam(":documento", $datos["documento"], PDO::PARAM_INT);
 		$stmt -> bindParam(":nombre", $datos["nombre"], PDO::PARAM_STR);
