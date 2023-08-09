@@ -167,36 +167,25 @@ class ModeloUsuarios{
 												usu_genero = :genero, direccion =:direccion, ciudades_id =:ciudad, usu_telefono = :telefono, usu_email = :email, usu_cargo = :cargo, usu_foto = :foto, id_rol = :rol, id_Intermediario = :intermediario, numCotizaciones = :maxCotEdi, fechaFin = :fechaLimEdi
 												WHERE usu_usuario = :usuario");
 
-		foreach ($datos as $clave => $valor) {
-			if (isset($valor)) {
-				if (is_int($valor)) {
-					$stmt->bindParam(":" . $clave, $valor, PDO::PARAM_INT);
-				} else {
-					$stmt->bindParam(":" . $clave, $valor, PDO::PARAM_STR);
-				}
-			} else {
-				$stmt->bindValue(":" . $clave, null, PDO::PARAM_NULL);
-			}
-		}
 
-		// $stmt -> bindParam(":documento", $datos["documento"], PDO::PARAM_INT);
-		// $stmt -> bindParam(":tipoDocumento", $datos["tipoDocumento"], PDO::PARAM_STR);
-		// $stmt -> bindParam(":nombre", $datos["nombre"], PDO::PARAM_STR);
-		// $stmt -> bindParam(":apellido", $datos["apellido"], PDO::PARAM_STR);
-		// $stmt -> bindParam(":usuario", $datos["usuario"], PDO::PARAM_STR);
-		// // $stmt -> bindParam(":password", $datos["password"], PDO::PARAM_STR);
-		// $stmt -> bindParam(":genero", $datos["genero"], PDO::PARAM_STR);
-		// $stmt -> bindParam(":fechNacimiento", $datos["fechNacimiento"], PDO::PARAM_STR);
-		// $stmt -> bindParam(":direccion", $datos["direccion"], PDO::PARAM_STR);
-		// $stmt -> bindParam(":ciudad", $datos["ciudad"], PDO::PARAM_STR);
-		// $stmt -> bindParam(":telefono", $datos["telefono"], PDO::PARAM_STR);
-		// $stmt -> bindParam(":email", $datos["email"], PDO::PARAM_STR);
-		// $stmt -> bindParam(":cargo", $datos["cargo"], PDO::PARAM_STR);
-		// $stmt -> bindParam(":foto", $datos["foto"], PDO::PARAM_STR);
-		// $stmt -> bindParam(":intermediario", $datos["intermediario"], PDO::PARAM_STR);
-		// $stmt -> bindParam(":maxCotEdi", $datos["maxCotEdi"], PDO::PARAM_STR);
-		// $stmt -> bindParam(":fechaLimEdi", $datos["fechaLimEdi"], PDO::PARAM_STR);
-		// $stmt -> bindParam(":rol", $datos["rol"], PDO::PARAM_STR);
+		$stmt -> bindParam(":documento", $datos["documento"], PDO::PARAM_INT);
+		$stmt -> bindParam(":tipoDocumento", $datos["tipoDocumento"], PDO::PARAM_STR);
+		$stmt -> bindParam(":nombre", $datos["nombre"], PDO::PARAM_STR);
+		$stmt -> bindParam(":apellido", $datos["apellido"], PDO::PARAM_STR);
+		$stmt -> bindParam(":usuario", $datos["usuario"], PDO::PARAM_STR);
+		// $stmt -> bindParam(":password", $datos["password"], PDO::PARAM_STR);
+		$stmt -> bindParam(":genero", $datos["genero"], PDO::PARAM_STR);
+		$stmt -> bindParam(":fechNacimiento", $datos["fechNacimiento"], PDO::PARAM_STR);
+		$stmt -> bindParam(":direccion", $datos["direccion"], PDO::PARAM_STR);
+		$stmt -> bindParam(":ciudad", $datos["ciudad"], PDO::PARAM_STR);
+		$stmt -> bindParam(":telefono", $datos["telefono"], PDO::PARAM_STR);
+		$stmt -> bindParam(":email", $datos["email"], PDO::PARAM_STR);
+		$stmt -> bindParam(":cargo", $datos["cargo"], PDO::PARAM_STR);
+		$stmt -> bindParam(":foto", $datos["foto"], PDO::PARAM_STR);
+		$stmt -> bindParam(":intermediario", $datos["intermediario"], PDO::PARAM_STR);
+		$stmt -> bindParam(":maxCotEdi", $datos["maxCotEdi"], PDO::PARAM_STR);
+		$stmt -> bindParam(":fechaLimEdi", $datos["fechaLimEdi"], PDO::PARAM_STR);
+		$stmt -> bindParam(":rol", $datos["rol"], PDO::PARAM_STR);
 
 		if($stmt -> execute()){
 
