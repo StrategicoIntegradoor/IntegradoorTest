@@ -98,9 +98,9 @@ class ModeloUsuarios{
 		$valoresPermitidos = array('fechaNacimiento', 'direccion', 'ciudad', 'cargo', 'maxcotizaciones', 'fechaLimite' );
 
 		foreach($valoresPermitidos as $field){
-			if (!isset($datos[$field])) {
+			if (!array_key_exists($field, $datos)) {
 				$datos[$field] = null;
-		}};
+			}};
 		$stmt -> bindParam(":documento", $datos["documento"], PDO::PARAM_INT);
 		$stmt -> bindParam(":nombre", $datos["nombre"], PDO::PARAM_STR);
 		$stmt -> bindParam(":apellido", $datos["apellido"], PDO::PARAM_STR);
