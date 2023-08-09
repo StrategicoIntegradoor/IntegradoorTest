@@ -178,6 +178,17 @@ class ModeloUsuarios{
 												WHERE usu_usuario = :usuario");
 
 
+		$valoresPermitidos = array('fechaNacimiento', 'fechaLimite');
+
+		foreach ($valoresPermitidos as $field) {
+			if (!isset($datos[$field]) || empty($datos[$field])) {
+				$datos[$field] = null;
+			}else {
+				// Asegurar que la fecha esté en el formato correcto
+				$datos[$field] = date("Y-m-d H:i:s", strtotime($datos[$field]));
+			}
+		}
+
 		$stmt -> bindParam(":documento", $datos["documento"], PDO::PARAM_INT);
 		$stmt -> bindParam(":tipoDocumento", $datos["tipoDocumento"], PDO::PARAM_STR);
 		$stmt -> bindParam(":nombre", $datos["nombre"], PDO::PARAM_STR);
