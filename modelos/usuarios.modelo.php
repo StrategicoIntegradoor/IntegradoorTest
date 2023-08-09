@@ -94,6 +94,13 @@ class ModeloUsuarios{
 																	usu_cargo, usu_foto, usu_estado, id_rol, id_Intermediario, numCotizaciones, fechaFin) 
 																	VALUES (:documento, :nombre, :apellido, :usuario, :password, :genero, :fechaNacimiento, :direccion, :ciudad, :tipoDocumento, :telefono, :email, :cargo, :foto, 1, :rol, :intermediario, :maxCot,  :fechaLimite )");
 
+		
+		$valoresPermitidos = array('fechaNacimiento', 'direccion', 'ciudad', 'cargo', 'maxcotizaciones', 'fechaLimite' );
+
+		foreach($valoresPermitidos as $field){
+			if (!isset($datos[$field])) {
+				$datos[$field] = null;
+		}};
 		$stmt -> bindParam(":documento", $datos["documento"], PDO::PARAM_INT);
 		$stmt -> bindParam(":nombre", $datos["nombre"], PDO::PARAM_STR);
 		$stmt -> bindParam(":apellido", $datos["apellido"], PDO::PARAM_STR);
@@ -112,8 +119,6 @@ class ModeloUsuarios{
 		$stmt -> bindParam(":intermediario", $datos["intermediario"], PDO::PARAM_INT);
 		$stmt -> bindParam(":maxCot", $datos["maxCotizaciones"], PDO::PARAM_INT);
 		$stmt -> bindParam(":fechaLimite", $datos["fechaLimite"], PDO::PARAM_STR);
-
-	
 
 
 		echo '<script>
