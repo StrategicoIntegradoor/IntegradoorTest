@@ -95,7 +95,7 @@ class ModeloUsuarios{
 																	VALUES (:documento, :nombre, :apellido, :usuario, :password, :genero, :fechaNacimiento, :direccion, :ciudad, :tipoDocumento, :telefono, :email, :cargo, :foto, 1, :rol, :intermediario, :maxCot,  :fechaLimite )");
 
 		
-		$valoresPermitidos = array('fechaNacimiento', 'direccion', 'ciudad', 'cargo', 'maxcotizaciones', 'fechaLimite' );
+		$valoresPermitidos = array('fechaNacimiento', 'fechaLimite' );
 
 		foreach ($valoresPermitidos as $field) {
 			if (!isset($datos[$field]) || empty($datos[$field])) {
