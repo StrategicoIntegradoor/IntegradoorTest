@@ -264,6 +264,7 @@ class ControladorUsuarios{
 
 				echo '<script>
 
+					validarFormulario(event){
 					event.preventDefault();
 					swal.fire({
 
@@ -281,7 +282,7 @@ class ControladorUsuarios{
 						}
 
 					});
-				
+				}
 
 				</script>';
 
