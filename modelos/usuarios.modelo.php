@@ -98,7 +98,7 @@ class ModeloUsuarios{
 		$valoresPermitidos = array('fechaNacimiento', 'direccion', 'ciudad', 'cargo', 'maxcotizaciones', 'fechaLimite' );
 
 		foreach ($valoresPermitidos as $field) {
-			if (!isset($datos[$field])) {
+			if (!isset($datos[$field]) || empty($datos[$field])) {
 				$datos[$field] = null;
 			}else {
 				// Asegurar que la fecha esté en el formato correcto
