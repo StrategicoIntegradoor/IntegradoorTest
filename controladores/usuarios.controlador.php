@@ -321,8 +321,9 @@ class ControladorUsuarios{
 			   preg_match('/^[a-zA-Z0-9ñÑáéíóúÁÉÍÓÚ ]+$/', $_POST["editarApellido"] &&
 			   preg_match('/^[0-9]+$/', $_POST["editarDocIdUser"])) &&
 			   preg_match('/^[()\-0-9 ]+$/', $_POST["editarTelefono"]) &&
-			   preg_match('/^[a-zA-Z0-9_\-\.~]{2,}@[a-zA-Z0-9_\-\.~]{2,}\.[a-zA-Z]{2,4}$/', $_POST["editarEmail"]) &&
-			   preg_match('/^[a-zA-Z0-9ñÑáéíóúÁÉÍÓÚ ]+$/', $_POST["editarCargo"])){
+			   preg_match('/^[a-zA-Z0-9_\-\.~]{2,}@[a-zA-Z0-9_\-\.~]{2,}\.[a-zA-Z]{2,4}$/', $_POST["editarEmail"])
+			//    preg_match('/^[a-zA-Z0-9ñÑáéíóúÁÉÍÓÚ ]+$/', $_POST["editarCargo"])
+			   ){
 
 				// Convierto el usuario a Minisculas
 				$editarUsuario = strtolower($_POST["editarUsuario"]);
