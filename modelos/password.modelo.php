@@ -53,7 +53,7 @@ class ModeloPassword{
 			$mail->Port = 587;
 			$mail->SMTPSecure = 'tls';
 			$mail->SMTPAuth = true;
-			$mail->Username = 'equipointegradoor@outlook.es';
+			$mail->Username = 'correopruebaSMTP@outlook.com';
 			$mail->Password = 'Seguros35.';
 
 			// Configurar el remitente y destinatario del correo
