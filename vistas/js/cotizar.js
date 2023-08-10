@@ -1418,7 +1418,7 @@ function cotizarOfertas() {
                   return res.json();
                 })
                 .then((ofertas) => {
-                  console.log('Ofertas de Solidaria:', ofertas); // Imprime las ofertas en la consola
+                  console.log('Ofertas de Solidaria:', ofertas[0].Resultado); // Imprime las ofertas en la consola
                   if (typeof ofertas[0].Resultado !== 'undefined') {
                     agregarAseguradoraFallida('Solidaria')
                     ofertas[0].Mensajes.forEach(mensaje => {
