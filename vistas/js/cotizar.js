@@ -1406,9 +1406,18 @@ function cotizarOfertas() {
               document.querySelector('.fallidas').innerHTML += `<p><i class="fa fa-times" aria-hidden="true" style="color: red; margin-right: 10px;"></i><b>${aseguradora}:</b> ${mensaje}</p>`
             }
 
+            function fetchWithTimeout(url, options, timeout = 240000) { // 240000 ms = 4 minutos
+              return Promise.race([
+                fetch(url, options),
+                new Promise((_, reject) =>
+                  setTimeout(() => reject(new Error('Tiempo de espera excedido')), timeout)
+                )
+              ]);
+            }
+
             /* Solidaria */
             cont.push(
-              fetch(
+              fetchWithTimeout(
                 "https://grupoasistencia.com/motor_webservice/Solidaria",
                 requestOptions
               )
@@ -1435,7 +1444,7 @@ function cotizarOfertas() {
 
             cont.push(
 
-              fetch("https://grupoasistencia.com/motor_webservice/mapfrecotizacion4", requestOptions)
+              fetchWithTimeout("https://grupoasistencia.com/motor_webservice/mapfrecotizacion4", requestOptions)
 
                 .then((res) => {
 
@@ -1491,7 +1500,7 @@ function cotizarOfertas() {
 
             /* Previsora */
             cont.push(
-              fetch("https://grupoasistencia.com/motor_webservice/Previsora", requestOptions)
+              fetchWithTimeout("https://grupoasistencia.com/motor_webservice/Previsora", requestOptions)
                 .then((res) => {
                   if (!res.ok) throw Error(res.statusText);
                   return res.json();
@@ -1514,7 +1523,7 @@ function cotizarOfertas() {
 
             /* Equidad */
             cont.push(
-              fetch("https://grupoasistencia.com/motor_webservice/Equidad", requestOptions)
+              fetchWithTimeout("https://grupoasistencia.com/motor_webservice/Equidad", requestOptions)
                 .then((res) => {
                   if (!res.ok) throw Error(res.statusText);
                   return res.json();
@@ -1537,7 +1546,7 @@ function cotizarOfertas() {
 
             /* Bolivar */
             cont.push(
-              fetch("https://grupoasistencia.com/motor_webservice/Bolivar", requestOptions)
+              fetchWithTimeout("https://grupoasistencia.com/motor_webservice/Bolivar", requestOptions)
                 .then((res) => {
                   if (!res.ok) throw Error(res.statusText);
                   return res.json();
@@ -1561,7 +1570,7 @@ function cotizarOfertas() {
 
             /* HDI */
             cont.push(
-              fetch("https://grupoasistencia.com/motor_webservice/HDI", requestOptions)
+              fetchWithTimeout("https://grupoasistencia.com/motor_webservice/HDI", requestOptions)
                 .then((res) => {
                   if (!res.ok) throw Error(res.statusText);
                   return res.json();
@@ -1596,7 +1605,7 @@ function cotizarOfertas() {
               body.Email2 = Math.round(Math.random() * 999999) + body.Email
               requestOptions.body = JSON.stringify(body)
               cont.push(
-                fetch('https://grupoasistencia.com/motor_webservice/Zurich', requestOptions)
+                fetchWithTimeout('https://grupoasistencia.com/motor_webservice/Zurich', requestOptions)
                   .then(res => {
                     if (!res.ok) throw Error(res.statusText)
                     return res.json()
@@ -1626,7 +1635,7 @@ function cotizarOfertas() {
 
             /* Estado */
             cont.push(
-              fetch("https://grupoasistencia.com/motor_webservice/Estado", requestOptions)
+              fetchWithTimeout("https://grupoasistencia.com/motor_webservice/Estado", requestOptions)
                 .then((res) => {
                   if (!res.ok) throw Error(res.statusText);
                   return res.json();
@@ -1654,7 +1663,7 @@ function cotizarOfertas() {
 
             /* Estado2 */
             cont.push(
-              fetch("https://grupoasistencia.com/motor_webservice/Estado2", requestOptions)
+              fetchWithTimeout("https://grupoasistencia.com/motor_webservice/Estado2", requestOptions)
                 .then((res) => {
                   if (!res.ok) throw Error(res.statusText);
                   return res.json();
@@ -1682,7 +1691,7 @@ function cotizarOfertas() {
 
             /* Liberty */
             cont.push(
-              fetch("https://grupoasistencia.com/motor_webservice/Liberty", requestOptions)
+              fetchWithTimeout("https://grupoasistencia.com/motor_webservice/Liberty", requestOptions)
                 .then((res) => {
                   if (!res.ok) throw Error(res.statusText);
                   return res.json();
@@ -1705,7 +1714,7 @@ function cotizarOfertas() {
 
             /* Allianz */
             cont.push(
-              fetch("https://grupoasistencia.com/motor_webservice/Allianz", requestOptions)
+              fetchWithTimeout("https://grupoasistencia.com/motor_webservice/Allianz", requestOptions)
                 .then((res) => {
                   if (!res.ok) throw Error(res.statusText);
                   console.log(res);
@@ -1729,7 +1738,7 @@ function cotizarOfertas() {
 
             /* AXA */
             cont.push(
-              fetch("https://grupoasistencia.com/motor_webservice/AXA", requestOptions)
+              fetchWithTimeout("https://grupoasistencia.com/motor_webservice/AXA", requestOptions)
                 .then((res) => {
                   if (!res.ok) throw Error(res.statusText);
                   return res.json();
@@ -1752,7 +1761,7 @@ function cotizarOfertas() {
 
             /* SBS */
             cont.push(
-              fetch("https://grupoasistencia.com/motor_webservice/SBS", requestOptions)
+              fetchWithTimeout("https://grupoasistencia.com/motor_webservice/SBS", requestOptions)
                 .then((res) => {
                   if (!res.ok) throw Error(res.statusText);
                   return res.json();
