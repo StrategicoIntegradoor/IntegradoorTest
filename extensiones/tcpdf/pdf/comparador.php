@@ -1631,7 +1631,7 @@ $html4 .= '</table>';
 //CONSULTA ResponsabilidadCivilGeneralFamiliar
 //::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
-// $html4 .= '<table>';
+$html4 .= '<table>';
 
 $html4 .= '<tr>';
 $html4 .= '<td class ="fondo puntos" style="width:10%; text-align: center; font-family:dejavusanscondensedb;"><font size="8">Responsabilidad civil familiar</font></td>';
@@ -1879,7 +1879,7 @@ while ($rowRespuesta28 = mysqli_fetch_assoc($respuestaquery28)) {
 }
 
 $html4 .= '</tr>';
-// $html4 .= '</table>';
+$html4 .= '</table>';
 
 
 //::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
