@@ -976,6 +976,7 @@ function registrarOferta(
         pdf: pdf
       },
       success: function (data) {
+        console.log(data)
         // var datos = data.Data;
         var message = data.Message
         var success = data.Success
