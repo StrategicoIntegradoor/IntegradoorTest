@@ -1631,7 +1631,7 @@ $html4 .= '</tr>';
 //CONSULTA ResponsabilidadCivilGeneralFamiliar
 //::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
-$html4 .= '<table>';
+// $html4 .= '<table>';
 
 $html4 .= '<tr>';
 $html4 .= '<td class ="fondo puntos" style="width:10%; text-align: center; font-family:dejavusanscondensedb;"><font size="8">Responsabilidad civil familiar</font></td>';
