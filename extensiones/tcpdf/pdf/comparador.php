@@ -1880,7 +1880,7 @@ while ($rowRespuesta28 = mysqli_fetch_assoc($respuestaquery28)) {
 
 $html4 .= '</tr>';
 
-$html4 .= '</table>';
+// $html4 .= '</table>';
 
 //::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 //SEGUNDA TABLA DE ASISTENCIAS
