@@ -1668,7 +1668,7 @@ while ($rowRespuesta23 = mysqli_fetch_assoc($respuestaquery23)) {
 
 $html4 .= '</tr>';
 
-// $html4 .= '</table>';
+$html4 .= '</table>';
 
 //::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 //CONSULTA CoberturaDeVidrios
