@@ -1699,6 +1699,7 @@ function cotizarOfertas() {
                       mostrarAlertarCotizacionFallida('Liberty', mensaje)
                     })
                   } else {
+                    console.log('hasta aqui vamos')
                     validarOfertas(ofertas);
                     mostrarAlertaCotizacionExitosa('Liberty')
                   }
