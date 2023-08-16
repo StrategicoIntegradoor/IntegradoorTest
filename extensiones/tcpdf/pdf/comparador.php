@@ -1631,7 +1631,7 @@ $html4 .= '</tr>';
 //CONSULTA ResponsabilidadCivilGeneralFamiliar
 //::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
-// $html4 .= '<table>';
+// $html4 .= '<tafhmble>';
 
 $html4 .= '<tr>';
 $html4 .= '<td class ="fondo puntos" style="width:10%; text-align: center; font-family:dejavusanscondensedb;"><font size="8">Responsabilidad civil familiar</font></td>';
@@ -1649,7 +1649,7 @@ while ($rowRespuesta23 = mysqli_fetch_assoc($respuestaquery23)) {
 	$respuestaqueryAsistencia17 =  $conexion->query($queryConsultaAsistencia17);
 	$rowRespuestaAsistencia17 = mysqli_fetch_assoc($respuestaqueryAsistencia17);
 
-	if ($cont20 % 2 == 0) {
+	if ($cont21 % 2 == 0) {
 		if ($rowRespuestaAsistencia17['ResponsabilidadCivilGeneralFamiliar'] == "Si ampara") {
 			$html4 .= '<td class="puntos fondo" style="width:' . $valorTabla . '%;text-align: center;"><div style="font-size:12pt">&nbsp;</div><img style="width:16px;" src="../../../vistas/img/logos/cheque.png" alt=""></td>';
 		} else {
@@ -1691,7 +1691,7 @@ while ($rowRespuesta24 = mysqli_fetch_assoc($respuestaquery24)) {
 	$respuestaqueryAsistencia18 =  $conexion->query($queryConsultaAsistencia18);
 	$rowRespuestaAsistencia18 = mysqli_fetch_assoc($respuestaqueryAsistencia18);
 
-	if ($cont20 % 2 == 0) {
+	if ($cont22 % 2 == 0) {
 		if ($rowRespuestaAsistencia18['CoberturaDeVidrios'] == "Si ampara") {
 			$html4 .= '<td class="puntos fondo" style="width:' . $valorTabla . '%;text-align: center;"><div style="font-size:12pt">&nbsp;</div><img style="width:16px;" src="../../../vistas/img/logos/cheque.png" alt=""></td>';
 		} else {
@@ -1733,7 +1733,7 @@ while ($rowRespuesta25 = mysqli_fetch_assoc($respuestaquery25)) {
 	$respuestaqueryAsistencia19 =  $conexion->query($queryConsultaAsistencia19);
 	$rowRespuestaAsistencia19 = mysqli_fetch_assoc($respuestaqueryAsistencia19);
 
-	if ($cont20 % 2 == 0) {
+	if ($cont20 % 3 == 0) {
 		if ($rowRespuestaAsistencia19['AsistenciaJuridicaCivil'] == "Si ampara") {
 			$html4 .= '<td class="puntos fondo" style="width:' . $valorTabla . '%;text-align: center;"><div style="font-size:12pt">&nbsp;</div><img style="width:16px;" src="../../../vistas/img/logos/cheque.png" alt=""></td>';
 		} else {
@@ -1776,7 +1776,7 @@ while ($rowRespuesta26 = mysqli_fetch_assoc($respuestaquery26)) {
 	$respuestaqueryAsistencia20 =  $conexion->query($queryConsultaAsistencia20);
 	$rowRespuestaAsistencia20 = mysqli_fetch_assoc($respuestaqueryAsistencia20);
 
-	if ($cont20 % 2 == 0) {
+	if ($cont24 % 2 == 0) {
 		if ($rowRespuestaAsistencia20['AsistenciaOdontologica'] == "Si ampara") {
 			$html4 .= '<td class="puntos fondo" style="width:' . $valorTabla . '%;text-align: center;"><div style="font-size:12pt">&nbsp;</div><img style="width:16px;" src="../../../vistas/img/logos/cheque.png" alt=""></td>';
 		} else {
@@ -1818,7 +1818,7 @@ while ($rowRespuesta27 = mysqli_fetch_assoc($respuestaquery27)) {
 	$respuestaqueryAsistencia21 =  $conexion->query($queryConsultaAsistencia21);
 	$rowRespuestaAsistencia21 = mysqli_fetch_assoc($respuestaqueryAsistencia21);
 
-	if ($cont20 % 2 == 0) {
+	if ($cont25 % 2 == 0) {
 		if ($rowRespuestaAsistencia21['exequias'] == "Si ampara") {
 			$html4 .= '<td class="puntos fondo" style="width:' . $valorTabla . '%;text-align: center;"><div style="font-size:12pt">&nbsp;</div><img style="width:16px;" src="../../../vistas/img/logos/cheque.png" alt=""></td>';
 		} else {
@@ -1861,7 +1861,7 @@ while ($rowRespuesta28 = mysqli_fetch_assoc($respuestaquery28)) {
 	$respuestaqueryAsistencia22 =  $conexion->query($queryConsultaAsistencia22);
 	$rowRespuestaAsistencia22 = mysqli_fetch_assoc($respuestaqueryAsistencia22);
 
-	if ($cont20 % 2 == 0) {
+	if ($cont26 % 2 == 0) {
 		if ($rowRespuestaAsistencia22['Asesoria_Gestion_de_tramites'] == "Si ampara") {
 			$html4 .= '<td class="puntos fondo" style="width:' . $valorTabla . '%;text-align: center;"><div style="font-size:12pt">&nbsp;</div><img style="width:16px;" src="../../../vistas/img/logos/cheque.png" alt=""></td>';
 		} else {
