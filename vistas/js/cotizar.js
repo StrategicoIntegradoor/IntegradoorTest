@@ -1111,7 +1111,7 @@ const mostrarOferta = (
 
 // VALIDA QUE LAS OFERTAS COTIZADAS HAYAN SIDO GUARDADAS EN SU TOTALIDAD
 function validarOfertas(ofertas) {
-  console.log(ofertas)
+  console.log(ofertas.responsabilidad_civil_familiar)
   ofertas.forEach((oferta, i) => {
     var numCotizacion = oferta.numero_cotizacion;
     var precioOferta = oferta.precio;
