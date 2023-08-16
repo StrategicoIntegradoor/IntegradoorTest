@@ -945,9 +945,9 @@ function registrarOferta(
   GR,
   logo,
   UrlPdf,
+  responsabilidad_civil_familiar,
   manual,
   pdf,
-  responsabilidad_civil_familiar
 ) {
   return new Promise((resolve, reject) => {
     var idCotizOferta = idCotizacion
