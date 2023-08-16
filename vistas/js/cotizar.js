@@ -1114,6 +1114,7 @@ const mostrarOferta = (
 // VALIDA QUE LAS OFERTAS COTIZADAS HAYAN SIDO GUARDADAS EN SU TOTALIDAD
 function validarOfertas(ofertas) {
   console.log(ofertas[0].responsabilidad_civil_familiar);
+  $responsabilidadCivilFamiliar = ofertas[0].responsabilidad_civil_familiar;
   ofertas.forEach((oferta, i) => {
     var numCotizacion = oferta.numero_cotizacion;
     var precioOferta = oferta.precio;
@@ -1147,7 +1148,7 @@ function validarOfertas(ofertas) {
       oferta.servicio_grua,
       oferta.imagen,
       oferta.pdf,
-      oferta.responsabilidad_civil_familiar,
+      $responsabilidadCivilFamiliar,
       0
     );
   });
