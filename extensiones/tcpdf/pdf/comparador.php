@@ -1761,7 +1761,7 @@ $html4 .= '</table>';
 //CONSULTA AsistenciaOdontologica 
 //::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
-
+$html4 .= '<table>';
 $html4 .= '<tr>';
 $html4 .= '<td class ="fondo puntos" style="width:10%; text-align: center; font-family:dejavusanscondensedb;"><font size="8">Asistencia odontológica</font></td>';
 
@@ -1797,7 +1797,7 @@ while ($rowRespuesta26 = mysqli_fetch_assoc($respuestaquery26)) {
 
 $html4 .= '</tr>';
 
-// $html4 .= '</table>';
+$html4 .= '</table>';
 
 //::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 //CONSULTA  Exequias
