@@ -1771,8 +1771,8 @@ $respuestaquery26 =  $conexion->query($query26);
 $cont24 = 1;
 while ($rowRespuesta26 = mysqli_fetch_assoc($respuestaquery26)) {
 
-	$nombreAseguradora = nombreAseguradora($rowRespuesta25['Aseguradora']);
-	$nombreProducto = productoAseguradora($rowRespuesta25['Aseguradora'], $rowRespuesta25['Producto']);
+	$nombreAseguradora = nombreAseguradora($rowRespuesta26['Aseguradora']);
+	$nombreProducto = productoAseguradora($rowRespuesta26['Aseguradora'], $rowRespuesta26['Producto']);
 
 	$queryConsultaAsistencia20 = "SELECT * FROM asistencias WHERE `aseguradora` LIKE '$nombreAseguradora' AND `producto` LIKE '$nombreProducto'";
 	$respuestaqueryAsistencia20 =  $conexion->query($queryConsultaAsistencia20);
