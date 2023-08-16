@@ -1803,7 +1803,7 @@ $html4 .= '</table>';
 //CONSULTA  Exequias
 //::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
-
+$html4 .= '<table>';
 $html4 .= '<tr>';
 $html4 .= '<td class ="fondo puntos" style="width:10%; text-align: center; font-family:dejavusanscondensedb;"><font size="8">Seguro para Exequias</font></td>';
 
@@ -1838,6 +1838,7 @@ while ($rowRespuesta27 = mysqli_fetch_assoc($respuestaquery27)) {
 }
 
 $html4 .= '</tr>';
+$html4 .= '</table>';
 
 
 
@@ -1846,7 +1847,7 @@ $html4 .= '</tr>';
 //::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
 
-
+$html4 .= '<table>';
 $html4 .= '<tr>';
 $html4 .= '<td class ="fondo puntos" style="width:10%; text-align: center; font-family:dejavusanscondensedb;"><font size="8">Asesoria y Gestión de trámites de Tránsito</font></td>';
 
