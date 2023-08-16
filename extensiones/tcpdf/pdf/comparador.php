@@ -1717,6 +1717,7 @@ $html4 .= '</table>';
 //CONSULTA AsistenciaJuridicaCivil
 //::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
+$html4 .= '<table>';
 
 $html4 .= '<tr>';
 $html4 .= '<td class ="fondo puntos" style="width:10%; text-align: center; font-family:dejavusanscondensedb;"><font size="8">Asistencia jurídica civil</font></td>';
@@ -1753,7 +1754,7 @@ while ($rowRespuesta25 = mysqli_fetch_assoc($respuestaquery25)) {
 
 $html4 .= '</tr>';
 
-// $html4 .= '</table>';
+$html4 .= '</table>';
 
 
 //::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
