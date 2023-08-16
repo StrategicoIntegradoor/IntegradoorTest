@@ -19,12 +19,13 @@ $GR = $_POST['GR'];
 $logo = "vistas/img/logos/".$_POST['logo'];
 $UrlPdf = $_POST['UrlPdf'];
 $manual = $_POST['manual'];
+$familiar = $_POST['responsabilidad_civil_familiar'];
 
 
 $sql ="INSERT INTO `ofertas` (`id_oferta`, `Placa`, `Identificacion`, `NumCotizOferta`, `Aseguradora`, `Producto`, `Prima`, 
-					`ValorRC`, `PerdidaTotal`, `PerdidaParcial`, `ConductorElegido`, `Grua`, `logo`, `UrlPdf`, `id_cotizacion`, `Manual`) 
+					`ValorRC`, `PerdidaTotal`, `PerdidaParcial`, `ConductorElegido`, `Grua`, `logo`, `UrlPdf`, `id_cotizacion`, `Manual`, `ResponsabilidadCivilGeneralFamiliar`) 
 		VALUES (NULL, '$placa', '$numIdentificacion', '$numCotizOferta', '$aseguradora', '$producto', '$valorPrima', '$valorRC', 
-						'$PT', '$PP', '$CE', '$GR', '$logo', '$UrlPdf', '$idCotizacion', $manual);";
+						'$PT', '$PP', '$CE', '$GR', '$logo', '$UrlPdf', '$idCotizacion', $manual, $familiar);";
 
 $res = mysqli_query($con, $sql);
 $num_rows = mysqli_affected_rows($con);

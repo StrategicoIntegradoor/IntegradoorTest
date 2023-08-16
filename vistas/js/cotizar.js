@@ -946,7 +946,8 @@ function registrarOferta(
   logo,
   UrlPdf,
   manual,
-  pdf
+  pdf,
+  responsabilidad_civil_familiar
 ) {
   return new Promise((resolve, reject) => {
     var idCotizOferta = idCotizacion
@@ -973,7 +974,8 @@ function registrarOferta(
         logo: logo,
         UrlPdf: UrlPdf,
         manual: manual,
-        pdf: pdf
+        pdf: pdf,
+        responsabilidad_civil_familiar: responsabilidad_civil_familiar
       },
       success: function (data) {
         console.log(data)
@@ -1145,6 +1147,7 @@ function validarOfertas(ofertas) {
       oferta.servicio_grua,
       oferta.imagen,
       oferta.pdf,
+      oferta.responsabilidad_civil_familiar,
       0
     );
   });
