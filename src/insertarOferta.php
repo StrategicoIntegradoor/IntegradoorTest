@@ -20,6 +20,8 @@ $logo = "vistas/img/logos/".$_POST['logo'];
 $UrlPdf = $_POST['UrlPdf'];
 $manual = $_POST['manual'];
 $familiar = $_POST['responsabilidad_civil_familiar'];
+var_dump($familiar);
+die();
 
 
 $sql ="INSERT INTO `ofertas` (`id_oferta`, `Placa`, `Identificacion`, `NumCotizOferta`, `Aseguradora`, `Producto`, `Prima`, 
