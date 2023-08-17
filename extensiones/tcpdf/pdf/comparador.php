@@ -1651,9 +1651,9 @@ while ($rowRespuesta23 = mysqli_fetch_assoc($respuestaquery23)) {
 
 	if ($cont21 % 2 == 0) {
 		// if ($ampara == "Si ampara") {
-			$html4 .= '<td class="puntos fondo" style="width:' . $valorTabla . '%;"><center><div style="font-size:14pt">&nbsp;</div><font size="7"style="text-align: center; font-family:dejavusanscondensed;">' . $ampara . '</font></center></td>';
+			// $html4 .= '<td class="puntos fondo" style="width:' . $valorTabla . '%;"><center><div style="font-size:14pt">&nbsp;</div><font size="7"style="text-align: center; font-family:dejavusanscondensed;">' . $ampara . '</font></center></td>';
 		// } else {
-			// $html4 .= '<td class="puntos fondo" style="width:' . $valorTabla . '%;"><center><div style="font-size:14pt">&nbsp;</div><font size="7"style="text-align: center; font-family:dejavusanscondensed;">' . $rowRespuestaAsistencia17['ResponsabilidadCivilGeneralFamiliar'] . '</font></center></td>';
+			$html4 .= '<td class="puntos fondo" style="width:' . $valorTabla . '%;"><center><div style="font-size:14pt">&nbsp;</div><font size="7"style="text-align: center; font-family:dejavusanscondensed;">' . $ampara . '</font></center></td>';
 		// }
 	} else {
 		// if ($rowRespuestaAsistencia17['ResponsabilidadCivilGeneralFamiliar'] == "Si ampara") {
