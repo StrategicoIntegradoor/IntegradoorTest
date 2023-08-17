@@ -1189,8 +1189,8 @@ $html4 = '
 <style>
   .puntos {
     border-bottom:1px solid grey;
-	vertical-align:middle
-}
+	justify-content: center;
+    align-items: center;}
 
 .second2 {
 	width:100%;
@@ -1848,7 +1848,7 @@ $html4 .= '<td class ="fondo puntos" style="width:10%; text-align: center; font-
 $query28 = "SELECT * FROM ofertas WHERE `id_cotizacion` = $identificador AND `seleccionar` = 'Si'";
 $respuestaquery28 =  $conexion->query($query28);
 
-$cont26 = 2;
+$cont26 = 1;
 while ($rowRespuesta28 = mysqli_fetch_assoc($respuestaquery28)) {
 
 	$nombreAseguradora = nombreAseguradora($rowRespuesta28['Aseguradora']);
