@@ -1189,6 +1189,7 @@ $html4 = '
 <style>
   .puntos {
     border-bottom:1px solid grey;
+	vertical-align:middle
 }
 
 .second2 {
