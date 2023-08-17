@@ -1661,9 +1661,11 @@ while ($rowRespuesta23 = mysqli_fetch_assoc($respuestaquery23)) {
 		// } else {
 			$html4 .= '<td class="puntos fondo2" style="width:' . $valorTabla . '%;"><center><div style="font-size:14pt">&nbsp;</div><font size="7"style="text-align: center; font-family:dejavusanscondensed;">' . $ampara . '</font></center></td>';
 		}
+
+		$cont21 += 1;
 	}
 
-	$cont21 += 1;
+	
 
 $html4 .= '</tr>';
 
