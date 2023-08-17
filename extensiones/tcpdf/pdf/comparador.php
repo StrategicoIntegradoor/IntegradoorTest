@@ -1188,7 +1188,7 @@ $html3 .= '</table>';
 $html4 = '
 <style>
   .puntos {
-    
+    border-bottom:1px solid grey;
 }
 
 .second2 {
