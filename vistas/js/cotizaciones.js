@@ -1942,6 +1942,11 @@ const verPdfPrevisora = async (cotizacion) => {
 
     downloadLink.download = fileName;
 
+    downloadLink.addEventListener("click", () => {
+      // Eliminar la animación del GIF al hacer clic en el enlace de descarga
+      $("#loading-gif").remove();
+    });
+
     downloadLink.click();
 
     $("#previsora-pdf" + cotizacion).html(
