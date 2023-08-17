@@ -1989,7 +1989,7 @@ const obtenerPdfprevisora = async (cotizacion) => {
 
     // Ahora intenta analizarla como JSON
     try {
-      // const jsonResponse = JSON.parse(responseText);
+      const jsonResponse = JSON.parse(responseText);
       return jsonResponse.SerializedPDF;
     } catch (error) {
       console.error("Error al analizar JSON:", error);
