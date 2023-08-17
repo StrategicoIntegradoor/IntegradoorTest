@@ -1944,7 +1944,7 @@ const verPdfPrevisora = async (cotizacion) => {
 
     downloadLink.click();
 
-    $("#previsora-pdf").html(
+    $("#previsora-pdf" + cotizacion).html(
 
       'VER PDF &nbsp;&nbsp;<span class="fa fa-file-text"></span>'
 
