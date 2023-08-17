@@ -1848,7 +1848,7 @@ $html4 .= '<td class ="fondo puntos" style="width:10%; text-align: center; font-
 $query28 = "SELECT * FROM ofertas WHERE `id_cotizacion` = $identificador AND `seleccionar` = 'Si'";
 $respuestaquery28 =  $conexion->query($query28);
 
-$cont26 = 1;
+$cont26 = 2;
 while ($rowRespuesta28 = mysqli_fetch_assoc($respuestaquery28)) {
 
 	$nombreAseguradora = nombreAseguradora($rowRespuesta28['Aseguradora']);
