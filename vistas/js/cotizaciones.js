@@ -1924,13 +1924,15 @@ const verPdfPrevisora = async (cotizacion) => {
 
     $("#previsora-pdf" + cotizacion).html(
 
-      "VER PDF &nbsp;&nbsp;<img src='vistas/img/plantilla/loading.gif' width='18' height='18'>"
+      "VER PDF &nbsp;&nbsp;<img id='loading-gif' src='vistas/img/plantilla/loading.gif' width='18' height='18'>"
 
     );
 
 
 
     let base64 = await obtenerPdfprevisora(cotizacion);
+
+    $("#loading-gif").remove();
 
     const linkSource = `data:application/pdf;base64,${base64}`;
 
