@@ -1575,7 +1575,7 @@ function cotizarOfertas() {
                   return res.json();
                 })
                 .then((ofertas) => {
-                  console.log(ofertas)
+                  console.log(ofertas['CotizarXGLMResult'])
                   if (typeof ofertas[0].Resultado !== 'undefined') {
                     agregarAseguradoraFallida('HDI')
                     ofertas[0].Mensajes.forEach(mensaje => {
