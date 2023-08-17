@@ -1986,9 +1986,10 @@ const obtenerPdfprevisora = async (cotizacion) => {
 
 
     .then((response) => response.json())
+    console.log(response)
 
     .then((responseText) => {
-      console.log("PDF PREVISORA REVISION")
+
       return responseText.SerializedPDF;
 
     });
