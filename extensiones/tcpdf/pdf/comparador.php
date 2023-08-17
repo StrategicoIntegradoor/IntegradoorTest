@@ -1633,8 +1633,8 @@ $html4 .= '</tr>';
 
 // $html4 .= '<table style="width: 100%; vertical-align: middle;" class="second2" cellpadding="2"  border="0">';
 
-$html5 .= '<tr>';
-$html5 .= '<td class="fondo puntos" style="width:10%; text-align: center; font-family:dejavusanscondensedb;"><font size="8">RC familiar</font></td>';
+$html4 .= '<tr>';
+$html4 .= '<td class="fondo puntos" style="width:10%; text-align: center; font-family:dejavusanscondensedb;"><font size="8">RC familiar</font></td>';
 
 $query23 = "SELECT * FROM ofertas WHERE `id_cotizacion` = $identificador AND `seleccionar` = 'Si'";
 $respuestaquery23 =  $conexion->query($query23);
@@ -1653,13 +1653,13 @@ while ($rowRespuesta23 = mysqli_fetch_assoc($respuestaquery23)) {
 		// if ($ampara == "Si ampara") {
 			// $html4 .= '<td class="puntos fondo" style="width:' . $valorTabla . '%;"><center><div style="font-size:14pt">&nbsp;</div><font size="7"style="text-align: center; font-family:dejavusanscondensed;">' . $ampara . '</font></center></td>';
 		// } else {
-			$html5 .= '<td class="puntos fondo" style="width:' . $valorTabla . '%; vertical-align: middle;"><center><div style="font-size:14pt">&nbsp;</div><font size="7"style="text-align: center; font-family:dejavusanscondensed;">' . $ampara . '</font></center></td>';
+			$html4 .= '<td class="puntos fondo" style="width:' . $valorTabla . '%; vertical-align: middle;"><center><div style="font-size:14pt">&nbsp;</div><font size="7"style="text-align: center; font-family:dejavusanscondensed;">' . $ampara . '</font></center></td>';
 			// }
 	} else {
 		// if ($rowRespuestaAsistencia17['ResponsabilidadCivilGeneralFamiliar'] == "Si ampara") {
 			// $html4 .= '<td class="puntos fondo2" style="width:' . $valorTabla . '%;text-align: center;"><div style="font-size:12pt">&nbsp;</div><img style="width:16px;" src="../../../vistas/img/logos/cheque.png" alt=""></td>';
 		// } else {
-			$html5 .= '<td class="puntos fondo2" style="width:' . $valorTabla . '%; vertical-align: middle;"><center><div style="font-size:14pt">&nbsp;</div><font size="7"style="text-align: center; font-family:dejavusanscondensed;">' . $ampara . '</font></center></td>';
+			$html4 .= '<td class="puntos fondo2" style="width:' . $valorTabla . '%; vertical-align: middle;"><center><div style="font-size:14pt">&nbsp;</div><font size="7"style="text-align: center; font-family:dejavusanscondensed;">' . $ampara . '</font></center></td>';
 		}
 
 		$cont21 += 1;
