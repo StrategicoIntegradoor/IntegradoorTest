@@ -1634,7 +1634,7 @@ $html4 .= '</table>';
 $html4 .= '<table>';
 
 $html4 .= '<tr>';
-$html4 .= '<td class ="fondo puntos" style="width:10%; text-align: center; font-family:dejavusanscondensedb;"><font size="8">Responsabilidad civil familiar</font></td>';
+$html4 .= '<td class ="fondo puntos" style="width:10%; text-align: center; font-family:dejavusanscondensedb;"><font size="8">RC familiar</font></td>';
 
 $query23 = "SELECT * FROM ofertas WHERE `id_cotizacion` = $identificador AND `seleccionar` = 'Si'";
 $respuestaquery23 =  $conexion->query($query23);
@@ -1675,7 +1675,7 @@ $html4 .= '</table>';
 $html4 .= '<table>';
 
 $html4 .= '<tr>';
-$html4 .= '<td class ="fondo puntos" style="width:10%; text-align: center; font-family:dejavusanscondensedb;"><font size="8">Cobertura de vidrios</font></td>';
+$html4 .= '<td class ="fondo puntos" style="width:10%; text-align: center; font-family:dejavusanscondensedb;"><font size="8">Cobertura vidrios</font></td>';
 // $html4 .= '</table>';
 
 $query24 = "SELECT * FROM ofertas WHERE `id_cotizacion` = $identificador AND `seleccionar` = 'Si'";
@@ -1804,7 +1804,7 @@ $html4 .= '</table>';
 
 $html4 .= '<table>';
 $html4 .= '<tr>';
-$html4 .= '<td class ="fondo puntos" style="width:10%; text-align: center; font-family:dejavusanscondensedb;"><font size="8">Seguro para Exequias</font></td>';
+$html4 .= '<td class ="fondo puntos" style="width:10%; text-align: center; font-family:dejavusanscondensedb;"><font size="8">Exequias</font></td>';
 
 $query27 = "SELECT * FROM ofertas WHERE `id_cotizacion` = $identificador AND `seleccionar` = 'Si'";
 $respuestaquery27 =  $conexion->query($query27);
@@ -1848,7 +1848,7 @@ $html4 .= '</table>';
 
 $html4 .= '<table>';
 $html4 .= '<tr>';
-$html4 .= '<td class ="fondo puntos" style="width:10%; text-align: center; font-family:dejavusanscondensedb;"><font size="8">Asesoria y Gestión de trámites de Tránsito</font></td>';
+$html4 .= '<td class ="fondo puntos" style="width:10%; text-align: center; font-family:dejavusanscondensedb;"><font size="8">Asesoria y Gestión trámites Tránsito</font></td>';
 
 $query28 = "SELECT * FROM ofertas WHERE `id_cotizacion` = $identificador AND `seleccionar` = 'Si'";
 $respuestaquery28 =  $conexion->query($query28);
