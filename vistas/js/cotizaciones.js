@@ -11,7 +11,6 @@ $(document).ready(function () {
   const aseguradorasExitosas = []
 
 
-
   // Mostrar alertas
 
   const alertas = new Promise((resolve, reject) => {
@@ -1364,9 +1363,7 @@ function editarCotizacion(id) {
 
             $("#cardCotizacion").html(cardCotizacion);
 
-            const updateManualQuotes =
-
-              document.querySelectorAll(".editar-manual");
+            const updateManualQuotes = document.querySelectorAll(".editar-manual");
 
             updateManualQuotes.forEach((e) => {
 
@@ -1380,9 +1377,7 @@ function editarCotizacion(id) {
 
             });
 
-            const deleteManualQuotes =
-
-              document.querySelectorAll(".eliminar-manual");
+            const deleteManualQuotes = document.querySelectorAll(".eliminar-manual");
 
             deleteManualQuotes.forEach((e) => {
 
@@ -1988,19 +1983,19 @@ const obtenerPdfprevisora = async (cotizacion) => {
     }
 
   )
-  // .then((response) => response.text()) // Obtén la respuesta como texto
-  // .then((responseText) => {
-  //   console.log(responseText); // Imprime la respuesta para depuración
+    // .then((response) => response.text()) // Obtén la respuesta como texto
+    // .then((responseText) => {
+    //   console.log(responseText); // Imprime la respuesta para depuración
 
-  //   // Ahora intenta analizarla como JSON
-  //   try {
-  //     const jsonResponse = JSON.parse(responseText);
-  //     return jsonResponse.SerializedPDF;
-  //   } catch (error) {
-  //     console.error("Error al analizar JSON:", error);
-  //     return null; // Otra acción si el análisis falla
-  //   }
-  // });
+    //   // Ahora intenta analizarla como JSON
+    //   try {
+    //     const jsonResponse = JSON.parse(responseText);
+    //     return jsonResponse.SerializedPDF;
+    //   } catch (error) {
+    //     console.error("Error al analizar JSON:", error);
+    //     return null; // Otra acción si el análisis falla
+    //   }
+    // });
 
     .then((response) => response.json())
 
