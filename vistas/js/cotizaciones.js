@@ -1379,6 +1379,8 @@ function editarCotizacion(id) {
 
             const deleteManualQuotes = document.querySelectorAll(".eliminar-manual");
 
+            console.log(deleteManualQuotes);
+
             deleteManualQuotes.forEach((e) => {
 
               e.addEventListener("click", (e) => {
