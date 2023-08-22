@@ -68,11 +68,11 @@
                 <div class="row">
                     <div class="form-group col-md-6 col-sm-12">
                         <label for="">Nombres <strong class="text-danger">*</strong> </label>
-                        <input class="form-control" type="text" name="nombre" id="nombre" placeholder="nombre">
+                        <input class="form-control" type="text" name="nombre" id="nombre" placeholder="Nombre">
                     </div>
                     <div class="form-group col-md-6 col-sm-12">
                         <label for="">Apellidos <strong class="text-danger">*</strong></label>
-                        <input class="form-control" type="text" name="apellido" id="apellido" placeholder="apellido">
+                        <input class="form-control" type="text" name="apellido" id="apellido" placeholder="Apellido">
                     </div>
                 </div>
                 <div class="row">
@@ -256,30 +256,6 @@
             </form>                                                                                                                                                                                                                                            
         </div>
 
-                            <!-- <div class="form-group">
-                                <label for="cedula">Clave de registro</label>
-                                <input type="text" class="form-control" id="cedula" placeholder="Número de cédula" name="cedula" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="token">Token enviado al correo</label>
-                                <input type="text" class="form-control" id="token" placeholder="Token de seguridad" name="token" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="newPassword">Nueva contraseña</label>
-                                <input type="password" class="form-control" id="newPassword" placeholder="Nueva contraseña" name="newPassword" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="autPassword">Repita su nueva contraseña</label>
-                                <input type="password" class="form-control" id="autPassword" placeholder="Verificación contraseña nueva" name="autPassword" required>
-                            </div>
-                                <br>
-                            <div class="text-center">
-                                <button type="button" class="btn btn-primary btn-block btn-flat" onclick="authInfo()">Enviar</button>
-                            </div> -->
-                
-                    
-                <!-- </div> -->
-        <!-- </div> -->
 </body>
 
 <script src="vistas/js/invitacion.js"></script>
