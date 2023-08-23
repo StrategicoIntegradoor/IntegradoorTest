@@ -1359,41 +1359,35 @@ function editarCotizacion(id) {
 
             });
 
-
-
             $("#cardCotizacion").html(cardCotizacion);
 
-            const updateManualQuotes = document.querySelectorAll(".editar-manual");
+            let updatevideos = document.querySelectorAll(".editar-manual");
+            for (updatevideo of updatevideos) {
 
-            updateManualQuotes.forEach((e) => {
+              updatevideo.addEventListener('click', function (e) {
 
-              e.addEventListener("click", (e) => {
+                let id = updatevideo.id;
+                id2 = id.split("-");
+                console.log(id2[1]);
 
-                const id = e.path[1].id;
-
-                getManualOffer(id);
-
-              });
-
-            });
-
-            const deleteManualQuotes = document.querySelectorAll(".eliminar-manual");
-
-            console.log(deleteManualQuotes);
-
-            deleteManualQuotes.forEach((e) => {
-
-              e.addEventListener("click", (e) => {
-
-                let id = e.path[1].id;
-
-                id = id.split("-")[1];
-
-                deleteManualOffer(id);
+                getManualOffer(id2[1]);
 
               });
+            }
 
-            });
+            let videos = document.querySelectorAll(".eliminar-manual");
+            for (video of videos) {
+
+              video.addEventListener('click', function (e) {
+
+                let id = video.id;
+                id2 = id.split("-");
+                console.log(id2[1]);
+
+                deleteManualOffer(id2[1]);
+
+              });
+            }
 
           } else {
 
