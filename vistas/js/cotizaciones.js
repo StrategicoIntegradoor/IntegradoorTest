@@ -1375,6 +1375,7 @@ function editarCotizacion(id) {
               });
             }
 
+            
             let videos = document.querySelectorAll(".eliminar-manual");
             for (video of videos) {
 
