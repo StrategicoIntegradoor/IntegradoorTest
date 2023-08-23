@@ -1414,31 +1414,31 @@ function cotizarOfertas() {
 
 
             /* Solidaria */
-            cont.push(
-              fetch(
-                "https://grupoasistencia.com/motor_webservice/Solidaria",
-                requestOptions
-              )
-                .then((res) => {
-                  if (!res.ok) throw Error(res.statusText);
-                  return res.json();
-                })
-                .then((ofertas) => {
-                  console.log('Ofertas de Solidaria:', ofertas[0].Resultado); // Imprime las ofertas en la consola
-                  if (typeof ofertas[0].Resultado !== 'undefined') {
-                    agregarAseguradoraFallida('Solidaria')
-                    ofertas[0].Mensajes.forEach(mensaje => {
-                      mostrarAlertarCotizacionFallida('Solidaria', mensaje)
-                    })
-                  } else {
-                    validarOfertas(ofertas);
-                    mostrarAlertaCotizacionExitosa('Solidaria')
-                  }
-                })
-                .catch((err) => {
-                  console.error(err);
-                })
-            );
+            // cont.push(
+            //   fetch(
+            //     "https://grupoasistencia.com/motor_webservice/Solidaria",
+            //     requestOptions
+            //   )
+            //     .then((res) => {
+            //       if (!res.ok) throw Error(res.statusText);
+            //       return res.json();
+            //     })
+            //     .then((ofertas) => {
+            //       console.log('Ofertas de Solidaria:', ofertas[0].Resultado); // Imprime las ofertas en la consola
+            //       if (typeof ofertas[0].Resultado !== 'undefined') {
+            //         agregarAseguradoraFallida('Solidaria')
+            //         ofertas[0].Mensajes.forEach(mensaje => {
+            //           mostrarAlertarCotizacionFallida('Solidaria', mensaje)
+            //         })
+            //       } else {
+            //         validarOfertas(ofertas);
+            //         mostrarAlertaCotizacionExitosa('Solidaria')
+            //       }
+            //     })
+            //     .catch((err) => {
+            //       console.error(err);
+            //     })
+            // );
 
             /* Mapfre */
             // cont.push(
@@ -1498,50 +1498,50 @@ function cotizarOfertas() {
             // );
 
             /* Previsora */
-            cont.push(
-              fetch("https://grupoasistencia.com/motor_webservice/Previsora", requestOptions)
-                .then((res) => {
-                  if (!res.ok) throw Error(res.statusText);
-                  return res.json();
-                })
-                .then((ofertas) => {
-                  if (typeof ofertas[0].Resultado !== 'undefined') {
-                    agregarAseguradoraFallida('Previsora')
-                    ofertas[0].Mensajes.forEach(mensaje => {
-                      mostrarAlertarCotizacionFallida('Previsora', mensaje)
-                    })
-                  } else {
-                    validarOfertas(ofertas);
-                    mostrarAlertaCotizacionExitosa('Previsora')
-                  }
-                })
-                .catch((err) => {
-                  console.error(err);
-                })
-            );
-
-            /* Equidad */
             // cont.push(
-            //   fetch("https://grupoasistencia.com/motor_webservice/Equidad", requestOptions)
+            //   fetch("https://grupoasistencia.com/motor_webservice/Previsora", requestOptions)
             //     .then((res) => {
             //       if (!res.ok) throw Error(res.statusText);
             //       return res.json();
             //     })
             //     .then((ofertas) => {
             //       if (typeof ofertas[0].Resultado !== 'undefined') {
-            //         agregarAseguradoraFallida('Equidad')
+            //         agregarAseguradoraFallida('Previsora')
             //         ofertas[0].Mensajes.forEach(mensaje => {
-            //           mostrarAlertarCotizacionFallida('Equidad', mensaje)
+            //           mostrarAlertarCotizacionFallida('Previsora', mensaje)
             //         })
             //       } else {
             //         validarOfertas(ofertas);
-            //         mostrarAlertaCotizacionExitosa('Equidad')
+            //         mostrarAlertaCotizacionExitosa('Previsora')
             //       }
             //     })
             //     .catch((err) => {
             //       console.error(err);
             //     })
             // );
+
+            /* Equidad */
+            cont.push(
+              fetch("https://grupoasistencia.com/motor_webservice/Equidad", requestOptions)
+                .then((res) => {
+                  if (!res.ok) throw Error(res.statusText);
+                  return res.json();
+                })
+                .then((ofertas) => {
+                  if (typeof ofertas[0].Resultado !== 'undefined') {
+                    agregarAseguradoraFallida('Equidad')
+                    ofertas[0].Mensajes.forEach(mensaje => {
+                      mostrarAlertarCotizacionFallida('Equidad', mensaje)
+                    })
+                  } else {
+                    validarOfertas(ofertas);
+                    mostrarAlertaCotizacionExitosa('Equidad')
+                  }
+                })
+                .catch((err) => {
+                  console.error(err);
+                })
+            );
 
             /* Bolivar */
             // cont.push(
@@ -1568,31 +1568,31 @@ function cotizarOfertas() {
             // );
 
             /* HDI */
-            cont.push(
-              fetch("https://grupoasistencia.com/motor_webservice/HDI", requestOptions)
-                .then((res) => {
-                  if (!res.ok) throw Error(res.statusText);
-                  return res.json();
-                })
-                .then((ofertas) => {
-                  console.log(ofertas['CotizarXGLMResult'])
-                  if (typeof ofertas[0].Resultado !== 'undefined') {
-                    agregarAseguradoraFallida('HDI')
-                    ofertas[0].Mensajes.forEach(mensaje => {
-                      mostrarAlertarCotizacionFallida('HDI', mensaje)
-                    })
-                  } else {
-                    console.log('Here2')
-                    let result = []
-                    result.push(ofertas[0])
-                    validarOfertas(result)
-                    mostrarAlertaCotizacionExitosa('HDI')
-                  }
-                })
-                .catch((err) => {
-                  console.error(err);
-                })
-            );
+            // cont.push(
+            //   fetch("https://grupoasistencia.com/motor_webservice/HDI", requestOptions)
+            //     .then((res) => {
+            //       if (!res.ok) throw Error(res.statusText);
+            //       return res.json();
+            //     })
+            //     .then((ofertas) => {
+            //       console.log(ofertas['CotizarXGLMResult'])
+            //       if (typeof ofertas[0].Resultado !== 'undefined') {
+            //         agregarAseguradoraFallida('HDI')
+            //         ofertas[0].Mensajes.forEach(mensaje => {
+            //           mostrarAlertarCotizacionFallida('HDI', mensaje)
+            //         })
+            //       } else {
+            //         console.log('Here2')
+            //         let result = []
+            //         result.push(ofertas[0])
+            //         validarOfertas(result)
+            //         mostrarAlertaCotizacionExitosa('HDI')
+            //       }
+            //     })
+            //     .catch((err) => {
+            //       console.error(err);
+            //     })
+            // );
 
             let zurichErrors = true
             let zurichSuccess = true
