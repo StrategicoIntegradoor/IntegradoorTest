@@ -1414,31 +1414,31 @@ function cotizarOfertas() {
 
 
             /* Solidaria */
-            cont.push(
-              fetch(
-                "https://grupoasistencia.com/motor_webservice/Solidaria",
-                requestOptions
-              )
-                .then((res) => {
-                  if (!res.ok) throw Error(res.statusText);
-                  return res.json();
-                })
-                .then((ofertas) => {
-                  console.log('Ofertas de Solidaria:', ofertas[0].Resultado); // Imprime las ofertas en la consola
-                  if (typeof ofertas[0].Resultado !== 'undefined') {
-                    agregarAseguradoraFallida('Solidaria')
-                    ofertas[0].Mensajes.forEach(mensaje => {
-                      mostrarAlertarCotizacionFallida('Solidaria', mensaje)
-                    })
-                  } else {
-                    validarOfertas(ofertas);
-                    mostrarAlertaCotizacionExitosa('Solidaria')
-                  }
-                })
-                .catch((err) => {
-                  console.error(err);
-                })
-            );
+            // cont.push(
+            //   fetch(
+            //     "https://grupoasistencia.com/motor_webservice/Solidaria",
+            //     requestOptions
+            //   )
+            //     .then((res) => {
+            //       if (!res.ok) throw Error(res.statusText);
+            //       return res.json();
+            //     })
+            //     .then((ofertas) => {
+            //       console.log('Ofertas de Solidaria:', ofertas[0].Resultado); // Imprime las ofertas en la consola
+            //       if (typeof ofertas[0].Resultado !== 'undefined') {
+            //         agregarAseguradoraFallida('Solidaria')
+            //         ofertas[0].Mensajes.forEach(mensaje => {
+            //           mostrarAlertarCotizacionFallida('Solidaria', mensaje)
+            //         })
+            //       } else {
+            //         validarOfertas(ofertas);
+            //         mostrarAlertaCotizacionExitosa('Solidaria')
+            //       }
+            //     })
+            //     .catch((err) => {
+            //       console.error(err);
+            //     })
+            // );
 
             /* Mapfre */
             // cont.push(
@@ -1544,28 +1544,28 @@ function cotizarOfertas() {
             // );
 
             /* Bolivar */
-            cont.push(
-              fetch("https://grupoasistencia.com/motor_webservice/Bolivar", requestOptions)
-                .then((res) => {
-                  if (!res.ok) throw Error(res.statusText);
-                  return res.json();
-                })
-                .then((ofertas) => {
-                  console.log(ofertas)
-                  if (typeof ofertas[0].Resultado !== 'undefined') {
-                    agregarAseguradoraFallida('Bolivar')
-                    ofertas[0].Mensajes.forEach(mensaje => {
-                      mostrarAlertarCotizacionFallida('Bolivar', mensaje)
-                    })
-                  } else {
-                    validarOfertas(ofertas);
-                    mostrarAlertaCotizacionExitosa('Bolivar')
-                  }
-                })
-                .catch((err) => {
-                  console.error(err);
-                })
-            );
+            // cont.push(
+            //   fetch("https://grupoasistencia.com/motor_webservice/Bolivar", requestOptions)
+            //     .then((res) => {
+            //       if (!res.ok) throw Error(res.statusText);
+            //       return res.json();
+            //     })
+            //     .then((ofertas) => {
+            //       console.log(ofertas)
+            //       if (typeof ofertas[0].Resultado !== 'undefined') {
+            //         agregarAseguradoraFallida('Bolivar')
+            //         ofertas[0].Mensajes.forEach(mensaje => {
+            //           mostrarAlertarCotizacionFallida('Bolivar', mensaje)
+            //         })
+            //       } else {
+            //         validarOfertas(ofertas);
+            //         mostrarAlertaCotizacionExitosa('Bolivar')
+            //       }
+            //     })
+            //     .catch((err) => {
+            //       console.error(err);
+            //     })
+            // );
 
             /* HDI */
             // cont.push(
