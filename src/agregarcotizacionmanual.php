@@ -33,7 +33,21 @@ if ($aseguradora == "Seguros Bolivar") {
 	$logo = "vistas/img/logos/sura.png";
 } else if ($aseguradora == "Seguros Mapfre") {
 	$logo = "vistas/img/logos/mapfre.png";
+} else if ($aseguradora == "Zurich Seguros") {
+	$logo = "vistas/img/logos/zurich.png";
+} else if ($aseguradora == "Aseguradora Solidaria") {
+	$logo = "vistas/img/logos/solidaria.png";
+} else if ($aseguradora == "Equidad") {
+	$logo = "vistas/img/logos/equidad.png";
+} else if ($aseguradora == "Liberty Seguros") {
+	$logo = "vistas/img/logos/liberty.png";
+}else if ($aseguradora == "Previsora") {
+	$logo = "vistas/img/logos/previsora.png";
 }
+
+
+
+
 
 
 
