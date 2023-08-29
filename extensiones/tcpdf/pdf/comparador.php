@@ -32,6 +32,7 @@ $fila = mysqli_fetch_array($valor2);
 
 // :::::::::::::::::::::::Query para imagen logo::::::::::::::::::::::::::.
 $queryLogo = "SELECT urlLogo FROM intermediario  WHERE id_Intermediario = $intermediario";
+echo $queryLogo;
 $valorLogo = $conexion->query($queryLogo);
 $valorLogo = mysqli_fetch_array($valorLogo);
 $valorLogo = $valorLogo['urlLogo'];
