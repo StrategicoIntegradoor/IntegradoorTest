@@ -1199,6 +1199,7 @@ function editarCotizacion(id) {
 
               if (oferta.Manual == "1") {
 
+                /*
                 cardCotizacion += `
 
 							<div class="col-xs-12 col-sm-6 col-md-2 verpdf-oferta">
@@ -1208,6 +1209,18 @@ function editarCotizacion(id) {
 									<div>EDITAR &nbsp;&nbsp;<span class="fa fa-edit"></span></div>
 
 								</button>
+
+								<button type="button" class="btn btn-danger eliminar-manual" id="eliminar-${oferta.id_oferta}">
+
+									<div>ELIMINAR &nbsp;&nbsp;<span class="fa fa-trash"></span></div>
+
+								</button>
+
+							</div>`;*/
+
+              cardCotizacion += `
+
+							<div class="col-xs-12 col-sm-6 col-md-2 verpdf-oferta">
 
 								<button type="button" class="btn btn-danger eliminar-manual" id="eliminar-${oferta.id_oferta}">
 
