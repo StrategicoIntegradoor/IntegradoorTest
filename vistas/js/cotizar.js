@@ -1244,13 +1244,9 @@ function cotizarOfertas() {
   var cre_sbs_contrasena = document.getElementById("cre_sbs_contrasena").value;
 
 
-  /**
-   * Variables para ESTADO
-   */
-  var cre_est_usuario = document.getElementById("cre_est_usuario").value;
-  var cre_equ_contrasena = document.getElementById("cre_equ_contrasena").value;
-  var Cre_Est_Entity_Id = document.getElementById("Cre_Est_Entity_Id").value;
-  var cre_est_zona = document.getElementById("cre_est_zona").value;
+
+
+
 
   /**
    * Variables para allianz
@@ -1340,20 +1336,14 @@ function cotizarOfertas() {
         },
         ALLIANZ: {
           cre_alli_sslcertfile: cre_alli_sslcertfile,
-          cre_alli_sslkeyfile: cre_alli_sslkeyfile,
+          cre_alli_sslkeyfile: cre_alli_sslkeyfile, 
           cre_alli_passphrase: cre_alli_passphrase,
           cre_alli_partnerid: cre_alli_partnerid,
-          cre_alli_agentid: cre_alli_agentid,
+          cre_alli_agentid: cre_alli_agentid, 
           cre_alli_partnercode: cre_alli_partnercode,
           cre_alli_agentcode: cre_alli_agentcode
         },
-        ESTADO: {
-          cre_est_usuario: cre_est_usuario,
-          cre_equ_contrasena: cre_equ_contrasena,
-          Cre_Est_Entity_Id: Cre_Est_Entity_Id,
-          cre_est_zona: cre_est_zona
-        }
-
+        
       };
 
       var requestOptions = {
