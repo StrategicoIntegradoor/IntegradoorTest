@@ -70,6 +70,32 @@ if ($numerofilas3 > 0) {
 }
 
 
+$query4 = "SELECT *  FROM `Credenciales_Estado` WHERE `id_intermediario` = '" . $_SESSION["intermediario"] . "'";
+
+$ejecucion4 = mysqli_query($enlace, $query4);
+$numerofilas4 = mysqli_num_rows($ejecucion4);
+$fila4 = mysqli_fetch_assoc($ejecucion4);
+
+if ($numerofilas4 > 0) {
+  $cre_est_usuario = $fila4['cre_est_usuario'];
+  $cre_equ_contrasena = $fila4['cre_equ_contrasena'];
+  $Cre_Est_Entity_Id = $fila4['Cre_Est_Entity_Id'];
+  $cre_est_zona = $fila4['cre_est_zona'];
+} else {
+  $query5 = "SELECT * FROM `Credenciales_Estado` WHERE `id_intermediario` = 3";
+
+  $ejecucion5 = mysqli_query($enlace, $query5);
+  $numerofilas5 = mysqli_num_rows($ejecucion5);
+  $fila5 = mysqli_fetch_assoc($ejecucion5);
+
+  $cre_est_usuario = $fila5['cre_est_usuario'];
+  $cre_equ_contrasena = $fila5['cre_equ_contrasena'];
+  $Cre_Est_Entity_Id = $fila5['Cre_Est_Entity_Id'];
+  $cre_est_zona = $fila5['cre_est_zona'];
+}
+
+
+
 
 
 //echo ($fila["Num_recargas"]);
@@ -630,6 +656,13 @@ if ($_SESSION["permisos"]["Cotizarlivianos"] != "x") {
           <input type="text" name="Estrato" id="Estrato" value="3">
           <label>TokenPrevisora</label>
           <input type="text" name="previsoraToken" id="previsoraToken">
+
+          <!--ESTADO-->
+          <input type="text" class="form-control" id="cre_est_usuario" value="<?php echo $cre_est_usuario; ?>">
+          <input type="text" class="form-control" id="cre_equ_contrasena" value="<?php echo $cre_equ_contrasena; ?>">
+          <input type="text" class="form-control" id="Cre_Est_Entity_Id" value="<?php echo $Cre_Est_Entity_Id; ?>">
+          <input type="text" class="form-control" id="cre_est_zona" value="<?php echo $cre_est_zona; ?>">
+
 
           <!--ZURICH-->
           <input type="text" class="form-control" id="cre_zur_nomUsu" value="<?php echo $_SESSION["cre_zur_nomUsu"]; ?>">
