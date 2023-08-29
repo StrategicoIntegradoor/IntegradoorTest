@@ -1366,14 +1366,14 @@ function editarCotizacion(id) {
 
               updatevideo.addEventListener('click', function (e) {
 
-                let idupdate = updatevideo.id;             
+                let idupdate = updatevideo.id;
 
                 getManualOffer(idupdate);
 
               });
             }
 
-            
+
             let videos = document.querySelectorAll(".eliminar-manual");
             for (video of videos) {
 
@@ -3175,9 +3175,7 @@ const getManualOffer = (id) => {
 
 
 
-      D.querySelector(".btnAgregar").innerHTML =
-
-        '<button class="btn btn-success btn-block" id="btnEditarCotizacion">Editar Cotización</button>';
+      D.querySelector(".btnAgregar").innerHTML = '<button class="btn btn-success btn-block" id="btnEditarCotizacion">Editar Cotización</button>';
 
 
 
