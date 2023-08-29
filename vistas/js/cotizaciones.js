@@ -3385,9 +3385,7 @@ $("#btnCancelar").click((e) => {
 
   document.getElementById("formularioCotizacionManual").style.display = "none";
 
-  document.querySelector(".btnAgregar").innerHTML =
-
-    '<button class="btn btn-info btn-block" id="btnAgregarCotizacion">Agregar Cotización</button>';
+  document.querySelector(".btnAgregar").innerHTML = '<button class="btn btn-info btn-block" id="btnAgregarCotizacion">Agregar Cotización</button>';
 
   $("#btnAgregarCotizacion").click(function () {
 
