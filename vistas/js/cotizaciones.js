@@ -1366,13 +1366,9 @@ function editarCotizacion(id) {
 
               updatevideo.addEventListener('click', function (e) {
 
-                let idupdate = updatevideo.id;
+                let idupdate = updatevideo.id;             
 
-                console.log(idupdate);
-                id2 = idupdate.split("-");
-                console.log(id2[1]);
-
-                getManualOffer(id2[1]);
+                getManualOffer(idupdate);
 
               });
             }
