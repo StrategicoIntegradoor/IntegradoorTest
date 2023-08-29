@@ -1366,6 +1366,8 @@ function editarCotizacion(id) {
 
               updatevideo.addEventListener('click', function (e) {
 
+                console.log(updatevideo);
+
                 let id = updatevideo.id;
                 id2 = id.split("-");
                 console.log(id2[1]);
