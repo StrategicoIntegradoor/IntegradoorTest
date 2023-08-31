@@ -37,7 +37,7 @@ if ($aseguradora == "Seguros Bolivar") {
 	$logo = "vistas/img/logos/zurich.png";
 } else if ($aseguradora == "Aseguradora Solidaria") {
 	$logo = "vistas/img/logos/solidaria.png";
-} else if ($aseguradora == "Equidad") {
+} else if ($aseguradora == "Equidad Seguros") {
 	$logo = "vistas/img/logos/equidad.png";
 } else if ($aseguradora == "Liberty Seguros") {
 	$logo = "vistas/img/logos/liberty.png";
