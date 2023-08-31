@@ -3346,7 +3346,7 @@ const deleteManualOffer = (id) => {
 
   console.log(id);
 
-  swal({
+  swal.fire({
 
     title: "¿Está seguro de borrar la cotización?",
 
