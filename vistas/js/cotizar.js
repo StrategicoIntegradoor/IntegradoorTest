@@ -1446,61 +1446,61 @@ function cotizarOfertas() {
             // );
             /* Mapfre */
 
-            cont.push(
+            // cont.push(
 
-              fetch("https://grupoasistencia.com/motor_webservice_tst/mapfrecotizacion4", requestOptions)
+            //   fetch("https://grupoasistencia.com/motor_webservice_tst/mapfrecotizacion4", requestOptions)
 
-                .then((res) => {
+            //     .then((res) => {
 
-                  if (!res.ok) throw Error(res.statusText);
+            //       if (!res.ok) throw Error(res.statusText);
 
-                  return res.json();
+            //       return res.json();
 
-                })
+            //     })
 
-                .then((ofertas) => {
+            //     .then((ofertas) => {
 
-                  let result = []
+            //       let result = []
 
-                  result.push(ofertas)
+            //       result.push(ofertas)
 
-                  if (typeof result[0].Resultado !== 'undefined') {
+            //       if (typeof result[0].Resultado !== 'undefined') {
 
-                    agregarAseguradoraFallida('Mapfre')
+            //         agregarAseguradoraFallida('Mapfre')
 
-                    result[0].Mensajes.forEach(mensaje => {
+            //         result[0].Mensajes.forEach(mensaje => {
 
-                      mostrarAlertarCotizacionFallida('Mapfre', mensaje)
+            //           mostrarAlertarCotizacionFallida('Mapfre', mensaje)
 
-                    })
+            //         })
 
-                  } else {
+            //       } else {
 
 
 
-                    validarOfertas(result);
+            //         validarOfertas(result);
 
-                    let successMap = true;
+            //         let successMap = true;
 
-                    if (successMap) {
+            //         if (successMap) {
 
-                      mostrarAlertaCotizacionExitosa('Mapfre')
+            //           mostrarAlertaCotizacionExitosa('Mapfre')
 
-                      successMap = false
+            //           successMap = false
 
-                    }
+            //         }
 
-                  }
+            //       }
 
-                })
+            //     })
 
-                .catch((err) => {
+            //     .catch((err) => {
 
-                  console.error(err);
+            //       console.error(err);
 
-                })
+            //     })
 
-            );
+            // );
 
             /* Previsora */
             // cont.push(
@@ -1549,54 +1549,54 @@ function cotizarOfertas() {
             // );
 
             /* Bolivar */
-            cont.push(
-              fetch("https://grupoasistencia.com/motor_webservice_tst/Bolivar", requestOptions)
-                .then((res) => {
-                  if (!res.ok) throw Error(res.statusText);
-                  return res.json();
-                })
-                .then((ofertas) => {
-                  console.log(ofertas)
-                  if (typeof ofertas[0].Resultado !== 'undefined') {
-                    agregarAseguradoraFallida('Bolivar')
-                    ofertas[0].Mensajes.forEach(mensaje => {
-                      mostrarAlertarCotizacionFallida('Bolivar', mensaje)
-                    })
-                  } else {
-                    validarOfertas(ofertas);
-                    mostrarAlertaCotizacionExitosa('Bolivar')
-                  }
-                })
-                .catch((err) => {
-                  console.error(err);
-                })
-            );
-
-            /* HDI */
             // cont.push(
-            //   fetch("https://grupoasistencia.com/motor_webservice_tst/HDI", requestOptions)
+            //   fetch("https://grupoasistencia.com/motor_webservice_tst/Bolivar", requestOptions)
             //     .then((res) => {
             //       if (!res.ok) throw Error(res.statusText);
             //       return res.json();
             //     })
             //     .then((ofertas) => {
+            //       console.log(ofertas)
             //       if (typeof ofertas[0].Resultado !== 'undefined') {
-            //         agregarAseguradoraFallida('HDI')
+            //         agregarAseguradoraFallida('Bolivar')
             //         ofertas[0].Mensajes.forEach(mensaje => {
-            //           mostrarAlertarCotizacionFallida('HDI', mensaje)
+            //           mostrarAlertarCotizacionFallida('Bolivar', mensaje)
             //         })
             //       } else {
-            //         console.log('Here2')
-            //         let result = []
-            //         result.push(ofertas[0])
-            //         validarOfertas(result)
-            //         mostrarAlertaCotizacionExitosa('HDI')
+            //         validarOfertas(ofertas);
+            //         mostrarAlertaCotizacionExitosa('Bolivar')
             //       }
             //     })
             //     .catch((err) => {
             //       console.error(err);
             //     })
             // );
+
+            /* HDI */
+            cont.push(
+              fetch("https://grupoasistencia.com/motor_webservice_tst/HDI", requestOptions)
+                .then((res) => {
+                  if (!res.ok) throw Error(res.statusText);
+                  return res.json();
+                })
+                .then((ofertas) => {
+                  if (typeof ofertas[0].Resultado !== 'undefined') {
+                    agregarAseguradoraFallida('HDI')
+                    ofertas[0].Mensajes.forEach(mensaje => {
+                      mostrarAlertarCotizacionFallida('HDI', mensaje)
+                    })
+                  } else {
+                    console.log('Here2')
+                    let result = []
+                    result.push(ofertas[0])
+                    validarOfertas(result)
+                    mostrarAlertaCotizacionExitosa('HDI')
+                  }
+                })
+                .catch((err) => {
+                  console.error(err);
+                })
+            );
 
             let zurichErrors = true
             let zurichSuccess = true
