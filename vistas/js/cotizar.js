@@ -1574,30 +1574,30 @@ function cotizarOfertas() {
             // );
 
             /* HDI */
-            // cont.push(
-            //   fetch("https://grupoasistencia.com/motor_webservice_tst/HDI", requestOptions)
-            //     .then((res) => {
-            //       if (!res.ok) throw Error(res.statusText);
-            //       return res.json();
-            //     })
-            //     .then((ofertas) => {
-            //       if (typeof ofertas[0].Resultado !== 'undefined') {
-            //         agregarAseguradoraFallida('HDI')
-            //         ofertas[0].Mensajes.forEach(mensaje => {
-            //           mostrarAlertarCotizacionFallida('HDI', mensaje)
-            //         })
-            //       } else {
-            //         console.log('Here2')
-            //         let result = []
-            //         result.push(ofertas[0])
-            //         validarOfertas(result)
-            //         mostrarAlertaCotizacionExitosa('HDI')
-            //       }
-            //     })
-            //     .catch((err) => {
-            //       console.error(err);
-            //     })
-            // );
+            cont.push(
+              fetch("https://grupoasistencia.com/motor_webservice_tst/HDI", requestOptions)
+                .then((res) => {
+                  if (!res.ok) throw Error(res.statusText);
+                  return res.json();
+                })
+                .then((ofertas) => {
+                  if (typeof ofertas[0].Resultado !== 'undefined') {
+                    agregarAseguradoraFallida('HDI')
+                    ofertas[0].Mensajes.forEach(mensaje => {
+                      mostrarAlertarCotizacionFallida('HDI', mensaje)
+                    })
+                  } else {
+                    console.log('Here2')
+                    let result = []
+                    result.push(ofertas[0])
+                    validarOfertas(result)
+                    mostrarAlertaCotizacionExitosa('HDI')
+                  }
+                })
+                .catch((err) => {
+                  console.error(err);
+                })
+            );
 
             let zurichErrors = true
             let zurichSuccess = true
