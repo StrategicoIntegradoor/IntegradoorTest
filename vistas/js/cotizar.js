@@ -1106,9 +1106,10 @@ const mostrarOferta = (
 							</div>
 					`;
   
+  $("#cardCotizacion").append(cardCotizacion);
+
   contadorTarjetas++;
 
-  $("#cardCotizacion").append(cardCotizacion);
 };
 
 // VALIDA QUE LAS OFERTAS COTIZADAS HAYAN SIDO GUARDADAS EN SU TOTALIDAD
