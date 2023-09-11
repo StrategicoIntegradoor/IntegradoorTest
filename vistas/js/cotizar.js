@@ -1163,6 +1163,7 @@ var idCotizacion = "";
 var contErrProtocoloCotizar = 0;
 
 var aseguradorasFallidas = []
+let contadorPeticionesFallidas = 0; // Contador de peticiones fallidas
 var aseguradorasIntentadas = []
 var primerIntentoRealizado = false
 
@@ -1171,6 +1172,8 @@ const agregarAseguradoraFallida = _aseguradora => {
     aseguradoras == _aseguradora)
   if (result !== undefined) return
   aseguradorasFallidas.push(_aseguradora)
+  contadorPeticionesFallidas++; // Incrementar el contador
+  console.log("Contador de peticiones fallidas:", contadorPeticionesFallidas);
 }
 
 const eliminarAseguradoraFallida = _aseguradora => {
