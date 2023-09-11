@@ -989,7 +989,6 @@ function registrarOferta(
   })
 }
 
-let contadorTarjetas = 0;
 
 const mostrarOferta = (
   aseguradora,
@@ -1113,6 +1112,8 @@ const mostrarOferta = (
   $("#cardCotizacion").append(cardCotizacion);
 
 };
+
+let contadorTarjetas = 0;
 
 // VALIDA QUE LAS OFERTAS COTIZADAS HAYAN SIDO GUARDADAS EN SU TOTALIDAD
 function validarOfertas(ofertas) {
