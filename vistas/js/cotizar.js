@@ -989,6 +989,8 @@ function registrarOferta(
   })
 }
 
+let contadorTarjetas = 0;
+
 const mostrarOferta = (
   aseguradora,
   prima,
@@ -1106,9 +1108,9 @@ const mostrarOferta = (
 							</div>
 					`;
   
-  $("#cardCotizacion").append(cardCotizacion);
-
   contadorTarjetas++;
+        
+  $("#cardCotizacion").append(cardCotizacion);
 
 };
 
@@ -1423,7 +1425,6 @@ function cotizarOfertas() {
               document.querySelector('.fallidas').innerHTML += `<p><i class="fa fa-times" aria-hidden="true" style="color: red; margin-right: 10px;"></i><b>${aseguradora}:</b> ${mensaje}</p>`
             }
 
-            let contadorTarjetas = 0;
 
             /* Solidaria */
             cont.push(
