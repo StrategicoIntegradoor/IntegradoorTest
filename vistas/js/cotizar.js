@@ -1113,10 +1113,11 @@ const mostrarOferta = (
 
 };
 
-let contadorTarjetas = 0;
 
 // VALIDA QUE LAS OFERTAS COTIZADAS HAYAN SIDO GUARDADAS EN SU TOTALIDAD
 function validarOfertas(ofertas) {
+  let contadorTarjetas = 0;
+
   ofertas.forEach((oferta, i) => {
     var numCotizacion = oferta.numero_cotizacion;
     var precioOferta = oferta.precio;
