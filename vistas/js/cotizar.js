@@ -932,6 +932,8 @@ function consultarCiudad() {
   //}
 }
 
+let contadorTarjetas = 0;
+
 // REGISTRA CADA UNA DE LAS OFERTAS COTIZADAS EN LA BD
 function registrarOferta(
   aseguradora,
@@ -1116,7 +1118,6 @@ const mostrarOferta = (
 
 // VALIDA QUE LAS OFERTAS COTIZADAS HAYAN SIDO GUARDADAS EN SU TOTALIDAD
 function validarOfertas(ofertas) {
-  let contadorTarjetas = 0;
 
   ofertas.forEach((oferta, i) => {
     var numCotizacion = oferta.numero_cotizacion;
