@@ -1105,6 +1105,9 @@ const mostrarOferta = (
 								</div>
 							</div>
 					`;
+  
+  contadorTarjetas++;
+
   $("#cardCotizacion").append(cardCotizacion);
 };
 
@@ -1418,6 +1421,8 @@ function cotizarOfertas() {
             const mostrarAlertarCotizacionFallida = (aseguradora, mensaje) => {
               document.querySelector('.fallidas').innerHTML += `<p><i class="fa fa-times" aria-hidden="true" style="color: red; margin-right: 10px;"></i><b>${aseguradora}:</b> ${mensaje}</p>`
             }
+
+            let contadorOfertas = 0;
 
             /* Solidaria */
             cont.push(
@@ -1790,6 +1795,7 @@ function cotizarOfertas() {
             //     })
             // );
 
+            console.log(`Se generaron ${contadorTarjetas} tarjetas.`);
 
             Promise.all(cont).then(() => {
               $("#btnCotizar").hide();
