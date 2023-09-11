@@ -1117,19 +1117,19 @@ function validarOfertas(ofertas) {
     if (numCotizacion == null && precioOferta == "0") return;
     if (precioOferta.length <= 3) return;
 
-    // mostrarOferta(
-    //   oferta.entidad,
-    //   oferta.precio,
-    //   oferta.producto,
-    //   oferta.numero_cotizacion,
-    //   oferta.responsabilidad_civil,
-    //   oferta.cubrimiento,
-    //   oferta.deducible,
-    //   oferta.conductores_elegidos,
-    //   oferta.servicio_grua,
-    //   oferta.imagen,
-    //   oferta.pdf
-    // );
+    mostrarOferta(
+      oferta.entidad,
+      oferta.precio,
+      oferta.producto,
+      oferta.numero_cotizacion,
+      oferta.responsabilidad_civil,
+      oferta.cubrimiento,
+      oferta.deducible,
+      oferta.conductores_elegidos,
+      oferta.servicio_grua,
+      oferta.imagen,
+      oferta.pdf
+    );
 
     registrarOferta(
       oferta.entidad,
@@ -1144,20 +1144,6 @@ function validarOfertas(ofertas) {
       oferta.imagen,
       oferta.pdf,
       0
-    );
-
-    mostrarOferta(
-      oferta.entidad,
-      oferta.precio,
-      oferta.producto,
-      oferta.numero_cotizacion,
-      oferta.responsabilidad_civil,
-      oferta.cubrimiento,
-      oferta.deducible,
-      oferta.conductores_elegidos,
-      oferta.servicio_grua,
-      oferta.imagen,
-      oferta.pdf
     );
   });
 }
