@@ -1709,28 +1709,62 @@ function cotizarOfertas() {
             );
 
             /* Allianz */
+            // cont.push(
+            //   fetch("https://grupoasistencia.com/motor_webservice_tst/Allianz", requestOptions)
+            //     .then((res) => {
+            //       if (!res.ok) throw Error(res.statusText);
+            //       console.log(res);
+            //       return res.json();
+            //     })
+            //     .then((ofertas) => {
+            //       if (typeof ofertas[0].Resultado !== 'undefined') {
+            //         agregarAseguradoraFallida('Allianz')
+            //         ofertas[0].Mensajes.forEach(mensaje => {
+            //           mostrarAlertarCotizacionFallida('Allianz', mensaje)
+            //         })
+            //       } else {
+            //         validarOfertas(ofertas)
+            //         mostrarAlertaCotizacionExitosa('Allianz')
+            //       }
+            //     })
+            //     .catch((err) => {
+            //       console.error(err);
+            //     })
+            // );
+
             cont.push(
-              fetch("https://grupoasistencia.com/motor_webservice_tst/Allianz", requestOptions)
+              fetch(
+                "https://grupoasistencia.com/motor_webservice_tst/Allianz",
+                requestOptions
+              )
                 .then((res) => {
                   if (!res.ok) throw Error(res.statusText);
-                  console.log(res);
                   return res.json();
                 })
                 .then((ofertas) => {
-                  if (typeof ofertas[0].Resultado !== 'undefined') {
-                    agregarAseguradoraFallida('Allianz')
-                    ofertas[0].Mensajes.forEach(mensaje => {
-                      mostrarAlertarCotizacionFallida('Allianz', mensaje)
-                    })
+                  console.log(ofertas);
+                  if (ofertas.length === 0 || typeof ofertas[0].Resultado !== 'undefined') {
+                    // Tratar un arreglo vacío o la condición especial como respuestas fallidas
+                    agregarAseguradoraFallida('Allianz');
+                    if (ofertas.length === 0) {
+                      mostrarAlertarCotizacionFallida('Allianz', 'Respuesta vacía');
+                    } else {
+                      // Aquí maneja la condición especial
+                      ofertas[0].Mensajes.forEach(mensaje => {
+                        mostrarAlertarCotizacionFallida('Allianz', mensaje);
+                      });
+                    }
                   } else {
-                    validarOfertas(ofertas)
-                    mostrarAlertaCotizacionExitosa('Allianz')
+                    validarOfertas(ofertas);
+                    mostrarAlertaCotizacionExitosa('Allianz');
                   }
                 })
                 .catch((err) => {
                   console.error(err);
                 })
             );
+            
+
 
             /* AXA */
             cont.push(
