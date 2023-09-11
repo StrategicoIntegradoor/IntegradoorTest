@@ -1117,19 +1117,19 @@ function validarOfertas(ofertas) {
     if (numCotizacion == null && precioOferta == "0") return;
     if (precioOferta.length <= 3) return;
 
-    mostrarOferta(
-      oferta.entidad,
-      oferta.precio,
-      oferta.producto,
-      oferta.numero_cotizacion,
-      oferta.responsabilidad_civil,
-      oferta.cubrimiento,
-      oferta.deducible,
-      oferta.conductores_elegidos,
-      oferta.servicio_grua,
-      oferta.imagen,
-      oferta.pdf
-    );
+    // mostrarOferta(
+    //   oferta.entidad,
+    //   oferta.precio,
+    //   oferta.producto,
+    //   oferta.numero_cotizacion,
+    //   oferta.responsabilidad_civil,
+    //   oferta.cubrimiento,
+    //   oferta.deducible,
+    //   oferta.conductores_elegidos,
+    //   oferta.servicio_grua,
+    //   oferta.imagen,
+    //   oferta.pdf
+    // );
 
     registrarOferta(
       oferta.entidad,
@@ -1144,6 +1144,20 @@ function validarOfertas(ofertas) {
       oferta.imagen,
       oferta.pdf,
       0
+    );
+
+    mostrarOferta(
+      oferta.entidad,
+      oferta.precio,
+      oferta.producto,
+      oferta.numero_cotizacion,
+      oferta.responsabilidad_civil,
+      oferta.cubrimiento,
+      oferta.deducible,
+      oferta.conductores_elegidos,
+      oferta.servicio_grua,
+      oferta.imagen,
+      oferta.pdf
     );
   });
 }
@@ -1551,55 +1565,55 @@ function cotizarOfertas() {
             );
 
             /* Bolivar */
-            cont.push(
-              fetch("https://grupoasistencia.com/motor_webservice_tst/Bolivar", requestOptions)
-                .then((res) => {
-                  if (!res.ok) throw Error(res.statusText);
-                  return res.json();
-                })
-                .then((ofertas) => {
-                  console.log(ofertas)
-                  if (typeof ofertas[0].Resultado !== 'undefined') {
-                    agregarAseguradoraFallida('Bolivar')
-                    ofertas[0].Mensajes.forEach(mensaje => {
-                      mostrarAlertarCotizacionFallida('Bolivar', mensaje)
-                    })
-                  } else {
-                    validarOfertas(ofertas);
-                    mostrarAlertaCotizacionExitosa('Bolivar')
-                  }
-                })
-                .catch((err) => {
-                  console.error(err);
-                })
-            );
+            // cont.push(
+            //   fetch("https://grupoasistencia.com/motor_webservice_tst/Bolivar", requestOptions)
+            //     .then((res) => {
+            //       if (!res.ok) throw Error(res.statusText);
+            //       return res.json();
+            //     })
+            //     .then((ofertas) => {
+            //       console.log(ofertas)
+            //       if (typeof ofertas[0].Resultado !== 'undefined') {
+            //         agregarAseguradoraFallida('Bolivar')
+            //         ofertas[0].Mensajes.forEach(mensaje => {
+            //           mostrarAlertarCotizacionFallida('Bolivar', mensaje)
+            //         })
+            //       } else {
+            //         validarOfertas(ofertas);
+            //         mostrarAlertaCotizacionExitosa('Bolivar')
+            //       }
+            //     })
+            //     .catch((err) => {
+            //       console.error(err);
+            //     })
+            // );
 
             /* HDI */
-            cont.push(
-              fetch("https://grupoasistencia.com/motor_webservice_tst/HDI", requestOptions)
-                .then((res) => {
-                  if (!res.ok) throw Error(res.statusText);
-                  return res.json();
-                })
-                .then((ofertas) => {
-                  console.log(ofertas);
-                  if (typeof ofertas[0].Resultado !== 'undefined') {
-                    agregarAseguradoraFallida('HDI')
-                    ofertas[0].Mensajes.forEach(mensaje => {
-                      mostrarAlertarCotizacionFallida('HDI', mensaje)
-                    })
-                  } else {
-                    console.log('Here2')
-                    let result = []
-                    result.push(ofertas[0])
-                    validarOfertas(result)
-                    mostrarAlertaCotizacionExitosa('HDI')
-                  }
-                })
-                .catch((err) => {
-                  console.error(err);
-                })
-            );
+            // cont.push(
+            //   fetch("https://grupoasistencia.com/motor_webservice_tst/HDI", requestOptions)
+            //     .then((res) => {
+            //       if (!res.ok) throw Error(res.statusText);
+            //       return res.json();
+            //     })
+            //     .then((ofertas) => {
+            //       console.log(ofertas);
+            //       if (typeof ofertas[0].Resultado !== 'undefined') {
+            //         agregarAseguradoraFallida('HDI')
+            //         ofertas[0].Mensajes.forEach(mensaje => {
+            //           mostrarAlertarCotizacionFallida('HDI', mensaje)
+            //         })
+            //       } else {
+            //         console.log('Here2')
+            //         let result = []
+            //         result.push(ofertas[0])
+            //         validarOfertas(result)
+            //         mostrarAlertaCotizacionExitosa('HDI')
+            //       }
+            //     })
+            //     .catch((err) => {
+            //       console.error(err);
+            //     })
+            // );
 
             let zurichErrors = true
             let zurichSuccess = true
