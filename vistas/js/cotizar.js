@@ -1423,7 +1423,7 @@ function cotizarOfertas() {
               document.querySelector('.fallidas').innerHTML += `<p><i class="fa fa-times" aria-hidden="true" style="color: red; margin-right: 10px;"></i><b>${aseguradora}:</b> ${mensaje}</p>`
             }
 
-            let contadorOfertas = 0;
+            let contadorTarjetas = 0;
 
             /* Solidaria */
             cont.push(
