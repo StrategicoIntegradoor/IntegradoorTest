@@ -1435,6 +1435,32 @@ function cotizarOfertas() {
 
 
             /* Solidaria */
+            // cont.push(
+            //   fetch(
+            //     "https://grupoasistencia.com/motor_webservice_tst/Solidaria",
+            //     requestOptions
+            //   )
+            //     .then((res) => {
+            //       if (!res.ok) throw Error(res.statusText);
+            //       return res.json();
+            //     })
+            //     .then((ofertas) => {
+            //       console.log(ofertas);
+            //       if (typeof ofertas[0].Resultado !== 'undefined') {
+            //         agregarAseguradoraFallida('Solidaria')
+            //         ofertas[0].Mensajes.forEach(mensaje => {
+            //           mostrarAlertarCotizacionFallida('Solidaria', mensaje)
+            //         })
+            //       } else {
+            //         validarOfertas(ofertas);
+            //         mostrarAlertaCotizacionExitosa('Solidaria')
+            //       }
+            //     })
+            //     .catch((err) => {
+            //       console.error(err);
+            //     })
+            // );
+
             cont.push(
               fetch(
                 "https://grupoasistencia.com/motor_webservice_tst/Solidaria",
@@ -1446,20 +1472,28 @@ function cotizarOfertas() {
                 })
                 .then((ofertas) => {
                   console.log(ofertas);
-                  if (typeof ofertas[0].Resultado !== 'undefined') {
-                    agregarAseguradoraFallida('Solidaria')
-                    ofertas[0].Mensajes.forEach(mensaje => {
-                      mostrarAlertarCotizacionFallida('Solidaria', mensaje)
-                    })
+                  if (ofertas.length === 0 || typeof ofertas[0].Resultado !== 'undefined') {
+                    // Tratar un arreglo vacío o la condición especial como respuestas fallidas
+                    agregarAseguradoraFallida('Solidaria');
+                    if (ofertas.length === 0) {
+                      mostrarAlertarCotizacionFallida('Solidaria', 'Respuesta vacía');
+                    } else {
+                      // Aquí maneja la condición especial
+                      ofertas[0].Mensajes.forEach(mensaje => {
+                        mostrarAlertarCotizacionFallida('Solidaria', mensaje);
+                      });
+                    }
                   } else {
                     validarOfertas(ofertas);
-                    mostrarAlertaCotizacionExitosa('Solidaria')
+                    mostrarAlertaCotizacionExitosa('Solidaria');
                   }
                 })
                 .catch((err) => {
                   console.error(err);
                 })
             );
+            
+
 
             /* Mapfre */
             cont.push(
