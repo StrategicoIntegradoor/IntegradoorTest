@@ -1110,7 +1110,9 @@ const mostrarOferta = (
 					`;
   
   contadorTarjetas++;
-        
+  
+  console.log(`Se generaron ${contadorTarjetas} tarjetas.`);
+
   $("#cardCotizacion").append(cardCotizacion);
 
 };
@@ -1799,8 +1801,6 @@ function cotizarOfertas() {
             //       console.error(err);
             //     })
             // );
-
-            console.log(`Se generaron ${contadorTarjetas} tarjetas.`);
 
             Promise.all(cont).then(() => {
               $("#btnCotizar").hide();
