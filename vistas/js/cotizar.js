@@ -98,15 +98,15 @@ $(document).ready(function () {
       var numeroSinPuntos = numeroInput.replace(/\./g, '');
       var resultado = '';
       
-      for (var i = 0; i < numeroSinPuntos.length; i++) {
-          if (isNaN(numeroSinPuntos[i])) {
-              resultado += '*';
-          } else {
-              resultado += numeroSinPuntos[i];
-          }
-      }
+      // for (var i = 0; i < numeroSinPuntos.length; i++) {
+      //     if (isNaN(numeroSinPuntos[i])) {
+      //         resultado += '*';
+      //     } else {
+      //         resultado += numeroSinPuntos[i];
+      //     }
+      // }
       
-      document.getElementById("numDocumentoID").value = resultado;
+      document.getElementById("numDocumentoID").value = numeroSinPuntos;
   }
 
   // Carga la fecha de Nacimiento
