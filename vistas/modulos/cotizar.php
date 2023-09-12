@@ -120,7 +120,7 @@ if ($_SESSION["permisos"]["Cotizarlivianos"] != "x") {
 
 ?>
 <style>
-  .error-message {
+  .mensajeErrorPlaca {
     color: #FF0000; /* Color de texto rojo */
     font-size: 12px; /* Tamaño de fuente */
     font-family: Arial, sans-serif; /* Fuente */
