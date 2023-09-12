@@ -83,14 +83,14 @@ $(document).ready(function () {
     }
   });
 
-  // Consulta informacion del usuario en la bdd
-  $("#numDocumentoID").change(function () {
-    consultarAsegurado();
-  });
 
   //Elimina espacios y caracteres especiales cuando copian y pegan 
-  document.getElementById("numDocumentoID").addEventListener("keyup", function() {
-      convertirNumero();
+  // document.getElementById("numDocumentoID").addEventListener("keyup", function() {
+  //     convertirNumero();
+  // });
+
+  $("#numDocumentoID").change(function () {
+    convertirNumero();
   });
 
   function convertirNumero() {
@@ -109,6 +109,11 @@ $(document).ready(function () {
       
       document.getElementById("numDocumentoID").value = numeroSinPuntos;
   }
+
+  // Consulta informacion del usuario en la bdd
+  $("#numDocumentoID").change(function () {
+    consultarAsegurado();
+  });
 
   // Carga la fecha de Nacimiento
   $("#dianacimiento, #mesnacimiento, #anionacimiento").select2({
