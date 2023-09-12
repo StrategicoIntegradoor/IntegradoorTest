@@ -61,7 +61,7 @@ $(document).ready(function () {
   var placaInput = document.getElementById("placaVeh");
   var mensajeError = document.getElementById("mensajeErrorPlaca");
 
-  placaInput.addEventListener("input", function () {
+  placaInput.addEventListener("blur", function () {
       var placa = placaInput.value.trim(); // Eliminar espacios en blanco al principio y al final
       
       // Usar una expresión regular para validar el formato AAA111
@@ -72,8 +72,8 @@ $(document).ready(function () {
           placaInput.setCustomValidity("");
       } else {
           mensajeError.style.display = "block";
-          mensajeError.textContent = "La placa debe tener el formato AAA111.";
-          placaInput.setCustomValidity("La placa debe tener el formato AAA111.");
+          mensajeError.textContent = "Por el momento no se puede cotizar motocicletas";
+          placaInput.setCustomValidity("Por el momento no se puede cotizar motocicletas");
       }
   });
 
