@@ -72,8 +72,8 @@ $(document).ready(function () {
           placaInput.setCustomValidity("");
       } else {
           mensajeError.style.display = "block";
-          mensajeError.textContent = "Por el momento no se pueden cotizar motocicletas";
-          placaInput.setCustomValidity("Por el momento no se pueden cotizar motocicletas");
+          mensajeError.textContent = "Formato de placa incorrecto, verificar información";
+          placaInput.setCustomValidity("Formato de placa incorrecto, verificar información");
       }
   });
 
