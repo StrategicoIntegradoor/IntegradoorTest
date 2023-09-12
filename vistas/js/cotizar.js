@@ -38,6 +38,13 @@ $(document).ready(function () {
 
   }
 
+  // Elimina los espacios de la placa
+  $("#placaVeh").keyup(function () {
+    var numeroInput = document.getElementById("placaVeh").value;
+    var placaSinEspacios = numeroInput.replace(/\s/g, '');
+    document.getElementById("placaVeh").value = placaSinEspacios;
+  });
+
   // Convierte la Placa ingresada en Mayusculas
   $("#placaVeh").keyup(function () {
     var numPlaca = document.getElementById("placaVeh").value;
@@ -84,11 +91,7 @@ $(document).ready(function () {
   });
 
 
-  //Elimina espacios y caracteres especiales cuando copian y pegan 
-  // document.getElementById("numDocumentoID").addEventListener("keyup", function() {
-  //     convertirNumero();
-  // });
-
+  //Elimina espacios y caracteres especiales en el campo documento al copiar y pegar informacion
   $("#numDocumentoID").change(function () {
     convertirNumero();
   });
@@ -98,7 +101,7 @@ $(document).ready(function () {
       var numeroInput = document.getElementById("numDocumentoID").value;
       var numeroSinCaracteresEspeciales = numeroInput.replace(/[^0-9]/g, '');
       document.getElementById("numDocumentoID").value = numeroSinCaracteresEspeciales;
-      
+
   }
 
   // Consulta informacion del usuario en la bdd
