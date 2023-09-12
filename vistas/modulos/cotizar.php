@@ -188,6 +188,7 @@ if ($_SESSION["permisos"]["Cotizarlivianos"] != "x") {
                           </div>
                         </div>
                         <div class="col-xs-12 col-sm-6 col-md-6 form-group" id="contenPlaca">
+                          <div id="mensajeErrorPlaca" style="color: red; display: none;"></div>
                           <label for="placaVeh">Placa</label>
                           <input type="text" minlength="6" maxlength="6" class="form-control" id="placaVeh" required placeholder="Placa">
                         </div>
