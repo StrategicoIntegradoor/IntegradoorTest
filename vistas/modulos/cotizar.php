@@ -119,7 +119,16 @@ if ($_SESSION["permisos"]["Cotizarlivianos"] != "x") {
 
 
 ?>
+<style>
+  .error-message {
+    color: #FF0000; /* Color de texto rojo */
+    font-size: 12px; /* Tamaño de fuente */
+    font-family: Arial, sans-serif; /* Fuente */
+    margin-top: 5px; /* Espacio superior para separación del campo de entrada */
+    display: none; /* Inicialmente oculto */
+}
 
+</style>
 <div class="content-wrapper">
 
   <section class="content-header">
