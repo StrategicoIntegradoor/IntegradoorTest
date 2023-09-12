@@ -83,10 +83,31 @@ $(document).ready(function () {
     }
   });
 
-  // Convierte la Placa ingresada en Mayusculas
+  // Consulta informacion del usuario en la bdd
   $("#numDocumentoID").change(function () {
     consultarAsegurado();
   });
+
+  //Elimina espacios y caracteres especiales cuando copian y pegan 
+  document.getElementById("numDocumentoID").addEventListener("keyup", function() {
+      convertirNumero();
+  });
+
+  function convertirNumero() {
+      var numeroInput = document.getElementById("numDocumentoID").value;
+      var numeroSinPuntos = numeroInput.replace(/\./g, '');
+      var resultado = '';
+      
+      for (var i = 0; i < numeroSinPuntos.length; i++) {
+          if (isNaN(numeroSinPuntos[i])) {
+              resultado += '*';
+          } else {
+              resultado += numeroSinPuntos[i];
+          }
+      }
+      
+      document.getElementById("numDocumentoID").value = resultado;
+  }
 
   // Carga la fecha de Nacimiento
   $("#dianacimiento, #mesnacimiento, #anionacimiento").select2({
