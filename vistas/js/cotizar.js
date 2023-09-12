@@ -1644,6 +1644,7 @@ function cotizarOfertas() {
             planes.forEach(plan => {
               body.plan = plan
               body.Email2 = Math.round(Math.random() * 999999) + body.Email
+              console.log(body.Email2)
               requestOptions.body = JSON.stringify(body)
               cont.push(
                 fetch('https://grupoasistencia.com/motor_webservice_tst/Zurich', requestOptions)
