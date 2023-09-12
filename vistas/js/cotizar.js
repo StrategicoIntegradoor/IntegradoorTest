@@ -96,7 +96,7 @@ $(document).ready(function () {
   function convertirNumero() {
       console.log("funcion convertiNumero Empezando")
       var numeroInput = document.getElementById("numDocumentoID").value;
-      var numeroSinPuntos = numeroInput.replace(/\./g, '');
+      var numeroSinCaracteresEspeciales = numeroInput.replace(/[^0-9]/g, '');
       var resultado = '';
       
       // for (var i = 0; i < numeroSinPuntos.length; i++) {
@@ -107,7 +107,7 @@ $(document).ready(function () {
       //     }
       // }
       
-      document.getElementById("numDocumentoID").value = numeroSinPuntos;
+      document.getElementById("numDocumentoID").value = numeroSinCaracteresEspeciales;
   }
 
   // Consulta informacion del usuario en la bdd
