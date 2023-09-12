@@ -57,6 +57,26 @@ $(document).ready(function () {
     if (e.which == 32) return false;
   });
 
+  // Excepción de Motos
+  var placaInput = document.getElementById("placaVeh");
+  var mensajeError = document.getElementById("mensajeErrorPlaca");
+
+  placaInput.addEventListener("input", function () {
+      var placa = placaInput.value.trim(); // Eliminar espacios en blanco al principio y al final
+      
+      // Usar una expresión regular para validar el formato AAA111
+      var formatoValido = /^[A-Z]{3}\d{3}$/.test(placa);
+      
+      if (formatoValido) {
+          mensajeError.style.display = "none";
+          placaInput.setCustomValidity("");
+      } else {
+          mensajeError.style.display = "block";
+          mensajeError.textContent = "La placa debe tener el formato AAA111.";
+          placaInput.setCustomValidity("La placa debe tener el formato AAA111.");
+      }
+  });
+
   // Si conoce la Placa muestra el campo Placa y oculta el campo CeroKM.
   $("#txtConocesLaPlacaSi").click(function () {
     document.getElementById("contenPlaca").style.display = "block";
@@ -90,8 +110,8 @@ $(document).ready(function () {
     }
   });
 
-
-  //Elimina espacios y caracteres especiales en el campo documento al copiar y pegar informacion
+  // DOCUMENTO
+  //Elimina espacios y caracteres especiales en el campo DOCUMENTO al copiar y pegar informacion
   $("#numDocumentoID").change(function () {
     convertirNumero();
   });
