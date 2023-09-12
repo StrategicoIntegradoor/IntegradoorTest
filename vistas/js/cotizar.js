@@ -1646,7 +1646,7 @@ function cotizarOfertas() {
               body.Email2 = Math.round(Math.random() * 999999) + body.Email
               requestOptions.body = JSON.stringify(body)
               cont.push(
-                fetch('https://grupoasistencia.com/motor_webservice/Zurich', requestOptions)
+                fetch('https://grupoasistencia.com/motor_webservice_tst/Zurich', requestOptions)
                   .then(res => {
                     if (!res.ok) throw Error(res.statusText)
                     return res.json()
