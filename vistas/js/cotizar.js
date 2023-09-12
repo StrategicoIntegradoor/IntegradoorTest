@@ -1641,94 +1641,94 @@ function cotizarOfertas() {
             /* Zurich */
             const planes = ["BASIC", "MEDIUM", "FULL"]
             let body = JSON.parse(requestOptions.body)
-            // planes.forEach(plan => {
-            //   body.plan = plan
-            //   body.Email2 = Math.round(Math.random() * 999999) + body.Email
-            //   requestOptions.body = JSON.stringify(body)
-            //   cont.push(
-            //     fetch('https://grupoasistencia.com/motor_webservice/Zurich', requestOptions)
-            //       .then(res => {
-            //         if (!res.ok) throw Error(res.statusText)
-            //         return res.json()
-            //       })
-            //       .then(ofertas => {
-            //         if (typeof ofertas.Resultado !== 'undefined') {
-            //           agregarAseguradoraFallida('Zurich')
-            //           if (zurichErrors) {
-            //             ofertas.Mensajes.forEach(mensaje => {
-            //               mostrarAlertarCotizacionFallida(`Zurich ${plan}`, mensaje)
-            //             })
-            //           }
-            //           zurichErrors = false
-            //         } else {
-            //           validarOfertas(ofertas)
-            //           if (zurichSuccess) {
-            //             mostrarAlertaCotizacionExitosa('Zurich')
-            //             zurichSuccess = false
-            //           }
-            //         }
-            //       })
-            //       .catch(err => console.error(err))
-            //   )
-            // })
+            planes.forEach(plan => {
+              body.plan = plan
+              body.Email2 = Math.round(Math.random() * 999999) + body.Email
+              requestOptions.body = JSON.stringify(body)
+              cont.push(
+                fetch('https://grupoasistencia.com/motor_webservice/Zurich', requestOptions)
+                  .then(res => {
+                    if (!res.ok) throw Error(res.statusText)
+                    return res.json()
+                  })
+                  .then(ofertas => {
+                    if (typeof ofertas.Resultado !== 'undefined') {
+                      agregarAseguradoraFallida('Zurich')
+                      if (zurichErrors) {
+                        ofertas.Mensajes.forEach(mensaje => {
+                          mostrarAlertarCotizacionFallida(`Zurich ${plan}`, mensaje)
+                        })
+                      }
+                      zurichErrors = false
+                    } else {
+                      validarOfertas(ofertas)
+                      if (zurichSuccess) {
+                        mostrarAlertaCotizacionExitosa('Zurich')
+                        zurichSuccess = false
+                      }
+                    }
+                  })
+                  .catch(err => console.error(err))
+              )
+            })
 
             let successEstado = true
 
             /* Estado */
-            cont.push(
-              fetch("https://grupoasistencia.com/motor_webservice/Estado", requestOptions)
-                .then((res) => {
-                  if (!res.ok) throw Error(res.statusText);
-                  return res.json();
-                })
-                .then((ofertas) => {
-                  let result = []
-                  result.push(ofertas)
-                  if (typeof result[0].Resultado !== 'undefined') {
-                    agregarAseguradoraFallida('Estado')
-                    result[0].Mensajes.forEach(mensaje => {
-                      mostrarAlertarCotizacionFallida('Estado', mensaje)
-                    })
-                  } else {
-                    validarOfertas(result);
-                    if (successEstado) {
-                      mostrarAlertaCotizacionExitosa('Estado')
-                      successEstado = false
-                    }
-                  }
-                })
-                .catch((err) => {
-                  console.error(err);
-                })
-            );
+            // cont.push(
+            //   fetch("https://grupoasistencia.com/motor_webservice/Estado", requestOptions)
+            //     .then((res) => {
+            //       if (!res.ok) throw Error(res.statusText);
+            //       return res.json();
+            //     })
+            //     .then((ofertas) => {
+            //       let result = []
+            //       result.push(ofertas)
+            //       if (typeof result[0].Resultado !== 'undefined') {
+            //         agregarAseguradoraFallida('Estado')
+            //         result[0].Mensajes.forEach(mensaje => {
+            //           mostrarAlertarCotizacionFallida('Estado', mensaje)
+            //         })
+            //       } else {
+            //         validarOfertas(result);
+            //         if (successEstado) {
+            //           mostrarAlertaCotizacionExitosa('Estado')
+            //           successEstado = false
+            //         }
+            //       }
+            //     })
+            //     .catch((err) => {
+            //       console.error(err);
+            //     })
+            // );
 
             /* Estado2 */
-            cont.push(
-              fetch("https://grupoasistencia.com/motor_webservice/Estado2", requestOptions)
-                .then((res) => {
-                  if (!res.ok) throw Error(res.statusText);
-                  return res.json();
-                })
-                .then((ofertas) => {
-                  let result = []
-                  result.push(ofertas)
-                  if (typeof result[0].Resultado !== 'undefined') {
-                    agregarAseguradoraFallida('Zurich2')
-                    result[0].Mensajes.forEach(mensaje => {
-                      mostrarAlertarCotizacionFallida('Estado', mensaje)
-                    })
-                  } else {
-                    validarOfertas(result);
-                    if (successEstado) {
-                      mostrarAlertaCotizacionExitosa('Estado')
-                      successEstado = false
-                    }
-                  }
-                })
-                .catch((err) => {
-                  console.error(err);
-                })
-            );
+            // cont.push(
+            //   fetch("https://grupoasistencia.com/motor_webservice/Estado2", requestOptions)
+            //     .then((res) => {
+            //       if (!res.ok) throw Error(res.statusText);
+            //       return res.json();
+            //     })
+            //     .then((ofertas) => {
+            //       let result = []
+            //       result.push(ofertas)
+            //       if (typeof result[0].Resultado !== 'undefined') {
+            //         agregarAseguradoraFallida('Zurich2')
+            //         result[0].Mensajes.forEach(mensaje => {
+            //           mostrarAlertarCotizacionFallida('Estado', mensaje)
+            //         })
+            //       } else {
+            //         validarOfertas(result);
+            //         if (successEstado) {
+            //           mostrarAlertaCotizacionExitosa('Estado')
+            //           successEstado = false
+            //         }
+            //       }
+            //     })
+            //     .catch((err) => {
+            //       console.error(err);
+            //     })
+            // );
 
             /* Liberty */
             // cont.push(
