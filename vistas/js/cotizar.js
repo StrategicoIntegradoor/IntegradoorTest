@@ -94,6 +94,7 @@ $(document).ready(function () {
   });
 
   function convertirNumero() {
+      console.log("funcion convertiNumero Empezando")
       var numeroInput = document.getElementById("numDocumentoID").value;
       var numeroSinPuntos = numeroInput.replace(/\./g, '');
       var resultado = '';
