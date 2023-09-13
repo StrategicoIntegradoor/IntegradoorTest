@@ -1979,7 +1979,7 @@ function cotizarOfertas() {
                     }
                   }
                 });
-              }, 160000); // Agrega el tiempo de retraso en milisegundos aquí
+              }, 30000); // Agrega el tiempo de retraso en milisegundos aquí
             }
 
             Promise.all(cont)
