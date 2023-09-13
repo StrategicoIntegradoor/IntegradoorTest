@@ -221,7 +221,7 @@ MODAL AGREGAR USUARIO
             <div class="col-xs-12 col-sm-6 col-md-6 form-group">
               <div class="input-group">
                 <span class="input-group-addon"><i class="fa fa-user"></i></span>
-                <input type="text" class="form-control input-lg" name="nuevoNombre" placeholder="Ingresar nombre" required>
+                <input type="text" class="form-control input-lg" name="nuevoNombre" placeholder="Ingresar nombre*" required>
               </div>
             </div>
 
@@ -230,7 +230,7 @@ MODAL AGREGAR USUARIO
             <div class="col-xs-12 col-sm-6 col-md-6 form-group">
               <div class="input-group">
                 <span class="input-group-addon"><i class="fa fa-user"></i></span>
-                <input type="text" class="form-control input-lg" name="nuevoApellido" placeholder="Ingresar apellidos" required>
+                <input type="text" class="form-control input-lg" name="nuevoApellido" placeholder="Ingresar apellidos*" required>
               </div>
             </div>
 
@@ -249,7 +249,7 @@ MODAL AGREGAR USUARIO
 
                 <select class="form-control input-lg" name="agregarTipoDocumento" id="agregarTipoDocumento" required>
 
-                  <option value="">Ingresa el Tipo</option>
+                  <option value="">Ingresa el Tipo*</option>
                   <option value="Cedula de Ciudadania">Cedula de Ciudadania</option>
                   <option value="Cedula de Extranjeria">Cedula de Extranjeria</option>
                   <option value="Permiso de Proteccion Temporal">Permiso de Proteccion Temporal</option>
@@ -269,7 +269,7 @@ MODAL AGREGAR USUARIO
 
                 <span class="input-group-addon"><i class="fa fa-id-badge"></i></span>
 
-                <input type="number" min="0" class="form-control input-lg" name="nuevoDocIdUser" id="nuevoDocIdUser" placeholder="Ingresar documento" required>
+                <input type="number" min="0" class="form-control input-lg" name="nuevoDocIdUser" id="nuevoDocIdUser" placeholder="Ingresar documento*" required>
 
               </div>
 
@@ -296,7 +296,7 @@ MODAL AGREGAR USUARIO
               <div class="input-group">
                 <span class="input-group-addon"><i class="fa fa-venus-mars"></i></span>
                 <select class="form-control input-lg" name="nuevoGenero" id="nuevoGenero" placeholder="Género" required>
-                  <option value="">Ingresar Género</option>
+                  <option value="">Ingresar Género*</option>
                   <option value="M">Masculino</option>
                   <option value="F">Femenino</option>
                 </select>
@@ -414,7 +414,7 @@ MODAL AGREGAR USUARIO
 
                 <span class="input-group-addon"><i class="fa fa-envelope"></i></span>
 
-                <input type="email" class="form-control input-lg" name="nuevoEmail" placeholder="Ingresar Email" required>
+                <input type="email" class="form-control input-lg" name="nuevoEmail" placeholder="Ingresar Email*" required>
 
               </div>
 
@@ -445,7 +445,7 @@ MODAL AGREGAR USUARIO
               <div class="input-group">
 
                 <span class="input-group-addon"><i class="fa fa-users"></i></span>
-                <select class="form-control input-lg" name="Intermediario" id="idIntermediario" required>
+                <select class="form-control input-lg" name="Intermediario" id="idIntermediario*" required>
                   <option disabled selected>Selecciona una opción</option>
 
                 </select>
@@ -461,7 +461,7 @@ MODAL AGREGAR USUARIO
               <div class="input-group">
 
                 <span class="input-group-addon"><i class="fa fa-users"></i></span>
-                <select class="form-control input-lg" name="nuevoRol" id="idRoll" required>
+                <select class="form-control input-lg" name="nuevoRol" id="idRoll*" required>
 
                   <option value="">Selecionar rol</option>
                   <option value="1">Administrador</option>
