@@ -1911,6 +1911,10 @@ function cotizarOfertas() {
 
             // Llamar a esta función cuando todas las promesas se resuelvan
             function ejecutarDespuesDePromesas() {
+              
+
+              setTimeout(function () {
+
               $("#btnCotizar").hide();
               $("#loaderOferta").html("");
               $("#loaderRecotOferta").html("");
@@ -1920,8 +1924,6 @@ function cotizarOfertas() {
                 showConfirmButton: true,
                 confirmButtonText: "Cerrar",
               });
-
-              setTimeout(function () {
                 //  window.location = "index.php?ruta=editar-cotizacion&idCotizacion=" + idCotizacion;
                 console.log("Se completó todo");
                 document.querySelector('.button-recotizar').style.display = 'block'
