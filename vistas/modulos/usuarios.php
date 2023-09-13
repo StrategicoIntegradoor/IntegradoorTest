@@ -221,7 +221,7 @@ MODAL AGREGAR USUARIO
             <div class="col-xs-12 col-sm-6 col-md-6 form-group">
               <div class="input-group">
                 <span class="input-group-addon"><i class="fa fa-user"></i></span>
-                <input type="text" class="form-control input-lg" name="nuevoNombre" placeholder="Ingresar nombre*" required>
+                <input type="text" class="form-control input-lg" name="nuevoNombre" placeholder="Nombres*" required>
               </div>
             </div>
 
@@ -230,7 +230,7 @@ MODAL AGREGAR USUARIO
             <div class="col-xs-12 col-sm-6 col-md-6 form-group">
               <div class="input-group">
                 <span class="input-group-addon"><i class="fa fa-user"></i></span>
-                <input type="text" class="form-control input-lg" name="nuevoApellido" placeholder="Ingresar apellidos*" required>
+                <input type="text" class="form-control input-lg" name="nuevoApellido" placeholder="Apellidos*" required>
               </div>
             </div>
 
@@ -249,7 +249,7 @@ MODAL AGREGAR USUARIO
 
                 <select class="form-control input-lg" name="agregarTipoDocumento" id="agregarTipoDocumento" required>
 
-                  <option value="">Ingresa el Tipo*</option>
+                  <option value="">Tipo Documento*</option>
                   <option value="Cedula de Ciudadania">Cedula de Ciudadania</option>
                   <option value="Cedula de Extranjeria">Cedula de Extranjeria</option>
                   <option value="Permiso de Proteccion Temporal">Permiso de Proteccion Temporal</option>
@@ -331,7 +331,7 @@ MODAL AGREGAR USUARIO
                 <span class="input-group-addon"><i class="fa fa-home"></i></span>
                 <select class="form-control input-lg" name="DptoCirculacion" id="ingDptoCirculacion">
 
-                    <option value="">Ingresar Departamento</option>
+                    <option value="">Departamento</option>
                     <option value="1">Amazonas</option>
                     <option value="2">Antioquia</option>
                     <option value="3">Arauca</option>
@@ -398,7 +398,7 @@ MODAL AGREGAR USUARIO
             <div class="col-xs-12 col-sm-6 col-md-6 form-group">
               <div class="input-group">
                 <span class="input-group-addon"><i class="fa fa-phone"></i></span>
-                <input type="text" class="form-control input-lg" name="nuevoTelefono" id="AgregMovil" placeholder="Ingresar teléfono movil*" data-inputmask="'mask':'(999) 999-9999'" data-mask required>
+                <input type="text" class="form-control input-lg" name="nuevoTelefono" id="AgregMovil" placeholder="Celular*" data-inputmask="'mask':'(999) 999-9999'" data-mask required>
               </div>
             </div>
 
@@ -414,7 +414,7 @@ MODAL AGREGAR USUARIO
 
                 <span class="input-group-addon"><i class="fa fa-envelope"></i></span>
 
-                <input type="email" class="form-control input-lg" name="nuevoEmail" placeholder="Ingresar Email*" required>
+                <input type="email" class="form-control input-lg" name="nuevoEmail" placeholder="Email*" required>
 
               </div>
 
@@ -428,7 +428,7 @@ MODAL AGREGAR USUARIO
 
                 <span class="input-group-addon"><i class="fa fa-briefcase"></i></span>
 
-                <input type="text" class="form-control input-lg" name="nuevoCargo" placeholder="Ingresar cargo">
+                <input type="text" class="form-control input-lg" name="nuevoCargo" placeholder="Cargo">
 
               </div>
 
