@@ -398,7 +398,7 @@ MODAL AGREGAR USUARIO
             <div class="col-xs-12 col-sm-6 col-md-6 form-group">
               <div class="input-group">
                 <span class="input-group-addon"><i class="fa fa-phone"></i></span>
-                <input type="text" class="form-control input-lg" name="nuevoTelefono" id="AgregMovil" placeholder="Ingresar teléfono movil" data-inputmask="'mask':'(999) 999-9999'" data-mask required>
+                <input type="text" class="form-control input-lg" name="nuevoTelefono" id="AgregMovil" placeholder="Ingresar teléfono movil*" data-inputmask="'mask':'(999) 999-9999'" data-mask required>
               </div>
             </div>
 
@@ -446,7 +446,7 @@ MODAL AGREGAR USUARIO
 
                 <span class="input-group-addon"><i class="fa fa-users"></i></span>
                 <select class="form-control input-lg" name="Intermediario" id="idIntermediario*" required>
-                  <option disabled selected>Selecciona una opción</option>
+                  <option disabled selected>Intermediario*</option>
 
                 </select>
 
@@ -463,7 +463,7 @@ MODAL AGREGAR USUARIO
                 <span class="input-group-addon"><i class="fa fa-users"></i></span>
                 <select class="form-control input-lg" name="nuevoRol" id="idRoll*" required>
 
-                  <option value="">Selecionar rol</option>
+                  <option value="">Rol*</option>
                   <option value="1">Administrador</option>
                   <option value="2">Asesor</option>
 
