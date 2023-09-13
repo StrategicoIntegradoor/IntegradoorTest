@@ -1610,7 +1610,7 @@ function cotizarOfertas() {
 
             /* HDI */
             cont.push(
-              fetch("https://grupoasistencia.com/motor_webservice_tst/HDI", requestOptions)
+              fetch("https://grupoasistencia.com/motor_webservice/HDI", requestOptions)
                 .then((res) => {
                   if (!res.ok) throw Error(res.statusText);
                   return res.json();
@@ -1648,7 +1648,7 @@ function cotizarOfertas() {
               console.log(body.Email2)
               requestOptions.body = JSON.stringify(body)
               cont.push(
-                fetch('https://grupoasistencia.com/motor_webservice_tst/Zurich', requestOptions)
+                fetch('https://grupoasistencia.com/motor_webservice/Zurich', requestOptions)
                   .then(res => {
                     if (!res.ok) throw Error(res.statusText)
                     return res.json()
