@@ -331,7 +331,6 @@ MODAL AGREGAR USUARIO
                 <span class="input-group-addon"><i class="fa fa-home"></i></span>
                 <select class="form-control input-lg" name="DptoCirculacion" id="ingDptoCirculacion">
 
-                    <option value="">Departamento</option>
                     <option value="1">Amazonas</option>
                     <option value="2">Antioquia</option>
                     <option value="3">Arauca</option>
