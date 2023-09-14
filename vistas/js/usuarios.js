@@ -25,7 +25,8 @@ cargarRoll();
 		method : "POST",
 		success : function (respuesta){
 
-		
+		respuesta = '<option value="" disabled selected>Rol*</option>' + respuesta;
+
 		$idInter.innerHTML=respuesta;
 		$idInter2.innerHTML=respuesta;
 
@@ -34,7 +35,7 @@ cargarRoll();
 			theme: "bootstrap int",
 			language: "es",
 			width: "100%",
-			placeholder: "Intermediario*", // Esto configura el placeholder
+			// placeholder: "Intermediario*", // Esto configura el placeholder
 		});
 
 		}
