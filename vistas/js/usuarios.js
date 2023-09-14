@@ -29,6 +29,9 @@ cargarRoll();
 		$idInter.innerHTML=respuesta;
 		$idInter2.innerHTML=respuesta;
 
+		$idInter.removeAttribute("disabled");
+
+
 		}
 
 	})
