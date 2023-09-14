@@ -12,7 +12,7 @@ cargarRollEditar();
 CARGAR INTERMEDIARIO
 =============================================*/
 
-function cargarIntermediario (){
+function cargarIntermediario(){
 
 	const $idInter = document.getElementById("idIntermediario")
 	// const $idInter2 = document.getElementById("idIntermediario2")
