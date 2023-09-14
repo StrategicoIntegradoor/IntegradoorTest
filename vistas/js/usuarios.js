@@ -114,6 +114,26 @@ $(".nuevaFoto").change(function(){
 EDITAR USUARIO
 =============================================*/
 
+  // Conviete la letras iniciales del Nombre y el Apellido deL Cliente en Mayusculas
+  $("#editarNombre").keyup(function () {
+    var cliNombres = document.getElementById("editarNombre").value.toLowerCase();
+    $("#editarNombre").val(
+      cliNombres.replace(/^(.)|\s(.)/g, function ($1) {
+        return $1.toUpperCase();
+      })
+    );
+  });
+  $("#editarApellido").keyup(function () {
+    var cliApellido = document
+      .getElementById("editarApellido")
+      .value.toLowerCase();
+    $("#editarApellido").val(
+      cliApellido.replace(/^(.)|\s(.)/g, function ($1) {
+        return $1.toUpperCase();
+      })
+    );
+  });
+  
 // Carga los Departamentos disponibles para editar
 $("#DptoCirculacion").select2({
 theme: "bootstrap dpto1",
