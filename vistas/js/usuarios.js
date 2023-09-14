@@ -17,7 +17,7 @@ cargarRoll();
 	function cargarIntermediario(){
 
 		const $idInter = document.getElementById("idIntermediario")
-		// const $idInter2 = document.getElementById("idIntermediario2")
+		const $idInter2 = document.getElementById("idIntermediario2")
 
 	$.ajax({
 
@@ -27,7 +27,7 @@ cargarRoll();
 
 		
 		$idInter.innerHTML=respuesta;
-		//    $idInter2.innerHTML=respuesta;
+		$idInter2.innerHTML=respuesta;
 
 		}
 
