@@ -61,8 +61,18 @@ $.ajax({
 	method : "POST",
 	success : function (respuesta){
 
+	   respuesta = '<option disabled selected></option>' + respuesta;
+
 	   $idRoll.innerHTML=respuesta;
 	   $idRoll1.innerHTML=respuesta;
+
+		// Carga los Intermediarios disponibles para agregar
+		$("#idRoll").select2({
+			theme: "bootstrap rol",
+			language: "es",
+			width: "100%",
+			placeholder: "Rol*", // Esto configura el placeholder
+		});
 
 	}
 
@@ -226,13 +236,6 @@ EDITAR USUARIO
 CARGAR ROL
 =============================================*/
 
-// Carga los Intermediarios disponibles para agregar
-$("#idRoll").select2({
-	theme: "bootstrap rol",
-	language: "es",
-	width: "100%",
-	placeholder: "Rol*", // Esto configura el placeholder
-});
 
 
 /*=============================================
