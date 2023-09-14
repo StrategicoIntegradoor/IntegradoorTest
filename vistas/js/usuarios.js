@@ -7,6 +7,25 @@ cargarRollEditar();
 })();
 
 
+/*=============================================
+MODAL AGREGAR
+=============================================*/
+// Carga los Intermediarios disponibles para agregar
+$("#nuevoDocIdUser").select2({
+	theme: "bootstrap int",
+	language: "es",
+	width: "100%",
+	placeholder: "Intermediario", // Esto configura el placeholder
+});
+
+// Carga los Intermediarios disponibles para agregar
+$("#nuevoGenero").select2({
+	theme: "bootstrap int",
+	language: "es",
+	width: "100%",
+	placeholder: "Intermediario", // Esto configura el placeholder
+});
+
 
 /*=============================================
 CARGAR INTERMEDIARIO
