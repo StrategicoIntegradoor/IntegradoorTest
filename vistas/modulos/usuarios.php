@@ -296,7 +296,7 @@ MODAL AGREGAR USUARIO
               <div class="input-group">
                 <span class="input-group-addon"><i class="fa fa-venus-mars"></i></span>
                 <select class="form-control input-lg" name="nuevoGenero" id="nuevoGenero" placeholder="Género" required>
-                  <option value="">Ingresar Género*</option>
+                  <option value="">Género*</option>
                   <option value="M">Masculino</option>
                   <option value="F">Femenino</option>
                 </select>
