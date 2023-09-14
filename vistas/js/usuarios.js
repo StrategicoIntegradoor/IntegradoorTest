@@ -2,7 +2,7 @@
 CARGANDO DATOS DE INICIO
 =============================================*/
 (()=>{
-cargarIntermediarioEditar();
+cargarIntermediario();
 cargarRollEditar();
 })();
 
@@ -15,7 +15,7 @@ CARGAR INTERMEDIARIO
 document.getElementById("idIntermediario").addEventListener("click", function() {
 	cargarIntermediario(); // Llama a la función para cargar las opciones
   });
-  
+
 function cargarIntermediario(){
 
 	const $idInter = document.getElementById("idIntermediario")
