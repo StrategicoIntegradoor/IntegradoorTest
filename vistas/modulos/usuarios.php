@@ -249,7 +249,7 @@ MODAL AGREGAR USUARIO
 
                 <select class="form-control input-lg" name="agregarTipoDocumento" id="agregarTipoDocumento" required>
 
-                  <option value="">Tipo Documento*</option>
+                  <!-- <option value="">Tipo Documento*</option> -->
                   <option value="Cedula de Ciudadania">Cedula de Ciudadania</option>
                   <option value="Cedula de Extranjeria">Cedula de Extranjeria</option>
                   <option value="Permiso de Proteccion Temporal">Permiso de Proteccion Temporal</option>
@@ -296,7 +296,7 @@ MODAL AGREGAR USUARIO
               <div class="input-group">
                 <span class="input-group-addon"><i class="fa fa-venus-mars"></i></span>
                 <select class="form-control input-lg" name="nuevoGenero" id="nuevoGenero" placeholder="Género" required>
-                  <option value="">Género*</option>
+                  <!-- <option value="">Género*</option> -->
                   <option value="M">Masculino</option>
                   <option value="F">Femenino</option>
                 </select>
