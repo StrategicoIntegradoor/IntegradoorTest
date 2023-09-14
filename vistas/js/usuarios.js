@@ -3,7 +3,7 @@ CARGANDO DATOS DE INICIO
 =============================================*/
 (()=>{
 cargarIntermediario();
-// cargarRoll();
+cargarRoll();
 })();
 
 
@@ -38,9 +38,9 @@ $.ajax({
 /*=============================================
 CARGAR ROLL
 =============================================*/
-document.getElementById("idRoll").addEventListener("click", function() {
-	cargarRoll(); // Llama a la función para cargar las opciones
-  });
+// document.getElementById("idRoll").addEventListener("click", function() {
+// 	cargarRoll(); // Llama a la función para cargar las opciones
+//   });
   
 function cargarRoll (){
 
