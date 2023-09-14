@@ -11,20 +11,20 @@ cargarRollEditar();
 MODAL AGREGAR
 =============================================*/
 // Carga los Documentos disponibles para agregar
-$("#nuevoDocIdUser").select2({
-	theme: "bootstrap doc",
-	language: "es",
-	width: "100%",
-	// placeholder: "Intermediario", // Esto configura el placeholder
-});
+// $("#nuevoDocIdUser").select2({
+// 	theme: "bootstrap doc",
+// 	language: "es",
+// 	width: "100%",
+// 	// placeholder: "Intermediario", // Esto configura el placeholder
+// });
 
 // Carga los Generos disponibles para agregar
-$("#nuevoGenero").select2({
-	theme: "bootstrap gen",
-	language: "es",
-	width: "100%",
-	// placeholder: "Intermediario", // Esto configura el placeholder
-});
+// $("#nuevoGenero").select2({
+// 	theme: "bootstrap gen",
+// 	language: "es",
+// 	width: "100%",
+// 	// placeholder: "Intermediario", // Esto configura el placeholder
+// });
 
 
 /*=============================================
