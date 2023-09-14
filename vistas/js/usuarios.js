@@ -25,7 +25,7 @@ cargarRoll();
 		method : "POST",
 		success : function (respuesta){
 
-		respuesta = '<option value="" disabled selected>Rol*</option>' + respuesta;
+		respuesta = '<option value=""></option>' + respuesta;
 
 		$idInter.innerHTML=respuesta;
 		$idInter2.innerHTML=respuesta;
