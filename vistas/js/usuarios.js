@@ -2,7 +2,7 @@
 CARGANDO DATOS DE INICIO
 =============================================*/
 (()=>{
-cargarIntermediario();
+cargarIntermediarioEditar();
 cargarRollEditar();
 })();
 
