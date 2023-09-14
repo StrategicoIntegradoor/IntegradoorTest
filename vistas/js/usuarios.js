@@ -10,21 +10,7 @@ cargarRollEditar();
 /*=============================================
 MODAL AGREGAR
 =============================================*/
-// Carga los Documentos disponibles para agregar
-$("#agregarTipoDocumento").select2({
-	theme: "bootstrap doc",
-	language: "es",
-	width: "100%",
-	placeholder: "Tipo Documento", // Esto configura el placeholder
-});
 
-// Carga los Generos disponibles para agregar
-$("#nuevoGenero").select2({
-	theme: "bootstrap gen",
-	language: "es",
-	width: "100%",
-	placeholder: "Genero", // Esto configura el placeholder
-});
 
 
 /*=============================================
@@ -208,6 +194,23 @@ EDITAR USUARIO
 		  })
 		);
 	  });
+
+
+	// Carga los Documentos disponibles para agregar
+	$("#agregarTipoDocumento").select2({
+		theme: "bootstrap doc",
+		language: "es",
+		width: "100%",
+		placeholder: "Tipo Documento", // Esto configura el placeholder
+	});
+
+	// Carga los Generos disponibles para agregar
+	$("#nuevoGenero").select2({
+		theme: "bootstrap gen",
+		language: "es",
+		width: "100%",
+		placeholder: "Genero", // Esto configura el placeholder
+	});
 
 	// Carga los Departamentos disponibles para editar
 	$("#DptoCirculacion").select2({
