@@ -269,7 +269,7 @@ MODAL AGREGAR USUARIO
 
                 <span class="input-group-addon"><i class="fa fa-id-badge"></i></span>
 
-                <input type="number" min="0" class="form-control input-lg" name="nuevoDocIdUser" id="nuevoDocIdUser" placeholder="Ingresar documento*" required>
+                <input type="number" min="0" class="form-control input-lg" name="nuevoDocIdUser" id="nuevoDocIdUser" placeholder="Documento*" required>
 
               </div>
 
@@ -316,7 +316,7 @@ MODAL AGREGAR USUARIO
 
                 <span class="input-group-addon"><i class="fa fa-home"></i></span>
 
-                <input type="text" class="form-control input-lg" name="AgregDireccion" id="AgregDireccion" placeholder="Ingresar Direccion">
+                <input type="text" class="form-control input-lg" name="AgregDireccion" id="AgregDireccion" placeholder="Dirección">
 
               </div>
 

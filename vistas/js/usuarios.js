@@ -133,7 +133,7 @@ EDITAR USUARIO
       })
     );
   });
-  
+
 // Carga los Departamentos disponibles para editar
 $("#DptoCirculacion").select2({
 theme: "bootstrap dpto1",
@@ -168,7 +168,7 @@ $("#ingciudadCirculacion").select2({
 	theme: "bootstrap ciudad1",
 	language: "es",
 	width: "100%",
-	placeholder: "Ingresar ciudad", // Texto del placeholder del buscador
+	placeholder: "Ciudad", // Texto del placeholder del buscador
 
 	});
 
