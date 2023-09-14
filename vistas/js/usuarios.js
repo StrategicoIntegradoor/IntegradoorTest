@@ -10,20 +10,20 @@ cargarRollEditar();
 /*=============================================
 MODAL AGREGAR
 =============================================*/
-// Carga los Intermediarios disponibles para agregar
+// Carga los Documentos disponibles para agregar
 $("#nuevoDocIdUser").select2({
-	theme: "bootstrap int",
+	theme: "bootstrap doc",
 	language: "es",
 	width: "100%",
-	placeholder: "Intermediario", // Esto configura el placeholder
+	// placeholder: "Intermediario", // Esto configura el placeholder
 });
 
-// Carga los Intermediarios disponibles para agregar
+// Carga los Generos disponibles para agregar
 $("#nuevoGenero").select2({
-	theme: "bootstrap int",
+	theme: "bootstrap gen",
 	language: "es",
 	width: "100%",
-	placeholder: "Intermediario", // Esto configura el placeholder
+	// placeholder: "Intermediario", // Esto configura el placeholder
 });
 
 

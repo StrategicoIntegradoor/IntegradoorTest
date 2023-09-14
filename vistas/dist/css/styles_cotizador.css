@@ -154,6 +154,32 @@
     padding-top: 15px;
 }
 
+.doc.select2-container .select2-selection--single{
+    /* height: 100% !important; */
+}
+
+.doc.select2-container--bootstrap .select2-selection--single .select2-selection__rendered {
+    padding-top: 7px;
+    font-size: large;
+}
+
+.doc.select2-container--bootstrap .select2-selection--single .select2-selection__arrow b {
+    border-color: #000000 transparent transparent;
+}
+
+.gen.select2-container .select2-selection--single{
+    /* height: 100% !important; */
+}
+
+.gen.select2-container--bootstrap .select2-selection--single .select2-selection__rendered {
+    padding-top: 7px;
+    font-size: large;
+}
+
+.gen.select2-container--bootstrap .select2-selection--single .select2-selection__arrow b {
+    border-color: #000000 transparent transparent;
+}
+
 .int.select2-container .select2-selection--single{
     /* height: 100% !important; */
 }
