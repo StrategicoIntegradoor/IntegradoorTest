@@ -25,7 +25,7 @@ cargarRoll();
 		method : "POST",
 		success : function (respuesta){
 
-		respuesta = '<option></option>';
+		respuesta = '<option></option>' + respuesta;
 
 		$idInter.innerHTML=respuesta;
 		$idInter2.innerHTML=respuesta;
