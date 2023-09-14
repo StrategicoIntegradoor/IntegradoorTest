@@ -29,8 +29,13 @@ cargarRoll();
 		$idInter.innerHTML=respuesta;
 		$idInter2.innerHTML=respuesta;
 
-		$idInter.removeAttribute("disabled");
-
+		//Carga los Intermediarios disponibles para agregar
+		$("#idIntermediario").select2({
+			theme: "bootstrap int",
+			language: "es",
+			width: "100%",
+			placeholder: "Intermediario*", // Esto configura el placeholder
+		});
 
 		}
 
@@ -43,11 +48,6 @@ cargarRoll();
 /*=============================================
 CARGAR ROLL
 =============================================*/
-// document.getElementById("idRoll").addEventListener("click", function() {
-// 	cargarRoll(); // Llama a la función para cargar las opciones
-//   });
-
-
   
 function cargarRoll (){
 
@@ -238,13 +238,7 @@ $("#idRoll").select2({
 CARGAR INTERMEDIARIO
 =============================================*/
 	
-	//Carga los Intermediarios disponibles para agregar
-	$("#idIntermediario").select2({
-		theme: "bootstrap int",
-		language: "es",
-		width: "100%",
-		placeholder: "Intermediario*", // Esto configura el placeholder
-	});
+
 
 
 // FUNCION PARA CARGAR LA CIUDAD DE CIRCULACIÓN
