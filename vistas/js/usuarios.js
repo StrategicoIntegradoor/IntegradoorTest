@@ -221,12 +221,12 @@ $("#ingciudadCirculacion").select2({
 	});
 
 // Carga los Intermediarios disponibles para agregar
-// $("#idIntermediario").select2({
-// 	theme: "bootstrap dpto1",
-// 	language: "es",
-// 	width: "100%",
-// 	placeholder: "Intermediario",
-// 	});
+$("#idIntermediario").select2({
+	theme: "bootstrap int",
+	language: "es",
+	width: "100%",
+	placeholder: "Intermediario",
+	});
 
 // FUNCION PARA CARGAR LA CIUDAD DE CIRCULACIÓN
 function consultarCiudad() {

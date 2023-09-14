@@ -154,6 +154,19 @@
     padding-top: 15px;
 }
 
+.int.select2-container .select2-selection--single{
+    /* height: 100% !important; */
+}
+
+.int.select2-container--bootstrap .select2-selection--single .select2-selection__rendered {
+    padding-top: 7px;
+    font-size: large;
+}
+
+.int.select2-container--bootstrap .select2-selection--single .select2-selection__arrow b {
+    border-color: #000000 transparent transparent;
+}
+
 
 .dpto.select2-container .select2-selection--single{
     height: 35px !important;
