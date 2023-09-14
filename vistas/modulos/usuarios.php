@@ -641,7 +641,7 @@ MODAL EDITAR USUARIO
                 <input type="text" class="form-control input-lg" name="editarNombre" id="editarNombre" placeholder="Actualizar nombre" required>
                 <input type="hidden" id="idCliente" name="idCliente">
                 <input type="hidden" id="codCliente" name="codCliente">
-                <input type="text" id="idUsuEdit" name="idUsuEdit">
+                <input type="hidden" id="idUsuEdit" name="idUsuEdit">
 
               </div>
 
@@ -695,7 +695,7 @@ MODAL EDITAR USUARIO
 
                 <span class="input-group-addon"><i class="fa fa-id-badge"></i></span>
 
-                <input type="number" min="0" class="form-control input-lg" name="editarDocIdUser" id="editarDocIdUser" placeholder="Actualizar documento" readonly>
+                <input type="number" min="0" class="form-control input-lg" name="editarDocIdUser" id="editarDocIdUser" placeholder="Actualizar documento">
 
               </div>
 
