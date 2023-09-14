@@ -448,7 +448,7 @@ MODAL AGREGAR USUARIO
                 <select class="form-control input-lg" name="Intermediario" id="idIntermediario" required>
                   <!-- <option disabled selected>Intermediario*</option> -->
                   <!-- <option value="">Intermediario</option> -->
-                  <div id="listaIntermediarios"></div>
+                  <!-- <div id="listaIntermediarios"></div> -->
 
                 </select>
 

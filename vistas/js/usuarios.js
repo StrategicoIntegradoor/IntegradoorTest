@@ -2,7 +2,7 @@
 CARGANDO DATOS DE INICIO
 =============================================*/
 (()=>{
-cargarIntermediario();
+cargarIntermediarioEditar();
 cargarRollEditar();
 })();
 
@@ -15,7 +15,7 @@ CARGAR INTERMEDIARIO
 function cargarIntermediario (){
 
 	const $idInter = document.getElementById("idIntermediario")
-	const $idInter2 = document.getElementById("idIntermediario2")
+	// const $idInter2 = document.getElementById("idIntermediario2")
 
 $.ajax({
 
@@ -25,7 +25,7 @@ $.ajax({
 
 	
 	   $idInter.innerHTML=respuesta;
-	   $idInter2.innerHTML=respuesta;
+	//    $idInter2.innerHTML=respuesta;
 
 	}
 
@@ -33,7 +33,9 @@ $.ajax({
 
 }
 
-
+document.getElementById("idIntermediario").addEventListener("click", function() {
+	cargarIntermediario(); // Llama a la función para cargar las opciones
+  });
 
 /*=============================================
 CARGAR ROLL
@@ -41,6 +43,8 @@ CARGAR ROLL
 document.getElementById("idRoll").addEventListener("click", function() {
 	cargarRoll(); // Llama a la función para cargar las opciones
   });
+
+
   
 function cargarRoll (){
 
