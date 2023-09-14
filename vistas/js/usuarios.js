@@ -135,7 +135,7 @@ $(".nuevaFoto").change(function(){
 EDITAR USUARIO
 =============================================*/
 
-  // Conviete la letras iniciales del Nombre y el Apellido deL Cliente en Mayusculas
+  // Modal editar Conviete la letras iniciales del Nombre y el Apellido deL Cliente en Mayusculas
   $("#editarNombre").keyup(function () {
     var cliNombres = document.getElementById("editarNombre").value.toLowerCase();
     $("#editarNombre").val(
@@ -154,6 +154,26 @@ EDITAR USUARIO
       })
     );
   });
+
+    // Modal agregar Conviete la letras iniciales del Nombre y el Apellido deL Cliente en Mayusculas
+	$("#nuevoNombre").keyup(function () {
+		var cliNombres = document.getElementById("nuevoNombre").value.toLowerCase();
+		$("#nuevoNombre").val(
+		  cliNombres.replace(/^(.)|\s(.)/g, function ($1) {
+			return $1.toUpperCase();
+		  })
+		);
+	  });
+	  $("#nuevoApellido").keyup(function () {
+		var cliApellido = document
+		  .getElementById("nuevoApellido")
+		  .value.toLowerCase();
+		$("#nuevoApellido").val(
+		  cliApellido.replace(/^(.)|\s(.)/g, function ($1) {
+			return $1.toUpperCase();
+		  })
+		);
+	  });
 
 // Carga los Departamentos disponibles para editar
 $("#DptoCirculacion").select2({

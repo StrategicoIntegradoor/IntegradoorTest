@@ -221,7 +221,7 @@ MODAL AGREGAR USUARIO
             <div class="col-xs-12 col-sm-6 col-md-6 form-group">
               <div class="input-group">
                 <span class="input-group-addon"><i class="fa fa-user"></i></span>
-                <input type="text" class="form-control input-lg" name="nuevoNombre" placeholder="Nombres*" required>
+                <input type="text" class="form-control input-lg" id="nuevoNombre" name="nuevoNombre" placeholder="Nombres*" required>
               </div>
             </div>
 
@@ -230,7 +230,7 @@ MODAL AGREGAR USUARIO
             <div class="col-xs-12 col-sm-6 col-md-6 form-group">
               <div class="input-group">
                 <span class="input-group-addon"><i class="fa fa-user"></i></span>
-                <input type="text" class="form-control input-lg" name="nuevoApellido" placeholder="Apellidos*" required>
+                <input type="text" class="form-control input-lg" id="nuevoApellido" name="nuevoApellido" placeholder="Apellidos*" required>
               </div>
             </div>
 
