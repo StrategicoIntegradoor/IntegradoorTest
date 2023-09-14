@@ -11,7 +11,7 @@ cargarRollEditar();
 MODAL AGREGAR
 =============================================*/
 // Carga los Documentos disponibles para agregar
-$("#nuevoDocIdUser").select2({
+$("#agregarTipoDocumento").select2({
 	theme: "bootstrap doc",
 	language: "es",
 	width: "100%",
