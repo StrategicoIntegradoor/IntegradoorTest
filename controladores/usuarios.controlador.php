@@ -448,7 +448,8 @@ class ControladorUsuarios{
 				// die();
 				
 				if($_POST["ciudad2"] == NULL){
-				$datos = array("nombre" => $_POST["editarNombre"],
+				$datos = array("id" => $_POST["idUsuEdit"],
+							   "nombre" => $_POST["editarNombre"],
 							   "apellido" => $_POST["editarApellido"],
 							   "documento" => $_POST["editarDocIdUser"],
 							   "tipoDocumento" => $_POST["editarTipoDocumento"],
@@ -467,7 +468,8 @@ class ControladorUsuarios{
 							   "ciudad" => $_POST["codigoCiudadActual"],
 							   "foto" => $ruta);
 				}else{
-					$datos = array("nombre" => $_POST["editarNombre"],
+					$datos = array("id" => $_POST["idUsuEdit"],
+							   "nombre" => $_POST["editarNombre"],
 							   "apellido" => $_POST["editarApellido"],
 							   "documento" => $_POST["editarDocIdUser"],
 							   "tipoDocumento" => $_POST["editarTipoDocumento"],

@@ -641,6 +641,7 @@ MODAL EDITAR USUARIO
                 <input type="text" class="form-control input-lg" name="editarNombre" id="editarNombre" placeholder="Actualizar nombre" required>
                 <input type="hidden" id="idCliente" name="idCliente">
                 <input type="hidden" id="codCliente" name="codCliente">
+                <input type="text" id="idUsuEdit" name="idUsuEdit">
 
               </div>
 

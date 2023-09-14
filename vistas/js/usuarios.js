@@ -233,7 +233,7 @@ $(".tablas").on("click", ".btnEditarUsuario", function(){
 		dataType: "json",
 		success: function(respuesta){
 			
-			
+			$("#idUsuEdit").val(respuesta["id_usuario"]);			
 			$("#editarNombre").val(respuesta["usu_nombre"]);
 			$("#editarApellido").val(respuesta["usu_apellido"]);
 			$("#editarDocIdUser").val(respuesta["usu_documento"]);

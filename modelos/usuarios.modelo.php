@@ -172,10 +172,39 @@ class ModeloUsuarios{
 
 	static public function mdlEditarUsuario($tabla, $datos){
 
+		$idUsuario = $datos["id"];
+		$stmt = Conexion::conectar()->prepare("SELECT usu_documento, usu_usuario FROM $tabla WHERE id_usuario = :idUsuario");
+
+		$stmt->bindParam(":idUsuario", $idUsuario, PDO::PARAM_INT);
+		$stmt->execute();
+		$resultados = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+		if (!empty($resultados)) {
+			// Obtén los valores de las columnas que deseas comparar
+			$document = $resultados[0]['usu_documento'];
+			$user = $resultados[0]['usu_usuario'];
 		
-		$stmt = Conexion::conectar()->prepare("UPDATE $tabla SET usu_documento = :documento, tipos_documentos_id = :tipoDocumento, usu_nombre = :nombre, usu_apellido = :apellido, usu_fch_nac = :fechNacimiento,
+			// Compara las variables
+			if ($document == $user) {
+				// Las variables son iguales
+				$stmt = Conexion::conectar()->prepare("UPDATE $tabla SET usu_usuario = :documento, usu_documento = :documento, tipos_documentos_id = :tipoDocumento, usu_nombre = :nombre, usu_apellido = :apellido, usu_fch_nac = :fechNacimiento,
 												usu_genero = :genero, direccion =:direccion, ciudades_id =:ciudad, usu_telefono = :telefono, usu_email = :email, usu_cargo = :cargo, usu_foto = :foto, id_rol = :rol, id_Intermediario = :intermediario, numCotizaciones = :maxCotEdi, fechaFin = :fechaLimEdi
 												WHERE usu_usuario = :usuario");
+			} else {
+				// Las variables no son iguales
+				$stmt = Conexion::conectar()->prepare("UPDATE $tabla SET usu_documento = :documento, tipos_documentos_id = :tipoDocumento, usu_nombre = :nombre, usu_apellido = :apellido, usu_fch_nac = :fechNacimiento,
+												usu_genero = :genero, direccion =:direccion, ciudades_id =:ciudad, usu_telefono = :telefono, usu_email = :email, usu_cargo = :cargo, usu_foto = :foto, id_rol = :rol, id_Intermediario = :intermediario, numCotizaciones = :maxCotEdi, fechaFin = :fechaLimEdi
+												WHERE usu_usuario = :usuario");
+			}
+		} else {
+			// No se encontraron resultados en la consulta
+			echo "No se encontraron resultados para el usuario con ID $idUsuario.";
+		}
+
+		
+		// $stmt = Conexion::conectar()->prepare("UPDATE $tabla SET usu_documento = :documento, tipos_documentos_id = :tipoDocumento, usu_nombre = :nombre, usu_apellido = :apellido, usu_fch_nac = :fechNacimiento,
+		// 										usu_genero = :genero, direccion =:direccion, ciudades_id =:ciudad, usu_telefono = :telefono, usu_email = :email, usu_cargo = :cargo, usu_foto = :foto, id_rol = :rol, id_Intermediario = :intermediario, numCotizaciones = :maxCotEdi, fechaFin = :fechaLimEdi
+		// 										WHERE usu_usuario = :usuario");
 
 
 		$valoresPermitidos = array('fechNacimiento', 'fechaLimEdi');
