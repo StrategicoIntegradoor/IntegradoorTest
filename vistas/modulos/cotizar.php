@@ -121,10 +121,10 @@ if ($_SESSION["permisos"]["Cotizarlivianos"] != "x") {
 ?>
 <style>
   .mensajeErrorPlaca {
-    color: #000000; /* Color de texto rojo */
+    color: #e62e1b; /* Color de texto rojo */
     font-size: 12px; /* Tamaño de fuente */
     font-family: Arial, sans-serif; /* Fuente */
-    margin-top: 5px; /* Espacio superior para separación del campo de entrada */
+    margin-top: 0%; /* Espacio superior para separación del campo de entrada */
     display: none; /* Inicialmente oculto */
 }
 
