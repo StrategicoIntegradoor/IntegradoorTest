@@ -3,7 +3,7 @@ CARGANDO DATOS DE INICIO
 =============================================*/
 (()=>{
 cargarIntermediario();
-cargarRoll();
+// cargarRoll();
 })();
 
 
