@@ -3,14 +3,21 @@ CARGANDO DATOS DE INICIO
 =============================================*/
 (()=>{
 cargarIntermediario();
-cargarRollEditar();
+cargarRoll();
 })();
 
 
 /*=============================================
-MODAL AGREGAR
+CARGAR ROL
 =============================================*/
 
+// Carga los Intermediarios disponibles para agregar
+$("#idRoll").select2({
+	theme: "bootstrap rol",
+	language: "es",
+	width: "100%",
+	placeholder: "Rol*", // Esto configura el placeholder
+});
 
 
 /*=============================================
@@ -22,13 +29,13 @@ CARGAR INTERMEDIARIO
 		theme: "bootstrap int",
 		language: "es",
 		width: "100%",
-		placeholder: "Intermediario", // Esto configura el placeholder
+		placeholder: "Intermediario*", // Esto configura el placeholder
 	});
   
 
-document.getElementById("idIntermediario").addEventListener("click", function() {
-	cargarIntermediario(); // Llama a la función para cargar las opciones
-  });
+// document.getElementById("idIntermediario").addEventListener("click", function() {
+// 	cargarIntermediario(); // Llama a la función para cargar las opciones
+//   });
 
 function cargarIntermediario(){
 
@@ -56,35 +63,15 @@ $.ajax({
 /*=============================================
 CARGAR ROLL
 =============================================*/
-document.getElementById("idRoll").addEventListener("click", function() {
-	cargarRoll(); // Llama a la función para cargar las opciones
-  });
+// document.getElementById("idRoll").addEventListener("click", function() {
+// 	cargarRoll(); // Llama a la función para cargar las opciones
+//   });
 
 
   
 function cargarRoll (){
 
 	const $idRoll = document.getElementById("idRoll")
-	// const $idRoll1 = document.getElementById("editarRol")
-
-$.ajax({
-
-	url: "ajax/cargarRoll.php",
-	method : "POST",
-	success : function (respuesta){
-
-	   $idRoll.innerHTML=respuesta;
-	//    $idRoll1.innerHTML=respuesta;
-
-	}
-
-})
-	
-}
-
-function cargarRollEditar (){
-
-	// const $idRoll = document.getElementById("idRoll")
 	const $idRoll1 = document.getElementById("editarRol")
 
 $.ajax({
@@ -93,13 +80,33 @@ $.ajax({
 	method : "POST",
 	success : function (respuesta){
 
-	//    $idRoll.innerHTML=respuesta;
+	   $idRoll.innerHTML=respuesta;
 	   $idRoll1.innerHTML=respuesta;
 
 	}
 
 })
+	
 }
+
+// function cargarRollEditar (){
+
+// 	// const $idRoll = document.getElementById("idRoll")
+// 	const $idRoll1 = document.getElementById("editarRol")
+
+// $.ajax({
+
+// 	url: "ajax/cargarRoll.php",
+// 	method : "POST",
+// 	success : function (respuesta){
+
+// 	//    $idRoll.innerHTML=respuesta;
+// 	   $idRoll1.innerHTML=respuesta;
+
+// 	}
+
+// })
+// }
 /*=============================================
 CARGAR Foto
 =============================================*/
@@ -201,7 +208,7 @@ EDITAR USUARIO
 		theme: "bootstrap doc",
 		language: "es",
 		width: "100%",
-		placeholder: "Tipo Documento", // Esto configura el placeholder
+		placeholder: "Tipo Documento*", // Esto configura el placeholder
 	});
 
 	// Carga los Generos disponibles para agregar
@@ -209,7 +216,7 @@ EDITAR USUARIO
 		theme: "bootstrap gen",
 		language: "es",
 		width: "100%",
-		placeholder: "Genero", // Esto configura el placeholder
+		placeholder: "Genero*", // Esto configura el placeholder
 	});
 
 	// Carga los Departamentos disponibles para editar
