@@ -15,7 +15,7 @@ $("#agregarTipoDocumento").select2({
 	theme: "bootstrap doc",
 	language: "es",
 	width: "100%",
-	// placeholder: "Intermediario", // Esto configura el placeholder
+	placeholder: "Tipo Documento", // Esto configura el placeholder
 });
 
 // Carga los Generos disponibles para agregar
@@ -23,7 +23,7 @@ $("#nuevoGenero").select2({
 	theme: "bootstrap gen",
 	language: "es",
 	width: "100%",
-	// placeholder: "Intermediario", // Esto configura el placeholder
+	placeholder: "Genero", // Esto configura el placeholder
 });
 
 
