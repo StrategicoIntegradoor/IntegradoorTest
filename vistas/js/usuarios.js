@@ -17,8 +17,9 @@ CARGAR INTERMEDIARIO
 		theme: "bootstrap int",
 		language: "es",
 		width: "100%",
-		placeholder: "Intermediario",
-		});
+		placeholder: "Intermediario", // Esto configura el placeholder
+	});
+  
 
 document.getElementById("idIntermediario").addEventListener("click", function() {
 	cargarIntermediario(); // Llama a la función para cargar las opciones

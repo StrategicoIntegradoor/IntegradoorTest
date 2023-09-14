@@ -445,10 +445,7 @@ MODAL AGREGAR USUARIO
               <div class="input-group">
 
                 <span class="input-group-addon"><i class="fa fa-users"></i></span>
-                <select class="form-control input-lg" name="Intermediario" id="idIntermediario" required>
-                  <option disabled selected>Intermediario*</option>
-                  <option value="">Intermediario</option>
-                  <div id="listaIntermediarios"></div>
+                <select class="form-control input-lg" id="idIntermediario" required>
 
                 </select>
 
