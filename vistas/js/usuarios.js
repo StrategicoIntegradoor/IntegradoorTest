@@ -43,6 +43,8 @@ function cargarRoll (){
 	const $idRoll = document.getElementById("idRoll")
 	const $idRoll1 = document.getElementById("editarRol")
 
+	$idRoll.querySelector('option[value=""]').style.display = "none";
+
 $.ajax({
 
 	url: "ajax/cargarRoll.php",
