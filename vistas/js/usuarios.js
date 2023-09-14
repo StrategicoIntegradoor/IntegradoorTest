@@ -35,7 +35,7 @@ cargarRoll();
 			theme: "bootstrap int",
 			language: "es",
 			width: "100%",
-			// placeholder: "Intermediario*", // Esto configura el placeholder
+			placeholder: "Intermediario*", // Esto configura el placeholder
 		});
 
 		}
