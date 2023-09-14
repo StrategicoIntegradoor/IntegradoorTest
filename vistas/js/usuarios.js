@@ -2,7 +2,7 @@
 CARGANDO DATOS DE INICIO
 =============================================*/
 (()=>{
-cargarIntermediarioEditar();
+cargarIntermediario();
 cargarRollEditar();
 })();
 
@@ -11,6 +11,14 @@ cargarRollEditar();
 /*=============================================
 CARGAR INTERMEDIARIO
 =============================================*/
+	
+	// Carga los Intermediarios disponibles para agregar
+	$("#idIntermediario").select2({
+		theme: "bootstrap int",
+		language: "es",
+		width: "100%",
+		placeholder: "Intermediario",
+		});
 
 document.getElementById("idIntermediario").addEventListener("click", function() {
 	cargarIntermediario(); // Llama a la función para cargar las opciones
@@ -181,52 +189,46 @@ EDITAR USUARIO
 		);
 	  });
 
-// Carga los Departamentos disponibles para editar
-$("#DptoCirculacion").select2({
-theme: "bootstrap dpto1",
-language: "es",
-width: "100%",
-});
-
-$("#DptoCirculacion").change(function () {
-    consultarCiudad();
-  });
-
-// Carga las Ciudades disponibles para editar
-$("#ciudadCirculacion").select2({
-	theme: "bootstrap ciudad1",
-	language: "es",
-	width: "100%",
-	});
-
-// Carga los Departamentos disponibles para agregar
-$("#ingDptoCirculacion").select2({
+	// Carga los Departamentos disponibles para editar
+	$("#DptoCirculacion").select2({
 	theme: "bootstrap dpto1",
 	language: "es",
 	width: "100%",
-	placeholder: "Departamento",
-	});
-	
-$("#ingDptoCirculacion").change(function () {
-	consultarCiudadAgregar();
 	});
 
-// Carga las Ciudades disponibles para agregar
-$("#ingciudadCirculacion").select2({
-	theme: "bootstrap ciudad1",
-	language: "es",
-	width: "100%",
-	placeholder: "Ciudad", // Texto del placeholder del buscador
-
+	$("#DptoCirculacion").change(function () {
+		consultarCiudad();
 	});
 
-// Carga los Intermediarios disponibles para agregar
-$("#idIntermediario").select2({
-	theme: "bootstrap int",
-	language: "es",
-	width: "100%",
-	placeholder: "Intermediario",
-	});
+	// Carga las Ciudades disponibles para editar
+	$("#ciudadCirculacion").select2({
+		theme: "bootstrap ciudad1",
+		language: "es",
+		width: "100%",
+		});
+
+	// Carga los Departamentos disponibles para agregar
+	$("#ingDptoCirculacion").select2({
+		theme: "bootstrap dpto1",
+		language: "es",
+		width: "100%",
+		placeholder: "Departamento",
+		});
+		
+	$("#ingDptoCirculacion").change(function () {
+		consultarCiudadAgregar();
+		});
+
+	// Carga las Ciudades disponibles para agregar
+	$("#ingciudadCirculacion").select2({
+		theme: "bootstrap ciudad1",
+		language: "es",
+		width: "100%",
+		placeholder: "Ciudad", // Texto del placeholder del buscador
+
+		});
+
+
 
 // FUNCION PARA CARGAR LA CIUDAD DE CIRCULACIÓN
 function consultarCiudad() {
