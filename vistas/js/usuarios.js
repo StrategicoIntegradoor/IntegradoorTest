@@ -198,6 +198,7 @@ $("#ingDptoCirculacion").select2({
 	theme: "bootstrap dpto1",
 	language: "es",
 	width: "100%",
+	placeholder: "Departamento",
 	});
 	
 $("#ingDptoCirculacion").change(function () {
