@@ -14,29 +14,29 @@ cargarRoll();
 // 	cargarIntermediario(); // Llama a la función para cargar las opciones
 //   });
 
-	function cargarIntermediario(){
+	// function cargarIntermediario(){
 
-		const $idInter = document.getElementById("idIntermediario")
-		const $idInter2 = document.getElementById("idIntermediario2")
+	// 	const $idInter = document.getElementById("idIntermediario")
+	// 	const $idInter2 = document.getElementById("idIntermediario2")
 
-	$.ajax({
+	// $.ajax({
 
-		url: "ajax/cargarIntermediario.php",
-		method : "POST",
-		success : function (respuesta){
+	// 	url: "ajax/cargarIntermediario.php",
+	// 	method : "POST",
+	// 	success : function (respuesta){
 
 		
-		$idInter.innerHTML=respuesta;
-		$idInter2.innerHTML=respuesta;
+	// 	$idInter.innerHTML=respuesta;
+	// 	$idInter2.innerHTML=respuesta;
 
-		$idInter.removeAttribute("disabled");
+	// 	$idInter.removeAttribute("disabled");
 
 
-		}
+	// 	}
 
-	})
+	// })
 
-	}
+	// }
 
 
 
