@@ -3,7 +3,7 @@ CARGANDO DATOS DE INICIO
 =============================================*/
 (()=>{
 cargarIntermediario();
-cargarRoll();
+// cargarRoll();
 })();
 
 
@@ -38,12 +38,14 @@ $.ajax({
 /*=============================================
 CARGAR ROLL
 =============================================*/
+document.getElementById("idRoll").addEventListener("click", function() {
+	cargarRoll(); // Llama a la función para cargar las opciones
+  });
+  
 function cargarRoll (){
 
 	const $idRoll = document.getElementById("idRoll")
 	const $idRoll1 = document.getElementById("editarRol")
-
-	$idRoll.querySelector('option[value=""]').style.display = "none";
 
 $.ajax({
 
