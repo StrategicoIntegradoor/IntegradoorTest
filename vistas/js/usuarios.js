@@ -3,7 +3,7 @@ CARGANDO DATOS DE INICIO
 =============================================*/
 (()=>{
 cargarIntermediario();
-// cargarRoll();
+cargarRollEditar();
 })();
 
 
@@ -41,18 +41,11 @@ CARGAR ROLL
 document.getElementById("idRoll").addEventListener("click", function() {
 	cargarRoll(); // Llama a la función para cargar las opciones
   });
-
-  var btnCargarRoll = document.getElementById("btnCargarRoll");
-
-  // Agrega un evento de clic al botón
-  btnCargarRoll.addEventListener("click", function() {
-	cargarRoll();
-  });
   
 function cargarRoll (){
 
 	const $idRoll = document.getElementById("idRoll")
-	const $idRoll1 = document.getElementById("editarRol")
+	// const $idRoll1 = document.getElementById("editarRol")
 
 $.ajax({
 
@@ -61,15 +54,32 @@ $.ajax({
 	success : function (respuesta){
 
 	   $idRoll.innerHTML=respuesta;
+	//    $idRoll1.innerHTML=respuesta;
+
+	}
+
+})
+	
+}
+
+function cargarRollEditar (){
+
+	// const $idRoll = document.getElementById("idRoll")
+	const $idRoll1 = document.getElementById("editarRol")
+
+$.ajax({
+
+	url: "ajax/cargarRoll.php",
+	method : "POST",
+	success : function (respuesta){
+
+	//    $idRoll.innerHTML=respuesta;
 	   $idRoll1.innerHTML=respuesta;
 
 	}
 
 })
-
-	
 }
-
 /*=============================================
 CARGAR Foto
 =============================================*/
