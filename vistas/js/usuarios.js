@@ -235,36 +235,13 @@ $("#idRoll").select2({
 CARGAR INTERMEDIARIO
 =============================================*/
 	
-	// Carga los Intermediarios disponibles para agregar
-	// $("#idIntermediario").select2({
-	// 	theme: "bootstrap int",
-	// 	language: "es",
-	// 	width: "100%",
-	// 	placeholder: "Intermediario*", // Esto configura el placeholder
-	// });
-
-
-	// Espera a que el documento esté listo
-$(document).ready(function() {
-    // Inicializa el select2
-    $("#idIntermediario").select2({
-        theme: "bootstrap doc",
-        language: "es",
-        width: "100%"
-    });
-
-    // Agrega un manejador de eventos al evento de cambio de selección
-    $("#idIntermediario").on("change", function() {
-        // Verifica si se ha seleccionado un valor
-        if ($(this).val() === null || $(this).val() === "") {
-            // Si no se ha seleccionado ningún valor, muestra el placeholder
-            $(this).next().find(".select2-selection__rendered").attr("title", "Intermediario");
-        } else {
-            // Si se ha seleccionado un valor, borra el placeholder
-            $(this).next().find(".select2-selection__rendered").attr("title", "");
-        }
-    });
-});
+	//Carga los Intermediarios disponibles para agregar
+	$("#idIntermediario").select2({
+		theme: "bootstrap int",
+		language: "es",
+		width: "100%",
+		placeholder: "Intermediario*", // Esto configura el placeholder
+	});
 
 
 // FUNCION PARA CARGAR LA CIUDAD DE CIRCULACIÓN
