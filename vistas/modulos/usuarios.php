@@ -157,7 +157,7 @@
 
                     <div class="btn-group">
                         
-                      <button class="btn btn-primary btnEditarUsuario" idUsuario="' . $value["id_usuario"] . '" data-toggle="modal" data-target="#modalEditarUsuario"><i class="fa fa-pencil"></i></button>
+                      <button id="btnCargarRoll" class="btn btn-primary btnEditarUsuario" idUsuario="' . $value["id_usuario"] . '" data-toggle="modal" data-target="#modalEditarUsuario"><i class="fa fa-pencil"></i></button>
 
                       <button class="btn btn-danger btnEliminarUsuario" idUsuario="' . $value["id_usuario"] . '" fotoUsuario="' . $value["usu_foto"] . '" usuario="' . $value["usu_usuario"] . '"><i class="fa fa-times"></i></button>
 

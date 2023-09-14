@@ -42,9 +42,12 @@ document.getElementById("idRoll").addEventListener("click", function() {
 	cargarRoll(); // Llama a la función para cargar las opciones
   });
 
-// document.getElementsByClassName("btnEditarUsuario").addEventListener("click", function() {
-// 	cargarRoll(); // Llama a la función para cargar las opciones
-//   }); 
+  var btnCargarRoll = document.getElementById("btnCargarRoll");
+
+  // Agrega un evento de clic al botón
+  btnCargarRoll.addEventListener("click", function() {
+	cargarRoll();
+  });
   
 function cargarRoll (){
 
