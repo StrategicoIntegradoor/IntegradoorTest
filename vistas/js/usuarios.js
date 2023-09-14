@@ -7,56 +7,33 @@ cargarRoll();
 })();
 
 
-/*=============================================
-CARGAR ROL
-=============================================*/
 
-// Carga los Intermediarios disponibles para agregar
-$("#idRoll").select2({
-	theme: "bootstrap rol",
-	language: "es",
-	width: "100%",
-	placeholder: "Rol*", // Esto configura el placeholder
-});
-
-
-/*=============================================
-CARGAR INTERMEDIARIO
-=============================================*/
-	
-	// Carga los Intermediarios disponibles para agregar
-	$("#idIntermediario").select2({
-		theme: "bootstrap int",
-		language: "es",
-		width: "100%",
-		placeholder: "Intermediario*", // Esto configura el placeholder
-	});
   
 
 // document.getElementById("idIntermediario").addEventListener("click", function() {
 // 	cargarIntermediario(); // Llama a la función para cargar las opciones
 //   });
 
-function cargarIntermediario(){
+	function cargarIntermediario(){
 
-	const $idInter = document.getElementById("idIntermediario")
-	// const $idInter2 = document.getElementById("idIntermediario2")
+		const $idInter = document.getElementById("idIntermediario")
+		// const $idInter2 = document.getElementById("idIntermediario2")
 
-$.ajax({
+	$.ajax({
 
-	url: "ajax/cargarIntermediario.php",
-	method : "POST",
-	success : function (respuesta){
+		url: "ajax/cargarIntermediario.php",
+		method : "POST",
+		success : function (respuesta){
 
-	
-	   $idInter.innerHTML=respuesta;
-	//    $idInter2.innerHTML=respuesta;
+		
+		$idInter.innerHTML=respuesta;
+		//    $idInter2.innerHTML=respuesta;
+
+		}
+
+	})
 
 	}
-
-})
-
-}
 
 
 
@@ -89,24 +66,7 @@ $.ajax({
 	
 }
 
-// function cargarRollEditar (){
 
-// 	// const $idRoll = document.getElementById("idRoll")
-// 	const $idRoll1 = document.getElementById("editarRol")
-
-// $.ajax({
-
-// 	url: "ajax/cargarRoll.php",
-// 	method : "POST",
-// 	success : function (respuesta){
-
-// 	//    $idRoll.innerHTML=respuesta;
-// 	   $idRoll1.innerHTML=respuesta;
-
-// 	}
-
-// })
-// }
 /*=============================================
 CARGAR Foto
 =============================================*/
@@ -258,7 +218,30 @@ EDITAR USUARIO
 
 		});
 
+/*=============================================
+CARGAR ROL
+=============================================*/
 
+// Carga los Intermediarios disponibles para agregar
+$("#idRoll").select2({
+	theme: "bootstrap rol",
+	language: "es",
+	width: "100%",
+	placeholder: "Rol*", // Esto configura el placeholder
+});
+
+
+/*=============================================
+CARGAR INTERMEDIARIO
+=============================================*/
+	
+	// Carga los Intermediarios disponibles para agregar
+	$("#idIntermediario").select2({
+		theme: "bootstrap int",
+		language: "es",
+		width: "100%",
+		placeholder: "Intermediario*", // Esto configura el placeholder
+	});
 
 // FUNCION PARA CARGAR LA CIUDAD DE CIRCULACIÓN
 function consultarCiudad() {
