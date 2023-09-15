@@ -111,7 +111,7 @@ class ControladorUsuarios{
 										proyectos@strategico.tech
 									</div>
 								`,
-									width: "41%", // Personaliza el ancho aquí (puedes usar porcentaje o píxeles)
+									width: "44%", // Personaliza el ancho aquí (puedes usar porcentaje o píxeles)
 								}).then(function () {
 									window.location.href = ""; // Redirigir después de cerrar SweetAlert
 								});
