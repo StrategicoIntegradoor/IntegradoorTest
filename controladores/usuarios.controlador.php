@@ -120,10 +120,7 @@ class ControladorUsuarios{
 									window.location.href = ""; // Redirigir después de cerrar SweetAlert
 								});
 							</script>';
-
-
-
-
+					
 					}
 				}else{
 					echo '<br>
