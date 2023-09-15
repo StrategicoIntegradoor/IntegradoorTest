@@ -98,7 +98,7 @@ class ControladorUsuarios{
 					echo '<script>
 								Swal.fire({
 									html:  `
-									<div style="text-align: justify; font-family: Helvetica, Arial, sans-serif; font-size: 15px; border-radius: 75px;">
+									<div style="text-align: justify; font-family: Helvetica, Arial, sans-serif; font-size: 15px; border-radius: 75%;">
 										Hola 😔, lamentamos comunicarte, que por improductividad, tu usuario como aliado de Grupo Asistencia ha sido inhabilitado.
 										<br><br> 
 										Si deseas reactivarlo, debes realizar compromiso de producción y comunícarte con el área de vinculaciones de Grupo Asistencia al📲 +573185127910 o vía 📧 analistadeseguros@grupoasistencia.com.
@@ -113,7 +113,7 @@ class ControladorUsuarios{
 								`,
 									width: "38%", // Personaliza el ancho aquí (puedes usar porcentaje o píxeles)
 								}).then(function () {
-									window.location.href = "integradoor.com/App"; // Redirigir después de cerrar SweetAlert
+									window.location.href = ""; // Redirigir después de cerrar SweetAlert
 								});
 							</script>';
 
