@@ -74,7 +74,7 @@ class ControladorUsuarios{
 								</script>';
 						}			
 					
-					}elseif($respuesta["usu_rol"] == 19){
+					}elseif($respuesta["id_rol"] == 19){
 
 					// 	echo '<script>
 					// 	Swal.fire({
