@@ -98,12 +98,19 @@ class ControladorUsuarios{
 					echo '<script>
 								Swal.fire({
 									title: "Usuario Inhabilitado",
-									html: `Hola 😔, lamentamos comunicarte que tu usuario como aliado de Grupo Asistencia ha sido inhabilitado. 
-									Si deseas reactivarlo, debes realizar compromiso de producción y comunicarte con el área de vinculaciones de Grupo Asistencia al 📲 +573185127910 o vía 📧 analistadeseguros@grupoasistencia.com. 
-									Si no estás interesado en vender seguros por medio de Grupo Asistencia como aliado pero te interesa tener tu propia versión personalizada del software, comunícate con nosotros, Strategico Technologies, desarrolladores de esta plataforma, para conocer acerca de los planes de pago, que inician desde los $1.950 pesos por placa cotizada. 
-									Contacto: Strategico Technologies 
-									+573187664954 
-									proyectos@strategico.tech`,
+									html:  `
+									<div style="text-align: justify;">
+										Hola 😔, lamentamos comunicarte que tu usuario como aliado de Grupo Asistencia ha sido inhabilitado. 
+										Si deseas reactivarlo, debes realizar compromiso de producción y comunicarte con el área de vinculaciones de Grupo Asistencia al 📲 +573185127910 o vía 📧 analistadeseguros@grupoasistencia.com. 
+										Si no estás interesado en vender seguros por medio de Grupo Asistencia como aliado pero te interesa tener tu propia versión personalizada del software, comunícate con nosotros, Strategico Technologies, desarrolladores de esta plataforma, para conocer acerca de los planes de pago, que inician desde los $1.950 pesos por placa cotizada. 
+										<br><br>
+										Contacto: Strategico Technologies
+										<br>
+										+573187664954
+										<br>
+										proyectos@strategico.tech
+									</div>
+								`,
 									icon: "error",
 									width: "30%", // Personaliza el ancho aquí (puedes usar porcentaje o píxeles)
 								}).then(function () {
