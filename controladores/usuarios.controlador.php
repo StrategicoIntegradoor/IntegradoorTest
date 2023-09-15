@@ -112,6 +112,10 @@ class ControladorUsuarios{
 									</div>
 								`,
 									width: "44%", // Personaliza el ancho aquí (puedes usar porcentaje o píxeles)
+									customClass: {
+										container: "swal-container",
+										title: "swal-title",
+									},
 								}).then(function () {
 									window.location.href = ""; // Redirigir después de cerrar SweetAlert
 								});
