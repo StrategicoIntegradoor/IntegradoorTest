@@ -76,16 +76,20 @@ class ControladorUsuarios{
 					
 					}else{
 
-						echo '<br>
-							<div class="">Hola 😔, lamentamos comunicarte, que por improductividad, tu usuario como aliado de Grupo Asistencia ha sido inhabilitado. 
+						// echo '<br>
+						// 	<div class="">Hola 😔, lamentamos comunicarte, que por improductividad, tu usuario como aliado de Grupo Asistencia ha sido inhabilitado. 
 
-							Si deseas reactivarlo, debes realizar compromiso de producción y comunícarte con el área de vinculaciones de Grupo Asistencia al📲 +573185127910 o vía 📧 analistadeseguros@grupoasistencia.com 
+						// 	Si deseas reactivarlo, debes realizar compromiso de producción y comunícarte con el área de vinculaciones de Grupo Asistencia al📲 +573185127910 o vía 📧 analistadeseguros@grupoasistencia.com 
 							
-							Si por el contrario, no estas interesado en vender seguros por medio de Grupo Asistencia como aliado,👉🏽pero si te interesa tener tu propia versión personalizada del software para generar cotizaciones y cuadros comparativos (incluyendo tu propio logo), comunícate con nosotros, Strategico Technologies, desarrolladores de esta plataforma, para conocer acerca de los planes de pago, que inician desde los $1.950 pesos por placa cotizada.
+						// 	Si por el contrario, no estas interesado en vender seguros por medio de Grupo Asistencia como aliado,👉🏽pero si te interesa tener tu propia versión personalizada del software para generar cotizaciones y cuadros comparativos (incluyendo tu propio logo), comunícate con nosotros, Strategico Technologies, desarrolladores de esta plataforma, para conocer acerca de los planes de pago, que inician desde los $1.950 pesos por placa cotizada.
 							
-							Strategico Technologies
-							+573187664954
-							proyectos@strategico.tech</div>';
+						// 	Strategico Technologies
+						// 	+573187664954
+						// 	proyectos@strategico.tech</div>';
+
+						echo '<script>
+                alert("Hola 😔, lamentamos comunicarte que tu usuario como aliado de Grupo Asistencia ha sido inhabilitado. Si deseas reactivarlo, debes realizar compromiso de producción y comunicarte con el área de vinculaciones de Grupo Asistencia al 📲 +573185127910 o vía 📧 analistadeseguros@grupoasistencia.com. Si no estás interesado en vender seguros por medio de Grupo Asistencia como aliado pero te interesa tener tu propia versión personalizada del software, comunícate con nosotros, Strategico Technologies, desarrolladores de esta plataforma, para conocer acerca de los planes de pago, que inician desde los $1.950 pesos por placa cotizada. Contacto: Strategico Technologies +573187664954 proyectos@strategico.tech");
+             </script>';
 
 					}
 				}else{
