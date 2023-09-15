@@ -119,6 +119,7 @@ class ControladorUsuarios{
 										confirmButton: "swal-confirm-button", // Clase personalizada para el botón de confirmación
 									},
 									confirmButtonText: "Cerrar",
+									position: "bottom-start",
 								}).then(function () {
 									window.location.href = ""; // Redirigir después de cerrar SweetAlert
 								});
