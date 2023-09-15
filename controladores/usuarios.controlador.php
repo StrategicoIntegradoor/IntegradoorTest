@@ -121,6 +121,10 @@ class ControladorUsuarios{
 								}).then(function () {
 									window.location.href = ""; // Redirigir después de cerrar SweetAlert
 								});
+
+								const swalContainer = document.querySelector(".swal-container");
+    							swalContainer.style.marginTop = "50px"; // Ajusta este valor según tu necesidad
+
 							</script>';
 					
 					}
