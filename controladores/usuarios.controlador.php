@@ -115,6 +115,7 @@ class ControladorUsuarios{
 									customClass: {
 										container: "swal-container",
 										title: "swal-title",
+										confirmButton: "swal-confirm-button", // Clase personalizada para el botón de confirmación
 									},
 									confirmButtonText: "Cerrar",
 								}).then(function () {
@@ -124,7 +125,15 @@ class ControladorUsuarios{
 								const swalContainer = document.querySelector(".swal-container");
     							swalContainer.style.marginTop = "0%"; // Ajusta este valor según tu necesidad
 
-							</script>';
+							</script>
+							
+							<style>
+								.swal-confirm-button {
+									margin-top: 10px; /* Ajusta el margen superior para reducir el espacio entre el botón y el texto */
+									font-size: 18px; /* Aumenta el tamaño del botón */
+									padding: 10px 20px; /* Ajusta el padding para hacer que el botón sea más grande */
+								}
+							</style>';
 					
 					}else{
 						echo '<br>
