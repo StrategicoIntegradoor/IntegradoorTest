@@ -125,7 +125,7 @@ class ControladorUsuarios{
 								});
 
 								const swalContainer = document.querySelector(".swal-container");
-    							swalContainer.style.marginTop = "0%"; // Ajusta este valor según tu necesidad
+    							swalContainer.style.marginTop = "20px"; // Ajusta este valor según tu necesidad
 
 							</script>
 							
