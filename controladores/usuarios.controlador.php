@@ -99,7 +99,7 @@ class ControladorUsuarios{
 								Swal.fire({
 									html:  `
 									<div style="text-align: justify; font-family: Helvetica, Arial, sans-serif; font-size: 15px; border-radius: 75%;">
-										Hola 😔, lamentamos comunicarte, que por improductividad, tu usuario como aliado de Grupo Asistencia ha sido inhabilitado.
+										<strong>Hola</strong> 😔, lamentamos comunicarte, <strong>que por improductividad</strong>, tu usuario como aliado de Grupo Asistencia ha sido inhabilitado.
 										<br><br> 
 										Si deseas reactivarlo, debes realizar compromiso de producción y comunícarte con el área de vinculaciones de Grupo Asistencia al📲 +573185127910 o vía 📧 analistadeseguros@grupoasistencia.com.
 										<br><br>
