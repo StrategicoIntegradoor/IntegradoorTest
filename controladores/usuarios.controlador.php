@@ -116,6 +116,7 @@ class ControladorUsuarios{
 										container: "swal-container",
 										title: "swal-title",
 									},
+									confirmButtonText: "Cerrar",
 								}).then(function () {
 									window.location.href = ""; // Redirigir después de cerrar SweetAlert
 								});
