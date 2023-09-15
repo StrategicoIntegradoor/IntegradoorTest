@@ -74,7 +74,7 @@ class ControladorUsuarios{
 								</script>';
 						}			
 					
-					}else{
+					}elseif($respuesta["usu_rol"] == 19){
 
 					// 	echo '<script>
 					// 	Swal.fire({
@@ -125,6 +125,9 @@ class ControladorUsuarios{
 
 							</script>';
 					
+					}else{
+						echo '<br>
+							<div class="alert alert-danger">Esta cuenta esta bloqueada. Indica otra cuenta o comunicate con tu administrador</div>';
 					}
 				}else{
 					echo '<br>
