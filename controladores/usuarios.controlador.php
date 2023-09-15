@@ -98,7 +98,6 @@ class ControladorUsuarios{
 					echo '<script>
 								Swal.fire({
 									html:  `
-									<div style="border-radius: 4000px;  margin-top: 90px;">
 										<div style="text-align: justify; font-family: Helvetica, Arial, sans-serif; font-size: 15px;">
 											<strong>Hola</strong> 😔, lamentamos comunicarte, <strong>que por improductividad</strong>, tu usuario como aliado de Grupo Asistencia ha sido inhabilitado.
 											<br><br> 
@@ -111,7 +110,6 @@ class ControladorUsuarios{
 											<br>
 											proyectos@strategico.tech
 										</div>
-									</div>
 								`,
 									width: "44%", // Personaliza el ancho aquí (puedes usar porcentaje o píxeles)
 									customClass: {
