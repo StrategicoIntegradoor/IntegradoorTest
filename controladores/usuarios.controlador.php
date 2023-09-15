@@ -98,7 +98,7 @@ class ControladorUsuarios{
 					echo '<script>
 								Swal.fire({
 									html:  `
-										<div style="text-align: justify; font-family: Helvetica, Arial, sans-serif; font-size: 17px; border-radius: 4px; padding: 2px; margin-bottom: 3px">
+										<div style="text-align: justify; font-family: Helvetica, Arial, sans-serif; font-size: 16px; border-radius: 4px; padding: 2px; margin-bottom: 3px">
 											<strong>Hola</strong> 😔, lamentamos comunicarte, <strong>que por improductividad</strong>, tu usuario como aliado de Grupo Asistencia ha sido inhabilitado.
 											<br><br> 
 											<strong>Si deseas reactivarlo, debes realizar compromiso de producción</strong> y comunícarte con el área de vinculaciones de Grupo Asistencia al📲 +573185127910 o vía 📧 analistadeseguros@grupoasistencia.com.
@@ -130,7 +130,7 @@ class ControladorUsuarios{
 							<style>
 								.swal-confirm-button {
 									margin-top: 3px; /* Ajusta el margen superior para reducir el espacio entre el botón y el texto */
-									font-size: 18px; /* Aumenta el tamaño del botón */
+									font-size: 21px; /* Aumenta el tamaño del botón */
 									padding: 11px 30px; /* Ajusta el padding para hacer que el botón sea más grande */
 								}
 							</style>';
