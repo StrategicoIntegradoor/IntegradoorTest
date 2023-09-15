@@ -113,7 +113,7 @@ class ControladorUsuarios{
 									</div>
 								`,
 									icon: "error",
-									width: "30%", // Personaliza el ancho aquí (puedes usar porcentaje o píxeles)
+									width: "50%", // Personaliza el ancho aquí (puedes usar porcentaje o píxeles)
 								}).then(function () {
 									window.location.href = "login.php"; // Redirigir después de cerrar SweetAlert
 								});
