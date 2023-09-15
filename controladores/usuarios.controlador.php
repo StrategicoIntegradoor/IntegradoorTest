@@ -97,7 +97,6 @@ class ControladorUsuarios{
 
 					echo '<script>
 								Swal.fire({
-									title: "Usuario Inhabilitado",
 									html:  `
 									<div style="text-align: justify; font-family: Helvetica, Arial, sans-serif; font-size: 15px;">
 										Hola 😔, lamentamos comunicarte, que por improductividad, tu usuario como aliado de Grupo Asistencia ha sido inhabilitado.
@@ -112,7 +111,6 @@ class ControladorUsuarios{
 										proyectos@strategico.tech
 									</div>
 								`,
-									icon: "error",
 									width: "38%", // Personaliza el ancho aquí (puedes usar porcentaje o píxeles)
 								}).then(function () {
 									window.location.href = "login.php"; // Redirigir después de cerrar SweetAlert
