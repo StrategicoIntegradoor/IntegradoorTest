@@ -131,7 +131,7 @@ class ControladorUsuarios{
 								.swal-confirm-button {
 									margin-top: 10px; /* Ajusta el margen superior para reducir el espacio entre el botón y el texto */
 									font-size: 18px; /* Aumenta el tamaño del botón */
-									padding: 10px 20px; /* Ajusta el padding para hacer que el botón sea más grande */
+									padding: 6px 7px; /* Ajusta el padding para hacer que el botón sea más grande */
 								}
 							</style>';
 					
