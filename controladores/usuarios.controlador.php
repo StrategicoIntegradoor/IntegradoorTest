@@ -125,7 +125,7 @@ class ControladorUsuarios{
 								});
 
 								const swalContainer = document.querySelector(".swal-container");
-								swalContainer.style.paddingTop = "20px"; // Ajusta este valor para moverlo hacia abajo
+								swalContainer.style.paddingTop = "100px"; // Ajusta este valor para moverlo hacia abajo
 
 							</script>
 							
