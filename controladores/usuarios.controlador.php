@@ -98,17 +98,19 @@ class ControladorUsuarios{
 					echo '<script>
 								Swal.fire({
 									html:  `
-									<div style="text-align: justify; font-family: Helvetica, Arial, sans-serif; font-size: 15px;  border-radius: 4px; padding: 30px;">
-										<strong>Hola</strong> 😔, lamentamos comunicarte, <strong>que por improductividad</strong>, tu usuario como aliado de Grupo Asistencia ha sido inhabilitado.
-										<br><br> 
-										<strong>Si deseas reactivarlo, debes realizar compromiso de producción</strong> y comunícarte con el área de vinculaciones de Grupo Asistencia al📲 +573185127910 o vía 📧 analistadeseguros@grupoasistencia.com.
-										<br><br>
-										Si por el contrario, no estas interesado en vender seguros por medio de Grupo Asistencia como aliado,👉🏽<strong>pero si te interesa tener tu propia versión personalizada del software para generar cotizaciones y cuadros comparativos (incluyendo tu propio logo)</strong>, comunícate con nosotros, <strong>Strategico Technologies</strong>, desarrolladores de esta plataforma, para conocer acerca de los planes de pago, que inician desde los $1.950 pesos por placa cotizada.										<br><br><br>
-										<strong>Strategico Technologies</strong>
-										<br>
-										+573187664954
-										<br>
-										proyectos@strategico.tech
+									<div style="border-radius: 4px; padding: 30px;">
+										<div style="text-align: justify; font-family: Helvetica, Arial, sans-serif; font-size: 15px; border-radius: 4px; padding: 30px;">
+											<strong>Hola</strong> 😔, lamentamos comunicarte, <strong>que por improductividad</strong>, tu usuario como aliado de Grupo Asistencia ha sido inhabilitado.
+											<br><br> 
+											<strong>Si deseas reactivarlo, debes realizar compromiso de producción</strong> y comunícarte con el área de vinculaciones de Grupo Asistencia al📲 +573185127910 o vía 📧 analistadeseguros@grupoasistencia.com.
+											<br><br>
+											Si por el contrario, no estas interesado en vender seguros por medio de Grupo Asistencia como aliado,👉🏽<strong>pero si te interesa tener tu propia versión personalizada del software para generar cotizaciones y cuadros comparativos (incluyendo tu propio logo)</strong>, comunícate con nosotros, <strong>Strategico Technologies</strong>, desarrolladores de esta plataforma, para conocer acerca de los planes de pago, que inician desde los $1.950 pesos por placa cotizada.										<br><br><br>
+											<strong>Strategico Technologies</strong>
+											<br>
+											+573187664954
+											<br>
+											proyectos@strategico.tech
+										</div>
 									</div>
 								`,
 									width: "44%", // Personaliza el ancho aquí (puedes usar porcentaje o píxeles)
