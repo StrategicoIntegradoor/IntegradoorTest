@@ -76,6 +76,29 @@ class ControladorUsuarios{
 					
 					}elseif($respuesta["id_rol"] == 19){
 
+						function esMovil() {
+							// Obtener el agente de usuario del navegador
+							$userAgent = $_SERVER['HTTP_USER_AGENT'];
+						
+							// Lista de cadenas de texto que indican dispositivos móviles
+							$dispositivosMoviles = array(
+								'iPhone',
+								'iPad',
+								'Android',
+								'Windows Phone',
+								'BlackBerry'
+							);
+						
+							// Comprobar si el agente de usuario contiene alguna de las cadenas de texto de dispositivos móviles
+							foreach ($dispositivosMoviles as $dispositivo) {
+								if (stripos($userAgent, $dispositivo) !== false) {
+									return true; // El usuario está en un dispositivo móvil
+								}
+							}
+						
+							return false; // El usuario no está en un dispositivo móvil
+						}
+						
 					// 	echo '<script>
 					// 	Swal.fire({
 					// 		title: "Usuario Inhabilitado",
@@ -95,6 +118,56 @@ class ControladorUsuarios{
 					// 	});
 					//   </script>';
 
+					if(esMovil()){
+						echo '
+						<style>
+							/* Estilos para la versión móvil */
+							@media (max-width: 767px) {
+								.mobile-swal-container {
+								text-align: center;
+								padding: 20px;
+								}
+								.mobile-swal-title {
+								font-size: 20px;
+								margin-bottom: 15px;
+								}
+							}
+						</style>
+
+						<script>
+						Swal.fire({
+							html:  `
+								<div style="text-align: left;font-family: Helvetica, Arial, sans-serif; font-size: 15px; border-radius: 4px; padding: 2px; margin-bottom: 3px">
+									<strong>Hola</strong> 😔, lamentamos comunicarte, <strong>que por improductividad</strong>, tu usuario como aliado de Grupo Asistencia ha sido inhabilitado.
+									<br><br> 
+									<strong>Si deseas reactivarlo, debes realizar compromiso de producción</strong> y comunicarte con el área de vinculaciones de Grupo Asistencia al
+									📱 <a href="https://wa.link/qkywo4">+573185127910</a> o vía 📧 <u>analistadeseguros@grupoasistencia.com</u>.
+									<br><br>
+									Si por el contrario, no estas interesado en vender seguros por medio de Grupo Asistencia como aliado,👉🏽<strong>pero si te interesa tener tu propia versión personalizada del software para generar cotizaciones y cuadros comparativos (incluyendo tu propio logo)</strong>, comunícate con nosotros, <strong>Strategico Technologies</strong>, desarrolladores de esta plataforma, para conocer acerca de los planes de pago, que inician desde los $1.950 pesos por placa cotizada.										<br><br><br>
+									<strong>Strategico Technologies</strong>
+									<br>
+									<a href="https:// wa.link/0d7fk9">+573187664954</a>
+									<br>
+									<u>proyectos@strategico.tech</u>
+								</div>
+						`,
+							width: "90%", // Personaliza el ancho aquí (puedes usar porcentaje o píxeles)
+							customClass: {
+								container: "mobile-swal-container"
+      							title: esMovil "mobile-swal-title"
+							},
+							confirmButtonText: "Cerrar",
+							position: "-40px",
+						}).then(function () {
+							window.location.href = ""; // Redirigir después de cerrar SweetAlert
+						});
+
+						const swalContainer = document.querySelector(".swal-container");
+						swalContainer.style.paddingTop = "100px"; // Ajusta este valor para moverlo hacia abajo
+
+					</script>
+					';
+					}else{
 					echo '<script>
 								Swal.fire({
 									html:  `
@@ -136,6 +209,7 @@ class ControladorUsuarios{
 									padding: 11px 30px; /* Ajusta el padding para hacer que el botón sea más grande */
 								}
 							</style>';
+						}
 					
 					}else{
 						echo '<br>
