@@ -99,10 +99,7 @@ class ControladorUsuarios{
 							return false; // El usuario no está en un dispositivo móvil
 						}
 						
-<<<<<<< HEAD
-=======
 
->>>>>>> cf3e6f3562981318fe00a97747b99a11261f602b
 					// 	echo '<script>
 					// 	Swal.fire({
 					// 		title: "Usuario Inhabilitado",
@@ -123,12 +120,10 @@ class ControladorUsuarios{
 					//   </script>';
 
 					if(esMovil()){
-<<<<<<< HEAD
-=======
+
 						$mensaje = "Probando versión movil";
  						var_dump($mensaje);
 						die();
->>>>>>> cf3e6f3562981318fe00a97747b99a11261f602b
 						echo '
 						<style>
 							/* Estilos para la versión móvil */
