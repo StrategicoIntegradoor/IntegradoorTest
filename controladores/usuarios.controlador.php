@@ -176,7 +176,7 @@ class ControladorUsuarios{
 											<u>proyectos@strategico.tech</u>
 										</div>
 								`,
-									width: "70%", // Personaliza el ancho aquí (puedes usar porcentaje o píxeles)
+									width: "44%", // Personaliza el ancho aquí (puedes usar porcentaje o píxeles)
 									customClass: {
 										container: "swal-container",
 										title: "swal-title",
