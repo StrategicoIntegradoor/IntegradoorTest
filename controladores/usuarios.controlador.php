@@ -120,9 +120,6 @@ class ControladorUsuarios{
 					//   </script>';
 
 					if(esMovil()){
-						$mensaje = "Probando versión movil";
- 						var_dump($mensaje);
-						die();
 						echo '
 						<style>
 							/* Estilos para la versión móvil */
