@@ -120,10 +120,6 @@ class ControladorUsuarios{
 					//   </script>';
 
 					if(esMovil()){
-
-						$mensaje = "Probando versión movil";
- 						var_dump($mensaje);
-						die();
 						echo '
 						<style>
 							/* Estilos para la versión móvil */
@@ -166,9 +162,6 @@ class ControladorUsuarios{
 						}).then(function () {
 							window.location.href = ""; // Redirigir después de cerrar SweetAlert
 						});
-
-						const swalContainer = document.querySelector(".swal-container");
-						swalContainer.style.paddingTop = "100px"; // Ajusta este valor para moverlo hacia abajo
 
 					</script>
 					';
