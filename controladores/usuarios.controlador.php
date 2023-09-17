@@ -120,51 +120,44 @@ class ControladorUsuarios{
 					//   </script>';
 
 					if(esMovil()){
-						echo '
-						<style>
-							/* Estilos para la versión móvil */
-							@media (max-width: 767px) {
-								.mobile-swal-container {
-								text-align: center;
-								padding: 20px;
-								}
-								.mobile-swal-title {
-								font-size: 20px;
-								margin-bottom: 15px;
-								}
-							}
-						</style>
+						echo '<script>
+								Swal.fire({
+									html:  `
+									<div style="text-align: left; font-family: Helvetica, Arial, sans-serif; font-size: 15px; border-radius: 4px; padding: 10px;">
+										<strong>Hola</strong> 😔, lamentamos comunicarte, <strong>que por improductividad</strong>, tu usuario como aliado de Grupo Asistencia ha sido inhabilitado.
+										<br><br> 
+										<strong>Si deseas reactivarlo, debes realizar compromiso de producción</strong> y comunicarte con el área de vinculaciones de Grupo Asistencia al
+										📱 +573185127910 o vía 📧 <u>analistadeseguros@grupoasistencia.com</u>.
+										<br><br>
+										Si por el contrario, no estás interesado en vender seguros por medio de Grupo Asistencia como aliado,👉🏽<strong>pero si te interesa tener tu propia versión personalizada del software para generar cotizaciones y cuadros comparativos (incluyendo tu propio logo)</strong>, comunícate con nosotros, <strong>Strategico Technologies</strong>, desarrolladores de esta plataforma, para conocer acerca de los planes de pago, que inician desde los $1.950 pesos por placa cotizada.										<br><br><br>
+										<strong>Strategico Technologies</strong>
+										<br>
+										+573187664954
+										<br>
+										<u>proyectos@strategico.tech</u>
+									</div>
+									`,
+									width: "90%", // Personaliza el ancho aquí (puedes usar porcentaje o píxeles)
+									customClass: {
+										container: "swal-container",
+										title: "swal-title",
+										confirmButton: "swal-confirm-button", // Clase personalizada para el botón de confirmación
+									},
+									confirmButtonText: "Cerrar",
+								}).then(function () {
+									window.location.href = ""; // Redirigir después de cerrar SweetAlert
+								});
 
-						<script>
-						Swal.fire({
-							html:  `
-								<div style="text-align: left;font-family: Helvetica, Arial, sans-serif; font-size: 15px; border-radius: 4px; padding: 2px; margin-bottom: 3px">
-									<strong>Hola</strong> 😔, lamentamos comunicarte, <strong>que por improductividad</strong>, tu usuario como aliado de Grupo Asistencia ha sido inhabilitado.
-									<br><br> 
-									<strong>Si deseas reactivarlo, debes realizar compromiso de producción</strong> y comunicarte con el área de vinculaciones de Grupo Asistencia al
-									📱 <a href="https://wa.link/qkywo4">+573185127910</a> o vía 📧 <u>analistadeseguros@grupoasistencia.com</u>.
-									<br><br>
-									Si por el contrario, no estas interesado en vender seguros por medio de Grupo Asistencia como aliado,👉🏽<strong>pero si te interesa tener tu propia versión personalizada del software para generar cotizaciones y cuadros comparativos (incluyendo tu propio logo)</strong>, comunícate con nosotros, <strong>Strategico Technologies</strong>, desarrolladores de esta plataforma, para conocer acerca de los planes de pago, que inician desde los $1.950 pesos por placa cotizada.										<br><br><br>
-									<strong>Strategico Technologies</strong>
-									<br>
-									<a href="https:// wa.link/0d7fk9">+573187664954</a>
-									<br>
-									<u>proyectos@strategico.tech</u>
-								</div>
-						`,
-							width: "90%", // Personaliza el ancho aquí (puedes usar porcentaje o píxeles)
-							customClass: {
-								container: "mobile-swal-container"
-      							title: esMovil "mobile-swal-title"
-							},
-							confirmButtonText: "Cerrar",
-							position: "-40px",
-						}).then(function () {
-							window.location.href = ""; // Redirigir después de cerrar SweetAlert
-						});
+								const swalContainer = document.querySelector(".swal-container");
+								swalContainer.style.marginTop = "20px"; // Ajusta este valor según tu necesidad
 
-					</script>
-					';
+								// Agrega estilos adicionales para pantallas móviles aquí
+								if (window.innerWidth <= 768) {
+									// Estilos para pantallas con un ancho máximo de 768px (ajusta según sea necesario)
+									swalContainer.style.padding = "5px";
+								}
+							</script>';
+
 					}else{
 					echo '<script>
 								Swal.fire({
