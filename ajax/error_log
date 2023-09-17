@@ -7056,3 +7056,23 @@ Stack trace:
 [17-Sep-2023 18:05:23 UTC] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, bool given in /home3/grupoasi/public_html/integradoor.com/Test/ajax/compararFecha.php on line 24
 [17-Sep-2023 18:05:28 UTC] PHP Notice:  Undefined index: idUsuario in /home3/grupoasi/public_html/integradoor.com/Test/ajax/compararFecha.php on line 5
 [17-Sep-2023 18:05:28 UTC] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, bool given in /home3/grupoasi/public_html/integradoor.com/Test/ajax/compararFecha.php on line 24
+[17-Sep-2023 19:31:18 UTC] PHP Notice:  Undefined index: idUsuario in /home3/grupoasi/public_html/integradoor.com/Test/ajax/compararFecha.php on line 5
+[17-Sep-2023 19:31:18 UTC] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, bool given in /home3/grupoasi/public_html/integradoor.com/Test/ajax/compararFecha.php on line 24
+[17-Sep-2023 19:31:20 UTC] PHP Notice:  Undefined index: idUsuario in /home3/grupoasi/public_html/integradoor.com/Test/ajax/compararFecha.php on line 5
+[17-Sep-2023 19:31:20 UTC] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, bool given in /home3/grupoasi/public_html/integradoor.com/Test/ajax/compararFecha.php on line 24
+[17-Sep-2023 19:31:31 UTC] PHP Notice:  Undefined index: idUsuario in /home3/grupoasi/public_html/integradoor.com/Test/ajax/compararFecha.php on line 5
+[17-Sep-2023 19:31:31 UTC] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, bool given in /home3/grupoasi/public_html/integradoor.com/Test/ajax/compararFecha.php on line 24
+[17-Sep-2023 19:31:34 UTC] PHP Notice:  Undefined index: idUsuario in /home3/grupoasi/public_html/integradoor.com/Test/ajax/compararFecha.php on line 5
+[17-Sep-2023 19:31:34 UTC] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, bool given in /home3/grupoasi/public_html/integradoor.com/Test/ajax/compararFecha.php on line 24
+[17-Sep-2023 19:32:05 UTC] PHP Notice:  Undefined index: idUsuario in /home3/grupoasi/public_html/integradoor.com/Test/ajax/compararFecha.php on line 5
+[17-Sep-2023 19:32:05 UTC] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, bool given in /home3/grupoasi/public_html/integradoor.com/Test/ajax/compararFecha.php on line 24
+[17-Sep-2023 19:32:10 UTC] PHP Notice:  Undefined index: idUsuario in /home3/grupoasi/public_html/integradoor.com/Test/ajax/compararFecha.php on line 5
+[17-Sep-2023 19:32:10 UTC] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, bool given in /home3/grupoasi/public_html/integradoor.com/Test/ajax/compararFecha.php on line 24
+[17-Sep-2023 19:32:21 UTC] PHP Notice:  Undefined index: idUsuario in /home3/grupoasi/public_html/integradoor.com/Test/ajax/compararFecha.php on line 5
+[17-Sep-2023 19:32:21 UTC] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, bool given in /home3/grupoasi/public_html/integradoor.com/Test/ajax/compararFecha.php on line 24
+[17-Sep-2023 19:32:48 UTC] PHP Notice:  Undefined index: idUsuario in /home3/grupoasi/public_html/integradoor.com/Test/ajax/compararFecha.php on line 5
+[17-Sep-2023 19:32:48 UTC] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, bool given in /home3/grupoasi/public_html/integradoor.com/Test/ajax/compararFecha.php on line 24
+[17-Sep-2023 19:33:15 UTC] PHP Notice:  Undefined index: idUsuario in /home3/grupoasi/public_html/integradoor.com/Test/ajax/compararFecha.php on line 5
+[17-Sep-2023 19:33:15 UTC] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, bool given in /home3/grupoasi/public_html/integradoor.com/Test/ajax/compararFecha.php on line 24
+[17-Sep-2023 19:33:22 UTC] PHP Notice:  Undefined index: idUsuario in /home3/grupoasi/public_html/integradoor.com/Test/ajax/compararFecha.php on line 5
+[17-Sep-2023 19:33:22 UTC] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, bool given in /home3/grupoasi/public_html/integradoor.com/Test/ajax/compararFecha.php on line 24
