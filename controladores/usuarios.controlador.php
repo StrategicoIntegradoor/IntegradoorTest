@@ -99,6 +99,7 @@ class ControladorUsuarios{
 							return false; // El usuario no está en un dispositivo móvil
 						}
 						
+						
 					// 	echo '<script>
 					// 	Swal.fire({
 					// 		title: "Usuario Inhabilitado",
