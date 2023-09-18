@@ -153,7 +153,7 @@ class ModeloPassword{
                     </v:background>
                 <![endif]-->
                 <div class="container" background="http://www.integradoor.com/Test/vistas/img/iregistro1.jpeg"> 
-                    <table style="background-size:100% 100%;height:800px;width:600px" border="0" cellspacing="0" cellpadding="20" background="https://www.integradoor.com/Test/vistas/img/iregistro1.jpeg">
+                    <table style="background-size:100% 100%;height:800px;width:600px" border="0" cellspacing="0" cellpadding="20" background="http://www.integradoor.com/Test/vistas/img/iregistro1.jpeg">
                         <tr>
                             <td>
                                 <h1 class="h1-name">Hola ' . $nombre . ',</h1>
