@@ -123,7 +123,7 @@ class ControladorUsuarios{
 						echo '<script>
 								Swal.fire({
 									html:  `
-									<div style="text-align: left; font-family: Helvetica, Arial, sans-serif; font-size: 15px; border-radius: 4px; padding: 10px;">
+									<div style="text-align: left; font-family: Helvetica, Arial, sans-serif; font-size: 15px; border-radius: 4px; padding: 8px;">
 										<strong>Hola</strong> 😔, lamentamos comunicarte, <strong>que por improductividad</strong>, tu usuario como aliado de Grupo Asistencia ha sido inhabilitado.
 										<br><br> 
 										<strong>Si deseas reactivarlo, debes realizar compromiso de producción</strong> y comunicarte con el área de vinculaciones de Grupo Asistencia al
