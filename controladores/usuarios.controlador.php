@@ -129,7 +129,7 @@ class ControladorUsuarios{
 										<strong>Si deseas reactivarlo, debes realizar compromiso de producción</strong> y comunicarte con el área de vinculaciones de Grupo Asistencia al
 										📱 <a href="https://wa.link/qkywo4">+573185127910</a> o vía 📧 <u>analistadeseguros@grupoasistencia.com</u>.
 										<br><br>
-										Si por el contrario, no estás interesado en vender seguros por medio de Grupo Asistencia como aliado,👉🏽<strong>pero si te interesa tener tu propia versión personalizada del software para generar cotizaciones y cuadros comparativos (incluyendo tu propio logo)</strong>, comunícate con nosotros, <strong>Strategico Technologies</strong>, desarrolladores de esta plataforma, para conocer acerca de los planes de pago, que inician desde los $1.950 pesos por placa cotizada.										<br><br><br>
+										Si por el contrario, no estás interesado en vender seguros por medio de Grupo Asistencia como aliado, 👉🏽 <strong>pero si te interesa tener tu propia versión personalizada del software para generar cotizaciones y cuadros comparativos (incluyendo tu propio logo)</strong>, comunícate con nosotros, <strong>Strategico Technologies</strong>, desarrolladores de esta plataforma, para conocer acerca de los planes de pago, que inician desde los $1.950 pesos por placa cotizada.										<br><br><br>
 										<strong>Strategico Technologies</strong>
 										<br>
 										<a href="https://wa.link/0d7fk9">+573187664954</a>
@@ -156,7 +156,14 @@ class ControladorUsuarios{
 									// Estilos para pantallas con un ancho máximo de 768px (ajusta según sea necesario)
 									swalContainer.style.padding = "5px";
 								}
-							</script>';
+							</script>
+							
+							<style>
+								.swal-confirm-button {
+									font-size: 15px !important; /* Aumenta el tamaño del botón */
+									padding: 6px 15px; /* Ajusta el padding para hacer que el botón sea más grande */
+								}
+							</style>';
 
 					}else{
 					echo '<script>
