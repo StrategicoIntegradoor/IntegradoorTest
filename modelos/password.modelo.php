@@ -149,11 +149,11 @@ class ModeloPassword{
             <body>
                 <!--[if gte mso 9]>
                     <v:background xmlns:v="urn:schemas-microsoft-com:vml" fill="t">
-                        <v:fill type="tile" src="https://www.integradoor.com/app/vistas/img/iregistro1.jpg" color="#7bceeb"/>
+                        <v:fill type="tile" src="https://www.integradoor.com/app/vistas/img/iregistro1.jpeg" color="#7bceeb"/>
                     </v:background>
                 <![endif]-->
-                <div class="container" background="https://www.integradoor.com/app/vistas/img/iregistro1.jpg"> 
-                    <table style="background-size:100% 100%;height:800px;width:600px" border="0" cellspacing="0" cellpadding="20" background="https://www.integradoor.com/app/vistas/img/iregistro1.jpg">
+                <div class="container" background="https://www.integradoor.com/app/vistas/img/iregistro1.jpeg"> 
+                    <table style="background-size:100% 100%;height:800px;width:600px" border="0" cellspacing="0" cellpadding="20" background="https://www.integradoor.com/app/vistas/img/iregistro1.jpeg">
                         <tr>
                             <td>
                                 <h1 class="h1-name">Hola ' . $nombre . ',</h1>
