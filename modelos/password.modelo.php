@@ -149,17 +149,17 @@ class ModeloPassword{
             <body>
                 <!--[if gte mso 9]>
                     <v:background xmlns:v="urn:schemas-microsoft-com:vml" fill="t">
-                        <v:fill type="tile" src="https://www.integradoor.com/app/vistas/img/iregistro1.jpg" color="#7bceeb"/>
+                        <v:fill type="tile" src="https://www.integradoor.com/Test/vistas/img/iregistro1.jpg" color="#7bceeb"/>
                     </v:background>
                 <![endif]-->
-                <div class="container" background="https://www.integradoor.com/app/vistas/img/iregistro1.jpg"> 
-                    <table style="background-size:100% 100%;height:800px;width:600px" border="0" cellspacing="0" cellpadding="20" background="https://www.integradoor.com/app/vistas/img/iregistro1.jpg">
+                <div class="container" background="https://www.integradoor.com/Test/vistas/img/iregistro1.jpg"> 
+                    <table style="background-size:100% 100%;height:800px;width:600px" border="0" cellspacing="0" cellpadding="20" background="https://www.integradoor.com/Test/vistas/img/iregistro1.jpg">
                         <tr>
                             <td>
                                 <h1 class="h1-name">Hola ' . $nombre . ',</h1>
                                 <p style="color:#2e2e2e !important;">Se registra una solicitud de cambio de contraseña. En el presente correo se adjunta un token de seguridad junto con el enlace para llenar el formulario de cambio de contraseña.</p>
                                 <h4 class="h4-name">Token: ' . $token . '</h4>
-                                <h4 class="h4-name">Haga click en el siguiente enlace para cambiar contraseña: https://integradoor.com/app/change</h4>
+                                <h4 class="h4-name">Haga click en el siguiente enlace para cambiar contraseña: https://integradoor.com/Test/change</h4>
                             </td>
                         </tr>
                      
