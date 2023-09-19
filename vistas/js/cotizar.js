@@ -1495,7 +1495,7 @@ function cotizarOfertas() {
                 })
 
                 .then((ofertas) => {
-
+                  console.log(ofertas)
                   let result = []
 
                   result.push(ofertas)
