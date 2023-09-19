@@ -38,13 +38,6 @@ $(document).ready(function () {
 
   }
 
-  // Elimina los espacios de la placa
-  $("#placaVeh").keyup(function () {
-    var numeroInput = document.getElementById("placaVeh").value;
-    var placaSinEspacios = numeroInput.replace(/\s/g, '');
-    document.getElementById("placaVeh").value = placaSinEspacios;
-  });
-
   // Convierte la Placa ingresada en Mayusculas
   $("#placaVeh").keyup(function () {
     var numPlaca = document.getElementById("placaVeh").value;
@@ -55,26 +48,6 @@ $(document).ready(function () {
   // Evita Espacios en blanco en el numero de Placa
   $("#placaVeh").on("keypress", function (e) {
     if (e.which == 32) return false;
-  });
-
-  // Excepción de Motos
-  var placaInput = document.getElementById("placaVeh");
-  var mensajeError = document.getElementById("mensajeErrorPlaca");
-
-  placaInput.addEventListener("blur", function () {
-      var placa = placaInput.value.trim(); // Eliminar espacios en blanco al principio y al final
-      
-      // Usar una expresión regular para validar el formato AAA111
-      var formatoValido = /^[A-Z]{3}\d{3}$/.test(placa);
-      
-      if (formatoValido) {
-          mensajeError.style.display = "none";
-          placaInput.setCustomValidity("");
-      } else {
-          mensajeError.style.display = "block";
-          mensajeError.textContent = "Formato de placa incorrecto, verificar información";
-          placaInput.setCustomValidity("Formato de placa incorrecto, verificar información");
-      }
   });
 
   // Si conoce la Placa muestra el campo Placa y oculta el campo CeroKM.
@@ -110,21 +83,7 @@ $(document).ready(function () {
     }
   });
 
-  // DOCUMENTO
-  //Elimina espacios y caracteres especiales en el campo DOCUMENTO al copiar y pegar informacion
-  $("#numDocumentoID").change(function () {
-    convertirNumero();
-  });
-
-  function convertirNumero() {
-
-      var numeroInput = document.getElementById("numDocumentoID").value;
-      var numeroSinCaracteresEspeciales = numeroInput.replace(/[^0-9]/g, '');
-      document.getElementById("numDocumentoID").value = numeroSinCaracteresEspeciales;
-
-  }
-
-  // Consulta informacion del usuario en la bdd
+  // Convierte la Placa ingresada en Mayusculas
   $("#numDocumentoID").change(function () {
     consultarAsegurado();
   });
@@ -973,6 +932,8 @@ function consultarCiudad() {
   //}
 }
 
+let contadorTarjetas = 0;
+
 // REGISTRA CADA UNA DE LAS OFERTAS COTIZADAS EN LA BD
 function registrarOferta(
   aseguradora,
@@ -986,9 +947,8 @@ function registrarOferta(
   GR,
   logo,
   UrlPdf,
-  responsabilidad_civil_familiar,
   manual,
-  pdf,
+  pdf
 ) {
   return new Promise((resolve, reject) => {
     var idCotizOferta = idCotizacion
@@ -1015,11 +975,9 @@ function registrarOferta(
         logo: logo,
         UrlPdf: UrlPdf,
         manual: manual,
-        pdf: pdf,
-        responsabilidad_civil_familiar: responsabilidad_civil_familiar
+        pdf: pdf
       },
       success: function (data) {
-        console.log(data)
         // var datos = data.Data;
         var message = data.Message
         var success = data.Success
@@ -1032,6 +990,8 @@ function registrarOferta(
     });
   })
 }
+
+let aseguradorasCotizadas = new Set(); // Utilizamos un Set para asegurarnos de tener aseguradoras únicas
 
 const mostrarOferta = (
   aseguradora,
@@ -1046,6 +1006,11 @@ const mostrarOferta = (
   logo,
   UrlPdf
 ) => {
+
+  if (!aseguradorasCotizadas.has(aseguradora)) {
+    aseguradorasCotizadas.add(aseguradora); // Agregamos la aseguradora al Set
+  }
+
   let cardCotizacion = `
 						<div class='col-lg-12'>
 							<div class='card-ofertas'>
@@ -1149,13 +1114,20 @@ const mostrarOferta = (
 								</div>
 							</div>
 					`;
+  
+  contadorTarjetas++;
+  
+  console.log(`Se generaron ${contadorTarjetas} tarjetas.`);
+  console.log(`Se han cotizado ${aseguradorasCotizadas.size} aseguradoras.`); // Mostramos el número de aseguradoras únicas cotizadas
+
   $("#cardCotizacion").append(cardCotizacion);
+
 };
+
 
 // VALIDA QUE LAS OFERTAS COTIZADAS HAYAN SIDO GUARDADAS EN SU TOTALIDAD
 function validarOfertas(ofertas) {
-  console.log(ofertas[0].responsabilidad_civil_familiar);
-  $responsabilidadCivilFamiliar = ofertas[0].responsabilidad_civil_familiar;
+
   ofertas.forEach((oferta, i) => {
     var numCotizacion = oferta.numero_cotizacion;
     var precioOferta = oferta.precio;
@@ -1189,7 +1161,6 @@ function validarOfertas(ofertas) {
       oferta.servicio_grua,
       oferta.imagen,
       oferta.pdf,
-      $responsabilidadCivilFamiliar,
       0
     );
   });
@@ -1199,6 +1170,7 @@ var idCotizacion = "";
 var contErrProtocoloCotizar = 0;
 
 var aseguradorasFallidas = []
+let contadorPeticionesFallidas = 0; // Contador de peticiones fallidas
 var aseguradorasIntentadas = []
 var primerIntentoRealizado = false
 
@@ -1207,6 +1179,8 @@ const agregarAseguradoraFallida = _aseguradora => {
     aseguradoras == _aseguradora)
   if (result !== undefined) return
   aseguradorasFallidas.push(_aseguradora)
+  contadorPeticionesFallidas++; // Incrementar el contador
+  console.log("Contador de peticiones fallidas:", contadorPeticionesFallidas);
 }
 
 const eliminarAseguradoraFallida = _aseguradora => {
@@ -1285,6 +1259,13 @@ function cotizarOfertas() {
   var cre_sbs_contrasena = document.getElementById("cre_sbs_contrasena").value;
 
 
+  /**
+   * Variables para ESTADO
+   */
+  var cre_est_usuario = document.getElementById("cre_est_usuario").value;
+  var cre_equ_contrasena = document.getElementById("cre_equ_contrasena").value;
+  var Cre_Est_Entity_Id = document.getElementById("Cre_Est_Entity_Id").value;
+  var cre_est_zona = document.getElementById("cre_est_zona").value;
 
 
 
@@ -1384,6 +1365,12 @@ function cotizarOfertas() {
           cre_alli_partnercode: cre_alli_partnercode,
           cre_alli_agentcode: cre_alli_agentcode
         },
+        ESTADO:{
+          cre_est_usuario : cre_est_usuario,
+          cre_equ_contrasena : cre_equ_contrasena,
+          Cre_Est_Entity_Id : Cre_Est_Entity_Id,
+          cre_est_zona : cre_est_zona
+        },
         
       };
 
@@ -1454,88 +1441,34 @@ function cotizarOfertas() {
             }
 
 
-            /* Solidaria */
-            cont.push(
-              fetch(
-                "https://grupoasistencia.com/motor_webservice_tst/Solidaria",
-                requestOptions
-              )
-                .then((res) => {
-                  if (!res.ok) throw Error(res.statusText);
-                  return res.json();
-                })
-                .then((ofertas) => {
-                  console.log('Ofertas de Solidaria:', ofertas[0].Resultado); // Imprime las ofertas en la consola
-                  if (typeof ofertas[0].Resultado !== 'undefined') {
-                    agregarAseguradoraFallida('Solidaria')
-                    ofertas[0].Mensajes.forEach(mensaje => {
-                      mostrarAlertarCotizacionFallida('Solidaria', mensaje)
-                    })
-                  } else {
-                    validarOfertas(ofertas);
-                    mostrarAlertaCotizacionExitosa('Solidaria')
-                  }
-                })
-                .catch((err) => {
-                  console.error(err);
-                })
-            );
-
+            
             /* Mapfre */
             cont.push(
-
               fetch("https://grupoasistencia.com/motor_webservice_tst/mapfrecotizacion4", requestOptions)
-
                 .then((res) => {
-
                   if (!res.ok) throw Error(res.statusText);
-
                   return res.json();
-
                 })
-
                 .then((ofertas) => {
-
                   let result = []
-
                   result.push(ofertas)
-
                   if (typeof result[0].Resultado !== 'undefined') {
-
                     agregarAseguradoraFallida('Mapfre')
-
                     result[0].Mensajes.forEach(mensaje => {
-
                       mostrarAlertarCotizacionFallida('Mapfre', mensaje)
-
                     })
-
                   } else {
-
-
-
                     validarOfertas(result);
-
                     let successMap = true;
-
                     if (successMap) {
-
                       mostrarAlertaCotizacionExitosa('Mapfre')
-
                       successMap = false
-
                     }
-
                   }
-
                 })
-
                 .catch((err) => {
-
                   console.error(err);
-
                 })
-
             );
 
             /* Previsora */
@@ -1569,6 +1502,7 @@ function cotizarOfertas() {
                   return res.json();
                 })
                 .then((ofertas) => {
+                  console.log(ofertas)
                   if (typeof ofertas[0].Resultado !== 'undefined') {
                     agregarAseguradoraFallida('Equidad')
                     ofertas[0].Mensajes.forEach(mensaje => {
@@ -1616,7 +1550,7 @@ function cotizarOfertas() {
                   return res.json();
                 })
                 .then((ofertas) => {
-                  console.log(ofertas['CotizarXGLMResult'])
+                  console.log(ofertas);
                   if (typeof ofertas[0].Resultado !== 'undefined') {
                     agregarAseguradoraFallida('HDI')
                     ofertas[0].Mensajes.forEach(mensaje => {
@@ -1643,9 +1577,7 @@ function cotizarOfertas() {
             let body = JSON.parse(requestOptions.body)
             planes.forEach(plan => {
               body.plan = plan
-              body.Email = "@gmail.com"
               body.Email2 = Math.round(Math.random() * 999999) + body.Email
-              console.log(body.Email2)
               requestOptions.body = JSON.stringify(body)
               cont.push(
                 fetch('https://grupoasistencia.com/motor_webservice_tst/Zurich', requestOptions)
@@ -1746,7 +1678,6 @@ function cotizarOfertas() {
                       mostrarAlertarCotizacionFallida('Liberty', mensaje)
                     })
                   } else {
-                    console.log(ofertas)
                     validarOfertas(ofertas);
                     mostrarAlertaCotizacionExitosa('Liberty')
                   }
@@ -1779,6 +1710,40 @@ function cotizarOfertas() {
                   console.error(err);
                 })
             );
+
+            // cont.push(
+            //   fetch(
+            //     "https://grupoasistencia.com/motor_webservice_tst/Allianz",
+            //     requestOptions
+            //   )
+            //     .then((res) => {
+            //       if (!res.ok) throw Error(res.statusText);
+            //       return res.json();
+            //     })
+            //     .then((ofertas) => {
+            //       console.log(ofertas);
+            //       if (ofertas.length === 0 || typeof ofertas[0].Resultado !== 'undefined') {
+            //         // Tratar un arreglo vacío o la condición especial como respuestas fallidas
+            //         agregarAseguradoraFallida('Allianz');
+            //         if (ofertas.length === 0) {
+            //           mostrarAlertarCotizacionFallida('Allianz', 'Respuesta vacía');
+            //         } else {
+            //           // Aquí maneja la condición especial
+            //           ofertas[0].Mensajes.forEach(mensaje => {
+            //             mostrarAlertarCotizacionFallida('Allianz', mensaje);
+            //           });
+            //         }
+            //       } else {
+            //         validarOfertas(ofertas);
+            //         mostrarAlertaCotizacionExitosa('Allianz');
+            //       }
+            //     })
+            //     .catch((err) => {
+            //       console.error(err);
+            //     })
+            // );
+            
+
 
             /* AXA */
             cont.push(
@@ -1827,94 +1792,67 @@ function cotizarOfertas() {
                 })
             );
 
-            
-            // Promise.all(cont).then(() => {
-            //   $("#btnCotizar").hide();
-            //   $("#loaderOferta").html("");
-            //   $("#loaderRecotOferta").html("");
-            //   swal.fire({
-            //     type: "success",
-            //     title: "! Cotización Exitosa ¡",
-            //     showConfirmButton: true,
-            //     confirmButtonText: "Cerrar",
-            //   });
-            //   setTimeout(function () {
-            //     //  window.location = "index.php?ruta=editar-cotizacion&idCotizacion=" + idCotizacion;
-            //   }, 3000);
+            /* Solidaria */
+            cont.push(
+              fetch(
+                "https://grupoasistencia.com/motor_webservice_tst/Solidaria",
+                requestOptions
+              )
+                .then((res) => {
+                  if (!res.ok) throw Error(res.statusText);
+                  return res.json();
+                })
+                .then((ofertas) => {
+                  console.log(ofertas);
+                  if (typeof ofertas[0].Resultado !== 'undefined') {
+                    agregarAseguradoraFallida('Solidaria')
+                    ofertas[0].Mensajes.forEach(mensaje => {
+                      mostrarAlertarCotizacionFallida('Solidaria', mensaje)
+                    })
+                  } else {
+                    validarOfertas(ofertas);
+                    mostrarAlertaCotizacionExitosa('Solidaria')
+                  }
+                })
+                .catch((err) => {
+                  console.error(err);
+                })
+            );
 
-            //   console.log("Se completo todo");
-            //   document.querySelector('.button-recotizar').style.display = 'block'
-            //   /* Se monta el botón para generar el pdf con 
-            //   el valor de la variable idCotizacion */
-            //   const contentCotizacionPDF = document.querySelector('#contenCotizacionPDF')
-            //   contentCotizacionPDF.innerHTML = `  
-            //                                     <div class="col-xs-12" style="width: 100%;">
-            //                                       <div class="row align-items-center">
-            //                                           <div class="col-xs-4">
-            //                                               <label for="checkboxAsesor">¿Deseas agregar tus datos como asesor en la cotización?</label>
-            //                                               <input class="form-check-input" type="checkbox" id="checkboxAsesor" style="margin-left: 10px;" checked>
-            //                                           </div>
-            //                                           <div class="col-xs-4">
-            //                                               <button type="button" class="btn btn-danger" id="btnParrillaPDF">
-            //                                                   <span class="fa fa-file-text"></span> Generar PDF de Cotización
-            //                                               </button>
-            //                                           </div>
-            //                                       </div>
-            //                                     </div>
-            //                                         `
-            //   $("#btnParrillaPDF").click(function () {
-            //     const todosOn = $(".classSelecOferta:checked").length;
-            //     const idCotizacionPDF = idCotizacion;
-            //     const checkboxAsesor = $("#checkboxAsesor");
-
-            //     if (permisos.Generarpdfdecotizacion != "x") {
-
-            //       Swal.fire({
-            //         icon: 'error',
-            //         title: '¡Esta versión no tiene ésta funcionalidad disponible!',
-            //         showCancelButton: true,
-            //         confirmButtonText: 'Cerrar',
-            //         cancelButtonText: 'Conoce más'
-            //       }).then((result) => {
-
-            //         if (result.isConfirmed) {
-            //         } else if (result.isDismissed
-            //         ) {
-
-            //           window.open('https://www.integradoor.com', "_blank")
-
+            // cont.push(
+            //   fetch(
+            //     "https://grupoasistencia.com/motor_webservice_tst/Solidaria",
+            //     requestOptions
+            //   )
+            //     .then((res) => {
+            //       if (!res.ok) throw Error(res.statusText);
+            //       return res.json();
+            //     })
+            //     .then((ofertas) => {
+            //       console.log(ofertas);
+            //       if (ofertas.length === 0 || typeof ofertas[0].Resultado !== 'undefined') {
+            //         // Tratar un arreglo vacío o la condición especial como respuestas fallidas
+            //         agregarAseguradoraFallida('Solidaria');
+            //         if (ofertas.length === 0) {
+            //           mostrarAlertarCotizacionFallida('Solidaria', 'Respuesta vacía');
+            //         } else {
+            //           // Aquí maneja la condición especial
+            //           ofertas[0].Mensajes.forEach(mensaje => {
+            //             mostrarAlertarCotizacionFallida('Solidaria', mensaje);
+            //           });
             //         }
-            //       })
-            //     } else {
-
-            //       if (!todosOn) {
-            //         swal.fire({
-            //           title: "¡Debes seleccionar mínimo una oferta!",
-            //         });
             //       } else {
-
-            //         let url = `extensiones/tcpdf/pdf/comparador.php?cotizacion=${idCotizacionPDF}`;
-            //         if (checkboxAsesor.is(":checked")) {
-            //           url += "&generar_pdf=1";
-            //         }
-            //         window.open(url, "_blank");
-
-            //         //   window.open("extensiones/tcpdf/pdf/comparador.php?cotizacion=" + idCotizacionPDF,"_blank");
-
+            //         validarOfertas(ofertas);
+            //         mostrarAlertaCotizacionExitosa('Solidaria');
             //       }
-            //     }
-            //   });
-            // });
+            //     })
+            //     .catch((err) => {
+            //       console.error(err);
+            //     })
+            // );
+            
 
-
-            // ...
-
-            // Llamar a esta función cuando todas las promesas se resuelvan
-            function ejecutarDespuesDePromesas() {
-              
-
-              setTimeout(function () {
-
+            Promise.all(cont).then(() => {
               $("#btnCotizar").hide();
               $("#loaderOferta").html("");
               $("#loaderRecotOferta").html("");
@@ -1924,71 +1862,73 @@ function cotizarOfertas() {
                 showConfirmButton: true,
                 confirmButtonText: "Cerrar",
               });
+              setTimeout(function () {
                 //  window.location = "index.php?ruta=editar-cotizacion&idCotizacion=" + idCotizacion;
-                console.log("Se completó todo");
-                document.querySelector('.button-recotizar').style.display = 'block'
-                
-                /* Se monta el botón para generar el PDF con 
-                el valor de la variable idCotizacion */
-                const contentCotizacionPDF = document.querySelector('#contenCotizacionPDF')
-                contentCotizacionPDF.innerHTML = `  
-                  <div class="col-xs-12" style="width: 100%;">
-                    <div class="row align-items-center">
-                      <div class="col-xs-4">
-                        <label for="checkboxAsesor">¿Deseas agregar tus datos como asesor en la cotización?</label>
-                        <input class="form-check-input" type="checkbox" id="checkboxAsesor" style="margin-left: 10px;" checked>
-                      </div>
-                      <div class="col-xs-4">
-                        <button type="button" class="btn btn-danger" id="btnParrillaPDF">
-                          <span class="fa fa-file-text"></span> Generar PDF de Cotización
-                        </button>
-                      </div>
-                    </div>
-                  </div>
-                `;
+              }, 3000);
 
-                $("#btnParrillaPDF").click(function () {
-                  const todosOn = $(".classSelecOferta:checked").length;
-                  const idCotizacionPDF = idCotizacion;
-                  const checkboxAsesor = $("#checkboxAsesor");
+              console.log("Se completo todo");
+              document.querySelector('.button-recotizar').style.display = 'block'
+              /* Se monta el botón para generar el pdf con 
+              el valor de la variable idCotizacion */
+              const contentCotizacionPDF = document.querySelector('#contenCotizacionPDF')
+              contentCotizacionPDF.innerHTML = `  
+                                                <div class="col-xs-12" style="width: 100%;">
+                                                  <div class="row align-items-center">
+                                                      <div class="col-xs-4">
+                                                          <label for="checkboxAsesor">¿Deseas agregar tus datos como asesor en la cotización?</label>
+                                                          <input class="form-check-input" type="checkbox" id="checkboxAsesor" style="margin-left: 10px;" checked>
+                                                      </div>
+                                                      <div class="col-xs-4">
+                                                          <button type="button" class="btn btn-danger" id="btnParrillaPDF">
+                                                              <span class="fa fa-file-text"></span> Generar PDF de Cotización
+                                                          </button>
+                                                      </div>
+                                                  </div>
+                                                </div>
+                                                    `
+              $("#btnParrillaPDF").click(function () {
+                const todosOn = $(".classSelecOferta:checked").length;
+                const idCotizacionPDF = idCotizacion;
+                const checkboxAsesor = $("#checkboxAsesor");
 
-                  if (permisos.Generarpdfdecotizacion != "x") {
-                    Swal.fire({
-                      icon: 'error',
-                      title: '¡Esta versión no tiene esta funcionalidad disponible!',
-                      showCancelButton: true,
-                      confirmButtonText: 'Cerrar',
-                      cancelButtonText: 'Conoce más'
-                    }).then((result) => {
-                      if (result.isConfirmed) {
-                      } else if (result.isDismissed) {
-                        window.open('https://www.integradoor.com', "_blank")
-                      }
-                    })
-                  } else {
-                    if (!todosOn) {
-                      swal.fire({
-                        title: "¡Debes seleccionar al menos una oferta!",
-                      });
-                    } else {
-                      let url = `extensiones/tcpdf/pdf/comparador.php?cotizacion=${idCotizacionPDF}`;
-                      if (checkboxAsesor.is(":checked")) {
-                        url += "&generar_pdf=1";
-                      }
-                      window.open(url, "_blank");
+                if (permisos.Generarpdfdecotizacion != "x") {
+
+                  Swal.fire({
+                    icon: 'error',
+                    title: '¡Esta versión no tiene ésta funcionalidad disponible!',
+                    showCancelButton: true,
+                    confirmButtonText: 'Cerrar',
+                    cancelButtonText: 'Conoce más'
+                  }).then((result) => {
+
+                    if (result.isConfirmed) {
+                    } else if (result.isDismissed
+                    ) {
+
+                      window.open('https://www.integradoor.com', "_blank")
+
                     }
-                  }
-                });
-              }, 30000); // Agrega el tiempo de retraso en milisegundos aquí
-            }
+                  })
+                } else {
 
-            Promise.all(cont)
-              .then(() => {
-                ejecutarDespuesDePromesas(); // Llama a la función después de que todas las promesas se resuelvan
-              })
-              .catch((error) => {
-                console.error(error);
+                  if (!todosOn) {
+                    swal.fire({
+                      title: "¡Debes seleccionar mínimo una oferta!",
+                    });
+                  } else {
+
+                    let url = `extensiones/tcpdf/pdf/comparador.php?cotizacion=${idCotizacionPDF}`;
+                    if (checkboxAsesor.is(":checked")) {
+                      url += "&generar_pdf=1";
+                    }
+                    window.open(url, "_blank");
+
+                    //   window.open("extensiones/tcpdf/pdf/comparador.php?cotizacion=" + idCotizacionPDF,"_blank");
+
+                  }
+                }
               });
+            });
 
             /*fetch("http://localhost/webservice_autosv1/Cotizar", requestOptions)
               .then(function (response) {
@@ -2190,6 +2130,7 @@ function cotizarOfertas() {
                 return res.json();
               })
               .then((ofertas) => {
+                console.log(ofertas);
                 if (typeof ofertas[0].Resultado !== 'undefined') {
                   agregarAseguradoraFallida('HDI')
                 } else {
