@@ -111,18 +111,25 @@ $(document).ready(function () {
   });
 
   // DOCUMENTO
+
+  
   //Elimina espacios y caracteres especiales en el campo DOCUMENTO al copiar y pegar informacion
   $("#numDocumentoID").change(function () {
     convertirNumero();
   });
 
-  function convertirNumero() {
+  $(document).ready(function () {
+    // Detectar el evento de entrada (input) en el campo de número de documento
+    $("#numDocumentoID").on('input', function () {
+        convertirNumero();
+    });   
+});
 
-      var numeroInput = document.getElementById("numDocumentoID").value;
-      var numeroSinCaracteresEspeciales = numeroInput.replace(/[^0-9]/g, '');
-      document.getElementById("numDocumentoID").value = numeroSinCaracteresEspeciales;
-
-  }
+function convertirNumero() {
+  var numeroInput = document.getElementById("numDocumentoID").value;
+  var numeroSinCaracteresEspeciales = numeroInput.replace(/[^0-9]/g, '');
+  document.getElementById("numDocumentoID").value = numeroSinCaracteresEspeciales;
+}
 
   // Consulta informacion del usuario en la bdd
   $("#numDocumentoID").change(function () {
