@@ -159,13 +159,16 @@
 		/*=============================================
 		AYUDA VENTAS
 		=============================================*/		
+		if($_SESSION["permisos"]["Ayudaventas"] == "x"){	
+		echo '<li>
+				<a id="ayuda-ventas">
+					<i class="fa fa-book"></i>
+					<span>Ayuda Ventas</span>
+				</a>
+			</li>';
+		}
 	?>
-		<!-- <li>
-			<a id="ayuda-ventas">
-				<i class="fa fa-book"></i>
-				<span>Ayuda Ventas</span>
-			</a>
-		</li> -->
+
 	<?php
 		/*=============================================
 		INTERMEDIARIO
