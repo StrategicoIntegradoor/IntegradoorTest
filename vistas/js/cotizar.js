@@ -1494,55 +1494,33 @@ function cotizarOfertas() {
             //   fetch("https://grupoasistencia.com/motor_webservice_tst/mapfrecotizacion4", requestOptions)
 
             //     .then((res) => {
-
             //       if (!res.ok) throw Error(res.statusText);
-
             //       return res.json();
-
             //     })
-
             //     .then((ofertas) => {
             //       console.log(ofertas)
             //       let result = []
-
             //       result.push(ofertas)
 
             //       if (typeof result[0].Resultado !== 'undefined') {
-
             //         agregarAseguradoraFallida('Mapfre')
-
             //         result[0].Mensajes.forEach(mensaje => {
-
             //           mostrarAlertarCotizacionFallida('Mapfre', mensaje)
-
             //         })
 
             //       } else {
 
-
-
             //         validarOfertas(result);
-
             //         let successMap = true;
-
             //         if (successMap) {
-
             //           mostrarAlertaCotizacionExitosa('Mapfre')
-
             //           successMap = false
-
             //         }
-
             //       }
-
             //     })
-
             //     .catch((err) => {
-
             //       console.error(err);
-
             //     })
-
             // );
 
             /* Previsora */
@@ -1812,28 +1790,28 @@ function cotizarOfertas() {
             // );
 
             /* SBS */
-            // cont.push(
-            //   fetch("https://grupoasistencia.com/motor_webservice_tst/SBS", requestOptions)
-            //     .then((res) => {
-            //       if (!res.ok) throw Error(res.statusText);
-            //       return res.json();
-            //     })
-            //     .then((ofertas) => {
-            //       let result = ofertas
-            //       if (typeof result[0].Resultado !== 'undefined') {
-            //         agregarAseguradoraFallida('SBS')
-            //         result[0].Mensajes.forEach(mensaje => {
-            //           mostrarAlertarCotizacionFallida('SBS', mensaje)
-            //         })
-            //       } else {
-            //         validarOfertas(result);
-            //         mostrarAlertaCotizacionExitosa('SBS')
-            //       }
-            //     })
-            //     .catch((err) => {
-            //       console.error(err);
-            //     })
-            // );
+            cont.push(
+              fetch("https://grupoasistencia.com/motor_webservice_tst/SBS", requestOptions)
+                .then((res) => {
+                  if (!res.ok) throw Error(res.statusText);
+                  return res.json();
+                })
+                .then((ofertas) => {
+                  let result = ofertas
+                  if (typeof result[0].Resultado !== 'undefined') {
+                    agregarAseguradoraFallida('SBS')
+                    result[0].Mensajes.forEach(mensaje => {
+                      mostrarAlertarCotizacionFallida('SBS', mensaje)
+                    })
+                  } else {
+                    validarOfertas(result);
+                    mostrarAlertaCotizacionExitosa('SBS')
+                  }
+                })
+                .catch((err) => {
+                  console.error(err);
+                })
+            );
 
             
             // Promise.all(cont).then(() => {
