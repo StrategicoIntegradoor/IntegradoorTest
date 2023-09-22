@@ -75,7 +75,7 @@
                                 </div>
 
                                 <!-- <div id="DatosAsegurado"> -->
-                                    <div class="col-lg-12 form-resumAseg">
+                                    <!-- <div class="col-lg-12 form-resumAseg"> -->
                                         <div class="row">
                                             <hr>
                                             <label for="" class="login-box-msg">Los campos con <strong class="text-danger">*</strong> son obligatorios</label><br><br>
@@ -242,7 +242,7 @@
                                             <div id="loaderPlaca"></div>
                                             </div>
                                         </div>
-                                    </div>
+                                    <!-- </div> -->
                                 <!-- </div> -->
                             <!-- </div> -->
                         <!-- </form> -->
