@@ -54,31 +54,39 @@
                         <!-- FORMULARIO RESUMEN ASEGURADO -->
                         <form method="Post" id="formResumAseg">
                             <div id="resumenAsegurado">
-                            <div class="col-lg-12" id="headerAsegurado">
-                                <div class="row row-aseg">
-                                <div class="col-xs-12 col-sm-6 col-md-3">
-                                    <label for="">DATOS DEL ASEGURADO</label>
-                                </div>
-                                <div class="col-xs-12 col-sm-6 col-md-3">
-                                </div>
-                                <div class="col-xs-12 col-sm-6 col-md-3">
-                                </div>
-                                <div class="col-xs-12 col-sm-6 col-md-3">
-                                    <div id="masAsegurado">
-                                    <p id="masA" onclick="masAseg();">Ver mas <i class="fa fa-plus-square-o"></i></p>
+                                <div class="col-lg-12" id="headerAsegurado">
+                                    <div class="row row-aseg">
+                                        <div class="col-xs-12 col-sm-6 col-md-3">
+                                            <label for="">DATOS DEL ASEGURADO</label>
+                                        </div>
+                                        <div class="col-xs-12 col-sm-6 col-md-3">
+                                        </div>
+                                        <div class="col-xs-12 col-sm-6 col-md-3">
+                                        </div>
+                                        <div class="col-xs-12 col-sm-6 col-md-3">
+                                            <div id="masAsegurado">
+                                                <p id="masA" onclick="masAseg();">Ver mas <i class="fa fa-plus-square-o"></i></p>
+                                            </div>
+                                            <div id="menosAsegurado">
+                                                <p id="menosA" onclick="menosAseg();">Ver menos <i class="fa fa-minus-square-o"></i></p>
+                                            </div>
+                                        </div>
                                     </div>
-                                    <div id="menosAsegurado">
-                                    <p id="menosA" onclick="menosAseg();">Ver menos <i class="fa fa-minus-square-o"></i></p>
-                                    </div>
                                 </div>
-                                </div>
-                            </div>
 
                             <div id="DatosAsegurado">
                                 <div class="col-lg-12 form-resumAseg">
                                 <div class="row">
 
                                     <div class="col-xs-12 col-sm-6 col-md-3" id="contenSuperiorPlaca">
+                                    <div class="row">
+                                        <hr>
+                                        <label for="" class="login-box-msg">Los campos con <strong class="text-danger">*</strong> son obligatorios</label><br><br>
+                                        <div class="form-group col-md-12 col-sm-12 col-xs-12">
+                                            <label for="">Clave de registro <strong class="text-danger">*</strong> </label>
+                                            <input class="form-control" type="text" name="clave_registro" id="clave_registro" placeholder="Clave de registro" autofocus>
+                                        </div>
+                                    </div>
                                     <div class="row">
                                         <div class="col-xs-12 col-sm-6 col-md-6 form-group" id="conocesPlaca">
                                         <label>Conoces la Placa?</label>
