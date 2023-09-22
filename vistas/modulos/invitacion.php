@@ -691,8 +691,8 @@
 
                 <form method="post">
                     
-                    <div class="form-group col-md-12 col-sm-12 col-xs-12">                                                                                        
-                        <div class="row">
+                    <div class="row">                                                                                        
+                        <div class="form-group col-md-12 col-sm-12 col-xs-12">                                                                                        
                             <hr>
                             <label for="" class="login-box-msg">Los campos con <strong class="text-danger">*</strong> son obligatorios</label><br><br>
                             <div class="form-group col-md-12 col-sm-12 col-xs-12">
