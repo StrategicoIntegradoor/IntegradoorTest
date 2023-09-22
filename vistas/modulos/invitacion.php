@@ -76,9 +76,6 @@
 
                             <div id="DatosAsegurado">
                                 <div class="col-lg-12 form-resumAseg">
-                                <div class="row">
-
-                                    <div class="col-xs-12 col-sm-6 col-md-3" id="contenSuperiorPlaca">
                                     <div class="row">
                                         <hr>
                                         <label for="" class="login-box-msg">Los campos con <strong class="text-danger">*</strong> son obligatorios</label><br><br>
@@ -87,6 +84,10 @@
                                             <input class="form-control" type="text" name="clave_registro" id="clave_registro" placeholder="Clave de registro" autofocus>
                                         </div>
                                     </div>
+                                <div class="row">
+
+                                    <div class="col-xs-12 col-sm-6 col-md-3" id="contenSuperiorPlaca">
+                                    
                                     <div class="row">
                                         <div class="col-xs-12 col-sm-6 col-md-6 form-group" id="conocesPlaca">
                                         <label>Conoces la Placa?</label>
