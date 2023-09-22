@@ -55,7 +55,7 @@
             </div>
     
 
-            <div class="login-box-body">
+            <!-- <div class="login-box-body"> -->
 
                 <form method="post">
                     
@@ -257,7 +257,7 @@
                         <button type="button" class="btn btn-primary btn-sm btn-rounded" style="width: 250px; height: 35px; font-size: 15px;" onclick="registerGuest()">Enviar</button>
                     </div>
                 </form>   
-            </div>                                                                                                                                                                                                                                            
+            <!-- </div>                                                                                                                                                                                                                                             -->
         </div>
 
 </body>
