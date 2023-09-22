@@ -44,7 +44,7 @@
 
         <section class="content">
 
-            <div class="box">
+            <!-- <div class="box"> -->
 
 
                 <!-- <div class="box-body"> -->
@@ -630,7 +630,7 @@
 
                 <!-- </div> -->
 
-            </div>
+            <!-- </div> -->
 
             <!-- MODAL FASECOLDA -->
             <div class="modal fade" id="staticBackdrop" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
