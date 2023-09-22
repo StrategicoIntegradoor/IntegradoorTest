@@ -2377,7 +2377,7 @@ while ($rowRespuesta29 = mysqli_fetch_assoc($respuestaquery29)) {
 	$perdidaParcial = $rowRespuesta29['PerdidaParcial'];
 
 	$queryConsultaAsistencia29 = "SELECT * FROM asistencias WHERE `aseguradora` LIKE '$nombreAseguradora' AND `producto` LIKE '$nombreProducto' 
-									AND `rce` LIKE '$valorRC' AND `ppd` LIKE '$perdidaParcial'";
+									AND `rce` LIKE '$valorRC' AND `ppd` LIKE '%$perdidaParcial%'";
 	$respuestaqueryAsistencia29 =  $conexion->query($queryConsultaAsistencia29);
 	$rowRespuestaAsistencia29 = mysqli_fetch_assoc($respuestaqueryAsistencia29);
 	// var_dump($rowRespuestaAsistencia29);
