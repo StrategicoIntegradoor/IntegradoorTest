@@ -85,6 +85,32 @@
                                             </div>
                                         </div>
                                         <div class="row">
+                                            <div class="form-group col-md-6 col-sm-12 col-xs-12">
+                                                <label for="">Tipo de documento <strong class="text-danger">*</strong></label>
+                                                <select class="form-control" name="tipo_documento" id="tipo_documento">
+                                                    <?php
+                                                    $opciones = array(
+                                                        'CC' => 'Cédula de ciudadanía',
+                                                        'CE' => 'Cédula de extranjería',
+                                                        'RC' => 'Registro civil',
+                                                        'TI' => 'Tarjeta de identidad'
+                                                    );
+
+                                                    foreach ($opciones as $valor => $texto) {
+                                                        echo '<option value="' . $valor . '">' . $texto . '</option>';
+                                                    }
+                                                    ?>
+                                                </select>
+                                            </div>
+
+                                            <div class="form-group col-md-6 col-sm-12 col-xs-12">
+                                                <label for="">Numero de documento <strong class="text-danger">*</strong></label>
+                                                <input class="form-control" onkeypress="return validar_numeros(event)" type="tel" name="identificacion" id="identificacion" placeholder="#Documento">
+                                            </div>
+                                        </div>
+
+                                        
+                                        <div class="row">
 
                                             <div class="col-xs-12 col-sm-6 col-md-3" id="contenSuperiorPlaca">
                                             
@@ -113,42 +139,40 @@
                                                         </div>
                                                     </div>
                                             </div>
-                                        </div>
-
 
                                             <div class="col-xs-12 col-sm-6 col-md-3 form-group">
-                                            <input type="hidden" class="form-control" id="intermediario" value="<?php echo $_SESSION["intermediario"]; ?>">
-                                            <input type="hidden" class="form-control" id="cotRestanv" value="<?php echo $_SESSION["cotRestantes"]; ?>">
-                                            <input type="hidden" class="form-control" id="cotRestanInter" value="<?php echo $_SESSION["cotRestantesInter"]; ?>">
-                                            <label for="tipoDocumentoID">Tipo de Documento</label>
-                                            <select class="form-control" id="tipoDocumentoID" required>
-                                                <option value=""></option>
-                                                <option value="1" selected>Cedula de ciudadania</option>
-                                                <option value="2">NIT</option>
-                                                <option value="3">Cédula de extranjería</option>
-                                                <option value="4">Tarjeta de identidad</option>
-                                                <option value="5">Pasaporte</option>
-                                                <option value="6">Carné diplomático</option>
-                                                <option value="7">Sociedad extranjera sin NIT en Colombia</option>
-                                                <option value="8">Fideicomiso</option>
-                                                <option value="9">Registro civil de nacimiento</option>
-                                            </select>
+                                                <input type="hidden" class="form-control" id="intermediario" value="<?php echo $_SESSION["intermediario"]; ?>">
+                                                <input type="hidden" class="form-control" id="cotRestanv" value="<?php echo $_SESSION["cotRestantes"]; ?>">
+                                                <input type="hidden" class="form-control" id="cotRestanInter" value="<?php echo $_SESSION["cotRestantesInter"]; ?>">
+                                                <label for="tipoDocumentoID">Tipo de Documento</label>
+                                                <select class="form-control" id="tipoDocumentoID" required>
+                                                    <option value=""></option>
+                                                    <option value="1" selected>Cedula de ciudadania</option>
+                                                    <option value="2">NIT</option>
+                                                    <option value="3">Cédula de extranjería</option>
+                                                    <option value="4">Tarjeta de identidad</option>
+                                                    <option value="5">Pasaporte</option>
+                                                    <option value="6">Carné diplomático</option>
+                                                    <option value="7">Sociedad extranjera sin NIT en Colombia</option>
+                                                    <option value="8">Fideicomiso</option>
+                                                    <option value="9">Registro civil de nacimiento</option>
+                                                </select>
                                             </div>
                                             <div class="col-xs-12 col-sm-6 col-md-3 form-group">
-                                            <label for="numDocumentoID">No. Documento</label>
-                                            <input type="text" maxlength="10" class="form-control" id="numDocumentoID" required placeholder="Número de Documento">
+                                                <label for="numDocumentoID">No. Documento</label>
+                                                <input type="text" maxlength="10" class="form-control" id="numDocumentoID" required placeholder="Número de Documento">
                                             </div>
 
                                             <div class="col-xs-12 col-sm-6 col-md-3 form-group">
-                                            <label for="txtNombres">Nombre Completo</label>
-                                            <div class="row">
-                                                <div class="col-xs-12 col-sm-6 col-md-6 nomAseg">
-                                                <input type="text" class="form-control" name="nombres" id="txtNombres" placeholder="Nombres" required>
+                                                <label for="txtNombres">Nombre Completo</label>
+                                                <div class="row">
+                                                    <div class="col-xs-12 col-sm-6 col-md-6 nomAseg">
+                                                    <input type="text" class="form-control" name="nombres" id="txtNombres" placeholder="Nombres" required>
+                                                    </div>
+                                                    <div class="col-xs-12 col-sm-6 col-md-6 apeAseg">
+                                                    <input type="text" class="form-control" name="apellidos" id="txtApellidos" placeholder="Apellidos" required>
+                                                    </div>
                                                 </div>
-                                                <div class="col-xs-12 col-sm-6 col-md-6 apeAseg">
-                                                <input type="text" class="form-control" name="apellidos" id="txtApellidos" placeholder="Apellidos" required>
-                                                </div>
-                                            </div>
                                             </div>
                                         </div>
 
