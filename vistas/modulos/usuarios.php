@@ -926,7 +926,7 @@ MODAL EDITAR USUARIO
 
                 <span class="input-group-addon"><i class="fa fa-users"></i></span>
 
-                <select class="form-control input-lg" name="editarRol" id="editarRol">
+                <select class="form-control input-lg" name="editarRol" id="editarRol" required>
 
                   <option value="">Selecionar rol</option>
 
