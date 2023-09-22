@@ -2372,6 +2372,7 @@ while ($rowRespuesta29 = mysqli_fetch_assoc($respuestaquery29)) {
 	$contador++;
 
 	$nombreAseguradora = nombreAseguradora($rowRespuesta29['Aseguradora']);
+	$nombreAseguradora = $rowRespuesta29['Aseguradora'];
 	$nombreProducto = productoAseguradora($rowRespuesta29['Aseguradora'], $rowRespuesta29['Producto']);
 	$valorRC = $rowRespuesta29['ValorRC'];
 	$perdidaParcial = $rowRespuesta29['PerdidaParcial'];
@@ -2382,10 +2383,10 @@ while ($rowRespuesta29 = mysqli_fetch_assoc($respuestaquery29)) {
 	$rowRespuestaAsistencia29 = mysqli_fetch_assoc($respuestaqueryAsistencia29);
 	// var_dump($rowRespuestaAsistencia29);
 	// die();
-	echo "Nombre de Aseguradora: " . $nombreAseguradora . "<br>";
-	echo "Nombre de Producto: " . $nombreProducto . "<br>";
-	echo "Valor de RC: " . $valorRC . "<br>";
-	echo "Valor de PPD: " . $perdidaParcial . "<br>";
+	// echo "Nombre de Aseguradora: " . $nombreAseguradora . "<br>";
+	// echo "Nombre de Producto: " . $nombreProducto . "<br>";
+	// echo "Valor de RC: " . $valorRC . "<br>";
+	// echo "Valor de PPD: " . $perdidaParcial . "<br>";
 
 
 	$color = $rowRespuestaAsistencia29['color'];
