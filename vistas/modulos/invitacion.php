@@ -47,7 +47,7 @@
             <div class="box">
 
 
-                <div class="box-body">
+                <!-- <div class="box-body"> -->
 
                     <!-- <div id="formularioResumen"> -->
 
@@ -628,7 +628,7 @@
 
                     </div>
 
-                </div>
+                <!-- </div> -->
 
             </div>
 
