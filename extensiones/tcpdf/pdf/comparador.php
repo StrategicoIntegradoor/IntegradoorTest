@@ -2380,10 +2380,11 @@ while ($rowRespuesta29 = mysqli_fetch_assoc($respuestaquery29)) {
 									AND `rce` LIKE '$valorRC' AND `ppd` LIKE '$perdidaParcial'";
 	$respuestaqueryAsistencia29 =  $conexion->query($queryConsultaAsistencia29);
 	$rowRespuestaAsistencia29 = mysqli_fetch_assoc($respuestaqueryAsistencia29);
-	$rowRespuesta1001=12;
-	$rowRespuesta10034=112;
-	var_dump($rowRespuestaAsistencia29);
-	die();
+	echo "Nombre de Aseguradora: " . $nombreAseguradora . "<br>";
+	echo "Nombre de Producto: " . $nombreProducto . "<br>";
+	echo "Valor de RC: " . $valorRC . "<br>";
+	echo "Valor de PPD: " . $perdidaParcial . "<br>";
+
 
 	$color = $rowRespuestaAsistencia29['color'];
 
