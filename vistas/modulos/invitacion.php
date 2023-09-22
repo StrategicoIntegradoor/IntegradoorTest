@@ -42,8 +42,8 @@
 <body> 
 
 
-        <div class="guest-box">
-            <div class="guest-box-body">
+        <div class="login-box">
+            <div class="login-box-body">
                 <div class="register-box">
                     <div class="login-logo">
                         <img src="vistas/img/plantilla/Logo_Integradoor_Cotizador_1.png" class="img-responsive" style="padding:30px 30px 0px 30px">
