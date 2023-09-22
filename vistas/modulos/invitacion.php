@@ -49,7 +49,7 @@
 
                 <div class="box-body">
 
-                    <div id="formularioResumen">
+                    <!-- <div id="formularioResumen"> -->
 
                         <!-- FORMULARIO RESUMEN ASEGURADO -->
                         <form method="Post" id="formResumAseg">
@@ -533,7 +533,7 @@
                             </div>
                         </div>
 
-                    </div>
+                    <!-- </div> -->
 
                     <!-- CAMPOS OCULTOS PARA OPTENER LA INFORMACION-->
                     <div style="display: none;">
