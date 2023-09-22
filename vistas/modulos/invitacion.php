@@ -41,6 +41,7 @@
 
 <body> 
 
+    <section class="content">
 
         <div class="guest-box">
             <div class="guest-box-body">
@@ -255,6 +256,8 @@
                 </div>
             </form>                                                                                                                                                                                                                                            
         </div>
+    
+    </section>
 
 </body>
 
