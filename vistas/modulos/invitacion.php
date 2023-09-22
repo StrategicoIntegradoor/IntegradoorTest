@@ -74,7 +74,7 @@
                                     </div>
                                 </div>
 
-                                <div id="DatosAsegurado">
+                                <!-- <div id="DatosAsegurado"> -->
                                     <div class="col-lg-12 form-resumAseg">
                                         <div class="row">
                                             <hr>
@@ -88,32 +88,32 @@
 
                                             <div class="col-xs-12 col-sm-6 col-md-3" id="contenSuperiorPlaca">
                                             
-                                            <div class="row">
-                                                <div class="col-xs-12 col-sm-6 col-md-6 form-group" id="conocesPlaca">
-                                                <label>Conoces la Placa?</label>
-                                                <div class="conten-conocesPlaca">
-                                                    <label for="Si">Si</label>
-                                                    <input type="radio" name="conocesPlaca" id="txtConocesLaPlacaSi" value="Si" checked>&nbsp;&nbsp;&nbsp;&nbsp;
-                                                    <label for="No">No</label>
-                                                    <input type="radio" name="conocesPlaca" id="txtConocesLaPlacaNo" value="No" required>
-                                                </div>
-                                                </div>
-                                                <div class="col-xs-12 col-sm-6 col-md-6 form-group" id="contenPlaca">
-                                                <div id="mensajeErrorPlaca" style="color: red; display: none;"></div>
-                                                <label for="placaVeh">Placa</label>
-                                                <input type="text" minlength="6" maxlength="6" class="form-control" id="placaVeh" required placeholder="Placa">
-                                                </div>
-                                                <div class="col-xs-12 col-sm-6 col-md-6 form-group" id="contenCeroKM">
-                                                <label>Vehiculo 0 KM?</label>
-                                                <div class="conten-ceroKM">
-                                                    <label for="Si">Si</label>
-                                                    <input type="radio" name="ceroKM" id="txtEsCeroKmSi" value="Si" required>&nbsp;&nbsp;&nbsp;&nbsp;
-                                                    <label for="No">No</label>
-                                                    <input type="radio" name="ceroKM" id="txtEsCeroKmNo" value="No" checked>
-                                                </div>
-                                                </div>
+                                                <div class="row">
+                                                    <div class="col-xs-12 col-sm-6 col-md-6 form-group" id="conocesPlaca">
+                                                        <label>Conoces la Placa?</label>
+                                                        <div class="conten-conocesPlaca">
+                                                            <label for="Si">Si</label>
+                                                            <input type="radio" name="conocesPlaca" id="txtConocesLaPlacaSi" value="Si" checked>&nbsp;&nbsp;&nbsp;&nbsp;
+                                                            <label for="No">No</label>
+                                                            <input type="radio" name="conocesPlaca" id="txtConocesLaPlacaNo" value="No" required>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-xs-12 col-sm-6 col-md-6 form-group" id="contenPlaca">
+                                                        <div id="mensajeErrorPlaca" style="color: red; display: none;"></div>
+                                                        <label for="placaVeh">Placa</label>
+                                                        <input type="text" minlength="6" maxlength="6" class="form-control" id="placaVeh" required placeholder="Placa">
+                                                    </div>
+                                                    <div class="col-xs-12 col-sm-6 col-md-6 form-group" id="contenCeroKM">
+                                                        <label>Vehiculo 0 KM?</label>
+                                                        <div class="conten-ceroKM">
+                                                            <label for="Si">Si</label>
+                                                            <input type="radio" name="ceroKM" id="txtEsCeroKmSi" value="Si" required>&nbsp;&nbsp;&nbsp;&nbsp;
+                                                            <label for="No">No</label>
+                                                            <input type="radio" name="ceroKM" id="txtEsCeroKmNo" value="No" checked>
+                                                        </div>
+                                                    </div>
                                             </div>
-                                            </div>
+                                        </div>
 
 
                                             <div class="col-xs-12 col-sm-6 col-md-3 form-group">
@@ -243,7 +243,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                </div>
+                                <!-- </div> -->
                             <!-- </div> -->
                         <!-- </form> -->
 
@@ -689,7 +689,7 @@
 
             <!-- <div class="login-box-body"> -->
 
-                <form method="post">
+                <!-- <form method="post"> -->
                     
                     <div class="row">                                                                                        
                         <div class="form-group col-md-12 col-sm-12 col-xs-12">                                                                                        
@@ -891,7 +891,7 @@
                     <div class="text-center">
                         <button type="button" class="btn btn-primary btn-sm btn-rounded" style="width: 250px; height: 35px; font-size: 15px;" onclick="registerGuest()">Enviar</button>
                     </div>
-                </form>   
+                <!-- </form>    -->
             <!-- </div>                                                                                                                                                                                                                                             -->
         </div>
     </section>
