@@ -7215,3 +7215,5 @@ Stack trace:
 [22-Sep-2023 13:14:05 UTC] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, bool given in /home3/grupoasi/public_html/integradoor.com/Test/ajax/compararFecha.php on line 24
 [22-Sep-2023 13:14:07 UTC] PHP Notice:  Undefined index: idUsuario in /home3/grupoasi/public_html/integradoor.com/Test/ajax/compararFecha.php on line 5
 [22-Sep-2023 13:14:07 UTC] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, bool given in /home3/grupoasi/public_html/integradoor.com/Test/ajax/compararFecha.php on line 24
+[22-Sep-2023 15:31:03 UTC] PHP Notice:  Undefined index: idUsuario in /home3/grupoasi/public_html/integradoor.com/Test/ajax/compararFecha.php on line 5
+[22-Sep-2023 15:31:03 UTC] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, bool given in /home3/grupoasi/public_html/integradoor.com/Test/ajax/compararFecha.php on line 24
