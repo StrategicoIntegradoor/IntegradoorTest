@@ -2371,8 +2371,8 @@ while ($rowRespuesta29 = mysqli_fetch_assoc($respuestaquery29)) {
 
 	$contador++;
 
-	$nombreAseguradora = nombreAseguradora($rowRespuesta29['Aseguradora']);
-	// $nombreAseguradora = $rowRespuesta29['Aseguradora'];
+	// $nombreAseguradora = nombreAseguradora($rowRespuesta29['Aseguradora']);
+	$nombreAseguradora = $rowRespuesta29['Aseguradora'];
 	$nombreProducto = productoAseguradora($rowRespuesta29['Aseguradora'], $rowRespuesta29['Producto']);
 	$valorRC = $rowRespuesta29['ValorRC'];
 	$perdidaParcial = $rowRespuesta29['PerdidaParcial'];
@@ -2381,8 +2381,8 @@ while ($rowRespuesta29 = mysqli_fetch_assoc($respuestaquery29)) {
 									AND `rce` LIKE '$valorRC' AND `ppd` LIKE '$perdidaParcial'";
 	$respuestaqueryAsistencia29 =  $conexion->query($queryConsultaAsistencia29);
 	$rowRespuestaAsistencia29 = mysqli_fetch_assoc($respuestaqueryAsistencia29);
-	// var_dump($rowRespuestaAsistencia29);
-	// die();
+	var_dump($rowRespuestaAsistencia29);
+	die();
 	// echo "Nombre de Aseguradora: " . $nombreAseguradora . "<br>";
 	// echo "Nombre de Producto: " . $nombreProducto . "<br>";
 	// echo "Valor de RC: " . $valorRC . "<br>";
