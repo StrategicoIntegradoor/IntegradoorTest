@@ -2381,6 +2381,7 @@ while ($rowRespuesta29 = mysqli_fetch_assoc($respuestaquery29)) {
 	$respuestaqueryAsistencia29 =  $conexion->query($queryConsultaAsistencia29);
 	$rowRespuestaAsistencia29 = mysqli_fetch_assoc($respuestaqueryAsistencia29);
 	$rowRespuesta1001=12;
+	$rowRespuesta10034=112;
 	var_dump($rowRespuestaAsistencia29);
 	die();
 
