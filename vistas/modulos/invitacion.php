@@ -109,70 +109,69 @@
                                             </div>
                                         </div>
 
-                                        
+
                                         <div class="row">
-
-                                            <div class="col-xs-12 col-sm-6 col-md-3" id="contenSuperiorPlaca">
-                                            
-                                                <div class="row">
-                                                    <div class="col-xs-12 col-sm-6 col-md-6 form-group" id="conocesPlaca">
-                                                        <label>Conoces la Placa?</label>
-                                                        <div class="conten-conocesPlaca">
-                                                            <label for="Si">Si</label>
-                                                            <input type="radio" name="conocesPlaca" id="txtConocesLaPlacaSi" value="Si" checked>&nbsp;&nbsp;&nbsp;&nbsp;
-                                                            <label for="No">No</label>
-                                                            <input type="radio" name="conocesPlaca" id="txtConocesLaPlacaNo" value="No" required>
+                                            <div class="col-xs-12 col-sm-12 col-md-12 form-group">
+                                                    <label for="">Fecha de Nacimiento <strong class="text-danger">*</strong></label>
+                                                    <div class="row">
+                                                        <div class="col-xs-4 col-sm-4 col-md-4 text-left mb-3" >
+                                                            <select class="form-control fecha-nacimiento" name="dia_nacimiento" id="diaCirculacion" required>
+                                                                <option value="">Dia</option>
+                                                                <?php
+                                                                for ($i = 1; $i <= 31; $i++) {
+                                                                    if (strlen($i) == 1) { ?>
+                                                                        <option value="<?php echo "0" . $i ?>"><?php echo "0" . $i ?></option><?php
+                                                                                                                                            } else { ?>
+                                                                        <option value="<?php echo $i ?>"><?php echo $i ?></option><?php
+                                                                                                                                            }
+                                                                                                                                        }
+                                                                                                                                    ?>
+                                                            </select>
                                                         </div>
-                                                    </div>
-                                                    <div class="col-xs-12 col-sm-6 col-md-6 form-group" id="contenPlaca">
-                                                        <div id="mensajeErrorPlaca" style="color: red; display: none;"></div>
-                                                        <label for="placaVeh">Placa</label>
-                                                        <input type="text" minlength="6" maxlength="6" class="form-control" id="placaVeh" required placeholder="Placa">
-                                                    </div>
-                                                    <div class="col-xs-12 col-sm-6 col-md-6 form-group" id="contenCeroKM">
-                                                        <label>Vehiculo 0 KM?</label>
-                                                        <div class="conten-ceroKM">
-                                                            <label for="Si">Si</label>
-                                                            <input type="radio" name="ceroKM" id="txtEsCeroKmSi" value="Si" required>&nbsp;&nbsp;&nbsp;&nbsp;
-                                                            <label for="No">No</label>
-                                                            <input type="radio" name="ceroKM" id="txtEsCeroKmNo" value="No" checked>
+                                                        <div class="col-xs-4 col-sm-4 col-md-4 text-center mb-3" >
+                                                            <select class="form-control fecha-nacimiento" name="mes_nacimiento" id="mesCirculacion" required>
+                                                                <option value="">Mes</option>
+                                                                <option value="01">Enero</option>
+                                                                <option value="02">Febrero</option>
+                                                                <option value="03">Marzo</option>
+                                                                <option value="04">Abril</option>
+                                                                <option value="05">Mayo</option>
+                                                                <option value="06">Junio</option>
+                                                                <option value="07">Julio</option>
+                                                                <option value="08">Agosto</option>
+                                                                <option value="09">Septiembre</option>
+                                                                <option value="10">Octubre</option>
+                                                                <option value="11">Noviembre</option>
+                                                                <option value="12">Diciembre</option>
+                                                            </select>
                                                         </div>
-                                                    </div>
-                                            </div>
-
-                                            <div class="col-xs-12 col-sm-6 col-md-3 form-group">
-                                                <input type="hidden" class="form-control" id="intermediario" value="<?php echo $_SESSION["intermediario"]; ?>">
-                                                <input type="hidden" class="form-control" id="cotRestanv" value="<?php echo $_SESSION["cotRestantes"]; ?>">
-                                                <input type="hidden" class="form-control" id="cotRestanInter" value="<?php echo $_SESSION["cotRestantesInter"]; ?>">
-                                                <label for="tipoDocumentoID">Tipo de Documento</label>
-                                                <select class="form-control" id="tipoDocumentoID" required>
-                                                    <option value=""></option>
-                                                    <option value="1" selected>Cedula de ciudadania</option>
-                                                    <option value="2">NIT</option>
-                                                    <option value="3">Cédula de extranjería</option>
-                                                    <option value="4">Tarjeta de identidad</option>
-                                                    <option value="5">Pasaporte</option>
-                                                    <option value="6">Carné diplomático</option>
-                                                    <option value="7">Sociedad extranjera sin NIT en Colombia</option>
-                                                    <option value="8">Fideicomiso</option>
-                                                    <option value="9">Registro civil de nacimiento</option>
-                                                </select>
-                                            </div>
-                                            <div class="col-xs-12 col-sm-6 col-md-3 form-group">
-                                                <label for="numDocumentoID">No. Documento</label>
-                                                <input type="text" maxlength="10" class="form-control" id="numDocumentoID" required placeholder="Número de Documento">
-                                            </div>
-
-                                            <div class="col-xs-12 col-sm-6 col-md-3 form-group">
-                                                <label for="txtNombres">Nombre Completo</label>
-                                                <div class="row">
-                                                    <div class="col-xs-12 col-sm-6 col-md-6 nomAseg">
-                                                    <input type="text" class="form-control" name="nombres" id="txtNombres" placeholder="Nombres" required>
-                                                    </div>
-                                                    <div class="col-xs-12 col-sm-6 col-md-6 apeAseg">
-                                                    <input type="text" class="form-control" name="apellidos" id="txtApellidos" placeholder="Apellidos" required>
+                                                        <div class="col-xs-4 col-sm-4 col-md-4 text-right" >
+                                                            <select class="form-control fecha-nacimiento" name="anio_nacimiento" id="anioCirculacion" required>
+                                                                <option value="">Año</option>
+                                                                <?php
+                                                                for ($j = 1920; $j <= 2021; $j++) {
+                                                                ?><option value="<?php echo $j ?>"><?php echo $j ?></option><?php
+                                                                                                                                                            }
+                                                                                                                                                                ?>
+                                                            </select>
+                                                        </div>
                                                     </div>
                                                 </div>
+
+                                                <div class="form-group col-md-6 col-sm-12">
+                                                    <label for="">Genero <strong class="text-danger">*</strong></label>
+                                                    <select class="form-control" name="genero" id="genero">
+                                                        <option value="" disabled selected>Genero</option>
+                                                        <option value="F">Femenino</option>
+                                                        <option value="M">Masculino</option>
+                                                    </select>
+                                                </div>
+
+                                                <div class="form-group col-md-6 col-sm-12">
+                                                    <label for="">Celular <strong class="text-danger">*</strong></label>
+                                                    <input class="form-control" type="tel" onkeypress="return validar_numeros(event)" name="celular" id="celular" placeholder="Celular">
+                                                </div>
+
                                             </div>
                                         </div>
 
@@ -737,6 +736,7 @@
                             <input class="form-control" type="text" name="apellido" id="apellido" placeholder="Apellido">
                         </div>
                     </div>
+                    
                     <div class="row">
                         <div class="form-group col-md-6 col-sm-12 col-xs-12">
                             <label for="">Tipo de documento <strong class="text-danger">*</strong></label>
