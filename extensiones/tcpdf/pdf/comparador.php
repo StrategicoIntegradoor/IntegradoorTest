@@ -2371,7 +2371,7 @@ while ($rowRespuesta29 = mysqli_fetch_assoc($respuestaquery29)) {
 
 	$contador++;
 
-	$nombreAseguradora = nombreAseguradora($rowRespuesta29['Aseguradora']);
+	// $nombreAseguradora = nombreAseguradora($rowRespuesta29['Aseguradora']);
 	$nombreAseguradora = $rowRespuesta29['Aseguradora'];
 	$nombreProducto = productoAseguradora($rowRespuesta29['Aseguradora'], $rowRespuesta29['Producto']);
 	$valorRC = $rowRespuesta29['ValorRC'];
