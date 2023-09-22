@@ -53,7 +53,7 @@
 
                         <!-- FORMULARIO RESUMEN ASEGURADO -->
                         <!-- <form method="Post" id="formResumAseg"> -->
-                            <div id="resumenAsegurado">
+                            <!-- <div id="resumenAsegurado"> -->
                                 <div class="col-lg-12" id="headerAsegurado">
                                     <div class="row row-aseg">
                                         <div class="col-xs-12 col-sm-6 col-md-3">
@@ -244,7 +244,7 @@
                                         </div>
                                     </div>
                                 </div>
-                            </div>
+                            <!-- </div> -->
                         <!-- </form> -->
 
                         <!-- FORMULARIO VEHICULO MANUAL -->
