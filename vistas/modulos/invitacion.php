@@ -54,9 +54,24 @@
                 </div>
             </div>
     
+
             <div class="login-box-body">
 
                 <form method="post">
+
+                    <div class="form-group has-feedback">
+
+                        <input type="text" class="form-control" placeholder="Usuario" name="ingUsuario" required>
+                        <span class="glyphicon glyphicon-user form-control-feedback"></span>
+
+                    </div>
+
+                    <div class="form-group has-feedback">
+
+                        <input type="password" class="form-control" placeholder="Contraseña" name="ingPassword" required>
+                        <span class="glyphicon glyphicon-lock form-control-feedback"></span>
+
+                    </div>
                     
                     <div class="row">
                         <hr>
@@ -255,9 +270,9 @@
                     <div class="text-center">
                         <button type="button" class="btn btn-primary btn-sm btn-rounded" style="width: 250px; height: 35px; font-size: 15px;" onclick="registerGuest()">Enviar</button>
                     </div>
-                </form>                                                                                                                                                                                                                                            
-            </div>   
-         </div>
+                </form>   
+            </div>                                                                                                                                                                                                                                            
+        </div>
 
 </body>
 
