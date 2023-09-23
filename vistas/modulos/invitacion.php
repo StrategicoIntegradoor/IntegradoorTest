@@ -45,7 +45,16 @@
         <section class="content">
 
             <!-- <div class="box"> -->
-
+                <div class="guest-box-body">
+                    <div class="register-box">
+                        <div class="login-logo">
+                            <img src="vistas/img/plantilla/Logo_Integradoor_Cotizador_1.png" class="img-responsive" style="padding:30px 30px 0px 30px">
+                            <br>
+                            <h2 class="login-box-msg" style="font-weight: bold;">CREA TU CUENTA</h2>
+                            <br>
+                        </div>
+                    </div>
+                </div>
 
                 <div class="guest-box">
 
