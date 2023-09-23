@@ -47,7 +47,7 @@
             <!-- <div class="box"> -->
 
 
-                <!-- <div class="box-body"> -->
+                <div class="guest-box">
 
                     <!-- <div id="formularioResumen"> -->
 
@@ -267,6 +267,7 @@
                                         <div class="text-center">
                                             <button type="button" class="btn btn-primary btn-sm btn-rounded" style="width: 250px; height: 35px; font-size: 15px;" onclick="registerGuest()">Enviar</button>
                                         </div>
+
                                     <!-- </div> -->
                                 <!-- </div> -->
                             <!-- </div> -->
@@ -285,7 +286,7 @@
                     <!-- CAMPOS OCULTOS PARA OPTENER LA INFORMACION-->
                     
 
-                <!-- </div> -->
+                </div>
 
             <!-- </div> -->
 
