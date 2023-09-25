@@ -193,7 +193,7 @@ MODAL AGREGAR USUARIO
 
     <div class="modal-content">
 
-      <form role="form" method="post" enctype="multipart/form-data">
+      <form role="form" method="post" enctype="multipart/form-data" id="userForm">
 
         <!--=====================================
         CABEZA DEL MODAL

@@ -694,7 +694,7 @@ $("#editarDocIdUser").keyup(function(){
 
 
 document.addEventListener("DOMContentLoaded", function() {
-  document.getElementById("miFormulario").addEventListener("submit", function (event) {
+  document.getElementById("userForm").addEventListener("submit", function (event) {
     // Aquí realizas la validación del número de celular
     var placaInput = document.getElementById("AgregMovil");
     var telefono = placaInput.value.trim(); // Eliminar espacios en blanco al principio y al final
