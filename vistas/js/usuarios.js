@@ -706,4 +706,4 @@ function validarTelefono() {
   }
   
   // Agregar un event listener para llamar a la función de validación cuando el usuario escriba en el campo
-  document.getElementById("AgregMovil").addEventListener("input", validarTelefono());
+  document.getElementById("AgregMovil").addEventListener("input", validarTelefono);
