@@ -397,6 +397,7 @@ MODAL AGREGAR USUARIO
 
             <div class="col-xs-12 col-sm-6 col-md-6 form-group">
               <div class="input-group">
+                <div id="mensajeErrorCelular" style="color: red; display: none;"></div>
                 <span class="input-group-addon"><i class="fa fa-mobile" aria-hidden="true"></i></span>
                 <input type="text" class="form-control input-lg" name="nuevoTelefono" id="AgregMovil" placeholder="Celular*" data-inputmask="'mask':'(999) 999-9999'" data-mask minlength="10" required>
               </div>
