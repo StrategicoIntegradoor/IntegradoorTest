@@ -158,7 +158,7 @@ function convertirNumero() {
   // Función para filtrar caracteres especiales
   function filtrarCaracteresEspeciales(input) {
       var valor = input.value;
-      var valorFiltrado = valor.replace(/[^a-zA-Z ]/g, ""); // Permitir letras y espacios
+      var valorFiltrado = valor.replace(/[^a-zA-ZñÑ ]/g, ""); // Permitir letras, espacios y la letra "ñ" en mayúsculas o minúsculas
       input.value = valorFiltrado;
   }
 
