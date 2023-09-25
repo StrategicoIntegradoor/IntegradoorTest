@@ -438,7 +438,6 @@ class ControladorUsuarios{
 		$tabla3= "intermediario";
 
 		$respuesta = ModeloUsuarios::MdlMostrarUsuarios($tabla, $tabla2, $tabla3, $item, $valor);
-		echo $respuesta;
 		return $respuesta;
 	}
 
