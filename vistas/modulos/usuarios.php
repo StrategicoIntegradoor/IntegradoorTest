@@ -426,7 +426,7 @@ MODAL AGREGAR USUARIO
 
               <div class="input-group">
 
-                <span class="input-group-addon"><i class="fa fa-user"></span>
+                <span class="input-group-addon"><i class="fa fa-user"></i></span>
 
                 <input type="text" class="form-control input-lg" name="nuevoCargo" placeholder="Cargo">
 
