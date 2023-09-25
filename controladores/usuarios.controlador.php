@@ -577,7 +577,7 @@ class ControladorUsuarios{
 				// 	$encriptar = $_POST["passwordActual"];
 
 				// // }
-				$intermediario = $_POST["idIntermediario2"];
+				$intermediario = $_POST["editarNombre"];
 				var_dump($intermediario);
 				die();
 				
