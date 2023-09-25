@@ -910,7 +910,7 @@ MODAL EDITAR USUARIO
 
                 <span class="input-group-addon"><i class="fa fa-briefcase"></i></span>
 
-                <select class="form-control input-lg" name="Intermediario2" id="idIntermediario2" required>
+                <select class="form-control input-lg" name="idIntermediario2" id="idIntermediario2" required>
 
                 </select>
 
