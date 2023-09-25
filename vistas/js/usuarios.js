@@ -691,3 +691,23 @@ $("#editarDocIdUser").keyup(function(){
 	$('#editarPassword').val(docIdentidad);
 
 });
+
+
+  // Excepción de Celular
+  var placaInput = document.getElementById("AgregMovil");
+  var mensajeError = document.getElementById("mensajeErrorPlaca");
+
+  	placaInput.addEventListener("blur", function () {
+      
+	// Expresión regular para validar un número de celular con al menos 10 dígitos
+	var formatoValido = /^\d{10,}$/.test(telefono);
+
+      if (formatoValido) {
+          mensajeError.style.display = "none";
+          placaInput.setCustomValidity("");
+      } else {
+          mensajeError.style.display = "block";
+          mensajeError.textContent = "Numero de celular incompleto, verificar información";
+          placaInput.setCustomValidity("Numero de celular incompleto, verificar información");
+      }
+  });
