@@ -691,19 +691,3 @@ $("#editarDocIdUser").keyup(function(){
 	$('#editarPassword').val(docIdentidad);
 
 });
-
-// Función para validar el campo de teléfono
-function validarTelefono() {
-	const telefono = document.getElementById("AgregMovil").value;
-  
-	if (telefono.length < 10) {
-	  // El teléfono tiene menos de 10 caracteres, mostrar mensaje de error
-	  document.getElementById("mensajeError").innerHTML = "El número de teléfono debe tener al menos 10 caracteres.";
-	} else {
-	  // El teléfono es válido, borrar mensaje de error
-	  document.getElementById("mensajeError").innerHTML = "";
-	}
-  }
-  
-  // Agregar un event listener para llamar a la función de validación cuando el usuario escriba en el campo
-  document.getElementById("AgregMovil").addEventListener("input", validarTelefono);
