@@ -254,20 +254,7 @@ if ($_SESSION["permisos"]["Cotizarlivianos"] != "x") {
                     <div class="col-xs-12 col-sm-6 col-md-3 form-group">
                       <label for="">Fecha de Nacimiento</label>
                       <div class="row">
-                        <div class="col-xs-4 col-sm-4 col-md-4 conten-dia">
-                          <select class="form-control fecha-nacimiento" name="dianacimiento" id="dianacimiento" required>
-                            <option value="">Dia</option>
-                            <?php
-                            for ($i = 1; $i <= 31; $i++) {
-                              if (strlen($i) == 1) { ?>
-                                <option value="<?php echo "0" . $i ?>"><?php echo "0" . $i ?></option><?php
-                                                                                                    } else { ?>
-                                <option value="<?php echo $i ?>"><?php echo $i ?></option><?php
-                                                                                                    }
-                                                                                                  }
-                                                                                          ?>
-                          </select>
-                        </div>
+
                         <div class="col-xs-4 col-sm-4 col-md-4 conten-mes">
                           <select class="form-control fecha-nacimiento" name="mesnacimiento" id="mesnacimiento" required>
                             <option value="" selected>Mes</option>
@@ -285,6 +272,22 @@ if ($_SESSION["permisos"]["Cotizarlivianos"] != "x") {
                             <option value="12">Diciembre</option>
                           </select>
                         </div>
+
+                        <div class="col-xs-4 col-sm-4 col-md-4 conten-dia">
+                          <select class="form-control fecha-nacimiento" name="dianacimiento" id="dianacimiento" required>
+                            <option value="">Dia</option>
+                            <?php
+                            for ($i = 1; $i <= 31; $i++) {
+                              if (strlen($i) == 1) { ?>
+                                <option value="<?php echo "0" . $i ?>"><?php echo "0" . $i ?></option><?php
+                                                                                                    } else { ?>
+                                <option value="<?php echo $i ?>"><?php echo $i ?></option><?php
+                                                                                                    }
+                                                                                                  }
+                                                                                          ?>
+                          </select>
+                        </div>
+                        
                         <div class="col-xs-4 col-sm-4 col-md-4 conten-anio">
                           <select class="form-control fecha-nacimiento" name="anionacimiento" id="anionacimiento" required>
                             <option value="">Año</option>
