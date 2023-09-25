@@ -693,23 +693,23 @@ $("#editarDocIdUser").keyup(function(){
 });
 
 
-  // Excepción de Celular
-  var placaInput = document.getElementById("AgregMovil");
-  var mensajeError = document.getElementById("mensajeErrorCelular");
+//   // Excepción de Celular
+//   var placaInput = document.getElementById("AgregMovil");
+//   var mensajeError = document.getElementById("mensajeErrorCelular");
 
-  	placaInput.addEventListener("blur", function () {
+//   	placaInput.addEventListener("blur", function () {
       
-	var telefono = placaInput.value.trim(); // Eliminar espacios en blanco al principio y al final
+// 	var telefono = placaInput.value.trim(); // Eliminar espacios en blanco al principio y al final
 
-	// Expresión regular para validar un número de celular con al menos 10 dígitos
-	var formatoValido = /^(?:\(\d{3}\)\s*|\d{3}-?)\d{3}-?\d{4}$/.test(telefono);
+// 	// Expresión regular para validar un número de celular con al menos 10 dígitos
+// 	var formatoValido = /^(?:\(\d{3}\)\s*|\d{3}-?)\d{3}-?\d{4}$/.test(telefono);
 
-      if (formatoValido) {
-          mensajeError.style.display = "none";
-          placaInput.setCustomValidity(" ");
-      } else {
-          mensajeError.style.display = "block";
-          mensajeError.textContent = "Numero de celular incompleto, verificar información";
-          placaInput.setCustomValidity("Numero de celular incompleto, verificar información");
-      }
-  });
+//       if (formatoValido) {
+//           mensajeError.style.display = "none";
+//           placaInput.setCustomValidity(" ");
+//       } else {
+//           mensajeError.style.display = "block";
+//           mensajeError.textContent = "Numero de celular incompleto, verificar información";
+//           placaInput.setCustomValidity("Numero de celular incompleto, verificar información");
+//       }
+//   });
