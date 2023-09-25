@@ -702,7 +702,7 @@ $("#editarDocIdUser").keyup(function(){
 	var telefono = placaInput.value.trim(); // Eliminar espacios en blanco al principio y al final
 
 	// Expresión regular para validar un número de celular con al menos 10 dígitos
-	var formatoValido = /^\d{10,}$/.test(telefono);
+	var formatoValido = /^(?:\(\d{3}\)\s*|\d{3}-?)\d{3}-?\d{4}$/.test(telefono);
 
       if (formatoValido) {
           mensajeError.style.display = "none";
