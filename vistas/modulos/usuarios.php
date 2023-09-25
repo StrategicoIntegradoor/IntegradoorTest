@@ -848,7 +848,7 @@ MODAL EDITAR USUARIO
               <div class="input-group">
 
                 <span class="input-group-addon"><i class="fa fa-home"></i></span>
-                <input type="text" class="form-control input-lg" name="ciudadActual" id="ciudadActual" placeholder="Ciudad de residencia Actual" readonly>
+                <input type="text" class="form-control input-lg" name="ciudadActual" id="ciudadActual" placeholder="Sin ciudad" readonly>
                 <input type="hidden" id="codigoCiudadActual" name="codigoCiudadActual">
 
               </div>
@@ -912,6 +912,8 @@ MODAL EDITAR USUARIO
                 <span class="input-group-addon"><i class="fa fa-briefcase"></i></span>
 
                 <select class="form-control input-lg" name="idIntermediario2" id="idIntermediario2" required>
+  
+                <option value="">Selecionar Intermediario</option>
 
                 </select>
 
