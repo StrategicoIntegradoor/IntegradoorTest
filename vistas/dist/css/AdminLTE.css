@@ -3548,6 +3548,20 @@ table.text-center th {
   color: #666;
   margin-bottom: -120px; /* Ajusta este valor según tu preferencia */
 }
+
+/* Estilos para pantalla pequeña (móvil) */
+@media (max-width: 767px) {
+  .guest-box {
+    width: 100%;
+    margin: 0 auto;
+    margin-top: 0;
+  }
+
+  .guest-box-body {
+    padding: 10px;
+    margin-bottom: 0;
+  }
+}
 /*
  * Page: 400 and 500 error pages
  * ------------------------------
