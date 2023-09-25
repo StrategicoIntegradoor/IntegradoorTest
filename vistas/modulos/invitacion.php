@@ -58,7 +58,7 @@
 
                 <div class="guest-box">
 
-                    <div id="guest-box-body">
+                    <div id="box-body">
 
                         <!-- FORMULARIO RESUMEN ASEGURADO -->
                         <!-- <form method="Post" id="formResumAseg"> -->
