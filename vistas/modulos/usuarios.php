@@ -893,7 +893,7 @@ MODAL EDITAR USUARIO
               <div class="input-group">
 
                 <span class="input-group-addon"><i class="fa fa-user"></i></span>
-                <input type="text" class="form-control input-lg" name="editarCargo" id="editarCargo" placeholder="Ingresar cargo">
+                <input type="text" class="form-control input-lg" name="editarCargo" id="editarCargo" placeholder="Editar cargo">
 
               </div>
 
@@ -911,7 +911,7 @@ MODAL EDITAR USUARIO
 
                 <span class="input-group-addon"><i class="fa fa-briefcase"></i></span>
 
-                <select class="form-control input-lg" name="idIntermediario2" id="idIntermediario2" required>
+                <select class="form-control input-lg" name="idIntermediario2" id="idIntermediario2" placeholder="Editar Intermediario" required>
   
                 <option value="">Selecionar Intermediario</option>
 
@@ -929,7 +929,7 @@ MODAL EDITAR USUARIO
 
                 <span class="input-group-addon"><i class="fa fa-users"></i></span>
 
-                <select class="form-control input-lg" name="editarRol" id="editarRol" required>
+                <select class="form-control input-lg" name="editarRol" id="editarRol" placeholder="Editar Rol" required>
 
                   <option value="">Selecionar rol</option>
 
