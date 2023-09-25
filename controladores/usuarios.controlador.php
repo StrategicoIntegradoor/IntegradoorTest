@@ -578,8 +578,8 @@ class ControladorUsuarios{
 
 				// // }
 				$intermediario = $_POST["idIntermediario2"];
-				// var_dump($intermediario);
-				// die();
+				var_dump($intermediario);
+				die();
 				
 				if($_POST["ciudad2"] == NULL){
 				$datos = array("id" => $_POST["idUsuEdit"],
