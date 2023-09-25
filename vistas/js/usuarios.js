@@ -706,7 +706,7 @@ $("#editarDocIdUser").keyup(function(){
 
       if (formatoValido) {
           mensajeError.style.display = "none";
-          placaInput.setCustomValidity("");
+          placaInput.setCustomValidity(" ");
       } else {
           mensajeError.style.display = "block";
           mensajeError.textContent = "Numero de celular incompleto, verificar información";
