@@ -695,7 +695,7 @@ $("#editarDocIdUser").keyup(function(){
 
   // Excepción de Celular
   var placaInput = document.getElementById("AgregMovil");
-  var mensajeError = document.getElementById("mensajeErrorPlaca");
+  var mensajeError = document.getElementById("mensajeErrorCelular");
 
   	placaInput.addEventListener("blur", function () {
       
