@@ -577,8 +577,9 @@ class ControladorUsuarios{
 				// 	$encriptar = $_POST["passwordActual"];
 
 				// // }
-				// var_dump($_POST["ciudad2"]);
-				// die();
+				$intermediario = $_POST["idIntermediario2"];
+				var_dump($intermediario);
+				die();
 				
 				if($_POST["ciudad2"] == NULL){
 				$datos = array("id" => $_POST["idUsuEdit"],
