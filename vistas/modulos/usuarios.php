@@ -397,8 +397,8 @@ MODAL AGREGAR USUARIO
 
             <div class="col-xs-12 col-sm-6 col-md-6 form-group">
               <div class="input-group">
-                <span class="input-group-addon"><i class="fa fa-phone"></i></span>
-                <input type="text" class="form-control input-lg" name="nuevoTelefono" id="AgregMovil" placeholder="Celular*" data-inputmask="'mask':'(999) 999-9999'" data-mask required>
+                <span class="input-group-addon"><i class="fa fa-mobile" aria-hidden="true"></i></span>
+                <input type="text" class="form-control input-lg" name="nuevoTelefono" id="AgregMovil" placeholder="Celular*" data-inputmask="'mask':'(999) 999-9999'" data-mask minlength="10" required>
               </div>
             </div>
 
@@ -426,7 +426,7 @@ MODAL AGREGAR USUARIO
 
               <div class="input-group">
 
-                <span class="input-group-addon"><i class="fa fa-briefcase"></i></span>
+                <span class="input-group-addon"></span>
 
                 <input type="text" class="form-control input-lg" name="nuevoCargo" placeholder="Cargo">
 
@@ -444,7 +444,7 @@ MODAL AGREGAR USUARIO
 
               <div class="input-group">
 
-                <span class="input-group-addon"><i class="fa fa-users"></i></span>
+                <span class="input-group-addon"><i class="fa fa-briefcase"></i></span>
                 <select class="form-control input-lg" name="idIntermediario" id="idIntermediario" required>
 
                 </select>
@@ -892,7 +892,7 @@ MODAL EDITAR USUARIO
               <div class="input-group">
 
                 <span class="input-group-addon"><i class="fa fa-user"></i></span>
-                <input type="text" class="form-control input-lg" name="editarCargo" id="editarCargo" placeholder="Ingresar cargo" required>
+                <input type="text" class="form-control input-lg" name="editarCargo" id="editarCargo" placeholder="Ingresar cargo">
 
               </div>
 
@@ -908,9 +908,9 @@ MODAL EDITAR USUARIO
 
               <div class="input-group">
 
-                <span class="input-group-addon"><i class="fa fa-users"></i></span>
+                <span class="input-group-addon"><i class="fa fa-briefcase"></i></span>
 
-                <select class="form-control input-lg" name="Intermediario2" id="idIntermediario2">
+                <select class="form-control input-lg" name="Intermediario2" id="idIntermediario2" required>
 
                 </select>
 
@@ -930,8 +930,8 @@ MODAL EDITAR USUARIO
 
                   <option value="">Selecionar rol</option>
 
-                  <option value="1">Administrador</option>
-
+                  <option value="1">AsesorSgaFreelance</option>
+                  <option value="2">Asesor</option>
                   <option value="2">Asesor</option>
 
                 </select>
