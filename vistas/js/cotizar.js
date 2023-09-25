@@ -91,7 +91,7 @@ $(document).ready(function () {
       // Actualizar el valor del campo de entrada con el valor filtrado
       placaInput.value = valorFiltrado;
   });
-  
+
   // Si conoce la Placa muestra el campo Placa y oculta el campo CeroKM.
   $("#txtConocesLaPlacaSi").click(function () {
     document.getElementById("contenPlaca").style.display = "block";
@@ -149,6 +149,26 @@ function convertirNumero() {
   // Consulta informacion del usuario en la bdd
   $("#numDocumentoID").change(function () {
     consultarAsegurado();
+  });
+
+  // Obtener los campos de entrada por su ID
+  var nombreInput = document.getElementById("nuevoNombre");
+  var apellidoInput = document.getElementById("nuevoApellido");
+
+  // Función para filtrar caracteres especiales
+  function filtrarCaracteresEspeciales(input) {
+      var valor = input.value;
+      var valorFiltrado = valor.replace(/[^a-zA-Z ]/g, ""); // Permitir letras y espacios
+      input.value = valorFiltrado;
+  }
+
+  // Agregar eventos de escucha para el evento "input" en ambos campos
+  nombreInput.addEventListener("input", function () {
+      filtrarCaracteresEspeciales(nombreInput);
+  });
+
+  apellidoInput.addEventListener("input", function () {
+      filtrarCaracteresEspeciales(apellidoInput);
   });
 
   // Carga la fecha de Nacimiento
