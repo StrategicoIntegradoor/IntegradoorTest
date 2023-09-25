@@ -328,14 +328,12 @@
 
                 <!-- <form method="post"> -->
                     
-                    <div class="row">                                                                                        
-                        <div class="form-group col-md-12 col-sm-12 col-xs-12">                                                                                        
-                            <hr>
-                            <label for="" class="login-box-msg">Los campos con <strong class="text-danger">*</strong> son obligatorios</label><br><br>
-                            <div class="form-group col-md-12 col-sm-12 col-xs-12">
-                                <label for="">Clave de registro <strong class="text-danger">*</strong> </label>
-                                <input class="form-control" type="text" name="clave_registro" id="clave_registro" placeholder="Clave de registro" autofocus>
-                            </div>
+                    <div class="row">
+                        <hr>
+                        <label for="" class="login-box-msg">Los campos con <strong class="text-danger">*</strong> son obligatorios</label><br><br>
+                        <div class="form-group col-md-12 col-sm-12 col-xs-12">
+                            <label for="">Clave de registro <strong class="text-danger">*</strong> </label>
+                            <input class="form-control" type="text" name="clave_registro" id="clave_registro" placeholder="Clave de registro" autofocus>
                         </div>
                     </div>
 
