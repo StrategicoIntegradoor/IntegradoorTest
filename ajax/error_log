@@ -7220,3 +7220,4 @@ Stack trace:
 [25-Sep-2023 20:01:39 UTC] PHP Notice:  Undefined index: saludo in /home3/grupoasi/public_html/integradoor.com/Test/ajax/cargarRoll.php on line 4
 [25-Sep-2023 20:02:26 UTC] PHP Notice:  Undefined index: saludo in /home3/grupoasi/public_html/integradoor.com/Test/ajax/cargarRoll.php on line 4
 [25-Sep-2023 20:08:46 UTC] PHP Notice:  Undefined index: saludo in /home3/grupoasi/public_html/integradoor.com/Test/ajax/cargarRoll.php on line 4
+[25-Sep-2023 20:12:57 UTC] PHP Notice:  Undefined index: saludo in /home3/grupoasi/public_html/integradoor.com/Test/ajax/cargarRoll.php on line 4
