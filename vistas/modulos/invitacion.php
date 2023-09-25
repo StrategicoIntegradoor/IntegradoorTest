@@ -56,7 +56,7 @@
                     </div>
                 </div>
 
-                <div class="box">
+                <div class="guest-box">
 
                     <div id="guest-box-body">
 
