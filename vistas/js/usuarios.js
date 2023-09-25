@@ -325,8 +325,7 @@ $(".tablas").on("click", ".btnEditarUsuario", function(){
 		processData: false,
 		dataType: "json",
 		success: function(respuesta){
-			$intermediario = respuesta["id_Intermediario"];
-			console.log ($intermediario);
+
 			$("#idUsuEdit").val(respuesta["id_usuario"]);			
 			$("#editarNombre").val(respuesta["usu_nombre"]);
 			$("#editarApellido").val(respuesta["usu_apellido"]);
