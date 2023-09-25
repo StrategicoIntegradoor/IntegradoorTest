@@ -17,7 +17,7 @@ if(!$enlace ){
 
 }
 
-$query = "SELECT * FROM roles";
+$query = "SELECT * FROM roles WHERE id_rol IN (19, 11, 12)";
 $ejecucion = mysqli_query($enlace,$query);
 $opcion = "";
 while($fila = $ejecucion->fetch_assoc()){
