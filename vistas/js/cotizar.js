@@ -152,8 +152,8 @@ function convertirNumero() {
   });
 
   // Obtener los campos de entrada por su ID
-  var nombreInput = document.getElementById("nuevoNombre");
-  var apellidoInput = document.getElementById("nuevoApellido");
+  var nombreInput = document.getElementById("txtNombres");
+  var apellidoInput = document.getElementById("txtApellidos");
 
   // Función para filtrar caracteres especiales
   function filtrarCaracteresEspeciales(input) {
