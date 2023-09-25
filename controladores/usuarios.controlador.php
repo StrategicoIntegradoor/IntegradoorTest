@@ -438,7 +438,7 @@ class ControladorUsuarios{
 		$tabla3= "intermediario";
 
 		$respuesta = ModeloUsuarios::MdlMostrarUsuarios($tabla, $tabla2, $tabla3, $item, $valor);
-
+		echo $respuesta;
 		return $respuesta;
 	}
 
@@ -577,9 +577,9 @@ class ControladorUsuarios{
 				// 	$encriptar = $_POST["passwordActual"];
 
 				// // }
-				$intermediario = $_POST["idIntermediario2"];
-				var_dump($intermediario);
-				die();
+				// $intermediario = $_POST["idIntermediario2"];
+				// var_dump($intermediario);
+				// die();
 				
 				if($_POST["ciudad2"] == NULL){
 				$datos = array("id" => $_POST["idUsuEdit"],
