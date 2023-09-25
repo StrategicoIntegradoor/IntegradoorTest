@@ -326,7 +326,7 @@
 
             <!-- <div class="login-box-body"> -->
 
-                <!-- <form method="post"> -->
+                <form method="post">
                     
                     <div class="row">
                         <hr>
@@ -528,7 +528,7 @@
                     <div class="text-center">
                         <button type="button" class="btn btn-primary btn-sm btn-rounded" style="width: 250px; height: 35px; font-size: 15px;" onclick="registerGuest()">Enviar</button>
                     </div>
-                <!-- </form>    -->
+                </form>   
             <!-- </div>                                                                                                                                                                                                                                             -->
         </div>
     </section>
