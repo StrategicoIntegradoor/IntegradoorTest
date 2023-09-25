@@ -77,6 +77,21 @@ $(document).ready(function () {
       }
   });
 
+  // Obtener el campo de entrada por su ID
+  var placaInput = document.getElementById("placaVeh");
+
+  // Agregar un evento de escucha para el evento "input"
+  placaInput.addEventListener("input", function () {
+      // Obtener el valor actual del campo de entrada
+      var valor = placaInput.value;
+
+      // Filtrar caracteres especiales y dejar solo letras y números
+      var valorFiltrado = valor.replace(/[^a-zA-Z0-9]/g, "");
+
+      // Actualizar el valor del campo de entrada con el valor filtrado
+      placaInput.value = valorFiltrado;
+  });
+  
   // Si conoce la Placa muestra el campo Placa y oculta el campo CeroKM.
   $("#txtConocesLaPlacaSi").click(function () {
     document.getElementById("contenPlaca").style.display = "block";
