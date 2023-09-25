@@ -699,6 +699,8 @@ $("#editarDocIdUser").keyup(function(){
 
   	placaInput.addEventListener("blur", function () {
       
+	var telefono = placaInput.value.trim(); // Eliminar espacios en blanco al principio y al final
+
 	// Expresión regular para validar un número de celular con al menos 10 dígitos
 	var formatoValido = /^\d{10,}$/.test(telefono);
 
