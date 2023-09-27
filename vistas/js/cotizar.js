@@ -1267,13 +1267,13 @@ document.querySelector('#btnReCotizarFallidas').addEventListener('click', () => 
   cotizarOfertas()
 })
 
-var codigoFasecolda1 = document.getElementById('txtFasecolda')
-console.log(codigoFasecolda1)
+
 
 // Captura los datos suministrados por el cliente y los envia al API para recibir la cotizacion.
 function cotizarOfertas() {
 
-
+  var codigoFasecolda1 = document.getElementById('txtFasecolda')
+  console.log(codigoFasecolda1)
   var placa = document.getElementById("placaVeh").value;
   var esCeroKmSi = document.getElementById("txtEsCeroKmSi").checked;
   var esCeroKm = esCeroKmSi.toString();
