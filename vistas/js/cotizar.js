@@ -1274,13 +1274,14 @@ function cotizarOfertas() {
 
   var codigoFasecolda1 = document.getElementById('txtFasecolda')
   var contenido = codigoFasecolda1.value;
-  
+
   // Obtener el cuarto y quinto dígito de la variable contenido
   var cuartoDigito = contenido.charAt(3);
   var quintoDigito = contenido.charAt(4);
 
   // Concatenar los dígitos en un solo número
   var condicional = cuartoDigito + quintoDigito;
+  console.log(condicional)
 
   var placa = document.getElementById("placaVeh").value;
   var esCeroKmSi = document.getElementById("txtEsCeroKmSi").checked;
@@ -1765,28 +1766,34 @@ function cotizarOfertas() {
             // );
 
             /* Liberty */
-            cont.push(
-              fetch("https://grupoasistencia.com/motor_webservice_tst/Liberty", requestOptions)
-                .then((res) => {
-                  if (!res.ok) throw Error(res.statusText);
-                  return res.json();
-                })
-                .then((ofertas) => {
-                  if (typeof ofertas[0].Resultado !== 'undefined') {
-                    agregarAseguradoraFallida('Liberty')
-                    ofertas[0].Mensajes.forEach(mensaje => {
-                      mostrarAlertarCotizacionFallida('Liberty', mensaje)
-                    })
-                  } else {
-                    console.log(ofertas)
-                    validarOfertas(ofertas);
-                    mostrarAlertaCotizacionExitosa('Liberty')
-                  }
-                })
-                .catch((err) => {
-                  console.error(err);
-                })
-            );
+            var clasesPermitidas = [4, 10, 11, 12, 13, 14, 22];
+            if (clasesPermitidas.includes(condicional)) {
+              console.log("condicion valida")
+            // Ejecutar la petición HTTP
+            fetch("https://grupoasistencia.com/motor_webservice_tst/Liberty", requestOptions)
+              .then((res) => {
+                if (!res.ok) throw Error(res.statusText);
+                return res.json();
+              })
+              .then((ofertas) => {
+                if (typeof ofertas[0].Resultado !== 'undefined') {
+                  agregarAseguradoraFallida('Liberty')
+                  ofertas[0].Mensajes.forEach(mensaje => {
+                    mostrarAlertarCotizacionFallida('Liberty', mensaje)
+                  })
+                } else {
+                  console.log(ofertas)
+                  validarOfertas(ofertas);
+                  mostrarAlertaCotizacionExitosa('Liberty')
+                }
+              })
+              .catch((err) => {
+                console.error(err);
+              });
+          } else {
+            // Devolver un mensaje alusivo
+            console.log('El número no está permitido');
+          }
 
             /* Allianz */
             // cont.push(
