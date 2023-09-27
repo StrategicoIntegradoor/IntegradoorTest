@@ -1274,7 +1274,14 @@ function cotizarOfertas() {
 
   var codigoFasecolda1 = document.getElementById('txtFasecolda')
   var contenido = codigoFasecolda1.value;
-  console.log(contenido)
+  
+  // Obtener el cuarto y quinto dígito de la variable contenido
+  var cuartoDigito = contenido.charAt(3);
+  var quintoDigito = contenido.charAt(4);
+
+  // Concatenar los dígitos en un solo número
+  var condicional = cuartoDigito + quintoDigito;
+
   var placa = document.getElementById("placaVeh").value;
   var esCeroKmSi = document.getElementById("txtEsCeroKmSi").checked;
   var esCeroKm = esCeroKmSi.toString();
