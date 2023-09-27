@@ -1286,7 +1286,7 @@ function cotizarOfertas() {
     // Concatenar los dígitos en un solo número
     condicional = cuartoDigito + quintoDigito;
   }
-  console.log(condicional)
+
 
   var placa = document.getElementById("placaVeh").value;
   var esCeroKmSi = document.getElementById("txtEsCeroKmSi").checked;
@@ -1771,6 +1771,7 @@ function cotizarOfertas() {
             // );
 
             /* Liberty */
+            console.log(condicional)
             var clasesPermitidas = [4, 10, 11, 12, 13, 14, 22];
             if (clasesPermitidas.includes(condicional)) {
               console.log("condicion valida")
