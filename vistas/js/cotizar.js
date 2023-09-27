@@ -1267,6 +1267,9 @@ document.querySelector('#btnReCotizarFallidas').addEventListener('click', () => 
   cotizarOfertas()
 })
 
+var codigoFasecolda1 = document.getElementById('txtFasecolda')
+console.log(codigoFasecolda1)
+
 // Captura los datos suministrados por el cliente y los envia al API para recibir la cotizacion.
 function cotizarOfertas() {
 
@@ -1495,9 +1498,7 @@ function cotizarOfertas() {
               document.querySelector('.fallidas').innerHTML += `<p><i class="fa fa-times" aria-hidden="true" style="color: red; margin-right: 10px;"></i><b>${aseguradora}:</b> ${mensaje}</p>`
             }
             
-            console.log(Fasecolda)
-            console.log(fasecoldaVeh)
-            
+
             /* Solidaria */
             // cont.push(
             //   fetch(
