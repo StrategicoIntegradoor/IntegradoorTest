@@ -1279,8 +1279,13 @@ function cotizarOfertas() {
   var cuartoDigito = contenido.charAt(3);
   var quintoDigito = contenido.charAt(4);
 
-  // Concatenar los dígitos en un solo número
-  var condicional = cuartoDigito + quintoDigito;
+  // Verificar si el cuarto dígito es igual a 0 y eliminarlo si es así
+  if (cuartoDigito === '0') {
+    condicional = quintoDigito;
+  } else {
+    // Concatenar los dígitos en un solo número
+    condicional = cuartoDigito + quintoDigito;
+  }
   console.log(condicional)
 
   var placa = document.getElementById("placaVeh").value;
