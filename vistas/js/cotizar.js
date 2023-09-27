@@ -1494,8 +1494,10 @@ function cotizarOfertas() {
             const mostrarAlertarCotizacionFallida = (aseguradora, mensaje) => {
               document.querySelector('.fallidas').innerHTML += `<p><i class="fa fa-times" aria-hidden="true" style="color: red; margin-right: 10px;"></i><b>${aseguradora}:</b> ${mensaje}</p>`
             }
-
-
+            
+            console.log(Fasecolda)
+            console.log(fasecoldaVeh)
+            
             /* Solidaria */
             // cont.push(
             //   fetch(
