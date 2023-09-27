@@ -58,24 +58,24 @@ $(document).ready(function () {
   });
 
   // Excepción de Motos
-  var placaInput = document.getElementById("placaVeh");
-  var mensajeError = document.getElementById("mensajeErrorPlaca");
+  // var placaInput = document.getElementById("placaVeh");
+  // var mensajeError = document.getElementById("mensajeErrorPlaca");
 
-  placaInput.addEventListener("blur", function () {
-      var placa = placaInput.value.trim(); // Eliminar espacios en blanco al principio y al final
+  // placaInput.addEventListener("blur", function () {
+  //     var placa = placaInput.value.trim(); // Eliminar espacios en blanco al principio y al final
       
-      // Usar una expresión regular para validar el formato AAA111
-      var formatoValido = /^[A-Z]{3}\d{3}$/.test(placa);
+  //     // Usar una expresión regular para validar el formato AAA111
+  //     var formatoValido = /^[A-Z]{3}\d{3}$/.test(placa);
       
-      if (formatoValido) {
-          mensajeError.style.display = "none";
-          placaInput.setCustomValidity("");
-      } else {
-          mensajeError.style.display = "block";
-          mensajeError.textContent = "Formato de placa incorrecto, verificar información";
-          placaInput.setCustomValidity("Formato de placa incorrecto, verificar información");
-      }
-  });
+  //     if (formatoValido) {
+  //         mensajeError.style.display = "none";
+  //         placaInput.setCustomValidity("");
+  //     } else {
+  //         mensajeError.style.display = "block";
+  //         mensajeError.textContent = "Formato de placa incorrecto, verificar información";
+  //         placaInput.setCustomValidity("Formato de placa incorrecto, verificar información");
+  //     }
+  // });
 
   // Obtener el campo de entrada por su ID
   var placaInput = document.getElementById("placaVeh");
@@ -1494,8 +1494,10 @@ function cotizarOfertas() {
             const mostrarAlertarCotizacionFallida = (aseguradora, mensaje) => {
               document.querySelector('.fallidas').innerHTML += `<p><i class="fa fa-times" aria-hidden="true" style="color: red; margin-right: 10px;"></i><b>${aseguradora}:</b> ${mensaje}</p>`
             }
-
-
+            
+            console.log(Fasecolda)
+            console.log(fasecoldaVeh)
+            
             /* Solidaria */
             // cont.push(
             //   fetch(
