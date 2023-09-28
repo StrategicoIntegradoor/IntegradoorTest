@@ -1774,7 +1774,6 @@ function cotizarOfertas() {
             console.log(condicional)
             var clasesPermitidas = [4, 10, 11, 12, 13, 14, 22];
             if (condicional== 4 || condicional== 10 || condicional== 11 || condicional== 12 || condicional== 13 || condicional== 14 || condicional== 22) {
-              console.log("hasta aqui llegué")
               let planesLiberty = ["Full", "Integral"];
               let body = JSON.parse(requestOptions.body)
 
@@ -1782,7 +1781,7 @@ function cotizarOfertas() {
                 body.plan = plan
                 requestOptions.body = JSON.stringify(body)
               
-                fetch("https://grupoasistencia.com/motor_webservice_tst/Liberty", requestOptionsPlan)
+                fetch("https://grupoasistencia.com/motor_webservice_tst/Liberty", requestOptions)
                   .then((res) => {
                     if (!res.ok) throw Error(res.statusText);
                     return res.json();
