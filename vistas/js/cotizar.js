@@ -1773,7 +1773,7 @@ function cotizarOfertas() {
             /* Liberty */
             console.log(condicional)
             var clasesPermitidas = [4, 10, 11, 12, 13, 14, 22];
-            if (clasesPermitidas.includes(condicional)) {
+            if (condicional== 4 || condicional== 10 || condicional== 11 || condicional== 12 || condicional== 13 || condicional== 14 || condicional== 22) {
               console.log("condicion valida")
             // Ejecutar la petición HTTP
             fetch("https://grupoasistencia.com/motor_webservice_tst/Liberty", requestOptions)
