@@ -1647,10 +1647,11 @@ while ($rowRespuesta23 = mysqli_fetch_assoc($respuestaquery23)) {
 
 	$nombreAseguradora = nombreAseguradora($rowRespuesta23['Aseguradora']);
 	$nombreProducto = productoAseguradora($rowRespuesta23['Aseguradora'], $rowRespuesta23['Producto']);
-	$ampara = $rowRespuesta23['ResponsabilidadCivilGeneralFamiliar'];
 	$queryConsultaAsistencia17 = "SELECT * FROM asistencias WHERE `aseguradora` LIKE '$nombreAseguradora' AND `producto` LIKE '$nombreProducto'";
 	$respuestaqueryAsistencia17 =  $conexion->query($queryConsultaAsistencia17);
 	$rowRespuestaAsistencia17 = mysqli_fetch_assoc($respuestaqueryAsistencia17);
+	$ampara = $rowRespuestaAsistencia17['ResponsabilidadCivilGeneralFamiliar'];
+
 
 	if ($cont21 % 2 == 0) {
 		// if ($ampara == "Si ampara") {
