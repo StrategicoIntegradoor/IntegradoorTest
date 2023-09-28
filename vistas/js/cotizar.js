@@ -1774,26 +1774,38 @@ function cotizarOfertas() {
             console.log(condicional)
             var clasesPermitidas = [4, 10, 11, 12, 13, 14, 22];
             if (condicional== 4 || condicional== 10 || condicional== 11 || condicional== 12 || condicional== 13 || condicional== 14 || condicional== 22) {
-            fetch("https://grupoasistencia.com/motor_webservice_tst/Liberty", requestOptions)
-              .then((res) => {
-                if (!res.ok) throw Error(res.statusText);
-                return res.json();
-              })
-              .then((ofertas) => {
-                if (typeof ofertas[0].Resultado !== 'undefined') {
-                  agregarAseguradoraFallida('Liberty')
-                  ofertas[0].Mensajes.forEach(mensaje => {
-                    mostrarAlertarCotizacionFallida('Liberty', mensaje)
+              
+              let planesLiberty = ["Full", "Integral"];
+
+              planesLiberty.forEach(plan => {
+                // Clonar requestOptionsLiberty para tener una copia independiente
+                let requestOptionsPlan = JSON.parse(JSON.stringify(requestOptionsLiberty));
+                
+                // Configurar el cuerpo de la solicitud para el plan específico
+                requestOptionsPlan.body = JSON.stringify({ plan: plan });
+              
+                fetch("https://grupoasistencia.com/motor_webservice_tst/Liberty", requestOptionsPlan)
+                  .then((res) => {
+                    if (!res.ok) throw Error(res.statusText);
+                    return res.json();
                   })
-                } else {
-                  console.log(ofertas)
-                  validarOfertas(ofertas);
-                  mostrarAlertaCotizacionExitosa('Liberty')
-                }
-              })
-              .catch((err) => {
-                console.error(err);
+                  .then((ofertas) => {
+                    if (typeof ofertas[0].Resultado !== 'undefined') {
+                      agregarAseguradoraFallida(`Liberty ${plan}`);
+                      ofertas[0].Mensajes.forEach(mensaje => {
+                        mostrarAlertarCotizacionFallida(`Liberty ${plan}`, mensaje);
+                      });
+                    } else {
+                      console.log(ofertas);
+                      validarOfertas(ofertas);
+                      mostrarAlertaCotizacionExitosa(`Liberty ${plan}`);
+                    }
+                  })
+                  .catch((err) => {
+                    console.error(err);
+                  });
               });
+              
           } else {
 
             fetch("https://grupoasistencia.com/motor_webservice_tst/Liberty", requestOptions)
@@ -1816,7 +1828,7 @@ function cotizarOfertas() {
             .catch((err) => {
               console.error(err);
             });
-            
+
           }
 
             /* Allianz */
