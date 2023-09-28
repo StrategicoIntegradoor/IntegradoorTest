@@ -1776,13 +1776,11 @@ function cotizarOfertas() {
             if (condicional== 4 || condicional== 10 || condicional== 11 || condicional== 12 || condicional== 13 || condicional== 14 || condicional== 22) {
               
               let planesLiberty = ["Full", "Integral"];
+              let body = JSON.parse(requestOptions.body)
 
               planesLiberty.forEach(plan => {
-                // Clonar requestOptionsLiberty para tener una copia independiente
-                let requestOptionsPlan = JSON.parse(JSON.stringify(requestOptionsLiberty));
-                
-                // Configurar el cuerpo de la solicitud para el plan específico
-                requestOptionsPlan.body = JSON.stringify({ plan: plan });
+                body.plan = plan
+                requestOptions.body = JSON.stringify(body)
               
                 fetch("https://grupoasistencia.com/motor_webservice_tst/Liberty", requestOptionsPlan)
                   .then((res) => {
