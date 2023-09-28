@@ -1774,8 +1774,6 @@ function cotizarOfertas() {
             console.log(condicional)
             var clasesPermitidas = [4, 10, 11, 12, 13, 14, 22];
             if (condicional== 4 || condicional== 10 || condicional== 11 || condicional== 12 || condicional== 13 || condicional== 14 || condicional== 22) {
-              console.log("condicion valida")
-            // Ejecutar la petición HTTP
             fetch("https://grupoasistencia.com/motor_webservice_tst/Liberty", requestOptions)
               .then((res) => {
                 if (!res.ok) throw Error(res.statusText);
@@ -1797,8 +1795,28 @@ function cotizarOfertas() {
                 console.error(err);
               });
           } else {
-            // Devolver un mensaje alusivo
-            console.log('El número no está permitido');
+
+            fetch("https://grupoasistencia.com/motor_webservice_tst/Liberty", requestOptions)
+            .then((res) => {
+              if (!res.ok) throw Error(res.statusText);
+              return res.json();
+            })
+            .then((ofertas) => {
+              if (typeof ofertas[0].Resultado !== 'undefined') {
+                agregarAseguradoraFallida('Liberty')
+                ofertas[0].Mensajes.forEach(mensaje => {
+                  mostrarAlertarCotizacionFallida('Liberty', mensaje)
+                })
+              } else {
+                console.log(ofertas)
+                validarOfertas(ofertas);
+                mostrarAlertaCotizacionExitosa('Liberty')
+              }
+            })
+            .catch((err) => {
+              console.error(err);
+            });
+            
           }
 
             /* Allianz */
