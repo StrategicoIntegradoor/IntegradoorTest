@@ -1771,8 +1771,6 @@ function cotizarOfertas() {
             // );
 
             /* Liberty */
-            console.log(condicional)
-            var clasesPermitidas = [4, 10, 11, 12, 13, 14, 22];
             if (condicional== 4 || condicional== 10 || condicional== 11 || condicional== 12 || condicional== 13 || condicional== 14 || condicional== 22) {
               let planesLiberty = ["Full"];
               let body = JSON.parse(requestOptions.body)
@@ -1784,7 +1782,6 @@ function cotizarOfertas() {
                 fetch("https://grupoasistencia.com/motor_webservice_tst/Liberty", requestOptions)
                   .then((res) => {
                     if (!res.ok) throw Error(res.statusText);
-                    console.log(res.json())
                     return res.json();
                   })
                   .then((ofertas) => {
@@ -1794,7 +1791,6 @@ function cotizarOfertas() {
                         mostrarAlertarCotizacionFallida(`Liberty ${plan}`, mensaje);
                       });
                     } else {
-                      console.log(ofertas);
                       validarOfertas(ofertas);
                       mostrarAlertaCotizacionExitosa(`Liberty ${plan}`);
                     }
