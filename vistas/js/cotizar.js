@@ -1774,7 +1774,7 @@ function cotizarOfertas() {
             console.log(condicional)
             var clasesPermitidas = [4, 10, 11, 12, 13, 14, 22];
             if (condicional== 4 || condicional== 10 || condicional== 11 || condicional== 12 || condicional== 13 || condicional== 14 || condicional== 22) {
-              let planesLiberty = ["Full", "Integral"];
+              let planesLiberty = ["Full"];
               let body = JSON.parse(requestOptions.body)
 
               planesLiberty.forEach(plan => {
