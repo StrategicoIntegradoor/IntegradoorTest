@@ -385,12 +385,16 @@ if ($_SESSION["permisos"]["Cotizarlivianos"] != "x") {
                     <select class="form-control" name="linea" id="linea" required></select>
                   </div>
 
-                  <div class="col-xs-12 col-sm-6 col-md-3 form-group">
-                    <div id="referenciados"></div>
+                  <div class="row">
+                    <div class="col-xs-12 col-sm-6 col-md-3 form-group">
+                      <div id="referenciados"></div>
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-3 form-group">
+                      <div id="referenciatres"></div>
+                    </div>
                   </div>
-                  <div class="col-xs-12 col-sm-6 col-md-3 form-group">
-                    <div id="referenciatres"></div>
-                  </div>
+
+
 
                   <div class="col-xs-12 col-sm-6 col-md-3">
                     <div id="loaderVehiculo"></div>
