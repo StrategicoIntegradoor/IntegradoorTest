@@ -1933,9 +1933,12 @@ $html4 .= '</table>';
 //CONSULTA  GASTOS MEDICOS
 //::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
+// Define la variable para el mensaje
+$mensajeVisual = '<font size="7" style="text-align: center; font-family:dejavusanscondensed;">Hasta $2.500.000</font>';
+
 $html4 .= '<table>';
 $html4 .= '<tr>';
-$html4 .= '<td class="fondo puntos" style="width:10%; text-align: center; font-family:dejavusanscondensedb;"><font size="8">Gastos Médicos</font></td>';
+$html4 .= '<td class ="fondo puntos" style="width:10%; text-align: center; font-family:dejavusanscondensedb;"><font size="8">Gastos Médicos</font></td>';
 
 $query28 = "SELECT * FROM ofertas WHERE `id_cotizacion` = $identificador AND `seleccionar` = 'Si'";
 $respuestaquery28 =  $conexion->query($query28);
@@ -1952,23 +1955,27 @@ while ($rowRespuesta28 = mysqli_fetch_assoc($respuestaquery28)) {
     $rowRespuestaAsistencia22 = mysqli_fetch_assoc($respuestaqueryAsistencia22);
 
     if ($cont26 % 2 == 0) {
-        if ($PT == "Deducible: 10% min 1 SMMLV") {
-            $html4 .= '<td class="puntos fondo" style="width:' . $valorTabla . '%; text-align: center;">Hasta $2.500.000</td>';
+        if ($PT == "Deducible: 10% min 1 SMMLV" || $PT == "Deducible: 10% min 1.2 SMMLV") {
+            // Usar el mensaje visual en lugar de $mensajeVisual
+            $html4 .= '<td class="puntos fondo" style="width:' . $valorTabla . '%; text-align: center;">' . $mensajeVisual . '</td>';
         } else {
+            // De lo contrario, mostrar el contenido basado en la consulta
             if ($rowRespuestaAsistencia22['GastosMedicos'] == "Si ampara") {
                 $html4 .= '<td class="puntos fondo" style="width:' . $valorTabla . '%;text-align: center;"><div style="font-size:12pt">&nbsp;</div><img style="width:16px;" src="../../../vistas/img/logos/cheque.png" alt=""></td>';
             } else {
-                $html4 .= '<td class="puntos fondo" style="width:' . $valorTabla . '%;"><center><div style="font-size:14pt">&nbsp;</div><font size="7"style="text-align: center; font-family:dejavusanscondensed;">' . $rowRespuestaAsistencia22['GastosMedicos'] . '</font></center></td>';
+                $html4 .= '<td class="puntos fondo" style="width:' . $valorTabla . '%;">' . $mensajeVisual . '</td>';
             }
         }
     } else {
-        if ($PT == "Deducible: 10% min 1 SMMLV") {
-            $html4 .= '<td class="puntos fondo2" style="width:' . $valorTabla . '%; text-align: center;">Hasta $2.500.000</td>';
+        if ($PT == "Deducible: 10% min 1 SMMLV" || $PT == "Deducible: 10% min 1.2 SMMLV") {
+            // Usar el mensaje visual en lugar de $mensajeVisual
+            $html4 .= '<td class="puntos fondo2" style="width:' . $valorTabla . '%; text-align: center;">' . $mensajeVisual . '</td>';
         } else {
+            // De lo contrario, mostrar el contenido basado en la consulta
             if ($rowRespuestaAsistencia22['GastosMedicos'] == "Si ampara") {
                 $html4 .= '<td class="puntos fondo2" style="width:' . $valorTabla . '%;text-align: center;"><div style="font-size:12pt">&nbsp;</div><img style="width:16px;" src="../../../vistas/img/logos/cheque.png" alt=""></td>';
             } else {
-                $html4 .= '<td class="puntos fondo2" style="width:' . $valorTabla . '%;"><center><div style="font-size:14pt">&nbsp;</div><font size="7"style="text-align: center; font-family:dejavusanscondensed;">' . $rowRespuestaAsistencia22['GastosMedicos'] . '</font></center></td>';
+                $html4 .= '<td class="puntos fondo2" style="width:' . $valorTabla . '%;">' . $mensajeVisual . '</td>';
             }
         }
     }
