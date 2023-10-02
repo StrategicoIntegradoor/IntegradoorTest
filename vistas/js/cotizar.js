@@ -204,10 +204,10 @@ function convertirNumero() {
     }
 
     // Vuelve a unir las palabras en una sola cadena
-    var formattedValue = words.join(" ");
+    var formattedValue1 = words.join(" ");
 
     // Asigna el valor formateado al campo de entrada
-    this.value = formattedValue;
+    this.value = formattedValue1;
   });
     
   // Conviete la letras iniciales del Nombre y el Apellido deL Cliente en Mayusculas
