@@ -138,7 +138,7 @@ $(document).ready(function () {
     $("#numDocumentoID").on('input', function () {
         convertirNumero();
     });   
-});
+  });
 
 function convertirNumero() {
   var numeroInput = document.getElementById("numDocumentoID").value;
@@ -162,6 +162,8 @@ function convertirNumero() {
       input.value = valorFiltrado;
   }
 
+  // MANEJO DE NOMBRES Y APELLIDOS 
+
   // Agregar eventos de escucha para el evento "input" en ambos campos
   nombreInput.addEventListener("input", function () {
       filtrarCaracteresEspeciales(nombreInput);
@@ -174,6 +176,20 @@ function convertirNumero() {
   // Agregar un evento 'blur' para eliminar espacios en blanco al final y al principio
   nombreInput.addEventListener("blur", function () {
     this.value = this.value.trim(); // Elimina espacios en blanco al principio y al final
+
+    // Divide la cadena en palabras
+    var words = cleanedValue.split(" ");
+
+    // Capitaliza la primera letra de cada palabra y convierte el resto en minúsculas
+    for (var i = 0; i < words.length; i++) {
+      words[i] = words[i].charAt(0).toUpperCase() + words[i].slice(1).toLowerCase();
+    }
+
+    // Vuelve a unir las palabras en una sola cadena
+    var formattedValue = words.join(" ");
+
+    // Asigna el valor formateado al campo de entrada
+    this.value = formattedValue;
   });
 
   apellidoInput.addEventListener("blur", function () {
@@ -181,15 +197,15 @@ function convertirNumero() {
   });
     
   // Conviete la letras iniciales del Nombre y el Apellido deL Cliente en Mayusculas
-  $("#txtNombres").keyup(function () {
-    var cliNombres = document.getElementById("txtNombres").value.toLowerCase();
-    $("#txtNombres").val(
-      cliNombres.replace(/^(.)|\s(.)/g, function ($1) {
-        return $1.toUpperCase();
-      })
-    );
-  });
-  
+  // $("#txtNombres").keyup(function () {
+  //   var cliNombres = document.getElementById("txtNombres").value.toLowerCase();
+  //   $("#txtNombres").val(
+  //     cliNombres.replace(/^(.)|\s(.)/g, function ($1) {
+  //       return $1.toUpperCase();
+  //     })
+  //   );
+  // });
+
   $("#txtApellidos").keyup(function () {
     var cliApellido = document
       .getElementById("txtApellidos")
