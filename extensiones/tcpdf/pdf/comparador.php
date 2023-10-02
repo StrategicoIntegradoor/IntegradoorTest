@@ -1214,6 +1214,13 @@ $html4 = '
     background-color:#FFFFFF;
 }
 
+.otro-fondo {
+    background-color: #ffcc00; /* Cambia esto al color que desees */
+    color: #000; /* Cambia esto al color de texto que desees */
+    /* Agrega otros estilos según tus preferencias */
+}
+
+
 </style>
   
 <table style="width: 100%;" class="second2" cellpadding="2"  border="0">';
@@ -1953,22 +1960,24 @@ while ($rowRespuesta28 = mysqli_fetch_assoc($respuestaquery28)) {
 
     if ($cont26 % 2 == 0) {
         if ($PT == "Deducible: 10% min 1.2 SMMLV") {
-			$html4 .= '<td class="puntos fondo" style="width:' . $valorTabla . '%;"><center><div style="font-size:14pt">&nbsp;</div><font size="7"style="text-align: center; font-family:dejavusanscondensed;">' . $respuesta1 . '</font></center></td>';
+			$html4 .= '<td class="puntos fondo" style="width:' . $valorTabla . '%;"><center><div style="font-size:14pt">&nbsp;</div><font size="7" style="text-align: center; font-family:dejavusanscondensed;">' . $respuesta1 . '</font></center></td>';
         } else {
             if ($rowRespuestaAsistencia22['GastosMedicos'] == "Si ampara") {
                 $html4 .= '<td class="puntos fondo" style="width:' . $valorTabla . '%;text-align: center;"><div style="font-size:12pt">&nbsp;</div><img style="width:16px;" src="../../../vistas/img/logos/cheque.png" alt=""></td>';
             } else {
-                $html4 .= '<td class="puntos fondo" style="width:' . $valorTabla . '%;"><center><div style="font-size:14pt">&nbsp;</div><font size="7"style="text-align: center; font-family:dejavusanscondensed;">' . $rowRespuestaAsistencia22['GastosMedicos'] . '</font></center></td>';
+                // Agregar un estilo de fondo diferente aquí si es necesario
+                $html4 .= '<td class="puntos otro-fondo" style="width:' . $valorTabla . '%;"><center><div style="font-size:14pt">&nbsp;</div><font size="7"style="text-align: center; font-family:dejavusanscondensed;">' . $rowRespuestaAsistencia22['GastosMedicos'] . '</font></center></td>';
             }
         }
     } else {
         if ($PT == "Deducible: 10% min 1 SMMLV") {
-			$html4 .= '<td class="puntos fondo" style="width:' . $valorTabla . '%;"><center><div style="font-size:14pt">&nbsp;</div><font size="7"style="text-align: center; font-family:dejavusanscondensed;">' . $respuesta1 . '</font></center></td>';
+			$html4 .= '<td class="puntos fondo" style="width:' . $valorTabla . '%;"><center><div style="font-size:14pt">&nbsp;</div><font size="7" style="text-align: center; font-family:dejavusanscondensed;">' . $respuesta1 . '</font></center></td>';
         } else {
             if ($rowRespuestaAsistencia22['GastosMedicos'] == "Si ampara") {
-                $html4 .= '<td class="puntos fondo" style="width:' . $valorTabla . '%;text-align: center;"><div style="font-size:12pt">&nbsp;</div><img style="width:16px;" src="../../../vistas/img/logos/cheque.png" alt=""></td>';
+                $html4 .= '<td class="puntos otro-fondo" style="width:' . $valorTabla . '%;text-align: center;"><div style="font-size:12pt">&nbsp;</div><img style="width:16px;" src="../../../vistas/img/logos/cheque.png" alt=""></td>';
             } else {
-                $html4 .= '<td class="puntos fondo" style="width:' . $valorTabla . '%;"><center><div style="font-size:14pt">&nbsp;</div><font size="7"style="text-align: center; font-family:dejavusanscondensed;">' . $rowRespuestaAsistencia22['GastosMedicos'] . '</font></center></td>';
+                // Agregar un estilo de fondo diferente aquí si es necesario
+                $html4 .= '<td class="puntos fondo2" style="width:' . $valorTabla . '%;"><center><div style="font-size:14pt">&nbsp;</div><font size="7"style="text-align: center; font-family:dejavusanscondensed;">' . $rowRespuestaAsistencia22['GastosMedicos'] . '</font></center></td>';
             }
         }
     }
@@ -1978,6 +1987,7 @@ while ($rowRespuesta28 = mysqli_fetch_assoc($respuestaquery28)) {
 
 $html4 .= '</tr>';
 $html4 .= '</table>';
+
 
 
 //::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
