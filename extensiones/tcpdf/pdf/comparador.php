@@ -1976,7 +1976,7 @@ while ($rowRespuesta28 = mysqli_fetch_assoc($respuestaquery28)) {
         }
     } else {
         if ($PT == "Deducible: 10% min 1 SMMLV" || "Deducible: 10% min 1 SMMLV") {
-			var_dump("Primer condicion else");
+			var_dump($PT);
 			die();
 			$html4 .= '<td class="puntos fondo" style="width:' . $valorTabla . '%;"><center><div style="font-size:14pt">&nbsp;</div><font size="7"style="text-align: center; font-family:dejavusanscondensed;">' . $respuesta1 . '</font></center></td>';
         } else {
