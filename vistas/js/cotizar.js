@@ -171,6 +171,36 @@ function convertirNumero() {
       filtrarCaracteresEspeciales(apellidoInput);
   });
 
+  // Agregar un evento 'blur' para eliminar espacios en blanco al final y al principio
+  nombreInput.addEventListener("blur", function () {
+    this.value = this.value.trim(); // Elimina espacios en blanco al principio y al final
+  });
+
+  apellidoInput.addEventListener("blur", function () {
+    this.value = this.value.trim(); // Elimina espacios en blanco al principio y al final
+  });
+    
+  // Conviete la letras iniciales del Nombre y el Apellido deL Cliente en Mayusculas
+  $("#txtNombres").keyup(function () {
+    var cliNombres = document.getElementById("txtNombres").value.toLowerCase();
+    $("#txtNombres").val(
+      cliNombres.replace(/^(.)|\s(.)/g, function ($1) {
+        return $1.toUpperCase();
+      })
+    );
+  });
+  
+  $("#txtApellidos").keyup(function () {
+    var cliApellido = document
+      .getElementById("txtApellidos")
+      .value.toLowerCase();
+    $("#txtApellidos").val(
+      cliApellido.replace(/^(.)|\s(.)/g, function ($1) {
+        return $1.toUpperCase();
+      })
+    );
+  });
+
   // Carga la fecha de Nacimiento
   $("#dianacimiento, #mesnacimiento, #anionacimiento").select2({
     theme: "bootstrap fecnacimiento",
@@ -183,35 +213,6 @@ function convertirNumero() {
     theme: "bootstrap edad",
     language: "es",
     width: "100%",
-  });
-
-  // Conviete la letras iniciales del Nombre y el Apellido deL Cliente en Mayusculas
-  $("#txtNombres").keyup(function () {
-    var cliNombres = document.getElementById("txtNombres").value.toLowerCase();
-    $("#txtNombres").val(
-      cliNombres.replace(/^(.)|\s(.)/g, function ($1) {
-        return $1.toUpperCase();
-      })
-    );
-  });
-  $("#txtApellidos").keyup(function () {
-    var cliApellido = document
-      .getElementById("txtApellidos")
-      .value.toLowerCase();
-    $("#txtApellidos").val(
-      cliApellido.replace(/^(.)|\s(.)/g, function ($1) {
-        return $1.toUpperCase();
-      })
-    );
-  });
-
-  // Agregar un evento 'blur' para eliminar espacios en blanco al final y al principio
-  nombreInput.addEventListener("blur", function () {
-    this.value = this.value.trim(); // Elimina espacios en blanco al principio y al final
-  });
-
-  apellidoInput.addEventListener("blur", function () {
-    this.value = this.value.trim(); // Elimina espacios en blanco al principio y al final
   });
 
   // Carga los Departamentos disponibles
