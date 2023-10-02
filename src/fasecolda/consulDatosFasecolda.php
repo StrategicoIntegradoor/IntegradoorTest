@@ -10,7 +10,7 @@ $edadVehiculo = $_POST['modelo'];
 
 $res = mysqli_query($con, "SELECT * FROM fasecolda WHERE codigo ='$codFasecolda' AND `$edadVehiculo` <> 0  GROUP BY codigo ORDER BY id_fasecolda");
 
-print_r("SELECT * FROM fasecolda WHERE codigo ='$codFasecolda' AND `$edadVehiculo` <> 0  GROUP BY codigo ORDER BY id_fasecolda");
+//print_r("SELECT * FROM fasecolda WHERE codigo ='$codFasecolda' AND `$edadVehiculo` <> 0  GROUP BY codigo ORDER BY id_fasecolda");
 
 $num_rows = mysqli_num_rows($res);
 $data = $res->fetch_assoc();
