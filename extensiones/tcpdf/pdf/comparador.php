@@ -1966,7 +1966,7 @@ while ($rowRespuesta28 = mysqli_fetch_assoc($respuestaquery28)) {
                 $html4 .= '<td class="puntos fondo" style="width:' . $valorTabla . '%;text-align: center;"><div style="font-size:12pt">&nbsp;</div><img style="width:16px;" src="../../../vistas/img/logos/cheque.png" alt=""></td>';
             } else {
                 // Agregar un estilo de fondo diferente aquí si es necesario
-                $html4 .= '<td class="puntos otro-fondo" style="width:' . $valorTabla . '%;"><center><div style="font-size:14pt">&nbsp;</div><font size="7"style="text-align: center; font-family:dejavusanscondensed;">' . $rowRespuestaAsistencia22['GastosMedicos'] . '</font></center></td>';
+                $html4 .= '<td class="puntos fondo" style="width:' . $valorTabla . '%;"><center><div style="font-size:14pt">&nbsp;</div><font size="7"style="text-align: center; font-family:dejavusanscondensed;">' . $rowRespuestaAsistencia22['GastosMedicos'] . '</font></center></td>';
             }
         }
     } else {
@@ -1974,10 +1974,10 @@ while ($rowRespuesta28 = mysqli_fetch_assoc($respuestaquery28)) {
 			$html4 .= '<td class="puntos fondo" style="width:' . $valorTabla . '%;"><center><div style="font-size:14pt">&nbsp;</div><font size="7" style="text-align: center; font-family:dejavusanscondensed;">' . $respuesta1 . '</font></center></td>';
         } else {
             if ($rowRespuestaAsistencia22['GastosMedicos'] == "Si ampara") {
-                $html4 .= '<td class="puntos fondo" style="width:' . $valorTabla . '%;text-align: center;"><div style="font-size:12pt">&nbsp;</div><img style="width:16px;" src="../../../vistas/img/logos/cheque.png" alt=""></td>';
+                $html4 .= '<td class="puntos fondo2" style="width:' . $valorTabla . '%;text-align: center;"><div style="font-size:12pt">&nbsp;</div><img style="width:16px;" src="../../../vistas/img/logos/cheque.png" alt=""></td>';
             } else {
                 // Agregar un estilo de fondo diferente aquí si es necesario
-                $html4 .= '<td class="puntos otro-fondo" style="width:' . $valorTabla . '%;"><center><div style="font-size:14pt">&nbsp;</div><font size="7"style="text-align: center; font-family:dejavusanscondensed;">' . $rowRespuestaAsistencia22['GastosMedicos'] . '</font></center></td>';
+                $html4 .= '<td class="puntos fondo2" style="width:' . $valorTabla . '%;"><center><div style="font-size:14pt">&nbsp;</div><font size="7"style="text-align: center; font-family:dejavusanscondensed;">' . $rowRespuestaAsistencia22['GastosMedicos'] . '</font></center></td>';
             }
         }
     }
