@@ -1975,18 +1975,12 @@ while ($rowRespuesta28 = mysqli_fetch_assoc($respuestaquery28)) {
             }
         }
     } else {
-        if ($PT == "Deducible: 10% min 1 SMMLV" || $PT == "Deducible: 10% min 1 SMMLV") {
-			var_dump($PT);
-			die();
-			$html4 .= '<td class="puntos fondo" style="width:' . $valorTabla . '%;"><center><div style="font-size:14pt">&nbsp;</div><font size="7"style="text-align: center; font-family:dejavusanscondensed;">' . $respuesta1 . '</font></center></td>';
+        if ($PT == "Deducible: 10% min 1 SMMLV" || $PT == "Deducible: 10% min 1 SMMLV") {			
+			$html4 .= '<td class="puntos fondo2" style="width:' . $valorTabla . '%;"><center><div style="font-size:14pt">&nbsp;</div><font size="7"style="text-align: center; font-family:dejavusanscondensed;">' . $respuesta1 . '</font></center></td>';
         } else {
             if ($rowRespuestaAsistencia22['GastosMedicos'] == "Si ampara") {
-				var_dump("Segunda condicion else");
-				die();
                 $html4 .= '<td class="puntos fondo2" style="width:' . $valorTabla . '%;text-align: center;"><div style="font-size:12pt">&nbsp;</div><img style="width:16px;" src="../../../vistas/img/logos/cheque.png" alt=""></td>';
             } else {
-				var_dump("tercera condicion else");
-				die();
                 $html4 .= '<td class="puntos fondo2" style="width:' . $valorTabla . '%;"><center><div style="font-size:14pt">&nbsp;</div><font size="7"style="text-align: center; font-family:dejavusanscondensed;">' . $rowRespuestaAsistencia22['GastosMedicos'] . '</font></center></td>';
             }
         }
