@@ -195,19 +195,19 @@ function convertirNumero() {
   apellidoInput.addEventListener("blur", function () {
     this.value = this.value.trim(); // Elimina espacios en blanco al principio y al final
     
-    // Divide la cadena en palabras
-    var words = cleanedValue.split(" ");
+    // // Divide la cadena en palabras
+    // var words = cleanedValue.split(" ");
 
-    // Capitaliza la primera letra de cada palabra y convierte el resto en minúsculas
-    for (var i = 0; i < words.length; i++) {
-      words[i] = words[i].charAt(0).toUpperCase() + words[i].slice(1).toLowerCase();
-    }
+    // // Capitaliza la primera letra de cada palabra y convierte el resto en minúsculas
+    // for (var i = 0; i < words.length; i++) {
+    //   words[i] = words[i].charAt(0).toUpperCase() + words[i].slice(1).toLowerCase();
+    // }
 
-    // Vuelve a unir las palabras en una sola cadena
-    var formattedValue1 = words.join(" ");
+    // // Vuelve a unir las palabras en una sola cadena
+    // var formattedValue1 = words.join(" ");
 
-    // Asigna el valor formateado al campo de entrada
-    this.value = formattedValue1;
+    // // Asigna el valor formateado al campo de entrada
+    // this.value = formattedValue1;
   });
     
   // Conviete la letras iniciales del Nombre y el Apellido deL Cliente en Mayusculas
@@ -220,16 +220,16 @@ function convertirNumero() {
   //   );
   // });
 
-  // $("#txtApellidos").keyup(function () {
-  //   var cliApellido = document
-  //     .getElementById("txtApellidos")
-  //     .value.toLowerCase();
-  //   $("#txtApellidos").val(
-  //     cliApellido.replace(/^(.)|\s(.)/g, function ($1) {
-  //       return $1.toUpperCase();
-  //     })
-  //   );
-  // });
+  $("#txtApellidos").keyup(function () {
+    var cliApellido = document
+      .getElementById("txtApellidos")
+      .value.toLowerCase();
+    $("#txtApellidos").val(
+      cliApellido.replace(/^(.)|\s(.)/g, function ($1) {
+        return $1.toUpperCase();
+      })
+    );
+  });
 
   // Carga la fecha de Nacimiento
   $("#dianacimiento, #mesnacimiento, #anionacimiento").select2({
