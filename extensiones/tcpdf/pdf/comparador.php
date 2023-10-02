@@ -1314,7 +1314,7 @@ $html4 .= '</tr>';
 //::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
 $html4 .= '<tr>';
-$html4 .= '<td class="fondo puntos" style="width:10%; text-align: center; font-family:dejavusanscondensedb;"><font size="8">Asistencia juridica en proceso pena </font></td>';
+$html4 .= '<td class="fondo puntos" style="width:10%; text-align: center; font-family:dejavusanscondensedb;"><font size="8">Asistencia juridica en proceso penal </font></td>';
 
 $query17 = "SELECT * FROM ofertas WHERE `id_cotizacion` = $identificador AND `seleccionar` = 'Si'";
 $respuestaquery17 =  $conexion->query($query17);
@@ -1747,9 +1747,9 @@ while ($rowRespuesta25 = mysqli_fetch_assoc($respuestaquery25)) {
 	$respuestaqueryAsistencia19 =  $conexion->query($queryConsultaAsistencia19);
 	$rowRespuestaAsistencia19 = mysqli_fetch_assoc($respuestaqueryAsistencia19);
 
-	if ($cont20 % 3 == 0) {
+	if ($cont23 % 2 == 0) {
 		if ($rowRespuestaAsistencia19['AsistenciaJuridicaCivil'] == "Si ampara") {
-			$html4 .= '<td class="puntos fondo2" style="width:' . $valorTabla . '%;text-align: center;"><div style="font-size:12pt">&nbsp;</div><img style="width:16px;" src="../../../vistas/img/logos/cheque.png" alt=""></td>';
+			$html4 .= '<td class="puntos fondo" style="width:' . $valorTabla . '%;text-align: center;"><div style="font-size:12pt">&nbsp;</div><img style="width:16px;" src="../../../vistas/img/logos/cheque.png" alt=""></td>';
 		} else {
 			$html4 .= '<td class="puntos fondo" style="width:' . $valorTabla . '%;"><center><div style="font-size:14pt">&nbsp;</div><font size="7"style="text-align: center; font-family:dejavusanscondensed;">' . $rowRespuestaAsistencia19['AsistenciaJuridicaCivil'] . '</font></center></td>';
 		}
@@ -1992,7 +1992,7 @@ $html4 .= '</table>';
 
 $html4 .= '<table>';
 $html4 .= '<tr>';
-$html4 .= '<td class ="fondo puntos" style="width:10%; text-align: center; font-family:dejavusanscondensedb;"><font size="8">Asistencia en viaje</font></td>';
+$html4 .= '<td class ="fondo puntos" style="width:10%; text-align: center; font-family:dejavusanscondensedb;"><font size="8">Lucro Cesante</font></td>';
 
 $query28 = "SELECT * FROM ofertas WHERE `id_cotizacion` = $identificador AND `seleccionar` = 'Si'";
 $respuestaquery28 =  $conexion->query($query28);
