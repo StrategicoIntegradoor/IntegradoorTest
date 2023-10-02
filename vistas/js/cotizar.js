@@ -205,6 +205,15 @@ function convertirNumero() {
     );
   });
 
+   // Agregar eventos para quitar espacios en blanco al principio y al final de los input de nombre y apellidos
+   txtNombres.addEventListener('blur', function () {
+    txtNombres.value = txtNombres.value.trim();
+  });
+
+  txtApellidos.addEventListener('blur', function () {
+    txtApellidos.value = txtApellidos.value.trim();
+  });
+
   // Carga los Departamentos disponibles
   $("#DptoCirculacion").select2({
     theme: "bootstrap dpto",
