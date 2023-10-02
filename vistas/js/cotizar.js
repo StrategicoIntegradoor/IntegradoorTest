@@ -1581,39 +1581,39 @@ function cotizarOfertas() {
             );
 
             /* Mapfre */
-            cont.push(
+            // cont.push(
 
-              fetch("https://grupoasistencia.com/motor_webservice_tst/mapfrecotizacion4", requestOptions)
+            //   fetch("https://grupoasistencia.com/motor_webservice_tst/mapfrecotizacion4", requestOptions)
 
-                .then((res) => {
-                  if (!res.ok) throw Error(res.statusText);
-                  return res.json();
-                })
-                .then((ofertas) => {
-                  console.log(ofertas)
-                  let result = []
-                  result.push(ofertas)
+            //     .then((res) => {
+            //       if (!res.ok) throw Error(res.statusText);
+            //       return res.json();
+            //     })
+            //     .then((ofertas) => {
+            //       console.log(ofertas)
+            //       let result = []
+            //       result.push(ofertas)
 
-                  if (typeof result[0].Resultado !== 'undefined') {
-                    agregarAseguradoraFallida('Mapfre')
-                    result[0].Mensajes.forEach(mensaje => {
-                      mostrarAlertarCotizacionFallida('Mapfre', mensaje)
-                    })
+            //       if (typeof result[0].Resultado !== 'undefined') {
+            //         agregarAseguradoraFallida('Mapfre')
+            //         result[0].Mensajes.forEach(mensaje => {
+            //           mostrarAlertarCotizacionFallida('Mapfre', mensaje)
+            //         })
 
-                  } else {
+            //       } else {
 
-                    validarOfertas(result);
-                    let successMap = true;
-                    if (successMap) {
-                      mostrarAlertaCotizacionExitosa('Mapfre')
-                      successMap = false
-                    }
-                  }
-                })
-                .catch((err) => {
-                  console.error(err);
-                })
-            );
+            //         validarOfertas(result);
+            //         let successMap = true;
+            //         if (successMap) {
+            //           mostrarAlertaCotizacionExitosa('Mapfre')
+            //           successMap = false
+            //         }
+            //       }
+            //     })
+            //     .catch((err) => {
+            //       console.error(err);
+            //     })
+            // );
 
             /* Previsora */
             // cont.push(
@@ -1640,27 +1640,27 @@ function cotizarOfertas() {
             // );
 
             /* Equidad */
-            // cont.push(
-            //   fetch("https://grupoasistencia.com/motor_webservice_tst/Equidad", requestOptions)
-            //     .then((res) => {
-            //       if (!res.ok) throw Error(res.statusText);
-            //       return res.json();
-            //     })
-            //     .then((ofertas) => {
-            //       if (typeof ofertas[0].Resultado !== 'undefined') {
-            //         agregarAseguradoraFallida('Equidad')
-            //         ofertas[0].Mensajes.forEach(mensaje => {
-            //           mostrarAlertarCotizacionFallida('Equidad', mensaje)
-            //         })
-            //       } else {
-            //         validarOfertas(ofertas);
-            //         mostrarAlertaCotizacionExitosa('Equidad')
-            //       }
-            //     })
-            //     .catch((err) => {
-            //       console.error(err);
-            //     })
-            // );
+            cont.push(
+              fetch("https://grupoasistencia.com/motor_webservice_tst/Equidad", requestOptions)
+                .then((res) => {
+                  if (!res.ok) throw Error(res.statusText);
+                  return res.json();
+                })
+                .then((ofertas) => {
+                  if (typeof ofertas[0].Resultado !== 'undefined') {
+                    agregarAseguradoraFallida('Equidad')
+                    ofertas[0].Mensajes.forEach(mensaje => {
+                      mostrarAlertarCotizacionFallida('Equidad', mensaje)
+                    })
+                  } else {
+                    validarOfertas(ofertas);
+                    mostrarAlertaCotizacionExitosa('Equidad')
+                  }
+                })
+                .catch((err) => {
+                  console.error(err);
+                })
+            );
 
             /* Bolivar */
             // cont.push(
