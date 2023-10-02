@@ -194,20 +194,20 @@ function convertirNumero() {
 
   apellidoInput.addEventListener("blur", function () {
     this.value = this.value.trim(); // Elimina espacios en blanco al principio y al final
-    
-    // // Divide la cadena en palabras
-    // var words = cleanedValue.split(" ");
 
-    // // Capitaliza la primera letra de cada palabra y convierte el resto en minúsculas
-    // for (var i = 0; i < words.length; i++) {
-    //   words[i] = words[i].charAt(0).toUpperCase() + words[i].slice(1).toLowerCase();
-    // }
+    // Divide la cadena en palabras
+    var words = this.value.split(" ");
 
-    // // Vuelve a unir las palabras en una sola cadena
-    // var formattedValue1 = words.join(" ");
+    // Capitaliza la primera letra de cada palabra y convierte el resto en minúsculas
+    for (var i = 0; i < words.length; i++) {
+      words[i] = words[i].charAt(0).toUpperCase() + words[i].slice(1).toLowerCase();
+    }
 
-    // // Asigna el valor formateado al campo de entrada
-    // this.value = formattedValue1;
+    // Vuelve a unir las palabras en una sola cadena
+    var formattedValue = words.join(" ");
+
+    // Asigna el valor formateado al campo de entrada
+    this.value = formattedValue;
   });
     
   // Conviete la letras iniciales del Nombre y el Apellido deL Cliente en Mayusculas
