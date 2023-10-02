@@ -178,7 +178,7 @@ function convertirNumero() {
     this.value = this.value.trim(); // Elimina espacios en blanco al principio y al final
 
     // Divide la cadena en palabras
-    var words = cleanedValue.split(" ");
+    var words = this.value.split(" ");
 
     // Capitaliza la primera letra de cada palabra y convierte el resto en minúsculas
     for (var i = 0; i < words.length; i++) {
