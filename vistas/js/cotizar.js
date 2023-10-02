@@ -205,13 +205,13 @@ function convertirNumero() {
     );
   });
 
-   // Agregar eventos para quitar espacios en blanco al principio y al final de los input de nombre y apellidos
-   txtNombres.addEventListener('blur', function () {
-    txtNombres.value = txtNombres.value.trim();
+  // Agregar un evento 'blur' para eliminar espacios en blanco al final y al principio
+  nombreInput.addEventListener("blur", function () {
+    this.value = this.value.trim(); // Elimina espacios en blanco al principio y al final
   });
 
-  txtApellidos.addEventListener('blur', function () {
-    txtApellidos.value = txtApellidos.value.trim();
+  apellidoInput.addEventListener("blur", function () {
+    this.value = this.value.trim(); // Elimina espacios en blanco al principio y al final
   });
 
   // Carga los Departamentos disponibles
