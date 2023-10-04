@@ -1897,7 +1897,6 @@ function cotizarOfertas() {
             //       return res.json();
             //     })
             //     .then((ofertas) => {
-            //       ofertas.forEach((oferta) => {
             //         if (typeof oferta.Resultado !== 'undefined') {
             //           // Aquí procesas los errores
             //           agregarAseguradoraFallida('AXA');
@@ -1909,7 +1908,6 @@ function cotizarOfertas() {
             //           validarOfertas(oferta);
             //           mostrarAlertaCotizacionExitosa('AXA');
             //         }
-            //       });
             //     })
             //     .catch((err) => {
             //       console.error(err);
@@ -1925,10 +1923,9 @@ function cotizarOfertas() {
                 .then((ofertas) => {
                   const errores = ofertas[0];
                   const Ofertas = ofertas[1];
-            
+                  console.log(Ofertas)
                   // Procesar las cotizaciones positivas
                   Ofertas.forEach(oferta => {
-                    console.log(oferta)
                     validarOfertas(oferta);
                     mostrarAlertaCotizacionExitosa('AXA');
                   });
