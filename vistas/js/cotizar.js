@@ -1928,6 +1928,7 @@ function cotizarOfertas() {
             
                   // Procesar las cotizaciones positivas
                   Ofertas.forEach(oferta => {
+                    console.log(oferta)
                     validarOfertas(oferta);
                     mostrarAlertaCotizacionExitosa('AXA');
                   });
