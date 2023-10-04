@@ -1925,34 +1925,26 @@ function cotizarOfertas() {
                 .then((ofertas) => {
                   const errores = ofertas[0];
                   const Ofertas = ofertas[1];
-
+            
+                  // Procesar las cotizaciones positivas
                   Ofertas.forEach(oferta => {
-                  if (typeof ofertas[0].Resultado !== 'undefined') {
-                    agregarAseguradoraFallida('AXA')
-                    ofertas[0].Mensajes.forEach(mensaje => {
-                      mostrarAlertarCotizacionFallida('AXA', mensaje)
-                    })
-                  } else {
-                    validarOfertas(ofertas)
-                    mostrarAlertaCotizacionExitosa('AXA')
-                  }
-                });
-                errores.forEach(error => {
-                  if (typeof ofertas[0].Resultado !== 'undefined') {
-                    agregarAseguradoraFallida('AXA')
-                    ofertas[0].Mensajes.forEach(mensaje => {
-                      mostrarAlertarCotizacionFallida('AXA', mensaje)
-                    })
-                  } else {
-                    validarOfertas(ofertas)
-                    mostrarAlertaCotizacionExitosa('AXA')
-                  }
-                });
+                    validarOfertas(oferta);
+                    mostrarAlertaCotizacionExitosa('AXA');
+                  });
+            
+                  // Procesar los errores
+                  errores.forEach(error => {
+                    agregarAseguradoraFallida('AXA');
+                    error.Mensajes.forEach(mensaje => {
+                      mostrarAlertarCotizacionFallida('AXA', mensaje);
+                    });
+                  });
                 })
                 .catch((err) => {
                   console.error(err);
                 })
             );
+            
 
             /* SBS */
             // cont.push(
