@@ -572,7 +572,7 @@ if ($_SESSION["permisos"]["Cotizarlivianos"] != "x") {
                         </div>
                         <div class="col-xs-7 col-sm-7 col-md-7 form-group" id="contenBenefOneroso">
                           <label for="benefOneroso">Beneficiario</label>
-                          <input type="text" class="form-control" style="display: none;" id="benefOneroso">
+                          <input type="text" class="form-control" id="benefOneroso" style="display: none;">
                         </div>
                       </div>
                     </div>
