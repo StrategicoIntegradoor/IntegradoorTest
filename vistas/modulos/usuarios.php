@@ -111,7 +111,7 @@
 
             <?php
             $idRol = $_SESSION['id_rol'];
-            var_dump($idRol);
+            var_dump($_SESSION);
             die();
             $item1 = null;
             $valor1 = null;
