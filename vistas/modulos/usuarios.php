@@ -671,7 +671,7 @@ MODAL EDITAR USUARIO
 
                 <select class="form-control input-lg" name="editarTipoDocumento" id="editarTipoDocumento">
 
-                  <option value=""></option>
+                  <option value="">Tipo de documento:</option>
                   <option value="Cedula de Ciudadania">Cedula de Ciudadania</option>
                   <option value="Cedula de Extranjeria">Cedula de Extranjeria</option>
                   <option value="Permiso de Proteccion Temporal">Permiso de Proteccion Temporal</option>
