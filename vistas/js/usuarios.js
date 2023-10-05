@@ -350,6 +350,7 @@ $(".tablas").on("click", ".btnEditarUsuario", function(){
 			$("#editarTipoDocumento").trigger("change");
 			$("#editarGenero").trigger("change");
 			$("#idIntermediario2").trigger("change");
+			$("#editarRol").trigger("change");
 
 
   			// Convertir la fecha ISO 8601 a un objeto Date
