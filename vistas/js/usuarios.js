@@ -61,39 +61,39 @@ function cargarRoll (){
 
 	const $idRoll = document.getElementById("idRoll")
 	const $idRoll1 = document.getElementById("editarRol")
-	const idRol = $("#idRolAdmin").val(); // Supongo que usas jQuery para otros elementos, por lo que puedes usarlo aquí también.
-	console.log(idRol)
-$.ajax({
+	const idRol = $("#idRolAdmin").val();
 
-	url: "ajax/cargarRoll.php",
-	method : "POST",
-	data: { idRol: idRol }, // Enviar idRol en el cuerpo de la solicitud AJAX
-	success : function (respuesta){
+	$.ajax({
 
-	   respuesta = '<option disabled selected></option>' + respuesta;
+		url: "ajax/cargarRoll.php",
+		method : "POST",
+		data: { idRol: idRol }, // Enviar idRol en el cuerpo de la solicitud AJAX
+		success : function (respuesta){
 
-	   $idRoll.innerHTML=respuesta;
-	   $idRoll1.innerHTML=respuesta;
+		respuesta = '<option disabled selected></option>' + respuesta;
 
-		// Carga los Intermediarios disponibles para agregar
-		$("#idRoll").select2({
-			theme: "bootstrap rol",
-			language: "es",
-			width: "100%",
-			placeholder: "Rol*", // Esto configura el placeholder
-		});
+		$idRoll.innerHTML=respuesta;
+		$idRoll1.innerHTML=respuesta;
 
-		// Carga los Intermediarios disponibles para editar
-		$("#editarRol").select2({
-			theme: "bootstrap rol",
-			language: "es",
-			width: "100%",
-			placeholder: "Rol", // Esto configura el placeholder
-		});
+			// Carga los Intermediarios disponibles para agregar
+			$("#idRoll").select2({
+				theme: "bootstrap rol",
+				language: "es",
+				width: "100%",
+				placeholder: "Rol*", // Esto configura el placeholder
+			});
 
-	}
+			// Carga los Intermediarios disponibles para editar
+			$("#editarRol").select2({
+				theme: "bootstrap rol",
+				language: "es",
+				width: "100%",
+				placeholder: "Rol", // Esto configura el placeholder
+			});
 
-})
+		}
+
+	})
 	
 }
 
