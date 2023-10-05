@@ -331,8 +331,7 @@ $(".tablas").on("click", ".btnEditarUsuario", function(){
 			$("#fechNacimiento").val(respuesta["usu_fch_nac"]);
 			$("#editarDireccion").val(respuesta["direccion"]);
 			$("#editarTipoDocumento").val(respuesta["tipos_documentos_id"]);
-			console.log(respuesta["tipos_documentos_id"])
-
+			$("#editarTipoDocumento").trigger("change");
   			// Convertir la fecha ISO 8601 a un objeto Date
 
 			function formatearFechaISO8601(fechaISO8601) {
