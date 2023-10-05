@@ -61,11 +61,13 @@ function cargarRoll (){
 
 	const $idRoll = document.getElementById("idRoll")
 	const $idRoll1 = document.getElementById("editarRol")
+	const idRol = $("#idRol").val(); // Supongo que usas jQuery para otros elementos, por lo que puedes usarlo aquí también.
 
 $.ajax({
 
 	url: "ajax/cargarRoll.php",
 	method : "POST",
+	data: { idRol: idRol }, // Enviar idRol en el cuerpo de la solicitud AJAX
 	success : function (respuesta){
 
 	   respuesta = '<option disabled selected></option>' + respuesta;

@@ -119,6 +119,7 @@
             if($_SESSION["permisos"]["Verlistadodeusuarioscreados"] == "x"){	
 
             $usuarios = ControladorUsuarios::ctrMostrarUsuarios($item1, $valor1, $item2, $valor2);
+            $idRol = $usuarios['id_rol'];
 
             foreach ($usuarios as $key => $value) {
 
@@ -215,6 +216,10 @@ MODAL AGREGAR USUARIO
 
 
           <div class="row">
+
+            <!-- ENTRADA PARA EL ADMIN -->
+
+            <input type="hidden" id="idRol" value="<?php echo $idRol; ?>">
 
             <!-- ENTRADA PARA EL NOMBRE -->
 
