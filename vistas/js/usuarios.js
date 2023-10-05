@@ -37,6 +37,14 @@ cargarRoll();
 			placeholder: "Intermediario*", // Esto configura el placeholder
 		});
 
+		//Carga los Intermediarios disponibles para agregar
+		$("#idIntermediario2").select2({
+			theme: "bootstrap int",
+			language: "es",
+			width: "100%",
+			placeholder: "Intermediario", // Esto configura el placeholder
+		});
+	
 		}
 
 	})
@@ -333,6 +341,8 @@ $(".tablas").on("click", ".btnEditarUsuario", function(){
 			$("#editarTipoDocumento").val(respuesta["tipos_documentos_id"]);
 			$("#editarTipoDocumento").trigger("change");
 			$("#editarGenero").trigger("change");
+			$("#idIntermediario2").trigger("change");
+
 
   			// Convertir la fecha ISO 8601 a un objeto Date
 
