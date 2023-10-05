@@ -563,7 +563,7 @@ if ($_SESSION["permisos"]["Cotizarlivianos"] != "x") {
                       <div class="row">
                         <div class="col-xs-5 col-sm-5 col-md-5 form-group">
                           <label>Es Oneroso?</label>
-                          <div class="conten-oneroso">
+                          <div class="conten-oneroso" style="display: none;">
                             <label for="Si">Si</label>
                             <input type="radio" name="oneroso" id="esOnerosoSi" value="Si">&nbsp;&nbsp;&nbsp;&nbsp;
                             <label for="No">No</label>
@@ -572,7 +572,7 @@ if ($_SESSION["permisos"]["Cotizarlivianos"] != "x") {
                         </div>
                         <div class="col-xs-7 col-sm-7 col-md-7 form-group" id="contenBenefOneroso">
                           <label for="benefOneroso">Beneficiario</label>
-                          <input type="hidden" class="form-control" id="benefOneroso">
+                          <input type="text" class="form-control" id="benefOneroso">
                         </div>
                       </div>
                     </div>
