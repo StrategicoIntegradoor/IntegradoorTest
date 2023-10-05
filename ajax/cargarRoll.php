@@ -17,8 +17,6 @@ if(!$enlace ){
 
 }
 $idRol = $_POST['idRol'];
-var_dump($idRol);
-die();
 
 if($idRol == 1 || $idRol == 10){
     $query = "SELECT * FROM roles";
