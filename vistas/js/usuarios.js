@@ -332,6 +332,8 @@ $(".tablas").on("click", ".btnEditarUsuario", function(){
 			$("#editarDireccion").val(respuesta["direccion"]);
 			$("#editarTipoDocumento").val(respuesta["tipos_documentos_id"]);
 			$("#editarTipoDocumento").trigger("change");
+			$("#editarGenero").trigger("change");
+
   			// Convertir la fecha ISO 8601 a un objeto Date
 
 			function formatearFechaISO8601(fechaISO8601) {
@@ -490,14 +492,21 @@ $(".tablas").on("click", ".btnEditarUsuario", function(){
 EDITAR USUARIO SELECT2 Y CONFIGURACIONES
 =============================================*/
 
-	// Carga los Documentos disponibles para agregar
-	$("#editarTipoDocumento").select2({
-		theme: "bootstrap doc",
-		language: "es",
-		width: "100%",
-		// placeholder: "Tipo Documento*", // Esto configura el placeholder
-	});
+// Carga los Documentos disponibles para agregar
+$("#editarTipoDocumento").select2({
+	theme: "bootstrap doc",
+	language: "es",
+	width: "100%",
+	// placeholder: "Tipo Documento*", // Esto configura el placeholder
+});
 
+// Carga los Generos disponibles para agregar
+$("#editarGenero").select2({
+	theme: "bootstrap gen",
+	language: "es",
+	width: "100%",
+	// placeholder: "Genero*", // Esto configura el placeholder
+});
 
 
 
