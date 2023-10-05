@@ -262,16 +262,16 @@ function convertirNumero() {
     width: "100%",
   });
 
-  // // Si es Oneroso muestra el campo N° Beneficiario.
-  // $("#esOnerosoSi").click(function () {
-  //   document.getElementById("contenBenefOneroso").style.display = "block";
-  // });
+  // Si es Oneroso muestra el campo N° Beneficiario.
+  $("#esOnerosoSi").click(function () {
+    document.getElementById("contenBenefOneroso").style.display = "block";
+  });
 
-  // // Si no es Oneroso oculta el campo N° Beneficiario y lo limpia.
-  // $("#esOnerosoNo").click(function () {
-  //   document.getElementById("contenBenefOneroso").style.display = "none";
-  //   document.getElementById("benefOneroso").value = "";
-  // });
+  // Si no es Oneroso oculta el campo N° Beneficiario y lo limpia.
+  $("#esOnerosoNo").click(function () {
+    document.getElementById("contenBenefOneroso").style.display = "none";
+    document.getElementById("benefOneroso").value = "";
+  });
 
   // Obtiene los datos de cada campo del formulario y Valida que no esten Vacios
   $("#formResumAseg, #formVehManual, #formResumVeh, #agregarOferta").on(
