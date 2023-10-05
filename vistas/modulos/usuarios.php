@@ -110,9 +110,8 @@
           <tbody>
 
             <?php
+
             $idRol = $_SESSION["permisos"]["idRol"];
-            var_dump($idRol);
-            die();
             $item1 = null;
             $valor1 = null;
             $item2 = null;
@@ -220,7 +219,7 @@ MODAL AGREGAR USUARIO
 
             <!-- ENTRADA PARA EL ADMIN -->
 
-            <input type="hidden" id="idRol" value="<?php echo $idRol; ?>">
+            <input type="hidden" id="idRolAdmin" value="<?php echo $idRol; ?>">
 
             <!-- ENTRADA PARA EL NOMBRE -->
 
