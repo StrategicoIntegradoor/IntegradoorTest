@@ -110,8 +110,8 @@
           <tbody>
 
             <?php
-            $idRol = $_SESSION['id_rol'];
-            var_dump($_SESSION);
+            $idRol = $_SESSION["permisos"]["idRol"];
+            var_dump($idRol);
             die();
             $item1 = null;
             $valor1 = null;
