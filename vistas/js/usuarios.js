@@ -62,7 +62,7 @@ function cargarRoll (){
 	const $idRoll = document.getElementById("idRoll")
 	const $idRoll1 = document.getElementById("editarRol")
 	const idRol = $("#idRol").val(); // Supongo que usas jQuery para otros elementos, por lo que puedes usarlo aquí también.
-
+	console.log(idRol)
 $.ajax({
 
 	url: "ajax/cargarRoll.php",
