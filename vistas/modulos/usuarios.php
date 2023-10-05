@@ -110,7 +110,8 @@
           <tbody>
 
             <?php
-
+            var_dump($_SESSION);
+            die();
             $item1 = null;
             $valor1 = null;
             $item2 = null;
