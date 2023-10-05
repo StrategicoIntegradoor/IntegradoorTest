@@ -567,10 +567,10 @@ if ($_SESSION["permisos"]["Cotizarlivianos"] != "x") {
                             <label for="Si">Si</label>
                             <input type="radio" name="oneroso" id="esOnerosoSi" value="Si">&nbsp;&nbsp;&nbsp;&nbsp;
                             <label for="No">No</label>
-                            <input type="radio" name="oneroso" id="esOnerosoNo" value="No" required>
+                            <input type="radio" name="oneroso" id="esOnerosoNo" value="No" required checked>
                           </div>
                         </div>
-                        <div class="col-xs-7 col-sm-7 col-md-7 form-group" id="contenBenefOneroso">
+                        <div class="col-xs-7 col-sm-7 col-md-7 form-group" style="display: none" id="contenBenefOneroso">
                           <label for="benefOneroso">Beneficiario</label>
                           <input type="text" class="form-control" id="benefOneroso">
                         </div>
