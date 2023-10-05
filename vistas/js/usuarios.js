@@ -37,7 +37,7 @@ cargarRoll();
 			placeholder: "Intermediario*", // Esto configura el placeholder
 		});
 
-		//Carga los Intermediarios disponibles para agregar
+		//Carga los Intermediarios disponibles para editar
 		$("#idIntermediario2").select2({
 			theme: "bootstrap int",
 			language: "es",
@@ -79,6 +79,14 @@ $.ajax({
 			language: "es",
 			width: "100%",
 			placeholder: "Rol*", // Esto configura el placeholder
+		});
+
+		// Carga los Intermediarios disponibles para editar
+		$("#editarRol").select2({
+			theme: "bootstrap rol",
+			language: "es",
+			width: "100%",
+			placeholder: "Rol", // Esto configura el placeholder
 		});
 
 	}
