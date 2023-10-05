@@ -562,7 +562,7 @@ if ($_SESSION["permisos"]["Cotizarlivianos"] != "x") {
                     <div class="col-xs-12 col-sm-6 col-md-3">
                       <div class="row">
                         <div class="col-xs-5 col-sm-5 col-md-5 form-group">
-                          <label>Es Oneroso?</label>
+                          <label style="display: none;">Es Oneroso?</label>
                           <div class="conten-oneroso" style="display: none;">
                             <label for="Si">Si</label>
                             <input type="radio" name="oneroso" id="esOnerosoSi" value="Si">&nbsp;&nbsp;&nbsp;&nbsp;
