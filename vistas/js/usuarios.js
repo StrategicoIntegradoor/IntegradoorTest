@@ -496,7 +496,7 @@ EDITAR USUARIO SELECT2 Y CONFIGURACIONES
 		theme: "bootstrap doc",
 		language: "es",
 		width: "100%",
-		placeholder: "Tipo Documento*", // Esto configura el placeholder
+		// placeholder: "Tipo Documento*", // Esto configura el placeholder
 	});
 
 
