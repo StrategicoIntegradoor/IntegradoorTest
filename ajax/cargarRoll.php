@@ -16,7 +16,9 @@ if(!$enlace ){
     die("Conexion Fallida ".mysqli_connect_error());
 
 }
-
+$idRol = $_POST['idRol'];
+var_dump($idRol);
+die();
 $query = "SELECT * FROM roles WHERE id_rol IN (19, 11, 12)";
 $ejecucion = mysqli_query($enlace,$query);
 $opcion = "";
