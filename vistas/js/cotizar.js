@@ -1866,45 +1866,22 @@ function cotizarOfertas() {
           // }
 
             /* Allianz */
-            // cont.push(
-            //   fetch("https://grupoasistencia.com/motor_webservice_tst/Allianz", requestOptions)
-            //     .then((res) => {
-            //       if (!res.ok) throw Error(res.statusText);
-            //       console.log(res);
-            //       return res.json();
-            //     })
-            //     .then((ofertas) => {
-            //       if (typeof ofertas[0].Resultado !== 'undefined') {
-            //         agregarAseguradoraFallida('Allianz')
-            //         ofertas[0].Mensajes.forEach(mensaje => {
-            //           mostrarAlertarCotizacionFallida('Allianz', mensaje)
-            //         })
-            //       } else {
-            //         validarOfertas(ofertas)
-            //         mostrarAlertaCotizacionExitosa('Allianz')
-            //       }
-            //     })
-            //     .catch((err) => {
-            //       console.error(err);
-            //     })
-            // );
-
-            /* AXA */
             cont.push(
-              fetch("https://grupoasistencia.com/motor_webservice_tst/AXA", requestOptions)
+              fetch("https://grupoasistencia.com/motor_webservice_tst/Allianz", requestOptions)
                 .then((res) => {
                   if (!res.ok) throw Error(res.statusText);
+                  console.log(res);
                   return res.json();
                 })
                 .then((ofertas) => {
                   if (typeof ofertas[0].Resultado !== 'undefined') {
-                    agregarAseguradoraFallida('AXA')
+                    agregarAseguradoraFallida('Allianz')
                     ofertas[0].Mensajes.forEach(mensaje => {
-                      mostrarAlertarCotizacionFallida('AXA', mensaje)
+                      mostrarAlertarCotizacionFallida('Allianz', mensaje)
                     })
                   } else {
                     validarOfertas(ofertas)
-                    mostrarAlertaCotizacionExitosa('AXA')
+                    mostrarAlertaCotizacionExitosa('Allianz')
                   }
                 })
                 .catch((err) => {
@@ -1912,6 +1889,7 @@ function cotizarOfertas() {
                 })
             );
 
+            /* AXA */
             // cont.push(
             //   fetch("https://grupoasistencia.com/motor_webservice_tst/AXA", requestOptions)
             //     .then((res) => {
@@ -1919,22 +1897,15 @@ function cotizarOfertas() {
             //       return res.json();
             //     })
             //     .then((ofertas) => {
-            //       const errores = ofertas[0];
-            //       const Ofertas = ofertas[1];
-            //       console.log(Ofertas)
-            //       // Procesar las cotizaciones positivas
-            //       Ofertas.forEach(oferta => {
-            //         validarOfertas(oferta);
-            //         mostrarAlertaCotizacionExitosa('AXA');
-            //       });
-            
-            //       // Procesar los errores
-            //       errores.forEach(error => {
-            //         agregarAseguradoraFallida('AXA');
-            //         error.Mensajes.forEach(mensaje => {
-            //           mostrarAlertarCotizacionFallida('AXA', mensaje);
-            //         });
-            //       });
+            //       if (typeof ofertas[0].Resultado !== 'undefined') {
+            //         agregarAseguradoraFallida('AXA')
+            //         ofertas[0].Mensajes.forEach(mensaje => {
+            //           mostrarAlertarCotizacionFallida('AXA', mensaje)
+            //         })
+            //       } else {
+            //         validarOfertas(ofertas)
+            //         mostrarAlertaCotizacionExitosa('AXA')
+            //       }
             //     })
             //     .catch((err) => {
             //       console.error(err);
