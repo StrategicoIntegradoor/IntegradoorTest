@@ -132,7 +132,7 @@ $(".nuevaFoto").change(function(){
 
 
 /*=============================================
-EDITAR USUARIO
+AGREGAR USUARIO SELECT2 Y CONFIGURACIONES
 =============================================*/
 
   // Modal editar Conviete la letras iniciales del Nombre y el Apellido deL Cliente en Mayusculas
@@ -164,16 +164,17 @@ EDITAR USUARIO
 		  })
 		);
 	  });
-	  $("#nuevoApellido").keyup(function () {
-		var cliApellido = document
-		  .getElementById("nuevoApellido")
-		  .value.toLowerCase();
-		$("#nuevoApellido").val(
-		  cliApellido.replace(/^(.)|\s(.)/g, function ($1) {
-			return $1.toUpperCase();
-		  })
-		);
-	  });
+
+	$("#nuevoApellido").keyup(function () {
+	var cliApellido = document
+		.getElementById("nuevoApellido")
+		.value.toLowerCase();
+	$("#nuevoApellido").val(
+		cliApellido.replace(/^(.)|\s(.)/g, function ($1) {
+		return $1.toUpperCase();
+		})
+	);
+	});
 
 
 	// Carga los Documentos disponibles para agregar
@@ -230,19 +231,6 @@ EDITAR USUARIO
 		placeholder: "Ciudad", // Texto del placeholder del buscador
 
 		});
-
-/*=============================================
-CARGAR ROL
-=============================================*/
-
-
-
-/*=============================================
-CARGAR INTERMEDIARIO
-=============================================*/
-	
-
-
 
 // FUNCION PARA CARGAR LA CIUDAD DE CIRCULACIÓN
 function consultarCiudad() {
@@ -497,6 +485,21 @@ $(".tablas").on("click", ".btnEditarUsuario", function(){
 	});
 
 });
+
+
+/*=============================================
+EDITAR USUARIO SELECT2 Y CONFIGURACIONES
+=============================================*/
+
+	// Carga los Documentos disponibles para agregar
+	$("#editarTipoDocumento").select2({
+		theme: "bootstrap doc",
+		language: "es",
+		width: "100%",
+		placeholder: "Tipo Documento*", // Esto configura el placeholder
+	});
+
+
 
 
 /*=============================================
