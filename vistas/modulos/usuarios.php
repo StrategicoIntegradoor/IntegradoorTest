@@ -120,8 +120,7 @@
 
             $usuarios = ControladorUsuarios::ctrMostrarUsuarios($item1, $valor1, $item2, $valor2);
             $idRol = $usuarios['id_rol'];
-            var_dump($idRol);
-            die();
+
             foreach ($usuarios as $key => $value) {
 
               echo ' <tr>
