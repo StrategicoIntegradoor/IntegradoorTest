@@ -724,7 +724,7 @@ $("#editarDocIdUser").keyup(function(){
 
 });
 
-
+// VALIDACION PARA NUMERO DE CELULAR MODAL AGREGAR
 document.addEventListener("DOMContentLoaded", function() {
   document.getElementById("userForm").addEventListener("submit", function (event) {
     // Aquí realizas la validación del número de celular
@@ -742,4 +742,24 @@ document.addEventListener("DOMContentLoaded", function() {
     }
   });
 });
+
+// VALIDACION PARA NUMERO DE CELULAR MODAL EDITAR
+
+document.addEventListener("DOMContentLoaded", function() {
+	document.getElementById("userEditForm").addEventListener("submit", function (event) {
+	  // Aquí realizas la validación del número de celular
+	  var placaInput = document.getElementById("editarTelefono");
+	  var telefono = placaInput.value.trim(); // Eliminar espacios en blanco al principio y al final
+  
+	  // Expresión regular para validar un número de celular con al menos 10 dígitos
+	  var formatoValido = /^(?:\(\d{3}\)\s*|\d{3}-?)\d{3}-?\d{4}$/.test(telefono);
+  
+	  if (!formatoValido) {
+		var mensajeError = document.getElementById("mensajeErrorCelular");
+		mensajeError.style.display = "block";
+		mensajeError.textContent = "Número de celular incompleto, verificar información";
+		event.preventDefault(); // Evita que se envíe el formulario si la validación falla
+	  }
+	});
+  });
 
