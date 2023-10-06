@@ -1870,7 +1870,6 @@ function cotizarOfertas() {
               fetch("https://grupoasistencia.com/motor_webservice_tst/Allianz", requestOptions)
                 .then((res) => {
                   if (!res.ok) throw Error(res.statusText);
-                  console.log(res);
                   return res.json();
                 })
                 .then((ofertas) => {
