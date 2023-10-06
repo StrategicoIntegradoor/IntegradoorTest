@@ -755,7 +755,7 @@ document.addEventListener("DOMContentLoaded", function() {
 	  var formatoValido = /^(?:\(\d{3}\)\s*|\d{3}-?)\d{3}-?\d{4}$/.test(telefono);
   
 	  if (!formatoValido) {
-		var mensajeError = document.getElementById("mensajeErrorCelular");
+		var mensajeError = document.getElementById("mensajeErrorCelularEdit");
 		mensajeError.style.display = "block";
 		mensajeError.textContent = "Número de celular incompleto, verificar información";
 		event.preventDefault(); // Evita que se envíe el formulario si la validación falla

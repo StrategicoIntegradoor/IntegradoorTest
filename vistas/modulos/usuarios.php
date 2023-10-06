@@ -746,6 +746,7 @@ MODAL EDITAR USUARIO
 
             <!-- ENTRADA PARA EL CELULAR -->
             <div class="col-xs-12 col-sm-6 col-md-6 form-group">
+            <div id="mensajeErrorCelularEdit" style="color: red; display: none;"></div>
               <div class="input-group">
 
                 <span class="input-group-addon"><i class="fa fa-mobile"></i></span>
