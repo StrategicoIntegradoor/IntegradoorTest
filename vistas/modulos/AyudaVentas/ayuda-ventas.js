@@ -166,7 +166,7 @@ const obtenerAyudaVentas = async () => {
             }
             if (ayudaVenta.path_sarlaft || ayudaVenta.path_sarlaft2) {
                 let sarlaftButtons = '<td style="line-height: 200px;">'
-                sarlaftButtons += ayudaVenta.path_sarlaft ? `<button class="btn btn-alert" style="background: red; color: #fff; font-weight: 500;" onclick="onclick="validarPermisoPdfPersonaNatural('https://allianzfcc.co/#/login')">PDF PN</button>` : ''
+                sarlaftButtons += ayudaVenta.path_sarlaft ? `<button class="btn btn-alert" style="background: red; color: #fff; font-weight: 500;" onclick="onclick="validarPermisoPdfPersonaNatural('./vistas/modulos/AyudaVentas/pdf/sarlaft/${ayudaVenta.path_sarlaft}')">PDF PN</button>` : ''
                 partTemplate += sarlaftButtons + '</td>'
                 let sarlaftButtons2 = '<td style="line-height: 200px;">'
                 sarlaftButtons2 += ayudaVenta.path_sarlaft2 ? `<button class="btn btn-alert" style="background: red; color: #fff; font-weight: 500;" onclick="validarPermisoPdfPersonaJuridica('./vistas/modulos/AyudaVentas/pdf/sarlaft2/${ayudaVenta.path_sarlaft2}')">PDF PJ</button>` : ''
