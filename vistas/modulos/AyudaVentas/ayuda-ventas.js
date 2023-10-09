@@ -167,12 +167,12 @@ const obtenerAyudaVentas = async () => {
             if (ayudaVenta.path_sarlaft || ayudaVenta.path_sarlaft2) {
                 let sarlaftButtons = '<td style="line-height: 200px;">';
                 sarlaftButtons += ayudaVenta.path_sarlaft
-                    ? `<a class="btn btn-alert" style="background: red; color: #fff; font-weight: 500;" href="https://allianzfcc.co/#/login" target="_blank">PDF PN</a>`
+                    ? `<a class="btn btn-alert" style="background: red; color: #fff; font-weight: 500;" href="${ayudaVenta.path_sarlaft}" target="_blank">PDF PN</a>`
                     : '';
                 partTemplate += sarlaftButtons + '</td>';
                 let sarlaftButtons2 = '<td style="line-height: 200px;">';
                 sarlaftButtons2 += ayudaVenta.path_sarlaft2
-                    ? `<a class="btn btn-alert" style="background: red; color: #fff; font-weight: 500;" href="https://allianzfcc.co/#/login" target="_blank">PDF PJ</a>`
+                    ? `<a class="btn btn-alert" style="background: red; color: #fff; font-weight: 500;" href="${ayudaVenta.path_sarlaft2}" target="_blank">PDF PJ</a>`
                     : '';
                 partTemplate += sarlaftButtons2 + '</td>';
             } else {
