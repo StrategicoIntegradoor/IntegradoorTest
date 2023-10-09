@@ -1,6 +1,5 @@
 $(document).ready(function () {
     let permisos = JSON.parse(permisosPlantilla);
-    console.log(permisos)
 })
 
                                /*==========================================
