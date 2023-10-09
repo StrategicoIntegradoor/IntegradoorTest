@@ -147,6 +147,7 @@ const obtenerAyudaVentas = async () => {
                 fecha_max1 = fecha_base
             }
             
+            console.log(ayudaVenta)
 
             const centrosDeInspeccion = (ayudaVenta.centro_de_inspeccion != null) 
                                             ? ayudaVenta.centro_de_inspeccion.split('-') : []
