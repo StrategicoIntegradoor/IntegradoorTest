@@ -234,7 +234,7 @@ AGREGAR USUARIO SELECT2 Y CONFIGURACIONES
 		theme: "bootstrap dpto1",
 		language: "es",
 		width: "100%",
-		placeholder: "Departamento",
+		placeholder: "Departamento*",
 		});
 		
 	$("#ingDptoCirculacion").change(function () {
@@ -246,7 +246,7 @@ AGREGAR USUARIO SELECT2 Y CONFIGURACIONES
 		theme: "bootstrap ciudad1",
 		language: "es",
 		width: "100%",
-		placeholder: "Ciudad", // Texto del placeholder del buscador
+		placeholder: "Ciudad*", // Texto del placeholder del buscador
 
 		});
 

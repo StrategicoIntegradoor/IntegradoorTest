@@ -321,7 +321,7 @@ MODAL AGREGAR USUARIO
 
                 <span class="input-group-addon"><i class="fa fa-home"></i></span>
 
-                <input type="text" class="form-control input-lg" name="AgregDireccion" id="AgregDireccion" placeholder="Dirección" required>
+                <input type="text" class="form-control input-lg" name="AgregDireccion" id="AgregDireccion" placeholder="Dirección*" required>
 
               </div>
 
