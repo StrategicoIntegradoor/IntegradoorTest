@@ -1583,7 +1583,7 @@ function cotizarOfertas() {
             /* Mapfre */
             cont.push(
 
-              fetch("https://grupoasistencia.com/motor_webservice_tst/mapfrecotizacion4", requestOptions)
+              fetch("https://grupoasistencia.com/motor_webservice/mapfrecotizacion4", requestOptions)
 
                 .then((res) => {
                   if (!res.ok) throw Error(res.statusText);
