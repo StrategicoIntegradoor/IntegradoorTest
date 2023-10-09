@@ -321,7 +321,7 @@ MODAL AGREGAR USUARIO
 
                 <span class="input-group-addon"><i class="fa fa-home"></i></span>
 
-                <input type="text" class="form-control input-lg" name="AgregDireccion" id="AgregDireccion" placeholder="Dirección">
+                <input type="text" class="form-control input-lg" name="AgregDireccion" id="AgregDireccion" placeholder="Dirección" required>
 
               </div>
 
@@ -392,7 +392,7 @@ MODAL AGREGAR USUARIO
               <div class="input-group">
 
                 <span class="input-group-addon"><i class="fa fa-home"></i></span>
-                <select class="form-control input-lg" name="ingciudadCirculacion" id="ingciudadCirculacion"></select>
+                <select class="form-control input-lg" name="ingciudadCirculacion" id="ingciudadCirculacion" required></select>
                 <!-- <div id="listaCiudades"></div> -->
 
               </div>
