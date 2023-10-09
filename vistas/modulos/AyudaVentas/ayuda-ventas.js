@@ -165,23 +165,26 @@ const obtenerAyudaVentas = async () => {
                 partTemplate += '<td></td>'
             }
             if (ayudaVenta.path_sarlaft || ayudaVenta.path_sarlaft2) {
-                // let sarlaftButtons = '<td style="line-height: 200px;">';
-                // sarlaftButtons += ayudaVenta.path_sarlaft
-                //     ? `<a class="btn btn-alert" style="background: red; color: #fff; font-weight: 500;" href="${ayudaVenta.path_sarlaft}" target="_blank">PDF PN</a>`
-                //     : '';
-                // partTemplate += sarlaftButtons + '</td>';
-                // let sarlaftButtons2 = '<td style="line-height: 200px;">';
-                // sarlaftButtons2 += ayudaVenta.path_sarlaft2
-                //     ? `<a class="btn btn-alert" style="background: red; color: #fff; font-weight: 500;" href="${ayudaVenta.path_sarlaft2}" target="_blank">PDF PJ</a>`
-                //     : '';
-                // partTemplate += sarlaftButtons2 + '</td>';
-                
+
+                if(ayudaVenta.aseguradora == 'Allianz' || ayudaVenta.aseguradora == 'Previsora'){
+                let sarlaftButtons = '<td style="line-height: 200px;">';
+                sarlaftButtons += ayudaVenta.path_sarlaft
+                    ? `<a class="btn btn-alert" style="background: red; color: #fff; font-weight: 500;" href="${ayudaVenta.path_sarlaft}" target="_blank">PDF PN</a>`
+                    : '';
+                partTemplate += sarlaftButtons + '</td>';
+                let sarlaftButtons2 = '<td style="line-height: 200px;">';
+                sarlaftButtons2 += ayudaVenta.path_sarlaft2
+                    ? `<a class="btn btn-alert" style="background: red; color: #fff; font-weight: 500;" href="${ayudaVenta.path_sarlaft2}" target="_blank">PDF PJ</a>`
+                    : '';
+                partTemplate += sarlaftButtons2 + '</td>';
+                }else{
                 let sarlaftButtons = '<td style="line-height: 200px;">'
                 sarlaftButtons += ayudaVenta.path_sarlaft ? `<button class="btn btn-alert" style="background: red; color: #fff; font-weight: 500;" onclick="onclick="validarPermisoPdfPersonaNatural('./vistas/modulos/AyudaVentas/pdf/sarlaft/${ayudaVenta.path_sarlaft}')">PDF PN</button>` : ''
                 partTemplate += sarlaftButtons + '</td>'
                 let sarlaftButtons2 = '<td style="line-height: 200px;">'
                 sarlaftButtons2 += ayudaVenta.path_sarlaft2 ? `<button class="btn btn-alert" style="background: red; color: #fff; font-weight: 500;" onclick="validarPermisoPdfPersonaJuridica('./vistas/modulos/AyudaVentas/pdf/sarlaft2/${ayudaVenta.path_sarlaft2}')">PDF PJ</button>` : ''
                 partTemplate += sarlaftButtons2 + '</td>'
+                }
             } else {
                 partTemplate += '<td></td>'
                 partTemplate += '<td></td>'
