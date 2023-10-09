@@ -175,7 +175,7 @@ const obtenerAyudaVentas = async () => {
                 //     ? `<a class="btn btn-alert" style="background: red; color: #fff; font-weight: 500;" href="${ayudaVenta.path_sarlaft2}" target="_blank">PDF PJ</a>`
                 //     : '';
                 // partTemplate += sarlaftButtons2 + '</td>';
-
+                
                 let sarlaftButtons = '<td style="line-height: 200px;">'
                 sarlaftButtons += ayudaVenta.path_sarlaft ? `<button class="btn btn-alert" style="background: red; color: #fff; font-weight: 500;" onclick="onclick="validarPermisoPdfPersonaNatural('./vistas/modulos/AyudaVentas/pdf/sarlaft/${ayudaVenta.path_sarlaft}')">PDF PN</button>` : ''
                 partTemplate += sarlaftButtons + '</td>'
