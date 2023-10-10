@@ -101,13 +101,20 @@ if ($numerofilas4 > 0) {
 //echo ($fila["Num_recargas"]);
 
 $idRol = $_SESSION["permisos"]["idRol"];
-if($idRol == 19){
-  echo '<script>
-
-    window.location = "inicio";
-
-  </script>';
+if ($idRol == 19) {
+    // Mostrar la alerta usando SweetAlert
+    echo '<script>
+        Swal.fire({
+            title: "Ups, estás en el ambiente de producción",
+            text: "Te redirigiremos al ambiente normal",
+            icon: "info",
+        }).then(function () {
+            // Redireccionar al enlace deseado
+            window.location = "https://integradoor.com/app/";
+        });
+    </script>';
 }
+
 
 if ($_SESSION["permisos"]["Cotizarlivianos"] != "x") {
 
