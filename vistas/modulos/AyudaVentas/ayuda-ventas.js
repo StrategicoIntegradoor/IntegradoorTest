@@ -56,8 +56,7 @@ const construirHtmlCentrosDeInspeccion = centrosDeInspeccion => {
         if (centro.trim() !== '') {
             // Dividir el centro en texto y enlace usando el espacio como separador
             const partes = centro.split(' ');
-            console.log(partes)
-
+            
             if (partes.length === 2) {
                 const texto = partes[0];
                 const enlace = partes[1];
@@ -67,7 +66,7 @@ const construirHtmlCentrosDeInspeccion = centrosDeInspeccion => {
 
                 if (esEnlace) {
                     // Si es un enlace, envuélvelo en una etiqueta <a> para que sea cliclable
-                    html += `<li>${texto} <a href="${enlace}" target="_blank">${enlace}</a></li>`;
+                    html += `<li>${texto} - <a href="${enlace}" target="_blank">${enlace}</a></li>`;
                 } else {
                     // Si no es un enlace, muestra el valor como está
                     html += `<li>${centro}</li>`;
@@ -82,6 +81,7 @@ const construirHtmlCentrosDeInspeccion = centrosDeInspeccion => {
     html += '</ul>';
     return html;
 };
+
 
 
 
