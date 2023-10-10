@@ -56,12 +56,11 @@ const construirHtmlCentrosDeInspeccion = centrosDeInspeccion => {
         if (centro.trim() !== '') {
             // Dividir el centro en texto y enlace usando el espacio como separador
             const partes = centro.split(' ');
-            
+            console.log(partes)
+
             if (partes.length === 2) {
                 const texto = partes[0];
                 const enlace = partes[1];
-                console.log(texto)
-                console.log(enlace)
 
                 // Verifica si el valor es un enlace (comienza con "http" o "https")
                 const esEnlace = enlace.startsWith('http') || enlace.startsWith('https');
