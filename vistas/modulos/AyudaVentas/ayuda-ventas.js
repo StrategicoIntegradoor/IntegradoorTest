@@ -57,7 +57,7 @@ const construirHtmlCentrosDeInspeccion = centrosDeInspeccion => {
             // Dividir el centro en texto y enlace usando el espacio como separador
             // const partes = centro.split(" ");
             const partes = centro.indexOf(' ');
-            if (partes.length === 2) {
+            if (partes !== -1) {
                 // Extrae el texto y el enlace utilizando la posición del primer espacio
                 // const texto = partes[0];
                 // const enlace = partes[1];
