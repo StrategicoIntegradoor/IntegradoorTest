@@ -83,6 +83,7 @@ const construirHtmlCentrosDeInspeccion = centrosDeInspeccion => {
 };
 
 
+
 const construirHtmlContinuidad = continuidades => {
     if (continuidades.length === 0) return ''
     let html = '<ul style="margin-top: 60px;">'
