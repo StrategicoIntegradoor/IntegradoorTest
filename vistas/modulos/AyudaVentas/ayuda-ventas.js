@@ -61,8 +61,8 @@ const construirHtmlCentrosDeInspeccion = centrosDeInspeccion => {
                 const texto = partes[0];
                 let enlace = partes[1];
 
-                enlace = enlace.replace(/ /g, '-');
-
+                enlace = centro.replace(/[\s\n\r]+/g, '-');
+                console.log(enlace)
                 // Verifica si el valor es un enlace (comienza con "http" o "https")
                 const esEnlace = enlace.startsWith('http') || enlace.startsWith('https');
 
