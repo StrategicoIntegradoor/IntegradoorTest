@@ -3,16 +3,51 @@ $(document).ready(function () {
 });
 
 // Funciones
-const construirHtmlCentrosDeInspeccion = centrosDeInspeccion => {
-    if (centrosDeInspeccion.length === 0) return ''
-    let html = '<ul style="margin-top: 60px;" >'
-    centrosDeInspeccion.forEach(centro => {
-        if (centro !== '') html += `<li>- ${centro}</li>`
-    })
-    html += '</ul>'
+// const construirHtmlCentrosDeInspeccion = centrosDeInspeccion => {
+//     if (centrosDeInspeccion.length === 0) return ''
+//     let html = '<ul style="margin-top: 60px;" >'
+//     centrosDeInspeccion.forEach(centro => {
+//         if (centro !== '') html += `<li>- ${centro}</li>`
+//     })
+//     html += '</ul>'
 
-    return html
-}
+//     return html
+// }
+
+const construirHtmlCentrosDeInspeccion = centrosDeInspeccion => {
+    if (centrosDeInspeccion.length === 0) return '';
+    let html = '<ul style="margin-top: 60px;">';
+
+    centrosDeInspeccion.forEach(centro => {
+        if (centro.trim() !== '') {
+            // Dividir el centro en texto y enlace usando el espacio como separador
+            const partes = centro.split(' ');
+            
+            if (partes.length === 2) {
+                const texto = partes[0];
+                const enlace = partes[1];
+
+                // Verifica si el valor es un enlace (comienza con "http" o "https")
+                const esEnlace = enlace.startsWith('http') || enlace.startsWith('https');
+
+                if (esEnlace) {
+                    // Si es un enlace, envuélvelo en una etiqueta <a> para que sea cliclable
+                    html += `<li><a href="${enlace}" target="_blank">${texto}</a></li>`;
+                } else {
+                    // Si no es un enlace, muestra el texto y el enlace sin enlace
+                    html += `<li>${texto} <a href="${enlace}" target="_blank">${enlace}</a></li>`;
+                }
+            } else {
+                // Si no se pudo dividir en texto y enlace, muestra el valor como está
+                html += `<li>${centro}</li>`;
+            }
+        }
+    });
+
+    html += '</ul>';
+    return html;
+};
+
 const construirHtmlContinuidad = continuidades => {
     if (continuidades.length === 0) return ''
     let html = '<ul style="margin-top: 60px;">'
