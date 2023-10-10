@@ -59,10 +59,7 @@ const construirHtmlCentrosDeInspeccion = centrosDeInspeccion => {
             
             if (partes.length === 2) {
                 const texto = partes[0];
-                const enlace1 = partes[1];
-
-                // Reemplazar los espacios con %20 en el enlace
-                const enlace = enlace1.replace(/ /g, '%20');
+                const enlace = partes[1];
 
                 // Verifica si el valor es un enlace (comienza con "http" o "https")
                 const esEnlace = enlace.startsWith('http') || enlace.startsWith('https');
