@@ -55,11 +55,13 @@ const construirHtmlCentrosDeInspeccion = centrosDeInspeccion => {
     centrosDeInspeccion.forEach(centro => {
         if (centro.trim() !== '') {
             // Dividir el centro en texto y enlace usando el espacio como separador
-            const partes = centro.split(' ');
+            // const partes = centro.split(' ');
+            const primerEspacio = centro.indexOf(' ');
             
-            if (partes.length === 2) {
-                const texto = partes[0];
-                const enlace = partes[1];
+            if (primerEspacio !== -1) {
+                // Extrae el texto y el enlace utilizando la posición del primer espacio
+                const texto = centro.substring(0, primerEspacio);
+                const enlace = centro.substring(primerEspacio + 1);
 
                 // Verifica si el valor es un enlace (comienza con "http" o "https")
                 const esEnlace = enlace.startsWith('http') || enlace.startsWith('https');
