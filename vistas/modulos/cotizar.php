@@ -105,7 +105,7 @@ if ($idRol == 19) {
     // Mostrar la alerta usando SweetAlert
     echo '<script>
         Swal.fire({
-            title: "Ups, estás en el ambiente de producción",
+            title: "Ups, estás en el ambiente equivocado",
             text: "Te redirigiremos al espacio donde podras cotizar con normalidad",
             icon: "info",
         }).then(function () {
