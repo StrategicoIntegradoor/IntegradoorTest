@@ -48,57 +48,33 @@ $(document).ready(function () {
 //     return html;
 // };
 
-// const construirHtmlCentrosDeInspeccion = centrosDeInspeccion => {
-//     if (centrosDeInspeccion.length === 0) return '';
-//     let html = '<ul style="margin-top: 60px;">';
-
-//     centrosDeInspeccion.forEach(centro => {
-//         if (centro.trim() !== '') {
-//             // Dividir el centro en texto y enlace usando el espacio como separador
-//             // const partes = centro.split(' ');
-//             const primerEspacio = centro.indexOf(' ');
-            
-//             if (primerEspacio !== -1) {
-//                 // Extrae el texto y el enlace utilizando la posición del primer espacio
-//                 const texto = centro.substring(0, primerEspacio);
-//                 const enlace = centro.substring(primerEspacio + 1);
-//                 console.log(enlace)
-
-//                 // Verifica si el valor es un enlace (comienza con "http" o "https")
-//                 const esEnlace = enlace.startsWith('http') || enlace.startsWith('https');
-
-//                 if (esEnlace) {
-//                     // Si es un enlace, envuélvelo en una etiqueta <a> para que sea cliclable
-//                     html += `<li>${texto} - <a href="${enlace}" target="_blank">${enlace}</a></li>`;
-//                 } else {
-//                     // Si no es un enlace, muestra el valor como está
-//                     html += `<li>${centro}</li>`;
-//                 }
-//             } else {
-//                 // Si no se pudo dividir en texto y enlace, muestra el valor como está
-//                 html += `<li>${centro}</li>`;
-//             }
-//         }
-//     });
-
-//     html += '</ul>';
-//     return html;
-// };
-
 const construirHtmlCentrosDeInspeccion = centrosDeInspeccion => {
     if (centrosDeInspeccion.length === 0) return '';
     let html = '<ul style="margin-top: 60px;">';
 
     centrosDeInspeccion.forEach(centro => {
         if (centro.trim() !== '') {
-            // Verifica si el valor es un enlace (comienza con "http" o "https")
-            const esEnlace = centro.startsWith('http') || centro.startsWith('https');
+            // Dividir el centro en texto y enlace usando el espacio como separador
+            const partes = explode(" ", centro);
+            
+            if (partes.length === 2) {
+                // Extrae el texto y el enlace utilizando la posición del primer espacio
+                const texto = partes[0];
+                const enlace = partes[1];
+                console.log(enlace)
 
-            if (esEnlace) {
-                // Si es un enlace, envuélvelo en una etiqueta <a> para que sea cliclable
-                html += `<li><a href="${centro}" target="_blank">${centro}</a></li>`;
+                // Verifica si el valor es un enlace (comienza con "http" o "https")
+                const esEnlace = enlace.startsWith('http') || enlace.startsWith('https');
+
+                if (esEnlace) {
+                    // Si es un enlace, envuélvelo en una etiqueta <a> para que sea cliclable
+                    html += `<li>${texto} - <a href="${enlace}" target="_blank">${enlace}</a></li>`;
+                } else {
+                    // Si no es un enlace, muestra el valor como está
+                    html += `<li>${centro}</li>`;
+                }
             } else {
-                // Si no es un enlace, muestra el valor como está
+                // Si no se pudo dividir en texto y enlace, muestra el valor como está
                 html += `<li>${centro}</li>`;
             }
         }
@@ -107,10 +83,6 @@ const construirHtmlCentrosDeInspeccion = centrosDeInspeccion => {
     html += '</ul>';
     return html;
 };
-
-
-
-
 const construirHtmlContinuidad = continuidades => {
     if (continuidades.length === 0) return ''
     let html = '<ul style="margin-top: 60px;">'
