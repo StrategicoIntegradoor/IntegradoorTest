@@ -240,20 +240,52 @@ const agregarCentroDeInspeccion = () => {
     d.querySelector('#centro_inspeccion').value = ''
 }
 
+// const llenarCentrosDeInspeccion = _centros => {
+//     const d = document
+//     let template = ''
+//     _centros.forEach((centro, index) => {
+//         template += `
+//         <div class="form-group">
+//             <input type="hidden" value="${index}" />
+//             <input class="form-control" type="text" id="centro_value_${index}" value="${centro}" />
+//             <button class="btn btn-danger" onclick="editarCentroInspeccion(${index}, 'centro_value_${index}')">Editar   </button>
+//         </div>
+//         `
+//     })
+//     d.querySelector('#centros_de_inspeccion').innerHTML = template
+// }
+
 const llenarCentrosDeInspeccion = _centros => {
-    const d = document
-    let template = ''
+    const d = document;
+    let template = '';
     _centros.forEach((centro, index) => {
-        template += `
-        <div class="form-group">
-            <input type="hidden" value="${index}" />
-            <input class="form-control" type="text" id="centro_value_${index}" value="${centro}" />
-            <button class="btn btn-danger" onclick="editarCentroInspeccion(${index}, 'centro_value_${index}')">Editar   </button>
-        </div>
-        `
-    })
-    d.querySelector('#centros_de_inspeccion').innerHTML = template
-}
+        // Verifica si el valor es un enlace (comienza con "http" o "https")
+        const esEnlace = centro.startsWith('http') || centro.startsWith('https');
+        
+        if (esEnlace) {
+            // Si es un enlace, envuélvelo en una etiqueta <a>
+            template += `
+            <div class="form-group">
+                <input type="hidden" value="${index}" />
+                <a href="${centro}" target="_blank">${centro}</a>
+                <button class="btn btn-danger" onclick="editarCentroInspeccion(${index}, 'centro_value_${index}')">Editar</button>
+            </div>
+            `;
+        } else {
+            // Si no es un enlace, muestra el texto normalmente
+            template += `
+            <div class="form-group">
+                <input type="hidden" value="${index}" />
+                <input class="form-control" type="text" id="centro_value_${index}" value="${centro}" />
+                <button class="btn btn-danger" onclick="editarCentroInspeccion(${index}, 'centro_value_${index}')">Editar</button>
+            </div>
+            `;
+        }
+    });
+    d.querySelector('#centros_de_inspeccion').innerHTML = template;
+};
+
+
 const editarCentroInspeccion = (_index, _centro_value_index) => {
     const d = document
     centros[_index] = d.querySelector('#' + _centro_value_index).value
