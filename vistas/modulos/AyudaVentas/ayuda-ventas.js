@@ -252,7 +252,7 @@ const llenarCentrosDeInspeccion = _centros => {
         </div>
         `
     })
-    // d.querySelector('#centros_de_inspeccion').innerHTML = template
+    d.querySelector('#centros_de_inspeccion').innerHTML = template
 }
 
 const editarCentroInspeccion = (_index, _centro_value_index) => {
