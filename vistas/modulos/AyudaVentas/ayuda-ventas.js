@@ -59,7 +59,7 @@ const construirHtmlCentrosDeInspeccion = centrosDeInspeccion => {
             
             if (partes.length === 2) {
                 const texto = partes[0];
-                const enlace = partes[1];
+                let enlace = partes[1];
 
                 enlace = enlace.replace(/ /g, '-');
 
