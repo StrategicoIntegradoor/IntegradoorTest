@@ -62,6 +62,7 @@ const construirHtmlCentrosDeInspeccion = centrosDeInspeccion => {
                 // Extrae el texto y el enlace utilizando la posición del primer espacio
                 const texto = centro.substring(0, primerEspacio);
                 const enlace = centro.substring(primerEspacio + 1);
+                console.log(enlace)
 
                 // Verifica si el valor es un enlace (comienza con "http" o "https")
                 const esEnlace = enlace.startsWith('http') || enlace.startsWith('https');
