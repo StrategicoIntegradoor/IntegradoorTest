@@ -1594,9 +1594,9 @@ function cotizarOfertas() {
                   let result = []
                   result.push(ofertas)
 
-                  if (typeof result[0].Resultado !== 'undefined') {
+                  if (typeof ofertas[0].Resultado !== 'undefined') {
                     agregarAseguradoraFallida('Mapfre')
-                    result[0].Mensajes.forEach(mensaje => {
+                    ofertas[0].Mensajes.forEach(mensaje => {
                       mostrarAlertarCotizacionFallida('Mapfre', mensaje)
                     })
 
