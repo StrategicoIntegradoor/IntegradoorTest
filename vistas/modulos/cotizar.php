@@ -106,7 +106,7 @@ if ($idRol == 19) {
     echo '<script>
         Swal.fire({
             title: "Ups, estás en el ambiente de producción",
-            text: "Te redirigiremos al ambiente normal",
+            text: "Te redirigiremos al espacio donde podras cotizar con normalidad",
             icon: "info",
         }).then(function () {
             // Redireccionar al enlace deseado
