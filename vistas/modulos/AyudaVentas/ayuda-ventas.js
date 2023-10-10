@@ -61,6 +61,9 @@ const construirHtmlCentrosDeInspeccion = centrosDeInspeccion => {
                 const texto = partes[0];
                 const enlace = partes[1];
 
+                // Reemplazar los espacios con %20 en el enlace
+                enlace = enlace.replace(/ /g, '%20');
+
                 // Verifica si el valor es un enlace (comienza con "http" o "https")
                 const esEnlace = enlace.startsWith('http') || enlace.startsWith('https');
 
@@ -219,8 +222,6 @@ const obtenerAyudaVentas = async () => {
                 fecha_max1 = fecha_base
             }
             
-            console.log(ayudaVenta)
-
             const centrosDeInspeccion = (ayudaVenta.centro_de_inspeccion != null) 
                                             ? ayudaVenta.centro_de_inspeccion.split('-') : []
             const continuidades = (ayudaVenta.continuidad != null) 
