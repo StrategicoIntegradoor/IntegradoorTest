@@ -100,7 +100,14 @@ if ($numerofilas4 > 0) {
 
 //echo ($fila["Num_recargas"]);
 
+$idRol = $_SESSION["permisos"]["idRol"];
+if($idRol == 19){
+  echo '<script>
 
+    window.location = "inicio";
+
+  </script>';
+}
 
 if ($_SESSION["permisos"]["Cotizarlivianos"] != "x") {
 
