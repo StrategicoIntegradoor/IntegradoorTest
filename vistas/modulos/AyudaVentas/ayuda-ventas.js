@@ -237,7 +237,7 @@ const agregarCentroDeInspeccion = () => {
     </div>
     `
     d.querySelector('#centros_de_inspeccion').innerHTML += template
-    d.querySelector('#centro_inspeccion').value = ''
+    // d.querySelector('#centro_inspeccion').value = ''
 }
 
 const llenarCentrosDeInspeccion = _centros => {
