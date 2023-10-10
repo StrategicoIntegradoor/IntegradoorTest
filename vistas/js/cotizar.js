@@ -1594,7 +1594,7 @@ function cotizarOfertas() {
                   let result = []
                   result.push(ofertas)
 
-                  if (typeof result[0].Resultado !== 'undefined' ||  typeof ofertas[0].Resultado !== 'undefined') {
+                  if (typeof ofertas[0].Resultado !== 'undefined') {
                     agregarAseguradoraFallida('Mapfre')
                     ofertas[0].Mensajes.forEach(mensaje => {
                       mostrarAlertarCotizacionFallida('Mapfre', mensaje)
@@ -1602,12 +1602,12 @@ function cotizarOfertas() {
 
                   } else {
 
-                    validarOfertas(result);
-                    let successMap = true;
-                    if (successMap) {
+                    validarOfertas(ofertas);
+                    // let successMap = true;
+                    // if (successMap) {
                       mostrarAlertaCotizacionExitosa('Mapfre')
-                      successMap = false
-                    }
+                      // successMap = false
+                    // }
                   }
                 })
                 .catch((err) => {
