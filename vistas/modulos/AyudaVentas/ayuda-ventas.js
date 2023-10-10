@@ -21,7 +21,7 @@ $(document).ready(function () {
 //     centrosDeInspeccion.forEach(centro => {
 //         if (centro.trim() !== '') {
 //             // Dividir el centro en texto y enlace usando el espacio como separador
-//             const partes = centro.split(' ');
+            // const partes = centro.split(' ');
             
 //             if (partes.length === 2) {
 //                 const texto = partes[0];
@@ -55,7 +55,7 @@ const construirHtmlCentrosDeInspeccion = centrosDeInspeccion => {
     centrosDeInspeccion.forEach(centro => {
         if (centro.trim() !== '') {
             // Dividir el centro en texto y enlace usando el espacio como separador
-            const partes = explode(" ", centro);
+            const partes = centro.split(" ");
             
             if (partes.length === 2) {
                 // Extrae el texto y el enlace utilizando la posición del primer espacio
