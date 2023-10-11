@@ -1581,39 +1581,39 @@ function cotizarOfertas() {
             // );
 
             /* Mapfre */
-            // cont.push(
+            cont.push(
 
-            //   fetch("https://grupoasistencia.com/motor_webservice_tst/mapfrecotizacion4", requestOptions)
+              fetch("https://grupoasistencia.com/motor_webservice_tst/mapfrecotizacion4", requestOptions)
 
-            //     .then((res) => {
-            //       if (!res.ok) throw Error(res.statusText);
-            //       return res.json();
-            //     })
-            //     .then((ofertas) => {
-            //       console.log(ofertas)
-            //       let result = []
-            //       result.push(ofertas)
+                .then((res) => {
+                  if (!res.ok) throw Error(res.statusText);
+                  return res.json();
+                })
+                .then((ofertas) => {
+                  console.log(ofertas)
+                  let result = []
+                  result.push(ofertas)
 
-            //       if (typeof ofertas[0].Resultado !== 'undefined') {
-            //         agregarAseguradoraFallida('Mapfre')
-            //         ofertas[0].Mensajes.forEach(mensaje => {
-            //           mostrarAlertarCotizacionFallida('Mapfre', mensaje)
-            //         })
+                  if (typeof ofertas[0].Resultado !== 'undefined') {
+                    agregarAseguradoraFallida('Mapfre')
+                    ofertas[0].Mensajes.forEach(mensaje => {
+                      mostrarAlertarCotizacionFallida('Mapfre', mensaje)
+                    })
 
-            //       } else {
+                  } else {
 
-            //         validarOfertas(ofertas);
-            //         // let successMap = true;
-            //         // if (successMap) {
-            //           mostrarAlertaCotizacionExitosa('Mapfre')
-            //           // successMap = false
-            //         // }
-            //       }
-            //     })
-            //     .catch((err) => {
-            //       console.error(err);
-            //     })
-            // );
+                    validarOfertas(ofertas);
+                    // let successMap = true;
+                    // if (successMap) {
+                      mostrarAlertaCotizacionExitosa('Mapfre')
+                      // successMap = false
+                    // }
+                  }
+                })
+                .catch((err) => {
+                  console.error(err);
+                })
+            );
 
             /* Previsora */
             // cont.push(
@@ -1663,28 +1663,28 @@ function cotizarOfertas() {
             // );
 
             /* Bolivar */
-            cont.push(
-              fetch("https://grupoasistencia.com/motor_webservice_tst/Bolivar", requestOptions)
-                .then((res) => {
-                  if (!res.ok) throw Error(res.statusText);
-                  return res.json();
-                })
-                .then((ofertas) => {
-                  console.log(ofertas)
-                  if (typeof ofertas[0].Resultado !== 'undefined') {
-                    agregarAseguradoraFallida('Bolivar')
-                    ofertas[0].Mensajes.forEach(mensaje => {
-                      mostrarAlertarCotizacionFallida('Bolivar', mensaje)
-                    })
-                  } else {
-                    validarOfertas(ofertas);
-                    mostrarAlertaCotizacionExitosa('Bolivar')
-                  }
-                })
-                .catch((err) => {
-                  console.error(err);
-                })
-            );
+            // cont.push(
+            //   fetch("https://grupoasistencia.com/motor_webservice_tst/Bolivar", requestOptions)
+            //     .then((res) => {
+            //       if (!res.ok) throw Error(res.statusText);
+            //       return res.json();
+            //     })
+            //     .then((ofertas) => {
+            //       console.log(ofertas)
+            //       if (typeof ofertas[0].Resultado !== 'undefined') {
+            //         agregarAseguradoraFallida('Bolivar')
+            //         ofertas[0].Mensajes.forEach(mensaje => {
+            //           mostrarAlertarCotizacionFallida('Bolivar', mensaje)
+            //         })
+            //       } else {
+            //         validarOfertas(ofertas);
+            //         mostrarAlertaCotizacionExitosa('Bolivar')
+            //       }
+            //     })
+            //     .catch((err) => {
+            //       console.error(err);
+            //     })
+            // );
 
             /* HDI */
             // cont.push(
@@ -1865,27 +1865,27 @@ function cotizarOfertas() {
 
           // }
           //Liberty
-          cont.push(
-            fetch("https://grupoasistencia.com/motor_webservice/Liberty", requestOptions)
-              .then((res) => {
-                if (!res.ok) throw Error(res.statusText);
-                return res.json();
-              })
-              .then((ofertas) => {
-                if (typeof ofertas[0].Resultado !== 'undefined') {
-                  agregarAseguradoraFallida('Liberty')
-                  ofertas[0].Mensajes.forEach(mensaje => {
-                    mostrarAlertarCotizacionFallida('Liberty', mensaje)
-                  })
-                } else {
-                  validarOfertas(ofertas);
-                  mostrarAlertaCotizacionExitosa('Liberty')
-                }
-              })
-              .catch((err) => {
-                console.error(err);
-              })
-          );
+          // cont.push(
+          //   fetch("https://grupoasistencia.com/motor_webservice/Liberty", requestOptions)
+          //     .then((res) => {
+          //       if (!res.ok) throw Error(res.statusText);
+          //       return res.json();
+          //     })
+          //     .then((ofertas) => {
+          //       if (typeof ofertas[0].Resultado !== 'undefined') {
+          //         agregarAseguradoraFallida('Liberty')
+          //         ofertas[0].Mensajes.forEach(mensaje => {
+          //           mostrarAlertarCotizacionFallida('Liberty', mensaje)
+          //         })
+          //       } else {
+          //         validarOfertas(ofertas);
+          //         mostrarAlertaCotizacionExitosa('Liberty')
+          //       }
+          //     })
+          //     .catch((err) => {
+          //       console.error(err);
+          //     })
+          // );
 
             /* Allianz */
             // cont.push(
