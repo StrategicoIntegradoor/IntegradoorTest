@@ -956,7 +956,7 @@ function registrarOferta(
                                       <div class="col-xs-12 col-sm-6 col-md-4">
                                           <ul class="list-group">
                                               <li class="list-group-item">
-                                                  <span class="badge">* $${valorRC}</span>
+                                                  <span class="badge">* $${PT}</span>
                                                   Responsabilidad Civil (RCE)
                                               </li>
                                               <li class="list-group-item">
