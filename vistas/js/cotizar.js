@@ -1231,6 +1231,7 @@ const mostrarOferta = (
 								</div>
 							</div>
 					`;
+  console.log(cardCotizacion)
   $("#cardCotizacion").append(cardCotizacion);
 };
 
