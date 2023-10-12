@@ -910,7 +910,6 @@ function registrarOferta(
     prima,
     producto,
     numCotizOferta,
-    valorRC,
     PT,
     PP,
     CE,
