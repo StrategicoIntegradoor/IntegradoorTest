@@ -1027,6 +1027,7 @@ function registrarOferta(
   
   // VALIDA QUE LAS OFERTAS COTIZADAS HAYAN SIDO GUARDADAS EN SU TOTALIDAD
   function validarOfertasPesados(ofertas) {
+    console.log(ofertas)
     $responsabilidadCivilFamiliar = ofertas[0].responsabilidad_civil_familiar;
     ofertas.forEach((oferta, i) => {
         var numCotizacion = oferta.numero_cotizacion;
