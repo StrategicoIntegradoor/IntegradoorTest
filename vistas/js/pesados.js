@@ -1022,8 +1022,7 @@ function registrarOferta(
                               </div>
                       `;
 
-    var_dump(cardCotizacion);
-    die();
+    console.log(cardCotizacion);
     $("#cardCotizacion").append(cardCotizacion);
   };
   
