@@ -560,6 +560,7 @@ if ($_SESSION["permisos"]["Cotizarpesados"] != "x") {
 
 </div>
 
+<script src="vistas/js/cotizar.js?v=<?php echo (rand()); ?>"></script>
 
 <?php
 
