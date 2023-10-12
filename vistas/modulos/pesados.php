@@ -82,7 +82,7 @@ if ($_SESSION["permisos"]["Cotizarpesados"] != "x") {
                         </div>
                         <div class="col-xs-12 col-sm-6 col-md-6 form-group" id="contenPlaca">
                           <label for="placaVeh">Placa</label>
-                          <input type="text" minlength="6" maxlength="6" class="form-control" id="placaVeh" required>
+                          <input type="text" minlength="6" maxlength="6" class="form-control" id="placaVeh" required placeholder="Placa">
                         </div>
                         <div class="col-xs-12 col-sm-6 col-md-6 form-group" id="contenCeroKM">
                           <label>Vehiculo 0 KM?</label>
@@ -113,7 +113,7 @@ if ($_SESSION["permisos"]["Cotizarpesados"] != "x") {
                     </div>
                     <div class="col-xs-12 col-sm-6 col-md-3 form-group">
                       <label for="numDocumentoID">No. Documento</label>
-                      <input type="text" maxlength="10" class="form-control" id="numDocumentoID" required>
+                      <input type="text" maxlength="10" class="form-control" id="numDocumentoID" required placeholder="Número de Documento">
                     </div>
 
                     <div class="col-xs-12 col-sm-6 col-md-3 form-group">
@@ -181,6 +181,7 @@ if ($_SESSION["permisos"]["Cotizarpesados"] != "x") {
                       <label for="genero">Genero</label>
                       <select class="form-control" id="genero" required>
                         <option value=""></option>
+                        <option value="" selected>Género</option>
                         <option value="1">Masculino</option>
                         <option value="2">Femenino</option>
                       </select>
@@ -190,6 +191,7 @@ if ($_SESSION["permisos"]["Cotizarpesados"] != "x") {
                       <label for="estadoCivil">Estado Civil</label>
                       <select class="form-control" id="estadoCivil" required>
                         <option value=""></option>
+                        <option value="" selected>Estado Civil</option>
                         <option value="1">Soltero (a)</option>
                         <option value="2">Casado (a)</option>
                         <option value="3">Viudo (a)</option>
