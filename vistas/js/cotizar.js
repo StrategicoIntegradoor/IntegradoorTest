@@ -1337,20 +1337,20 @@ function cotizarOfertas() {
         },
         ALLIANZ: {
           cre_alli_sslcertfile: cre_alli_sslcertfile,
-          cre_alli_sslkeyfile: cre_alli_sslkeyfile, 
+          cre_alli_sslkeyfile: cre_alli_sslkeyfile,
           cre_alli_passphrase: cre_alli_passphrase,
           cre_alli_partnerid: cre_alli_partnerid,
-          cre_alli_agentid: cre_alli_agentid, 
+          cre_alli_agentid: cre_alli_agentid,
           cre_alli_partnercode: cre_alli_partnercode,
           cre_alli_agentcode: cre_alli_agentcode
         },
-        ESTADO:{
-          cre_est_usuario : cre_est_usuario,
-          cre_equ_contrasena : cre_equ_contrasena,
-          Cre_Est_Entity_Id : Cre_Est_Entity_Id,
-          cre_est_zona : cre_est_zona
+        ESTADO: {
+          cre_est_usuario: cre_est_usuario,
+          cre_equ_contrasena: cre_equ_contrasena,
+          Cre_Est_Entity_Id: Cre_Est_Entity_Id,
+          cre_est_zona: cre_est_zona
         },
-        
+
       };
 
       var requestOptions = {
@@ -3357,14 +3357,19 @@ document.querySelector('#btn-consultar-fasecolda').addEventListener('click', e =
   if (fasecolda === '' || modelo === '') { return }
   consulDatosFasecolda(fasecolda, modelo)
     .then(data => {
-      if (typeof data.marcaVeh === 'undefined') { return }
-      $("#txtClaseVeh").val(data.claseVeh)
-      $("#txtMarcaVeh").val(data.marcaVeh)
-      $("#txtReferenciaVeh").val(data.lineaVeh)
-      $("#txtValorFasecolda").val(data.valorVeh)
-      document.querySelector('#txtFasecolda').value = fasecolda
-      document.querySelector('#txtModeloVeh').value = modelo
-      $('#staticBackdrop').modal('hide')
+      if (typeof data.marcaVeh === 'undefined') {
+        alert("Vehículo no Encontrado");
+      } else {
+        alert("Vehículo Encontrado");
+        $("#txtClaseVeh").val(data.claseVeh);
+        $("#txtMarcaVeh").val(data.marcaVeh);
+        $("#txtReferenciaVeh").val(data.lineaVeh);
+        $("#txtValorFasecolda").val(data.valorVeh);
+        document.querySelector('#txtFasecolda').value = fasecolda;
+        document.querySelector('#txtModeloVeh').value = modelo;
+        $('#staticBackdrop').modal('hide');
+      }
+
     }).catch(err => {
       console.log(err)
     })
