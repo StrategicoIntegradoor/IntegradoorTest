@@ -426,6 +426,7 @@ function masAseg() {
   
   // Permite consultar la informacion del vehiculo por medio de la Placa (Seguros del Estado)
   function consulPlacaPesados() {
+    console.log("CHECKPOINT FLUJO COTIZAR PESADOS")
     var numplaca = document.getElementById("placaVeh").value;
     var valnumplaca = numplaca.toUpperCase(); // Convierte la Placa en Mayusculas
     var tipoDocumentoID = document.getElementById("tipoDocumentoID").value;
@@ -578,7 +579,6 @@ function masAseg() {
   
   // CONSULTA LA GUIA PARA OBTENER EL CODIGO FASECOLDA MANUALMENTE
   function consulCodFasecolda() {
-    console.log("CHECKPOINT FLUJO COTIZAR PESADOS")
     var claseVeh = document.getElementById("clase").value;
     var marcaVeh = document.getElementById("Marca").value;
     var edadVeh = document.getElementById("edad").value;
@@ -1118,9 +1118,9 @@ function registrarOferta(
     return false
   }
   
-  document.querySelector('#btnReCotizarFallidas').addEventListener('click', () => {
-    cotizarOfertasPesados()
-  })
+//   document.querySelector('#btnReCotizarFallidas').addEventListener('click', () => {
+//     cotizarOfertasPesados()
+//   })
   
 
 function cotizarOfertasPesados() {
