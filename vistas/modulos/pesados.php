@@ -512,6 +512,45 @@ if ($_SESSION["permisos"]["Cotizarpesados"] != "x") {
             </div>
           </form>
 
+
+
+          <div id="contenParrilla" style="display: none;">
+            <div class="col-lg-12 form-parrilla">
+              <div class="row row-parrilla">
+                <div class="col-xs-12 col-sm-6 col-md-3">
+                  <label for="">PARRILLA DE COTIZACIÓNES</label>
+                </div>
+              </div>
+            </div>
+            <div id="cardCotizacion">
+              <div class="col-lg-12">
+                <div class="card-ofertas">
+                  <div class="row card-body">
+                    <div class="card-body col-sm-6 col-md-6">
+                      <div style="margin: 20px 25px;" class="exitosas">
+                        <p style="color: #88d600;"><b>Aseguradoras cotizadas</b></p>
+                      </div>
+                    </div>
+                    <div class="card-body col-sm-6 col-md-6">
+                      <div style="margin: 20px 25px;" class="fallidas">
+                        <p style="color: #88d600;"><b>Aseguradoras no cotizadas</b></p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row button-recotizar" style="display: none; margin:5px">
+                    <div class="col-md-6"></div>
+                    <div class="col-xs-12 col-sm-12 col-md-3 form-group">
+                      <button class="btn btn-primary btn-block" id="btnReCotizarFallidas">Recotizar Ofertas Fallidas</button>
+                    </div>
+                    <div class="col-md-3"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div id="contenCotizacionPDF" style="margin-top: 15px;">
+            </div>
+          </div>
         </div>
 
         <!-- CAMPOS OCULTOS PARA OPTENER LA INFORMACION-->
