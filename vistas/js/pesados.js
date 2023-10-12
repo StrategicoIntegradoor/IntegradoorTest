@@ -926,6 +926,7 @@ function registrarOferta(
                                       <div class="col-xs-12 col-sm-6 col-md-2 oferta-logo">
                                       <center>
   
+                                          <img src='vistas/img/logos/${logo}'>
   
                     </center>  
   
@@ -1021,8 +1022,6 @@ function registrarOferta(
                                   </div>
                               </div>
                       `;
-
-    console.log(cardCotizacion);
     $("#cardCotizacion").append(cardCotizacion);
   };
   
