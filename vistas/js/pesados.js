@@ -1292,14 +1292,24 @@ function cotizarOfertasPesados() {
             requestOptions
           )
             .then(function (response) {
-              if (!response.ok) {
-                throw Error(response.statusText);
-              }
+              if (!response.ok) throw Error(response.statusText);
               return response.json();
             })
-            .then(function (ofertas) {
-              validarOfertasPesados(ofertas);
-            })
+            .then((ofertas) => {
+                console.log('Ofertas de Seguros Mundial:', ofertas[0].Resultado); // Imprime las ofertas en la consola
+                if (typeof ofertas[0].Resultado !== 'undefined') {
+                  agregarAseguradoraFallida('Seguros Mundial')
+                  ofertas[0].Mensajes.forEach(mensaje => {
+                    mostrarAlertarCotizacionFallida('Seguros Mundial', mensaje)
+                  })
+                } else {
+                  validarOfertas(ofertas);
+                  mostrarAlertaCotizacionExitosa('Seguros Mundial')
+                }
+              })
+              .catch((err) => {
+                console.error(err);
+              })
             .catch(function (error) {
               console.log("Parece que hubo un problema: \n", error);
   
