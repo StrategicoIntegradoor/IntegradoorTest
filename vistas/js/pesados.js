@@ -426,7 +426,6 @@ function masAseg() {
   
   // Permite consultar la informacion del vehiculo por medio de la Placa (Seguros del Estado)
   function consulPlacaPesados() {
-    console.log("CHECKPOINT FLUJO COTIZAR PESADOS")
     var numplaca = document.getElementById("placaVeh").value;
     var valnumplaca = numplaca.toUpperCase(); // Convierte la Placa en Mayusculas
     var tipoDocumentoID = document.getElementById("tipoDocumentoID").value;
@@ -919,17 +918,17 @@ function registrarOferta(
     logo,
     UrlPdf
   ) => {
-    console.log("aseguradora:", aseguradora);
-    console.log("prima:", prima);
-    console.log("producto:", producto);
-    console.log("numCotizOferta:", numCotizOferta);
-    console.log("valorRC:", valorRC);
-    console.log("PT:", PT);
-    console.log("PP:", PP);
-    console.log("CE:", CE);
-    console.log("GR:", GR);
-    console.log("logo:", logo);
-    console.log("UrlPdf:", UrlPdf);
+    // console.log("aseguradora:", aseguradora);
+    // console.log("prima:", prima);
+    // console.log("producto:", producto);
+    // console.log("numCotizOferta:", numCotizOferta);
+    // console.log("valorRC:", valorRC);
+    // console.log("PT:", PT);
+    // console.log("PP:", PP);
+    // console.log("CE:", CE);
+    // console.log("GR:", GR);
+    // console.log("logo:", logo);
+    // console.log("UrlPdf:", UrlPdf);
 
     let cardCotizacion = `
                           <div class='col-lg-12'>
@@ -1047,7 +1046,7 @@ function registrarOferta(
         if (oferta == null) return;
         if (numCotizacion == null && precioOferta == "0") return;
         if (precioOferta.length <= 3) return;
-    
+        console.log(oferta.pdf)
         mostrarOferta(
           oferta.entidad,
           oferta.precio,
@@ -1300,7 +1299,6 @@ function cotizarOfertasPesados() {
               return response.json();
             })
             .then((ofertas) => {
-                console.log('Ofertas de Seguros Mundial:', ofertas[0].Resultado); // Imprime las ofertas en la consola
                 if (typeof ofertas[0].Resultado !== 'undefined') {
                   agregarAseguradoraFallida('Seguros Mundial')
                   ofertas[0].Mensajes.forEach(mensaje => {
