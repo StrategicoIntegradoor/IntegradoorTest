@@ -58,10 +58,10 @@
 
                 <div class="guest-box">
 
-                    <div id="box-body">
+                    <!-- <div id="box-body"> -->
 
                         <!-- FORMULARIO RESUMEN ASEGURADO -->
-                        <form method="Post" id="formResumAseg">
+                        <!-- <form method="Post" id="formResumAseg"> -->
                             <!-- <div id="resumenAsegurado"> -->
                                 <div class="col-lg-12" id="headerAsegurado">
                                     <div class="row row-aseg">
@@ -280,7 +280,7 @@
                                     <!-- </div> -->
                                 <!-- </div> -->
                             <!-- </div> -->
-                        </form>
+                        <!-- </form> -->
 
                         <!-- FORMULARIO VEHICULO MANUAL -->
 
@@ -290,7 +290,7 @@
 
                         
 
-                    </div>
+                    <!-- </div> -->
 
                     <!-- CAMPOS OCULTOS PARA OPTENER LA INFORMACION-->
                     
