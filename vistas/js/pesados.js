@@ -919,6 +919,18 @@ function registrarOferta(
     logo,
     UrlPdf
   ) => {
+    console.log("aseguradora:", aseguradora);
+    console.log("prima:", prima);
+    console.log("producto:", producto);
+    console.log("numCotizOferta:", numCotizOferta);
+    console.log("valorRC:", valorRC);
+    console.log("PT:", PT);
+    console.log("PP:", PP);
+    console.log("CE:", CE);
+    console.log("GR:", GR);
+    console.log("logo:", logo);
+    console.log("UrlPdf:", UrlPdf);
+
     let cardCotizacion = `
                           <div class='col-lg-12'>
                               <div class='card-ofertas'>
@@ -1022,7 +1034,7 @@ function registrarOferta(
                               </div>
                       `;
 
-    console.log( $("#cardCotizacion").append(cardCotizacion))
+    console.log(cardCotizacion)
     $("#cardCotizacion").append(cardCotizacion);
   };
   
