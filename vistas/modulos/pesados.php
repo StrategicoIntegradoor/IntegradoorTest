@@ -131,7 +131,7 @@ if ($_SESSION["permisos"]["Cotizarpesados"] != "x") {
 
                   <div class="row">
                     <div class="col-xs-12 col-sm-6 col-md-3 form-group">
-                      <label for="">Fecha de Nacimmiento</label>
+                      <label for="">Fecha de Nacimiento</label>
                       <div class="row">
                         <div class="col-xs-4 col-sm-4 col-md-4 conten-dia">
                           <select class="form-control fecha-nacimiento" name="dianacimiento" id="dianacimiento" required>
@@ -221,10 +221,6 @@ if ($_SESSION["permisos"]["Cotizarpesados"] != "x") {
                       <div id="loaderPlaca"></div>
                     </div>
                   </div>
-
-                    <div class="col-xs-12 col-sm-6 col-md-3 form-group">
-                      <div id="loaderPlaca"></div>
-                    </div>
                 </div>
               </div>
             </div>
@@ -560,7 +556,7 @@ if ($_SESSION["permisos"]["Cotizarpesados"] != "x") {
 
 </div>
 
-<script src="vistas/js/cotizar.js?v=<?php echo (rand()); ?>"></script>
+<script src="vistas/js/pesados.js?v=<?php echo (rand()); ?>"></script>
 
 <?php
 
