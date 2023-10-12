@@ -127,7 +127,9 @@ if ($_SESSION["permisos"]["Cotizarpesados"] != "x") {
                         </div>
                       </div>
                     </div>
+                  </div>
 
+                  <div class="row">
                     <div class="col-xs-12 col-sm-6 col-md-3 form-group">
                       <label for="">Fecha de Nacimmiento</label>
                       <div class="row">
@@ -197,6 +199,18 @@ if ($_SESSION["permisos"]["Cotizarpesados"] != "x") {
                       </select>
                     </div>
 
+                    <div class="col-xs-12 col-sm-6 col-md-3 form-group">
+                      <label for="correo">Correo</label>
+                      <input type="text" class="form-control" id="txtCorreo" placeholder="Correo">
+                    </div>
+                  </div>
+
+                  <div class="row">
+                    <div class="col-xs-12 col-sm-6 col-md-3 form-group">
+                      <label for="celular">Celular</label>
+                      <input type="text" class="form-control" id="txtCelular" placeholder="Celular">
+                    </div>
+
                     <div class="col-xs-12 col-sm-6 col-md-3 form-group" id="contenBtnConsultarPlaca">
                       <button class="btn btn-primary btn-block" id="btnConsultarPlacaPesados">Siguiente</button>
                     </div>
@@ -205,6 +219,10 @@ if ($_SESSION["permisos"]["Cotizarpesados"] != "x") {
                       <div id="loaderPlaca"></div>
                     </div>
                   </div>
+
+                    <div class="col-xs-12 col-sm-6 col-md-3 form-group">
+                      <div id="loaderPlaca"></div>
+                    </div>
                 </div>
               </div>
             </div>
