@@ -864,7 +864,10 @@ function registrarOferta(
       var idCotizOferta = idCotizacion
       var numDocumentoID = document.getElementById("numDocumentoID").value
       var placa = document.getElementById("placaVeh").value
-    if(manual == NULL){manual = 0}
+      if (manual == null) { 
+        manual = 0;
+      }
+      
       $.ajax({
         type: "POST",
         url: "src/insertarOferta.php",
