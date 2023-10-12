@@ -1022,7 +1022,7 @@ function registrarOferta(
                               </div>
                       `;
 
-    console.log(cardCotizacion)
+    console.log( $("#cardCotizacion").append(cardCotizacion))
     $("#cardCotizacion").append(cardCotizacion);
   };
   
