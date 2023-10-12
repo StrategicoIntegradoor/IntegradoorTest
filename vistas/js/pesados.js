@@ -919,6 +919,7 @@ function registrarOferta(
     logo,
     UrlPdf
   ) => {
+    console.log("ESTOY EN MOSTRAR OFERTA");
     let cardCotizacion = `
                           <div class='col-lg-12'>
                               <div class='card-ofertas'>
