@@ -926,6 +926,7 @@ function registrarOferta(
                                       <div class="col-xs-12 col-sm-6 col-md-2 oferta-logo">
                                       <center>
   
+                                          <img src='vistas/img/logos/${logo}'>
   
                     </center>  
   
@@ -1021,13 +1022,12 @@ function registrarOferta(
                                   </div>
                               </div>
                       `;
-
-    console.log(cardCotizacion);
     $("#cardCotizacion").append(cardCotizacion);
   };
   
   // VALIDA QUE LAS OFERTAS COTIZADAS HAYAN SIDO GUARDADAS EN SU TOTALIDAD
   function validarOfertasPesados(ofertas) {
+    console.log(ofertas)
     $responsabilidadCivilFamiliar = ofertas[0].responsabilidad_civil_familiar;
     ofertas.forEach((oferta, i) => {
         var numCotizacion = oferta.numero_cotizacion;
