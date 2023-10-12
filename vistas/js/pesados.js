@@ -1288,7 +1288,7 @@ function cotizarOfertasPesados() {
           alert(idCotizacion);
   
           fetch(
-            "http://localhost/webservice_autosv1/CotizarPesados",
+            "https://grupoasistencia.com/webservice_autosv1/CotizarPesados",
             requestOptions
           )
             .then(function (response) {
