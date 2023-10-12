@@ -1118,9 +1118,9 @@ function registrarOferta(
     return false
   }
   
-  document.querySelector('#btnReCotizarFallidas').addEventListener('click', () => {
-    cotizarOfertasPesados()
-  })
+//   document.querySelector('#btnReCotizarFallidas').addEventListener('click', () => {
+//     cotizarOfertasPesados()
+//   })
   
 
 function cotizarOfertasPesados() {
