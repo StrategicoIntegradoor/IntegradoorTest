@@ -1024,72 +1024,42 @@ function registrarOferta(
   
   // VALIDA QUE LAS OFERTAS COTIZADAS HAYAN SIDO GUARDADAS EN SU TOTALIDAD
   function validarOfertasPesados(ofertas) {
-    var cont = [];
-  
-    ofertas.forEach(function (oferta, i) {
-      var numCotizacion = oferta.numero_cotizacion;
-      var precioOferta = oferta.precio;
-  
-      if (numCotizacion != null && precioOferta != "0") {
-        if (precioOferta.length > 3) {
-          cont.push(
-            registrarOferta(
-              oferta.entidad,
-              oferta.precio,
-              oferta.producto,
-              oferta.numero_cotizacion,
-              oferta.responsabilidad_civil,
-              oferta.cubrimiento,
-              oferta.deducible,
-              oferta.conductores_elegidos,
-              oferta.servicio_grua,
-              oferta.imagen,
-              oferta.pdf,
-              0
-            )
-          );
-  
-          Promise.all(cont).then(function (resultados) {
-            $("#loaderOferta").html("");
-            $("#loaderRecotOferta").html("");
-            swal.fire({
-              type: "success",
-              title: "! Cotización Exitosa ¡",
-              showConfirmButton: true,
-              confirmButtonText: "Cerrar",
-            }).then(function (result) {
-              if (result.value) {
-                window.location =
-                  "index.php?ruta=editar-cotizacionpesados&idCotizacion=" +
-                  idCotizacion;
-              }
-            });
-          });
-        }
-      }
-    });
-  
-    if (cont.length == 0) {
-      if (cont2.length >= 1) {
-        $("#loaderOferta").html("");
-        $("#loaderRecotOferta").html("");
-        swal.fire({
-          type: "success",
-          title: "! Cotización Exitosa ¡",
-          showConfirmButton: true,
-          confirmButtonText: "Cerrar",
-        }).then(function (result) {
-          if (result.value) {
-            window.location =
-              "index.php?ruta=editar-cotizacionpesados&idCotizacion=" +
-              idCotizacion;
-          }
-        });
-      } else {
-        window.location =
-          "index.php?ruta=editar-cotizacionpesados&idCotizacion=" + idCotizacion;
-      }
-    }
+    $responsabilidadCivilFamiliar = ofertas[0].responsabilidad_civil_familiar;
+    ofertas.forEach((oferta, i) => {
+        var numCotizacion = oferta.numero_cotizacion;
+        var precioOferta = oferta.precio;
+        if (oferta == null) return;
+        if (numCotizacion == null && precioOferta == "0") return;
+        if (precioOferta.length <= 3) return;
+    
+        mostrarOferta(
+          oferta.entidad,
+          oferta.precio,
+          oferta.producto,
+          oferta.numero_cotizacion,
+          oferta.cubrimiento,
+          oferta.deducible,
+          oferta.conductores_elegidos,
+          oferta.servicio_grua,
+          oferta.imagen,
+          oferta.pdf
+        );
+    
+        registrarOferta(
+          oferta.entidad,
+          oferta.precio,
+          oferta.producto,
+          oferta.numero_cotizacion,
+          oferta.cubrimiento,
+          oferta.deducible,
+          oferta.conductores_elegidos,
+          oferta.servicio_grua,
+          oferta.imagen,
+          oferta.pdf,
+          $responsabilidadCivilFamiliar,
+          0
+        );
+      });
   }
   
   var idCotizacion = "";
@@ -1283,10 +1253,28 @@ function cotizarOfertasPesados() {
         },
         cache: false,
         success: function (data) {
-          idCotizacion = data.id_cotizacion;
+        idCotizacion = data.id_cotizacion;
   
-          alert(idCotizacion);
-  
+
+        var requestOptions = {
+            method: "POST",
+            headers: myHeaders,
+            body: JSON.stringify(raw),
+            redirect: "follow",
+          };
+
+          let cont = [];
+          const mostrarAlertaCotizacionExitosa = aseguradora => {
+            document.querySelector('.exitosas').innerHTML += `<span style="margin-right: 15px;"><i class="fa fa-check" aria-hidden="true" style="color: green; margin-right: 5px;
+                  "></i>${aseguradora}</span>
+                  `
+          }
+
+          const mostrarAlertarCotizacionFallida = (aseguradora, mensaje) => {
+            document.querySelector('.fallidas').innerHTML += `<p><i class="fa fa-times" aria-hidden="true" style="color: red; margin-right: 10px;"></i><b>${aseguradora}:</b> ${mensaje}</p>`
+          }
+          
+          
           fetch(
             "https://grupoasistencia.com/webservice_autosv1/CotizarPesados",
             requestOptions
@@ -1303,7 +1291,7 @@ function cotizarOfertasPesados() {
                     mostrarAlertarCotizacionFallida('Seguros Mundial', mensaje)
                   })
                 } else {
-                  validarOfertas(ofertas);
+                  validarOfertasPesados(ofertas);
                   mostrarAlertaCotizacionExitosa('Seguros Mundial')
                 }
               })
