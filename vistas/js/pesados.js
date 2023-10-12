@@ -921,7 +921,6 @@ function registrarOferta(
     console.log("prima:", prima);
     console.log("producto:", producto);
     console.log("numCotizOferta:", numCotizOferta);
-    console.log("valorRC:", valorRC);
     console.log("PT:", PT);
     console.log("PP:", PP);
     console.log("CE:", CE);
