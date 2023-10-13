@@ -1031,7 +1031,6 @@ function registrarOferta(
         if (oferta == null) return;
         if (numCotizacion == null && precioOferta == "0") return;
         if (precioOferta.length <= 3) return;
-        console.log(oferta.pdf)
         mostrarOferta(
           oferta.entidad,
           oferta.precio,
