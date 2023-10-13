@@ -1032,7 +1032,7 @@ function registrarOferta(
                       `;
 
     console.log(cardCotizacion)
-    $("#cardCotizacion").append(cardCotizacion);
+    $("#cardCotizacion1").append(cardCotizacion);
   };
   
   // VALIDA QUE LAS OFERTAS COTIZADAS HAYAN SIDO GUARDADAS EN SU TOTALIDAD
