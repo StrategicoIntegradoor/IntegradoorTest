@@ -917,23 +917,12 @@ function registrarOferta(
     logo,
     UrlPdf
   ) => {
-    console.log("aseguradora:", aseguradora);
-    console.log("prima:", prima);
-    console.log("producto:", producto);
-    console.log("numCotizOferta:", numCotizOferta);
-    console.log("PT:", PT);
-    console.log("PP:", PP);
-    console.log("CE:", CE);
-    console.log("GR:", GR);
-    console.log("logo:", logo);
-    console.log("UrlPdf:", UrlPdf);
-
     let cardCotizacion = `
-                          <div class='col-lg-12'>
-                              <div class='card-ofertas'>
-                                  <div class='row card-body'>
-                                      <div class="col-xs-12 col-sm-6 col-md-2 oferta-logo">
-                                      <center>
+              <div class='col-lg-12'>
+                <div class='card-ofertas'>
+                  <div class='row card-body'>
+                    <div class="col-xs-12 col-sm-6 col-md-2 oferta-logo">
+                    <center>
   
   
                     </center>  
@@ -947,92 +936,90 @@ function registrarOferta(
         : ''}
                         </div>
   
-                                      </div>
-                                      <div class="col-xs-12 col-sm-6 col-md-2 oferta-header">
-                                          <h5 class='entidad'>${aseguradora} - ${producto}</h5>
-                                          <h5 class='precio'>Desde $ ${prima}</h5>
-                                          <p class='title-precio'>Precio (IVA incluido)</p>
-                                      </div>
-                                      <div class="col-xs-12 col-sm-6 col-md-4">
-                                          <ul class="list-group">
-                                              <li class="list-group-item">
-                                                  <span class="badge">* $${PT}</span>
-                                                  Responsabilidad Civil (RCE)
-                                              </li>
-                                              <li class="list-group-item">
-                                                  <span class="badge">* ${PT}</span>
-                                                  Pérdida Total Daños y Hurto
-                                              </li>
-                                              <li class="list-group-item">
-                                                  <span class="badge">* ${PP}</span>
-                                                  Pérdida Parcial Daños y Hurto
-                                              </li>
-                                              <li class="list-group-item">
-                                                  <span class="badge">* ${CE}</span>
-                                                  Conductor elegido
-                                              </li>
-                                              <li class="list-group-item">
-                                                  <span class="badge">* ${GR}</span>
-                                                  Servicio de Grúa
-                                              </li>
-                                          </ul>
-                                      </div>
-                                      <div class="col-xs-12 col-sm-6 col-md-2">
-                                        <div class="selec-oferta">
-                                          <label for="seleccionar">SELECCIONAR</label>&nbsp;&nbsp;
-                                          <input type="checkbox" class="classSelecOferta" name="selecOferta" id="selec${numCotizOferta}${numId}${producto}\" onclick='seleccionarOferta(\"${aseguradora}\", \"${prima}\", \"${producto}\", \"${numCotizOferta}\", this);' />
-                                        </div>
-                                        <div class="recom-oferta">
-                                          <label for="recomendar">RECOMENDAR</label>&nbsp;&nbsp;
-                                          <input type="checkbox" class="classRecomOferta" name="recomOferta" id="recom${numCotizOferta}${numId}${producto}\" onclick='recomendarOferta(\"${aseguradora}\", \"${prima}\", \"${producto}\", \"${numCotizOferta}\", this);' />
-                                        </div>
-                                      </div>`;
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-2 oferta-header">
+                      <h5 class='entidad'>${aseguradora} - ${producto}</h5>
+                      <h5 class='precio'>Desde $ ${prima}</h5>
+                      <p class='title-precio'>Precio (IVA incluido)</p>
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-4">
+                      <ul class="list-group">
+                        <li class="list-group-item">
+                          <span class="badge">* $${PT}</span>
+                          Responsabilidad Civil (RCE)
+                        </li>
+                        <li class="list-group-item">
+                          <span class="badge">* ${PT}</span>
+                          Pérdida Total Daños y Hurto
+                        </li>
+                        <li class="list-group-item">
+                          <span class="badge">* ${PP}</span>
+                          Pérdida Parcial Daños y Hurto
+                        </li>
+                        <li class="list-group-item">
+                          <span class="badge">* ${CE}</span>
+                          Conductor elegido
+                        </li>
+                        <li class="list-group-item">
+                          <span class="badge">* ${GR}</span>
+                          Servicio de Grúa
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-2">
+                      <div class="selec-oferta">
+                      <label for="seleccionar">SELECCIONAR</label>&nbsp;&nbsp;
+                      <input type="checkbox" class="classSelecOferta" name="selecOferta" id="selec${numCotizOferta}${numId}${producto}\" onclick='seleccionarOferta(\"${aseguradora}\", \"${prima}\", \"${producto}\", \"${numCotizOferta}\", this);' />
+                      </div>
+                      <div class="recom-oferta">
+                      <label for="recomendar">RECOMENDAR</label>&nbsp;&nbsp;
+                      <input type="checkbox" class="classRecomOferta" name="recomOferta" id="recom${numCotizOferta}${numId}${producto}\" onclick='recomendarOferta(\"${aseguradora}\", \"${prima}\", \"${producto}\", \"${numCotizOferta}\", this);' />
+                      </div>
+                    </div>`;
     if (aseguradora == "Seguros Bolivar" || aseguradora == "Axa Colpatria") {
       cardCotizacion += `
-                                          <div class="col-xs-12 col-sm-6 col-md-2 verpdf-oferta">
-                                              <button type="button" class="btn btn-info" id="btnAsegPDF${numCotizOferta}${numId}\" onclick='verPdfOferta(\"${aseguradora}\", \"${numCotizOferta}\", \"${numId}\");'>
-                                                  <div id="verPdf${numCotizOferta}${numId}\">VER PDF &nbsp;&nbsp;<span class="fa fa-file-text"></span></div>
-                                              </button>
-                                          </div>`;
+                      <div class="col-xs-12 col-sm-6 col-md-2 verpdf-oferta">
+                        <button type="button" class="btn btn-info" id="btnAsegPDF${numCotizOferta}${numId}\" onclick='verPdfOferta(\"${aseguradora}\", \"${numCotizOferta}\", \"${numId}\");'>
+                          <div id="verPdf${numCotizOferta}${numId}\">VER PDF &nbsp;&nbsp;<span class="fa fa-file-text"></span></div>
+                        </button>
+                      </div>`;
     } else if (aseguradora == "Seguros del Estado" && UrlPdf !== null) {
       cardCotizacion += `
-                          <div class="col-xs-12 col-sm-6 col-md-2 verpdf-oferta">
-                          <button type="button" class="btn btn-info" id="btnAsegPDF${numCotizOferta}${numId}\" onclick='verPdfEstado(\"${aseguradora}\", \"${numCotizOferta}\", \"${numId}\", \"${UrlPdf}\");'>
-                              <div id="verPdf${numCotizOferta}${numId}\">VER PDF &nbsp;&nbsp;<span class="fa fa-file-text"></span></div>
-                          </button>
-                          </div>`;
+              <div class="col-xs-12 col-sm-6 col-md-2 verpdf-oferta">
+              <button type="button" class="btn btn-info" id="btnAsegPDF${numCotizOferta}${numId}\" onclick='verPdfEstado(\"${aseguradora}\", \"${numCotizOferta}\", \"${numId}\", \"${UrlPdf}\");'>
+                <div id="verPdf${numCotizOferta}${numId}\">VER PDF &nbsp;&nbsp;<span class="fa fa-file-text"></span></div>
+              </button>
+              </div>`;
     } else if (aseguradora == "Solidaria") {
       cardCotizacion += `
-                          <div class="col-xs-12 col-sm-6 col-md-2 verpdf-oferta">
-                              <button id="solidaria-pdf" type="button" class="btn btn-info" onclick='verPdfSolidaria(${numCotizOferta})'>
-                                  <div>VER PDF &nbsp;&nbsp;<span class="fa fa-file-text"></span></div>
-                              </button>
-                          </div>`;
+              <div class="col-xs-12 col-sm-6 col-md-2 verpdf-oferta">
+                <button id="solidaria-pdf" type="button" class="btn btn-info" onclick='verPdfSolidaria(${numCotizOferta})'>
+                  <div>VER PDF &nbsp;&nbsp;<span class="fa fa-file-text"></span></div>
+                </button>
+              </div>`;
     } else if (aseguradora == "Zurich") {
       cardCotizacion += `
-                          <div class="col-xs-12 col-sm-6 col-md-2 verpdf-oferta">
-                              <button id="solidaria-pdf${numCotizOferta}" type="button" class="btn btn-info" onclick='verPdfZurich(${numCotizOferta})'>
-                                  <div>VER PDF &nbsp;&nbsp;<span class="fa fa-file-text"></span></div>
-                              </button>
-                          </div>`;
+              <div class="col-xs-12 col-sm-6 col-md-2 verpdf-oferta">
+                <button id="solidaria-pdf${numCotizOferta}" type="button" class="btn btn-info" onclick='verPdfZurich(${numCotizOferta})'>
+                  <div>VER PDF &nbsp;&nbsp;<span class="fa fa-file-text"></span></div>
+                </button>
+              </div>`;
     }
     else if (aseguradora == "Previsora Seguros") {
       cardCotizacion += `
-                          <div class="col-xs-12 col-sm-6 col-md-2 verpdf-oferta">
-                              <button id="previsora-pdf${numCotizOferta}" type="button" class="btn btn-info" onclick='verPdfPrevisora(${numCotizOferta})'>
-                                  <div>VER PDF &nbsp;&nbsp;<span class="fa fa-file-text"></span></div>
-                              </button>
-                          </div>`;
+              <div class="col-xs-12 col-sm-6 col-md-2 verpdf-oferta">
+                <button id="previsora-pdf${numCotizOferta}" type="button" class="btn btn-info" onclick='verPdfPrevisora(${numCotizOferta})'>
+                  <div>VER PDF &nbsp;&nbsp;<span class="fa fa-file-text"></span></div>
+                </button>
+              </div>`;
     }
     cardCotizacion += `
-                                          </div>
-                                      </div>
-                                  </div>
-                              </div>
-                      `;
-
-    console.log(cardCotizacion)
-    $("#cardCotizacion1").append(cardCotizacion);
+                      </div>
+                    </div>
+                  </div>
+                </div>
+            `;
+    $("#cardCotizacion").append(cardCotizacion);
   };
   
   // VALIDA QUE LAS OFERTAS COTIZADAS HAYAN SIDO GUARDADAS EN SU TOTALIDAD

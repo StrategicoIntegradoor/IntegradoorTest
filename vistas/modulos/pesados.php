@@ -522,7 +522,7 @@ if ($_SESSION["permisos"]["Cotizarpesados"] != "x") {
                 </div>
               </div>
             </div>
-            <div id="cardCotizacion1">
+            <div id="cardCotizacion">
               <div class="col-lg-12">
                 <div class="card-ofertas">
                   <div class="row card-body">
