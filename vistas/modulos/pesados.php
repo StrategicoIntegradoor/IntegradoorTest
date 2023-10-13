@@ -587,6 +587,63 @@ if ($_SESSION["permisos"]["Cotizarpesados"] != "x") {
           <input type="text" name="Estrato" id="Estrato" value="3">
         </div>
 
+        
+          <!--ESTADO-->
+          <input type="text" class="form-control" id="cre_est_usuario" value="<?php echo $cre_est_usuario; ?>">
+          <input type="text" class="form-control" id="cre_equ_contrasena" value="<?php echo $cre_equ_contrasena; ?>">
+          <input type="text" class="form-control" id="Cre_Est_Entity_Id" value="<?php echo $Cre_Est_Entity_Id; ?>">
+          <input type="text" class="form-control" id="cre_est_zona" value="<?php echo $cre_est_zona; ?>">
+
+
+          <!--ZURICH-->
+          <input type="text" class="form-control" id="cre_zur_nomUsu" value="<?php echo $_SESSION["cre_zur_nomUsu"]; ?>">
+          <input type="text" class="form-control" id="cre_zur_passwd" value="<?php echo $_SESSION["cre_zur_passwd"]; ?>">
+          <input type="text" class="form-control" id="cre_zur_intermediaryEmail" value="<?php echo $_SESSION["cre_zur_intermediaryEmail"]; ?>">
+          <input type="text" class="form-control" id="cre_zur_Cookie" value="<?php echo $_SESSION["cre_zur_Cookie"]; ?>">
+          <input type="text" class="form-control" id="cre_zur_token" value="<?php echo $_SESSION["cre_zur_token"]; ?>">
+          <input type="text" class="form-control" id="cre_zur_fecha_token" value="<?php echo $_SESSION["cre_zur_fecha_token"]; ?>">
+
+          <!--SOLIDARIA-->
+          <input type="text" class="form-control" id="cre_sol_cod_sucursal" value="<?php echo $_SESSION["cre_sol_cod_sucursal"]; ?>">
+          <input type="text" class="form-control" id="cre_sol_cod_per" value="<?php echo $_SESSION["cre_sol_cod_per"]; ?>">
+          <input type="text" class="form-control" id="cre_sol_cod_tipo_agente" value="<?php echo $_SESSION["cre_sol_cod_tipo_agente"]; ?>">
+          <input type="text" class="form-control" id="cre_sol_cod_agente" value="<?php echo $_SESSION["cre_sol_cod_agente"]; ?>">
+          <input type="text" class="form-control" id="cre_sol_cod_pto_vta" value="<?php echo $_SESSION["cre_sol_cod_pto_vta"]; ?>">
+          <input type="text" class="form-control" id="cre_sol_grant_type" value="<?php echo $_SESSION["cre_sol_grant_type"]; ?>">
+          <input type="text" class="form-control" id="cre_sol_Cookie_token" value="<?php echo $_SESSION["cre_sol_Cookie_token"]; ?>">
+          <input type="text" class="form-control" id="cre_sol_token" value="<?php echo $_SESSION["cre_sol_token"]; ?>">
+          <input type="text" class="form-control" id="cre_sol_fecha_token" value="<?php echo $_SESSION["cre_sol_fecha_token"]; ?>">
+
+          <!--PREVISORA-->
+          <input type="text" class="form-control" id="cre_pre_AgentCodeListCoin" value="<?php echo $_SESSION["cre_pre_AgentCodeListCoin"]; ?>">
+          <input type="text" class="form-control" id="cre_pre_AgentAgencyTypeCode" value="<?php echo $_SESSION["cre_pre_AgentAgencyTypeCode"]; ?>">
+          <input type="text" class="form-control" id="cre_pre_ParticipationCia" value="<?php echo $_SESSION["cre_pre_ParticipationCia"]; ?>">
+          <input type="text" class="form-control" id="cre_pre_AgentCode" value="<?php echo $_SESSION["cre_pre_AgentCode"]; ?>">
+          <input type="text" class="form-control" id="cre_pre_Username" value="<?php echo $_SESSION["cre_pre_Username"]; ?>">
+          <input type="text" class="form-control" id="cre_pre_Password" value="<?php echo $_SESSION["cre_pre_Password"]; ?>">
+
+          <!--MAPFRE-->
+          <input type="text" class="form-control" id="cre_map_codCliente" value="<?php echo $_SESSION["cre_map_codCliente"]; ?>">
+          <input type="text" class="form-control" id="cre_map_codigoOficinaAsociado" value="<?php echo $_SESSION["cre_map_codigoOficinaAsociado"]; ?>">
+          <input type="text" class="form-control" id="cre_map_codigoIntermediario" value="<?php echo $_SESSION["cre_map_codigoIntermediario"]; ?>">
+          <input type="text" class="form-control" id="cre_map_username" value="<?php echo $_SESSION["cre_map_username"]; ?>">
+          <input type="text" class="form-control" id="cre_map_password" value="<?php echo $_SESSION["cre_map_password"]; ?>">
+          <input type="text" class="form-control" id="cre_map_codigonivel3GA" value="<?php echo $_SESSION["cre_map_codigonivel3GA"]; ?>">
+
+
+          <!--SBS-->
+          <input type="text" class="form-control" id="cre_sbs_usuario" value="<?php echo $cre_sbs_usuario; ?>">
+          <input type="text" class="form-control" id="cre_sbs_contrasena" value="<?php echo $cre_sbs_contrasena; ?>">
+
+          <!--ALLIANZ-->
+          <input type="text" class="form-control" id="cre_alli_sslcertfile" value="<?php echo $cre_alli_sslcertfile; ?>">
+          <input type="text" class="form-control" id="cre_alli_sslkeyfile" value="<?php echo $cre_alli_sslkeyfile; ?>">
+          <input type="text" class="form-control" id="cre_alli_passphrase" value="<?php echo $cre_alli_passphrase; ?>">
+          <input type="text" class="form-control" id="cre_alli_partnerid" value="<?php echo $cre_alli_partnerid; ?>">
+          <input type="text" class="form-control" id="cre_alli_agentid" value="<?php echo $cre_alli_agentid; ?>">
+          <input type="text" class="form-control" id="cre_alli_partnercode" value="<?php echo $cre_alli_partnercode; ?>">
+          <input type="text" class="form-control" id="cre_alli_agentcode" value="<?php echo $cre_alli_agentcode; ?>">
+
       </div>
 
     </div>
