@@ -1356,7 +1356,7 @@ function cotizarOfertasPesados() {
                         mostrarAlertarCotizacionFallida(`Liberty ${plan}`, mensaje);
                       });
                     } else {
-                      validarOfertas(ofertas);
+                      validarOfertasPesados(ofertas);
                       mostrarAlertaCotizacionExitosa(`Liberty ${plan}`);
                     }
                   })
