@@ -1019,8 +1019,9 @@ function registrarOferta(
                   </div>
                 </div>
             `;
-    $("#cardCotizacion").append(cardCotizacion);
-  };
+            var container = document.getElementById("cardCotizacion");
+            container.innerHTML += cardCotizacion;
+              };
   
   // VALIDA QUE LAS OFERTAS COTIZADAS HAYAN SIDO GUARDADAS EN SU TOTALIDAD
   function validarOfertasPesados(ofertas) {
