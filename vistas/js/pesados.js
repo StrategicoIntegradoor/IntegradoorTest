@@ -1298,16 +1298,23 @@ function cotizarOfertasPesados() {
               })
             .catch(function (error) {
               console.log("Parece que hubo un problema: \n", error);
-  
-              contErrProtocoloCotizar++;
-              if (contErrProtocoloCotizar > 1) {
-                $("#loaderOferta").html("");
-                $("#loaderRecotOferta").html("");
-              } else {
-                setTimeout(cotizarOfertas, 4000);
-              }
+
             });
-        },
+        
+        
+            Promise.all(cont).then(() => {
+              $("#loaderOferta").html("");
+              $("#loaderRecotOferta").html("");
+              swal.fire({
+                type: "success",
+                title: "! Re cotización completada ¡",
+                showConfirmButton: true,
+                confirmButtonText: "Cerrar",
+              });
+              console.log("Se completo la re-cotización");
+            });
+      
+          },
       });
     }
   }
