@@ -1106,6 +1106,23 @@ function registrarOferta(
   
 
 function cotizarOfertasPesados() {
+
+  var codigoFasecolda1 = document.getElementById('txtFasecolda')
+  var contenido = codigoFasecolda1.value;
+
+  // Obtener el cuarto y quinto dígito de la variable contenido
+  var cuartoDigito = contenido.charAt(3);
+  var quintoDigito = contenido.charAt(4);
+
+  // Verificar si el cuarto dígito es igual a 0 y eliminarlo si es así
+  if (cuartoDigito === '0') {
+    condicional = quintoDigito;
+  } else {
+    // Concatenar los dígitos en un solo número
+    condicional = cuartoDigito + quintoDigito;
+  }
+
+  
     var fasecoldaVeh = document.getElementById("txtFasecolda").value;
     var valorfasecoldaVeh = document.getElementById("txtValorFasecolda").value;
     var modelovehiculo = document.getElementById("txtModeloVeh").value;
