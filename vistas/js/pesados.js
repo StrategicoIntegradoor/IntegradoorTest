@@ -1021,6 +1021,7 @@ function registrarOferta(
             `;
             var container = document.getElementById("cardCotizacion");
             container.innerHTML += cardCotizacion;
+            console.log(container)
               };
   
   // VALIDA QUE LAS OFERTAS COTIZADAS HAYAN SIDO GUARDADAS EN SU TOTALIDAD
