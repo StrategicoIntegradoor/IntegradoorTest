@@ -595,7 +595,6 @@ if ($_SESSION["permisos"]["Cotizarpesados"] != "x") {
 
 </div>
 
-<script src="vistas/js/pesados.js?v=<?php echo (rand()); ?>"></script>
 
 <?php
 
@@ -603,3 +602,6 @@ $eliminarCotizacion = new ControladorCotizaciones();
 $eliminarCotizacion->ctrEliminarCotizacion();
 
 ?>
+
+
+<script src="vistas/js/pesados.js?v=<?php echo (rand()); ?>"></script>
