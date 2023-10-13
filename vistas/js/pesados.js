@@ -1122,7 +1122,7 @@ function cotizarOfertasPesados() {
     condicional = cuartoDigito + quintoDigito;
   }
 
-  
+
     var fasecoldaVeh = document.getElementById("txtFasecolda").value;
     var valorfasecoldaVeh = document.getElementById("txtValorFasecolda").value;
     var modelovehiculo = document.getElementById("txtModeloVeh").value;
@@ -1380,7 +1380,7 @@ function cotizarOfertasPesados() {
                 })
               } else {
                 console.log(ofertas)
-                validarOfertas(ofertas);
+                validarOfertasPesados(ofertas);
                 mostrarAlertaCotizacionExitosa('Liberty')
               }
             })
