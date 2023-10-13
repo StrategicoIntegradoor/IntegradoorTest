@@ -1318,6 +1318,7 @@ function cotizarOfertasPesados() {
             });
 
              /* Liberty */
+             console.log(condicional)
              if (condicional== 4 || condicional== 10 || condicional== 11 || condicional== 12 || condicional== 13 || condicional== 14 || condicional== 22) {
               let planesLiberty = ["Full","Integral"];
               let body = JSON.parse(requestOptions.body)
