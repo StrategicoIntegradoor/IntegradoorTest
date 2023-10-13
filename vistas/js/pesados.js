@@ -917,6 +917,16 @@ function registrarOferta(
     logo,
     UrlPdf
   ) => {
+    console.log("aseguradora:", aseguradora);
+    console.log("prima:", prima);
+    console.log("producto:", producto);
+    console.log("numCotizOferta:", numCotizOferta);
+    console.log("PT:", PT);
+    console.log("PP:", PP);
+    console.log("CE:", CE);
+    console.log("GR:", GR);
+    console.log("logo:", logo);
+    console.log("UrlPdf:", UrlPdf);
     let cardCotizacion = `
               <div class='col-lg-12'>
                 <div class='card-ofertas'>
