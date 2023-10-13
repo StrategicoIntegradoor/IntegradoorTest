@@ -1254,7 +1254,10 @@ function cotizarOfertasPesados() {
         },
         cache: false,
         success: function (data) {
-        idCotizacion = data.id_cotizacion;
+          const contenParrilla = document.querySelector('#contenParrilla')
+          contenParrilla.style.display = 'block'
+          idCotizacion = data.id_cotizacion;
+          raw.cotizacion = idCotizacion
   
 
         var requestOptions = {
