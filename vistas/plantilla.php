@@ -279,6 +279,7 @@ echo'<a href="https://web.whatsapp.com/send?phone=+573153539141" target="_blank"
   <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   <script src="vistas/js/authChange.js"></script>
   
+  <script src="vistas/js/pesados.js?v=<?php echo (rand()); ?>"></script>
   <script src="vistas/js/plantilla.js?v=<?php echo (rand()); ?>"></script>
   <script src="vistas/js/count.js?v=<?php echo (rand()); ?>"></script>
   <script src="vistas/js/clientes.js?v=<?php echo (rand()); ?>"></script>
