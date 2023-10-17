@@ -244,16 +244,6 @@ if ($_SESSION["permisos"]["Cotizarpesados"] != "x") {
                 <div class="row">
 
                   <div class="col-xs-12 col-sm-6 col-md-3 form-group">
-                    <label for="linea">Modelo Vehículo</label>
-                    <div class="input-group">
-                      <div class="input-group-addon">
-                        <div id="loadingModelo"></div>
-                      </div>
-                      <select class="form-control" name="edad" id="edad" required></select>
-                    </div>
-                  </div>
-
-                  <div class="col-xs-12 col-sm-6 col-md-3 form-group">
                     <label for="clase">Clase Vehículo</label>
                     <select class="form-control" name="clase" id="clase" required="">
                       <option value="">Seleccione la Clase</option>
@@ -270,6 +260,16 @@ if ($_SESSION["permisos"]["Cotizarpesados"] != "x") {
                   <div class="col-xs-12 col-sm-6 col-md-3 form-group">
                     <label for="Marca">Marca Vehículo</label>
                     <select class="form-control" name="Marca" id="Marca" required></select>
+                  </div>
+
+                  <div class="col-xs-12 col-sm-6 col-md-3 form-group">
+                    <label for="linea">Modelo Vehículo</label>
+                    <div class="input-group">
+                      <div class="input-group-addon">
+                        <div id="loadingModelo"></div>
+                      </div>
+                      <select class="form-control" name="edad" id="edad" required></select>
+                    </div>
                   </div>
 
                   <div class="col-xs-12 col-sm-6 col-md-3 form-group">
