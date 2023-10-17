@@ -1620,7 +1620,7 @@ function cotizarOfertasPesados() {
                         title: "¡Debes seleccionar al menos una oferta!",
                       });
                     } else {
-                      let url = `extensiones/tcpdf/pdf/comparador.php?cotizacion=${idCotizacionPDF}`;
+                      let url = `extensiones/tcpdf/pdf/comparadorPesados.php?cotizacion=${idCotizacionPDF}`;
                       if (checkboxAsesor.is(":checked")) {
                         url += "&generar_pdf=1";
                       }
