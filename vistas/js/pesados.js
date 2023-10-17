@@ -1457,7 +1457,7 @@ function cotizarOfertasPesados() {
           contenParrilla.style.display = 'block'
           idCotizacion = data.idCotizacion;
           raw.cotizacion = idCotizacion
-
+        console.log(data)
         var requestOptions = {
             method: "POST",
             headers: myHeaders,
