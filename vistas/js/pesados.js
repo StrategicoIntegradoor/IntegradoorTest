@@ -1032,7 +1032,6 @@ function registrarOferta(
   ) {
     return new Promise((resolve, reject) => {
       var idCotizOferta = numCotizOferta
-      console.log(idCotizOferta)
       var numDocumentoID = document.getElementById("numDocumentoID").value
       var placa = document.getElementById("placaVeh").value
       if (manual == null) { 
@@ -1391,7 +1390,7 @@ function cotizarOfertasPesados() {
         ZonaCirculacion: DptoCirculacion,
         CodigoMarca: CodigoMarca,
         CodigoLinea: CodigoLinea,
-        CodigoClase: CodigoClase,
+        CodigoClase: condicional,
         CodigoFasecolda: fasecoldaVeh,
         Modelo: modelovehiculo,
         ValorAsegurado: valorfasecoldaVeh,
@@ -1457,7 +1456,7 @@ function cotizarOfertasPesados() {
           const contenParrilla = document.querySelector('#contenParrilla')
           contenParrilla.style.display = 'block'
           idCotizacion = data.idCotizacion;
-          // raw.cotizacion = idCotizacion
+          raw.cotizacion = idCotizacion
 
         var requestOptions = {
             method: "POST",
