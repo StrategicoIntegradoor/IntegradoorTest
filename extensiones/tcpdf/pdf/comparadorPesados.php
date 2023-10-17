@@ -914,7 +914,7 @@ $respuestaquery9 =  $conexion->query($query9);
 
 $valorlimiterow = mysqli_num_rows($respuestaquery9);
 $rowRespuesta9 = mysqli_fetch_assoc($respuestaquery9);
-var_dump($rowRespuesta9);
+var_dump($valorlimiterow);
 die();
 
 if($valorlimiterow==10){
