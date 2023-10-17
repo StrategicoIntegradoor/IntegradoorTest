@@ -1477,7 +1477,7 @@ function cotizarOfertasPesados() {
             document.querySelector('.fallidas').innerHTML += `<p><i class="fa fa-times" aria-hidden="true" style="color: red; margin-right: 10px;"></i><b>${aseguradora}:</b> ${mensaje}</p>`
           }
           
-          
+          /* SEGUROS MUNIDAL */
           fetch(
             "https://grupoasistencia.com/webservice_autosv1/CotizarPesados",
             requestOptions
@@ -1504,6 +1504,29 @@ function cotizarOfertasPesados() {
               console.log("Parece que hubo un problema: \n", error);
 
             });
+
+            /* AXA */
+            // cont.push(
+            //   fetch("https://grupoasistencia.com/motor_webservice_tst/AXA", requestOptions)
+            //     .then((res) => {
+            //       if (!res.ok) throw Error(res.statusText);
+            //       return res.json();
+            //     })
+            //     .then((ofertas) => {
+            //       if (typeof ofertas[0].Resultado !== 'undefined') {
+            //         agregarAseguradoraFallida('AXA')
+            //         ofertas[0].Mensajes.forEach(mensaje => {
+            //           mostrarAlertarCotizacionFallida('AXA', mensaje)
+            //         })
+            //       } else {
+            //         validarOfertas(ofertas)
+            //         mostrarAlertaCotizacionExitosa('AXA')
+            //       }
+            //     })
+            //     .catch((err) => {
+            //       console.error(err);
+            //     })
+            // );
 
              /* Liberty */
              console.log(condicional)
