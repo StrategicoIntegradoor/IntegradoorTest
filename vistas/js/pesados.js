@@ -1031,7 +1031,7 @@ function registrarOferta(
     pdf,
   ) {
     return new Promise((resolve, reject) => {
-      var idCotizOferta = idCotizacion
+      var idCotizOferta = numCotizOferta
       console.log(idCotizOferta)
       var numDocumentoID = document.getElementById("numDocumentoID").value
       var placa = document.getElementById("placaVeh").value
