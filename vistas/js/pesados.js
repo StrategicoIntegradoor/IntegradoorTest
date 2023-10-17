@@ -535,7 +535,7 @@ function masAseg() {
                 $("#txtFasecolda").val(codigoFasecolda);
                 $("#txtValorFasecolda").val(valorAsegurado);
   
-                consulDatosFasecoldaPesados(codigoFasecolda, modeloVehiculo).then(
+                consulDatosFasecolda(codigoFasecolda, modeloVehiculo).then(
                   function (resp) {
                     $("#txtMarcaVeh").val(resp.marcaVeh);
                     $("#txtReferenciaVeh").val(resp.lineaVeh);
@@ -699,7 +699,7 @@ function masAseg() {
                 $("#txtFasecolda").val(codigoFasecolda);
                 $("#txtValorFasecolda").val(valorAsegurado);
       
-                consulDatosFasecoldaPesados(codigoFasecolda, modeloVehiculo).then(
+                consulDatosFasecolda(codigoFasecolda, modeloVehiculo).then(
                   function (resp) {
                     $("#txtMarcaVeh").val(resp.marcaVeh);
                     $("#txtReferenciaVeh").val(resp.lineaVeh);
@@ -924,7 +924,7 @@ function masAseg() {
   
   
   //FUNCION PARA CONSULTAR VALORES EN FASECOLDA
-  function consulDatosFasecoldaPesados(codFasecolda, edadVeh) {
+  function consulDatosFasecolda(codFasecolda, edadVeh) {
     return new Promise(function (resolve, reject) {
       $.ajax({
         type: "POST",
