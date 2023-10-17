@@ -32,7 +32,9 @@ $Ciudad = $_POST["Ciudad"];
 $benefOneroso = $_POST["benefOneroso"];
 $idCotizacion = $_POST["idCotizacion"];
 $idUsuario = $_SESSION["idUsuario"];
-
+var_dump($CodigoClase);
+var_dump($idCotizacion);
+die();
 
 // VALIDAMOS SI VIENE EL CODIGO DEL CLIENTE Y DE LO CONTRARIO SE CREA EN LA BD
 if ($idCliente == "") {
