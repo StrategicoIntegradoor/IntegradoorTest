@@ -1436,7 +1436,7 @@ function cotizarOfertasPesados() {
           Celular: "",
           Correo: "",
           direccionAseg: direccionAseg,
-          CodigoClase: CodigoClase,
+          CodigoClase: condicional,
           Clase: claseVeh,
           Marca: marca,
           Modelo: modelovehiculo,
