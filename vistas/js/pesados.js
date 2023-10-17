@@ -1456,7 +1456,7 @@ function cotizarOfertasPesados() {
           const contenParrilla = document.querySelector('#contenParrilla')
           contenParrilla.style.display = 'block'
           idCotizacion = data.id_cotizacion;
-          raw.cotizacion = idCotizacion
+          data.cotizacion = idCotizacion
         console.log(raw)
         console.log(idCotizacion)
 
