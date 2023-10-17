@@ -1455,9 +1455,10 @@ function cotizarOfertasPesados() {
         success: function (data) {
           const contenParrilla = document.querySelector('#contenParrilla')
           contenParrilla.style.display = 'block'
-          idCotizacion = data.id_cotizacion;
-          data.cotizacion = idCotizacion
-        console.log(raw)
+          idCotizacion = data.idCotizacion;
+          // raw.cotizacion = idCotizacion
+        
+        console.log(data)
         console.log(idCotizacion)
 
         var requestOptions = {
