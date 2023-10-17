@@ -914,7 +914,6 @@ $respuestaquery9 =  $conexion->query($query9);
 
 //$valorlimiterow cuenta el numero de ofertas seleccionadas
 $valorlimiterow = mysqli_num_rows($respuestaquery9);
-$rowRespuesta9 = mysqli_fetch_assoc($respuestaquery9);
 
 if($valorlimiterow==10){
 	while ($rowRespuesta9 = mysqli_fetch_assoc($respuestaquery9)) {
