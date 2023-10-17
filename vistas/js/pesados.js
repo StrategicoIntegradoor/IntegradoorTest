@@ -492,50 +492,59 @@ function masAseg() {
             var codigoFasecolda = myJson.Data.CodigoFasecolda;
             var valorAsegurado = myJson.Data.ValorAsegurado;
   
-            var claseVehiculo = "";
-            var limiteRCESTADO = "";
+            
+            if(codigoFasecolda != null){
+              if (valorAsegurado == "null" || valorAsegurado == null) {
+                document.getElementById("formularioVehiculo").style.display =
+                  "block";
+                $("#loaderPlaca").html("");
+              } else {
+                var claseVehiculo = "";
+                var limiteRCESTADO = "";
   
-            if (codigoClase == 1) {
-              claseVehiculo = "AUTOMOVILES";
-              limiteRCESTADO = 6;
-            } else if (codigoClase == 2) {
-              claseVehiculo = "CAMPEROS";
-              limiteRCESTADO = 18;
-            } else if (codigoClase == 3) {
-              claseVehiculo = "PICK UPS";
-              limiteRCESTADO = 18;
-            } else if (codigoClase == 4) {
-              claseVehiculo = "UTILITARIOS DEPORTIVOS";
-              limiteRCESTADO = 6;
-            } else if (codigoClase == 12) {
-              claseVehiculo = "MOTOCICLETA";
-              limiteRCESTADO = 6;
-            } else if (codigoClase == 14) {
-              claseVehiculo = "PESADO";
-              limiteRCESTADO = 18;
-            } else if (codigoClase == 19) {
-              claseVehiculo = "VAN";
-              limiteRCESTADO = 18;
-            } else if (codigoClase == 16) {
-              claseVehiculo = "MOTOCICLETA";
-              limiteRCESTADO = 6;
-            }
+                if (codigoClase == 1) {
+                  claseVehiculo = "AUTOMOVILES";
+                  limiteRCESTADO = 6;
+                } else if (codigoClase == 2) {
+                  claseVehiculo = "CAMPEROS";
+                  limiteRCESTADO = 18;
+                } else if (codigoClase == 3) {
+                  claseVehiculo = "PICK UPS";
+                  limiteRCESTADO = 18;
+                } else if (codigoClase == 4) {
+                  claseVehiculo = "UTILITARIOS DEPORTIVOS";
+                  limiteRCESTADO = 6;
+                } else if (codigoClase == 12) {
+                  claseVehiculo = "MOTOCICLETA";
+                  limiteRCESTADO = 6;
+                } else if (codigoClase == 14) {
+                  claseVehiculo = "PESADO";
+                  limiteRCESTADO = 18;
+                } else if (codigoClase == 19) {
+                  claseVehiculo = "VAN";
+                  limiteRCESTADO = 18;
+                } else if (codigoClase == 16) {
+                  claseVehiculo = "MOTOCICLETA";
+                  limiteRCESTADO = 6;
+                }
   
-            $("#CodigoClase").val(codigoClase);
-            $("#txtClaseVeh").val(claseVehiculo);
-            $("#LimiteRC").val(limiteRCESTADO);
-            $("#CodigoMarca").val(codigoMarca);
-            $("#txtModeloVeh").val(modeloVehiculo);
-            $("#CodigoLinea").val(codigoLinea);
-            $("#txtFasecolda").val(codigoFasecolda);
-            $("#txtValorFasecolda").val(valorAsegurado);
-  
-            consulDatosFasecoldaPesados(codigoFasecolda, modeloVehiculo).then(
-              function (resp) {
-                $("#txtMarcaVeh").val(resp.marcaVeh);
-                $("#txtReferenciaVeh").val(resp.lineaVeh);
+                $("#CodigoClase").val(codigoClase);
+                $("#txtClaseVeh").val(claseVehiculo);
+                $("#LimiteRC").val(limiteRCESTADO);
+                $("#CodigoMarca").val(codigoMarca);
+                $("#txtModeloVeh").val(modeloVehiculo);
+                $("#CodigoLinea").val(codigoLinea);
+                $("#txtFasecolda").val(codigoFasecolda);
+                $("#txtValorFasecolda").val(valorAsegurado);
+      
+                consulDatosFasecoldaPesados(codigoFasecolda, modeloVehiculo).then(
+                  function (resp) {
+                    $("#txtMarcaVeh").val(resp.marcaVeh);
+                    $("#txtReferenciaVeh").val(resp.lineaVeh);
+                  }
+                );
               }
-            );
+            }
           } else {
             if (
               mensajeConsulta == "Parámetros Inválidos. Placa es requerido." ||
