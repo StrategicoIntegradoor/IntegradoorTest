@@ -1032,6 +1032,7 @@ function registrarOferta(
   ) {
     return new Promise((resolve, reject) => {
       var idCotizOferta = idCotizacion
+      console.log(idCotizOferta)
       var numDocumentoID = document.getElementById("numDocumentoID").value
       var placa = document.getElementById("placaVeh").value
       if (manual == null) { 
