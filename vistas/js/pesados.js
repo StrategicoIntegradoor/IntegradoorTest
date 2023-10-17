@@ -535,7 +535,7 @@ function masAseg() {
                 $("#txtFasecolda").val(codigoFasecolda);
                 $("#txtValorFasecolda").val(valorAsegurado);
   
-                consulDatosFasecolda(codigoFasecolda, modeloVehiculo).then(
+                consulDatosFasecoldaPesados(codigoFasecolda, modeloVehiculo).then(
                   function (resp) {
                     $("#txtMarcaVeh").val(resp.marcaVeh);
                     $("#txtReferenciaVeh").val(resp.lineaVeh);
