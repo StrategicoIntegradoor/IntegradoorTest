@@ -492,7 +492,9 @@ function masAseg() {
             var codigoFasecolda = myJson.Data.CodigoFasecolda;
             var valorAsegurado = myJson.Data.ValorAsegurado;
   
-            
+            console.log(codigoFasecolda)
+            console.log(valorAsegurado)
+
             if(codigoFasecolda != null){
               if (valorAsegurado == "null" || valorAsegurado == null) {
                 document.getElementById("formularioVehiculo").style.display =
