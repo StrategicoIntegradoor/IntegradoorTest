@@ -11,6 +11,8 @@
     theme: "bootstrap ciudad",
     language: "es",
     width: "100%",
+    minimumResultsForSearch: -1 // Desactiva la búsqueda
+
   });
 
   $("#DptoCirculacion").change(function () {
@@ -24,6 +26,8 @@
       theme: "bootstrap fecnacimiento",
       language: "es",
       width: "100%",
+      minimumResultsForSearch: -1 // Desactiva la búsqueda
+
     });
 
      // Carga las Ciudades disponibles
@@ -31,6 +35,8 @@
     theme: "bootstrap ciudad",
     language: "es",
     width: "100%",
+    minimumResultsForSearch: -1 // Desactiva la búsqueda
+
   });
   
     // Carga los Departamentos disponibles
@@ -38,24 +44,32 @@
       theme: "bootstrap dpto",
       language: "es",
       width: "100%",
+      minimumResultsForSearch: -1 // Desactiva la búsqueda
+
     });
 
     $("#diaCirculacion").select2({
       theme: "bootstrap dia",
       language: "es",
       width: "100%",
+      minimumResultsForSearch: -1 // Desactiva la búsqueda
+
     });
 
     $("#mesCirculacion").select2({
       theme: "bootstrap mes",
       language: "es",
       width: "100%",
+      minimumResultsForSearch: -1 // Desactiva la búsqueda
+
     });
 
     $("#anioCirculacion").select2({
       theme: "bootstrap anio",
       language: "es",
       width: "100%",
+      minimumResultsForSearch: -1 // Desactiva la búsqueda
+
     });
 
 
