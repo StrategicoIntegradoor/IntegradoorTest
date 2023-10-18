@@ -138,7 +138,7 @@
                                                 <label for="">Fecha de Nacimiento <strong class="text-danger">*</strong></label>
                                                 <div class="row">
 
-                                                    <div class="col-md-4 conten-dia">
+                                                    <div class="col-md-3 conten-dia">
                                                     <select class="form-control fecha-nacimiento" name="dianacimiento" id="diaCirculacion" required>
                                                         <option value="">Dia</option>
                                                         <?php
@@ -153,7 +153,7 @@
                                                     </select>
                                                     </div>
 
-                                                    <div class="col-md-4 text-center conten-mes">
+                                                    <div class="col-md-3 text-center conten-mes">
                                                     <select class="form-control fecha-nacimiento" name="mesnacimiento" id="mesCirculacion" required>
                                                         <option value="" selected>Mes</option>
                                                         <option value="01">Enero</option>
@@ -171,7 +171,7 @@
                                                     </select>
                                                     </div>
                                                     
-                                                    <div class="col-md-4 conten-anio">
+                                                    <div class="col-md-3 conten-anio">
                                                     <select class="form-control fecha-nacimiento" name="anionacimiento" id="anioCirculacion" required>
                                                         <option value="">Año</option>
                                                         <?php
