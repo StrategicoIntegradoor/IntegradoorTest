@@ -381,7 +381,7 @@
                                 <label for="">Fecha de Nacimiento <strong class="text-danger">*</strong></label>
                                 <div class="row">
                                     <div class="col-xs-4 col-sm-4 col-md-4 text-left mb-3" >
-                                        <select class="form-control fecha-nacimiento" name="dia_nacimiento" id="diaCirculacion" required>
+                                        <select class="form-control fecha-nacimiento" name="dia_nacimiento" id="diaCirculacion1" required>
                                             <option value="">Dia</option>
                                             <?php
                                             for ($i = 1; $i <= 31; $i++) {
@@ -395,7 +395,7 @@
                                         </select>
                                     </div>
                                     <div class="col-xs-4 col-sm-4 col-md-4 text-center mb-3" >
-                                        <select class="form-control fecha-nacimiento" name="mes_nacimiento" id="mesCirculacion" required>
+                                        <select class="form-control fecha-nacimiento" name="mes_nacimiento" id="mesCirculacion1" required>
                                             <option value="">Mes</option>
                                             <option value="01">Enero</option>
                                             <option value="02">Febrero</option>
@@ -412,7 +412,7 @@
                                         </select>
                                     </div>
                                     <div class="col-xs-4 col-sm-4 col-md-4 text-right" >
-                                        <select class="form-control fecha-nacimiento" name="anio_nacimiento" id="anioCirculacion" required>
+                                        <select class="form-control fecha-nacimiento" name="anio_nacimiento" id="anioCirculacion1" required>
                                             <option value="">Año</option>
                                             <?php
                                             for ($j = 1920; $j <= 2021; $j++) {
@@ -444,7 +444,7 @@
                         
                         <div class="form-group col-xs-12 col-sm-6 col-md-3">
                             <label for="DptoCirculacion">Departamento de residencia <strong class="text-danger">*</strong></label>
-                            <select class="form-control" id="DptoCirculacion" placeholder="Departamento" required>
+                            <select class="form-control" id="DptoCirculacion1" placeholder="Departamento" required>
                                 <option value=""></option>
                                 <option value="1">Amazonas</option>
                                 <option value="2">Antioquia</option>
@@ -490,7 +490,7 @@
                         </div>
                         <div class="form group col-xs-12 col-sm-6 col-md-3">
                             <label for="ciudadCirculacion">Ciudad de residencia <strong class="text-danger">*</strong></label>
-                            <select class="form-control" id="ciudadCirculacion"></select>
+                            <select class="form-control" id="ciudadCirculacion1"></select>
                             <div id="listaCiudades"></div>
                         </div>
 
