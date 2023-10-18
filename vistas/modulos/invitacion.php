@@ -252,8 +252,8 @@
                                         </div>
 
                                         <div class="row">
-                                            <div class="row">                                           
-                                                <div class="col-xs-12 col-sm-6 col-md-3 form-group">
+                                            <!-- <div class="row">                                            -->
+                                                <div class="col-xs-12 col-md-3 form-group">
                                                     <label for="DptoCirculacion">Departamento de Circulación</label>
                                                     <select class="form-control" id="DptoCirculacion" required>
                                                         <option value=""></option>
@@ -300,13 +300,13 @@
                                                     </select>
                                                 </div>
 
-                                                <div class="col-xs-12 col-sm-6 col-md-3 form-group">
+                                                <div class="col-xs-12 col-md-3 form-group">
                                                     <label for="ciudadCirculacion">Ciudad de Circulación</label>
                                                     <select class="form-control" id="ciudadCirculacion" required></select>
                                                     <div id="listaCiudades"></div>
                                                 </div>
-                                            </div>
-                                                <div class="form-group col-md-6 col-sm-12">
+                                            <!-- </div> -->
+                                                <div class="col-xs-12 col-md-6 form-group">
                                                     <label for="">Dirección <strong class="text-danger">*</strong></label>
                                                     <input class="form-control" type="text" name="direccion" id="direccion" >
                                                 </div>
