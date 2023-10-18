@@ -57,7 +57,7 @@
                     </div>
                 </div>
 
-                <!-- <div class="guest-box"> -->
+                <div class="guest-box">
 
                     <div id="box-body">
 
@@ -351,7 +351,7 @@
                     <!-- CAMPOS OCULTOS PARA OPTENER LA INFORMACION-->
                     
 
-                <!-- </div> -->
+                </div>
 
             </div>
 
