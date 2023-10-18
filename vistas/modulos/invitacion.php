@@ -33,10 +33,10 @@
     margin-right: 0;
     }
 
-    .row1 {
-    display: flex;
-    justify-content: space-between; /* Distribuye los elementos a lo largo del contenedor */
-    }
+/* Añade un espacio entre los div */
+.row .form-group > .row {
+    justify-content: space-between;
+}
 
     ::placeholder {
             /* color: #82d600 !important;
@@ -132,10 +132,10 @@
                                             </div>
                                         </div>
 
-                                        <div class="row1">
+                                        <div class="row">
                                             <div class="col-xs-12 col-sm-12 col-md-12 form-group">
                                                 <label for="">Fecha de Nacimiento <strong class="text-danger">*</strong></label>
-                                                <div class="row1">
+                                                <div class="row">
 
                                                     <div class="col-xs-4 col-sm-4 col-md-4 conten-dia">
                                                     <select class="form-control fecha-nacimiento" name="dianacimiento" id="diaCirculacion" required>
