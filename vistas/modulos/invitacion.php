@@ -1,6 +1,6 @@
 
 <head>
-<link rel="stylesheet" href="vistas/dist/css/styles_cotizador.css?v=<?php echo (rand()); ?>">
+<!-- <link rel="stylesheet" href="vistas/dist/css/styles_cotizador.css?v=<?php echo (rand()); ?>"> -->
 
 <style>
 
