@@ -43,7 +43,7 @@
 <body> 
 
 
-        <section class="content">
+        <!-- <section class="content"> -->
 
             <!-- <div class="box"> -->
                 <div class="guest-box-body">
@@ -304,7 +304,7 @@
             <!-- MODAL FASECOLDA -->
             <!-- END MODAL FASECOLDA -->
 
-        </section>
+        <!-- </section> -->
 
 
 </body>
