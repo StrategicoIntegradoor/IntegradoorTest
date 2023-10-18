@@ -24,13 +24,18 @@
     .conten-mes,
     .conten-anio {
         margin-bottom: 5px;
-        width: 30%; /* Cada select ocupa el 30% del ancho disponible */
-        margin-right: 2%; /* Espaciado entre los select (10% dividido entre 3) */
+        flex: 0 0 30%; /* 30% de ancho fijo para cada select */
+
     }
 
     /* Aplicar margen derecho entre los select */
     .conten-anio {
     margin-right: 0;
+    }
+
+    .row {
+    display: flex;
+    justify-content: space-between; /* Distribuye los elementos a lo largo del contenedor */
     }
 
     ::placeholder {
