@@ -9,8 +9,8 @@
     }
 
     hr {
-        /* background-color: #82d600; 
-        height: 1px; */
+        background-color: #82d600; 
+        height: 1px;
         border: none;
         margin: 10px 0;
     }
@@ -34,12 +34,12 @@
     }
 
     ::placeholder {
-            /* color: #82d600 !important;
-            opacity: 7 !important; */
+            color: #82d600 !important;
+            opacity: 7 !important;
         }
 
     .form-control:focus {
-        /* outline: 0.5px solid #82d600; */
+        outline: 0.5px solid #82d600;
 
     }
 
