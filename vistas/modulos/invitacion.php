@@ -294,23 +294,11 @@
                                             <div id="listaCiudades"></div>
                                             </div>
 
-                                            <div class="col-xs-12 col-sm-6 col-md-3">
-                                            <div class="row">
-                                                <div class="col-xs-5 col-sm-5 col-md-5 form-group">
-                                                <label style="display: none;">Es Oneroso?</label>
-                                                <div class="conten-oneroso" style="display: none;">
-                                                    <label for="Si">Si</label>
-                                                    <input type="radio" name="oneroso" id="esOnerosoSi" value="Si">&nbsp;&nbsp;&nbsp;&nbsp;
-                                                    <label for="No">No</label>
-                                                    <input type="radio" name="oneroso" id="esOnerosoNo" value="No" required checked>
-                                                </div>
-                                                </div>
-                                                <div class="col-xs-7 col-sm-7 col-md-7 form-group" id="contenBenefOneroso">
-                                                <label for="benefOneroso">Beneficiario</label>
-                                                <input type="text" class="form-control" id="benefOneroso">
-                                                </div>
+                                            <div class="form-group col-md-6 col-sm-12">
+                                                <label for="">Dirección <strong class="text-danger">*</strong></label>
+                                                <input class="form-control" type="text" name="direccion" id="direccion" >
                                             </div>
-                                            </div>
+
                                         </div>
 
                                         <div class="row">
@@ -367,11 +355,6 @@
                                                 <select class="form-control" id="ciudadCirculacion"></select>
                                                 <div id="listaCiudades"></div>
                                             </div> -->
-
-                                            <div class="form-group col-md-6 col-sm-12">
-                                                <label for="">Dirección <strong class="text-danger">*</strong></label>
-                                                <input class="form-control" type="text" name="direccion" id="direccion" >
-                                            </div>
 
                                         </div>
 
