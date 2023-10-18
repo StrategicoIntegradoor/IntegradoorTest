@@ -137,7 +137,7 @@
                                                 <label for="">Fecha de Nacimiento <strong class="text-danger">*</strong></label>
                                                 <div class="row">
 
-                                                    <div class="col-xs-4 col-sm-4 col-md-4 conten-dia">
+                                                    <div class="col-xs-4 col-sm-4 col-md-4 conten-dia text-left md-3">
                                                     <select class="form-control fecha-nacimiento" name="dianacimiento" id="diaCirculacion" required>
                                                         <option value="">Dia</option>
                                                         <?php
@@ -152,7 +152,7 @@
                                                     </select>
                                                     </div>
 
-                                                    <div class="col-xs-4 col-sm-4 col-md-4 conten-mes">
+                                                    <div class="col-xs-4 col-sm-4 col-md-4 conten-mes md-3">
                                                     <select class="form-control fecha-nacimiento" name="mesnacimiento" id="mesCirculacion" required>
                                                         <option value="" selected>Mes</option>
                                                         <option value="01">Enero</option>
@@ -170,7 +170,7 @@
                                                     </select>
                                                     </div>
                                                     
-                                                    <div class="col-xs-4 col-sm-4 col-md-4 conten-anio">
+                                                    <div class="col-xs-4 col-sm-4 col-md-4 conten-anio  text-right">
                                                     <select class="form-control fecha-nacimiento" name="anionacimiento" id="anioCirculacion" required>
                                                         <option value="">Año</option>
                                                         <?php
