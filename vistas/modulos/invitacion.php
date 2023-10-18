@@ -33,11 +33,6 @@
     margin-right: 0;
     }
 
-/* Añade un espacio entre los div */
-.row .form-group > .row {
-    justify-content: space-between;
-}
-
     ::placeholder {
             /* color: #82d600 !important;
             opacity: 7 !important; */
