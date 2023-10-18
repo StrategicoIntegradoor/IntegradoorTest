@@ -71,7 +71,7 @@
 
                 <div class="guest-box">
 
-                    <div id="box-body">
+                    <!-- <div id="box-body"> -->
 
                         <!-- FORMULARIO RESUMEN ASEGURADO -->
                         <div id="formularioResumen">
@@ -471,7 +471,7 @@
 
                         
 
-                    </div>
+                    <!-- </div> -->
 
                     <!-- CAMPOS OCULTOS PARA OPTENER LA INFORMACION-->
                     
