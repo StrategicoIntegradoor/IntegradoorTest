@@ -26,6 +26,12 @@
         margin-bottom: 5px;
     }
 
+    /* Aplicar margen derecho entre los select */
+    .conten-dia,
+    .conten-mes {
+        margin-right: 10px; /* Ajusta el valor según la cantidad de espacio que desees */
+    }
+
     ::placeholder {
             /* color: #82d600 !important;
             opacity: 7 !important; */
