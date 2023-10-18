@@ -34,7 +34,6 @@
     }
 
     ::placeholder {
-            color: #82d600 !important;
             opacity: 7 !important;
         }
 
