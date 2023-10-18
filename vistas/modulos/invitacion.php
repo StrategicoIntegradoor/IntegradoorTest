@@ -185,7 +185,7 @@
                                             </div>
                                         </div>
 
-                                        <div class="row">
+                                        <!-- <div class="row"> -->
                         
                                             <div class="form-group col-xs-12 col-sm-6 col-md-3">
                                                 <label for="DptoCirculacion">Departamento de residencia <strong class="text-danger">*</strong></label>
@@ -244,7 +244,8 @@
                                                 <label for="">Dirección <strong class="text-danger">*</strong></label>
                                                 <input class="form-control" type="text" name="direccion" id="direccion" >
                                             </div>
-                                        </div>
+
+                                        <!-- </div> -->
 
                                         <div class="row">
                                             <div class="form-group col-md-12 col-sm-12">
