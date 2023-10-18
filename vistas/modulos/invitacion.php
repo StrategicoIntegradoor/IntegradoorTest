@@ -33,7 +33,7 @@
     margin-right: 0;
     }
 
-    .row {
+    .row1 {
     display: flex;
     justify-content: space-between; /* Distribuye los elementos a lo largo del contenedor */
     }
@@ -132,7 +132,7 @@
                                             </div>
                                         </div>
 
-                                        <div class="row">
+                                        <div class="row1">
                                             <div class="col-xs-12 col-sm-12 col-md-12 form-group">
                                                 <label for="">Fecha de Nacimiento <strong class="text-danger">*</strong></label>
                                                 <div class="row">
