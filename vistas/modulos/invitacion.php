@@ -305,13 +305,11 @@
                                                     <select class="form-control" id="ciudadCirculacion" required></select>
                                                     <div id="listaCiudades"></div>
                                                 </div>
-
+                                            </div>
                                                 <div class="form-group col-md-6 col-sm-12">
                                                     <label for="">Dirección <strong class="text-danger">*</strong></label>
                                                     <input class="form-control" type="text" name="direccion" id="direccion" >
                                                 </div>
-                                            </div>
-                                                
                                         </div>
 
                                         <!-- correcion select2 movil -->
@@ -368,11 +366,6 @@
                                                 <label for="ciudadCirculacion">Ciudad de Circulación</label>
                                                 <select class="form-control" id="ciudadCirculacion4" required></select>
                                                 <div id="listaCiudades"></div>
-                                            </div>
-
-                                            <div class="form-group col-md-6 col-sm-12">
-                                                <label for="">Dirección <strong class="text-danger">*</strong></label>
-                                                <input class="form-control" type="text" name="direccion" id="direccion" >
                                             </div>
 
                                         </div>
