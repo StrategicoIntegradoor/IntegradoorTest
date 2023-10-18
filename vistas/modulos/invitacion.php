@@ -122,7 +122,7 @@
 
                                         <div class="row">
                                             <div class="col-xs-12 col-sm-12 col-md-12 form-group">
-                                                <label for="">Fecha de Nacimiento</label>
+                                                <label for="">Fecha de Nacimiento <strong class="text-danger">*</strong></label>
                                                 <div class="row">
 
                                                     <div class="col-xs-4 col-sm-4 col-md-4 conten-dia">
@@ -174,7 +174,7 @@
                                                     
                                         
                                         <div class="row">
-                                            <div class="col-xs-12 col-sm-12 col-md-12 form-group">
+                                            <!-- <div class="col-xs-12 col-sm-12 col-md-12 form-group">
                                                     <label for="">Fecha de Nacimiento <strong class="text-danger">*</strong></label>
                                                     <div class="row">
                                                         <div class="col-xs-4 col-sm-4 col-md-4 text-left mb-3" >
@@ -219,7 +219,7 @@
                                                             </select>
                                                         </div>
                                                     </div>                                                                                                                                                                                                             
-                                            </div>
+                                            </div> -->
 
                                                 <div class="form-group col-md-6 col-sm-12">
                                                     <label for="">Genero <strong class="text-danger">*</strong></label>
