@@ -268,6 +268,8 @@
 
 .dia.select2-container--bootstrap .select2-selection--single .select2-selection__rendered {
     padding-top: 4px;
+    width: 100%; /* O el valor que desees */
+    max-width: 100%; /* Para asegurarte de que no exceda el ancho del contenedor padre */
 }
 
 .dia.select2-container--bootstrap .select2-selection--single .select2-selection__arrow b {
