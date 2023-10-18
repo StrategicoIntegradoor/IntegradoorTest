@@ -1,38 +1,38 @@
 
 <head>
-<!-- <link rel="stylesheet" href="vistas/dist/css/styles_cotizador.css?v=<?php echo (rand()); ?>"> -->
+<link rel="stylesheet" href="vistas/dist/css/styles_cotizador.css?v=<?php echo (rand()); ?>">
 
 <style>
 
     .asterisk {
-    /* color: red; */
+    color: red;
     }
 
     hr {
         /* background-color: #82d600; 
         height: 1px; */
-        /* border: none;
-        margin: 10px 0; */
+        border: none;
+        margin: 10px 0;
     }
 
     .form-control {
-        /* height: 35px; 
-        font-size: 13px; */
+        height: 35px; 
+        font-size: 13px;
         }
 
     .conten-dia,
     .conten-mes,
     .conten-anio {
-        /* margin-bottom: 5px; */
+        margin-bottom: 5px;
     }
 
-    /* ::placeholder {
+    ::placeholder {
             color: #82d600 !important;
             opacity: 7 !important;
-        } */
+        }
 
         .form-control:focus {
-            /* outline: 0.5px solid #82d600; */
+            outline: 0.5px solid #82d600;
 
         }
 </style>
