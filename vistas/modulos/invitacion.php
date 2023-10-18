@@ -43,9 +43,9 @@
 <body> 
 
 
-        <!-- <section class="content"> -->
+        <section class="content">
 
-            <!-- <div class="box"> -->
+            <div class="box">
                 <div class="guest-box-body">
                     <div class="register-box">
                         <div class="login-logo">
@@ -299,12 +299,12 @@
 
                 </div>
 
-            <!-- </div> -->
+            </div>
 
             <!-- MODAL FASECOLDA -->
             <!-- END MODAL FASECOLDA -->
 
-        <!-- </section> -->
+        </section>
 
 
 </body>
