@@ -5,25 +5,25 @@
 <style>
 
     .asterisk {
-    color: red;
+    /* color: red; */
     }
 
     hr {
-        background-color: #82d600; 
-        height: 1px;
+        /* background-color: #82d600; 
+        height: 1px; */
         /* border: none;
         margin: 10px 0; */
     }
 
     .form-control {
-        height: 35px; 
-        font-size: 13px;
+        /* height: 35px; 
+        font-size: 13px; */
         }
 
     .conten-dia,
     .conten-mes,
     .conten-anio {
-        margin-bottom: 5px;
+        /* margin-bottom: 5px; */
     }
 
     /* ::placeholder {
@@ -32,7 +32,8 @@
         } */
 
         .form-control:focus {
-            outline: 0.5px solid #82d600;
+            /* outline: 0.5px solid #82d600; */
+
         }
 </style>
 
