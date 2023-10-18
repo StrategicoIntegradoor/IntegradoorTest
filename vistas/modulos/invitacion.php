@@ -57,12 +57,12 @@
                     </div>
                 </div>
 
-                <div class="guest-box">
+                <!-- <div class="guest-box"> -->
 
                     <div id="box-body">
 
                         <!-- FORMULARIO RESUMEN ASEGURADO -->
-                        <form method="Post" id="formResumAseg">
+                        <div id="formularioResumen">
                             <!-- <div id="resumenAsegurado"> -->
                                 <div class="col-lg-12" id="headerAsegurado">
                                     <div class="row row-aseg">
@@ -124,7 +124,7 @@
                                             <div class="col-xs-12 col-sm-12 col-md-12 form-group">
                                                     <label for="">Fecha de Nacimiento <strong class="text-danger">*</strong></label>
                                                     <div class="row">
-                                                        <div class="col-xs-4 col-sm-4 col-md-4 text-left mb-3" >
+                                                        <div class="col-xs-4 col-sm-4 col-md-4 text-left mb-3 conten-dia" >
                                                             <select class="form-control fecha-nacimiento" name="dia_nacimiento" id="diaCirculacion" required>
                                                                 <option value="">Dia</option>
                                                                 <?php
@@ -138,7 +138,7 @@
                                                                                                                                     ?>
                                                             </select>
                                                         </div>
-                                                        <div class="col-xs-4 col-sm-4 col-md-4 text-center mb-3" >
+                                                        <div class="col-xs-4 col-sm-4 col-md-4 text-center mb-3 conten-mes" >
                                                             <select class="form-control fecha-nacimiento" name="mes_nacimiento" id="mesCirculacion" required>
                                                                 <option value="">Mes</option>
                                                                 <option value="01">Enero</option>
@@ -155,7 +155,7 @@
                                                                 <option value="12">Diciembre</option>
                                                             </select>
                                                         </div>
-                                                        <div class="col-xs-4 col-sm-4 col-md-4 text-right" >
+                                                        <div class="col-xs-4 col-sm-4 col-md-4 text-right conten-anio" >
                                                             <select class="form-control fecha-nacimiento" name="anio_nacimiento" id="anioCirculacion" required>
                                                                 <option value="">Año</option>
                                                                 <?php
@@ -282,7 +282,7 @@
                                     <!-- </div> -->
                                 <!-- </div> -->
                             <!-- </div> -->
-                        </form>
+                        </div>
 
                         <!-- FORMULARIO VEHICULO MANUAL -->
 
@@ -297,7 +297,7 @@
                     <!-- CAMPOS OCULTOS PARA OPTENER LA INFORMACION-->
                     
 
-                </div>
+                <!-- </div> -->
 
             </div>
 
