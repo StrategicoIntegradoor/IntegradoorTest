@@ -121,7 +121,7 @@
                                         </div>
 
                                         <div class="row">
-                                            <div class="col-xs-12 col-sm-6 col-md-3 form-group">
+                                            <div class="col-xs-12 col-sm-12 col-md-12 form-group">
                                                 <label for="">Fecha de Nacimiento</label>
                                                 <div class="row">
 
