@@ -306,12 +306,12 @@
                                                     <div id="listaCiudades"></div>
                                                 </div>
                                             </div>
-
-                                            <div class="form-group col-md-6 col-sm-12">
-                                                <label for="">Dirección <strong class="text-danger">*</strong></label>
-                                                <input class="form-control" type="text" name="direccion" id="direccion" >
+                                            <div class="row">                                                                                                     
+                                                <div class="form-group col-md-6 col-sm-12">
+                                                    <label for="">Dirección <strong class="text-danger">*</strong></label>
+                                                    <input class="form-control" type="text" name="direccion" id="direccion" >
+                                                </div>
                                             </div>
-
                                         </div>
 
                                         <!-- correcion select2 movil -->
