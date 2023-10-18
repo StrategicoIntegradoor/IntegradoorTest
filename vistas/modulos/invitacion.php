@@ -315,7 +315,7 @@
 
                                         <div class="row">
                         
-                                            <div class="form-group col-xs-12 col-sm-6 col-md-3">
+                                            <!-- <div class="form-group col-xs-12 col-sm-6 col-md-3">
                                                 <label for="DptoCirculacion">Departamento de residencia <strong class="text-danger">*</strong></label>
                                                 <select class="form-control" id="DptoCirculacion" placeholder="Departamento" required>
                                                     <option value=""></option>
@@ -360,13 +360,13 @@
                                                     <option value="33">Vaupés</option>
                                                     <option value="34">Vichada</option>
                                                 </select>
-                                            </div>
+                                            </div> -->
 
-                                            <div class="form group col-xs-12 col-sm-6 col-md-3">
+                                            <!-- <div class="form group col-xs-12 col-sm-6 col-md-3">
                                                 <label for="ciudadCirculacion">Ciudad de residencia <strong class="text-danger">*</strong></label>
                                                 <select class="form-control" id="ciudadCirculacion"></select>
                                                 <div id="listaCiudades"></div>
-                                            </div>
+                                            </div> -->
 
                                             <div class="form-group col-md-6 col-sm-12">
                                                 <label for="">Dirección <strong class="text-danger">*</strong></label>
