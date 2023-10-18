@@ -11,7 +11,7 @@
     theme: "bootstrap ciudad",
     language: "es",
     width: "100%",
-    minimumResultsForSearch: -1 // Desactiva la búsqueda
+    minimumResultsForSearch: 0 // Desactiva la búsqueda
 
   });
 
@@ -26,7 +26,7 @@
       theme: "bootstrap fecnacimiento",
       language: "es",
       width: "100%",
-      minimumResultsForSearch: -1 // Desactiva la búsqueda
+      minimumResultsForSearch: 0 // Desactiva la búsqueda
 
     });
 
@@ -35,7 +35,7 @@
     theme: "bootstrap ciudad",
     language: "es",
     width: "100%",
-    minimumResultsForSearch: -1 // Desactiva la búsqueda
+    minimumResultsForSearch: 0 // Desactiva la búsqueda
 
   });
   
@@ -44,7 +44,7 @@
       theme: "bootstrap dpto",
       language: "es",
       width: "100%",
-      minimumResultsForSearch: -1 // Desactiva la búsqueda
+      minimumResultsForSearch: 0 // Desactiva la búsqueda
 
     });
 
@@ -52,7 +52,7 @@
       theme: "bootstrap dia",
       language: "es",
       width: "100%",
-      minimumResultsForSearch: -1 // Desactiva la búsqueda
+      minimumResultsForSearch: 0 // Desactiva la búsqueda
 
     });
 
@@ -60,7 +60,7 @@
       theme: "bootstrap mes",
       language: "es",
       width: "100%",
-      minimumResultsForSearch: -1 // Desactiva la búsqueda
+      minimumResultsForSearch: 0 // Desactiva la búsqueda
 
     });
 
@@ -68,7 +68,7 @@
       theme: "bootstrap anio",
       language: "es",
       width: "100%",
-      minimumResultsForSearch: -1 // Desactiva la búsqueda
+      minimumResultsForSearch: 0 // Desactiva la búsqueda
 
     });
 
