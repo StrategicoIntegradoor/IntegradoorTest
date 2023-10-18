@@ -24,12 +24,13 @@
     .conten-mes,
     .conten-anio {
         margin-bottom: 5px;
+        width: 30%; /* Cada select ocupa el 30% del ancho disponible */
+        margin-right: 2%; /* Espaciado entre los select (10% dividido entre 3) */
     }
 
     /* Aplicar margen derecho entre los select */
-    .conten-dia,
-    .conten-mes {
-        margin-right: 1px; /* Ajusta el valor según la cantidad de espacio que desees */
+    .conten-anio {
+    margin-right: 0;
     }
 
     ::placeholder {
