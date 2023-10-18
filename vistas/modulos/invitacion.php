@@ -29,7 +29,7 @@
     /* Aplicar margen derecho entre los select */
     .conten-dia,
     .conten-mes {
-        margin-right: 10px; /* Ajusta el valor según la cantidad de espacio que desees */
+        margin-right: 1px; /* Ajusta el valor según la cantidad de espacio que desees */
     }
 
     ::placeholder {
