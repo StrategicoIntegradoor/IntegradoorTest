@@ -124,8 +124,8 @@
                                             <div class="col-xs-12 col-sm-12 col-md-12 form-group">
                                                     <label for="">Fecha de Nacimiento <strong class="text-danger">*</strong></label>
                                                     <div class="row">
-                                                        <div class="col-xs-4 col-sm-4 col-md-4 text-left mb-3 conten-dia" >
-                                                            <select class="form-control fecha-nacimiento" name="dia_nacimiento" id="diaCirculacion" required>
+                                                        <div class="col-xs-4 col-sm-4 col-md-4 text-left mb-3" >
+                                                            <select class="form-control fecha-nacimiento" name="dia_nacimiento" id="dianacimiento" required>
                                                                 <option value="">Dia</option>
                                                                 <?php
                                                                 for ($i = 1; $i <= 31; $i++) {
@@ -138,8 +138,8 @@
                                                                                                                                     ?>
                                                             </select>
                                                         </div>
-                                                        <div class="col-xs-4 col-sm-4 col-md-4 text-center mb-3 conten-mes" >
-                                                            <select class="form-control fecha-nacimiento" name="mes_nacimiento" id="mesCirculacion" required>
+                                                        <div class="col-xs-4 col-sm-4 col-md-4 text-center mb-3" >
+                                                            <select class="form-control fecha-nacimiento" name="mes_nacimiento" id="mesnacimiento" required>
                                                                 <option value="">Mes</option>
                                                                 <option value="01">Enero</option>
                                                                 <option value="02">Febrero</option>
@@ -155,8 +155,8 @@
                                                                 <option value="12">Diciembre</option>
                                                             </select>
                                                         </div>
-                                                        <div class="col-xs-4 col-sm-4 col-md-4 text-right conten-anio" >
-                                                            <select class="form-control fecha-nacimiento" name="anio_nacimiento" id="anioCirculacion" required>
+                                                        <div class="col-xs-4 col-sm-4 col-md-4 text-right" >
+                                                            <select class="form-control fecha-nacimiento" name="anio_nacimiento" id="anionacimiento" required>
                                                                 <option value="">Año</option>
                                                                 <?php
                                                                 for ($j = 1920; $j <= 2021; $j++) {
@@ -264,84 +264,59 @@
                                                 <input class="form-control" type="password" name="confirmar_contrasena" id="confirmar_contrasena" placeholder="Confirmar contraseña">
                                             </div>
                                         </div>
-                                        <div class="row">
-                <div class="col-xs-12 col-sm-6 col-md-3 form-group">
-                  <label for="">Fecha de Nacimiento</label>
-                  <div class="row">
+                                        
+                                        <!-- <div class="row">
+                                            <div class="col-xs-12 col-sm-6 col-md-3 form-group">
+                                            <label for="">Fecha de Nacimiento</label>
+                                            <div class="row">
 
-                    <div class="col-xs-4 col-sm-4 col-md-4 conten-dia">
-                      <select class="form-control fecha-nacimiento" name="dianacimiento" id="dianacimiento" required>
-                        <option value="">Dia</option>
-                        <?php
-                        for ($i = 1; $i <= 31; $i++) {
-                          if (strlen($i) == 1) { ?>
-                            <option value="<?php echo "0" . $i ?>"><?php echo "0" . $i ?></option><?php
-                                                                                                } else { ?>
-                            <option value="<?php echo $i ?>"><?php echo $i ?></option><?php
-                                                                                                }
-                                                                                              }
-                                                                                      ?>
-                      </select>
-                    </div>
+                                                <div class="col-xs-4 col-sm-4 col-md-4 conten-dia">
+                                                <select class="form-control fecha-nacimiento" name="dianacimiento" id="dianacimiento" required>
+                                                    <option value="">Dia</option>
+                                                    <?php
+                                                    for ($i = 1; $i <= 31; $i++) {
+                                                    if (strlen($i) == 1) { ?>
+                                                        <option value="<?php echo "0" . $i ?>"><?php echo "0" . $i ?></option><?php
+                                                                                                                            } else { ?>
+                                                        <option value="<?php echo $i ?>"><?php echo $i ?></option><?php
+                                                                                                                            }
+                                                                                                                        }
+                                                                                                                ?>
+                                                </select>
+                                                </div>
 
-                    <div class="col-xs-4 col-sm-4 col-md-4 conten-mes">
-                      <select class="form-control fecha-nacimiento" name="mesnacimiento" id="mesnacimiento" required>
-                        <option value="" selected>Mes</option>
-                        <option value="01">Enero</option>
-                        <option value="02">Febrero</option>
-                        <option value="03">Marzo</option>
-                        <option value="04">Abril</option>
-                        <option value="05">Mayo</option>
-                        <option value="06">Junio</option>
-                        <option value="07">Julio</option>
-                        <option value="08">Agosto</option>
-                        <option value="09">Septiembre</option>
-                        <option value="10">Octubre</option>
-                        <option value="11">Noviembre</option>
-                        <option value="12">Diciembre</option>
-                      </select>
-                    </div>
-                    
-                    <div class="col-xs-4 col-sm-4 col-md-4 conten-anio">
-                      <select class="form-control fecha-nacimiento" name="anionacimiento" id="anionacimiento" required>
-                        <option value="">Año</option>
-                        <?php
-                        for ($j = 1920; $j <= 2021; $j++) {
-                        ?><option value="<?php echo $j ?>"><?php echo $j ?></option><?php
-                                                                                  }
-                                                                                    ?>
-                      </select>
-                    </div>
-                  </div>
-                </div>
+                                                <div class="col-xs-4 col-sm-4 col-md-4 conten-mes">
+                                                <select class="form-control fecha-nacimiento" name="mesnacimiento" id="mesnacimiento" required>
+                                                    <option value="" selected>Mes</option>
+                                                    <option value="01">Enero</option>
+                                                    <option value="02">Febrero</option>
+                                                    <option value="03">Marzo</option>
+                                                    <option value="04">Abril</option>
+                                                    <option value="05">Mayo</option>
+                                                    <option value="06">Junio</option>
+                                                    <option value="07">Julio</option>
+                                                    <option value="08">Agosto</option>
+                                                    <option value="09">Septiembre</option>
+                                                    <option value="10">Octubre</option>
+                                                    <option value="11">Noviembre</option>
+                                                    <option value="12">Diciembre</option>
+                                                </select>
+                                                </div>
+                                                
+                                                <div class="col-xs-4 col-sm-4 col-md-4 conten-anio">
+                                                <select class="form-control fecha-nacimiento" name="anionacimiento" id="anionacimiento" required>
+                                                    <option value="">Año</option>
+                                                    <?php
+                                                    for ($j = 1920; $j <= 2021; $j++) {
+                                                    ?><option value="<?php echo $j ?>"><?php echo $j ?></option><?php
+                                                                                                            }
+                                                                                                                ?>
+                                                </select>
+                                                </div>
+                                            </div>
+                                            </div>
+                                        </div> -->
 
-                <div class="col-xs-12 col-sm-6 col-md-3 form-group">
-                  <label for="genero">Genero</label>
-                  <select class="form-control" id="genero" required>
-                    <option value="" selected>Género</option>
-                    <option value="1">Masculino</option>
-                    <option value="2">Femenino</option>
-                  </select>
-                </div>
-
-                <div class="col-xs-12 col-sm-6 col-md-3 form-group">
-                  <label for="estadoCivil">Estado Civil</label>
-                  <select class="form-control" id="estadoCivil" required>
-                    <option value="" selected>Estado Civil</option>
-                    <option value="1">Soltero (a)</option>
-                    <option value="2">Casado (a)</option>
-                    <option value="3">Viudo (a)</option>
-                    <option value="4">Divorciado (a)</option>
-                    <option value="5">Unión Libre</option>
-                    <option value="6">Separado (a)</option>
-                  </select>
-                </div>
-
-                <div class="col-xs-12 col-sm-6 col-md-3 form-group">
-                  <label for="correo">Correo</label>
-                  <input type="text" class="form-control" id="txtCorreo" placeholder="Correo">
-                </div>
-              </div>
                                         <div class="row">
                                             <div class="form-group col-md-12 col-sm-12">
                                                 <div class="col-xs-offset-3 col-md-offset-3 col-xs-9">
