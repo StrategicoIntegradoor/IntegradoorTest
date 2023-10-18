@@ -27,12 +27,12 @@
     }
 
     ::placeholder {
-            color: #82d600 !important;
-            opacity: 7 !important;
+            /* color: #82d600 !important;
+            opacity: 7 !important; */
         }
 
         .form-control:focus {
-            outline: 0.5px solid #82d600;
+            /* outline: 0.5px solid #82d600; */
 
         }
 </style>
