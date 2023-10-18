@@ -59,7 +59,7 @@
 
                 <div class="guest-box">
 
-                    <!-- <div id="box-body"> -->
+                    <div id="box-body">
 
                         <!-- FORMULARIO RESUMEN ASEGURADO -->
                         <form method="Post" id="formResumAseg">
@@ -292,7 +292,7 @@
 
                         
 
-                    <!-- </div> -->
+                    </div>
 
                     <!-- CAMPOS OCULTOS PARA OPTENER LA INFORMACION-->
                     
