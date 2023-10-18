@@ -236,7 +236,7 @@
 
                                             <div class="form group col-xs-12 col-sm-6 col-md-3">
                                                 <label for="ciudadCirculacion">Ciudad de residencia <strong class="text-danger">*</strong></label>
-                                                <select class="form-control" id="ciudadCirculacion"></select>
+                                                <select id="ciudadCirculacion"></select>
                                                 <div id="listaCiudades"></div>
                                             </div>
 
