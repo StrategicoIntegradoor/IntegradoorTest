@@ -278,8 +278,8 @@
     width: 95%; /* Ajustar el ancho al 30% del contenedor padre */
     /* float: left;  */
     position: absolute;
-    flex: 1
-
+    flex: 1;
+    margin-bottom: 20px; /* Ajusta este valor según tus necesidades */
 
 }
 
