@@ -307,7 +307,6 @@
 
 .mes.select2-container--bootstrap .select2-selection--single .select2-selection__arrow b {
     border-color: #000000 transparent transparent;
-    text-align: center; /* Centrar el contenido del input */
     right: 10px; /* Ajustar la posición horizontal manualmente */
 }
 
