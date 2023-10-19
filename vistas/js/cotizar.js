@@ -590,9 +590,13 @@ function consulPlaca() {
 
 function consulPlacaMapfre(){
 
+  let bodyContent = JSON.stringify({
+    "Placa": 'AVA052'
+  });
+
     fetch("https://grupoasistencia.com/webserviceAutos/ultimaPolizaMapfre", {
       method: "POST",
-      body: 'AVA052',
+      body: bodyContent,
       headers: headersList
   }).then(function(response) {
       return response.json();
