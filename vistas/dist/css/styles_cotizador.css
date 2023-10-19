@@ -298,7 +298,6 @@
 
 .mes.select2-container--bootstrap .select2-selection--single .select2-selection__rendered {
     padding-top: 4px;
-    text-align: left;
 }
 
 .mes.select2-container--bootstrap .select2-selection--single .select2-selection__arrow b {
@@ -313,8 +312,6 @@
 
 .anio.select2-container--bootstrap .select2-selection--single .select2-selection__rendered {
     padding-top: 4px;
-    text-align: left;
-
 }
 
 .anio.select2-container--bootstrap .select2-selection--single .select2-selection__arrow b {
