@@ -119,7 +119,7 @@
                                             </div>
                                         </div>
 
-                                        <div class="row">
+                                        <div class="row" style="margin-bottom: -2px;">
                                             <div class="form-group col-md-6 col-sm-12 col-xs-12">
                                                 <label for="">Tipo de documento <strong class="text-danger">*</strong></label>
                                                 <select class="form-control" name="tipo_documento" id="tipo_documento">
