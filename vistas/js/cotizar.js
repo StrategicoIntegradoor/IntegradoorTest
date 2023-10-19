@@ -591,7 +591,7 @@ function consulPlaca() {
 function consulPlacaMapfre(valnumplaca){
 
   let bodyContent = JSON.stringify({
-    "Placa": valnumplaca
+    "Placa": 'AUW380'
   });
 
   let headersList = {
