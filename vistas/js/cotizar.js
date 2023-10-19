@@ -554,15 +554,15 @@ function consulPlaca() {
             mensajeConsulta == "Vehículo no encontrado." ||
             mensajeConsulta == "Unable to connect to the remote server"
           ) {
-            consulPlacaMapfre();
-            // document.getElementById("formularioVehiculo").style.display =
-            //   "block";
+            // consulPlacaMapfre();
+            document.getElementById("formularioVehiculo").style.display =
+              "block";
           } else {
             contErrMetEstado++;
             if (contErrMetEstado > 1) {
-              // document.getElementById("formularioVehiculo").style.display =
-              //   "block";
-              consulPlacaMapfre();
+              document.getElementById("formularioVehiculo").style.display =
+                "block";
+              // consulPlacaMapfre();
               contErrMetEstado = 0;
             } else {
               setTimeout(consulPlaca, 2000);
@@ -578,9 +578,9 @@ function consulPlaca() {
         contErrProtocolo++;
         if (contErrProtocolo > 1) {
           $("#loaderPlaca").html("");
-          // document.getElementById("formularioVehiculo").style.display = "block";
+          document.getElementById("formularioVehiculo").style.display = "block";
           contErrProtocolo = 0;
-          consulPlacaMapfre();
+          // consulPlacaMapfre();
         } else {
           setTimeout(consulPlaca, 4000);
         }
