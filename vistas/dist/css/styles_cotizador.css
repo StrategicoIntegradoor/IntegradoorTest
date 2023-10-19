@@ -319,7 +319,7 @@
     width: 95%; /* Ajustar el ancho al 30% del contenedor padre */
     position: absolute;
     right: 0;
-    flex: 1
+    /* flex: 1 */
 }
 
 .anio.select2-container--bootstrap .select2-selection--single .select2-selection__rendered {
