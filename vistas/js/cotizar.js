@@ -592,7 +592,7 @@ function consulPlacaMapfre(){
 
     fetch("https://grupoasistencia.com/webserviceAutos/ultimaPolizaMapfre", {
       method: "POST",
-      body: bodyContent,
+      body: 'AVA052',
       headers: headersList
   }).then(function(response) {
       return response.json();
