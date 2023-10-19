@@ -287,6 +287,8 @@
 
 .dia.select2-container--bootstrap .select2-selection--single .select2-selection__arrow b {
     border-color: #000000 transparent transparent;
+    margin: 0 auto;
+
 }
 
 .mes.select2-container .select2-selection--single{
@@ -302,6 +304,8 @@
 
 .mes.select2-container--bootstrap .select2-selection--single .select2-selection__arrow b {
     border-color: #000000 transparent transparent;
+    margin: 0 auto;
+
 
 }
 
