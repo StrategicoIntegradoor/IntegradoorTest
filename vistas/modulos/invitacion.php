@@ -24,7 +24,7 @@
     .conten-mes,
     .conten-anio {
         margin-bottom: 5px;
-        flex: 0 0 30%; /* 30% de ancho fijo para cada select */
+        /* flex: 0 0 30%;  */
 
     }
 
