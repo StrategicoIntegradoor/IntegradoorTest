@@ -132,7 +132,7 @@
                                             </div>
                                         </div>
 
-                                        <div class="row" style="margin-bottom: 20px;">
+                                        <div class="row" style="margin-bottom: 25px;">
                                             <div class="col-xs-12 col-sm-12 col-md-12 form-group">
                                                 <label for="">Fecha de Nacimiento <strong class="text-danger">*</strong></label>
                                                 <div class="row ">
