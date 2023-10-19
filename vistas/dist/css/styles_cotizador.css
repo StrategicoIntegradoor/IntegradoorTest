@@ -291,7 +291,7 @@
     border-color: #000000 transparent transparent;
     text-align: center; /* Centrar el contenido del input */
     position: absolute;
-    left: -10px; /* Ajustar la posición horizontal manualmente */
+    left: -5px; /* Ajustar la posición horizontal manualmente */
 }
 
 
@@ -311,7 +311,7 @@
 .mes.select2-container--bootstrap .select2-selection--single .select2-selection__arrow b {
     border-color: #000000 transparent transparent;
     position: absolute;
-    left: -2px; /* Ajustar la posición horizontal manualmente */
+    left: 0px; /* Ajustar la posición horizontal manualmente */
 }
 
 
