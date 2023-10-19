@@ -278,9 +278,7 @@
     width: 95%; /* Ajustar el ancho al 30% del contenedor padre */
     /* float: left;  */
     position: absolute;
-    flex: 1;
-    margin-bottom: 100px; /* Ajusta este valor según tus necesidades */
-
+    /* flex: 1; */
 }
 
 .dia.select2-container--bootstrap .select2-selection--single .select2-selection__rendered {
@@ -301,7 +299,7 @@
     width: 95%; /* Ajustar el ancho al 30% del contenedor padre */
     /* margin: 0 auto; */
     position: absolute;
-    flex: 1
+    /* flex: 1 */
 }
 
 .mes.select2-container--bootstrap .select2-selection--single .select2-selection__rendered {
@@ -321,7 +319,7 @@
     width: 95%; /* Ajustar el ancho al 30% del contenedor padre */
     position: absolute;
     right: 0;
-    flex: 1
+    /* flex: 1 */
 }
 
 .anio.select2-container--bootstrap .select2-selection--single .select2-selection__rendered {
