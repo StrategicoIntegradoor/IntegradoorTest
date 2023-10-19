@@ -277,8 +277,6 @@
     height: 35px !important;
     width: 90%; /* Ajustar el ancho al 30% del contenedor padre */
     /* float: left;  */
-    margin: 0 auto;
-    flex: 1;
 
 
 }
@@ -310,8 +308,6 @@
     height: 35px !important;
     width: 90%; /* Ajustar el ancho al 30% del contenedor padre */
     /* float: right;  */
-    margin: 0 auto;
-    flex: 1;
 
 
 }
