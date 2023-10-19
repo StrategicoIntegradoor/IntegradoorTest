@@ -299,7 +299,8 @@
 .mes.select2-container .select2-selection--single{
     height: 35px !important;
     width: 95%; /* Ajustar el ancho al 30% del contenedor padre */
-    margin: 0 auto;
+    /* margin: 0 auto; */
+    position: absolute;
     flex: 1
 }
 
