@@ -538,7 +538,6 @@ function consulPlaca() {
 
               consulDatosFasecolda(codigoFasecolda, modeloVehiculo).then(
                 function (resp) {
-                  console.log(resp)
                   $("#txtMarcaVeh").val(resp.marcaVeh);
                   $("#txtReferenciaVeh").val(resp.lineaVeh);
                 }
@@ -675,6 +674,7 @@ function consulPlacaMapfre(valnumplaca){
 
           consulDatosFasecolda(codFasecolda, modelo).then(
             function (resp) {
+              console.log(resp)
               $("#txtMarcaVeh").val(resp.marcaVeh);
               $("#txtReferenciaVeh").val(resp.lineaVeh);
             }
