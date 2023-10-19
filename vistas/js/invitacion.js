@@ -30,14 +30,14 @@
 
     });
 
-      // Carga la fecha de Nacimiento
-      $("#diaCirculacion, #mesCirculacion, #anioCirculacion").select2({
-        theme: "bootstrap fecnacimiento",
-        language: "es",
-        width: "100%",
-        minimumResultsForSearch: 0 // Desactiva la búsqueda
+      // // Carga la fecha de Nacimiento
+      // $("#diaCirculacion, #mesCirculacion, #anioCirculacion").select2({
+      //   theme: "bootstrap fecnacimiento",
+      //   language: "es",
+      //   width: "100%",
+      //   minimumResultsForSearch: 0 // Desactiva la búsqueda
   
-      });
+      // });
 
      // Carga las Ciudades disponibles
   $("#ciudadCirculacion").select2({
