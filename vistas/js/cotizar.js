@@ -607,6 +607,8 @@ function consulPlacaMapfre(valnumplaca){
       }).then(function(response) {
         return response.json();
       }).then(async function(data) {
+        var resultadoConsulta = data.respuesta.errorEjecucion;
+        var codigoClase = data.polizaReciente.COD_MODELO;
         var marcaCod = data.polizaReciente.COD_MARCA;
         var clase = data.polizaReciente.NOM_CLASE;
         var linea = data.polizaReciente.NOM_LINEA;
@@ -623,42 +625,62 @@ function consulPlacaMapfre(valnumplaca){
         console.log("Código Fasecolda:", codFasecolda);
         console.log("Aseguradora:", aseguradora);
 
-        fechaFinVigencia = data.polizaReciente.fechaFinVigencia;
-        var fechFinTR2 = fechaFinVigencia.split('T');
-        fechFinTR = fechFinTR2[0];
-
         propietario = data.polizaReciente.asegNombre;
         cedulaP = data.polizaReciente.asegCodDocum;
 
+        
         if (marcaCod == "" && clase == "" && linea == "" && modelo == "" && cilindraje == "" && codFasecolda == "" && aseguradora == "" && aseguradora == "" && fechFinTR == "" && propietario == "" && cedulaP == "") {
             alert("No se encuentra poliza en esta placa")
         }
 
-        if (ValorCheckSoat2 == "true" && ValorcheckTodoRiesgo2 == "true") {
+        if (resultadoConsulta == false || resultadoConsulta == "false") {
 
-            $("#fasecolda2").val(codFasecolda);
-            $("#aseguradoraTR2").val(aseguradora);
-            $("#fechFinTR2").val(fechFinTR);
-            $("#propietario2").val(propietario);
-            $("#cedulaP2").val(cedulaP);
+          var claseVehiculo = "";
+          var limiteRCESTADO = "";
+
+          if (codigoClase == 1) {
+            claseVehiculo = "AUTOMOVILES";
+            limiteRCESTADO = 6;
+          } else if (codigoClase == 2) {
+            claseVehiculo = "CAMPEROS";
+            limiteRCESTADO = 18;
+          } else if (codigoClase == 3) {
+            claseVehiculo = "PICK UPS";
+            limiteRCESTADO = 18;
+          } else if (codigoClase == 4) {
+            claseVehiculo = "UTILITARIOS DEPORTIVOS";
+            limiteRCESTADO = 6;
+          } else if (codigoClase == 12) {
+            claseVehiculo = "MOTOCICLETA";
+            limiteRCESTADO = 6;
+          } else if (codigoClase == 14) {
+            claseVehiculo = "PESADO";
+            limiteRCESTADO = 18;
+          } else if (codigoClase == 19) {
+            claseVehiculo = "VAN";
+            limiteRCESTADO = 18;
+          } else if (codigoClase == 16) {
+            claseVehiculo = "MOTOCICLETA";
+            limiteRCESTADO = 6;
+          }
+
+          $("#CodigoClase").val(codigoClase);
+          $("#txtClaseVeh").val(claseVehiculo);
+          $("#LimiteRC").val(limiteRCESTADO);
+          $("#CodigoMarca").val(marcaCod);
+          $("#txtModeloVeh").val(modelo);
+          $("#CodigoLinea").val(linea);
+          $("#txtFasecolda").val(codFasecolda);
+
+          consulDatosFasecolda(codFasecolda, modelo).then(
+            function (resp) {
+              $("#txtMarcaVeh").val(resp.marcaVeh);
+              $("#txtReferenciaVeh").val(resp.lineaVeh);
+            }
+          );
+          $("#txtValorFasecolda").val(valorAsegurado);
 
         }
-
-
-        if (ValorCheckSoat2 == "true") {
-
-        } else {
-            $("#VehicleClassName").val(clase);
-            $("#VehicleLineDescription").val(linea);
-            $("#VehicleYear").val(modelo);
-            $("#CylinderCapacity").val(cilindraje);
-        }
-
-        // $("#codFasecolda").val(codFasecolda);
-        // $("#aseguradora").val(aseguradora);
-        // $("#fechFinTR").val(fechFinTR);
-        // $("#propietario").val(propietario);
-        // $("#cedulaP").val(cedulaP);
 
       })
 
@@ -1006,7 +1028,7 @@ function consulDatosFasecolda(codFasecolda, edadVeh) {
         if (data.mensaje == "No hay Registros") {
           document.getElementById("formularioVehiculo").style.display = "block";
         } else {
-          // console.log(data);
+          console.log(data);
           var claseVeh = data.clase;
           var marcaVeh = data.marca;
           var ref1Veh = data.referencia1;
