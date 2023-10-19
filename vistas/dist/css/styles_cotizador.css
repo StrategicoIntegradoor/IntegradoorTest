@@ -291,7 +291,9 @@
 .mes.select2-container .select2-selection--single{
     height: 35px !important;
     width: 90%; /* Ajustar el ancho al 30% del contenedor padre */
-    margin: 0 auto; 
+    margin: 0 auto;
+    margin-right: 10%;
+ 
 }
 
 .mes.select2-container--bootstrap .select2-selection--single .select2-selection__rendered {
@@ -307,7 +309,6 @@
     height: 35px !important;
     width: 90%; /* Ajustar el ancho al 30% del contenedor padre */
     float: right; /* Alinear a la izquierda */
-    margin-right: 10%;
 }
 
 .anio.select2-container--bootstrap .select2-selection--single .select2-selection__rendered {
