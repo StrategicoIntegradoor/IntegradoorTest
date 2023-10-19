@@ -264,7 +264,7 @@
 
                                         <div class="row">
                                             <div class="col-xs-12 col-md-3 form-group">
-                                                <label for="DptoCirculacion">Departamento de Circulación</label>
+                                                <label for="DptoCirculacion">Departamento de residencia <strong class="text-danger">*</strong></label>
                                                 <select class="form-control" id="DptoCirculacion" required>
                                                     <option value=""></option>
                                                     <option value="1">Amazonas</option>
@@ -311,7 +311,7 @@
                                             </div>
 
                                             <div class="col-xs-12 col-md-3 form-group">
-                                                <label for="ciudadCirculacion">Ciudad de Circulación</label>
+                                                <label for="ciudadCirculacion">Ciudad de residencia <strong class="text-danger">*</strong></label>
                                                 <select class="form-control" id="ciudadCirculacion" required></select>
                                                 <div id="listaCiudades"></div>
                                             </div>
