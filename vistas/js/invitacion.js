@@ -1,34 +1,7 @@
-  // // Carga los Departamentos disponibles
-  // $("#DptoCirculacion").select({
-  //   theme: "bootstrap dpto",
-  //   language: "es",
-  //   width: "100%",
-  // });
- 
-
-  // Carga las Ciudades disponibles
-  $("#ciudadCirculacion").select({
-    theme: "bootstrap ciudad",
-    language: "es",
-    width: "100%",
-    minimumResultsForSearch: 0 // Desactiva la búsqueda
-
-  });
 
   $("#DptoCirculacion").change(function () {
     consultarCiudad();
   });
-
- 
-
-    // Carga la fecha de Nacimiento
-    $("#dianacimiento, #mesnacimiento, #anionacimiento").select2({
-      theme: "bootstrap fecnacimiento",
-      language: "es",
-      width: "100%",
-      minimumResultsForSearch: 0 // Desactiva la búsqueda
-
-    });
 
       // // Carga la fecha de Nacimiento
       // $("#diaCirculacion, #mesCirculacion, #anioCirculacion").select2({
