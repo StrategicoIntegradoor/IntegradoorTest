@@ -287,7 +287,7 @@
 
 .dia.select2-container--bootstrap .select2-selection--single .select2-selection__arrow b {
     border-color: #000000 transparent transparent;
-    margin: 0 auto;
+    text-align: center; /* Centrar el contenido del input */
 
 }
 
@@ -304,7 +304,7 @@
 
 .mes.select2-container--bootstrap .select2-selection--single .select2-selection__arrow b {
     border-color: #000000 transparent transparent;
-    margin: 0 auto;
+    text-align: center; /* Centrar el contenido del input */
 
 
 }
