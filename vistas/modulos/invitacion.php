@@ -110,6 +110,17 @@
 
                                         <div class="row">
                                             <div class="form-group col-md-6 col-sm-12 col-xs-12">
+                                                <label for="">Nombres <strong class="text-danger">*</strong> </label>
+                                                <input class="form-control" type="text" name="nombre" id="nombre" placeholder="Nombre">
+                                            </div>
+                                            <div class="form-group col-md-6 col-sm-12 col-xs-12">
+                                                <label for="">Apellidos <strong class="text-danger">*</strong></label>
+                                                <input class="form-control" type="text" name="apellido" id="apellido" placeholder="Apellido">
+                                            </div>
+                                        </div>
+
+                                        <div class="row">
+                                            <div class="form-group col-md-6 col-sm-12 col-xs-12">
                                                 <label for="">Tipo de documento <strong class="text-danger">*</strong></label>
                                                 <select class="form-control" name="tipo_documento" id="tipo_documento">
                                                     <?php
