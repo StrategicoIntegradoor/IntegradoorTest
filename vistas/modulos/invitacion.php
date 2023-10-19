@@ -11,8 +11,8 @@
     hr {
         background-color: #82d600; 
         height: 1px;
-        border: none;
-        margin: 10px 0;
+        /* border: none; */
+        /* margin: 10px 0; */
     }
 
     .form-control {
@@ -57,19 +57,20 @@
 
         <section class="content">
 
-            <div class="box">
-                <div class="guest-box-body">
-                    <div class="register-box">
-                        <div class="login-logo">
-                            <img src="vistas/img/plantilla/Logo_Integradoor_Cotizador_1.png" class="img-responsive" style="padding:30px 30px 0px 30px">
-                            <br>
-                            <h2 class="login-box-msg" style="font-weight: bold;">CREA TU CUENTA</h2>
-                            <br>
+            <!-- <div class="box"> -->
+                <div class="guest-box">
+
+                    <div class="guest-box-body">
+                        <div class="register-box">
+                            <div class="login-logo">
+                                <img src="vistas/img/plantilla/Logo_Integradoor_Cotizador_1.png" class="img-responsive" style="padding:30px 30px 0px 30px">
+                                <br>
+                                <h2 class="login-box-msg" style="font-weight: bold;">CREA TU CUENTA</h2>
+                                <br>
+                            </div>
                         </div>
                     </div>
-                </div>
 
-                <div class="guest-box">
 
                     <div id="box-body">
 
@@ -478,7 +479,7 @@
 
                 </div>
 
-            </div>
+            <!-- </div> -->
 
             <!-- MODAL FASECOLDA -->
             <!-- END MODAL FASECOLDA -->
