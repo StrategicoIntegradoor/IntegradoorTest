@@ -307,7 +307,7 @@
 
 .mes.select2-container--bootstrap .select2-selection--single .select2-selection__arrow b {
     border-color: #000000 transparent transparent;
-    right: 10px; /* Ajustar la posición horizontal manualmente */
+    right: 20px; /* Ajustar la posición horizontal manualmente */
 }
 
 .anio.select2-container .select2-selection--single{
