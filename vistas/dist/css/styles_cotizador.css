@@ -34,7 +34,7 @@
 } */
 
 .fecnacimiento.select2-container .select2-selection--single{
-    width: 96%;
+    width: 100%;
     height: 34px !important;
     background-color: #E8E8E8 !important;
 }
@@ -209,6 +209,8 @@
 }
 
 
+/*---------------------- INPUT DEPARTAMENTO MODULO INIVITACION --------------------------------*/
+
 .dpto.select2-container .select2-selection--single{
     height: 35px !important;
 }
@@ -220,6 +222,9 @@
 .dpto.select2-container--bootstrap .select2-selection--single .select2-selection__arrow b {
     border-color: #000000 transparent transparent;
 }
+
+/* ------------------------------------------------------------------------------------------- */
+
 
 .dpto1.select2-container .select2-selection--single{
     /* height: 100% !important; */
@@ -234,6 +239,7 @@
     border-color: #000000 transparent transparent;
 }
 
+/*---------------------- INPUT CIUDAD MODULO INIVITACION --------------------------------*/
 
 
 .ciudad.select2-container .select2-selection--single{
@@ -247,6 +253,8 @@
 .ciudad.select2-container--bootstrap .select2-selection--single .select2-selection__arrow b {
     border-color: #000000 transparent transparent;
 }
+
+/* ------------------------------------------------------------------------------------------- */
 
 .ciudad1.select2-container .select2-selection--single{
     /* height: 35px !important; */
@@ -262,8 +270,11 @@
     border-color: #000000 transparent transparent;
 }
 
+
+/*---------------------- FORMULARIO DE FECHA DE NACIMIENTO MODULO INIVITACION ------------------*/
+
 .dia.select2-container .select2-selection--single{
-    height: 35px !important;
+    height: 40px !important;
 }
 
 .dia.select2-container--bootstrap .select2-selection--single .select2-selection__rendered {
@@ -300,6 +311,8 @@
 .anio.select2-container--bootstrap .select2-selection--single .select2-selection__arrow b {
     border-color: #000000 transparent transparent;
 }
+
+/* ------------------------------------------------------------------------------------------- */
 
 .conten-oneroso {
     padding-top: 5px;
