@@ -572,7 +572,7 @@ function consulPlaca() {
         }
       })
       .catch(function (error) {
-        consulPlacaMapfre();
+        consulPlacaMapfre(valnumplaca);
         console.log("Parece que hubo un problema: \n", error);
 
         contErrProtocolo++;
