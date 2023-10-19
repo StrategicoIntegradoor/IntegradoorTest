@@ -289,7 +289,8 @@
 .dia.select2-container--bootstrap .select2-selection--single .select2-selection__arrow b {
     border-color: #000000 transparent transparent;
     text-align: center; /* Centrar el contenido del input */
-    left: 15px; /* Ajustar la posición horizontal manualmente */
+    position: absolute;
+    left: 30px; /* Ajustar la posición horizontal manualmente */
 }
 
 .mes.select2-container .select2-selection--single{
@@ -307,7 +308,8 @@
 
 .mes.select2-container--bootstrap .select2-selection--single .select2-selection__arrow b {
     border-color: #000000 transparent transparent;
-    right: 20px; /* Ajustar la posición horizontal manualmente */
+    position: absolute;
+    left: 45px; /* Ajustar la posición horizontal manualmente */
 }
 
 .anio.select2-container .select2-selection--single{
