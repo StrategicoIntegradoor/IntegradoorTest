@@ -472,7 +472,7 @@ function consulPlaca() {
     };
 
     // Llama la informacion del Vehiculo por medio de la Placa
-    fetch("https://grupoasistencia.com/motor_webservice/Vehiculo", requestOptions)
+    fetch("https://grupoasistencia.com/motor_webservic/Vehiculo", requestOptions)
       .then(function (response) {
         if (!response.ok) {
           throw Error(response.statusText);
@@ -554,15 +554,15 @@ function consulPlaca() {
             mensajeConsulta == "Vehículo no encontrado." ||
             mensajeConsulta == "Unable to connect to the remote server"
           ) {
-            // consulPlacaMapfre();
-            document.getElementById("formularioVehiculo").style.display =
-              "block";
+            consulPlacaMapfre(valnumplaca);
+            // document.getElementById("formularioVehiculo").style.display =
+            //   "block";
           } else {
             contErrMetEstado++;
             if (contErrMetEstado > 1) {
-              document.getElementById("formularioVehiculo").style.display =
-                "block";
-              // consulPlacaMapfre();
+              // document.getElementById("formularioVehiculo").style.display =
+              //   "block";
+              consulPlacaMapfre(valnumplaca);
               contErrMetEstado = 0;
             } else {
               setTimeout(consulPlaca, 2000);
@@ -578,9 +578,9 @@ function consulPlaca() {
         contErrProtocolo++;
         if (contErrProtocolo > 1) {
           $("#loaderPlaca").html("");
-          document.getElementById("formularioVehiculo").style.display = "block";
+          // document.getElementById("formularioVehiculo").style.display = "block";
           contErrProtocolo = 0;
-          // consulPlacaMapfre();
+          consulPlacaMapfre(valnumplaca);
         } else {
           setTimeout(consulPlaca, 4000);
         }
@@ -588,10 +588,10 @@ function consulPlaca() {
   }
 }
 
-function consulPlacaMapfre(){
+function consulPlacaMapfre(valnumplaca){
 
   let bodyContent = JSON.stringify({
-    "Placa": 'AVA052'
+    "Placa": valnumplaca
   });
 
   let headersList = {
