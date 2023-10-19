@@ -598,70 +598,70 @@ function consulPlacaMapfre(valnumplaca){
     "Accept": "*/*",
     "User-Agent": "Thunder Client (https://www.thunderclient.com)",
     "Content-Type": "application/json"
-}
+  }
 
     fetch("https://grupoasistencia.com/webserviceAutos/ultimaPolizaMapfre", {
       method: "POST",
       body: bodyContent,
       headers: headersList
-  }).then(function(response) {
-      return response.json();
-  }).then(async function(data) {
+      }).then(function(response) {
+        return response.json();
+      }).then(async function(data) {
+        console.log(data)
+        var marcaCod = data.polizaReciente.COD_MARCA;
+        var clase = data.polizaReciente.NOM_CLASE;
+        var linea = data.polizaReciente.NOM_LINEA;
+        var modelo = data.polizaReciente.ANIO_VEHICULO;
+        var cilindraje = data.polizaReciente.VAL_CILINDRAJE;
+        var codFasecolda = data.polizaReciente.COD_FASECOLDA;
+        var aseguradora = data.polizaReciente.nomCompania;
+        console.log("Mapfre consulta");
+        console.log("Marca Cod:", marcaCod);
+        console.log("Clase:", clase);
+        console.log("Línea:", linea);
+        console.log("Modelo:", modelo);
+        console.log("Cilindraje:", cilindraje);
+        console.log("Código Fasecolda:", codFasecolda);
+        console.log("Aseguradora:", aseguradora);
 
-      var marcaCod = data.polizaReciente.COD_MARCA;
-      var clase = data.polizaReciente.NOM_CLASE;
-      var linea = data.polizaReciente.NOM_LINEA;
-      var modelo = data.polizaReciente.ANIO_VEHICULO;
-      var cilindraje = data.polizaReciente.VAL_CILINDRAJE;
-      var codFasecolda = data.polizaReciente.COD_FASECOLDA;
-      var aseguradora = data.polizaReciente.nomCompania;
-      console.log("Mapfre consulta");
-      console.log("Marca Cod:", marcaCod);
-      console.log("Clase:", clase);
-      console.log("Línea:", linea);
-      console.log("Modelo:", modelo);
-      console.log("Cilindraje:", cilindraje);
-      console.log("Código Fasecolda:", codFasecolda);
-      console.log("Aseguradora:", aseguradora);
+        fechaFinVigencia = data.polizaReciente.fechaFinVigencia;
+        var fechFinTR2 = fechaFinVigencia.split('T');
+        fechFinTR = fechFinTR2[0];
 
-      fechaFinVigencia = data.polizaReciente.fechaFinVigencia;
-      var fechFinTR2 = fechaFinVigencia.split('T');
-      fechFinTR = fechFinTR2[0];
+        propietario = data.polizaReciente.asegNombre;
+        cedulaP = data.polizaReciente.asegCodDocum;
 
-      propietario = data.polizaReciente.asegNombre;
-      cedulaP = data.polizaReciente.asegCodDocum;
+        if (marcaCod == "" && clase == "" && linea == "" && modelo == "" && cilindraje == "" && codFasecolda == "" && aseguradora == "" && aseguradora == "" && fechFinTR == "" && propietario == "" && cedulaP == "") {
+            alert("No se encuentra poliza en esta placa")
+        }
 
-      if (marcaCod == "" && clase == "" && linea == "" && modelo == "" && cilindraje == "" && codFasecolda == "" && aseguradora == "" && aseguradora == "" && fechFinTR == "" && propietario == "" && cedulaP == "") {
-          alert("No se encuentra poliza en esta placa")
-      }
+        if (ValorCheckSoat2 == "true" && ValorcheckTodoRiesgo2 == "true") {
 
-      if (ValorCheckSoat2 == "true" && ValorcheckTodoRiesgo2 == "true") {
+            $("#fasecolda2").val(codFasecolda);
+            $("#aseguradoraTR2").val(aseguradora);
+            $("#fechFinTR2").val(fechFinTR);
+            $("#propietario2").val(propietario);
+            $("#cedulaP2").val(cedulaP);
 
-          $("#fasecolda2").val(codFasecolda);
-          $("#aseguradoraTR2").val(aseguradora);
-          $("#fechFinTR2").val(fechFinTR);
-          $("#propietario2").val(propietario);
-          $("#cedulaP2").val(cedulaP);
-
-      }
+        }
 
 
-      if (ValorCheckSoat2 == "true") {
+        if (ValorCheckSoat2 == "true") {
 
-      } else {
-          $("#VehicleClassName").val(clase);
-          $("#VehicleLineDescription").val(linea);
-          $("#VehicleYear").val(modelo);
-          $("#CylinderCapacity").val(cilindraje);
-      }
+        } else {
+            $("#VehicleClassName").val(clase);
+            $("#VehicleLineDescription").val(linea);
+            $("#VehicleYear").val(modelo);
+            $("#CylinderCapacity").val(cilindraje);
+        }
 
-      // $("#codFasecolda").val(codFasecolda);
-      // $("#aseguradora").val(aseguradora);
-      // $("#fechFinTR").val(fechFinTR);
-      // $("#propietario").val(propietario);
-      // $("#cedulaP").val(cedulaP);
+        // $("#codFasecolda").val(codFasecolda);
+        // $("#aseguradora").val(aseguradora);
+        // $("#fechFinTR").val(fechFinTR);
+        // $("#propietario").val(propietario);
+        // $("#cedulaP").val(cedulaP);
 
-  })
+      })
 
 }
 
