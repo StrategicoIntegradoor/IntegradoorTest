@@ -309,7 +309,9 @@
 .mes.select2-container--bootstrap .select2-selection--single .select2-selection__arrow b {
     border-color: #000000 transparent transparent;
     position: absolute;
-    left: 0px; /* Ajustar la posición horizontal manualmente */
+    margin: 0 auto; /* Centra horizontalmente el elemento dentro de su contenedor */
+
+    /* left: 0px;  */
 }
 
 
