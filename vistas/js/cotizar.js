@@ -538,6 +538,7 @@ function consulPlaca() {
 
               consulDatosFasecolda(codigoFasecolda, modeloVehiculo).then(
                 function (resp) {
+                  console.log(resp)
                   $("#txtMarcaVeh").val(resp.marcaVeh);
                   $("#txtReferenciaVeh").val(resp.lineaVeh);
                 }
@@ -1028,7 +1029,6 @@ function consulDatosFasecolda(codFasecolda, edadVeh) {
         if (data.mensaje == "No hay Registros") {
           document.getElementById("formularioVehiculo").style.display = "block";
         } else {
-          console.log(data);
           var claseVeh = data.clase;
           var marcaVeh = data.marca;
           var ref1Veh = data.referencia1;
