@@ -275,7 +275,7 @@
 
 .dia.select2-container .select2-selection--single{
     height: 35px !important;
-    width: 90%; /* Ajustar el ancho al 30% del contenedor padre */
+    width: 100%; /* Ajustar el ancho al 30% del contenedor padre */
     /* float: left;  */
     flex: 1
 
@@ -294,7 +294,7 @@
 
 .mes.select2-container .select2-selection--single{
     height: 35px !important;
-    width: 90%; /* Ajustar el ancho al 30% del contenedor padre */
+    width: 100%; /* Ajustar el ancho al 30% del contenedor padre */
     margin: 0 auto;
     flex: 1
 
@@ -314,13 +314,10 @@
 
 .anio.select2-container .select2-selection--single{
     height: 35px !important;
-    width: 90%; /* Ajustar el ancho al 30% del contenedor padre */
+    width: 100%; /* Ajustar el ancho al 30% del contenedor padre */
     position: absolute;
     right: 0;
     flex: 1
-
-
-
 }
 
 .anio.select2-container--bootstrap .select2-selection--single .select2-selection__rendered {
