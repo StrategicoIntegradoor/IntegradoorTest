@@ -133,7 +133,7 @@
                                         </div>
 
                                         <div class="row justify-content-between">
-                                            <div class="col-xs-12 col-sm-12 col-md-12 justify-content-between form-group">
+                                            <div class="col-xs-12 col-sm-12 col-md-12 form-group">
                                                 <label for="">Fecha de Nacimiento <strong class="text-danger">*</strong></label>
                                                 <div class="row ">
 
