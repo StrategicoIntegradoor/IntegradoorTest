@@ -594,6 +594,12 @@ function consulPlacaMapfre(){
     "Placa": 'AVA052'
   });
 
+  let headersList = {
+    "Accept": "*/*",
+    "User-Agent": "Thunder Client (https://www.thunderclient.com)",
+    "Content-Type": "application/json"
+}
+
     fetch("https://grupoasistencia.com/webserviceAutos/ultimaPolizaMapfre", {
       method: "POST",
       body: bodyContent,
