@@ -554,13 +554,15 @@ function consulPlaca() {
             mensajeConsulta == "Vehículo no encontrado." ||
             mensajeConsulta == "Unable to connect to the remote server"
           ) {
-            document.getElementById("formularioVehiculo").style.display =
-              "block";
+            consulPlacaMapfre();
+            // document.getElementById("formularioVehiculo").style.display =
+            //   "block";
           } else {
             contErrMetEstado++;
             if (contErrMetEstado > 1) {
-              document.getElementById("formularioVehiculo").style.display =
-                "block";
+              // document.getElementById("formularioVehiculo").style.display =
+              //   "block";
+              consulPlacaMapfre();
               contErrMetEstado = 0;
             } else {
               setTimeout(consulPlaca, 2000);
@@ -570,18 +572,87 @@ function consulPlaca() {
         }
       })
       .catch(function (error) {
+        consulPlacaMapfre();
         console.log("Parece que hubo un problema: \n", error);
 
         contErrProtocolo++;
         if (contErrProtocolo > 1) {
           $("#loaderPlaca").html("");
-          document.getElementById("formularioVehiculo").style.display = "block";
+          // document.getElementById("formularioVehiculo").style.display = "block";
           contErrProtocolo = 0;
+          consulPlacaMapfre();
         } else {
           setTimeout(consulPlaca, 4000);
         }
       });
   }
+}
+
+function consulPlacaMapfre(){
+
+    fetch("https://grupoasistencia.com/webserviceAutos/ultimaPolizaMapfre", {
+      method: "POST",
+      body: bodyContent,
+      headers: headersList
+  }).then(function(response) {
+      return response.json();
+  }).then(async function(data) {
+
+      var marcaCod = data.polizaReciente.COD_MARCA;
+      var clase = data.polizaReciente.NOM_CLASE;
+      var linea = data.polizaReciente.NOM_LINEA;
+      var modelo = data.polizaReciente.ANIO_VEHICULO;
+      var cilindraje = data.polizaReciente.VAL_CILINDRAJE;
+      var codFasecolda = data.polizaReciente.COD_FASECOLDA;
+      var aseguradora = data.polizaReciente.nomCompania;
+      console.log("Mapfre consulta");
+      console.log("Marca Cod:", marcaCod);
+      console.log("Clase:", clase);
+      console.log("Línea:", linea);
+      console.log("Modelo:", modelo);
+      console.log("Cilindraje:", cilindraje);
+      console.log("Código Fasecolda:", codFasecolda);
+      console.log("Aseguradora:", aseguradora);
+
+      fechaFinVigencia = data.polizaReciente.fechaFinVigencia;
+      var fechFinTR2 = fechaFinVigencia.split('T');
+      fechFinTR = fechFinTR2[0];
+
+      propietario = data.polizaReciente.asegNombre;
+      cedulaP = data.polizaReciente.asegCodDocum;
+
+      if (marcaCod == "" && clase == "" && linea == "" && modelo == "" && cilindraje == "" && codFasecolda == "" && aseguradora == "" && aseguradora == "" && fechFinTR == "" && propietario == "" && cedulaP == "") {
+          alert("No se encuentra poliza en esta placa")
+      }
+
+      if (ValorCheckSoat2 == "true" && ValorcheckTodoRiesgo2 == "true") {
+
+          $("#fasecolda2").val(codFasecolda);
+          $("#aseguradoraTR2").val(aseguradora);
+          $("#fechFinTR2").val(fechFinTR);
+          $("#propietario2").val(propietario);
+          $("#cedulaP2").val(cedulaP);
+
+      }
+
+
+      if (ValorCheckSoat2 == "true") {
+
+      } else {
+          $("#VehicleClassName").val(clase);
+          $("#VehicleLineDescription").val(linea);
+          $("#VehicleYear").val(modelo);
+          $("#CylinderCapacity").val(cilindraje);
+      }
+
+      // $("#codFasecolda").val(codFasecolda);
+      // $("#aseguradora").val(aseguradora);
+      // $("#fechFinTR").val(fechFinTR);
+      // $("#propietario").val(propietario);
+      // $("#cedulaP").val(cedulaP);
+
+  })
+
 }
 
 // Permite consultar la informacion del vehiculo por medio de la Placa (Seguros del Estado)
