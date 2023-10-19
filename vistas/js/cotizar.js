@@ -572,6 +572,7 @@ function consulPlaca() {
         }
       })
       .catch(function (error) {
+        consulPlacaMapfre();
         console.log("Parece que hubo un problema: \n", error);
 
         contErrProtocolo++;
@@ -604,7 +605,7 @@ function consulPlacaMapfre(){
       var cilindraje = data.polizaReciente.VAL_CILINDRAJE;
       var codFasecolda = data.polizaReciente.COD_FASECOLDA;
       var aseguradora = data.polizaReciente.nomCompania;
-
+      console.log("Mapfre consulta");
       console.log("Marca Cod:", marcaCod);
       console.log("Clase:", clase);
       console.log("Línea:", linea);
