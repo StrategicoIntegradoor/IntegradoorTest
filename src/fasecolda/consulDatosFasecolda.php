@@ -13,7 +13,8 @@ $num_rows = mysqli_num_rows($res);
 $data = $res->fetch_assoc();
 
 if ($num_rows >= 1) {
-
+    var_dump($data);
+    die();
     $data['estado'] = true;
     echo json_encode($data, JSON_UNESCAPED_UNICODE);
     
