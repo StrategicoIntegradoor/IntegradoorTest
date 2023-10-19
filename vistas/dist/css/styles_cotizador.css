@@ -34,8 +34,8 @@
 } */
 
 .fecnacimiento.select2-container .select2-selection--single{
-    /* width: 100%; */
-    height: 15px !important;
+    width: 100%;
+    height: 34px !important;
     background-color: #E8E8E8 !important;
 }
 
@@ -275,6 +275,9 @@
 
 .dia.select2-container .select2-selection--single{
     height: 35px !important;
+    width: 30%; /* Ajustar el ancho al 30% del contenedor padre */
+    float: left; /* Alinear a la izquierda */
+    margin-right: 10%;
 }
 
 .dia.select2-container--bootstrap .select2-selection--single .select2-selection__rendered {
@@ -300,6 +303,9 @@
 
 .anio.select2-container .select2-selection--single{
     height: 35px !important;
+    width: 30%; /* Ajustar el ancho al 30% del contenedor padre */
+    float: right; /* Alinear a la izquierda */
+    margin-right: 10%;
 }
 
 .anio.select2-container--bootstrap .select2-selection--single .select2-selection__rendered {
