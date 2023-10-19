@@ -276,7 +276,7 @@
 .dia.select2-container .select2-selection--single{
     height: 35px !important;
     width: 90%; /* Ajustar el ancho al 30% del contenedor padre */
-    float: left; /* Alinear a la izquierda */
+    /* float: left;  */
     margin-right: 10%;
     margin: 0 auto;
 
@@ -309,7 +309,7 @@
 .anio.select2-container .select2-selection--single{
     height: 35px !important;
     width: 90%; /* Ajustar el ancho al 30% del contenedor padre */
-    float: right; /* Alinear a la izquierda */
+    /* float: right;  */
     margin: 0 auto;
 
 }
