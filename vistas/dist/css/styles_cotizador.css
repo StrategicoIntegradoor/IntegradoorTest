@@ -33,8 +33,10 @@
     background-color: #E8E8E8 !important;
 } */
 
+/*---------------------- FORMULARIO DE FECHA DE NACIMIENTO MODULO COTIZAR ------------------*/
+
 .fecnacimiento.select2-container .select2-selection--single{
-    width: 100%;
+    width: 96%;
     height: 34px !important;
     background-color: #E8E8E8 !important;
 }
@@ -47,6 +49,9 @@
     border-color: #000000 transparent transparent;
     /* margin-left: -10px;  */
 }
+
+/*----------------------------------------------------------------------------------------------*/
+
 
 .edad.select2-container .select2-selection--single{
     height: 35px !important;
@@ -331,6 +336,7 @@
 }
 
 /* ------------------------------------------------------------------------------------------- */
+
 
 .conten-oneroso {
     padding-top: 5px;
