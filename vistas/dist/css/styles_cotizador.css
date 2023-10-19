@@ -278,6 +278,8 @@
     width: 90%; /* Ajustar el ancho al 30% del contenedor padre */
     float: left; /* Alinear a la izquierda */
     margin-right: 10%;
+    margin: 0 auto;
+
 }
 
 .dia.select2-container--bootstrap .select2-selection--single .select2-selection__rendered {
@@ -308,6 +310,8 @@
     height: 35px !important;
     width: 90%; /* Ajustar el ancho al 30% del contenedor padre */
     float: right; /* Alinear a la izquierda */
+    margin: 0 auto;
+
 }
 
 .anio.select2-container--bootstrap .select2-selection--single .select2-selection__rendered {
