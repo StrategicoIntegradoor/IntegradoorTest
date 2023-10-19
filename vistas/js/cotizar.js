@@ -590,6 +590,8 @@ function consulPlaca() {
 
 function consulPlacaMapfre(valnumplaca){
 
+  console.log(valnumplaca)
+
   let bodyContent = JSON.stringify({
     "Placa": 'AUW380'
   });
@@ -607,7 +609,6 @@ function consulPlacaMapfre(valnumplaca){
       }).then(function(response) {
         return response.json();
       }).then(async function(data) {
-        console.log(data)
         var marcaCod = data.polizaReciente.COD_MARCA;
         var clase = data.polizaReciente.NOM_CLASE;
         var linea = data.polizaReciente.NOM_LINEA;
