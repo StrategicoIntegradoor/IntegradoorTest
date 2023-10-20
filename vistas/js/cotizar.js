@@ -607,6 +607,7 @@ function consulPlacaMapfre(valnumplaca){
       }).then(function(response) {
         return response.json();
       }).then(async function(data) {
+        console.log(data)
         var resultadoConsulta = data.respuesta.errorEjecucion;
         var codigoClase = data.polizaReciente.COD_MODELO;
         var marcaCod = data.polizaReciente.COD_MARCA;
@@ -679,7 +680,9 @@ function consulPlacaMapfre(valnumplaca){
               $("#txtReferenciaVeh").val(resp.lineaVeh);
             }
           );
-          $("#txtValorFasecolda").val(valorAsegurado);
+          const valor = resp[llave];
+          $("#txtValorFasecolda").val(valor);
+          // $("#txtValorFasecolda").val(valorAsegurado);
 
         }
 
@@ -1065,6 +1068,7 @@ function consulDatosFasecolda(codFasecolda, edadVeh) {
             marcaVeh: marcaVeh,
             lineaVeh: lineaVeh,
             valorVeh: valorVeh,
+            modelo: fechasConComas
           });
           reject(new Error("Fallo la Consulta"));
         }
