@@ -678,10 +678,10 @@ function consulPlacaMapfre(valnumplaca){
               console.log(resp)
               $("#txtMarcaVeh").val(resp.marcaVeh);
               $("#txtReferenciaVeh").val(resp.lineaVeh);
+              $("#txtValorFasecolda").val(valorVeh);
             }
           );
           const valor = resp[llave];
-          $("#txtValorFasecolda").val(valorVeh);
           // $("#txtValorFasecolda").val(valorAsegurado);
 
         }
