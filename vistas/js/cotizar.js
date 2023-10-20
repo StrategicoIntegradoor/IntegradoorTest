@@ -1029,7 +1029,12 @@ function consulDatosFasecolda(codFasecolda, edadVeh) {
         if (data.mensaje == "No hay Registros") {
           document.getElementById("formularioVehiculo").style.display = "block";
         } else {
-          console.log(data)
+          const fechas = Object.keys(data)
+            .filter(key => /^\d{4}$/.test(key))
+            .map(key => data[key]);
+
+          console.log(fechas);
+          // console.log(data)
           var claseVeh = data.clase;
           var marcaVeh = data.marca;
           var ref1Veh = data.referencia1;
