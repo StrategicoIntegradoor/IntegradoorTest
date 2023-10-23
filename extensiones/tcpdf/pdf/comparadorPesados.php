@@ -272,15 +272,6 @@ $pdf->SetTextColor(104, 104, 104);
 $pdf->SetXY(98, 122);
 $pdf->Cell(10, 0, 'te presentamos un comparativo de precios', 0, $ln = 0, 'C', 0, '', 0, false, 'C', 'C');
 
-$pdf->SetFont('dejavusanscondensed', 'B', 9);
-$pdf->StartTransform();
-$pdf->SetXY(203, 250);
-$pdf->Rotate(90);
-$pdf->setAlpha(0.5);
-$pdf->SetTextColor(104, 104, 104);
-$pdf->Cell(25, 6, "Elaborado por Software Integradoor propiedad del proveedor tecnológico Strategico Technologies SAS BIC Nit: 901.542.216-8", 0, 1, '');
-$pdf->StopTransform();
-
 $pdf->SetAlpha(0.7);
 
 $pdf->SetFont('dejavusanscondensed', '', 8);
@@ -1816,6 +1807,14 @@ $pdf->setAlpha(0.5);
 $pdf->SetTextColor(104, 104, 104);
 $pdf->Cell(25, 6, "Elaborado por Software Integradoor propiedad del proveedor tecnológico Strategico Technologies SAS BIC Nit: 901.542.216-8", 0, 1, '');
 $pdf->StopTransform();
+
+
+
+$pdf->SetXY(0, 274);
+// $pdf->SetY(-45);
+$htmlFooter = '<p style="font-size: 6.2px;">Nota: Esta cotización no constituye una oferta comercial. La misma se expide única y exclusivamente con un propósito informativo sobre los posibles costos del seguro y sus condiciones, los cuales serán susceptibles de modificación hasta tanto no se concreten y determinen las características de los respectivos riesgos.</p>';
+$pdf->writeHTML($htmlFooter, true, false, true, false, '');
+$pdf->Ln();
 
 
 //$pdf->Cell(210, 0, 'las aseguradoras, revisa el siguiente cuadro', 0, $ln = 0, 'C', 0, '', 0, false, 'C', 'C');
