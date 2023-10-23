@@ -1196,7 +1196,6 @@ while ($rowRespuesta14 = mysqli_fetch_assoc($respuestaquery14)) {
 
 $html3 .= '</tr>';
 
-$html3 .= '</table>';
 
 //::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 //CONSULTA ASISTENCIA JURIDICA
@@ -1277,6 +1276,9 @@ while ($rowRespuestap4 = mysqli_fetch_assoc($respuestaqueryp4)) {
 }
 
 $html3 .= '</tr>';
+
+$html3 .= '</table>';
+
 
 
 $html4 = '
