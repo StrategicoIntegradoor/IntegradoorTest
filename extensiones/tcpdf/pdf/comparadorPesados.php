@@ -272,6 +272,14 @@ $pdf->SetTextColor(104, 104, 104);
 $pdf->SetXY(98, 122);
 $pdf->Cell(10, 0, 'te presentamos un comparativo de precios', 0, $ln = 0, 'C', 0, '', 0, false, 'C', 'C');
 
+$pdf->SetFont('dejavusanscondensed', 'B', 9);
+$pdf->StartTransform();
+$pdf->SetXY(203, 250);
+$pdf->Rotate(90);
+$pdf->setAlpha(0.5);
+$pdf->SetTextColor(104, 104, 104);
+$pdf->Cell(25, 6, "Elaborado por Software Integradoor propiedad del proveedor tecnológico Strategico Technologies SAS BIC Nit: 901.542.216-8", 0, 1, '');
+$pdf->StopTransform();
 
 $pdf->SetAlpha(0.7);
 
@@ -1799,6 +1807,15 @@ $pdf->SetFont('dejavusanscondensed', 'I', 11);
 $pdf->SetTextColor(104, 104, 104);
 $pdf->SetXY(101, 183);
 $pdf->Cell(10, 0, '(Recuerda que este icono       significa Si Aplica o Si Cubre)', 0, $ln = 0, 'C', 0, '', 0, false, 'C', 'C');
+
+$pdf->SetFont('dejavusanscondensed', 'B', 9);
+$pdf->StartTransform();
+$pdf->SetXY(203, 250);
+$pdf->Rotate(90);
+$pdf->setAlpha(0.5);
+$pdf->SetTextColor(104, 104, 104);
+$pdf->Cell(25, 6, "Elaborado por Software Integradoor propiedad del proveedor tecnológico Strategico Technologies SAS BIC Nit: 901.542.216-8", 0, 1, '');
+$pdf->StopTransform();
 
 
 //$pdf->Cell(210, 0, 'las aseguradoras, revisa el siguiente cuadro', 0, $ln = 0, 'C', 0, '', 0, false, 'C', 'C');
