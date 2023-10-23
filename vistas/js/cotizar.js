@@ -565,7 +565,7 @@ function consulPlaca() {
               consulPlacaMapfre(valnumplaca);
               contErrMetEstado = 0;
             } else {
-              setTimeout(consulPlaca, 2000);
+              setTimeout(consulPlaca, 200);
             }
           }
           $("#loaderPlaca").html("");
@@ -684,6 +684,9 @@ function consulPlacaMapfre(valnumplaca){
           const valor = resp[llave];
           // $("#txtValorFasecolda").val(valorAsegurado);
 
+        }else{
+          document.getElementById("formularioVehiculo").style.display =
+              "block";
         }
 
       })
