@@ -472,7 +472,7 @@ function consulPlaca() {
     };
 
     // Llama la informacion del Vehiculo por medio de la Placa
-    fetch("https://grupoasistencia.com/motor_webservic/Vehiculo", requestOptions)
+    fetch("https://grupoasistencia.com/motor_webservice/Vehiculo", requestOptions)
       .then(function (response) {
         if (!response.ok) {
           throw Error(response.statusText);
@@ -480,6 +480,7 @@ function consulPlaca() {
         return response.json();
       })
       .then(function (myJson) {
+        console.log(myJson)
         var estadoConsulta = myJson.Success;
         var mensajeConsulta = myJson.Message;
 
