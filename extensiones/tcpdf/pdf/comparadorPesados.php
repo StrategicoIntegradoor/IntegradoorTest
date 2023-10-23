@@ -281,7 +281,23 @@ $pdf->SetAlpha(1.0);
 $pdf->SetTextColor(0, 0, 0);
 $pdf->SetXY(20, 128);
 
+$pdf->SetFont('dejavusanscondensed', 'B', 9);
+$pdf->StartTransform();
+$pdf->SetXY(203, 250);
+$pdf->Rotate(90);
+$pdf->setAlpha(0.5);
+$pdf->SetTextColor(104, 104, 104);
+$pdf->Cell(25, 6, "Elaborado por Software Integradoor propiedad del proveedor tecnológico Strategico Technologies SAS BIC Nit: 901.542.216-8", 0, 1, '');
+$pdf->StopTransform();
 
+$pdf->SetAlpha(0.7);
+
+$pdf->SetFont('dejavusanscondensed', '', 8);
+
+$pdf->SetAlpha(1.0);
+
+$pdf->SetTextColor(0, 0, 0);
+$pdf->SetXY(0, 107);
 
 
 
