@@ -965,10 +965,10 @@ if($valorlimiterow==10){
 
 		if ($cont4 % 2 == 0) {
 	
-			$html3 .= '<td class="puntos fondo" style="width:' . $valorTabla . '%; font-family:dejavusanscondensed;"><center><font size="7" style="text-align: center;">' . $rowRespuesta9['ValorRC'] . '</font></center></td>';
+			$html3 .= '<td class="puntos fondo" style="width:' . $valorTabla . '%; font-family:dejavusanscondensed;"><center><font size="7" style="text-align: center;">' . number_format($rowRespuesta9['ValorRC'], 0, ',', '.') . '</font></center></td>';
 		} else {
 	
-			$html3 .= '<td class="puntos fondo2" style="width:' . $valorTabla . '%; font-family:dejavusanscondensed;"><center><font size="7" style="text-align: center;">' . $rowRespuesta9['ValorRC'] . '</font></center></td>';
+			$html3 .= '<td class="puntos fondo2" style="width:' . $valorTabla . '%; font-family:dejavusanscondensed;"><center><font size="7" style="text-align: center;">' . number_format($rowRespuesta9['ValorRC'], 0, ',', '.') . '</font></center></td>';
 		}
 	
 		$cont4 += 1;
@@ -1001,15 +1001,11 @@ while ($rowRespuesta8 = mysqli_fetch_assoc($respuestaquery8)) {
 	$valorRC = $rowRespuesta8['ValorRC'];
 	$perdidaParcial = $rowRespuesta8['PerdidaParcial'];
 
-	$queryConsultaAsistencia1 = "SELECT * FROM asistencias WHERE `aseguradora` LIKE '$nombreAseguradora' AND `producto` LIKE '$nombreProducto' 
-									AND `rce` LIKE '$valorRC' AND `ppd` LIKE '$perdidaParcial'";
+	$queryConsultaAsistencia1 = "SELECT * FROM asistencias WHERE `aseguradora` LIKE '$nombreAseguradora' AND `producto` LIKE '$nombreProducto'";
+									// -- AND `rce` LIKE '$valorRC' AND `ppd` LIKE '$perdidaParcial'";
 	$respuestaqueryAsistencia1 =  $conexion->query($queryConsultaAsistencia1);
 	$rowRespuestaAsistencia1 = mysqli_fetch_assoc($respuestaqueryAsistencia1);
-	// var_dump($nombreProducto);
-	// var_dump($valorRC);
-	// var_dump($perdidaParcial);
-	// var_dump($rowRespuestaAsistencia1);
-	// die();
+
 	if ($cont5 % 2 == 0) {
 		$html3 .= '<td class="puntos fondo" style="width:' . $valorTabla . '%;"><center><font size="7"style="text-align: center;  font-family:dejavusanscondensed;">' . $rowRespuestaAsistencia1['deducible'] . '</font></center></td>';
 	} else {
