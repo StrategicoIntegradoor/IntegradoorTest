@@ -14,6 +14,8 @@ class AyudaVentasController
         return $mysqli->query($sql);
 	}
 
+
+    //CONSULTA PARA LLENAR LA TABLA DE AYUDAVENTAS
     public static function obtenerAyudaVentas()
     {
         $consulta = "SELECT * FROM ayuda_ventas;";
@@ -23,8 +25,7 @@ class AyudaVentasController
         while($row = $resultado->fetch_assoc()) {
             $array[] = $row;
         }
-        var_dump($array);
-        die();
+
         print_r(json_encode($array));
     }
 
