@@ -430,11 +430,11 @@ if ($_SESSION["permisos"]["Cotizarpesados"] != "x") {
                       <div class="row">
                         <div class="col-xs-5 col-sm-5 col-md-5 form-group">
                           <label>Es Oneroso?</label>
-                          <div class="conten-oneroso">
+                          <div class="conten-oneroso" style="display: none;">
                             <label for="Si">Si</label>
                             <input type="radio" name="oneroso" id="esOnerosoSi" value="Si">&nbsp;&nbsp;&nbsp;&nbsp;
                             <label for="No">No</label>
-                            <input type="radio" name="oneroso" id="esOnerosoNo" value="No" required>
+                            <input type="radio" name="oneroso" id="esOnerosoNo" value="No" required checked>
                           </div>
                         </div>
                         <div class="col-xs-7 col-sm-7 col-md-7 form-group" id="contenBenefOneroso">
@@ -463,7 +463,7 @@ if ($_SESSION["permisos"]["Cotizarpesados"] != "x") {
                       </select>
                     </div>
 
-                    <div class="col-xs-12 col-sm-6 col-md-3 form-group">
+                    <!-- <div class="col-xs-12 col-sm-6 col-md-3 form-group">
                       <label for="hdiseguros">Tipo Vehiculo HDI</label>
                       <select class="form-control" id="hdiseguros" required>
                         <option value=""></option>
@@ -474,9 +474,9 @@ if ($_SESSION["permisos"]["Cotizarpesados"] != "x") {
                         <option value="5">Remolque</option>
                         <option value="6">Linea N chevrolet</option>
                       </select>
-                    </div>
+                    </div> -->
 
-                    <div class="col-xs-12 col-sm-6 col-md-3 form-group">
+                    <!-- <div class="col-xs-12 col-sm-6 col-md-3 form-group">
                       <label for="estadoseguros">Tipo Vehiculo Estado</label>
                       <select class="form-control" id="estadoseguros" required>
                         <option value=""></option>
@@ -485,7 +485,7 @@ if ($_SESSION["permisos"]["Cotizarpesados"] != "x") {
                         <option value="3">Lineas Restringidas</option>
                         <option value="4">Trailer</option>
                       </select>
-                    </div>
+                    </div> -->
 
                     <div class="col-xs-12 col-sm-6 col-md-3 form-group">
                       <label for="obligacionfinanciera">Obligaciones Financieras</label>
