@@ -582,7 +582,7 @@ function consulPlaca() {
           contErrProtocolo = 0;
           consulPlacaMapfre(valnumplaca);
         } else {
-          setTimeout(consulPlaca, 4000);
+          setTimeout(consulPlaca, 400);
         }
       });
   }
