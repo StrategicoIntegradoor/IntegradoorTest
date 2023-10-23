@@ -2015,6 +2015,8 @@ function productoAseguradora($aseguradora, $producto) {
 		$resultado = "Full";
 	} else if ($aseguradora == 'SBS Seguros' && $producto == 'Motocicletas') {
 		$resultado = "Motocicletas";
+	} else if ($aseguradora == 'SSeguros Mundial' && $producto == 'Pesados') {
+		$resultado = "Pesados";
 	} else {
 		$resultado = $producto;
 	}
