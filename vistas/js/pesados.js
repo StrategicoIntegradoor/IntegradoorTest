@@ -1648,7 +1648,7 @@ function cotizarOfertasPesados() {
                     }
                   }
                 });
-              }, 20000); // Agrega el tiempo de retraso en milisegundos aquí
+              }, 200); // Agrega el tiempo de retraso en milisegundos aquí
             }
 
 
