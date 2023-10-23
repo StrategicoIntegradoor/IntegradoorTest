@@ -1198,6 +1198,86 @@ $html3 .= '</tr>';
 
 $html3 .= '</table>';
 
+//::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+//CONSULTA ASISTENCIA JURIDICA
+//::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+$html3 .= '<tr>';
+$html3 .= '<td class="fondo puntos" style="width:25%; text-align: center; font-family:dejavusanscondensedb;"><font size="8">Asistencia Jurídica en proceso civil, penal ilimitada</font></td>';
+
+$query17 = "SELECT * FROM ofertas WHERE `id_cotizacion` = $identificador AND `seleccionar` = 'Si'";
+$respuestaquery17 =  $conexion->query($query17);
+
+$cont13 = 1;
+
+while ($rowRespuesta17 = mysqli_fetch_assoc($respuestaquery17)) {
+
+	$nombreAseguradora = nombreAseguradora($rowRespuesta17['Aseguradora']);
+	$nombreProducto = productoAseguradora($rowRespuesta17['Aseguradora'], $rowRespuesta17['Producto']);
+
+	$queryConsultaAsistencia9 = "SELECT * FROM asistencias WHERE `aseguradora` LIKE '$nombreAseguradora' AND `producto` LIKE '$nombreProducto'";
+	$respuestaqueryAsistencia9 =  $conexion->query($queryConsultaAsistencia9);
+	$rowRespuestaAsistencia9 = mysqli_fetch_assoc($respuestaqueryAsistencia9);
+
+	if ($cont13 % 2 == 0) {
+		if ($rowRespuestaAsistencia9['Asistenciajuridica'] == "Si ampara") {
+			$html3 .= '<td class="puntos fondo" style="width:' . $valorTabla . '%;text-align: center;"><img style="width:16px;" src="../../../vistas/img/logos/cheque.png" alt=""></td>';
+		} else {
+			$html3 .= '<td class="puntos fondo" style="width:' . $valorTabla . '%;"><center><font size="7"style="text-align: center;">' . $rowRespuestaAsistencia9['Asistenciajuridica'] . '</font></center></td>';
+		}
+	} else {
+		if ($rowRespuestaAsistencia9['Asistenciajuridica'] == "Si ampara") {
+			$html3 .= '<td class="puntos fondo2" style="width:' . $valorTabla . '%;text-align: center;"><img style="width:16px;" src="../../../vistas/img/logos/cheque.png" alt=""></td>';
+		} else {
+			$html3 .= '<td class="puntos fondo2" style="width:' . $valorTabla . '%;"><center><font size="7"style="text-align: center;">' . $rowRespuestaAsistencia9['Asistenciajuridica'] . '</font></center></td>';
+		}
+	}
+
+	$cont13 += 1;
+}
+
+$html3 .= '</tr>';
+
+//::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+//CONSULTA COBERTURA ACCIDENTES PERSONALES
+//::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+$html3 .= '<tr>';
+$html3 .= '<td class="fondo puntos" style="width:25%; text-align: center; font-family:dejavusanscondensedb;"><font size="8">Accidentes personales</font></td>';
+
+$queryp4 = "SELECT * FROM ofertas WHERE `id_cotizacion` = $identificador AND `seleccionar` = 'Si'";
+$respuestaqueryp4 =  $conexion->query($queryp4);
+
+$contp4 = 1;
+
+while ($rowRespuestap4 = mysqli_fetch_assoc($respuestaqueryp4)) {
+
+	$nombreAseguradora = nombreAseguradora($rowRespuestap4['Aseguradora']);
+	$nombreProducto = productoAseguradora($rowRespuestap4['Aseguradora'], $rowRespuestap4['Producto']);
+
+	$queryConsultaAsistencia9 = "SELECT * FROM asistencias WHERE `aseguradora` LIKE '$nombreAseguradora' AND `producto` LIKE '$nombreProducto'";
+	$respuestaqueryAsistencia9 =  $conexion->query($queryConsultaAsistencia9);
+	$rowRespuestaAsistencia9 = mysqli_fetch_assoc($respuestaqueryAsistencia9);
+
+	if ($contp4 % 2 == 0) {
+		if ($rowRespuestaAsistencia9['Accidentespersonales'] == "Si ampara") {
+			$html3 .= '<td class="puntos fondo" style="width:' . $valorTabla . '%;text-align: center;"><img style="width:16px;" src="../../../vistas/img/logos/cheque.png" alt=""></td>';
+		} else {
+			$html3 .= '<td class="puntos fondo" style="width:' . $valorTabla . '%;"><center><font size="7"style="text-align: center;">' . $rowRespuestaAsistencia9['Accidentespersonales'] . '</font></center></td>';
+		}
+	} else {
+		if ($rowRespuestaAsistencia9['Accidentespersonales'] == "Si ampara") {
+			$html3 .= '<td class="puntos fondo2" style="width:' . $valorTabla . '%;text-align: center;"><img style="width:16px;" src="../../../vistas/img/logos/cheque.png" alt=""></td>';
+		} else {
+			$html3 .= '<td class="puntos fondo2" style="width:' . $valorTabla . '%;"><center><font size="7"style="text-align: center;">' . $rowRespuestaAsistencia9['Accidentespersonales'] . '</font></center></td>';
+		}
+	}
+
+	$contp4 += 1;
+}
+
+$html3 .= '</tr>';
+
 
 $html4 = '
 <style>
@@ -1232,46 +1312,6 @@ $html4 = '
 
 $html4 .= '<tr style="width: 100%;" class="izquierda">';
 $html4 .= '<td style ="width: 100%; background-color: #D1D1D1; font-family:dejavusanscondensedb;" colspan="' . ($fila6 + 1) . '"><div style="font-size:3pt">&nbsp;</div>COBERTURAS ADICIONALES (NO APLICA PARA TRAILER) <div style="font-size:3pt">&nbsp;</div></td>';
-
-$html4 .= '</tr>';
-
-//::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
-//CONSULTA ASISTENCIA JURIDICA
-//::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
-
-$html4 .= '<tr>';
-$html4 .= '<td class="fondo puntos" style="width:25%; text-align: center; font-family:dejavusanscondensedb;"><font size="8">Asistencia Jurídica en proceso civil, penal ilimitada</font></td>';
-
-$query17 = "SELECT * FROM ofertas WHERE `id_cotizacion` = $identificador AND `seleccionar` = 'Si'";
-$respuestaquery17 =  $conexion->query($query17);
-
-$cont13 = 1;
-
-while ($rowRespuesta17 = mysqli_fetch_assoc($respuestaquery17)) {
-
-	$nombreAseguradora = nombreAseguradora($rowRespuesta17['Aseguradora']);
-	$nombreProducto = productoAseguradora($rowRespuesta17['Aseguradora'], $rowRespuesta17['Producto']);
-
-	$queryConsultaAsistencia9 = "SELECT * FROM asistencias WHERE `aseguradora` LIKE '$nombreAseguradora' AND `producto` LIKE '$nombreProducto'";
-	$respuestaqueryAsistencia9 =  $conexion->query($queryConsultaAsistencia9);
-	$rowRespuestaAsistencia9 = mysqli_fetch_assoc($respuestaqueryAsistencia9);
-
-	if ($cont13 % 2 == 0) {
-		if ($rowRespuestaAsistencia9['Asistenciajuridica'] == "Si ampara") {
-			$html4 .= '<td class="puntos fondo" style="width:' . $valorTabla . '%;text-align: center;"><img style="width:16px;" src="../../../vistas/img/logos/cheque.png" alt=""></td>';
-		} else {
-			$html4 .= '<td class="puntos fondo" style="width:' . $valorTabla . '%;"><center><font size="7"style="text-align: center;">' . $rowRespuestaAsistencia9['Asistenciajuridica'] . '</font></center></td>';
-		}
-	} else {
-		if ($rowRespuestaAsistencia9['Asistenciajuridica'] == "Si ampara") {
-			$html4 .= '<td class="puntos fondo2" style="width:' . $valorTabla . '%;text-align: center;"><img style="width:16px;" src="../../../vistas/img/logos/cheque.png" alt=""></td>';
-		} else {
-			$html4 .= '<td class="puntos fondo2" style="width:' . $valorTabla . '%;"><center><font size="7"style="text-align: center;">' . $rowRespuestaAsistencia9['Asistenciajuridica'] . '</font></center></td>';
-		}
-	}
-
-	$cont13 += 1;
-}
 
 $html4 .= '</tr>';
 
@@ -1315,45 +1355,7 @@ while ($rowRespuestap3 = mysqli_fetch_assoc($respuestaqueryp3)) {
 
 $html4 .= '</tr>';
 
-//::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
-//CONSULTA COBERTURA ACCIDENTES PERSONALES
-//::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
-$html4 .= '<tr>';
-$html4 .= '<td class="fondo puntos" style="width:25%; text-align: center; font-family:dejavusanscondensedb;"><font size="8">Accidentes personales</font></td>';
-
-$queryp4 = "SELECT * FROM ofertas WHERE `id_cotizacion` = $identificador AND `seleccionar` = 'Si'";
-$respuestaqueryp4 =  $conexion->query($queryp4);
-
-$contp4 = 1;
-
-while ($rowRespuestap4 = mysqli_fetch_assoc($respuestaqueryp4)) {
-
-	$nombreAseguradora = nombreAseguradora($rowRespuestap4['Aseguradora']);
-	$nombreProducto = productoAseguradora($rowRespuestap4['Aseguradora'], $rowRespuestap4['Producto']);
-
-	$queryConsultaAsistencia9 = "SELECT * FROM asistencias WHERE `aseguradora` LIKE '$nombreAseguradora' AND `producto` LIKE '$nombreProducto'";
-	$respuestaqueryAsistencia9 =  $conexion->query($queryConsultaAsistencia9);
-	$rowRespuestaAsistencia9 = mysqli_fetch_assoc($respuestaqueryAsistencia9);
-
-	if ($contp4 % 2 == 0) {
-		if ($rowRespuestaAsistencia9['Accidentespersonales'] == "Si ampara") {
-			$html4 .= '<td class="puntos fondo" style="width:' . $valorTabla . '%;text-align: center;"><img style="width:16px;" src="../../../vistas/img/logos/cheque.png" alt=""></td>';
-		} else {
-			$html4 .= '<td class="puntos fondo" style="width:' . $valorTabla . '%;"><center><font size="7"style="text-align: center;">' . $rowRespuestaAsistencia9['Accidentespersonales'] . '</font></center></td>';
-		}
-	} else {
-		if ($rowRespuestaAsistencia9['Accidentespersonales'] == "Si ampara") {
-			$html4 .= '<td class="puntos fondo2" style="width:' . $valorTabla . '%;text-align: center;"><img style="width:16px;" src="../../../vistas/img/logos/cheque.png" alt=""></td>';
-		} else {
-			$html4 .= '<td class="puntos fondo2" style="width:' . $valorTabla . '%;"><center><font size="7"style="text-align: center;">' . $rowRespuestaAsistencia9['Accidentespersonales'] . '</font></center></td>';
-		}
-	}
-
-	$contp4 += 1;
-}
-
-$html4 .= '</tr>';
 
 //::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 //CONSULTA COBERTURA AUXILIO PERDIDA PATRIMONIAL
