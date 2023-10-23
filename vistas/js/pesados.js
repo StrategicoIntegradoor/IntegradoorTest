@@ -1251,12 +1251,14 @@ function registrarOferta(
           oferta.numero_cotizacion,
           oferta.cubrimiento,
           oferta.deducible,
+	        oferta.PPH,
           oferta.conductores_elegidos,
           oferta.servicio_grua,
           oferta.imagen,
           oferta.pdf,
           $responsabilidadCivilFamiliar,
-          0
+          0,
+	        null
         );
       });
   }
