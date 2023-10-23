@@ -445,11 +445,12 @@ if ($_SESSION["permisos"]["Cotizarpesados"] != "x") {
                     </div>
                   </div>
 
-                  <div class="row">
-                    <div class="col-xs-12 col-sm-6 col-md-3 form-group">
+                  <div class="col-xs-12 col-sm-6 col-md-3 form-group">
                       <label for="clasepesados">Clase Vehiculo</label>
                       <input type="text" class="form-control" id="clasepesados" placeholder="" disabled>
                     </div>
+                  <div class="row">
+              
 
                     <div class="col-xs-12 col-sm-6 col-md-3 form-group">
                       <label for="mundialseguros">Tipo Vehiculo Mundial</label>
