@@ -1043,6 +1043,38 @@ while ($rowRespuestap1 = mysqli_fetch_assoc($respuestaqueryp1)) {
 $html3 .= '</tr>';
 
 //::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+//CONSULTA COBERTURAS TOTAL DAÑOS
+//::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+$html3 .= '<tr style="width: 100%;" class="izquierda">';
+$html3 .= '<td style ="width: 100%; background-color: #D1D1D1; font-family:dejavusanscondensedb;" colspan="' . ($fila6 + 1) . '"><div style="font-size:3pt">&nbsp;</div>COBERTURAS AL VEHÍCULO <div style="font-size:3pt">&nbsp;</div></td>';
+
+$html3 .= '</tr>';
+
+$html3 .= '<tr>';
+$html3 .= '<td class="puntos fondo" style="width:25%; text-align: center; font-family:dejavusanscondensedb;"><font size="8">Pérdida total daños o hurto</font></td>';
+
+
+$query10 = "SELECT * FROM ofertas WHERE `id_cotizacion` = $identificador AND `seleccionar` = 'Si'";
+$respuestaquery10 =  $conexion->query($query10);
+
+$cont6 = 1;
+while ($rowRespuesta10 = mysqli_fetch_assoc($respuestaquery10)) {
+
+	$nombreAseguradora = nombreAseguradora($rowRespuesta10['Aseguradora']);
+	$nombreProducto = productoAseguradora($rowRespuesta10['Aseguradora'], $rowRespuesta10['Producto']);
+
+	if ($cont6 % 2 == 0) {
+		$html3 .= '<td class="puntos fondo" style="width:' . $valorTabla . '%;"><center><font size="7"style="text-align: center;  font-family:dejavusanscondensed;">' . $rowRespuesta10['PerdidaTotal'] . '</font></center></td>';
+	} else {
+		$html3 .= '<td class="puntos fondo2" style="width:' . $valorTabla . '%;"><center><font size="7"style="text-align: center;  font-family:dejavusanscondensed;">' . $rowRespuesta10['PerdidaTotal'] . '</font></center></td>';
+	}
+
+	$cont6 += 1;
+}
+$html3 .= '</tr>';
+
+//::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 //CONSULTA COBERTURAS PARCIAL DAÑOS
 //::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
