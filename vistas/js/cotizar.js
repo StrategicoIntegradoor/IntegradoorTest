@@ -691,16 +691,7 @@ function consulPlacaMapfre(valnumplaca){
 
       }).catch(function (error) {
         console.log("Parece que hubo un problema: \n", error);
-
-        contErrProtocolo++;
-        if (contErrProtocolo > 1) {
-          $("#loaderPlaca").html("");
-          // document.getElementById("formularioVehiculo").style.display = "block";
-          contErrProtocolo = 0;
-          consulPlacaMapfre(valnumplaca);
-        } else {
-          setTimeout(consulPlaca, 400);
-        }
+          document.getElementById("formularioVehiculo").style.display = "block";
       });
 
 }
