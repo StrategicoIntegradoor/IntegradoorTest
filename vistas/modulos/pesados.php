@@ -426,7 +426,14 @@ if ($_SESSION["permisos"]["Cotizarpesados"] != "x") {
                       <div id="listaCiudades"></div>
                     </div>
 
-                    <div class="col-xs-12 col-sm-6 col-md-3">
+                    <div class="col-xs-12 col-sm-6 col-md-3 form-group">
+                      <label for="clasepesados">Clase Vehiculo</label>
+                      <input type="text" class="form-control" id="clasepesados" placeholder="" disabled>
+                    </div>
+
+                  </div>
+
+                  <div class="col-xs-12 col-sm-6 col-md-3">
                       <div class="row">
                         <div class="col-xs-5 col-sm-5 col-md-5 form-group">
                           <label style="display: none;">Es Oneroso?</label>
@@ -443,12 +450,7 @@ if ($_SESSION["permisos"]["Cotizarpesados"] != "x") {
                         </div>
                       </div>
                     </div>
-                  </div>
 
-                  <div class="col-xs-12 col-sm-6 col-md-3 form-group">
-                      <label for="clasepesados">Clase Vehiculo</label>
-                      <input type="text" class="form-control" id="clasepesados" placeholder="" disabled>
-                    </div>
                   <div class="row">
               
 
