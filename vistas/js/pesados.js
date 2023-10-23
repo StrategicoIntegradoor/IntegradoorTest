@@ -1428,7 +1428,7 @@ function cotizarOfertasPesados() {
         mundial: mundial,
         ofinanciera: ofinanciera,
         // hdi: hdi,
-        estado: estado,
+        // estado: estado,
       };
   
       var requestOptions = {
