@@ -433,27 +433,8 @@ if ($_SESSION["permisos"]["Cotizarpesados"] != "x") {
 
                   </div>
 
-                  <div class="col-xs-12 col-sm-6 col-md-3">
-                      <div class="row">
-                        <div class="col-xs-5 col-sm-5 col-md-5 form-group">
-                          <label style="display: none;">Es Oneroso?</label>
-                          <div class="conten-oneroso" style="display: none;">
-                            <label for="Si">Si</label>
-                            <input type="radio" name="oneroso" id="esOnerosoSi" value="Si">&nbsp;&nbsp;&nbsp;&nbsp;
-                            <label for="No">No</label>
-                            <input type="radio" name="oneroso" id="esOnerosoNo" value="No" required checked>
-                          </div>
-                        </div>
-                        <div class="col-xs-7 col-sm-7 col-md-7 form-group" id="contenBenefOneroso">
-                          <label for="benefOneroso">Beneficiario</label>
-                          <input type="text" class="form-control" id="benefOneroso">
-                        </div>
-                      </div>
-                    </div>
-
                   <div class="row">
               
-
                     <div class="col-xs-12 col-sm-6 col-md-3 form-group">
                       <label for="mundialseguros">Tipo Vehiculo Mundial</label>
                       <select class="form-control" id="mundialseguros" required>
@@ -498,6 +479,25 @@ if ($_SESSION["permisos"]["Cotizarpesados"] != "x") {
                       </select>
                     </div>
 
+                  </div>
+
+
+                  <div class="col-xs-12 col-sm-6 col-md-3">
+                    <div class="row">
+                      <div class="col-xs-5 col-sm-5 col-md-5 form-group">
+                        <label style="display: none;">Es Oneroso?</label>
+                        <div class="conten-oneroso" style="display: none;">
+                          <label for="Si">Si</label>
+                          <input type="radio" name="oneroso" id="esOnerosoSi" value="Si">&nbsp;&nbsp;&nbsp;&nbsp;
+                          <label for="No">No</label>
+                          <input type="radio" name="oneroso" id="esOnerosoNo" value="No" required checked>
+                        </div>
+                      </div>
+                      <div class="col-xs-7 col-sm-7 col-md-7 form-group" id="contenBenefOneroso">
+                        <label for="benefOneroso">Beneficiario</label>
+                        <input type="text" class="form-control" id="benefOneroso">
+                      </div>
+                    </div>
                   </div>
 
                 </div>
