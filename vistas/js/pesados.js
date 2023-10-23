@@ -1427,7 +1427,7 @@ function cotizarOfertasPesados() {
         Estrato: Estrato,
         mundial: mundial,
         ofinanciera: ofinanciera,
-        hdi: hdi,
+        // hdi: hdi,
         estado: estado,
       };
   
