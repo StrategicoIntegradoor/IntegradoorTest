@@ -566,7 +566,7 @@ function consulPlaca() {
               consulPlacaMapfre(valnumplaca);
               contErrMetEstado = 0;
             } else {
-              setTimeout(consulPlaca, 200);
+              setTimeout(consulPlacaMapfre, 200);
             }
           }
           $("#loaderPlaca").html("");
