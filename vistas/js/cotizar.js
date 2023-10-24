@@ -618,14 +618,14 @@ function consulPlacaMapfre(valnumplaca){
         var cilindraje = data.polizaReciente.VAL_CILINDRAJE;
         var codFasecolda = data.polizaReciente.COD_FASECOLDA;
         var aseguradora = data.polizaReciente.nomCompania;
-        console.log("Mapfre consulta");
-        console.log("Marca Cod:", marcaCod);
-        console.log("Clase:", clase);
-        console.log("Línea:", linea);
-        console.log("Modelo:", modelo);
-        console.log("Cilindraje:", cilindraje);
-        console.log("Código Fasecolda:", codFasecolda);
-        console.log("Aseguradora:", aseguradora);
+        // console.log("Mapfre consulta");
+        // console.log("Marca Cod:", marcaCod);
+        // console.log("Clase:", clase);
+        // console.log("Línea:", linea);
+        // console.log("Modelo:", modelo);
+        // console.log("Cilindraje:", cilindraje);
+        // console.log("Código Fasecolda:", codFasecolda);
+        // console.log("Aseguradora:", aseguradora);
 
         propietario = data.polizaReciente.asegNombre;
         cedulaP = data.polizaReciente.asegCodDocum;
