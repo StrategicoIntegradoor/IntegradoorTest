@@ -53,6 +53,7 @@ const construirHtmlCentrosDeInspeccion = centrosDeInspeccion => {
     let html = '<ul style="margin-top: 60px;">';
 
     centrosDeInspeccion.forEach(centro => {
+        console.log(centro)
         if (centro.trim() !== '') {
             // Dividir el centro en texto y enlace usando el espacio como separador
             // const partes = centro.split(" ");
