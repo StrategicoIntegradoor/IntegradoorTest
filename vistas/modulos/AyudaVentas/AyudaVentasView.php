@@ -28,7 +28,7 @@ if ($_SESSION["permisos"]["Ayudaventas"] != "x") {
     }
 
     .formas-de-pago-cell {
-        max-width: 35px; /* Establece el ancho máximo que desees */
+        max-width: 15%; /* Establece el ancho máximo que desees */
         word-wrap: break-word; /* Indica que el texto debe envolverse cuando se excede el ancho máximo */
     }
 
