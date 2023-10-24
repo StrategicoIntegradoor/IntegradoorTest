@@ -56,12 +56,12 @@ const construirHtmlCentrosDeInspeccion = centrosDeInspeccion => {
     if (centrosDeInspeccion.length === 0) return '';
     let html = '<ul style="margin-top: 60px;">';
 
-    centrosDeInspeccion.forEach(centro => {
-        if (centro.trim() !== '') {
+    // centrosDeInspeccion.forEach(centro => {
+        if (centrosDeInspeccion.trim() !== '') {
             // Dividir el centro en texto y enlace usando el espacio como separador
-            const texto = centro[0];
-            const enlace = centro[1];
-            console.log(centro)
+            const texto = centrosDeInspeccion[0];
+            const enlace = centrosDeInspeccion[1];
+            console.log(enlace)
             // if (partes !== -1) {
                 // Extrae el texto y el enlace utilizando la posición del primer espacio
                 // const texto = partes[0];
@@ -82,7 +82,7 @@ const construirHtmlCentrosDeInspeccion = centrosDeInspeccion => {
                 // }
             // } 
         }
-    });
+    // });
 
     html += '</ul>';
     return html;
