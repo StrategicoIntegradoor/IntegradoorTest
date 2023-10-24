@@ -94,16 +94,17 @@ Validamos el permiso para el boton que genera pdf persona natural de cada asegur
 
             Swal.fire({
                 title: 'Mensaje',
-                text: 'Sarlaft se emite durante el proceso de emisión de póliza',
+                text: 'Sarlaft de Zurich se emite durante el proceso de emisión de póliza',
                 icon: 'info'
             });
 
-        }
-        permisoValidado = validarPermiso(permisos.DescargarpdfdecadaaseguradoraPN);
-        if(permisoValidado){  
-            window.open(link);
-        }else{
-        mostrarAlerta();
+        } else{
+            permisoValidado = validarPermiso(permisos.DescargarpdfdecadaaseguradoraPN);
+            if(permisoValidado){  
+                window.open(link);
+            }else{
+            mostrarAlerta();
+            }
         }
     }; 
 
