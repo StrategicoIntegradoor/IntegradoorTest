@@ -86,22 +86,32 @@ const construirHtmlCentrosDeInspeccion = centrosDeInspeccion => {
     return html;
 };
 const construirHtmlContinuidad = continuidades => {
-    if (continuidades.length === 0) return '';
+    if (continuidades.length === 0) return ''
+    let html = '<ul style="margin-top: 60px;">'
+    continuidades.forEach(continuidad => {
+        if (continuidad !== '') html += `<li>- ${continuidad}</li>`
+    })
+    html += '</ul>'
+
+    return html
+}
+const construirHtmlFormasDePago = formasDePago => {
+    if (formasDePago.length === 0) return '';
     let html = '<ul style="margin-top: 60px;">';
     
-    continuidades.forEach(continuidad => {
-        if (continuidad !== '') {
+    formasDePago.forEach(formaDePago => {
+        if (formaDePago !== '') {
             // Buscar la posición de los dos puntos
-            const colonIndex = continuidad.indexOf(':');
+            const colonIndex = formaDePago.indexOf(':');
             
             if (colonIndex !== -1) {
                 // Separar el texto antes y después de los dos puntos
-                const text = continuidad.substring(0, colonIndex + 1); // Incluye los dos puntos
-                const link = continuidad.substring(colonIndex + 1).trim(); // Elimina espacios en blanco
+                const text = formaDePago.substring(0, colonIndex + 1); // Incluye los dos puntos
+                const link = formaDePago.substring(colonIndex + 1).trim(); // Elimina espacios en blanco
                 
                 html += `<li>- ${text} <a href="${link}" target="_blank">${link}</a></li>`;
             } else {
-                html += `<li>- ${continuidad}</li>`;
+                html += `<li>- ${formaDePago}</li>`;
             }
         }
     });
@@ -109,16 +119,7 @@ const construirHtmlContinuidad = continuidades => {
     html += '</ul>';
     return html;
 }
-const construirHtmlFormasDePago = formasDePago => {
-    if (formasDePago.length === 0) return ''
-    let html = '<ul>'
-    formasDePago.forEach(formaDePago => {
-        if (formaDePago !== '') html += `<li>- ${formaDePago}</li>`
-    })
-    html += '</ul>'
 
-    return html
-}
 document.querySelector('#editarAyudaVenta').addEventListener('click', e => {
     editarAyudaVenta()
 })
