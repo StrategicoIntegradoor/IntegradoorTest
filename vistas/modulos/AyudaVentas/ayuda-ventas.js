@@ -109,9 +109,9 @@ const construirHtmlFormasDePago = formasDePago => {
                 const text = formaDePago.substring(0, colonIndex + 1); // Incluye los dos puntos
                 const link = formaDePago.substring(colonIndex + 1).trim(); // Elimina espacios en blanco
                 
-                html += `<li>- ${text} <a href="${link}" target="_blank">${link}</a></li>`;
+                html += `<li>${text} <a href="${link}" target="_blank">${link}</a></li>`;
             } else {
-                html += `<li>- ${formaDePago}</li>`;
+                html += `<li>${formaDePago}</li>`;
             }
         }
     });
