@@ -90,6 +90,15 @@ Validamos el permiso para el boton que genera pdf persona natural de cada asegur
 ===============================================================================================================*/
     function validarPermisoPdfPersonaNatural(link)
     {
+        if(link == './vistas/modulos/AyudaVentas/pdf/sarlaft/1' || link == './vistas/modulos/AyudaVentas/pdf/sarlaft/2'){
+
+            Swal.fire({
+                title: 'Mensaje',
+                text: 'Sarlaft se emite durante el proceso de emisión de póliza',
+                icon: 'info'
+            });
+
+        }
         permisoValidado = validarPermiso(permisos.DescargarpdfdecadaaseguradoraPN);
         if(permisoValidado){  
             window.open(link);
