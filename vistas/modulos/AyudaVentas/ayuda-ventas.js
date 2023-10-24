@@ -277,28 +277,9 @@ const obtenerAyudaVentas = async () => {
                 partTemplate += '<td></td>'
             }
             partTemplate += `
-            <style>
-                th {
-                    border: 0 !important;
-                }
-
-                ul {
-                    padding-left: 0;
-                }
-
-                li {
-                    text-align: start;
-                    list-style: none;
-                }
-                .columna-formas-de-pago {
-                    width: 100px;    
-                }
-                
-
-            </style>
                 <td >${construirHtmlCentrosDeInspeccion(centrosDeInspeccion)}</td>
                 <td >${construirHtmlContinuidad(continuidades)}</td>
-                <td class="columna-formas-de-pago">${construirHtmlFormasDePago(formasDePago)}</td>`
+                <td >${construirHtmlFormasDePago(formasDePago)}</td>`
             if(permisos.Editarinformaciondelayudaventas == 'x'){
                 partTemplate += `<td style="line-height: 200px;">
                     <button 
