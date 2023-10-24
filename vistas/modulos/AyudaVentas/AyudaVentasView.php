@@ -27,7 +27,10 @@ if ($_SESSION["permisos"]["Ayudaventas"] != "x") {
         list-style: none;
     }
     .columna-formas-de-pago {
-        width: 2%; /* Ocupará el 20% del ancho de la tabla */
+        width: 20%; /* Ocupará el 20% del ancho de la tabla */
+        white-space: nowrap; /* Evita que los textos se rompan en múltiples líneas */
+        overflow: hidden; /* Oculta cualquier contenido que desborde */
+        text-overflow: ellipsis; /* Agrega puntos suspensivos (...) al final del texto sobrante */
     }
 
 </style>
