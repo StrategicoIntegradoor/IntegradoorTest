@@ -225,7 +225,7 @@ const obtenerAyudaVentas = async () => {
                                             ? ayudaVenta.continuidad.split('-') : []
             console.log(ayudaVenta.formas_de_pago)
             const formasDePago = (ayudaVenta.formas_de_pago != null) 
-                                            ? ayudaVenta.formas_de_pago.split('-') : []
+                                            ? ayudaVenta.formas_de_pago.split('@') : []
             console.log(formasDePago)
             let partTemplate = `
                 <tr >
