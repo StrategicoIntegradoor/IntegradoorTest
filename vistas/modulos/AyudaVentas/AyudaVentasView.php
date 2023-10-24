@@ -26,6 +26,10 @@ if ($_SESSION["permisos"]["Ayudaventas"] != "x") {
         text-align: start;
         list-style: none;
     }
+    .columna-formas-de-pago {
+        width: 20%; /* Ocupará el 20% del ancho de la tabla */
+    }
+
 </style>
 
 <div class="content-wrapper">
