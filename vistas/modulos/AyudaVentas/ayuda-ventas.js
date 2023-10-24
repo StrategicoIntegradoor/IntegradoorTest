@@ -291,11 +291,7 @@ const obtenerAyudaVentas = async () => {
                     list-style: none;
                 }
                 .columna-formas-de-pago {
-                    width: 20%;
-                    max-width: 200px; /* Ajusta el valor de max-width según tus necesidades */
-                    white-space: nowrap;
-                    overflow: hidden;
-                    text-overflow: ellipsis;
+                    word-wrap: break-word;
                 }
                 
 
