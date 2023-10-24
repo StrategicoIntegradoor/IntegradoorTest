@@ -90,7 +90,7 @@ Validamos el permiso para el boton que genera pdf persona natural de cada asegur
 ===============================================================================================================*/
     function validarPermisoPdfPersonaNatural(link)
     {
-        if(link == './vistas/modulos/AyudaVentas/pdf/sarlaft/1' || link == './vistas/modulos/AyudaVentas/pdf/sarlaft2/2'){
+        if(link == './vistas/modulos/AyudaVentas/pdf/sarlaft/1'){
 
             Swal.fire({
                 title: 'Mensaje',
@@ -113,11 +113,21 @@ Validamos el permiso para el boton que genera pdf persona juridica de cada asegu
 ===============================================================================================================*/
     function validarPermisoPdfPersonaJuridica(link)
     {
-        permisoValidado = validarPermiso(permisos.DescargarpdfdecadaaseguradoraPJ);
-        if(permisoValidado){
-            window.open(link);
+        if(link == './vistas/modulos/AyudaVentas/pdf/sarlaft2/2'){
+
+            Swal.fire({
+                title: 'Mensaje',
+                text: 'Sarlaft de Zurich se emite durante el proceso de emisión de póliza',
+                icon: 'info'
+            }); 
+
         }else{
-        mostrarAlerta();
+            permisoValidado = validarPermiso(permisos.DescargarpdfdecadaaseguradoraPJ);
+            if(permisoValidado){
+                window.open(link);
+            }else{
+            mostrarAlerta();
+            }
         }
     }; 
 
