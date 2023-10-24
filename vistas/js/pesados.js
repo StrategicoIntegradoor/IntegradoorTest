@@ -1279,7 +1279,7 @@ function registrarOferta(
     aseguradorasFallidas.push(_aseguradora)
   }
   
-  const eliminarAseguradoraFallida = _aseguradora => {
+  const eliminarAseguradoraFallidaPesados = _aseguradora => {
     aseguradorasFallidas = aseguradorasFallidas.filter(aseguradora => aseguradora !== _aseguradora)
   }
   
