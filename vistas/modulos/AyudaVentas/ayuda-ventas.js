@@ -87,7 +87,7 @@ const construirHtmlCentrosDeInspeccion = centrosDeInspeccion => {
 };
 const construirHtmlContinuidad = continuidades => {
     if (continuidades.length === 0) return ''
-    let html = '<ul style="margin-top: 30px;">'
+    let html = '<ul style="margin-top: 60px;">'
     continuidades.forEach(continuidad => {
         if (continuidad !== '') html += `<li>- ${continuidad}</li>`
     })
@@ -97,7 +97,7 @@ const construirHtmlContinuidad = continuidades => {
 }
 const construirHtmlFormasDePago = formasDePago => {
     if (formasDePago.length === 0) return '';
-    let html = '<ul style="margin-top: 30px;">';
+    let html = '<ul style="margin-top: 60px;">';
     
     formasDePago.forEach(formaDePago => {
         if (formaDePago !== '') {
