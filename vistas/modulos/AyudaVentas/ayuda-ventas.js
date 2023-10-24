@@ -57,7 +57,7 @@ const construirHtmlCentrosDeInspeccion = centrosDeInspeccion => {
     let html = '<ul style="margin-top: 60px;">';
 
     // centrosDeInspeccion.forEach(centro => {
-        if (centrosDeInspeccion.trim() !== '') {
+        // if (centrosDeInspeccion.trim() !== '') {
             // Dividir el centro en texto y enlace usando el espacio como separador
             const texto = centrosDeInspeccion[0];
             const enlace = centrosDeInspeccion[1];
@@ -81,7 +81,7 @@ const construirHtmlCentrosDeInspeccion = centrosDeInspeccion => {
                     // html += `<li>${centro}</li>`;
                 // }
             // } 
-        }
+        // }
     // });
 
     html += '</ul>';
