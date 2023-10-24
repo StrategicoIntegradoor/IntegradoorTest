@@ -223,8 +223,10 @@ const obtenerAyudaVentas = async () => {
                                             ? ayudaVenta.centro_de_inspeccion.split('-') : []
             const continuidades = (ayudaVenta.continuidad != null) 
                                             ? ayudaVenta.continuidad.split('-') : []
+            console.log(ayudaVenta.formas_de_pago)
             const formasDePago = (ayudaVenta.formas_de_pago != null) 
                                             ? ayudaVenta.formas_de_pago.split('-') : []
+            console.log(formasDePago)
             let partTemplate = `
                 <tr >
                     <td ><img src="./vistas/modulos/AyudaVentas/src/logos/${ayudaVenta.aseguradora}.png" style="margin-top: 100%;" class="img-responsive" width="80"></td>
