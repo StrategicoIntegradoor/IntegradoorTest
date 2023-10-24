@@ -281,12 +281,12 @@ const obtenerAyudaVentas = async () => {
             <style>
 
             .formas-de-pago-cell {
-                max-width: 380px; /* Establece el ancho máximo que desees */
+                max-width: 300px; /* Establece el ancho máximo que desees */
                 word-wrap: break-word; /* Indica que el texto debe envolverse cuando se excede el ancho máximo */
             }
         
             </style>
-                <td >${construirHtmlCentrosDeInspeccion(centrosDeInspeccion)}</td>
+                <td class="formas-de-pago-cell">${construirHtmlCentrosDeInspeccion(centrosDeInspeccion)}</td>
                 <td >${construirHtmlContinuidad(continuidades)}</td>
                 <td class="formas-de-pago-cell">${construirHtmlFormasDePago(formasDePago)}</td>`
             if(permisos.Editarinformaciondelayudaventas == 'x'){
