@@ -290,7 +290,7 @@ const obtenerAyudaVentas = async () => {
                 <td class="formas-de-pago-cell">${construirHtmlContinuidad(continuidades)}</td>
                 <td class="formas-de-pago-cell">${construirHtmlFormasDePago(formasDePago)}</td>`
             if(permisos.Editarinformaciondelayudaventas == 'x'){
-                partTemplate += `<td style="line-height: 200px;">
+                partTemplate += `<td style="line-height: 100px;">
                     <button 
                         onclick="editar(${ayudaVenta.id})"
                         class="btn btn-primary"
