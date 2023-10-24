@@ -87,7 +87,7 @@ const construirHtmlCentrosDeInspeccion = centrosDeInspeccion => {
 };
 const construirHtmlContinuidad = continuidades => {
     if (continuidades.length === 0) return ''
-    let html = '<ul style="margin-top: 60px;">'
+    let html = '<ul style="margin-top: 30px;">'
     continuidades.forEach(continuidad => {
         if (continuidad !== '') html += `<li>- ${continuidad}</li>`
     })
@@ -97,7 +97,7 @@ const construirHtmlContinuidad = continuidades => {
 }
 const construirHtmlFormasDePago = formasDePago => {
     if (formasDePago.length === 0) return '';
-    let html = '<ul style="margin-top: 60px;">';
+    let html = '<ul style="margin-top: 30px;">';
     
     formasDePago.forEach(formaDePago => {
         if (formaDePago !== '') {
@@ -290,7 +290,7 @@ const obtenerAyudaVentas = async () => {
                 <td class="formas-de-pago-cell">${construirHtmlContinuidad(continuidades)}</td>
                 <td class="formas-de-pago-cell">${construirHtmlFormasDePago(formasDePago)}</td>`
             if(permisos.Editarinformaciondelayudaventas == 'x'){
-                partTemplate += `<td style="line-height: 100px;">
+                partTemplate += `<td style="line-height: 200px;">
                     <button 
                         onclick="editar(${ayudaVenta.id})"
                         class="btn btn-primary"
