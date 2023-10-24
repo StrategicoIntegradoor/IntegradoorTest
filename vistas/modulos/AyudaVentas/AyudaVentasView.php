@@ -27,11 +27,6 @@ if ($_SESSION["permisos"]["Ayudaventas"] != "x") {
         list-style: none;
     }
 
-    .formas-de-pago-cell {
-        max-width: 100px; /* Establece el ancho máximo que desees */
-        word-wrap: break-word; /* Indica que el texto debe envolverse cuando se excede el ancho máximo */
-    }
-
 
 </style>
 

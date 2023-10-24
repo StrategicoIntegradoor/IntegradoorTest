@@ -281,7 +281,7 @@ const obtenerAyudaVentas = async () => {
             <style>
 
             .formas-de-pago-cell {
-                max-width: 100px; /* Establece el ancho máximo que desees */
+                max-width: 300px; /* Establece el ancho máximo que desees */
                 word-wrap: break-word; /* Indica que el texto debe envolverse cuando se excede el ancho máximo */
             }
         
