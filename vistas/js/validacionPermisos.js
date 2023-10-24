@@ -90,7 +90,7 @@ Validamos el permiso para el boton que genera pdf persona natural de cada asegur
 ===============================================================================================================*/
     function validarPermisoPdfPersonaNatural(link)
     {
-        if(link == './vistas/modulos/AyudaVentas/pdf/sarlaft/1' || link == './vistas/modulos/AyudaVentas/pdf/sarlaft/2'){
+        if(link == './vistas/modulos/AyudaVentas/pdf/sarlaft/1' || link == './vistas/modulos/AyudaVentas/pdf/sarlaft2/2'){
 
             Swal.fire({
                 title: 'Mensaje',
