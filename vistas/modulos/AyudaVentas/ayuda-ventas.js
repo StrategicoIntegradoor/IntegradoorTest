@@ -291,7 +291,7 @@ const obtenerAyudaVentas = async () => {
                     list-style: none;
                 }
                 .columna-formas-de-pago {
-                    word-wrap: break-word;
+                    width: 100px;    
                 }
                 
 
