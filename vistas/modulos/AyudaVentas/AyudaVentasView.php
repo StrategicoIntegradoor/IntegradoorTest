@@ -27,7 +27,7 @@ if ($_SESSION["permisos"]["Ayudaventas"] != "x") {
         list-style: none;
     }
     .columna-formas-de-pago {
-        word-wrap: break-word;
+        width: 100px;    
     }
 
 </style>
