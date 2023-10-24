@@ -1037,23 +1037,23 @@ function registrarOferta(
       if (manual == null) { 
         manual = 0;
       }
-      console.log(placa)
-      console.log(idCotizOferta)
-      console.log(numDocumentoID)
-      console.log(aseguradora)
-      console.log(numCotizOferta)
-      console.log(producto)
-      console.log(prima)
-      console.log(valorRC)
-      console.log(PT)
-      console.log(PP)
-      console.log(CE)
-      console.log(GR)
-      console.log(logo)
-      console.log(UrlPdf)
-      console.log(manual)
-      console.log(pdf)
-      console.log(responsabilidad_civil_familiar) 
+      // console.log(placa)
+      // console.log(idCotizOferta)
+      // console.log(numDocumentoID)
+      // console.log(aseguradora)
+      // console.log(numCotizOferta)
+      // console.log(producto)
+      // console.log(prima)
+      // console.log(valorRC)
+      // console.log(PT)
+      // console.log(PP)
+      // console.log(CE)
+      // console.log(GR)
+      // console.log(logo)
+      // console.log(UrlPdf)
+      // console.log(manual)
+      // console.log(pdf)
+      // console.log(responsabilidad_civil_familiar) 
       $.ajax({
         type: "POST",
         url: "src/insertarOferta.php",
@@ -1105,16 +1105,16 @@ function registrarOferta(
     logo,
     UrlPdf
   ) => {
-    console.log("aseguradora:", aseguradora);
-    console.log("prima:", prima);
-    console.log("producto:", producto);
-    console.log("numCotizOferta:", numCotizOferta);
-    console.log("PT:", PT);
-    console.log("PP:", PP);
-    console.log("CE:", CE);
-    console.log("GR:", GR);
-    console.log("logo:", logo);
-    console.log("UrlPdf:", UrlPdf);
+    // console.log("aseguradora:", aseguradora);
+    // console.log("prima:", prima);
+    // console.log("producto:", producto);
+    // console.log("numCotizOferta:", numCotizOferta);
+    // console.log("PT:", PT);
+    // console.log("PP:", PP);
+    // console.log("CE:", CE);
+    // console.log("GR:", GR);
+    // console.log("logo:", logo);
+    // console.log("UrlPdf:", UrlPdf);
     let cardCotizacion = `
               <div class='col-lg-12'>
                 <div class='card-ofertas'>
