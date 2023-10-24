@@ -1272,7 +1272,7 @@ function registrarOferta(
   var aseguradorasIntentadas = []
   var primerIntentoRealizado = false
   
-  const agregarAseguradoraFallida = _aseguradora => {
+  const agregarAseguradoraFallidaPesados = _aseguradora => {
     const result = aseguradorasFallidas.find(aseguradoras =>
       aseguradoras == _aseguradora)
     if (result !== undefined) return
@@ -1508,7 +1508,7 @@ function cotizarOfertasPesados() {
             })
             .then((ofertas) => {
                 if (typeof ofertas[0].Resultado !== 'undefined') {
-                  agregarAseguradoraFallida('Seguros Mundial')
+                  agregarAseguradoraFallidaPesados('Seguros Mundial')
                   ofertas[0].Mensajes.forEach(mensaje => {
                     mostrarAlertarCotizacionFallida('Seguros Mundial', mensaje)
                   })
@@ -1534,7 +1534,7 @@ function cotizarOfertasPesados() {
                 })
                 .then((ofertas) => {
                   if (typeof ofertas[0].Resultado !== 'undefined') {
-                    agregarAseguradoraFallida('AXA')
+                    agregarAseguradoraFallidaPesados('AXA')
                     ofertas[0].Mensajes.forEach(mensaje => {
                       mostrarAlertarCotizacionFallida('AXA', mensaje)
                     })
