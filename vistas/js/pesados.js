@@ -1092,7 +1092,7 @@ function registrarOferta(
     })
   }
   
-  const mostrarOferta = (
+  const mostrarOfertaPesados = (
     aseguradora,
     prima,
     producto,
@@ -1232,7 +1232,7 @@ function registrarOferta(
         if (oferta == null) return;
         if (numCotizacion == null && precioOferta == "0") return;
         if (precioOferta.length <= 3) return;
-        mostrarOferta(
+        mostrarOfertaPesados(
           oferta.entidad,
           oferta.precio,
           oferta.producto,
