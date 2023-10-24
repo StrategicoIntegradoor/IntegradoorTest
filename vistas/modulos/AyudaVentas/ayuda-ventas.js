@@ -277,6 +277,24 @@ const obtenerAyudaVentas = async () => {
                 partTemplate += '<td></td>'
             }
             partTemplate += `
+            <style>
+                th {
+                    border: 0 !important;
+                }
+
+                ul {
+                    padding-left: 0;
+                }
+
+                li {
+                    text-align: start;
+                    list-style: none;
+                }
+                .columna-formas-de-pago {
+                    width: 2%; /* Ocupará el 20% del ancho de la tabla */
+                }
+
+            </style>
                 <td >${construirHtmlCentrosDeInspeccion(centrosDeInspeccion)}</td>
                 <td class="columna-formas-de-pago">${construirHtmlContinuidad(continuidades)}</td>
                 <td>${construirHtmlFormasDePago(formasDePago)}</td>`
