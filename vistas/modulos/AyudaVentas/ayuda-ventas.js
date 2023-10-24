@@ -235,7 +235,7 @@ const obtenerAyudaVentas = async () => {
             }
             
             const centrosDeInspeccion = (ayudaVenta.centro_de_inspeccion != null) 
-                                            ? ayudaVenta.centro_de_inspeccion.split('-') : []
+                                            ? ayudaVenta.centro_de_inspeccion.split('@') : []
             const continuidades = (ayudaVenta.continuidad != null) 
                                             ? ayudaVenta.continuidad.split('-') : []
             console.log(ayudaVenta.formas_de_pago)
