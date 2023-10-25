@@ -52,7 +52,7 @@ Validamos el permiso para el boton en ayudaventas que genera pdfgenerico a perso
     {
         permisoValidado = validarPermiso(permisos.Descargarsarlaftpdfgenericos);
         if(permisoValidado){
-        window.open('./vistas/modulos/AyudaVentas/pdf/sarlaft/14_Sarlaft_Generico.pdf');
+            window.open('./vistas/modulos/AyudaVentas/pdf/sarlaft/14_Sarlaft_Generico.pdf');
         }else{
            mostrarAlerta();
         }
@@ -65,7 +65,7 @@ Validamos el permiso para el boton que genera pdfgenerico a persona juridica - A
     {
         permisoValidado = validarPermiso(permisos.Descargarsarlaftpdfgenericos);
         if(permisoValidado){
-            window.open('./vistas/modulos/AyudaVentas/pdf/sarlaft2/14_Sarlaft_Generico2');
+            window.open('./vistas/modulos/AyudaVentas/pdf/sarlaft2/14_Sarlaft_Generico2.pdf');
         }else{
            mostrarAlerta();
         }
