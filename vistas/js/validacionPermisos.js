@@ -65,7 +65,7 @@ Validamos el permiso para el boton que genera pdfgenerico a persona juridica - A
     {
         permisoValidado = validarPermiso(permisos.Descargarsarlaftpdfgenericos);
         if(permisoValidado){
-        window.location.href = "ayuda-ventas"
+            window.open('./vistas/modulos/AyudaVentas/pdf/sarlaft2/14_Sarlaft_Generico2');
         }else{
            mostrarAlerta();
         }
