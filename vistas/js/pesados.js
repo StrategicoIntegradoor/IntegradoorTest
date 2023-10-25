@@ -1539,7 +1539,7 @@ function cotizarOfertasPesados() {
                       mostrarAlertarCotizacionFallida('AXA', mensaje)
                     })
                   } else {
-                    validarOfertas(ofertas)
+                    validarOfertasPesados(ofertas)
                     mostrarAlertaCotizacionExitosa('AXA')
                   }
                 })
