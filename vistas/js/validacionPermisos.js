@@ -117,7 +117,7 @@ Validamos el permiso para el boton que genera pdf persona juridica de cada asegu
 
             Swal.fire({
                 title: 'Mensaje',
-                text: 'Sarlaft de Zurich se emite durante el proceso de emisión de póliza',
+                text: 'Este sarlaft se emite durante el proceso de emisión de póliza',
                 icon: 'info'
             }); 
 
