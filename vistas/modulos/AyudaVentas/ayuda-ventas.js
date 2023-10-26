@@ -283,17 +283,17 @@ const obtenerAyudaVentas = async () => {
             <style>
 
             .formas-de-pago-cell {
-                max-width: 300px; /* Establece el ancho máximo que desees */
+                max-width: 15%; /* Establece el ancho máximo que desees */
                 word-wrap: break-word; /* Indica que el texto debe envolverse cuando se excede el ancho máximo */
             }
 
             .centros-de-inspeccion-cell {
-                max-width: 220px; /* Establece el ancho máximo que desees */
+                max-width: 5%px; /* Establece el ancho máximo que desees */
                 word-wrap: break-word; /* Indica que el texto debe envolverse cuando se excede el ancho máximo */
             }
 
             .continuidades {
-                max-width: 380px; /* Establece el ancho máximo que desees */
+                max-width: 15%px; /* Establece el ancho máximo que desees */
                 word-wrap: break-word; /* Indica que el texto debe envolverse cuando se excede el ancho máximo */
             }
         
