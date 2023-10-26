@@ -245,7 +245,7 @@ const obtenerAyudaVentas = async () => {
             let partTemplate = `
                 <tr >
                     <td><img src="./vistas/modulos/AyudaVentas/src/logos/${ayudaVenta.aseguradora}.png" style="margin-top: 60px;" class="img-responsive" width="80"></td>
-                    <td style="margin-top: 60px;">${ayudaVenta.linea_de_atencion}</td>`
+                    <td style="line-height: 150px;">${ayudaVenta.linea_de_atencion}</td>`
             if (ayudaVenta.link_clausulado) {
                 partTemplate += `<td style="margin-top: 60px;"><button class="btn btn-alert" style="border-color: #88d600; width: 205px; color: #88d600; font-weight: 500;" onclick="validarPermisoClausulado('${ayudaVenta.link_clausulado}')">${ayudaVenta.link_clausulado.substring(0,27)}</button></td>`
             } else {
