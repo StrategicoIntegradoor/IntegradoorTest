@@ -268,8 +268,7 @@ const obtenerAyudaVentas = async () => {
             .fixed-width {
                 width: 10%; /* Establece el ancho fijo deseado */
                 text-align: center; /* Alinea el contenido al centro si es necesario */
-                white-space: nowrap; /* Evita el salto de línea */
-                overflow: hidden; /* Oculta el contenido que desborda */
+                white-space: normal; /* Permite que el texto fluya a la siguiente línea */
             }
             </style>
                 <td class="fixed-width">${construirHtmlCentrosDeInspeccion(centrosDeInspeccion)}</td>
