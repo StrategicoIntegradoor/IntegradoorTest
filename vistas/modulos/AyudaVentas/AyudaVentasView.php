@@ -27,9 +27,11 @@ if ($_SESSION["permisos"]["Ayudaventas"] != "x") {
         list-style: none;
     }
 
-    .fixed-width {
-    white-space: nowrap;
+    table {
+    table-layout: fixed;
+    width: 100%; /* Puedes establecer el ancho total de la tabla aquí */
     }
+
 
 </style>
 
