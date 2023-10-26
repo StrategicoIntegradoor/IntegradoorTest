@@ -282,6 +282,17 @@ const obtenerAyudaVentas = async () => {
 
             <style>
 
+            .formas-de-pago-cell {
+                word-wrap: break-word; /* Indica que el texto debe envolverse cuando se excede el ancho máximo */
+            }
+
+            .centros-de-inspeccion-cell {
+                word-wrap: break-word; /* Indica que el texto debe envolverse cuando se excede el ancho máximo */
+            }
+
+            .continuidades {
+                word-wrap: break-word; /* Indica que el texto debe envolverse cuando se excede el ancho máximo */
+            }
         
             </style>
                 <td class="centros-de-inspeccion-cell">${construirHtmlCentrosDeInspeccion(centrosDeInspeccion)}</td>
