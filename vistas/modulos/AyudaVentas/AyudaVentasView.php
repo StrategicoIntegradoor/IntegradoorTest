@@ -135,7 +135,7 @@ if ($_SESSION["permisos"]["Ayudaventas"] != "x") {
                             <th style="text-align: center">Sarlaft PJ</th>
                             <th style="text-align: center">Centro de inspección</th>
                             <th style="text-align: center">Continuidad</th>
-                            <th style="text-align: center">Formas de pago</th>
+                            <th style="text-align: center; width: 50%;">Formas de pago</th>
                             <?php
                             if($_SESSION["permisos"]["Editarinformaciondelayudaventas"] == "x"){
                             echo'<th style="text-align: center">Editar</th>';
