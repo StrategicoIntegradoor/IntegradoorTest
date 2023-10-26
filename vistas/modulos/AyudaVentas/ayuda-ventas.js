@@ -266,7 +266,6 @@ const obtenerAyudaVentas = async () => {
 
             <style>
             .fixed-width {
-                width: 10%; /* Establece el ancho fijo deseado */
                 text-align: center; /* Alinea el contenido al centro si es necesario */
                 white-space: normal; /* Permite que el texto fluya a la siguiente línea */
             }
