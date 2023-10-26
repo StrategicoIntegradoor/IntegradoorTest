@@ -1970,7 +1970,7 @@ const obtenerPdfprevisora = async (cotizacion) => {
 
 
 
-
+console.log(cotizacion)
 
   const formData = new FormData();
 
