@@ -126,6 +126,18 @@ if ($_SESSION["permisos"]["Ayudaventas"] != "x") {
                 </div>
 
                 <table class="table table-bordered table-striped dt-responsive tablas-asistencias" width="100%">
+                    <colgroup>
+                        <!-- Las primeras 5 columnas ocupan el 70% del ancho de la tabla -->
+                        <col style="width: 14%;">
+                        <col style="width: 14%;">
+                        <col style="width: 14%;">
+                        <col style="width: 14%;">
+                        <col style="width: 14%">
+                        <!-- Las últimas 3 columnas ocupan el 30% del ancho de la tabla -->
+                        <col style="width: 10%;">
+                        <col style="width: 10%;">
+                        <col style="width: 10%;">
+                    </colgroup>
                     <thead style="background: #88d600; color: #FFF; ">
                         <tr>
                             <th style="text-align: center">Aseguradora</th>
