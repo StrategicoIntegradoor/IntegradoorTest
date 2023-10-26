@@ -1970,7 +1970,6 @@ const obtenerPdfprevisora = async (cotizacion) => {
 
 
 
-console.log(cotizacion)
 
   const formData = new FormData();
 
@@ -1980,7 +1979,7 @@ console.log(cotizacion)
 
   const pdfText = await fetch(
 
-    "https://www.grupoasistencia.com/motor_webservice/WSPrevisora/get_pdf_previsora.php",
+    "https://www.grupoasistencia.com/motor_webservice_tst/WSPrevisora/get_pdf_previsora.php",
 
     {
 
