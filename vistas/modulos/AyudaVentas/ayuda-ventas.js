@@ -265,11 +265,16 @@ const obtenerAyudaVentas = async () => {
             partTemplate += `
 
             <style>
-        
+            .fixed-width {
+                width: 10%; /* Establece el ancho fijo deseado */
+                text-align: center; /* Alinea el contenido al centro si es necesario */
+                white-space: nowrap; /* Evita el salto de línea */
+                overflow: hidden; /* Oculta el contenido que desborda */
+            }
             </style>
-                <td class="centros-de-inspeccion-cell word-wrap: break-word;" style="max-width: 5%; white-space: nowrap; text-align: center;">${construirHtmlCentrosDeInspeccion(centrosDeInspeccion)}</td>
-                <td class="continuidades word-wrap: break-word;" style="max-width: 5%; white-space: nowrap; text-align: center;">${construirHtmlContinuidad(continuidades)}</td>
-                <td class="formas-de-pago-cell word-wrap: break-word;" style="max-width: 5%; white-space: nowrap; text-align: center;">${construirHtmlFormasDePago(formasDePago)}</td>`
+                <td class="fixed-width">${construirHtmlCentrosDeInspeccion(centrosDeInspeccion)}</td>
+                <td class="fixed-width">${construirHtmlContinuidad(continuidades)}</td>
+                <td class="fixed-width">${construirHtmlFormasDePago(formasDePago)}</td>`
             if(permisos.Editarinformaciondelayudaventas == 'x'){
                 partTemplate += `<td style="line-height: 200px;">
                     <button 
