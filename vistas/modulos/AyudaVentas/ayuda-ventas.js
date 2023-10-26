@@ -282,20 +282,6 @@ const obtenerAyudaVentas = async () => {
 
             <style>
 
-            .formas-de-pago-cell {
-                max-width: 15%; /* Establece el ancho máximo que desees */
-                word-wrap: break-word; /* Indica que el texto debe envolverse cuando se excede el ancho máximo */
-            }
-
-            .centros-de-inspeccion-cell {
-                max-width: 5%; /* Establece el ancho máximo que desees */
-                word-wrap: break-word; /* Indica que el texto debe envolverse cuando se excede el ancho máximo */
-            }
-
-            .continuidades {
-                max-width: 55%; /* Establece el ancho máximo que desees */
-                word-wrap: break-word; /* Indica que el texto debe envolverse cuando se excede el ancho máximo */
-            }
         
             </style>
                 <td class="centros-de-inspeccion-cell">${construirHtmlCentrosDeInspeccion(centrosDeInspeccion)}</td>
