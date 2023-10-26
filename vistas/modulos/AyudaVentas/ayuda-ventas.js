@@ -283,15 +283,15 @@ const obtenerAyudaVentas = async () => {
             <style>
 
             .formas-de-pago-cell {
-                fixed-width /* Indica que el texto debe envolverse cuando se excede el ancho máximo */
+                white-space: nowrap;
             }
 
             .centros-de-inspeccion-cell {
-                fixed-width /* Indica que el texto debe envolverse cuando se excede el ancho máximo */
+                white-space: nowrap;
             }
 
             .continuidades {
-                fixed-width /* Indica que el texto debe envolverse cuando se excede el ancho máximo */
+                white-space: nowrap;
             }
         
             </style>
