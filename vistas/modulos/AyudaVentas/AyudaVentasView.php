@@ -129,7 +129,7 @@ if ($_SESSION["permisos"]["Ayudaventas"] != "x") {
 
 
                 <div class="table-responsive">
-                    <table class="table table-bordered table-striped dt-responsive tablas-asistencias">
+                    <table class="table table-bordered table-striped dt-responsive tablas-asistencias" style="width: 100%;">
                         <colgroup>
                             <!-- Las primeras 5 columnas ocupan el 70% del ancho de la tabla -->
                             <col style="max-width: 14%;">
