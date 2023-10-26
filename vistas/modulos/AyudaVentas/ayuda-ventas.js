@@ -293,7 +293,7 @@ const obtenerAyudaVentas = async () => {
             }
 
             .continuidades {
-                max-width: 15%; /* Establece el ancho máximo que desees */
+                max-width: 55%; /* Establece el ancho máximo que desees */
                 word-wrap: break-word; /* Indica que el texto debe envolverse cuando se excede el ancho máximo */
             }
         
