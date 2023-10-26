@@ -2005,18 +2005,34 @@ const obtenerPdfprevisora = async (cotizacion) => {
     //   }
     // });
 
-    .then((response) => response.json())
+    // .then((response) => response.json())
 
+    // .then((responseText) => {
+    //   return responseText.SerializedPDF;
+
+    // });
+
+    .then((response) => {
+      // Imprime la respuesta en la consola para depuración
+      console.log("Respuesta del servidor:", response);
+
+      if (response.ok) {
+        return response.json();
+      } else {
+        throw new Error("Error en la respuesta del servidor");
+      }
+    })
     .then((responseText) => {
-      console.log(responseText)
+      // Imprime el contenido de la respuesta (JSON) en la consola
+      console.log("Contenido de la respuesta (JSON):", responseText);
       return responseText.SerializedPDF;
-
+    })
+    .catch((error) => {
+      console.error("Error al obtener PDF:", error);
+      return null; // Manejar el error de alguna manera
     });
 
-
-
   return pdfText;
-
 };
 
 
