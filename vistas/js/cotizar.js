@@ -34,6 +34,7 @@ $(document).ready(function () {
       }).then(function (myJson) {
 
         $("#previsoraToken").val(myJson.TokenPrevisora);
+        console.log(myJson.TokenPrevisora)
       });
 
   }
