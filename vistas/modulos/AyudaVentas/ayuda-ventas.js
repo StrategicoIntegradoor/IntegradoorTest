@@ -247,7 +247,7 @@ const obtenerAyudaVentas = async () => {
                     <td style="max-width: 5%; white-space: nowrap; text-align: center;"><img src="./vistas/modulos/AyudaVentas/src/logos/${ayudaVenta.aseguradora}.png" style="margin-top: 100%;" class="img-responsive" width="80"></td>
                     <td style="line-height: 200px;" style="max-width: 5%; white-space: nowrap; text-align: center;">${ayudaVenta.linea_de_atencion}</td>`
             if (ayudaVenta.link_clausulado) {
-                partTemplate += `<td style="line-height: 200px;"><button class="btn btn-alert"  style="max-width: 5%; white-space: nowrap; text-align: center;" style="border-color: #88d600; width: 205px; color: #88d600; font-weight: 500;" onclick="validarPermisoClausulado('${ayudaVenta.link_clausulado}')">${ayudaVenta.link_clausulado.substring(0,27)}</button></td>`
+                partTemplate += `<td style="line-height: 200px;" style="max-width: 5%; white-space: nowrap; text-align: center;" ><button class="btn btn-alert" style="border-color: #88d600; width: 205px; color: #88d600; font-weight: 500;" onclick="validarPermisoClausulado('${ayudaVenta.link_clausulado}')">${ayudaVenta.link_clausulado.substring(0,27)}</button></td>`
             } else {
                 partTemplate += '<td></td>'
             }
@@ -267,9 +267,9 @@ const obtenerAyudaVentas = async () => {
             <style>
         
             </style>
-                <td class="centros-de-inspeccion-cell" style="max-width: 5%; white-space: nowrap; text-align: center;">${construirHtmlCentrosDeInspeccion(centrosDeInspeccion)}</td>
-                <td class="continuidades" style="max-width: 5%; white-space: nowrap; text-align: center;">${construirHtmlContinuidad(continuidades)}</td>
-                <td class="formas-de-pago-cell" style="max-width: 5%; white-space: nowrap; text-align: center;">${construirHtmlFormasDePago(formasDePago)}</td>`
+                <td class="centros-de-inspeccion-cell word-wrap: break-word;" style="max-width: 5%; white-space: nowrap; text-align: center;">${construirHtmlCentrosDeInspeccion(centrosDeInspeccion)}</td>
+                <td class="continuidades word-wrap: break-word;" style="max-width: 5%; white-space: nowrap; text-align: center;">${construirHtmlContinuidad(continuidades)}</td>
+                <td class="formas-de-pago-cell word-wrap: break-word;" style="max-width: 5%; white-space: nowrap; text-align: center;">${construirHtmlFormasDePago(formasDePago)}</td>`
             if(permisos.Editarinformaciondelayudaventas == 'x'){
                 partTemplate += `<td style="line-height: 200px;">
                     <button 
