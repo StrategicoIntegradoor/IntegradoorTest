@@ -288,13 +288,18 @@ const obtenerAyudaVentas = async () => {
             }
 
             .centros-de-inspeccion-cell {
-                max-width: 250px; /* Establece el ancho máximo que desees */
+                max-width: 220px; /* Establece el ancho máximo que desees */
+                word-wrap: break-word; /* Indica que el texto debe envolverse cuando se excede el ancho máximo */
+            }
+
+            .continuidades {
+                max-width: 380px; /* Establece el ancho máximo que desees */
                 word-wrap: break-word; /* Indica que el texto debe envolverse cuando se excede el ancho máximo */
             }
         
             </style>
                 <td class="centros-de-inspeccion-cell">${construirHtmlCentrosDeInspeccion(centrosDeInspeccion)}</td>
-                <td class="formas-de-pago-cell">${construirHtmlContinuidad(continuidades)}</td>
+                <td class="continuidades">${construirHtmlContinuidad(continuidades)}</td>
                 <td class="formas-de-pago-cell">${construirHtmlFormasDePago(formasDePago)}</td>`
             if(permisos.Editarinformaciondelayudaventas == 'x'){
                 partTemplate += `<td style="line-height: 200px;">
