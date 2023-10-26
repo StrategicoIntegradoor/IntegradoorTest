@@ -125,7 +125,7 @@ if ($_SESSION["permisos"]["Ayudaventas"] != "x") {
                     <p id="fech_ult"></p>
                 </div>
 
-                <table class="table table-bordered table-striped dt-responsive tablas-asistencias" width="100%">
+                <table class="table table-bordered table-striped dt-responsive tablas-asistencias" width="80%">
                     <thead style="background: #88d600; color: #FFF; ">
                         <tr>
                             <th style="text-align: center">Aseguradora</th>
