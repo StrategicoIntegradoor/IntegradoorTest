@@ -133,9 +133,9 @@ if ($_SESSION["permisos"]["Ayudaventas"] != "x") {
                             <th style="text-align: center">Clausulado</th>
                             <th style="text-align: center">Sarlaft PN</th>
                             <th style="text-align: center">Sarlaft PJ</th>
-                            <th style="text-align: center; width: 5%;">Centro de inspección</th>
-                            <th style="text-align: center; width: 15%;">Continuidad</th>
-                            <th style="text-align: center; width: 15%;">Formas de pago</th>
+                            <th style="text-align: center; max-width: 5%;">Centro de inspección</th>
+                            <th style="text-align: center; max-width: 15%;">Continuidad</th>
+                            <th style="text-align: center; max-width: 15%;">Formas de pago</th>
                             <?php
                             if($_SESSION["permisos"]["Editarinformaciondelayudaventas"] == "x"){
                             echo'<th style="text-align: center">Editar</th>';
