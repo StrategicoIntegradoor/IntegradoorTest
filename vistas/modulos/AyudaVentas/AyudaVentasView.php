@@ -125,7 +125,7 @@ if ($_SESSION["permisos"]["Ayudaventas"] != "x") {
                     <p id="fech_ult"></p>
                 </div>
 
-                <table class="" width="100%">
+                <table class="table table-bordered table-striped dt-responsive" width="100%">
                     <colgroup>
                         <!-- Las primeras 5 columnas ocupan el 70% del ancho de la tabla -->
                         <col style="width: 14%;">
