@@ -138,14 +138,14 @@ if ($_SESSION["permisos"]["Ayudaventas"] != "x") {
 
                         <thead style="background: #88d600; color: #FFF; ">
                             <tr>
-                                <th style="text-align: center">Aseguradora</th>
-                                <th style="text-align: center">Linea de atención</th>
-                                <th style="text-align: center">Clausulado</th>
-                                <th style="text-align: center">Sarlaft PN</th>
-                                <th style="text-align: center">Sarlaft PJ</th>
-                                <th style="text-align: center">Centro de inspección</th>
-                                <th style="text-align: center">Continuidad</th>
-                                <th style="text-align: center">Formas de pago</th>
+                                <th style="width: 5%; text-align: center">Aseguradora</th>
+                                <th style="width: 5%; text-align: center">Linea de atención</th>
+                                <th style="width: 10%; text-align: center">Clausulado</th>
+                                <th style="width: 10%; text-align: center">Sarlaft PN</th>
+                                <th style="width: 10%; text-align: center">Sarlaft PJ</th>
+                                <th style="width: 15%; text-align: center">Centro de inspección</th>
+                                <th style="width: 15%; text-align: center">Continuidad</th>
+                                <th style="width: 15%; text-align: center">Formas de pago</th>
                                 <?php
                                 if ($_SESSION["permisos"]["Editarinformaciondelayudaventas"] == "x") {
                                     echo '<th style="text-align: center">Editar</th>';
