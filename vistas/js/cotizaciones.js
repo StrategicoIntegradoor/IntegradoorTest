@@ -2008,7 +2008,7 @@ const obtenerPdfprevisora = async (cotizacion) => {
     .then((response) => response.json())
 
     .then((responseText) => {
-
+      console.log(responseText)
       return responseText.SerializedPDF;
 
     });
