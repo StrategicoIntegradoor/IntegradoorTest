@@ -244,18 +244,18 @@ const obtenerAyudaVentas = async () => {
                                             ? ayudaVenta.formas_de_pago.split('@') : []
             let partTemplate = `
                 <tr >
-                    <td ><img src="./vistas/modulos/AyudaVentas/src/logos/${ayudaVenta.aseguradora}.png" style="margin-top: 100%;" class="img-responsive" width="80"></td>
-                    <td style="line-height: 200px;">${ayudaVenta.linea_de_atencion}</td>`
+                    <td style="max-width: 5%; white-space: nowrap; text-align: center;"><img src="./vistas/modulos/AyudaVentas/src/logos/${ayudaVenta.aseguradora}.png" style="margin-top: 100%;" class="img-responsive" width="80"></td>
+                    <td style="line-height: 200px;" style="max-width: 5%; white-space: nowrap; text-align: center;">${ayudaVenta.linea_de_atencion}</td>`
             if (ayudaVenta.link_clausulado) {
-                partTemplate += `<td style="line-height: 200px;"><button class="btn btn-alert"  style="border-color: #88d600; width: 205px; color: #88d600; font-weight: 500;" onclick="validarPermisoClausulado('${ayudaVenta.link_clausulado}')">${ayudaVenta.link_clausulado.substring(0,27)}</button></td>`
+                partTemplate += `<td style="line-height: 200px;"><button class="btn btn-alert"  style="max-width: 5%; white-space: nowrap; text-align: center;" style="border-color: #88d600; width: 205px; color: #88d600; font-weight: 500;" onclick="validarPermisoClausulado('${ayudaVenta.link_clausulado}')">${ayudaVenta.link_clausulado.substring(0,27)}</button></td>`
             } else {
                 partTemplate += '<td></td>'
             }
             if (ayudaVenta.path_sarlaft || ayudaVenta.path_sarlaft2) {
-                let sarlaftButtons = '<td style="line-height: 200px;">'
+                let sarlaftButtons = '<td style="line-height: 200px;" style="max-width: 5%; white-space: nowrap; text-align: center;">'
                 sarlaftButtons += ayudaVenta.path_sarlaft ? `<button class="btn btn-alert" style="background: red; color: #fff; font-weight: 500;" onclick="onclick="validarPermisoPdfPersonaNatural('./vistas/modulos/AyudaVentas/pdf/sarlaft/${ayudaVenta.path_sarlaft}')">PDF PN</button>` : ''
                 partTemplate += sarlaftButtons + '</td>'
-                let sarlaftButtons2 = '<td style="line-height: 200px;">'
+                let sarlaftButtons2 = '<td style="line-height: 200px;" style="max-width: 5%; white-space: nowrap; text-align: center;">'
                 sarlaftButtons2 += ayudaVenta.path_sarlaft2 ? `<button class="btn btn-alert" style="background: red; color: #fff; font-weight: 500;" onclick="validarPermisoPdfPersonaJuridica('./vistas/modulos/AyudaVentas/pdf/sarlaft2/${ayudaVenta.path_sarlaft2}')">PDF PJ</button>` : ''
                 partTemplate += sarlaftButtons2 + '</td>'
             } else {
@@ -265,21 +265,6 @@ const obtenerAyudaVentas = async () => {
             partTemplate += `
 
             <style>
-
-            .formas-de-pago-cell {
-                word-wrap: break-word; /* Indica que el texto debe envolverse cuando se excede el ancho máximo */
-
-            }
-
-            .centros-de-inspeccion-cell {
-                word-wrap: break-word; /* Indica que el texto debe envolverse cuando se excede el ancho máximo */
-
-            }
-
-            .continuidades {
-                word-wrap: break-word; /* Indica que el texto debe envolverse cuando se excede el ancho máximo */
-
-            }
         
             </style>
                 <td class="centros-de-inspeccion-cell" style="max-width: 5%; white-space: nowrap; text-align: center;">${construirHtmlCentrosDeInspeccion(centrosDeInspeccion)}</td>
