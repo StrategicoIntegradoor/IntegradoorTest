@@ -132,15 +132,15 @@ if ($_SESSION["permisos"]["Ayudaventas"] != "x") {
                     <table class="table table-bordered table-striped dt-responsive tablas-asistencias">
                         <colgroup>
                             <!-- Las primeras 5 columnas ocupan el 70% del ancho de la tabla -->
-                            <col style="max-width: 14%;  word-wrap: break-word;">
-                            <col style="max-width: 14%;  word-wrap: break-word;">
-                            <col style="max-width: 14%;  word-wrap: break-word;">
-                            <col style="max-width: 14%;  word-wrap: break-word;">
-                            <col style="max-width: 14%;  word-wrap: break-word;">
+                            <col style="max-width: 14%;">
+                            <col style="max-width: 14%;">
+                            <col style="max-width: 14%;">
+                            <col style="max-width: 14%;">
+                            <col style="max-width: 14%;">
                             <!-- Las últimas 3 columnas ocupan el 30% del ancho de la tabla -->
-                            <col style="max-width: 10%;  word-wrap: break-word;">
-                            <col style="max-width: 10%;  word-wrap: break-word;">
-                            <col style="max-width: 10%;  word-wrap: break-word;">
+                            <col style="max-width: 10%;">
+                            <col style="max-width: 10%;">
+                            <col style="max-width: 10%;">
                         </colgroup>
                         <thead style="background: #88d600; color: #FFF; ">
                             <tr>
