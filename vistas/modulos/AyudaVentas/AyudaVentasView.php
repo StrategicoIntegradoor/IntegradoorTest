@@ -125,7 +125,7 @@ if ($_SESSION["permisos"]["Ayudaventas"] != "x") {
                     <p id="fech_ult"></p>
                 </div>
 
-                <table class="table table-bordered table-striped dt-responsive tablas-asistencias" width="80%">
+                <table class="table table-bordered table-striped dt-responsive tablas-asistencias" width="100%">
                     <thead style="background: #88d600; color: #FFF; ">
                         <tr>
                             <th style="text-align: center">Aseguradora</th>
@@ -133,9 +133,9 @@ if ($_SESSION["permisos"]["Ayudaventas"] != "x") {
                             <th style="text-align: center">Clausulado</th>
                             <th style="text-align: center">Sarlaft PN</th>
                             <th style="text-align: center">Sarlaft PJ</th>
-                            <th style="text-align: center; max-width: 5%;">Centro de inspección</th>
-                            <th style="text-align: center; max-width: 15%;">Continuidad</th>
-                            <th style="text-align: center; max-width: 15%;">Formas de pago</th>
+                            <th style="text-align: center">Centro de inspección</th>
+                            <th style="text-align: center">Continuidad</th>
+                            <th style="text-align: center">Formas de pago</th>
                             <?php
                             if($_SESSION["permisos"]["Editarinformaciondelayudaventas"] == "x"){
                             echo'<th style="text-align: center">Editar</th>';
