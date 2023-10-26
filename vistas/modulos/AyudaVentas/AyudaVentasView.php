@@ -49,7 +49,7 @@ if ($_SESSION["permisos"]["Ayudaventas"] != "x") {
                     <p id="fech_ult"></p>
                 </div>
 
-                <div class="table-responsive">
+                <!-- <div class="table-responsive"> -->
                     <table class="table table-bordered table-striped dt-responsive tablas-asistencias">
                         <colgroup>
                             <!-- Las primeras 5 columnas ocupan el 70% del ancho de la tabla -->
@@ -83,7 +83,7 @@ if ($_SESSION["permisos"]["Ayudaventas"] != "x") {
                         <tbody class="ayuda-ventas-body">
                         </tbody>
                     </table>
-                </div>
+                <!-- </div> -->
             
                 <div style="margin-left: 1em; padding-bottom: 1em;">
                     <p>* PN: Persona Natural. PJ: Persona Jurídica</p>
