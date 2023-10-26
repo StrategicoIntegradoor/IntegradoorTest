@@ -27,6 +27,9 @@ if ($_SESSION["permisos"]["Ayudaventas"] != "x") {
         list-style: none;
     }
 
+    .fixed-width {
+    white-space: nowrap;
+    }
 
 </style>
 
