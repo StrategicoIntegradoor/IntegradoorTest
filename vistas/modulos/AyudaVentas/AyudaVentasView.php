@@ -49,41 +49,39 @@ if ($_SESSION["permisos"]["Ayudaventas"] != "x") {
                     <p id="fech_ult"></p>
                 </div>
 
-                <!-- <div class="table-responsive"> -->
-                    <table class="table table-bordered table-striped dt-responsive tablas-asistencias">
-                        <colgroup>
-                            <!-- Las primeras 5 columnas ocupan el 70% del ancho de la tabla -->
-                            <col style="width: 14%;">
-                            <col style="width: 14%;">
-                            <col style="width: 14%;">
-                            <col style="width: 14%;">
-                            <col style="width: 14%;">
-                            <!-- Las últimas 3 columnas ocupan el 30% del ancho de la tabla -->
-                            <col style="width: 10%;">
-                            <col style="width: 10%;">
-                            <col style="width: 10%;">
-                        </colgroup>
-                        <thead style="background: #88d600; color: #FFF; ">
-                            <tr>
-                                <th style="text-align: center">Aseguradora</th>
-                                <th style="text-align: center">Linea de atención</th>
-                                <th style="text-align: center">Clausulado</th>
-                                <th style="text-align: center">Sarlaft PN</th>
-                                <th style="text-align: center">Sarlaft PJ</th>
-                                <th style="text-align: center">Centro de inspección</th>
-                                <th style="text-align: center">Continuidad</th>
-                                <th style="text-align: center">Formas de pago</th>
-                                <?php
-                                if ($_SESSION["permisos"]["Editarinformaciondelayudaventas"] == "x") {
-                                    echo '<th style="text-align: center">Editar</th>';
-                                }
-                                ?>
-                            </tr>
-                        </thead>
-                        <tbody class="ayuda-ventas-body">
-                        </tbody>
-                    </table>
-                <!-- </div> -->
+                <table class="table table-bordered table-striped dt-responsive tablas-asistencias" width="100%">
+                    <colgroup>
+                        <!-- Las primeras 5 columnas ocupan el 70% del ancho de la tabla -->
+                        <col style="width: 14%;">
+                        <col style="width: 14%;">
+                        <col style="width: 14%;">
+                        <col style="width: 14%;">
+                        <col style="width: 14%">
+                        <!-- Las últimas 3 columnas ocupan el 30% del ancho de la tabla -->
+                        <col style="width: 10%;">
+                        <col style="width: 10%;">
+                        <col style="width: 10%;">
+                    </colgroup>
+                    <thead style="background: #88d600; color: #FFF; ">
+                        <tr>
+                            <th style="text-align: center">Aseguradora</th>
+                            <th style="text-align: center">Linea de atención</th>
+                            <th style="text-align: center">Clausulado</th>
+                            <th style="text-align: center">Sarlaft PN</th>
+                            <th style="text-align: center">Sarlaft PJ</th>
+                            <th style="text-align: center">Centro de inspección</th>
+                            <th style="text-align: center">Continuidad</th>
+                            <th style="text-align: center">Formas de pago</th>
+                            <?php
+                            if($_SESSION["permisos"]["Editarinformaciondelayudaventas"] == "x"){
+                            echo'<th style="text-align: center">Editar</th>';
+                            } 
+                           ?>
+                        </tr>
+                    </thead>
+                    <tbody class="ayuda-ventas-body">
+                    </tbody>
+                </table>
             
                 <div style="margin-left: 1em; padding-bottom: 1em;">
                     <p>* PN: Persona Natural. PJ: Persona Jurídica</p>
