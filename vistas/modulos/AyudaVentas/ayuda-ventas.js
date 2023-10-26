@@ -255,7 +255,7 @@ const obtenerAyudaVentas = async () => {
             }
             if (ayudaVenta.path_sarlaft || ayudaVenta.path_sarlaft2) {
 
-                if(ayudaVenta.aseguradora == 'Allianz' || ayudaVenta.aseguradora == 'Previsora'){
+                if(ayudaVenta.aseguradora == 'Allianz' || ayudaVenta.aseguradora == 'Previsora' || ayudaVenta.aseguradora == 'Equidad'){
                 let sarlaftButtons = '<td style="line-height: 200px;">';
                 sarlaftButtons += ayudaVenta.path_sarlaft
                     ? `<a class="btn btn-alert" style="background: red; color: #fff; font-weight: 500;" href="${ayudaVenta.path_sarlaft}" target="_blank">PDF PN</a>`
