@@ -244,7 +244,7 @@ const obtenerAyudaVentas = async () => {
                                             ? ayudaVenta.formas_de_pago.split('@') : []
             let partTemplate = `
                 <tr >
-                    <td><img src="./vistas/modulos/AyudaVentas/src/logos/${ayudaVenta.aseguradora}.png" style="margin-top: 50%;" class="img-responsive" width="80"></td>
+                    <td><img src="./vistas/modulos/AyudaVentas/src/logos/${ayudaVenta.aseguradora}.png" style="margin-top: 60%;" class="img-responsive" width="80"></td>
                     <td style="line-height: 170px;">${ayudaVenta.linea_de_atencion}</td>`
             if (ayudaVenta.link_clausulado) {
                 partTemplate += `<td style="line-height: 170px;"><button class="btn btn-alert" style="border-color: #88d600; width: 205px; color: #88d600; font-weight: 500;" onclick="validarPermisoClausulado('${ayudaVenta.link_clausulado}')">${ayudaVenta.link_clausulado.substring(0,27)}</button></td>`
