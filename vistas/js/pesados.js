@@ -1523,6 +1523,36 @@ function cotizarOfertasPesados() {
           //   });
 
             /* Mundial */ 
+          if(mundial == 5){
+            let body = JSON.parse(requestOptions.body)
+            plan = 'Trailer'
+            body.plan = plan
+            requestOptions.body = JSON.stringify(body)
+            fetch("https://grupoasistencia.com/webservice_autosv1/CotizarPesados",requestOptions)
+              .then(function (response) {
+                if (!response.ok) throw Error(response.statusText);
+                return response.json();
+              })
+              .then((ofertas) => {
+                  if (typeof ofertas[0].Resultado !== 'undefined') {
+                    agregarAseguradoraFallidaPesados('Seguros Mundial')
+                    ofertas[0].Mensajes.forEach(mensaje => {
+                      mostrarAlertarCotizacionFallida('Seguros Mundial', mensaje)
+                    })
+                  } else {
+                    validarOfertasPesados(ofertas);
+                    mostrarAlertaCotizacionExitosa('Seguros Mundial Trailer')
+                  }
+                })
+                .catch((err) => {
+                  console.error(err);
+                })
+              .catch(function (error) {
+                console.log("Parece que hubo un problema: \n", error);
+
+              });
+          }else{
+
             let planesMundial = ["Normal","RC_Exceso"];
             let body = JSON.parse(requestOptions.body)
 
@@ -1550,7 +1580,8 @@ function cotizarOfertasPesados() {
                   console.error(err);
                 });
             });  
-                  
+
+          }     
 
             /* AXA */
             // cont.push(
