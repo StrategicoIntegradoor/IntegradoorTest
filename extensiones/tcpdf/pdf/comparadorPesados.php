@@ -1017,42 +1017,77 @@ while ($rowRespuesta8 = mysqli_fetch_assoc($respuestaquery8)) {
 
 $html3 .= '</tr>';
 
-
 //::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 //CONSULTA DE RC EXCESO
 //::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
-// $html3 .= '<tr>';
-// $html3 .= '<td class="puntos fondo" style="width:25%; text-align: center; font-family:dejavusanscondensedb;"><font size="8">RC Exceso (RCE)</font></td>';
+$html3 .= '<tr>';
+$html3 .= '<td class="puntos fondo" style="width:25%; text-align: center; font-family:dejavusanscondensedb;"><font size="8">Límite máximo (En millones) RCE Exceso</font></td>';
 
 
-// $queryp1 = "SELECT * FROM ofertas WHERE `id_cotizacion` = $identificador AND `seleccionar` = 'Si'";
-// $respuestaqueryp1 =  $conexion->query($queryp1);
+$queryp1 = "SELECT * FROM ofertas WHERE `id_cotizacion` = $identificador AND `seleccionar` = 'Si'";
+$respuestaqueryp1 =  $conexion->query($queryp1);
 
-// $cont5 = 1;
+$cont5 = 1;
 
-// while ($rowRespuestap1 = mysqli_fetch_assoc($respuestaqueryp1)) {
+while ($rowRespuestap1 = mysqli_fetch_assoc($respuestaqueryp1)) {
 
-// 	$nombreAseguradora = nombreAseguradora($rowRespuestap1['Aseguradora']);
-// 	$nombreProducto = productoAseguradora($rowRespuestap1['Aseguradora'], $rowRespuestap1['Producto']);
-// 	$valorRC = $rowRespuestap1['ValorRC'];
-// 	$perdidaParcial = $rowRespuestap1['PerdidaParcial'];
+	$nombreAseguradora = nombreAseguradora($rowRespuestap1['Aseguradora']);
+	$nombreProducto = productoAseguradora($rowRespuestap1['Aseguradora'], $rowRespuestap1['Producto']);
+	$valorRC = $rowRespuestap1['ValorRC'];
+	$perdidaParcial = $rowRespuestap1['PerdidaParcial'];
 
-// 	$queryConsultaAsistencia1 = "SELECT * FROM asistencias WHERE `aseguradora` LIKE '$nombreAseguradora' AND `producto` LIKE '$nombreProducto' 
-// 									AND `rce` LIKE '$valorRC' AND `ppd` LIKE '$perdidaParcial'";
-// 	$respuestaqueryAsistencia1 =  $conexion->query($queryConsultaAsistencia1);
-// 	$rowRespuestaAsistencia1 = mysqli_fetch_assoc($respuestaqueryAsistencia1);
+	$queryConsultaAsistencia1 = "SELECT * FROM asistencias WHERE `aseguradora` LIKE '$nombreAseguradora' AND `producto` LIKE '$nombreProducto' 
+									AND `rce` LIKE '$valorRC' AND `ppd` LIKE '$perdidaParcial'";
+	$respuestaqueryAsistencia1 =  $conexion->query($queryConsultaAsistencia1);
+	$rowRespuestaAsistencia1 = mysqli_fetch_assoc($respuestaqueryAsistencia1);
 
-// 	if ($cont5 % 2 == 0) {
-// 		$html3 .= '<td class="puntos fondo" style="width:' . $valorTabla . '%;"><center><font size="7"style="text-align: center;  font-family:dejavusanscondensed;">' . $rowRespuestaAsistencia1['rceexceso'] . '</font></center></td>';
-// 	} else {
-// 		$html3 .= '<td class="puntos fondo2" style="width:' . $valorTabla . '%;"><center><font size="7"style="text-align: center;  font-family:dejavusanscondensed;">' . $rowRespuestaAsistencia1['rceexceso'] . '</font></center></td>';
-// 	}
+	if ($cont5 % 2 == 0) {
+		$html3 .= '<td class="puntos fondo" style="width:' . $valorTabla . '%;"><center><font size="7"style="text-align: center;  font-family:dejavusanscondensed;">' . $rowRespuestaAsistencia1['rceexceso'] . '</font></center></td>';
+	} else {
+		$html3 .= '<td class="puntos fondo2" style="width:' . $valorTabla . '%;"><center><font size="7"style="text-align: center;  font-family:dejavusanscondensed;">' . $rowRespuestaAsistencia1['rceexceso'] . '</font></center></td>';
+	}
 
-// 	$cont5 += 1;
-// }
+	$cont5 += 1;
+}
 
-// $html3 .= '</tr>';
+$html3 .= '</tr>';
+
+//::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+//DEDUCIBLE RCE EXCESO
+//::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+$html3 .= '<tr>';
+$html3 .= '<td class="puntos fondo" style="width:25%; text-align: center; font-family:dejavusanscondensedb;"><font size="8">Deducible</font></td>';
+
+
+$queryp2 = "SELECT * FROM ofertas WHERE `id_cotizacion` = $identificador AND `seleccionar` = 'Si'";
+$respuestaqueryp2 =  $conexion->query($queryp2);
+
+$cont5 = 1;
+
+while ($rowRespuestap2 = mysqli_fetch_assoc($respuestaqueryp2)) {
+
+	$nombreAseguradora = nombreAseguradora($rowRespuestap2['Aseguradora']);
+	$nombreProducto = productoAseguradora($rowRespuestap2['Aseguradora'], $rowRespuestap2['Producto']);
+	$valorRC = $rowRespuestap2['ValorRC'];
+	$perdidaParcial = $rowRespuestap2['PerdidaParcial'];
+
+	$queryConsultaAsistencia1 = "SELECT * FROM asistencias WHERE `aseguradora` LIKE '$nombreAseguradora' AND `producto` LIKE '$nombreProducto' 
+									AND `rce` LIKE '$valorRC' AND `ppd` LIKE '$perdidaParcial'";
+	$respuestaqueryAsistencia1 =  $conexion->query($queryConsultaAsistencia1);
+	$rowRespuestaAsistencia1 = mysqli_fetch_assoc($respuestaqueryAsistencia1);
+
+	if ($cont5 % 2 == 0) {
+		$html3 .= '<td class="puntos fondo" style="width:' . $valorTabla . '%;"><center><font size="7"style="text-align: center;  font-family:dejavusanscondensed;">' . $rowRespuestaAsistencia1['Deducible2'] . '</font></center></td>';
+	} else {
+		$html3 .= '<td class="puntos fondo2" style="width:' . $valorTabla . '%;"><center><font size="7"style="text-align: center;  font-family:dejavusanscondensed;">' . $rowRespuestaAsistencia1['Deducible2'] . '</font></center></td>';
+	}
+
+	$cont5 += 1;
+}
+
+$html3 .= '</tr>';
 
 //::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 //CONSULTA COBERTURAS TOTAL DAÑOS
