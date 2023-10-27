@@ -920,7 +920,7 @@ while ($rowRespuesta7 = mysqli_fetch_assoc($respuestaquery7)) {
 }
 $html3 .= '</tr>';
 $html3 .= '<tr>';
-$html3 .= '<td class="puntos fondo" style="width:25%; text-align: center; font-family:dejavusanscondensedb;"><font size="8">Límite máximo </font><font size="7"> (En millones)</font></td>';
+$html3 .= '<td class="puntos fondo" style="width:25%; text-align: center; font-family:dejavusanscondensedb;"><font size="8">Límite máximo </font>(En millones)</td>';
 
 //::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 //CONSULTA LIMITE MAXIMO
