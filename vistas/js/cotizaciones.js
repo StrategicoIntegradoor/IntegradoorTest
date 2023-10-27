@@ -1883,7 +1883,6 @@ FUNCION PARA CARGAR EL PDF OFICIAL PREVISORA
 
 const verPdfPrevisora = async (cotizacion) => {
 
-  console.log(cotizacion);
 
   if (permisos.Verpdfindividuales != "x") {
 
@@ -1934,6 +1933,9 @@ const verPdfPrevisora = async (cotizacion) => {
 
 
     let base64 = await obtenerPdfprevisora(cotizacion);
+
+    console.log(base64);
+
 
     const linkSource = `data:application/pdf;base64,${base64}`;
 
