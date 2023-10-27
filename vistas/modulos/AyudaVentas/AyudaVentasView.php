@@ -32,6 +32,11 @@ if ($_SESSION["permisos"]["Ayudaventas"] != "x") {
     width: 100%; /* Puedes establecer el ancho total de la tabla aquí */
     }
 
+    .table th,
+    .table td {
+        vertical-align: middle; /* Puedes usar "top" o "bottom" en lugar de "middle" según tus necesidades */
+    }
+
 
 </style>
 
