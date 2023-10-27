@@ -937,10 +937,10 @@ if($valorlimiterow==10){
 
 		if ($cont4 % 2 == 0) {
 	
-			$html3 .= '<td class="puntos fondo" style="width:' . $valorTabla . '%; font-family:dejavusanscondensed;"><center><font size="6" style="text-align: center;"><div style="font-size:4pt">&nbsp;</div>' . number_format($rowRespuesta9['ValorRC'], 0, ',', '.') . '</font></center></td>';
+			$html3 .= '<td class="puntos fondo" style="width:' . $valorTabla . '%; font-family:dejavusanscondensed;"><center><font size="6" style="text-align: center;"><div style="font-size:4pt">&nbsp;</div>' . $rowRespuesta9['ValorRC'] . '</font></center></td>';
 		} else {
 	
-			$html3 .= '<td class="puntos fondo2" style="width:' . $valorTabla . '%; font-family:dejavusanscondensed;"><center><font size="6" style="text-align: center;"><div style="font-size:4pt">&nbsp;</div>' . number_format($rowRespuesta9['ValorRC'], 0, ',', '.') . '</font></center></td>';
+			$html3 .= '<td class="puntos fondo2" style="width:' . $valorTabla . '%; font-family:dejavusanscondensed;"><center><font size="6" style="text-align: center;"><div style="font-size:4pt">&nbsp;</div>' . $rowRespuesta9['ValorRC'] . '</font></center></td>';
 		}
 	
 		$cont4 += 1;
@@ -951,10 +951,10 @@ if($valorlimiterow==10){
 
 		if ($cont4 % 2 == 0) {
 	
-			$html3 .= '<td class="puntos fondo" style="width:' . $valorTabla . '%; font-family:dejavusanscondensed;"><center><font size="5" style="text-align: center;">' . number_format($rowRespuesta9['ValorRC'], 0, ',', '.') . '</font></center></td>';
+			$html3 .= '<td class="puntos fondo" style="width:' . $valorTabla . '%; font-family:dejavusanscondensed;"><center><font size="5" style="text-align: center;">' . $rowRespuesta9['ValorRC'] . '</font></center></td>';
 		} else {
 	
-			$html3 .= '<td class="puntos fondo2" style="width:' . $valorTabla . '%; font-family:dejavusanscondensed;"><center><font size="5" style="text-align: center;">' . number_format($rowRespuesta9['ValorRC'], 0, ',', '.') . '</font></center></td>';
+			$html3 .= '<td class="puntos fondo2" style="width:' . $valorTabla . '%; font-family:dejavusanscondensed;"><center><font size="5" style="text-align: center;">' . $rowRespuesta9['ValorRC'] . '</font></center></td>';
 		}
 	
 		$cont4 += 1;
@@ -965,10 +965,10 @@ if($valorlimiterow==10){
 
 		if ($cont4 % 2 == 0) {
 	
-			$html3 .= '<td class="puntos fondo" style="width:' . $valorTabla . '%; font-family:dejavusanscondensed;"><center><font size="7" style="text-align: center;">' . number_format($rowRespuesta9['ValorRC'], 0, ',', '.') . '</font></center></td>';
+			$html3 .= '<td class="puntos fondo" style="width:' . $valorTabla . '%; font-family:dejavusanscondensed;"><center><font size="7" style="text-align: center;">' . $rowRespuesta9['ValorRC'] . '</font></center></td>';
 		} else {
 	
-			$html3 .= '<td class="puntos fondo2" style="width:' . $valorTabla . '%; font-family:dejavusanscondensed;"><center><font size="7" style="text-align: center;">' . number_format($rowRespuesta9['ValorRC'], 0, ',', '.') . '</font></center></td>';
+			$html3 .= '<td class="puntos fondo2" style="width:' . $valorTabla . '%; font-family:dejavusanscondensed;"><center><font size="7" style="text-align: center;">' . $rowRespuesta9['ValorRC'] . '</font></center></td>';
 		}
 	
 		$cont4 += 1;
