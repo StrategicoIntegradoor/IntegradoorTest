@@ -807,7 +807,7 @@ if ($_SESSION["permisos"]["Cotizarlivianos"] != "x") {
           <input type="text" class="form-control" id="cre_axa_idTipoDistribuidor" value="<?php echo $cre_axa_idTipoDistribuidor; ?>">
           <input type="text" class="form-control" id="cre_axa_codigoDivipola" value="<?php echo $cre_axa_codigoDivipola; ?>">
           <input type="text" class="form-control" id="cre_axa_canal" value="<?php echo $cre_axa_canal; ?>">
-          <input type="text" class="form-control" id="cre_axa_validacionEventos	" value="<?php echo $cre_axa_validacionEventos; ?>">
+          <input type="text" class="form-control" id="cre_axa_validacionEventos" value="<?php echo $cre_axa_validacionEventos; ?>">
 
         </div>
 
