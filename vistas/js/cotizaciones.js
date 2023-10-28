@@ -1934,9 +1934,6 @@ const verPdfPrevisora = async (cotizacion) => {
 
     let base64 = await obtenerPdfprevisora(cotizacion);
 
-    console.log(base64);
-
-
     const linkSource = `data:application/pdf;base64,${base64}`;
 
     const downloadLink = document.createElement("a");
