@@ -96,35 +96,38 @@ if ($numerofilas4 > 0) {
 
 $query6 = "SELECT *  FROM `Credenciales_AXA` WHERE `id_Intermediario` = '" . $_SESSION["intermediario"] . "'";
 
-$ejecucion4 = mysqli_query($enlace, $query4);
-$numerofilas4 = mysqli_num_rows($ejecucion4);
-$fila4 = mysqli_fetch_assoc($ejecucion4);
+$ejecucion6 = mysqli_query($enlace, $query6);
+$numerofilas6 = mysqli_num_rows($ejecucion6);
+$fila6 = mysqli_fetch_assoc($ejecucion6);
 
 if ($numerofilas4 > 0) {
-  $cre_est_usuario = $fila4['cre_est_usuario'];
-  $cre_equ_contrasena = $fila4['cre_equ_contrasena'];
-  $Cre_Est_Entity_Id = $fila4['Cre_Est_Entity_Id'];
-  $cre_est_zona = $fila4['cre_est_zona'];
-  $cre_est_usuario = $fila4['cre_est_usuario'];
-  $cre_equ_contrasena = $fila4['cre_equ_contrasena'];
-  $Cre_Est_Entity_Id = $fila4['Cre_Est_Entity_Id'];
-  $cre_est_zona = $fila4['cre_est_zona'];
+  $cre_axa_sslcertfile = $fila6['cre_axa_sslcertfile'];
+  $cre_axa_sslkeyfile = $fila6['cre_axa_sslkeyfile'];
+  $cre_axa_passphrase = $fila6['cre_axa_passphrase'];
+  $cre_axa_codigoDistribuidor = $fila6['cre_axa_codigoDistribuidor'];
+  $cre_axa_idTipoDistribuidor = $fila6['cre_axa_idTipoDistribuidor'];
+  $cre_axa_codigoDivipola = $fila6['cre_axa_codigoDivipola'];
+  $cre_axa_canal = $fila6['cre_axa_canal'];
+  $cre_axa_validacionEventos = $fila6['cre_axa_validacionEventos'];
 } else {
   $query7 = "SELECT * FROM `Credenciales_AXA` WHERE `id_Intermediario` = 3";
 
-  $ejecucion5 = mysqli_query($enlace, $query5);
-  $numerofilas5 = mysqli_num_rows($ejecucion5);
-  $fila5 = mysqli_fetch_assoc($ejecucion5);
+  $ejecucion7 = mysqli_query($enlace, $query7);
+  $numerofilas7 = mysqli_num_rows($ejecucion5);
+  $fila7 = mysqli_fetch_assoc($ejecucion7);
 
-  $cre_est_usuario = $fila5['cre_est_usuario'];
-  $cre_equ_contrasena = $fila5['cre_equ_contrasena'];
-  $Cre_Est_Entity_Id = $fila5['Cre_Est_Entity_Id'];
-  $cre_est_zona = $fila5['cre_est_zona'];
-  $cre_est_usuario = $fila4['cre_est_usuario'];
-  $cre_equ_contrasena = $fila4['cre_equ_contrasena'];
-  $Cre_Est_Entity_Id = $fila4['Cre_Est_Entity_Id'];
-  $cre_est_zona = $fila4['cre_est_zona'];
+  $cre_axa_sslcertfile = $fila7['cre_axa_sslcertfile'];
+  $cre_axa_sslkeyfile = $fila7['cre_axa_sslkeyfile'];
+  $cre_axa_passphrase = $fila7['cre_axa_passphrase'];
+  $cre_axa_codigoDistribuidor = $fila7['cre_axa_codigoDistribuidor'];
+  $cre_axa_idTipoDistribuidor = $fila7['cre_axa_idTipoDistribuidor'];
+  $cre_axa_codigoDivipola = $fila7['cre_axa_codigoDivipola'];
+  $cre_axa_canal = $fila7['cre_axa_canal'];
+  $cre_axa_validacionEventos = $fila7['cre_axa_validacionEventos'];
 }
+
+
+
 
 
 
