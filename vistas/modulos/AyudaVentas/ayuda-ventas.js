@@ -252,12 +252,26 @@ const obtenerAyudaVentas = async () => {
                 partTemplate += '<td></td>'
             }
             if (ayudaVenta.path_sarlaft || ayudaVenta.path_sarlaft2) {
-                let sarlaftButtons = '<td style="line-height: 170px;">'
-                sarlaftButtons += ayudaVenta.path_sarlaft ? `<button class="btn btn-alert" style="background: red; color: #fff; font-weight: 500;" onclick="onclick="validarPermisoPdfPersonaNatural('./vistas/modulos/AyudaVentas/pdf/sarlaft/${ayudaVenta.path_sarlaft}')">PDF PN</button>` : ''
-                partTemplate += sarlaftButtons + '</td>'
-                let sarlaftButtons2 = '<td style="line-height: 170px;">'
-                sarlaftButtons2 += ayudaVenta.path_sarlaft2 ? `<button class="btn btn-alert" style="background: red; color: #fff; font-weight: 500;" onclick="validarPermisoPdfPersonaJuridica('./vistas/modulos/AyudaVentas/pdf/sarlaft2/${ayudaVenta.path_sarlaft2}')">PDF PJ</button>` : ''
-                partTemplate += sarlaftButtons2 + '</td>'
+                if(ayudaVenta.aseguradora == 'Allianz' || ayudaVenta.aseguradora == 'Equidad' || ayudaVenta.aseguradora == 'Previsora'){
+
+                    let sarlaftButtons = '<td style="line-height: 170px;">'
+                    sarlaftButtons += ayudaVenta.path_sarlaft ? `<a href="./vistas/modulos/AyudaVentas/pdf/sarlaft/${ayudaVenta.path_sarlaft}" class="btn btn-alert" style="background: red; color: #fff; font-weight: 500;" target="_blank">PDF PN</a>` : '<button class="btn btn-alert" style="background: red; color: #fff; font-weight: 500;">PDF PN</button>';
+                    partTemplate += sarlaftButtons + '</td>'
+                    let sarlaftButtons2 = '<td style="line-height: 170px;">'
+                    sarlaftButtons2 += ayudaVenta.path_sarlaft2 ? `<a href="./vistas/modulos/AyudaVentas/pdf/sarlaft2/${ayudaVenta.path_sarlaft2}" class="btn btn-alert" style="background: red; color: #fff; font-weight: 500;" target="_blank">PDF PJ</a>` : '<button class="btn btn-alert" style="background: red; color: #fff; font-weight: 500;">PDF PJ</button>';
+                  
+                    partTemplate += sarlaftButtons2 + '</td>'
+
+                }else{
+
+                    let sarlaftButtons = '<td style="line-height: 170px;">'
+                    sarlaftButtons += ayudaVenta.path_sarlaft ? `<button class="btn btn-alert" style="background: red; color: #fff; font-weight: 500;" onclick="onclick="validarPermisoPdfPersonaNatural('./vistas/modulos/AyudaVentas/pdf/sarlaft/${ayudaVenta.path_sarlaft}')">PDF PN</button>` : ''
+                    partTemplate += sarlaftButtons + '</td>'
+                    let sarlaftButtons2 = '<td style="line-height: 170px;">'
+                    sarlaftButtons2 += ayudaVenta.path_sarlaft2 ? `<button class="btn btn-alert" style="background: red; color: #fff; font-weight: 500;" onclick="validarPermisoPdfPersonaJuridica('./vistas/modulos/AyudaVentas/pdf/sarlaft2/${ayudaVenta.path_sarlaft2}')">PDF PJ</button>` : ''
+                    partTemplate += sarlaftButtons2 + '</td>'
+
+                }
             } else {
                 partTemplate += '<td></td>'
                 partTemplate += '<td></td>'
