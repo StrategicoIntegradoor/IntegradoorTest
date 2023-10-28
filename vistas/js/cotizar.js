@@ -441,9 +441,9 @@ function consulPlaca() {
             if (contErrMetEstado > 1) {
               document.getElementById("formularioVehiculo").style.display =
                 "block";
-                 document.getElementById("headerAsegurado").style.display = "block";
-                 document.getElementById("masA").style.display = "block";
-                 document.getElementById("DatosAsegurado").style.display = "none";
+              document.getElementById("headerAsegurado").style.display = "block";
+              document.getElementById("masA").style.display = "block";
+              document.getElementById("DatosAsegurado").style.display = "none";
               contErrMetEstado = 0;
             } else {
               setTimeout(consulPlaca, 2000);
@@ -459,12 +459,12 @@ function consulPlaca() {
         if (contErrProtocolo > 1) {
           $("#loaderPlaca").html("");
           document.getElementById("formularioVehiculo").style.display = "block";
-          
-        document.getElementById("headerAsegurado").style.display = "block";
-        document.getElementById("masA").style.display = "block";
 
-        document.getElementById("DatosAsegurado").style.display = "none";
-          
+          document.getElementById("headerAsegurado").style.display = "block";
+          document.getElementById("masA").style.display = "block";
+
+          document.getElementById("DatosAsegurado").style.display = "none";
+
           contErrProtocolo = 0;
         } else {
           setTimeout(consulPlaca, 4000);
@@ -1258,9 +1258,6 @@ function cotizarOfertas() {
   var Cre_Est_Entity_Id = document.getElementById("Cre_Est_Entity_Id").value;
   var cre_est_zona = document.getElementById("cre_est_zona").value;
 
-
-
-
   /**
    * Variables para allianz
    */
@@ -1272,6 +1269,21 @@ function cotizarOfertas() {
   var cre_alli_agentid = document.getElementById("cre_alli_agentid").value;
   var cre_alli_partnercode = document.getElementById("cre_alli_partnercode").value;
   var cre_alli_agentcode = document.getElementById("cre_alli_agentcode").value;
+
+  /**
+   * Variables de AXA
+   */
+  var cre_axa_sslcertfile = document.getElementById("cre_axa_sslcertfile").value;
+  var cre_axa_sslkeyfile = document.getElementById("cre_axa_sslkeyfile").value;
+
+  var cre_axa_passphrase = document.getElementById("cre_axa_passphrase").value;
+  var cre_axa_codigoDistribuidor = document.getElementById("cre_axa_codigoDistribuidor").value;
+
+  var cre_axa_idTipoDistribuidor = document.getElementById("cre_axa_idTipoDistribuidor").value;
+  var cre_axa_codigoDivipola = document.getElementById("cre_axa_codigoDivipola").value;
+
+  var cre_axa_canal = document.getElementById("cre_axa_canal").value;
+  var cre_axa_validacionEventos = document.getElementById("cre_axa_validacionEventos").value;
 
   if (ciudadCirculacion.length == 4) {
     ciudadCirculacion = "0" + ciudadCirculacion;
@@ -1361,6 +1373,16 @@ function cotizarOfertas() {
           cre_equ_contrasena: cre_equ_contrasena,
           Cre_Est_Entity_Id: Cre_Est_Entity_Id,
           cre_est_zona: cre_est_zona
+        },
+        AXA: {
+          cre_axa_sslcertfile: cre_axa_sslcertfile,
+          cre_axa_sslkeyfile: cre_axa_sslkeyfile,
+          cre_axa_passphrase: cre_axa_passphrase,
+          cre_axa_codigoDistribuidor: cre_axa_codigoDistribuidor,
+          cre_axa_idTipoDistribuidor: cre_axa_idTipoDistribuidor,
+          cre_axa_codigoDivipola: cre_axa_codigoDivipola,
+          cre_axa_canal: cre_axa_canal,
+          cre_axa_validacionEventos: cre_axa_validacionEventos
         },
 
       };
@@ -3453,20 +3475,20 @@ function validarNumCotizaciones() {
 }
 
 $("#btnConsultarVehmanualbuscador").click(function () {
-     var fasecolda=  document.getElementById("fasecoldabuscadormanual").value;
-     var modelo=  document.getElementById("modelobuscadormanual").value;
-     
-     if(fasecolda==""){
-        alert("Error en el código fasecolda"); 
-     }
-     
-     if(modelo==""){
-        alert("Error en el modelo del vehículo"); 
-     }
-     
-     
-     if(fasecolda!="" && modelo!=""){
-          $.ajax({
+  var fasecolda = document.getElementById("fasecoldabuscadormanual").value;
+  var modelo = document.getElementById("modelobuscadormanual").value;
+
+  if (fasecolda == "") {
+    alert("Error en el código fasecolda");
+  }
+
+  if (modelo == "") {
+    alert("Error en el modelo del vehículo");
+  }
+
+
+  if (fasecolda != "" && modelo != "") {
+    $.ajax({
       type: "POST",
       url: "src/fasecolda/consulDatosFasecolda.php",
       dataType: "json",
@@ -3475,69 +3497,69 @@ $("#btnConsultarVehmanualbuscador").click(function () {
         modelo: modelo,
       },
       success: function (data) {
-          
+
         if (data.estado == undefined) {
-            alert("Vehículo no encontrado");
-        }else{
-             // console.log(data);
-            var claseVeh = data.clase;
-            var marcaVeh = data.marca;
-            var ref1Veh = data.referencia1;
-            var ref2Veh = data.referencia2;
-            var ref3Veh = data.referencia3;
-            var lineaVeh = ref1Veh + " " + ref2Veh + " " + ref3Veh;
-    
-            var valorFasecVeh = data[modelo];
-            var valorVeh = Number(valorFasecVeh) * 1000;
-            var clase = data.clase;
-            
-            $("#clasepesados").val(clase);
+          alert("Vehículo no encontrado");
+        } else {
+          // console.log(data);
+          var claseVeh = data.clase;
+          var marcaVeh = data.marca;
+          var ref1Veh = data.referencia1;
+          var ref2Veh = data.referencia2;
+          var ref3Veh = data.referencia3;
+          var lineaVeh = ref1Veh + " " + ref2Veh + " " + ref3Veh;
 
-            var placaVeh = $("#placaVeh").val();
-            if (placaVeh == "CAT770") {
-              $("#txtPlacaVeh").val("SIN PLACA - VEHÍCULO 0 KM").val();
-            } else {
-              $("#txtPlacaVeh").val(placaVeh).val();
-            }
-            
-            document.getElementById("resumenVehiculo").style.display = "block";
-            document.getElementById("contenBtnCotizar").style.display = "block";
-            document.getElementById("headerAsegurado").style.display = "block";
-            document.getElementById("masA").style.display = "block";
-            
-            document.getElementById("formularioVehiculo").style.display = "none";
-            document.getElementById("DatosAsegurado").style.display = "none";
-            
-            document.getElementById("txtFasecolda").value = fasecolda;
-            document.getElementById("txtModeloVeh").value = modelo;
-            document.getElementById("txtMarcaVeh").value = data.marca;
-            document.getElementById("txtValorFasecolda").value = valorVeh;
-            document.getElementById("txtReferenciaVeh").value = lineaVeh;
-            document.getElementById("txtClaseVeh").value = claseVeh;
-            
-            
-            
+          var valorFasecVeh = data[modelo];
+          var valorVeh = Number(valorFasecVeh) * 1000;
+          var clase = data.clase;
+
+          $("#clasepesados").val(clase);
+
+          var placaVeh = $("#placaVeh").val();
+          if (placaVeh == "CAT770") {
+            $("#txtPlacaVeh").val("SIN PLACA - VEHÍCULO 0 KM").val();
+          } else {
+            $("#txtPlacaVeh").val(placaVeh).val();
+          }
+
+          document.getElementById("resumenVehiculo").style.display = "block";
+          document.getElementById("contenBtnCotizar").style.display = "block";
+          document.getElementById("headerAsegurado").style.display = "block";
+          document.getElementById("masA").style.display = "block";
+
+          document.getElementById("formularioVehiculo").style.display = "none";
+          document.getElementById("DatosAsegurado").style.display = "none";
+
+          document.getElementById("txtFasecolda").value = fasecolda;
+          document.getElementById("txtModeloVeh").value = modelo;
+          document.getElementById("txtMarcaVeh").value = data.marca;
+          document.getElementById("txtValorFasecolda").value = valorVeh;
+          document.getElementById("txtReferenciaVeh").value = lineaVeh;
+          document.getElementById("txtClaseVeh").value = claseVeh;
+
+
+
         }
-          
-          
-          
-       
 
-        
 
-       
-        
-        
-        
-        
-        
-        
+
+
+
+
+
+
+
+
+
+
+
+
         //01601146
 
-       // menosAseg();
+        // menosAseg();
       },
     });
-     }
+  }
 
-  });
+});
 

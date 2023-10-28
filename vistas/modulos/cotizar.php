@@ -94,6 +94,37 @@ if ($numerofilas4 > 0) {
   $cre_est_zona = $fila5['cre_est_zona'];
 }
 
+$query6 = "SELECT *  FROM `Credenciales_AXA` WHERE `id_Intermediario` = '" . $_SESSION["intermediario"] . "'";
+
+$ejecucion4 = mysqli_query($enlace, $query4);
+$numerofilas4 = mysqli_num_rows($ejecucion4);
+$fila4 = mysqli_fetch_assoc($ejecucion4);
+
+if ($numerofilas4 > 0) {
+  $cre_est_usuario = $fila4['cre_est_usuario'];
+  $cre_equ_contrasena = $fila4['cre_equ_contrasena'];
+  $Cre_Est_Entity_Id = $fila4['Cre_Est_Entity_Id'];
+  $cre_est_zona = $fila4['cre_est_zona'];
+  $cre_est_usuario = $fila4['cre_est_usuario'];
+  $cre_equ_contrasena = $fila4['cre_equ_contrasena'];
+  $Cre_Est_Entity_Id = $fila4['Cre_Est_Entity_Id'];
+  $cre_est_zona = $fila4['cre_est_zona'];
+} else {
+  $query7 = "SELECT * FROM `Credenciales_AXA` WHERE `id_Intermediario` = 3";
+
+  $ejecucion5 = mysqli_query($enlace, $query5);
+  $numerofilas5 = mysqli_num_rows($ejecucion5);
+  $fila5 = mysqli_fetch_assoc($ejecucion5);
+
+  $cre_est_usuario = $fila5['cre_est_usuario'];
+  $cre_equ_contrasena = $fila5['cre_equ_contrasena'];
+  $Cre_Est_Entity_Id = $fila5['Cre_Est_Entity_Id'];
+  $cre_est_zona = $fila5['cre_est_zona'];
+  $cre_est_usuario = $fila4['cre_est_usuario'];
+  $cre_equ_contrasena = $fila4['cre_equ_contrasena'];
+  $Cre_Est_Entity_Id = $fila4['Cre_Est_Entity_Id'];
+  $cre_est_zona = $fila4['cre_est_zona'];
+}
 
 
 
@@ -336,36 +367,36 @@ if ($_SESSION["permisos"]["Cotizarlivianos"] != "x") {
           </form>
 
           <!-- FORMULARIO VEHICULO MANUAL -->
-          
-            <div id="formularioVehiculo">
-              <div class="col-lg-12" id="headerFormVeh">
-                <div class="row row-formVehManual">
-                  <div class="col-xs-12 col-sm-6 col-md-4">
-                    <label for="">CONSULTA MANUAL DEL VEHICULO POR FASECOLDA</label>
-                  </div>
+
+          <div id="formularioVehiculo">
+            <div class="col-lg-12" id="headerFormVeh">
+              <div class="row row-formVehManual">
+                <div class="col-xs-12 col-sm-6 col-md-4">
+                  <label for="">CONSULTA MANUAL DEL VEHICULO POR FASECOLDA</label>
                 </div>
               </div>
-              
-              <div class ="col-lg-12 form-consulVeh">
-                  <div class= "row">
-                      <div class="col-xs-12 col-sm-6 col-md-3 form-group">
-                          <label for="clase">Código Fasecolda</label>
-                          <input type="text" maxlength="10" class="form-control" id="fasecoldabuscadormanual" placeholder="Número de fasecolda">
-                      </div>
-                      <div class="col-xs-12 col-sm-6 col-md-3 form-group">
-                          <label for="clase">Modelo Vehículo</label>
-                          <input type="text" maxlength="10" class="form-control" id="modelobuscadormanual"  placeholder="Modelo Vehículo">
-                      </div>
-                      
-                      <div style="padding-top: 25px !important;" class="col-xs-12 col-sm-6 col-md-2 form-group">
-                          <button class="btn btn-primary btn-block" id="btnConsultarVehmanualbuscador">Consultar Vehículo</button>
-                      </div>
-                      
-                      
-                  </div>
+            </div>
+
+            <div class="col-lg-12 form-consulVeh">
+              <div class="row">
+                <div class="col-xs-12 col-sm-6 col-md-3 form-group">
+                  <label for="clase">Código Fasecolda</label>
+                  <input type="text" maxlength="10" class="form-control" id="fasecoldabuscadormanual" placeholder="Número de fasecolda">
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-3 form-group">
+                  <label for="clase">Modelo Vehículo</label>
+                  <input type="text" maxlength="10" class="form-control" id="modelobuscadormanual" placeholder="Modelo Vehículo">
+                </div>
+
+                <div style="padding-top: 25px !important;" class="col-xs-12 col-sm-6 col-md-2 form-group">
+                  <button class="btn btn-primary btn-block" id="btnConsultarVehmanualbuscador">Consultar Vehículo</button>
+                </div>
+
+
               </div>
-              
-                <form method="Post" id="formVehManual">
+            </div>
+
+            <form method="Post" id="formVehManual">
               <div class="col-lg-12" id="headerFormVeh">
                 <div class="row row-formVehManual">
                   <div class="col-xs-12 col-sm-6 col-md-4">
@@ -373,12 +404,12 @@ if ($_SESSION["permisos"]["Cotizarlivianos"] != "x") {
                   </div>
                 </div>
               </div>
-              
+
               <div class="col-lg-12 form-consulVeh">
                 <div class="row">
-                    
-                    
-                <div class="col-md-12">
+
+
+                  <div class="col-md-12">
                     <div class="row">
                       <div class="col-xs-12 col-sm-6 col-md-3 form-group">
                         <label for="clase">Clase Vehículo</label>
@@ -393,67 +424,67 @@ if ($_SESSION["permisos"]["Cotizarlivianos"] != "x") {
                           <option value="PESADO">PESADO</option>
                           <option value="PICKUP">PICKUP</option>
                         </select>
-                    </div>
-                
-                    <div class="col-xs-12 col-sm-6 col-md-3 form-group">
+                      </div>
+
+                      <div class="col-xs-12 col-sm-6 col-md-3 form-group">
                         <label for="Marca">Marca Vehículo</label>
                         <select class="form-control" name="Marca" id="Marca" required></select>
-                    </div>
-                    
-                    <div class="col-xs-12 col-sm-6 col-md-3 form-group">
+                      </div>
+
+                      <div class="col-xs-12 col-sm-6 col-md-3 form-group">
                         <label for="linea">Modelo Vehículo</label>
                         <div class="input-group">
-                            <div class="input-group-addon">
-                                <div id="loadingModelo"></div>
-                            </div>
-                            <select class="form-control" name="edad" id="edad" required></select>
+                          <div class="input-group-addon">
+                            <div id="loadingModelo"></div>
+                          </div>
+                          <select class="form-control" name="edad" id="edad" required></select>
                         </div>
+                      </div>
+
+
+                      <div class="col-xs-12 col-sm-6 col-md-3 form-group">
+                        <label for="linea">Linea Vehículo</label>
+                        <select class="form-control" name="linea" id="linea" required></select>
+                      </div>
                     </div>
-
-
-                  <div class="col-xs-12 col-sm-6 col-md-3 form-group">
-                    <label for="linea">Linea Vehículo</label>
-                    <select class="form-control" name="linea" id="linea" required></select>
                   </div>
-                </div>
-                </div>
 
-                
-                
-                <div class="col-xs-12 col-sm-6 col-md-12">
+
+
+                  <div class="col-xs-12 col-sm-6 col-md-12">
                     <div class="row">
-                    <div class="col-xs-12 col-sm-6 col-md-3 form-group">
-                      <div id="referenciados"></div>
-                    </div>
-                    <div class="col-xs-12 col-sm-6 col-md-3 form-group">
-                      <div id="referenciatres"></div>
-                    </div>
-                    <div class="col-xs-12 col-sm-6 col-md-3">
+                      <div class="col-xs-12 col-sm-6 col-md-3 form-group">
+                        <div id="referenciados"></div>
+                      </div>
+                      <div class="col-xs-12 col-sm-6 col-md-3 form-group">
+                        <div id="referenciatres"></div>
+                      </div>
+                      <div class="col-xs-12 col-sm-6 col-md-3">
                         <div id="loaderVehiculo"></div>
+                      </div>
+
                     </div>
-                    
                   </div>
-                </div>
-                
-                <div class="col-xs-12 col-sm-6 col-md-12">
+
+                  <div class="col-xs-12 col-sm-6 col-md-12">
                     <div class="row">
-                        <div class="col-xs-12 col-sm-6 col-md-2 form-group btnConsultarVeh">
-                            <button class="btn btn-primary btn-block" id="btnConsultarVeh">Consultar Vehículo</button>
-                        </div>
+                      <div class="col-xs-12 col-sm-6 col-md-2 form-group btnConsultarVeh">
+                        <button class="btn btn-primary btn-block" id="btnConsultarVeh">Consultar Vehículo</button>
+                      </div>
                     </div>
-                </div>
-                
-                
-                
+                  </div>
 
-                  
 
-                
+
+
+
+
+
                 </div>
               </div>
-              </form>
-            </div>
-          
+            </form>
+          </div>
+
 
           <!-- FORMULARIO RESUMEN VEHICULO -->
           <form method="Post" id="formResumVeh">
@@ -764,6 +795,16 @@ if ($_SESSION["permisos"]["Cotizarlivianos"] != "x") {
           <input type="text" class="form-control" id="cre_alli_agentid" value="<?php echo $cre_alli_agentid; ?>">
           <input type="text" class="form-control" id="cre_alli_partnercode" value="<?php echo $cre_alli_partnercode; ?>">
           <input type="text" class="form-control" id="cre_alli_agentcode" value="<?php echo $cre_alli_agentcode; ?>">
+
+          <!--AXA-->
+          <input type="text" class="form-control" id="cre_axa_sslcertfile" value="<?php echo $cre_axa_sslcertfile; ?>">
+          <input type="text" class="form-control" id="cre_axa_sslkeyfile" value="<?php echo $cre_axa_sslkeyfile; ?>">
+          <input type="text" class="form-control" id="cre_axa_passphrase" value="<?php echo $cre_axa_passphrase; ?>">
+          <input type="text" class="form-control" id="cre_axa_codigoDistribuidor" value="<?php echo $cre_axa_codigoDistribuidor; ?>">
+          <input type="text" class="form-control" id="cre_axa_idTipoDistribuidor" value="<?php echo $cre_axa_idTipoDistribuidor; ?>">
+          <input type="text" class="form-control" id="cre_axa_codigoDivipola" value="<?php echo $cre_axa_codigoDivipola; ?>">
+          <input type="text" class="form-control" id="cre_axa_canal" value="<?php echo $cre_axa_canal; ?>">
+          <input type="text" class="form-control" id="cre_axa_validacionEventos	" value="<?php echo $cre_axa_validacionEventos; ?>">
 
         </div>
 
