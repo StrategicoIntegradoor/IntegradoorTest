@@ -321,7 +321,11 @@ $(document).ready(function () {
 
       } else {
 
-        if(claseFasecolda == 4){
+        if( claseFasecolda == 4 ||
+          claseFasecolda == 10 ||
+          claseFasecolda == 14 ||
+          claseFasecolda == 22 ||
+          claseFasecolda == 26){
 
           let url = `extensiones/tcpdf/pdf/comparadorPesados.php?cotizacion=${idCotizacionPDF}`;
 
