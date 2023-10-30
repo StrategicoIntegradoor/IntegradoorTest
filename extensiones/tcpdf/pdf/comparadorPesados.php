@@ -1365,7 +1365,7 @@ $html4 = '
 <table style="width: 100%;" class="second2" cellpadding="2"  border="0">';
 
 $html4 .= '<tr style="width: 100%;" class="izquierda">';
-$html4 .= '<td style ="width: 100%; background-color: #D1D1D1; font-family:dejavusanscondensedb;" colspan="' . ($fila6 + 1) . '"><div style="font-size:3pt">&nbsp;</div>COBERTURAS ADICIONALES (NO APLICA PARA TRAILER) <div style="font-size:3pt">&nbsp;</div></td>';
+$html4 .= '<td style ="width: 100%; background-color: #D1D1D1; font-family:dejavusanscondensedb;" colspan="' . ($fila6 + 1) . '"><div style="font-size:3pt">&nbsp;</div>COBERTURAS ADICIONALES<div style="font-size:3pt">&nbsp;</div></td>';
 
 $html4 .= '</tr>';
 
