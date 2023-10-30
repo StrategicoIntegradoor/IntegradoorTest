@@ -329,10 +329,13 @@ if ($_SESSION["permisos"]["Cotizarpesados"] != "x") {
                       <label for="txtModeloVeh">Modelo</label>
                       <input type="text" class="form-control" id="txtModeloVeh" placeholder="" disabled>
                     </div>
+                    
                     <div class="col-xs-12 col-sm-6 col-md-3 form-group">
-                      <label for="txtClaseVeh">Clase</label>
-                      <input type="text" class="form-control" id="txtClaseVeh" placeholder="" disabled>
+                      <label for="clasepesados">Clase Vehiculo</label>
+                      <input type="text" class="form-control" id="clasepesados" placeholder="" disabled>
                     </div>
+
+
                     <div class="col-xs-12 col-sm-6 col-md-3 form-group">
                       <label for="txtMarcaVeh">Marca</label>
                       <input type="text" class="form-control classMarcaVeh" id="txtMarcaVeh" placeholder="" disabled>
@@ -424,11 +427,6 @@ if ($_SESSION["permisos"]["Cotizarpesados"] != "x") {
                       <label for="ciudadCirculacion">Ciudad de Circulación</label>
                       <select class="form-control" id="ciudadCirculacion" required></select>
                       <div id="listaCiudades"></div>
-                    </div>
-
-                    <div class="col-xs-12 col-sm-6 col-md-3 form-group">
-                      <label for="clasepesados">Clase Vehiculo</label>
-                      <input type="text" class="form-control" id="clasepesados" placeholder="" disabled>
                     </div>
 
                   </div>
@@ -561,6 +559,8 @@ if ($_SESSION["permisos"]["Cotizarpesados"] != "x") {
 
         <!-- CAMPOS OCULTOS PARA OPTENER LA INFORMACION-->
         <div style="display: none;">
+          <label>Clase</label>
+          <input type="hidden" class="form-control" id="txtClaseVeh" placeholder="" disabled>
           <label>Id Asegurado</label>
           <input type="hidden" name="idCliente" id="idCliente">
           <label>Celular Asegurado</label>
