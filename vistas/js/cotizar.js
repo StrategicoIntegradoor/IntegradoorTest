@@ -2080,93 +2080,7 @@ function cotizarOfertas() {
             );
 
             
-            // Promise.all(cont).then(() => {
-            //   $("#btnCotizar").hide();
-            //   $("#loaderOferta").html("");
-            //   $("#loaderRecotOferta").html("");
-            //   swal.fire({
-            //     type: "success",
-            //     title: "! Cotización Exitosa ¡",
-            //     showConfirmButton: true,
-            //     confirmButtonText: "Cerrar",
-            //   });
-            //   setTimeout(function () {
-            //     //  window.location = "index.php?ruta=editar-cotizacion&idCotizacion=" + idCotizacion;
-            //   }, 3000);
-
-            //   console.log("Se completo todo");
-            //   document.querySelector('.button-recotizar').style.display = 'block'
-            //   /* Se monta el botón para generar el pdf con 
-            //   el valor de la variable idCotizacion */
-            //   const contentCotizacionPDF = document.querySelector('#contenCotizacionPDF')
-            //   contentCotizacionPDF.innerHTML = `  
-            //                                     <div class="col-xs-12" style="width: 100%;">
-            //                                       <div class="row align-items-center">
-            //                                           <div class="col-xs-4">
-            //                                               <label for="checkboxAsesor">¿Deseas agregar tus datos como asesor en la cotización?</label>
-            //                                               <input class="form-check-input" type="checkbox" id="checkboxAsesor" style="margin-left: 10px;" checked>
-            //                                           </div>
-            //                                           <div class="col-xs-4">
-            //                                               <button type="button" class="btn btn-danger" id="btnParrillaPDF">
-            //                                                   <span class="fa fa-file-text"></span> Generar PDF de Cotización
-            //                                               </button>
-            //                                           </div>
-            //                                       </div>
-            //                                     </div>
-            //                                         `
-            //   $("#btnParrillaPDF").click(function () {
-            //     const todosOn = $(".classSelecOferta:checked").length;
-            //     const idCotizacionPDF = idCotizacion;
-            //     const checkboxAsesor = $("#checkboxAsesor");
-
-            //     if (permisos.Generarpdfdecotizacion != "x") {
-
-            //       Swal.fire({
-            //         icon: 'error',
-            //         title: '¡Esta versión no tiene ésta funcionalidad disponible!',
-            //         showCancelButton: true,
-            //         confirmButtonText: 'Cerrar',
-            //         cancelButtonText: 'Conoce más'
-            //       }).then((result) => {
-
-            //         if (result.isConfirmed) {
-            //         } else if (result.isDismissed
-            //         ) {
-
-            //           window.open('https://www.integradoor.com', "_blank")
-
-            //         }
-            //       })
-            //     } else {
-
-            //       if (!todosOn) {
-            //         swal.fire({
-            //           title: "¡Debes seleccionar mínimo una oferta!",
-            //         });
-            //       } else {
-
-            //         let url = `extensiones/tcpdf/pdf/comparador.php?cotizacion=${idCotizacionPDF}`;
-            //         if (checkboxAsesor.is(":checked")) {
-            //           url += "&generar_pdf=1";
-            //         }
-            //         window.open(url, "_blank");
-
-            //         //   window.open("extensiones/tcpdf/pdf/comparador.php?cotizacion=" + idCotizacionPDF,"_blank");
-
-            //       }
-            //     }
-            //   });
-            // });
-
-
-            // ...
-
-            // Llamar a esta función cuando todas las promesas se resuelvan
-            function ejecutarDespuesDePromesas() {
-              
-
-              setTimeout(function () {
-
+            Promise.all(cont).then(() => {
               $("#btnCotizar").hide();
               $("#loaderOferta").html("");
               $("#loaderRecotOferta").html("");
@@ -2176,71 +2090,159 @@ function cotizarOfertas() {
                 showConfirmButton: true,
                 confirmButtonText: "Cerrar",
               });
+              setTimeout(function () {
                 //  window.location = "index.php?ruta=editar-cotizacion&idCotizacion=" + idCotizacion;
-                console.log("Se completó todo");
-                document.querySelector('.button-recotizar').style.display = 'block'
-                
-                /* Se monta el botón para generar el PDF con 
-                el valor de la variable idCotizacion */
-                const contentCotizacionPDF = document.querySelector('#contenCotizacionPDF')
-                contentCotizacionPDF.innerHTML = `  
-                  <div class="col-xs-12" style="width: 100%;">
-                    <div class="row align-items-center">
-                      <div class="col-xs-4">
-                        <label for="checkboxAsesor">¿Deseas agregar tus datos como asesor en la cotización?</label>
-                        <input class="form-check-input" type="checkbox" id="checkboxAsesor" style="margin-left: 10px;" checked>
-                      </div>
-                      <div class="col-xs-4">
-                        <button type="button" class="btn btn-danger" id="btnParrillaPDF">
-                          <span class="fa fa-file-text"></span> Generar PDF de Cotización
-                        </button>
-                      </div>
-                    </div>
-                  </div>
-                `;
+              }, 3000);
 
-                $("#btnParrillaPDF").click(function () {
-                  const todosOn = $(".classSelecOferta:checked").length;
-                  const idCotizacionPDF = idCotizacion;
-                  const checkboxAsesor = $("#checkboxAsesor");
+              console.log("Se completo todo");
+              document.querySelector('.button-recotizar').style.display = 'block'
+              /* Se monta el botón para generar el pdf con 
+              el valor de la variable idCotizacion */
+              const contentCotizacionPDF = document.querySelector('#contenCotizacionPDF')
+              contentCotizacionPDF.innerHTML = `  
+                                                <div class="col-xs-12" style="width: 100%;">
+                                                  <div class="row align-items-center">
+                                                      <div class="col-xs-4">
+                                                          <label for="checkboxAsesor">¿Deseas agregar tus datos como asesor en la cotización?</label>
+                                                          <input class="form-check-input" type="checkbox" id="checkboxAsesor" style="margin-left: 10px;" checked>
+                                                      </div>
+                                                      <div class="col-xs-4">
+                                                          <button type="button" class="btn btn-danger" id="btnParrillaPDF">
+                                                              <span class="fa fa-file-text"></span> Generar PDF de Cotización
+                                                          </button>
+                                                      </div>
+                                                  </div>
+                                                </div>
+                                                    `
+              $("#btnParrillaPDF").click(function () {
+                const todosOn = $(".classSelecOferta:checked").length;
+                const idCotizacionPDF = idCotizacion;
+                const checkboxAsesor = $("#checkboxAsesor");
 
-                  if (permisos.Generarpdfdecotizacion != "x") {
-                    Swal.fire({
-                      icon: 'error',
-                      title: '¡Esta versión no tiene esta funcionalidad disponible!',
-                      showCancelButton: true,
-                      confirmButtonText: 'Cerrar',
-                      cancelButtonText: 'Conoce más'
-                    }).then((result) => {
-                      if (result.isConfirmed) {
-                      } else if (result.isDismissed) {
-                        window.open('https://www.integradoor.com', "_blank")
-                      }
-                    })
-                  } else {
-                    if (!todosOn) {
-                      swal.fire({
-                        title: "¡Debes seleccionar al menos una oferta!",
-                      });
-                    } else {
-                      let url = `extensiones/tcpdf/pdf/comparador.php?cotizacion=${idCotizacionPDF}`;
-                      if (checkboxAsesor.is(":checked")) {
-                        url += "&generar_pdf=1";
-                      }
-                      window.open(url, "_blank");
+                if (permisos.Generarpdfdecotizacion != "x") {
+
+                  Swal.fire({
+                    icon: 'error',
+                    title: '¡Esta versión no tiene ésta funcionalidad disponible!',
+                    showCancelButton: true,
+                    confirmButtonText: 'Cerrar',
+                    cancelButtonText: 'Conoce más'
+                  }).then((result) => {
+
+                    if (result.isConfirmed) {
+                    } else if (result.isDismissed
+                    ) {
+
+                      window.open('https://www.integradoor.com', "_blank")
+
                     }
-                  }
-                });
-              }, 25000); // Agrega el tiempo de retraso en milisegundos aquí
-            }
+                  })
+                } else {
 
-            Promise.all(cont)
-              .then(() => {
-                ejecutarDespuesDePromesas(); // Llama a la función después de que todas las promesas se resuelvan
-              })
-              .catch((error) => {
-                console.error(error);
+                  if (!todosOn) {
+                    swal.fire({
+                      title: "¡Debes seleccionar mínimo una oferta!",
+                    });
+                  } else {
+
+                    let url = `extensiones/tcpdf/pdf/comparador.php?cotizacion=${idCotizacionPDF}`;
+                    if (checkboxAsesor.is(":checked")) {
+                      url += "&generar_pdf=1";
+                    }
+                    window.open(url, "_blank");
+
+                    //   window.open("extensiones/tcpdf/pdf/comparador.php?cotizacion=" + idCotizacionPDF,"_blank");
+
+                  }
+                }
               });
+            });
+
+
+            //--------------- VERSION ALTERNATIVA TIEMPO DE ESPERA -------------------//
+
+            // Llamar a esta función cuando todas las promesas se resuelvan
+            // function ejecutarDespuesDePromesas() {
+              
+
+            //   setTimeout(function () {
+
+            //   $("#btnCotizar").hide();
+            //   $("#loaderOferta").html("");
+            //   $("#loaderRecotOferta").html("");
+            //   swal.fire({
+            //     type: "success",
+            //     title: "! Cotización Exitosa ¡",
+            //     showConfirmButton: true,
+            //     confirmButtonText: "Cerrar",
+            //   });
+            //     //  window.location = "index.php?ruta=editar-cotizacion&idCotizacion=" + idCotizacion;
+            //     console.log("Se completó todo");
+            //     document.querySelector('.button-recotizar').style.display = 'block'
+                
+            //     /* Se monta el botón para generar el PDF con 
+            //     el valor de la variable idCotizacion */
+            //     const contentCotizacionPDF = document.querySelector('#contenCotizacionPDF')
+            //     contentCotizacionPDF.innerHTML = `  
+            //       <div class="col-xs-12" style="width: 100%;">
+            //         <div class="row align-items-center">
+            //           <div class="col-xs-4">
+            //             <label for="checkboxAsesor">¿Deseas agregar tus datos como asesor en la cotización?</label>
+            //             <input class="form-check-input" type="checkbox" id="checkboxAsesor" style="margin-left: 10px;" checked>
+            //           </div>
+            //           <div class="col-xs-4">
+            //             <button type="button" class="btn btn-danger" id="btnParrillaPDF">
+            //               <span class="fa fa-file-text"></span> Generar PDF de Cotización
+            //             </button>
+            //           </div>
+            //         </div>
+            //       </div>
+            //     `;
+
+            //     $("#btnParrillaPDF").click(function () {
+            //       const todosOn = $(".classSelecOferta:checked").length;
+            //       const idCotizacionPDF = idCotizacion;
+            //       const checkboxAsesor = $("#checkboxAsesor");
+
+            //       if (permisos.Generarpdfdecotizacion != "x") {
+            //         Swal.fire({
+            //           icon: 'error',
+            //           title: '¡Esta versión no tiene esta funcionalidad disponible!',
+            //           showCancelButton: true,
+            //           confirmButtonText: 'Cerrar',
+            //           cancelButtonText: 'Conoce más'
+            //         }).then((result) => {
+            //           if (result.isConfirmed) {
+            //           } else if (result.isDismissed) {
+            //             window.open('https://www.integradoor.com', "_blank")
+            //           }
+            //         })
+            //       } else {
+            //         if (!todosOn) {
+            //           swal.fire({
+            //             title: "¡Debes seleccionar al menos una oferta!",
+            //           });
+            //         } else {
+            //           let url = `extensiones/tcpdf/pdf/comparador.php?cotizacion=${idCotizacionPDF}`;
+            //           if (checkboxAsesor.is(":checked")) {
+            //             url += "&generar_pdf=1";
+            //           }
+            //           window.open(url, "_blank");
+            //         }
+            //       }
+            //     });
+            //   }, 25000); // Agrega el tiempo de retraso en milisegundos aquí
+            // }
+
+            // Promise.all(cont)
+            //   .then(() => {
+            //     ejecutarDespuesDePromesas(); // Llama a la función después de que todas las promesas se resuelvan
+            //   })
+            //   .catch((error) => {
+            //     console.error(error);
+            //   });
+
+            //--------------- FIN VERSION ALTERNATIVA TIEMPO DE ESPERA -------------------//
 
             /*fetch("http://localhost/webservice_autosv1/Cotizar", requestOptions)
               .then(function (response) {
