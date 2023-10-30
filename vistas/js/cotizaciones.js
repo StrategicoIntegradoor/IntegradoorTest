@@ -267,8 +267,8 @@ $(document).ready(function () {
       }
     }
 
-    var codigoClase = codigoClase(valorTxtFasecolda);
-    console.log(codigoClase);
+    var claseFasecolda = codigoClase(valorTxtFasecolda);
+    console.log(claseFasecolda);
 
     if (permisos.Generarpdfdecotizacion != "x") {
 
