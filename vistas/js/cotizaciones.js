@@ -240,9 +240,35 @@ $(document).ready(function () {
 
     var idCotizacionPDF = idCotizacion;
 
-    var checkboxAsesorEditar = $("#checkboxAsesorEditar")
+    var checkboxAsesorEditar = $("#checkboxAsesorEditar");
 
+    var valorTxtFasecolda = $("#txtFasecolda").val(); // Obtener el valor del input con el id "txtFasecolda"
 
+    function codigoClase(numero) {
+      // Convierte el número a una cadena para acceder a los dígitos individualmente
+      var numeroComoCadena = numero.toString();
+    
+      // Asegúrate de que la cadena tenga al menos 5 dígitos
+      if (numeroComoCadena.length >= 5) {
+        var cuartoDigito = numeroComoCadena.charAt(3);
+        var quintoDigito = numeroComoCadena.charAt(4);
+    
+        // Verifica si el cuarto dígito no es cero
+        if (cuartoDigito !== '0') {
+          // Concatena el cuarto y quinto dígitos
+          return cuartoDigito + quintoDigito;
+        } else {
+          // Devuelve solo el cuarto dígito
+          return cuartoDigito;
+        }
+      } else {
+        // No hay suficientes dígitos, devuelve el número original
+        return numero;
+      }
+    }
+
+    var codigoClase = codigoClase(valorTxtFasecolda);
+    console.log(codigoClase);
 
     if (permisos.Generarpdfdecotizacion != "x") {
 
