@@ -268,7 +268,6 @@ $(document).ready(function () {
     }
 
     var claseFasecolda = codigoClase(valorTxtFasecolda);
-    console.log(claseFasecolda);
 
     if (permisos.Generarpdfdecotizacion != "x") {
 
@@ -322,20 +321,32 @@ $(document).ready(function () {
 
       } else {
 
-        let url = `extensiones/tcpdf/pdf/comparador.php?cotizacion=${idCotizacionPDF}`;
+        if(claseFasecolda == 4){
 
-        if (checkboxAsesorEditar.is(":checked")) {
-          url += "&generar_pdf=1";
-        }
+          let url = `extensiones/tcpdf/pdf/comparadorPesados.php?cotizacion=${idCotizacionPDF}`;
 
-        window.open(url, "_blank");
+          if (checkboxAsesorEditar.is(":checked")) {
+            url += "&generar_pdf=1";
+          }
+
+          window.open(url, "_blank");
+
+        }else{
+
+          let url = `extensiones/tcpdf/pdf/comparador.php?cotizacion=${idCotizacionPDF}`;
+
+          if (checkboxAsesorEditar.is(":checked")) {
+            url += "&generar_pdf=1";
+          }
+
+          window.open(url, "_blank");
 
         // window.open("comparador.php?cotizacion="+idCotizacionPDF, "_blank");
         // window.open(
         //   "extensiones/tcpdf/pdf/comparador.php?cotizacion=" + idCotizacionPDF,
         //   "_blank"
         // );
-
+        }
       }
 
     }
