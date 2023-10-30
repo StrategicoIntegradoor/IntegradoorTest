@@ -19,6 +19,8 @@
     $data = json_decode(file_get_contents('php://input'), true);
     if (isset($data['obtenerAlertas'])) {
         $alertaAseguradora = new AlertaAseguradora();
+        var_dump($data['cotizacion']);
+        die();
         $alertaAseguradora->obtenerAlertas($data['cotizacion']);
     }
 ?>
