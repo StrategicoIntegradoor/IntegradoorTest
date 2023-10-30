@@ -1528,7 +1528,7 @@ function cotizarOfertasPesados() {
             plan = 'Trailer'
             body.plan = plan
             requestOptions.body = JSON.stringify(body)
-            fetch("https://grupoasistencia.com/webservice_autosv1/CotizarPesados",requestOptions)
+            fetch("https://grupoasistencia.com/motor_webservice_tst/CotizarPesados",requestOptions)
               .then(function (response) {
                 if (!response.ok) throw Error(response.statusText);
                 return response.json();
@@ -1560,7 +1560,7 @@ function cotizarOfertasPesados() {
               body.plan = plan
               requestOptions.body = JSON.stringify(body)
             
-              fetch("https://grupoasistencia.com/webservice_autosv1/CotizarPesados", requestOptions)
+              fetch("https://grupoasistencia.com/motor_webservice_tst/CotizarPesados", requestOptions)
                 .then((res) => {
                   if (!res.ok) throw Error(res.statusText);
                   return res.json();
