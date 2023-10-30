@@ -259,7 +259,7 @@ $(document).ready(function () {
           return cuartoDigito + quintoDigito;
         } else {
           // Devuelve solo el cuarto dígito
-          return cuartoDigito;
+          return quintoDigito;
         }
       } else {
         // No hay suficientes dígitos, devuelve el número original
