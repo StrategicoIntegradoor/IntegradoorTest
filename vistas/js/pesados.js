@@ -750,7 +750,7 @@ function masAseg() {
               
             contErrProtocolo = 0;
           } else {
-            setTimeout(consulPlaca, 4000);
+            setTimeout(consulPlacaPesados, 4000);
           }
         });
     }
