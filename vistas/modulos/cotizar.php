@@ -100,20 +100,6 @@ if ($numerofilas4 > 0) {
 
 //echo ($fila["Num_recargas"]);
 
-$idRol = $_SESSION["permisos"]["idRol"];
-if ($idRol == 19) {
-    // Mostrar la alerta usando SweetAlert
-    echo '<script>
-        Swal.fire({
-            title: "Ups, estás en el ambiente equivocado",
-            text: "Te redirigiremos al espacio donde podras cotizar con normalidad",
-            icon: "info",
-        }).then(function () {
-            // Redireccionar al enlace deseado
-            window.location = "https://integradoor.com/app/";
-        });
-    </script>';
-}
 
 
 if ($_SESSION["permisos"]["Cotizarlivianos"] != "x") {
@@ -133,16 +119,7 @@ if ($_SESSION["permisos"]["Cotizarlivianos"] != "x") {
 
 
 ?>
-<style>
-  .mensajeErrorPlaca {
-    color: #e62e1b; /* Color de texto rojo */
-    font-size: 12px; /* Tamaño de fuente */
-    font-family: Arial, sans-serif; /* Fuente */
-    margin-top: 0%; /* Espacio superior para separación del campo de entrada */
-    display: none; /* Inicialmente oculto */
-}
 
-</style>
 <div class="content-wrapper">
 
   <section class="content-header">
@@ -211,7 +188,6 @@ if ($_SESSION["permisos"]["Cotizarlivianos"] != "x") {
                           </div>
                         </div>
                         <div class="col-xs-12 col-sm-6 col-md-6 form-group" id="contenPlaca">
-                          <div id="mensajeErrorPlaca" style="color: red; display: none;"></div>
                           <label for="placaVeh">Placa</label>
                           <input type="text" minlength="6" maxlength="6" class="form-control" id="placaVeh" required placeholder="Placa">
                         </div>
@@ -268,7 +244,6 @@ if ($_SESSION["permisos"]["Cotizarlivianos"] != "x") {
                     <div class="col-xs-12 col-sm-6 col-md-3 form-group">
                       <label for="">Fecha de Nacimiento</label>
                       <div class="row">
-
                         <div class="col-xs-4 col-sm-4 col-md-4 conten-dia">
                           <select class="form-control fecha-nacimiento" name="dianacimiento" id="dianacimiento" required>
                             <option value="">Dia</option>
@@ -283,7 +258,6 @@ if ($_SESSION["permisos"]["Cotizarlivianos"] != "x") {
                                                                                           ?>
                           </select>
                         </div>
-
                         <div class="col-xs-4 col-sm-4 col-md-4 conten-mes">
                           <select class="form-control fecha-nacimiento" name="mesnacimiento" id="mesnacimiento" required>
                             <option value="" selected>Mes</option>
@@ -301,7 +275,6 @@ if ($_SESSION["permisos"]["Cotizarlivianos"] != "x") {
                             <option value="12">Diciembre</option>
                           </select>
                         </div>
-                        
                         <div class="col-xs-4 col-sm-4 col-md-4 conten-anio">
                           <select class="form-control fecha-nacimiento" name="anionacimiento" id="anionacimiento" required>
                             <option value="">Año</option>
@@ -363,72 +336,124 @@ if ($_SESSION["permisos"]["Cotizarlivianos"] != "x") {
           </form>
 
           <!-- FORMULARIO VEHICULO MANUAL -->
-          <form method="Post" id="formVehManual">
+          
             <div id="formularioVehiculo">
               <div class="col-lg-12" id="headerFormVeh">
                 <div class="row row-formVehManual">
-                  <div class="col-xs-12 col-sm-6 col-md-3">
-                    <label for="">CONSULTA MANUAL DEL VEHICULO</label>
+                  <div class="col-xs-12 col-sm-6 col-md-4">
+                    <label for="">CONSULTA MANUAL DEL VEHICULO POR FASECOLDA</label>
                   </div>
                 </div>
               </div>
-
+              
+              <div class ="col-lg-12 form-consulVeh">
+                  <div class= "row">
+                      <div class="col-xs-12 col-sm-6 col-md-3 form-group">
+                          <label for="clase">Código Fasecolda</label>
+                          <input type="text" maxlength="10" class="form-control" id="fasecoldabuscadormanual" placeholder="Número de fasecolda">
+                      </div>
+                      <div class="col-xs-12 col-sm-6 col-md-3 form-group">
+                          <label for="clase">Modelo Vehículo</label>
+                          <input type="text" maxlength="10" class="form-control" id="modelobuscadormanual"  placeholder="Modelo Vehículo">
+                      </div>
+                      
+                      <div style="padding-top: 25px !important;" class="col-xs-12 col-sm-6 col-md-2 form-group">
+                          <button class="btn btn-primary btn-block" id="btnConsultarVehmanualbuscador">Consultar Vehículo</button>
+                      </div>
+                      
+                      
+                  </div>
+              </div>
+              
+                <form method="Post" id="formVehManual">
+              <div class="col-lg-12" id="headerFormVeh">
+                <div class="row row-formVehManual">
+                  <div class="col-xs-12 col-sm-6 col-md-4">
+                    <label for="">CONSULTA MANUAL DEL VEHICULO POR CARACTERISTICAS</label>
+                  </div>
+                </div>
+              </div>
+              
               <div class="col-lg-12 form-consulVeh">
                 <div class="row">
-
-                  <div class="col-xs-12 col-sm-6 col-md-3 form-group">
-                    <label for="clase">Clase Vehículo</label>
-                    <select class="form-control" name="clase" id="clase" required="">
-                      <option value="" selected>Seleccione la Clase</option>
-                      <option value="AUTOMOVIL">AUTOMOVIL</option>
-                      <option value="BUS">BUS</option>
-                      <option value="CAMIONETA">CAMIONETA</option>
-                      <option value="FURGONETA">FURGONETA</option>
-                      <option value="MOTOCARRO">MOTOCARRO</option>
-                      <option value="MOTOS">MOTOS</option>
-                      <option value="PESADO">PESADO</option>
-                      <option value="PICKUP">PICKUP</option>
-                    </select>
-                  </div>
-
-                  <div class="col-xs-12 col-sm-6 col-md-3 form-group">
-                    <label for="Marca">Marca Vehículo</label>
-                    <select class="form-control" name="Marca" id="Marca" required></select>
-                  </div>
-
-                  <div class="col-xs-12 col-sm-6 col-md-3 form-group">
-                    <label for="linea">Modelo Vehículo</label>
-                    <div class="input-group">
-                      <div class="input-group-addon">
-                        <div id="loadingModelo"></div>
-                      </div>
-                      <select class="form-control" name="edad" id="edad" required></select>
+                    
+                    
+                <div class="col-md-12">
+                    <div class="row">
+                      <div class="col-xs-12 col-sm-6 col-md-3 form-group">
+                        <label for="clase">Clase Vehículo</label>
+                        <select class="form-control" name="clase" id="clase" required="">
+                          <option value="" selected>Seleccione la Clase</option>
+                          <option value="AUTOMOVIL">AUTOMOVIL</option>
+                          <option value="BUS">BUS</option>
+                          <option value="CAMIONETA">CAMIONETA</option>
+                          <option value="FURGONETA">FURGONETA</option>
+                          <option value="MOTOCARRO">MOTOCARRO</option>
+                          <option value="MOTOS">MOTOS</option>
+                          <option value="PESADO">PESADO</option>
+                          <option value="PICKUP">PICKUP</option>
+                        </select>
                     </div>
-                  </div>
+                
+                    <div class="col-xs-12 col-sm-6 col-md-3 form-group">
+                        <label for="Marca">Marca Vehículo</label>
+                        <select class="form-control" name="Marca" id="Marca" required></select>
+                    </div>
+                    
+                    <div class="col-xs-12 col-sm-6 col-md-3 form-group">
+                        <label for="linea">Modelo Vehículo</label>
+                        <div class="input-group">
+                            <div class="input-group-addon">
+                                <div id="loadingModelo"></div>
+                            </div>
+                            <select class="form-control" name="edad" id="edad" required></select>
+                        </div>
+                    </div>
 
 
                   <div class="col-xs-12 col-sm-6 col-md-3 form-group">
                     <label for="linea">Linea Vehículo</label>
                     <select class="form-control" name="linea" id="linea" required></select>
                   </div>
+                </div>
+                </div>
 
-                  <div class="col-xs-12 col-sm-6 col-md-3 form-group">
-                    <div id="referenciados"></div>
-                  </div>
-                  <div class="col-xs-12 col-sm-6 col-md-3 form-group">
-                    <div id="referenciatres"></div>
-                  </div>
-
-                  <div class="col-xs-12 col-sm-6 col-md-3">
-                    <div id="loaderVehiculo"></div>
-                  </div>
-                  <div class="col-xs-12 col-sm-6 col-md-3 form-group btnConsultarVeh">
-                    <button class="btn btn-primary btn-block" id="btnConsultarVeh">Consultar Vehículo</button>
+                
+                
+                <div class="col-xs-12 col-sm-6 col-md-12">
+                    <div class="row">
+                    <div class="col-xs-12 col-sm-6 col-md-3 form-group">
+                      <div id="referenciados"></div>
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-3 form-group">
+                      <div id="referenciatres"></div>
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-3">
+                        <div id="loaderVehiculo"></div>
+                    </div>
+                    
                   </div>
                 </div>
+                
+                <div class="col-xs-12 col-sm-6 col-md-12">
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-6 col-md-2 form-group btnConsultarVeh">
+                            <button class="btn btn-primary btn-block" id="btnConsultarVeh">Consultar Vehículo</button>
+                        </div>
+                    </div>
+                </div>
+                
+                
+                
+
+                  
+
+                
+                </div>
               </div>
+              </form>
             </div>
-          </form>
+          
 
           <!-- FORMULARIO RESUMEN VEHICULO -->
           <form method="Post" id="formResumVeh">
