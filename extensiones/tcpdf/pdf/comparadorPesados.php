@@ -997,7 +997,7 @@ if($valorlimiterow==10){
 			$pdfValorRC = $response['ValorRC'];
 		} 
 
-		var_dump($pdfValorRC);
+		var_dump($rowRespuesta9);
 		die();
 
 		if ($cont4 % 2 == 0) {
