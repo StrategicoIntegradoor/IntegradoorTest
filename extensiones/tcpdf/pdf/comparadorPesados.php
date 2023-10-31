@@ -1041,18 +1041,12 @@ while ($rowRespuesta8 = mysqli_fetch_assoc($respuestaquery8)) {
 									// -- AND `rce` LIKE '$valorRC' AND `ppd` LIKE '$perdidaParcial'";
 	$respuestaqueryAsistencia1 =  $conexion->query($queryConsultaAsistencia1);
 	$rowRespuestaAsistencia1 = mysqli_fetch_assoc($respuestaqueryAsistencia1);
-	$rce_excesonumeric = $rowRespuestaAsistencia1['deducible'];
 
-	if (is_numeric($rce_excesonumeric)) {
-		$pdfValorRC_Exceso = $rce_excesonumeric/1000000;
-	} else {
-		$pdfValorRC_Exceso = $rowRespuestaAsistencia1['deducible'];
-	} 
 
 	if ($cont5 % 2 == 0) {
-		$html3 .= '<td class="puntos fondo" style="width:' . $valorTabla . '%;"><center><font size="7"style="text-align: center;  font-family:dejavusanscondensed;">' . $pdfValorRC_Exceso . '</font></center></td>';
+		$html3 .= '<td class="puntos fondo" style="width:' . $valorTabla . '%;"><center><font size="7"style="text-align: center;  font-family:dejavusanscondensed;">' . $rowRespuestaAsistencia1['deducible'] . '</font></center></td>';
 	} else {
-		$html3 .= '<td class="puntos fondo2" style="width:' . $valorTabla . '%;"><center><font size="7"style="text-align: center;  font-family:dejavusanscondensed;">' . $pdfValorRC_Exceso . '</font></center></td>';
+		$html3 .= '<td class="puntos fondo2" style="width:' . $valorTabla . '%;"><center><font size="7"style="text-align: center;  font-family:dejavusanscondensed;">' . $rowRespuestaAsistencia1['deducible'] . '</font></center></td>';
 	}
 
 	$cont5 += 1;
@@ -1084,6 +1078,13 @@ while ($rowRespuestap1 = mysqli_fetch_assoc($respuestaqueryp1)) {
 									AND `rce` LIKE '$valorRC' AND `ppd` LIKE '$perdidaParcial'";
 	$respuestaqueryAsistencia1 =  $conexion->query($queryConsultaAsistencia1);
 	$rowRespuestaAsistencia1 = mysqli_fetch_assoc($respuestaqueryAsistencia1);
+	$rce_excesonumeric = $rowRespuestaAsistencia1['rceexceso'];
+
+	if (is_numeric($rce_excesonumeric)) {
+		$pdfValorRC_Exceso = $rce_excesonumeric/1000000;
+	} else {
+		$pdfValorRC_Exceso = $rowRespuestaAsistencia1['rceexceso'];
+	} 
 
 	if ($cont5 % 2 == 0) {
 		$html3 .= '<td class="puntos fondo" style="width:' . $valorTabla . '%;"><center><font size="7"style="text-align: center;  font-family:dejavusanscondensed;">' . $rowRespuestaAsistencia1['rceexceso'] . '</font></center></td>';
