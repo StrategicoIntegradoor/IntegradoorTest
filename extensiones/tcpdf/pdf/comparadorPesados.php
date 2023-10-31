@@ -951,7 +951,7 @@ if($valorlimiterow==10){
 
 		var_dump($pdfValorRC);
 		die();
-		
+
 		if ($cont4 % 2 == 0) {
 	
 			$html3 .= '<td class="puntos fondo" style="width:' . $valorTabla . '%; font-family:dejavusanscondensed;"><center><font size="6" style="text-align: center;"><div style="font-size:4pt">&nbsp;</div>' . $pdfValorRC . '</font></center></td>';
@@ -972,6 +972,9 @@ if($valorlimiterow==10){
 		} else {
 			$pdfValorRC = $response['ValorRC'];
 		} 
+
+		var_dump($pdfValorRC);
+		die();
 
 		if ($cont4 % 2 == 0) {
 	
