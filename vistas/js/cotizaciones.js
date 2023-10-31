@@ -325,6 +325,7 @@ $(document).ready(function () {
           claseFasecolda == 10 ||
           claseFasecolda == 14 ||
           claseFasecolda == 22 ||
+          claseFasecolda == 25 ||
           claseFasecolda == 26){
 
           let url = `extensiones/tcpdf/pdf/comparadorPesados.php?cotizacion=${idCotizacionPDF}`;
