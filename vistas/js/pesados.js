@@ -1136,12 +1136,11 @@ function registrarOferta(
                     </center>  
   
                    <div class='col-12' style='margin-top:2%;'>
-                          ${permisos.Vernumerodecotizacionencadaaseguradora == "x" ?
-        `<center>
+                   ${aseguradora !== "Mundial" && permisos.Vernumerodecotizacionencadaaseguradora == "x" ?
+                    `<center>
                       <label class='entidad'>N° Cot: <span style ='color :black'>${numCotizOferta}</span></label>
-  
                      </center>`
-        : ''}
+                    : ''}
                         </div>
   
                     </div>
