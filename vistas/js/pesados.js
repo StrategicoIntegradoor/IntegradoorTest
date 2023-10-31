@@ -282,9 +282,9 @@ $(document).ready(function () {
     );
   
     // Ejectura la funcion Consultar Placa Vehiculo
-    $("#btnConsultarPlaca").click(function () {
-      consulPlaca();
-    });
+    // $("#btnConsultarPlaca").click(function () {
+    //   consulPlaca();
+    // });
   
     // Ejectura la funcion Consultar Placa Vehiculo pesado
     $("#btnConsultarPlacaPesados").click(function () {

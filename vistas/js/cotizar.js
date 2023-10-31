@@ -288,9 +288,9 @@ function convertirNumero() {
   });
 
   // Ejectura la funcion Consultar Placa Vehiculo pesado
-  $("#btnConsultarPlacaPesados").click(function () {
-    consulPlacaPesados();
-  });
+  // $("#btnConsultarPlacaPesados").click(function () {
+  //   consulPlacaPesados();
+  // });
 
   // Ejecuta la funcion que trae el Codigo Fasecolda de la Guia
   $("#btnConsultarVeh").click(function () {
