@@ -1078,18 +1078,18 @@ while ($rowRespuestap1 = mysqli_fetch_assoc($respuestaqueryp1)) {
 									AND `rce` LIKE '$valorRC' AND `ppd` LIKE '$perdidaParcial'";
 	$respuestaqueryAsistencia1 =  $conexion->query($queryConsultaAsistencia1);
 	$rowRespuestaAsistencia1 = mysqli_fetch_assoc($respuestaqueryAsistencia1);
-	$rce_excesonumeric = $rowRespuestaAsistencia1['rceexceso'];
+	$rce_excesoNumeric = $rowRespuestaAsistencia1['rceexceso'];
 
-	if (is_numeric($rce_excesonumeric)) {
-		$pdfValorRC_Exceso = $rce_excesonumeric/1000000;
+	if (is_numeric($rce_excesoNumeric)) {
+		$pdfValorRC_Exceso = $rce_excesoNumeric/1000000;
 	} else {
 		$pdfValorRC_Exceso = $rowRespuestaAsistencia1['rceexceso'];
 	} 
 
 	if ($cont5 % 2 == 0) {
-		$html3 .= '<td class="puntos fondo" style="width:' . $valorTabla . '%;"><center><font size="7"style="text-align: center;  font-family:dejavusanscondensed;">' . $rowRespuestaAsistencia1['rceexceso'] . '</font></center></td>';
+		$html3 .= '<td class="puntos fondo" style="width:' . $valorTabla . '%;"><center><font size="7"style="text-align: center;  font-family:dejavusanscondensed;">' . $pdfValorRC_Exceso . '</font></center></td>';
 	} else {
-		$html3 .= '<td class="puntos fondo2" style="width:' . $valorTabla . '%;"><center><font size="7"style="text-align: center;  font-family:dejavusanscondensed;">' . $rowRespuestaAsistencia1['rceexceso'] . '</font></center></td>';
+		$html3 .= '<td class="puntos fondo2" style="width:' . $valorTabla . '%;"><center><font size="7"style="text-align: center;  font-family:dejavusanscondensed;">' . $pdfValorRC_Exceso . '</font></center></td>';
 	}
 
 	$cont5 += 1;
