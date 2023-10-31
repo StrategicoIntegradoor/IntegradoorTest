@@ -230,7 +230,7 @@ if ($_SESSION["permisos"]["Cotizarpesados"] != "x") {
           </form>
 
           <!-- FORMULARIO VEHICULO MANUAL -->
-          <form method="Post" id="formVehManual">
+          <!-- <form method="Post" id="formVehManual"> -->
 
             <div id="formularioVehiculo">
               <div class="col-lg-12" id="headerFormVeh">
@@ -349,7 +349,7 @@ if ($_SESSION["permisos"]["Cotizarpesados"] != "x") {
               </form>
             </div>
 
-          </form>
+          <!-- </form> -->
 
           <!-- FORMULARIO RESUMEN VEHICULO -->
           <form method="Post" id="formResumVeh">
