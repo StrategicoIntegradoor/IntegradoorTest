@@ -32,6 +32,7 @@ $Ciudad = $_POST["Ciudad"];
 $benefOneroso = $_POST["benefOneroso"];
 $idCotizacion = $_POST["idCotizacion"];
 $idUsuario = $_SESSION["idUsuario"];
+$mundial = $_SESSION["mundial"];
 // var_dump($CodigoClase);
 // var_dump($idCotizacion);
 // die();
@@ -113,9 +114,9 @@ if($idCotizacion == ""){
 	// INSERCIÓN DATOS DE LA COTIZACION REALIZADA
 	$sql = "INSERT INTO `cotizaciones` (`id_cotizacion`, `cot_codigo`, `cot_fch_cotizacion`, `cot_placa`, `cot_cerokm`, `cot_cod_clase`, `cot_clase`, 
 										`cot_marca`, `cot_modelo`, `cot_linea`, `cot_fasecolda`, `cot_valor_asegurado`, `cot_tip_uso`, `cot_tip_servicio`, `cot_departamento`, 
-										`cot_ciudad`, `cot_bnf_oneroso`, `id_cliente`, `id_usuario`) 
+										`cot_ciudad`, `cot_bnf_oneroso`, `id_cliente`, `id_usuario`, `cot_mundial`) 
 								VALUES (NULL, '$cot_codigo', current_timestamp(), '$placa', '$esCeroKm', '$CodigoClase', '$Clase', '$Marca', '$Modelo', '$Linea', '$Fasecolda', 
-										'$ValorAsegurado', '$tipoUsoVehiculo', '$tipoServicio', '$Departamento', '$Ciudad', '$benefOneroso', '$idCliente', '$idUsuario');";
+										'$ValorAsegurado', '$tipoUsoVehiculo', '$tipoServicio', '$Departamento', '$Ciudad', '$benefOneroso', '$idCliente', '$idUsuario', $mundial);";
 
 	$res = mysqli_query($con, $sql);
 	$num_rows = mysqli_affected_rows($con);
