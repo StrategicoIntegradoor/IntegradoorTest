@@ -1087,7 +1087,11 @@ function editarCotizacion(id) {
 
               var primaFormat = formatNumber(oferta.Prima);
 
-              var valorRCFormat = formatNumber(oferta.ValorRC);
+              if (is_numeric(oferta.ValorRC)) {
+                var valorRCFormat = formatNumber(oferta.ValorRC);
+              } else {
+                var valorRCFormat = (oferta.ValorRC);
+              } 
 
 
 
