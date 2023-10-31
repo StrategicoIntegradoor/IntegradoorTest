@@ -715,13 +715,19 @@ function masAseg() {
               mensajeConsulta == "Unable to connect to the remote server"
             ) {
               document.getElementById("formularioVehiculo").style.display =
-                "block";
+              "block";
+              document.getElementById("headerAsegurado").style.display = "block";
+              document.getElementById("masA").style.display = "block";
+              document.getElementById("DatosAsegurado").style.display = "none";
             } else {
               contErrMetEstado++;
               if (contErrMetEstado > 1) {
                 document.getElementById("formularioVehiculo").style.display =
-                  "block";
-                contErrMetEstado = 0;
+                "block";
+                 document.getElementById("headerAsegurado").style.display = "block";
+                 document.getElementById("masA").style.display = "block";
+                 document.getElementById("DatosAsegurado").style.display = "none";
+                 contErrMetEstado = 0;
               } else {
                 setTimeout(consulPlaca, 2000);
               }
@@ -736,6 +742,12 @@ function masAseg() {
           if (contErrProtocolo > 1) {
             $("#loaderPlaca").html("");
             document.getElementById("formularioVehiculo").style.display = "block";
+            
+            document.getElementById("headerAsegurado").style.display = "block";
+            document.getElementById("masA").style.display = "block";
+    
+            document.getElementById("DatosAsegurado").style.display = "none";
+              
             contErrProtocolo = 0;
           } else {
             setTimeout(consulPlaca, 4000);
