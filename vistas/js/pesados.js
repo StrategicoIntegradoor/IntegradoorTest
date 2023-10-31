@@ -1114,7 +1114,7 @@ function registrarOferta(
     logo,
     UrlPdf
   ) => {
-    // console.log("aseguradora:", aseguradora);
+    console.log("aseguradora:", aseguradora);
     // console.log("prima:", prima);
     // console.log("producto:", producto);
     // console.log("numCotizOferta:", numCotizOferta);
