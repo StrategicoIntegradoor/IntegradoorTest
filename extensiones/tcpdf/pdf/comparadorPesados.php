@@ -997,9 +997,6 @@ if($valorlimiterow==10){
 			$pdfValorRC = $rowRespuesta9['ValorRC'];
 		} 
 
-		var_dump($rowRespuesta9);
-		die();
-
 		if ($cont4 % 2 == 0) {
 	
 			$html3 .= '<td class="puntos fondo" style="width:' . $valorTabla . '%; font-family:dejavusanscondensed;"><center><font size="7" style="text-align: center;">' . $pdfValorRC . '</font></center></td>';
