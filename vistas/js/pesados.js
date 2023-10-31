@@ -1547,13 +1547,13 @@ function cotizarOfertasPesados() {
               })
               .then((ofertas) => {
                   if (typeof ofertas[0].Resultado !== 'undefined') {
-                    agregarAseguradoraFallidaPesados('Seguros Mundial')
+                    agregarAseguradoraFallidaPesados('Mundial')
                     ofertas[0].Mensajes.forEach(mensaje => {
-                      mostrarAlertarCotizacionFallida('Seguros Mundial', mensaje)
+                      mostrarAlertarCotizacionFallida('Mundial', mensaje)
                     })
                   } else {
                     validarOfertasPesados(ofertas);
-                    mostrarAlertaCotizacionExitosa('Seguros Mundial Trailer')
+                    mostrarAlertaCotizacionExitosa('Mundial')
                   }
                 })
                 .catch((err) => {
@@ -1585,7 +1585,7 @@ function cotizarOfertasPesados() {
                     });
                   } else {
                     validarOfertasPesados(ofertas);
-                    mostrarAlertaCotizacionExitosa(`Mundial ${plan}`);
+                    mostrarAlertaCotizacionExitosa(`Mundial`);
                   }
                 })
                 .catch((err) => {
