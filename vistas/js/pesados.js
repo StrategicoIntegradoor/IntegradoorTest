@@ -1496,10 +1496,12 @@ function cotizarOfertasPesados() {
           };
 
           let cont = [];
+          const aseguradorasExitosas = new Set();
           const mostrarAlertaCotizacionExitosa = aseguradora => {
-            document.querySelector('.exitosas').innerHTML += `<span style="margin-right: 15px;"><i class="fa fa-check" aria-hidden="true" style="color: green; margin-right: 5px;
-                  "></i>${aseguradora}</span>
-                  `
+            if (!aseguradorasExitosas.has(aseguradora)) {
+              aseguradorasExitosas.add(aseguradora);
+              document.querySelector('.exitosas').innerHTML += `<span style="margin-right: 15px;"><i class="fa fa-check" aria-hidden="true" style="color: green; margin-right: 5px;"></i>${aseguradora}</span>`;
+            }
           }
 
           const mostrarAlertarCotizacionFallida = (aseguradora, mensaje) => {
