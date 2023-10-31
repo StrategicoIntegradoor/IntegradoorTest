@@ -165,7 +165,7 @@ $pdf->Image('../../../vistas/img/logos/camion.png', 24.5, 126.5, 0, 35, 'PNG', '
 $pdf->SetFont('dejavusanscondensed', '', 2);
 
 $pdf->SetFont('dejavusanscondensed', 'B', 12);
-$pdf->SetXY(98, 19.2);
+$pdf->SetXY(100, 19.2);
 $pdf->SetTextColor(235, 135, 39);
 $pdf->Cell(25, 6, strtoupper($rest) . "" . strtoupper($rest2), 0, 1, '');
 
