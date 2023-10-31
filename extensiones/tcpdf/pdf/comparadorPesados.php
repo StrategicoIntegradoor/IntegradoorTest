@@ -934,7 +934,7 @@ $valorlimiterow = mysqli_num_rows($respuestaquery9);
 $response = mysqli_fetch_assoc($respuestaquery9);
 $valorRC = $response['ValorRC'];
 if (is_numeric($valorRC)) {
-    $pdfValorRC = $valorRC/100;
+    $pdfValorRC = $valorRC/1000000;
 } else {
 	$pdfValorRC = $valorRC;
 } 
