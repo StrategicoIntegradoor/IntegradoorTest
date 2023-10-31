@@ -957,9 +957,6 @@ if($valorlimiterow==10){
 			$pdfValorRC = $rowRespuesta9['ValorRC'];
 		} 
 
-		var_dump($pdfValorRC);
-		die();
-
 		if ($cont4 % 2 == 0) {
 	
 			$html3 .= '<td class="puntos fondo" style="width:' . $valorTabla . '%; font-family:dejavusanscondensed;"><center><font size="6" style="text-align: center;"><div style="font-size:4pt">&nbsp;</div>' . $pdfValorRC . '</font></center></td>';
@@ -980,9 +977,6 @@ if($valorlimiterow==10){
 		} else {
 			$pdfValorRC = $rowRespuesta9['ValorRC'];
 		} 
-
-		var_dump($pdfValorRC);
-		die();
 
 		if ($cont4 % 2 == 0) {
 	
@@ -1047,11 +1041,18 @@ while ($rowRespuesta8 = mysqli_fetch_assoc($respuestaquery8)) {
 									// -- AND `rce` LIKE '$valorRC' AND `ppd` LIKE '$perdidaParcial'";
 	$respuestaqueryAsistencia1 =  $conexion->query($queryConsultaAsistencia1);
 	$rowRespuestaAsistencia1 = mysqli_fetch_assoc($respuestaqueryAsistencia1);
+	$rce_excesonumeric = $rowRespuestaAsistencia1['deducible'];
+
+	if (is_numeric($rce_excesonumeric)) {
+		$pdfValorRC_Exceso = $rce_excesonumeric/1000000;
+	} else {
+		$pdfValorRC_Exceso = $rowRespuestaAsistencia1['deducible'];
+	} 
 
 	if ($cont5 % 2 == 0) {
-		$html3 .= '<td class="puntos fondo" style="width:' . $valorTabla . '%;"><center><font size="7"style="text-align: center;  font-family:dejavusanscondensed;">' . $rowRespuestaAsistencia1['deducible'] . '</font></center></td>';
+		$html3 .= '<td class="puntos fondo" style="width:' . $valorTabla . '%;"><center><font size="7"style="text-align: center;  font-family:dejavusanscondensed;">' . $pdfValorRC_Exceso . '</font></center></td>';
 	} else {
-		$html3 .= '<td class="puntos fondo2" style="width:' . $valorTabla . '%;"><center><font size="7"style="text-align: center;  font-family:dejavusanscondensed;">' . $rowRespuestaAsistencia1['deducible'] . '</font></center></td>';
+		$html3 .= '<td class="puntos fondo2" style="width:' . $valorTabla . '%;"><center><font size="7"style="text-align: center;  font-family:dejavusanscondensed;">' . $pdfValorRC_Exceso . '</font></center></td>';
 	}
 
 	$cont5 += 1;
