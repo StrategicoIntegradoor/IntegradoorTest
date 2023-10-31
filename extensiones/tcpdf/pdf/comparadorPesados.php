@@ -931,6 +931,15 @@ $respuestaquery9 =  $conexion->query($query9);
 
 //$valorlimiterow cuenta el numero de ofertas seleccionadas
 $valorlimiterow = mysqli_num_rows($respuestaquery9);
+$response = mysqli_fetch_assoc($respuestaquery9);
+$valorRC = $response['ValorRC'];
+if (is_numeric($valorRC)) {
+    var_dump("La variable \$valorRC es un número o una cadena numérica.");
+	die();
+} else {
+    var_dump("La variable \$valorRC no es un número o una cadena numérica.");
+	die();
+} 
 
 if($valorlimiterow==10){
 	while ($rowRespuesta9 = mysqli_fetch_assoc($respuestaquery9)) {
