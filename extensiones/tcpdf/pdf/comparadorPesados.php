@@ -934,11 +934,9 @@ $valorlimiterow = mysqli_num_rows($respuestaquery9);
 $response = mysqli_fetch_assoc($respuestaquery9);
 $valorRC = $response['ValorRC'];
 if (is_numeric($valorRC)) {
-    var_dump("La variable \$valorRC es un número o una cadena numérica.");
-	die();
+    $pdfValorRC = $valorRC/100;
 } else {
-    var_dump("La variable \$valorRC no es un número o una cadena numérica.");
-	die();
+	$pdfValorRC = $valorRC;
 } 
 
 if($valorlimiterow==10){
@@ -946,10 +944,10 @@ if($valorlimiterow==10){
 
 		if ($cont4 % 2 == 0) {
 	
-			$html3 .= '<td class="puntos fondo" style="width:' . $valorTabla . '%; font-family:dejavusanscondensed;"><center><font size="6" style="text-align: center;"><div style="font-size:4pt">&nbsp;</div>' . $rowRespuesta9['ValorRC'] . '</font></center></td>';
+			$html3 .= '<td class="puntos fondo" style="width:' . $valorTabla . '%; font-family:dejavusanscondensed;"><center><font size="6" style="text-align: center;"><div style="font-size:4pt">&nbsp;</div>' . $pdfValorRC . '</font></center></td>';
 		} else {
 	
-			$html3 .= '<td class="puntos fondo2" style="width:' . $valorTabla . '%; font-family:dejavusanscondensed;"><center><font size="6" style="text-align: center;"><div style="font-size:4pt">&nbsp;</div>' . $rowRespuesta9['ValorRC'] . '</font></center></td>';
+			$html3 .= '<td class="puntos fondo2" style="width:' . $valorTabla . '%; font-family:dejavusanscondensed;"><center><font size="6" style="text-align: center;"><div style="font-size:4pt">&nbsp;</div>' . $pdfValorRC . '</font></center></td>';
 		}
 	
 		$cont4 += 1;
@@ -960,10 +958,10 @@ if($valorlimiterow==10){
 
 		if ($cont4 % 2 == 0) {
 	
-			$html3 .= '<td class="puntos fondo" style="width:' . $valorTabla . '%; font-family:dejavusanscondensed;"><center><font size="5" style="text-align: center;">' . $rowRespuesta9['ValorRC'] . '</font></center></td>';
+			$html3 .= '<td class="puntos fondo" style="width:' . $valorTabla . '%; font-family:dejavusanscondensed;"><center><font size="5" style="text-align: center;">' . $pdfValorRC . '</font></center></td>';
 		} else {
 	
-			$html3 .= '<td class="puntos fondo2" style="width:' . $valorTabla . '%; font-family:dejavusanscondensed;"><center><font size="5" style="text-align: center;">' . $rowRespuesta9['ValorRC'] . '</font></center></td>';
+			$html3 .= '<td class="puntos fondo2" style="width:' . $valorTabla . '%; font-family:dejavusanscondensed;"><center><font size="5" style="text-align: center;">' . $pdfValorRC . '</font></center></td>';
 		}
 	
 		$cont4 += 1;
@@ -974,10 +972,10 @@ if($valorlimiterow==10){
 
 		if ($cont4 % 2 == 0) {
 	
-			$html3 .= '<td class="puntos fondo" style="width:' . $valorTabla . '%; font-family:dejavusanscondensed;"><center><font size="7" style="text-align: center;">' . $rowRespuesta9['ValorRC'] . '</font></center></td>';
+			$html3 .= '<td class="puntos fondo" style="width:' . $valorTabla . '%; font-family:dejavusanscondensed;"><center><font size="7" style="text-align: center;">' . $pdfValorRC . '</font></center></td>';
 		} else {
 	
-			$html3 .= '<td class="puntos fondo2" style="width:' . $valorTabla . '%; font-family:dejavusanscondensed;"><center><font size="7" style="text-align: center;">' . $rowRespuesta9['ValorRC'] . '</font></center></td>';
+			$html3 .= '<td class="puntos fondo2" style="width:' . $valorTabla . '%; font-family:dejavusanscondensed;"><center><font size="7" style="text-align: center;">' . $pdfValorRC . '</font></center></td>';
 		}
 	
 		$cont4 += 1;
