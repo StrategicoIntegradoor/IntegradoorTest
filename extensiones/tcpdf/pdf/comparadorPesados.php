@@ -946,7 +946,7 @@ if($valorlimiterow==10){
 		if (is_numeric($valorRC)) {
 			$pdfValorRC = $valorRC/1000000;
 		} else {
-			$pdfValorRC = $response['ValorRC'];
+			$pdfValorRC = $rowRespuesta9['ValorRC'];
 		} 
 
 		var_dump($pdfValorRC);
@@ -970,7 +970,7 @@ if($valorlimiterow==10){
 		if (is_numeric($valorRC)) {
 			$pdfValorRC = $valorRC/1000000;
 		} else {
-			$pdfValorRC = $response['ValorRC'];
+			$pdfValorRC = $rowRespuesta9['ValorRC'];
 		} 
 
 		var_dump($pdfValorRC);
@@ -994,7 +994,7 @@ if($valorlimiterow==10){
 		if (is_numeric($valorRC)) {
 			$pdfValorRC = $valorRC/1000000;
 		} else {
-			$pdfValorRC = $response['ValorRC'];
+			$pdfValorRC = $rowRespuesta9['ValorRC'];
 		} 
 
 		var_dump($rowRespuesta9);
