@@ -936,7 +936,7 @@ $valorRC = $response['ValorRC'];
 if (is_numeric($valorRC)) {
     $pdfValorRC = $valorRC/1000000;
 } else {
-	$pdfValorRC = $valorRC;
+	$pdfValorRC = $response['ValorRC'];
 } 
 
 if($valorlimiterow==10){
