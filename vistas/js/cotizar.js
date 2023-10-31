@@ -34,12 +34,11 @@ $(document).ready(function () {
       }).then(function (myJson) {
 
         $("#previsoraToken").val(myJson.TokenPrevisora);
-        console.log(myJson.TokenPrevisora)
       });
 
   }
-
-  // Elimina los espacios de la placa
+  
+    // Elimina los espacios de la placa
   $("#placaVeh").keyup(function () {
     var numeroInput = document.getElementById("placaVeh").value;
     var placaSinEspacios = numeroInput.replace(/\s/g, '');
@@ -57,28 +56,8 @@ $(document).ready(function () {
   $("#placaVeh").on("keypress", function (e) {
     if (e.which == 32) return false;
   });
-
-  // Excepción de Motos
-  // var placaInput = document.getElementById("placaVeh");
-  // var mensajeError = document.getElementById("mensajeErrorPlaca");
-
-  // placaInput.addEventListener("blur", function () {
-  //     var placa = placaInput.value.trim(); // Eliminar espacios en blanco al principio y al final
-      
-  //     // Usar una expresión regular para validar el formato AAA111
-  //     var formatoValido = /^[A-Z]{3}\d{3}$/.test(placa);
-      
-  //     if (formatoValido) {
-  //         mensajeError.style.display = "none";
-  //         placaInput.setCustomValidity("");
-  //     } else {
-  //         mensajeError.style.display = "block";
-  //         mensajeError.textContent = "Formato de placa incorrecto, verificar información";
-  //         placaInput.setCustomValidity("Formato de placa incorrecto, verificar información");
-  //     }
-  // });
-
-  // Obtener el campo de entrada por su ID
+  
+   // Obtener el campo de entrada por su ID
   var placaInput = document.getElementById("placaVeh");
 
   // Agregar un evento de escucha para el evento "input"
@@ -92,66 +71,8 @@ $(document).ready(function () {
       // Actualizar el valor del campo de entrada con el valor filtrado
       placaInput.value = valorFiltrado;
   });
-
-  // Si conoce la Placa muestra el campo Placa y oculta el campo CeroKM.
-  $("#txtConocesLaPlacaSi").click(function () {
-    document.getElementById("contenPlaca").style.display = "block";
-    document.getElementById("contenCeroKM").style.display = "none";
-    document.getElementById("placaVeh").value = "";
-    $("#txtEsCeroKmSi").prop("checked", false);
-    $("#txtEsCeroKmNo").prop("checked", true);
-  });
-
-  // Si no conoce la Placa oculta el campo Placa y muestra el campo CeroKM.
-  $("#txtConocesLaPlacaNo").click(function () {
-    document.getElementById("contenPlaca").style.display = "none";
-    document.getElementById("contenCeroKM").style.display = "block";
-    document.getElementById("placaVeh").value = "CAT770";
-    $("#txtEsCeroKmNo").prop("checked", false);
-  });
-
-  // Validamos que si el vehiculo No es Cero KM, debe tener Placa
-  $("#txtEsCeroKmNo").click(function () {
-    var conoceslaPlaca = document.getElementById("txtConocesLaPlacaNo").checked;
-    var esCeroKmNo = document.getElementById("txtEsCeroKmNo").checked;
-
-    if (conoceslaPlaca == true && esCeroKmNo == true) {
-      Swal.fire({
-        icon: 'error',
-        title: '!Si el vehiculo no es 0 km, debe tener placa!',
-        text: 'Si el vehiculo tiene placa, no es 0 km',
-        showConfirmButton: true
-      })
-      $("#txtEsCeroKmNo").prop("checked", false);
-    }
-  });
-
-  // DOCUMENTO
-
   
-  //Elimina espacios y caracteres especiales en el campo DOCUMENTO al copiar y pegar informacion
-  $("#numDocumentoID").change(function () {
-    convertirNumero();
-  });
-
-  $(document).ready(function () {
-    // Detectar el evento de entrada (input) en el campo de número de documento
-    $("#numDocumentoID").on('input', function () {
-        convertirNumero();
-    });   
-  });
-
-function convertirNumero() {
-  var numeroInput = document.getElementById("numDocumentoID").value;
-  var numeroSinCaracteresEspeciales = numeroInput.replace(/[^0-9]/g, '');
-  document.getElementById("numDocumentoID").value = numeroSinCaracteresEspeciales;
-}
-
-  // Consulta informacion del usuario en la bdd
-  $("#numDocumentoID").change(function () {
-    consultarAsegurado();
-  });
-
+  
   // Obtener los campos de entrada por su ID
   var nombreInput = document.getElementById("txtNombres");
   var apellidoInput = document.getElementById("txtApellidos");
@@ -163,7 +84,7 @@ function convertirNumero() {
       input.value = valorFiltrado;
   }
 
-  // MANEJO DE NOMBRES Y APELLIDOS 
+ // MANEJO DE NOMBRES Y APELLIDOS 
 
   // Agregar eventos de escucha para el evento "input" en ambos campos
   nombreInput.addEventListener("input", function () {
@@ -232,6 +153,65 @@ function convertirNumero() {
     );
   });
 
+  // Si conoce la Placa muestra el campo Placa y oculta el campo CeroKM.
+  $("#txtConocesLaPlacaSi").click(function () {
+    document.getElementById("contenPlaca").style.display = "block";
+    document.getElementById("contenCeroKM").style.display = "none";
+    document.getElementById("placaVeh").value = "";
+    $("#txtEsCeroKmSi").prop("checked", false);
+    $("#txtEsCeroKmNo").prop("checked", true);
+  });
+
+  // Si no conoce la Placa oculta el campo Placa y muestra el campo CeroKM.
+  $("#txtConocesLaPlacaNo").click(function () {
+    document.getElementById("contenPlaca").style.display = "none";
+    document.getElementById("contenCeroKM").style.display = "block";
+    document.getElementById("placaVeh").value = "CAT770";
+    $("#txtEsCeroKmNo").prop("checked", false);
+  });
+
+  // Validamos que si el vehiculo No es Cero KM, debe tener Placa
+  $("#txtEsCeroKmNo").click(function () {
+    var conoceslaPlaca = document.getElementById("txtConocesLaPlacaNo").checked;
+    var esCeroKmNo = document.getElementById("txtEsCeroKmNo").checked;
+
+    if (conoceslaPlaca == true && esCeroKmNo == true) {
+      Swal.fire({
+        icon: 'error',
+        title: '!Si el vehiculo no es 0 km, debe tener placa!',
+        text: 'Si el vehiculo tiene placa, no es 0 km',
+        showConfirmButton: true
+      })
+      $("#txtEsCeroKmNo").prop("checked", false);
+    }
+  });
+  
+  // DOCUMENTO
+
+  
+  //Elimina espacios y caracteres especiales en el campo DOCUMENTO al copiar y pegar informacion
+  $("#numDocumentoID").change(function () {
+    convertirNumero();
+  });
+
+  $(document).ready(function () {
+    // Detectar el evento de entrada (input) en el campo de número de documento
+    $("#numDocumentoID").on('input', function () {
+        convertirNumero();
+    });   
+  });
+
+function convertirNumero() {
+  var numeroInput = document.getElementById("numDocumentoID").value;
+  var numeroSinCaracteresEspeciales = numeroInput.replace(/[^0-9]/g, '');
+  document.getElementById("numDocumentoID").value = numeroSinCaracteresEspeciales;
+}
+
+  // Convierte la Placa ingresada en Mayusculas
+  $("#numDocumentoID").change(function () {
+    consultarAsegurado();
+  });
+
   // Carga la fecha de Nacimiento
   $("#dianacimiento, #mesnacimiento, #anionacimiento").select2({
     theme: "bootstrap fecnacimiento",
@@ -244,6 +224,26 @@ function convertirNumero() {
     theme: "bootstrap edad",
     language: "es",
     width: "100%",
+  });
+
+  // Conviete la letras iniciales del Nombre y el Apellido deL Cliente en Mayusculas
+  $("#txtNombres").keyup(function () {
+    var cliNombres = document.getElementById("txtNombres").value.toLowerCase();
+    $("#txtNombres").val(
+      cliNombres.replace(/^(.)|\s(.)/g, function ($1) {
+        return $1.toUpperCase();
+      })
+    );
+  });
+  $("#txtApellidos").keyup(function () {
+    var cliApellido = document
+      .getElementById("txtApellidos")
+      .value.toLowerCase();
+    $("#txtApellidos").val(
+      cliApellido.replace(/^(.)|\s(.)/g, function ($1) {
+        return $1.toUpperCase();
+      })
+    );
   });
 
   // Carga los Departamentos disponibles
@@ -481,7 +481,6 @@ function consulPlaca() {
         return response.json();
       })
       .then(function (myJson) {
-        console.log(myJson)
         var estadoConsulta = myJson.Success;
         var mensajeConsulta = myJson.Message;
 
@@ -556,146 +555,46 @@ function consulPlaca() {
             mensajeConsulta == "Vehículo no encontrado." ||
             mensajeConsulta == "Unable to connect to the remote server"
           ) {
-            consulPlacaMapfre(valnumplaca);
-            // document.getElementById("formularioVehiculo").style.display =
-            //   "block";
+            document.getElementById("formularioVehiculo").style.display =
+              "block";
+            document.getElementById("headerAsegurado").style.display = "block";
+            document.getElementById("masA").style.display = "block";
+            document.getElementById("DatosAsegurado").style.display = "none";
           } else {
             contErrMetEstado++;
             if (contErrMetEstado > 1) {
-              // document.getElementById("formularioVehiculo").style.display =
-              //   "block";
-              consulPlacaMapfre(valnumplaca);
+              document.getElementById("formularioVehiculo").style.display =
+                "block";
+                 document.getElementById("headerAsegurado").style.display = "block";
+                 document.getElementById("masA").style.display = "block";
+                 document.getElementById("DatosAsegurado").style.display = "none";
               contErrMetEstado = 0;
             } else {
-              setTimeout(consulPlacaMapfre, 200);
+              setTimeout(consulPlaca, 2000);
             }
           }
           $("#loaderPlaca").html("");
         }
       })
       .catch(function (error) {
-        consulPlacaMapfre(valnumplaca);
         console.log("Parece que hubo un problema: \n", error);
 
         contErrProtocolo++;
         if (contErrProtocolo > 1) {
           $("#loaderPlaca").html("");
-          // document.getElementById("formularioVehiculo").style.display = "block";
-          contErrProtocolo = 0;
-          consulPlacaMapfre(valnumplaca);
-        } else {
-          setTimeout(consulPlaca, 400);
-        }
-      });
-  }
-}
-
-function consulPlacaMapfre(valnumplaca){
-
-  let bodyContent = JSON.stringify({
-    "Placa": valnumplaca
-  });
-
-  let headersList = {
-    "Accept": "*/*",
-    "User-Agent": "Thunder Client (https://www.thunderclient.com)",
-    "Content-Type": "application/json"
-  }
-
-    fetch("https://grupoasistencia.com/webserviceAutos/ultimaPolizaMapfre", {
-      method: "POST",
-      body: bodyContent,
-      headers: headersList
-      }).then(function(response) {
-        return response.json();
-      }).then(async function(data) {
-        console.log(data)
-        var resultadoConsulta = data.respuesta.errorEjecucion;
-        var codigoClase = data.polizaReciente.COD_MODELO;
-        var marcaCod = data.polizaReciente.COD_MARCA;
-        var clase = data.polizaReciente.NOM_CLASE;
-        var linea = data.polizaReciente.NOM_LINEA;
-        var modelo = data.polizaReciente.ANIO_VEHICULO;
-        var cilindraje = data.polizaReciente.VAL_CILINDRAJE;
-        var codFasecolda = data.polizaReciente.COD_FASECOLDA;
-        var aseguradora = data.polizaReciente.nomCompania;
-        // console.log("Mapfre consulta");
-        // console.log("Marca Cod:", marcaCod);
-        // console.log("Clase:", clase);
-        // console.log("Línea:", linea);
-        // console.log("Modelo:", modelo);
-        // console.log("Cilindraje:", cilindraje);
-        // console.log("Código Fasecolda:", codFasecolda);
-        // console.log("Aseguradora:", aseguradora);
-
-        propietario = data.polizaReciente.asegNombre;
-        cedulaP = data.polizaReciente.asegCodDocum;
-
-        
-        if (marcaCod == "" && clase == "" && linea == "" && modelo == "" && cilindraje == "" && codFasecolda == "" && aseguradora == "" && aseguradora == "" && fechFinTR == "" && propietario == "" && cedulaP == "") {
-            alert("No se encuentra poliza en esta placa")
-        }
-
-        if (resultadoConsulta == false || resultadoConsulta == "false") {
-
-          var claseVehiculo = "";
-          var limiteRCESTADO = "";
-
-          if (codigoClase == 1) {
-            claseVehiculo = "AUTOMOVILES";
-            limiteRCESTADO = 6;
-          } else if (codigoClase == 2) {
-            claseVehiculo = "CAMPEROS";
-            limiteRCESTADO = 18;
-          } else if (codigoClase == 3) {
-            claseVehiculo = "PICK UPS";
-            limiteRCESTADO = 18;
-          } else if (codigoClase == 4) {
-            claseVehiculo = "UTILITARIOS DEPORTIVOS";
-            limiteRCESTADO = 6;
-          } else if (codigoClase == 12) {
-            claseVehiculo = "MOTOCICLETA";
-            limiteRCESTADO = 6;
-          } else if (codigoClase == 14) {
-            claseVehiculo = "PESADO";
-            limiteRCESTADO = 18;
-          } else if (codigoClase == 19) {
-            claseVehiculo = "VAN";
-            limiteRCESTADO = 18;
-          } else if (codigoClase == 16) {
-            claseVehiculo = "MOTOCICLETA";
-            limiteRCESTADO = 6;
-          }
-
-          $("#CodigoClase").val(codigoClase);
-          $("#txtClaseVeh").val(claseVehiculo);
-          $("#LimiteRC").val(limiteRCESTADO);
-          $("#CodigoMarca").val(marcaCod);
-          $("#txtModeloVeh").val(modelo);
-          $("#CodigoLinea").val(linea);
-          $("#txtFasecolda").val(codFasecolda);
-
-          consulDatosFasecolda(codFasecolda, modelo).then(
-            function (resp) {
-              console.log(resp)
-              $("#txtMarcaVeh").val(resp.marcaVeh);
-              $("#txtReferenciaVeh").val(resp.lineaVeh);
-              $("#txtValorFasecolda").val(resp.valorVeh);
-            }
-          );
-          const valor = resp[llave];
-          // $("#txtValorFasecolda").val(valorAsegurado);
-
-        }else{
-          document.getElementById("formularioVehiculo").style.display =
-              "block";
-        }
-
-      }).catch(function (error) {
-        console.log("Parece que hubo un problema: \n", error);
           document.getElementById("formularioVehiculo").style.display = "block";
-      });
+          
+        document.getElementById("headerAsegurado").style.display = "block";
+        document.getElementById("masA").style.display = "block";
 
+        document.getElementById("DatosAsegurado").style.display = "none";
+          
+          contErrProtocolo = 0;
+        } else {
+          setTimeout(consulPlaca, 4000);
+        }
+      });
+  }
 }
 
 // Permite consultar la informacion del vehiculo por medio de la Placa (Seguros del Estado)
@@ -1040,12 +939,7 @@ function consulDatosFasecolda(codFasecolda, edadVeh) {
         if (data.mensaje == "No hay Registros") {
           document.getElementById("formularioVehiculo").style.display = "block";
         } else {
-          const fechasConComas = Object.entries(data)
-          .filter(([key, value]) => /^\d{4}$/.test(key))
-          .map(([key, value]) => `${key}: ${value}`);
-        
-        console.log(fechasConComas);
-          // console.log(data)
+          // console.log(data);
           var claseVeh = data.clase;
           var marcaVeh = data.marca;
           var ref1Veh = data.referencia1;
@@ -1076,7 +970,6 @@ function consulDatosFasecolda(codFasecolda, edadVeh) {
             marcaVeh: marcaVeh,
             lineaVeh: lineaVeh,
             valorVeh: valorVeh,
-            modelo: fechasConComas
           });
           reject(new Error("Fallo la Consulta"));
         }
@@ -1188,9 +1081,8 @@ function registrarOferta(
   GR,
   logo,
   UrlPdf,
-  responsabilidad_civil_familiar,
   manual,
-  pdf,
+  pdf
 ) {
   return new Promise((resolve, reject) => {
     var idCotizOferta = idCotizacion
@@ -1217,11 +1109,9 @@ function registrarOferta(
         logo: logo,
         UrlPdf: UrlPdf,
         manual: manual,
-        pdf: pdf,
-        responsabilidad_civil_familiar: responsabilidad_civil_familiar
+        pdf: pdf
       },
       success: function (data) {
-        console.log(data)
         // var datos = data.Data;
         var message = data.Message
         var success = data.Success
@@ -1351,14 +1241,11 @@ const mostrarOferta = (
 								</div>
 							</div>
 					`;
-  console.log(cardCotizacion)
   $("#cardCotizacion").append(cardCotizacion);
 };
 
 // VALIDA QUE LAS OFERTAS COTIZADAS HAYAN SIDO GUARDADAS EN SU TOTALIDAD
 function validarOfertas(ofertas) {
-  console.log(ofertas[0].responsabilidad_civil_familiar);
-  $responsabilidadCivilFamiliar = ofertas[0].responsabilidad_civil_familiar;
   ofertas.forEach((oferta, i) => {
     var numCotizacion = oferta.numero_cotizacion;
     var precioOferta = oferta.precio;
@@ -1392,7 +1279,6 @@ function validarOfertas(ofertas) {
       oferta.servicio_grua,
       oferta.imagen,
       oferta.pdf,
-      $responsabilidadCivilFamiliar,
       0
     );
   });
@@ -1428,25 +1314,8 @@ document.querySelector('#btnReCotizarFallidas').addEventListener('click', () => 
   cotizarOfertas()
 })
 
-
-
 // Captura los datos suministrados por el cliente y los envia al API para recibir la cotizacion.
 function cotizarOfertas() {
-
-  var codigoFasecolda1 = document.getElementById('txtFasecolda')
-  var contenido = codigoFasecolda1.value;
-
-  // Obtener el cuarto y quinto dígito de la variable contenido
-  var cuartoDigito = contenido.charAt(3);
-  var quintoDigito = contenido.charAt(4);
-
-  // Verificar si el cuarto dígito es igual a 0 y eliminarlo si es así
-  if (cuartoDigito === '0') {
-    condicional = quintoDigito;
-  } else {
-    // Concatenar los dígitos en un solo número
-    condicional = cuartoDigito + quintoDigito;
-  }
 
 
   var placa = document.getElementById("placaVeh").value;
@@ -1505,6 +1374,13 @@ function cotizarOfertas() {
   var cre_sbs_contrasena = document.getElementById("cre_sbs_contrasena").value;
 
 
+  /**
+   * Variables para ESTADO
+   */
+  var cre_est_usuario = document.getElementById("cre_est_usuario").value;
+  var cre_equ_contrasena = document.getElementById("cre_equ_contrasena").value;
+  var Cre_Est_Entity_Id = document.getElementById("Cre_Est_Entity_Id").value;
+  var cre_est_zona = document.getElementById("cre_est_zona").value;
 
 
 
@@ -1597,14 +1473,20 @@ function cotizarOfertas() {
         },
         ALLIANZ: {
           cre_alli_sslcertfile: cre_alli_sslcertfile,
-          cre_alli_sslkeyfile: cre_alli_sslkeyfile, 
+          cre_alli_sslkeyfile: cre_alli_sslkeyfile,
           cre_alli_passphrase: cre_alli_passphrase,
           cre_alli_partnerid: cre_alli_partnerid,
-          cre_alli_agentid: cre_alli_agentid, 
+          cre_alli_agentid: cre_alli_agentid,
           cre_alli_partnercode: cre_alli_partnercode,
           cre_alli_agentcode: cre_alli_agentcode
         },
-        
+        ESTADO: {
+          cre_est_usuario: cre_est_usuario,
+          cre_equ_contrasena: cre_equ_contrasena,
+          Cre_Est_Entity_Id: Cre_Est_Entity_Id,
+          cre_est_zona: cre_est_zona
+        },
+
       };
 
       var requestOptions = {
@@ -1672,8 +1554,8 @@ function cotizarOfertas() {
             const mostrarAlertarCotizacionFallida = (aseguradora, mensaje) => {
               document.querySelector('.fallidas').innerHTML += `<p><i class="fa fa-times" aria-hidden="true" style="color: red; margin-right: 10px;"></i><b>${aseguradora}:</b> ${mensaje}</p>`
             }
-            
 
+  
             /* Solidaria */
             cont.push(
               fetch(
@@ -2079,7 +1961,7 @@ function cotizarOfertas() {
                 })
             );
 
-            
+
             Promise.all(cont).then(() => {
               $("#btnCotizar").hide();
               $("#loaderOferta").html("");
@@ -2157,92 +2039,6 @@ function cotizarOfertas() {
                 }
               });
             });
-
-
-            //--------------- VERSION ALTERNATIVA TIEMPO DE ESPERA -------------------//
-
-            // Llamar a esta función cuando todas las promesas se resuelvan
-            // function ejecutarDespuesDePromesas() {
-              
-
-            //   setTimeout(function () {
-
-            //   $("#btnCotizar").hide();
-            //   $("#loaderOferta").html("");
-            //   $("#loaderRecotOferta").html("");
-            //   swal.fire({
-            //     type: "success",
-            //     title: "! Cotización Exitosa ¡",
-            //     showConfirmButton: true,
-            //     confirmButtonText: "Cerrar",
-            //   });
-            //     //  window.location = "index.php?ruta=editar-cotizacion&idCotizacion=" + idCotizacion;
-            //     console.log("Se completó todo");
-            //     document.querySelector('.button-recotizar').style.display = 'block'
-                
-            //     /* Se monta el botón para generar el PDF con 
-            //     el valor de la variable idCotizacion */
-            //     const contentCotizacionPDF = document.querySelector('#contenCotizacionPDF')
-            //     contentCotizacionPDF.innerHTML = `  
-            //       <div class="col-xs-12" style="width: 100%;">
-            //         <div class="row align-items-center">
-            //           <div class="col-xs-4">
-            //             <label for="checkboxAsesor">¿Deseas agregar tus datos como asesor en la cotización?</label>
-            //             <input class="form-check-input" type="checkbox" id="checkboxAsesor" style="margin-left: 10px;" checked>
-            //           </div>
-            //           <div class="col-xs-4">
-            //             <button type="button" class="btn btn-danger" id="btnParrillaPDF">
-            //               <span class="fa fa-file-text"></span> Generar PDF de Cotización
-            //             </button>
-            //           </div>
-            //         </div>
-            //       </div>
-            //     `;
-
-            //     $("#btnParrillaPDF").click(function () {
-            //       const todosOn = $(".classSelecOferta:checked").length;
-            //       const idCotizacionPDF = idCotizacion;
-            //       const checkboxAsesor = $("#checkboxAsesor");
-
-            //       if (permisos.Generarpdfdecotizacion != "x") {
-            //         Swal.fire({
-            //           icon: 'error',
-            //           title: '¡Esta versión no tiene esta funcionalidad disponible!',
-            //           showCancelButton: true,
-            //           confirmButtonText: 'Cerrar',
-            //           cancelButtonText: 'Conoce más'
-            //         }).then((result) => {
-            //           if (result.isConfirmed) {
-            //           } else if (result.isDismissed) {
-            //             window.open('https://www.integradoor.com', "_blank")
-            //           }
-            //         })
-            //       } else {
-            //         if (!todosOn) {
-            //           swal.fire({
-            //             title: "¡Debes seleccionar al menos una oferta!",
-            //           });
-            //         } else {
-            //           let url = `extensiones/tcpdf/pdf/comparador.php?cotizacion=${idCotizacionPDF}`;
-            //           if (checkboxAsesor.is(":checked")) {
-            //             url += "&generar_pdf=1";
-            //           }
-            //           window.open(url, "_blank");
-            //         }
-            //       }
-            //     });
-            //   }, 25000); // Agrega el tiempo de retraso en milisegundos aquí
-            // }
-
-            // Promise.all(cont)
-            //   .then(() => {
-            //     ejecutarDespuesDePromesas(); // Llama a la función después de que todas las promesas se resuelvan
-            //   })
-            //   .catch((error) => {
-            //     console.error(error);
-            //   });
-
-            //--------------- FIN VERSION ALTERNATIVA TIEMPO DE ESPERA -------------------//
 
             /*fetch("http://localhost/webservice_autosv1/Cotizar", requestOptions)
               .then(function (response) {
@@ -3734,14 +3530,19 @@ document.querySelector('#btn-consultar-fasecolda').addEventListener('click', e =
   if (fasecolda === '' || modelo === '') { return }
   consulDatosFasecolda(fasecolda, modelo)
     .then(data => {
-      if (typeof data.marcaVeh === 'undefined') { return }
-      $("#txtClaseVeh").val(data.claseVeh)
-      $("#txtMarcaVeh").val(data.marcaVeh)
-      $("#txtReferenciaVeh").val(data.lineaVeh)
-      $("#txtValorFasecolda").val(data.valorVeh)
-      document.querySelector('#txtFasecolda').value = fasecolda
-      document.querySelector('#txtModeloVeh').value = modelo
-      $('#staticBackdrop').modal('hide')
+      if (typeof data.marcaVeh === 'undefined') {
+        alert("Vehículo no Encontrado");
+      } else {
+        alert("Vehículo Encontrado");
+        $("#txtClaseVeh").val(data.claseVeh);
+        $("#txtMarcaVeh").val(data.marcaVeh);
+        $("#txtReferenciaVeh").val(data.lineaVeh);
+        $("#txtValorFasecolda").val(data.valorVeh);
+        document.querySelector('#txtFasecolda').value = fasecolda;
+        document.querySelector('#txtModeloVeh').value = modelo;
+        $('#staticBackdrop').modal('hide');
+      }
+
     }).catch(err => {
       console.log(err)
     })
@@ -3811,4 +3612,93 @@ function validarNumCotizaciones() {
 
 
 }
+
+$("#btnConsultarVehmanualbuscador").click(function () {
+     var fasecolda=  document.getElementById("fasecoldabuscadormanual").value;
+     var modelo=  document.getElementById("modelobuscadormanual").value;
+     
+     if(fasecolda==""){
+        alert("Error en el código fasecolda"); 
+     }
+     
+     if(modelo==""){
+        alert("Error en el modelo del vehículo"); 
+     }
+     
+     
+     if(fasecolda!="" && modelo!=""){
+          $.ajax({
+      type: "POST",
+      url: "src/fasecolda/consulDatosFasecolda.php",
+      dataType: "json",
+      data: {
+        fasecolda: fasecolda,
+        modelo: modelo,
+      },
+      success: function (data) {
+          
+        if (data.estado == undefined) {
+            alert("Vehículo no encontrado");
+        }else{
+             // console.log(data);
+            var claseVeh = data.clase;
+            var marcaVeh = data.marca;
+            var ref1Veh = data.referencia1;
+            var ref2Veh = data.referencia2;
+            var ref3Veh = data.referencia3;
+            var lineaVeh = ref1Veh + " " + ref2Veh + " " + ref3Veh;
+    
+            var valorFasecVeh = data[modelo];
+            var valorVeh = Number(valorFasecVeh) * 1000;
+            var clase = data.clase;
+            
+            $("#clasepesados").val(clase);
+
+            var placaVeh = $("#placaVeh").val();
+            if (placaVeh == "CAT770") {
+              $("#txtPlacaVeh").val("SIN PLACA - VEHÍCULO 0 KM").val();
+            } else {
+              $("#txtPlacaVeh").val(placaVeh).val();
+            }
+            
+            document.getElementById("resumenVehiculo").style.display = "block";
+            document.getElementById("contenBtnCotizar").style.display = "block";
+            document.getElementById("headerAsegurado").style.display = "block";
+            document.getElementById("masA").style.display = "block";
+            
+            document.getElementById("formularioVehiculo").style.display = "none";
+            document.getElementById("DatosAsegurado").style.display = "none";
+            
+            document.getElementById("txtFasecolda").value = fasecolda;
+            document.getElementById("txtModeloVeh").value = modelo;
+            document.getElementById("txtMarcaVeh").value = data.marca;
+            document.getElementById("txtValorFasecolda").value = valorVeh;
+            document.getElementById("txtReferenciaVeh").value = lineaVeh;
+            document.getElementById("txtClaseVeh").value = claseVeh;
+            
+            
+            
+        }
+          
+          
+          
+       
+
+        
+
+       
+        
+        
+        
+        
+        
+        
+        //01601146
+
+       // menosAseg();
+      },
+    });
+     }
+
+  });
 
