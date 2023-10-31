@@ -153,6 +153,11 @@ $pdf->Image('../../../vistas/img/logosIntermediario/LogoGA.png', 8, 13, 0, 20, '
 
 $pdf->Image('../../../vistas/img/logos/cheque.png', 100.5, 180.5, 0, -12, 'PNG', '', '', true, 160, '', false, false, 0, false, false, false);
 
+$pdf->SetFont('dejavusanscondensed', 'B', 10);
+$pdf->SetXY(158, 3);
+$pdf->SetTextColor(104, 104, 104);
+$pdf->Cell(25, 6, "No. cotización: " . $identificador);
+
 $pdf->Image('../../../vistas/img/logos/camion.png', 24.5, 126.5, 0, 35, 'PNG', '', '', true, 160, '', false, false, 0, false, false, false);
 
 //$pdf->Image('images/img/QUIMERA_BONO_FINAL3.jpg', 0, 130, 0, 117, 'JPG', '', '', false, 140, '', false, false, 0, false, false, false);
