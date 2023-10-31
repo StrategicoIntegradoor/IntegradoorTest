@@ -391,6 +391,137 @@
 
                 </div>
               </div>
+
+              <div id="DatosVehiculoPesados">
+                <div class="col-lg-12 form-resumVeh">
+                  <div class="row">
+                    <div class="col-xs-12 col-sm-6 col-md-3 form-group">
+                      <label for="txtPlacaVeh">Placa</label>
+                      <input type="text" class="form-control" id="txtPlacaVeh" placeholder="" disabled>
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-3 form-group">
+                      <label for="txtClaseVeh">Clase</label>
+                      <input type="text" class="form-control" id="txtClaseVeh" placeholder="" disabled>
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-3 form-group">
+                      <label for="txtMarcaVeh">Marca</label>
+                      <input type="text" class="form-control classMarcaVeh" id="txtMarcaVeh" placeholder="" disabled>
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-3 form-group">
+                      <label for="txtModeloVeh">Modelo</label>
+                      <input type="text" class="form-control" id="txtModeloVeh" placeholder="" disabled>
+                    </div>
+                  </div>
+
+                  <div class="row">
+                    <div class="col-xs-12 col-sm-6 col-md-3 form-group">
+                      <label for="txtReferenciaVeh">Línea</label>
+                      <input type="text" class="form-control classReferenciaVeh" id="txtReferenciaVeh" placeholder="" disabled>
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-3 form-group">
+                      <label for="txtFasecolda">Fasecolda</label>
+                      <input type="text" class="form-control" id="txtFasecolda" placeholder="" required>
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-3 form-group">
+                      <label for="txtValorFasecolda">Valor Asegurado</label>
+                      <input type="text" class="form-control" id="txtValorFasecolda" placeholder="" required>
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-3 form-group">
+                      <label for="txtTipoUsoVehiculo">Tipo de Uso</label>
+                      <select class="form-control" id="txtTipoUsoVehiculo" required>
+                        <option value=""></option>
+                        <option value="Particular" selected>Particular</option>
+                        <option value="Trabajo">Trabajo</option>
+                      </select>
+                    </div>
+                  </div>
+
+                  <div class="row">
+                    <div class="col-xs-12 col-sm-6 col-md-3 form-group">
+                      <label for="txtTipoServicio">Tipo de Servicio</label>
+                      <select class="form-control" id="txtTipoServicio" required>
+                        <option value=""></option>
+                        <option value="14" selected>Particular</option>
+                        <option value="11">Publico Municipal</option>
+                        <option value="12">Publico Intermunicipal</option>
+                      </select>
+                    </div>
+
+                    <div class="col-xs-12 col-sm-6 col-md-3 form-group">
+                      <label for="DptoCirculacion">Departamento de Circulación</label>
+                      <select class="form-control" id="DptoCirculacion" required>
+                        <option value=""></option>
+                        <option value="1">Amazonas</option>
+                        <option value="2">Antioquia</option>
+                        <option value="3">Arauca</option>
+                        <option value="4">Atlántico</option>
+                        <option value="5">Barranquilla</option>
+
+                        <option value="6">Bogotá</option>
+                        <option value="7">Bolívar</option>
+                        <option value="8">Boyacá</option>
+                        <option value="9">Caldas</option>
+                        <option value="10">Caquetá</option>
+
+                        <option value="11">Casanare</option>
+                        <option value="12">Cauca</option>
+                        <option value="13">Cesar</option>
+                        <option value="14">Chocó</option>
+                        <option value="15">Córdoba</option>
+
+                        <option value="16">Cundinamarca</option>
+                        <option value="17">Guainía</option>
+                        <option value="18">La Guajira</option>
+                        <option value="19">Guaviare</option>
+                        <option value="20">Huila</option>
+
+                        <option value="21">Magdalena</option>
+                        <option value="22">Meta</option>
+                        <option value="23">Nariño</option>
+                        <option value="24">Norte de Santander</option>
+                        <option value="25">Putumayo</option>
+
+                        <option value="26">Quindío</option>
+                        <option value="27">Risaralda</option>
+                        <option value="28">San Andrés</option>
+                        <option value="29">Santander</option>
+                        <option value="30">Sucre</option>
+
+                        <option value="31">Tolima</option>
+                        <option value="32">Valle del Cauca</option>
+                        <option value="33">Vaupés</option>
+                        <option value="34">Vichada</option>
+                      </select>
+                    </div>
+
+                    <div class="col-xs-12 col-sm-6 col-md-3 form-group">
+                      <label for="ciudadCirculacion">Ciudad de Circulación</label>
+                      <select class="form-control" id="ciudadCirculacion" required></select>
+                      <div id="listaCiudades"></div>
+                    </div>
+
+                    <div class="col-xs-12 col-sm-6 col-md-3">
+                      <div class="row">
+                        <div class="col-xs-5 col-sm-5 col-md-5 form-group">
+                          <label>Es Oneroso?</label>
+                          <div class="conten-oneroso">
+                            <label for="Si">Si</label>
+                            <input type="radio" name="oneroso" id="esOnerosoSi" value="Si">&nbsp;&nbsp;&nbsp;&nbsp;
+                            <label for="No">No</label>
+                            <input type="radio" name="oneroso" id="esOnerosoNo" value="No" required>
+                          </div>
+                        </div>
+                        <div class="col-xs-7 col-sm-7 col-md-7 form-group" id="contenBenefOneroso">
+                          <label for="benefOneroso">Beneficiario</label>
+                          <input type="text" class="form-control" id="benefOneroso">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+
             </div>
 
             <div id="contenBtnCotizar">
@@ -411,6 +542,8 @@
 
         <!-- CAMPOS OCULTOS PARA OPTENER LA INFORMACION-->
         <div style="display: none;">
+          <label>Mundial</label>
+          <input type="hidden" name="mundial" id="mundial">
           <label>Id Asegurado</label>
           <input type="hidden" name="idCliente" id="idCliente">
           <label>Celular Asegurado</label>
