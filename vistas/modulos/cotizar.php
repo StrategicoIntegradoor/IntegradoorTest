@@ -347,22 +347,20 @@ if ($_SESSION["permisos"]["Cotizarlivianos"] != "x") {
               </div>
               
               <div class ="col-lg-12 form-consulVeh">
-                  <div class= "row">
-                      <div class="col-xs-12 col-sm-6 col-md-3 form-group">
-                          <label for="clase">Código Fasecolda</label>
-                          <input type="text" maxlength="10" class="form-control" id="fasecoldabuscadormanual" placeholder="Número de fasecolda">
-                      </div>
-                      <div class="col-xs-12 col-sm-6 col-md-3 form-group">
-                          <label for="clase">Modelo Vehículo</label>
-                          <input type="text" maxlength="10" class="form-control" id="modelobuscadormanual"  placeholder="Modelo Vehículo">
-                      </div>
-                      
-                      <div style="padding-top: 25px !important;" class="col-xs-12 col-sm-6 col-md-2 form-group">
-                          <button class="btn btn-primary btn-block" id="btnConsultarVehmanualbuscador">Consultar Vehículo</button>
-                      </div>
-                      
-                      
-                  </div>
+                <div class= "row">
+                    <div class="col-xs-12 col-sm-6 col-md-3 form-group">
+                        <label for="clase">Código Fasecolda</label>
+                        <input type="text" maxlength="10" class="form-control" id="fasecoldabuscadormanual" placeholder="Número de fasecolda">
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-3 form-group">
+                        <label for="clase">Modelo Vehículo</label>
+                        <input type="text" maxlength="10" class="form-control" id="modelobuscadormanual"  placeholder="Modelo Vehículo">
+                    </div>
+                    
+                    <div style="padding-top: 25px !important;" class="col-xs-12 col-sm-6 col-md-2 form-group">
+                        <button class="btn btn-primary btn-block" id="btnConsultarVehmanualbuscador">Consultar Vehículo</button>
+                    </div>
+                </div>
               </div>
               
                 <form method="Post" id="formVehManual">
