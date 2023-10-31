@@ -462,7 +462,7 @@ while ($rowRespuesta4 = mysqli_fetch_assoc($respuestaquery4)) {
 			</td>';
 
 		}
-		else if ($rowRespuesta4['Aseguradora'] == 'Seguros Mundial') {
+		else if ($rowRespuesta4['Aseguradora'] == 'Mundial') {
 			$html2 .= '<td class="puntos td2 fondo2">
 			<div style="font-size:5pt">&nbsp;</div>
 			<img style="width:35px;" src="../../../vistas/img/logos/mundial.png" alt="">
@@ -576,7 +576,7 @@ while ($rowRespuesta4 = mysqli_fetch_assoc($respuestaquery4)) {
 			<img style="width:35px;" src="../../../vistas/img/logos/solidaria.png" alt="">
 			<div style="font-size:5pt">&nbsp;</div>
 			</td>';
-		}else if ($rowRespuesta4['Aseguradora'] == 'Seguros Mundial') {
+		}else if ($rowRespuesta4['Aseguradora'] == 'Mundial') {
 			$html2 .= '<td class="puntos td2 fondo">
 			<div style="font-size:5pt">&nbsp;</div>
 			<img style="width:35px;" src="../../../vistas/img/logos/mundial.png" alt="">
@@ -835,7 +835,7 @@ while ($rowRespuesta7 = mysqli_fetch_assoc($respuestaquery7)) {
 			<img style="width:35px;" src="../../../vistas/img/logos/solidaria.png" alt="">
 			<div style="font-size:5pt">&nbsp;</div>
 			</td>';
-		} else if ($rowRespuesta7['Aseguradora'] == 'Seguros Mundial') {
+		} else if ($rowRespuesta7['Aseguradora'] == 'Mundial') {
 			$html3 .= '<td class="puntos fondo" style="width:' . $valorTabla . '%;text-align: center;">
 			<div style="font-size:5pt">&nbsp;</div>
 			<img style="width:35px;" src="../../../vistas/img/logos/mundial.png" alt="">
@@ -912,7 +912,7 @@ while ($rowRespuesta7 = mysqli_fetch_assoc($respuestaquery7)) {
 			$html3 .= '<td class="puntos fondo2" style="width:' . $valorTabla . '%;text-align: center;">
 			<div style="font-size:5pt">&nbsp;</div>
 			<img style="width:35px;" src="../../../vistas/img/logos/solidaria.png" alt=""></td>';
-		} else if ($rowRespuesta7['Aseguradora'] == 'Seguros Mundial') {
+		} else if ($rowRespuesta7['Aseguradora'] == 'Mundial') {
 			$html3 .= '<td class="puntos fondo2" style="width:' . $valorTabla . '%;text-align: center;">
 			<div style="font-size:5pt">&nbsp;</div>
 			<img style="width:35px;" src="../../../vistas/img/logos/mundial.png" alt=""></td>';
@@ -1709,7 +1709,7 @@ while ($rowRespuesta29 = mysqli_fetch_assoc($respuestaquery29)) {
 		$html6 .= '<td style="width:40%;text-align: center;">
 		<div style="font-size:6pt">&nbsp;</div>
 		<img style="width:75px;" src="../../../vistas/img/logos/solidaria.png" alt=""></td>';
-	}else if ($rowRespuesta29['Aseguradora'] == 'Seguros Mundial') {
+	}else if ($rowRespuesta29['Aseguradora'] == 'Mundial') {
 		$html6 .= '<td style="width:40%;text-align: center;">
 		<div style="font-size:6pt">&nbsp;</div>
 		<img style="width:75px;" src="../../../vistas/img/logos/mundial.png" alt=""></td>';
