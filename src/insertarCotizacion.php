@@ -34,8 +34,8 @@ $idCotizacion = $_POST["idCotizacion"];
 $idUsuario = $_SESSION["idUsuario"];
 $mundial = $_POST["mundial"];
 // var_dump($CodigoClase);
-var_dump($mundial);
-die();
+// var_dump($mundial);
+// die();
 
 // VALIDAMOS SI VIENE EL CODIGO DEL CLIENTE Y DE LO CONTRARIO SE CREA EN LA BD
 if ($idCliente == "") {
