@@ -1054,7 +1054,56 @@ function editarCotizacion(id) {
 
       $("#txtModeloVehPesado").val(respuesta["cot_modelo"]);
 
+      $("#clasepesados").val(respuesta["cot_clase"]);
 
+
+      $("#txtMarcaVehPesado").val(respuesta["cot_marca"]);
+
+
+      $("#txtReferenciaVehPesado").val(respuesta["cot_linea"]);
+
+      $("#txtFasecoldaPesado").val(respuesta["cot_fasecolda"]);
+
+      $("#txtValorFasecoldaPesado").val(respuesta["cot_valor_asegurado"]);
+
+      $("#txtTipoUsoVehiculoPesado").val(respuesta["cot_tip_uso"]);
+
+      $("#txtTipoServicioPesado").val(respuesta["cot_tip_servicio"]);
+
+      $("#txtTipoServicioPesado").val(respuesta["cot_tip_servicio"]);
+
+      $("#DptoCirculacionPesado").append(
+
+        "<option value='" +
+
+        respuesta["cot_departamento"] +
+
+        "' selected>" +
+
+        departamentoVeh(respuesta["cot_departamento"]) +
+
+        "</option>"
+
+      );
+
+      $("#ciudadCirculacionPesado").append(
+
+        "<option value='" +
+
+        respuesta["cot_ciudad"] +
+
+        "' selected>" +
+
+        nomCiudad +
+
+        "</option>"
+
+      );      
+
+      $("#mundialseguros").val(respuesta["cot_mundial"]);
+
+      
+      
       var valorMundial = document.getElementById('mundial').value;
       console.log(valorMundial);
     

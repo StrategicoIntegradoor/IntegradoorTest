@@ -411,7 +411,7 @@
                     </div>
                     <div class="col-xs-12 col-sm-6 col-md-3 form-group">
                       <label for="txtMarcaVeh">Marca</label>
-                      <input type="text" class="form-control classMarcaVeh" id="txtMarcaVeh" placeholder="" disabled>
+                      <input type="text" class="form-control classMarcaVeh" id="txtMarcaVehPesado" placeholder="" disabled>
                     </div>
                     
                   </div>
@@ -419,19 +419,19 @@
                   <div class="row">
                     <div class="col-xs-12 col-sm-6 col-md-3 form-group">
                       <label for="txtReferenciaVeh">Línea</label>
-                      <input type="text" class="form-control classReferenciaVeh" id="txtReferenciaVeh" placeholder="" disabled>
+                      <input type="text" class="form-control classReferenciaVeh" id="txtReferenciaVehPesado" placeholder="" disabled>
                     </div>
                     <div class="col-xs-12 col-sm-6 col-md-3 form-group">
                       <label for="txtFasecolda">Fasecolda</label>
-                      <input type="text" class="form-control" id="txtFasecolda" placeholder="" required>
+                      <input type="text" class="form-control" id="txtFasecoldaPesado" placeholder="" required>
                     </div>
                     <div class="col-xs-12 col-sm-6 col-md-3 form-group">
                       <label for="txtValorFasecolda">Valor Asegurado</label>
-                      <input type="text" class="form-control" id="txtValorFasecolda" placeholder="" required>
+                      <input type="text" class="form-control" id="txtValorFasecoldaPesado" placeholder="" required>
                     </div>
                     <div class="col-xs-12 col-sm-6 col-md-3 form-group">
                       <label for="txtTipoUsoVehiculo">Tipo de Uso</label>
-                      <select class="form-control" id="txtTipoUsoVehiculo" required>
+                      <select class="form-control" id="txtTipoUsoVehiculoPesado" required>
                         <option value=""></option>
                         <option value="Particular" selected>Particular</option>
                         <option value="Trabajo">Trabajo</option>
@@ -442,7 +442,7 @@
                   <div class="row">
                     <div class="col-xs-12 col-sm-6 col-md-3 form-group">
                       <label for="txtTipoServicio">Tipo de Servicio</label>
-                      <select class="form-control" id="txtTipoServicio" required>
+                      <select class="form-control" id="txtTipoServicioPesado" required>
                         <option value=""></option>
                         <option value="14" selected>Particular</option>
                         <option value="11">Publico Municipal</option>
@@ -452,7 +452,7 @@
 
                     <div class="col-xs-12 col-sm-6 col-md-3 form-group">
                       <label for="DptoCirculacion">Departamento de Circulación</label>
-                      <select class="form-control" id="DptoCirculacion" required>
+                      <select class="form-control" id="DptoCirculacionPesado" required>
                         <option value=""></option>
                         <option value="1">Amazonas</option>
                         <option value="2">Antioquia</option>
@@ -499,7 +499,7 @@
 
                     <div class="col-xs-12 col-sm-6 col-md-3 form-group">
                       <label for="ciudadCirculacion">Ciudad de Circulación</label>
-                      <select class="form-control" id="ciudadCirculacion" required></select>
+                      <select class="form-control" id="ciudadCirculacionPesado" required></select>
                       <div id="listaCiudades"></div>
                     </div>
 
