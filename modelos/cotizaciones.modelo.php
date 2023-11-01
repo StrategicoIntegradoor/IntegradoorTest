@@ -8,34 +8,62 @@ class ModeloCotizaciones{
 	MOSTRAR COTIZACIONES
 	=============================================*/
 
-	static public function mdlMostrarCotizaciones($tabla, $tabla2, $tabla3, $tabla4, $tabla5, $tabla6, $item, $valor){
+	// static public function mdlMostrarCotizaciones($tabla, $tabla2, $tabla3, $tabla4, $tabla5, $tabla6, $item, $valor){
 
-		if($item != null){
+	// 	if($item != null){
 
-			if($item == 'id_cotizacion'){
+	// 		if($item == 'id_cotizacion'){
 				
 				
-				$stmt = Conexion::conectar()->prepare("SELECT * FROM $tabla, $tabla2, $tabla3, $tabla4, $tabla5, $tabla6 
-														WHERE $tabla.id_cliente = $tabla2.id_cliente AND $tabla.id_usuario = $tabla5.id_usuario 
-														AND $tabla.cot_ciudad = $tabla6.Codigo AND $tabla2.id_tipo_documento = $tabla3.id_tipo_documento 
-														AND $tabla2.id_estado_civil = $tabla4.id_estado_civil AND $tabla.id_cotizacion = :$item AND $tabla5.id_Intermediario = :idIntermediario");
+	// 			$stmt = Conexion::conectar()->prepare("SELECT * FROM $tabla, $tabla2, $tabla3, $tabla4, $tabla5, $tabla6 
+	// 													WHERE $tabla.id_cliente = $tabla2.id_cliente AND $tabla.id_usuario = $tabla5.id_usuario 
+	// 													AND $tabla.cot_ciudad = $tabla6.Codigo AND $tabla2.id_tipo_documento = $tabla3.id_tipo_documento 
+	// 													AND $tabla2.id_estado_civil = $tabla4.id_estado_civil AND $tabla.id_cotizacion = :$item AND $tabla5.id_Intermediario = :idIntermediario");
 
-				$stmt -> bindParam(":".$item, $valor, PDO::PARAM_STR);
-				$stmt -> bindParam(":idIntermediario", $_SESSION["intermediario"], PDO::PARAM_INT);
+	// 			$stmt -> bindParam(":".$item, $valor, PDO::PARAM_STR);
+	// 			$stmt -> bindParam(":idIntermediario", $_SESSION["intermediario"], PDO::PARAM_INT);
 				
-				$stmt -> execute();
+	// 			$stmt -> execute();
 				
-				return $stmt ->fetch(PDO::FETCH_ASSOC);
+	// 			return $stmt ->fetch(PDO::FETCH_ASSOC);
 
-			}
+	// 		}
 
-		}
+	// 	}
 
-		$stmt -> close();
+	// 	$stmt -> close();
 		
-		$stmt = null;
+	// 	$stmt = null;
 
+	// }
+
+	static public function mdlMostrarCotizaciones($tabla, $tabla2, $tabla3, $tabla4, $tabla5, $tabla6, $item, $valor) {
+
+		if ($item != null) {
+			if ($item == 'id_cotizacion') {
+				$stmt = Conexion::conectar()->prepare("SELECT * FROM $tabla, $tabla2, $tabla3, $tabla4, $tabla5, $tabla6 
+				WHERE $tabla.id_cliente = $tabla2.id_cliente 
+				AND $tabla.id_usuario = $tabla5.id_usuario 
+				AND $tabla.cot_ciudad = $tabla6.Codigo 
+				AND $tabla2.id_tipo_documento = $tabla3.id_tipo_documento 
+				AND $tabla2.id_estado_civil = $tabla4.id_estado_civil 
+				AND $tabla.id_cotizacion = :$item 
+				AND $tabla5.id_Intermediario = :idIntermediario
+				AND $tabla.cot_fch_cotizacion >= DATE_SUB(NOW(), INTERVAL 3 MONTH)");
+	
+				$stmt->bindParam(":" . $item, $valor, PDO::PARAM_STR);
+				$stmt->bindParam(":idIntermediario", $_SESSION["intermediario"], PDO::PARAM_INT);
+	
+				$stmt->execute();
+	
+				return $stmt->fetch(PDO::FETCH_ASSOC);
+			}
+		}
+	
+		$stmt->close();
+		$stmt = null;
 	}
+	
 
 	/*=============================================
 	MOSTRAR COTIZACIONES "OFERTAS"
