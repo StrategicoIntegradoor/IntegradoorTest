@@ -540,7 +540,7 @@
         <!-- CAMPOS OCULTOS PARA OPTENER LA INFORMACION-->
         <div style="display: none;">
           <label>Mundial</label>
-          <input type="hidden" name="mundial" id="mundial">
+          <input type="hidden" name="mundial" id="mundial" value = "2">
           <label>Id Asegurado</label>
           <input type="hidden" name="idCliente" id="idCliente">
           <label>Celular Asegurado</label>
