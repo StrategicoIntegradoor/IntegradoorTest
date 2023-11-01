@@ -1053,11 +1053,11 @@ function editarCotizacion(id) {
           console.log(respuesta)
           if (respuesta["cot_placa"] == "CAT770") {
 
-            $("#txtPlacaVeh").val("SIN PLACA - VEHÍCULO 0 KM").val();
+            $("#txtPlacaVeh").val(respuesta["cot_placa"]);
     
           } else {
     
-            $("#txtPlacaVeh").val(respuesta["cot_placa"]).val();
+            $("#txtPlacaVeh").val(respuesta["cot_placa"]);
     
           }
       }
