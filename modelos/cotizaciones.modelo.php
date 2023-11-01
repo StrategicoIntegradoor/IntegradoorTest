@@ -136,20 +136,25 @@ class ModeloCotizaciones{
 
 		if($fechaInicialCotizaciones == null){
 
-			$stmt = Conexion::conectar()->prepare("SELECT * FROM $tabla, $tabla2, $tabla3, $tabla4, $tabla5 WHERE $tabla.id_cliente = $tabla2.id_cliente AND $tabla.id_usuario = $tabla5.id_usuario AND $tabla2.id_tipo_documento = $tabla3.id_tipo_documento AND $tabla2.id_estado_civil = $tabla4.id_estado_civil AND usuarios.id_Intermediario = :idIntermediario $condicion ");
-			
+			$anoActual = date("Y"); // Obtener el año actual
+
+			$stmt = Conexion::conectar()->prepare("SELECT * FROM $tabla, $tabla2, $tabla3, $tabla4, $tabla5 WHERE $tabla.id_cliente = $tabla2.id_cliente 
+			AND $tabla.id_usuario = $tabla5.id_usuario 
+			AND $tabla2.id_tipo_documento = $tabla3.id_tipo_documento 
+			AND $tabla2.id_estado_civil = $tabla4.id_estado_civil 
+			AND YEAR($tabla.cot_fch_cotizacion) = :anoActual 
+			AND usuarios.id_Intermediario = :idIntermediario $condicion");
+		
+			$stmt->bindParam(":anoActual", $anoActual, PDO::PARAM_INT); // Asignar el año actual
 			$stmt->bindParam(":idIntermediario", $_SESSION["intermediario"], PDO::PARAM_INT);
-
-			if($_SESSION["permisos"]["Verlistadodecotizacionesdelaagencia"] != "x"){ 
+		
+			if ($_SESSION["permisos"]["Verlistadodecotizacionesdelaagencia"] != "x") {
 				$stmt->bindParam(":idUsuario", $_SESSION["idUsuario"], PDO::PARAM_INT);
-				
-				
 			}
-			
-			
-			$stmt -> execute();
-
-			return $stmt -> fetchAll(PDO::FETCH_ASSOC);
+		
+			$stmt->execute();
+		
+			return $stmt->fetchAll(PDO::FETCH_ASSOC);
 			print_r($stmt);
 			die();
 
