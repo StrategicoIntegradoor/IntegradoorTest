@@ -903,14 +903,14 @@
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script>
 $(document).ready(function() {
-    $('#mundial').on('change', function() {
+    $('#mundial').on('input', function() {
         // Obtenemos el valor del campo #mundial
         var valorMundial = $(this).val();
 
         // Mostramos el valor en la consola
         console.log('Valor de #mundial:', valorMundial);
 
-        if (valorMundial !== null) {
+        if (valorMundial !== '') {
             $('#DatosVehiculoPesados').show();
             $('#DatosVehiculo').hide();
         } else {
