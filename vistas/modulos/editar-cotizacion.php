@@ -400,17 +400,18 @@
                       <input type="text" class="form-control" id="txtPlacaVeh" placeholder="" disabled>
                     </div>
                     <div class="col-xs-12 col-sm-6 col-md-3 form-group">
-                      <label for="txtClaseVeh">Clase</label>
-                      <input type="text" class="form-control" id="txtClaseVeh" placeholder="" disabled>
+                      <label for="txtModeloVeh">Modelo</label>
+                      <input type="text" class="form-control" id="txtModeloVeh" placeholder="" disabled>
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-3 form-group">
+                      <label for="clasepesados">Clase Vehiculo</label>
+                      <input type="text" class="form-control" id="clasepesados" placeholder="" disabled>
                     </div>
                     <div class="col-xs-12 col-sm-6 col-md-3 form-group">
                       <label for="txtMarcaVeh">Marca</label>
                       <input type="text" class="form-control classMarcaVeh" id="txtMarcaVeh" placeholder="" disabled>
                     </div>
-                    <div class="col-xs-12 col-sm-6 col-md-3 form-group">
-                      <label for="txtModeloVeh">Modelo</label>
-                      <input type="text" class="form-control" id="txtModeloVeh" placeholder="" disabled>
-                    </div>
+                    
                   </div>
 
                   <div class="row">
@@ -500,22 +501,16 @@
                       <div id="listaCiudades"></div>
                     </div>
 
-                    <div class="col-xs-12 col-sm-6 col-md-3">
-                      <div class="row">
-                        <div class="col-xs-5 col-sm-5 col-md-5 form-group">
-                          <label>Es Oneroso?</label>
-                          <div class="conten-oneroso">
-                            <label for="Si">Si</label>
-                            <input type="radio" name="oneroso" id="esOnerosoSi" value="Si">&nbsp;&nbsp;&nbsp;&nbsp;
-                            <label for="No">No</label>
-                            <input type="radio" name="oneroso" id="esOnerosoNo" value="No" required>
-                          </div>
-                        </div>
-                        <div class="col-xs-7 col-sm-7 col-md-7 form-group" id="contenBenefOneroso">
-                          <label for="benefOneroso">Beneficiario</label>
-                          <input type="text" class="form-control" id="benefOneroso">
-                        </div>
-                      </div>
+                    <div class="col-xs-12 col-sm-6 col-md-3 form-group">
+                      <label for="mundialseguros">Tipo Vehiculo Mundial</label>
+                      <select class="form-control" id="mundialseguros" required>
+                        <option value=""></option>
+                        <option value="1">Tractocamión</option>
+                        <option value="2">Camión</option>
+                        <option value="3">Semipesados</option>
+                        <option value="4">Volquetas</option>
+                        <option value="5">Trailers</option>
+                      </select>
                     </div>
                   </div>
 
