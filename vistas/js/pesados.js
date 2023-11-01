@@ -1329,6 +1329,7 @@ function cotizarOfertasPesados() {
     var linea = document.getElementById("txtReferenciaVeh").value;
   
     var mundial = document.getElementById("mundialseguros").value;
+    console.log(mundial)
     // var hdi = document.getElementById("hdiseguros").value;
     // var estado = document.getElementById("estadoseguros").value;
   
