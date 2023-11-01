@@ -903,17 +903,18 @@
 
 <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 <script>
-$(document).ready(function() {
-    $('#mundial').on('input', function() {
-        var valorMundial = $(this).val();
+document.addEventListener('DOMContentLoaded', function() {
+    var mundialInput = document.getElementById('mundial');
+    mundialInput.addEventListener('input', function() {
+        var valorMundial = mundialInput.value;
         console.log('Valor de #mundial:', valorMundial);
 
         if (valorMundial === null || valorMundial === "") {
-            $('#DatosVehiculoPesados').show();
-            $('#DatosVehiculo').hide();
+            document.getElementById('DatosVehiculoPesados').style.display = 'block';
+            document.getElementById('DatosVehiculo').style.display = 'none';
         } else {
-            $('#DatosVehiculoPesados').hide();
-            $('#DatosVehiculo').show();
+            document.getElementById('DatosVehiculoPesados').style.display = 'none';
+            document.getElementById('DatosVehiculo').style.display = 'block';
         }
     });
 });
