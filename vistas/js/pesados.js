@@ -866,7 +866,8 @@ function masAseg() {
             claseVehiculo = "MOTOCICLETA";
             limiteRCESTADO = 6;
           }
-  
+          
+          console.log(claseVehiculo)
           $("#CodigoClase").val(codigoClase);
           $("#txtClaseVeh").val(claseVehiculo);
           $("#LimiteRC").val(limiteRCESTADO);
