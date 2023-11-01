@@ -1046,11 +1046,11 @@ function editarCotizacion(id) {
       if (valorMundial === null || valorMundial === "") {
           document.getElementById('DatosVehiculoPesados').style.display = 'none';
           document.getElementById('DatosVehiculo').style.display = 'block';
-          console.log(respuesta)
           
       } else {
           document.getElementById('DatosVehiculoPesados').style.display = 'block';
           document.getElementById('DatosVehiculo').style.display = 'none';
+          console.log(respuesta)
           if (respuesta["cot_placa"] == "CAT770") {
 
             $("#txtPlacaVeh").val("SIN PLACA - VEHÍCULO 0 KM").val();
