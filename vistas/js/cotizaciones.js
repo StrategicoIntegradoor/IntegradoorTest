@@ -903,7 +903,7 @@ function editarCotizacion(id) {
 
       $("#mundial").val(respuesta["cot_mundial"])
 
-      console.log(mundial)
+      console.log(respuesta)
 
       var fecha = respuesta["cli_fch_nacimiento"].split("-");
 
