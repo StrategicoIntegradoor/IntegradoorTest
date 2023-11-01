@@ -399,7 +399,7 @@
                   <div class="row">
                     <div class="col-xs-12 col-sm-6 col-md-3 form-group">
                       <label for="txtPlacaVeh">Placa</label>
-                      <input type="text" class="form-control" id="txtPlacaVeh" placeholder="" disabled>
+                      <input type="text" class="form-control" id="txtPlacaVehPesado" placeholder="" disabled>
                     </div>
                     <div class="col-xs-12 col-sm-6 col-md-3 form-group">
                       <label for="txtModeloVeh">Modelo</label>

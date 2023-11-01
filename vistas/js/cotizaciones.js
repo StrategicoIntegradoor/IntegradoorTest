@@ -1040,6 +1040,16 @@ function editarCotizacion(id) {
 
       }
 
+      if (respuesta["cot_placa"] == "CAT770") {
+
+        $("#txtPlacaVehPesado").val(respuesta["cot_placa"]).val();
+
+      } else {
+
+        $("#txtPlacaVehPesado").val(respuesta["cot_placa"]).val();
+
+      }
+
       var valorMundial = document.getElementById('mundial').value;
       console.log(valorMundial);
     
@@ -1051,15 +1061,7 @@ function editarCotizacion(id) {
           document.getElementById('DatosVehiculoPesados').style.display = 'block';
           document.getElementById('DatosVehiculo').style.display = 'none';
           console.log(respuesta)
-          if (respuesta["cot_placa"] == "CAT770") {
-
-            $("#txtPlacaVehPesado").val(respuesta["cot_placa"]);
-    
-          } else {
-    
-            $("#txtPlacaVehPesado").val(respuesta["cot_placa"]);
-    
-          }
+         
       }
 
       /*=============================================			
