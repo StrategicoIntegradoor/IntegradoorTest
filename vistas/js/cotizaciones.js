@@ -1040,6 +1040,8 @@ function editarCotizacion(id) {
 
       }
 
+      //FORMULARIO DE PESADOS//
+
       if (respuesta["cot_placa"] == "CAT770") {
 
         $("#txtPlacaVehPesado").val(respuesta["cot_placa"]).val();
@@ -1049,6 +1051,9 @@ function editarCotizacion(id) {
         $("#txtPlacaVehPesado").val(respuesta["cot_placa"]).val();
 
       }
+
+      $("#txtModeloVehPesado").val(respuesta["cot_modelo"]);
+
 
       var valorMundial = document.getElementById('mundial').value;
       console.log(valorMundial);

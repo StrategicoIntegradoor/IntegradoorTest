@@ -403,7 +403,7 @@
                     </div>
                     <div class="col-xs-12 col-sm-6 col-md-3 form-group">
                       <label for="txtModeloVeh">Modelo</label>
-                      <input type="text" class="form-control" id="txtModeloVeh" placeholder="" disabled>
+                      <input type="text" class="form-control" id="txtModeloVehPesado" placeholder="" disabled>
                     </div>
                     <div class="col-xs-12 col-sm-6 col-md-3 form-group">
                       <label for="clasepesados">Clase Vehiculo</label>
