@@ -32,7 +32,7 @@ $Ciudad = $_POST["Ciudad"];
 $benefOneroso = $_POST["benefOneroso"];
 $idCotizacion = $_POST["idCotizacion"];
 $idUsuario = $_SESSION["idUsuario"];
-$mundial = $_SESSION["mundial"];
+$mundial = $_POST["mundial"];
 // var_dump($CodigoClase);
 var_dump($mundial);
 die();
