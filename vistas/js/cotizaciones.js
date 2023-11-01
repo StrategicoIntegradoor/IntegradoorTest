@@ -1238,7 +1238,7 @@ function editarCotizacion(id) {
 												
 
                       <div class='col-12' style='margin-top:2%;'>
-                        ${aseguradora !== "Mundial" && permisos.Vernumerodecotizacionencadaaseguradora == "x" ?
+                        ${oferta.Aseguradora !== "Mundial" && permisos.Vernumerodecotizacionencadaaseguradora == "x" ?
                       `<center>
                             <label class='entidad'>N° Cot: <span style='color:black'> ${oferta.NumCotizOferta}</span></label>
                           </center>`
