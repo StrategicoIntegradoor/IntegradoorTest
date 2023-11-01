@@ -49,7 +49,8 @@ class ModeloCotizaciones{
 				AND $tabla2.id_estado_civil = $tabla4.id_estado_civil 
 				AND $tabla.id_cotizacion = :$item 
 				AND $tabla5.id_Intermediario = :idIntermediario
-				AND $tabla.cot_fch_cotizacion >= DATE_SUB(NOW(), INTERVAL 3 MONTH)");
+				AND $tabla.cot_fch_cotizacion >= '2023-01-01'
+				AND $tabla.cot_fch_cotizacion <= DATE_SUB(NOW(), INTERVAL 3 MONTH)");
 	
 				$stmt->bindParam(":" . $item, $valor, PDO::PARAM_STR);
 				$stmt->bindParam(":idIntermediario", $_SESSION["intermediario"], PDO::PARAM_INT);
@@ -63,6 +64,7 @@ class ModeloCotizaciones{
 		$stmt->close();
 		$stmt = null;
 	}
+	
 	
 
 	/*=============================================
