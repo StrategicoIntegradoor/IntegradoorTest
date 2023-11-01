@@ -900,3 +900,16 @@
 </div>
 
 <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script>
+$(document).ready(function() {
+    $('#mundial').on('change', function() {
+        if ($(this).val() !== null) {
+            $('#DatosVehiculoPesados').show();
+            $('#DatosVehiculo').hide();
+        } else {
+            $('#DatosVehiculoPesados').hide();
+            $('#DatosVehiculo').show();
+        }
+    });
+});
+</script>
