@@ -1041,7 +1041,19 @@ function editarCotizacion(id) {
 
       }
 
-
+      document.addEventListener('DOMContentLoaded', function() {
+        var valorMundial = document.getElementById('mundial').value;
+        console.log(valorMundial);
+    
+        if (valorMundial === null || valorMundial === "") {
+            document.getElementById('DatosVehiculoPesados').style.display = 'block';
+            document.getElementById('DatosVehiculo').style.display = 'none';
+        } else {
+            document.getElementById('DatosVehiculoPesados').style.display = 'none';
+            document.getElementById('DatosVehiculo').style.display = 'block';
+        }
+    });
+    
       /*=============================================			
  
        // CONSULTA LAS OFERTAS DE LA COTIZACION

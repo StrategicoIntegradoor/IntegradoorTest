@@ -903,16 +903,16 @@
 
 <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 <script>
-document.addEventListener('DOMContentLoaded', function() {
-    var valorMundial = document.getElementById('mundial').value;
-    console.log(valorMundial);
+// document.addEventListener('DOMContentLoaded', function() {
+//     var valorMundial = document.getElementById('mundial').value;
+//     console.log(valorMundial);
 
-    if (valorMundial === null || valorMundial === "") {
-        document.getElementById('DatosVehiculoPesados').style.display = 'block';
-        document.getElementById('DatosVehiculo').style.display = 'none';
-    } else {
-        document.getElementById('DatosVehiculoPesados').style.display = 'none';
-        document.getElementById('DatosVehiculo').style.display = 'block';
-    }
-});
+//     if (valorMundial === null || valorMundial === "") {
+//         document.getElementById('DatosVehiculoPesados').style.display = 'block';
+//         document.getElementById('DatosVehiculo').style.display = 'none';
+//     } else {
+//         document.getElementById('DatosVehiculoPesados').style.display = 'none';
+//         document.getElementById('DatosVehiculo').style.display = 'block';
+//     }
+// });
 </script>
