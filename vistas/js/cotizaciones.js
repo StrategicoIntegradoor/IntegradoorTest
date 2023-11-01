@@ -1041,17 +1041,6 @@ function editarCotizacion(id) {
 
       }
 
-      $('#mundial').on('input', function() {
-        var valorMundial = $(this).val();
-        console.log('Valor de #mundial:', valorMundial);
-        if (valorMundial !== '') {
-            $('#DatosVehiculoPesados').show();
-            $('#DatosVehiculo').hide();
-        } else {
-            $('#DatosVehiculoPesados').hide();
-            $('#DatosVehiculo').show();
-        }
-    });
 
       /*=============================================			
  
