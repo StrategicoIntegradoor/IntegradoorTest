@@ -687,7 +687,7 @@ function masAseg() {
                   limiteRCESTADO = 6;
                 }
   
-                console.log(claseVehiculo)
+                console.log(codigoClase)
                 $("#CodigoClase").val(codigoClase);
                 $("#txtClaseVeh").val(claseVehiculo);
                 $("#LimiteRC").val(limiteRCESTADO);
