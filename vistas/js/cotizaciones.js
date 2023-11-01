@@ -901,9 +901,9 @@ function editarCotizacion(id) {
 
       $("#telefonoID").val(respuesta["cli_telefono"]);
 
-      $("#mundial").val(respuesta["cot_mundial"])
+      $("#mundial").val(respuesta["cot_mundial"]);
 
-      console.log(respuesta)
+      console.log( $("#mundial").val(respuesta["cot_mundial"]))
 
       var fecha = respuesta["cli_fch_nacimiento"].split("-");
 
