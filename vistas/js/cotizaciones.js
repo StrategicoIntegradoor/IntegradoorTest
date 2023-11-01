@@ -1046,6 +1046,7 @@ function editarCotizacion(id) {
       if (valorMundial === null || valorMundial === "") {
           document.getElementById('DatosVehiculoPesados').style.display = 'none';
           document.getElementById('DatosVehiculo').style.display = 'block';
+          console.log(respuesta)
           if (respuesta["cot_placa"] == "KZY000") {
 
             $("#txtPlacaVeh").val("SIN PLACA - VEHÍCULO 0 KM").val();
