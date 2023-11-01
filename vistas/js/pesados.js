@@ -685,6 +685,9 @@ function masAseg() {
                 } else if (codigoClase == 16) {
                   claseVehiculo = "MOTOCICLETA";
                   limiteRCESTADO = 6;
+                }else if (codigoClase == 25) {
+                  claseVehiculo = "TRAILER";
+                  limiteRCESTADO = 6;
                 }
   
                 console.log(codigoClase)
