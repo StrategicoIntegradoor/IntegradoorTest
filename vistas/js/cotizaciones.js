@@ -1046,6 +1046,15 @@ function editarCotizacion(id) {
       if (valorMundial === null || valorMundial === "") {
           document.getElementById('DatosVehiculoPesados').style.display = 'none';
           document.getElementById('DatosVehiculo').style.display = 'block';
+          if (respuesta["cot_placa"] == "KZY000") {
+
+            $("#txtPlacaVeh").val("SIN PLACA - VEHÍCULO 0 KM").val();
+    
+          } else {
+    
+            $("#txtPlacaVeh").val(respuesta["cot_placa"]).val();
+    
+          }
       } else {
           document.getElementById('DatosVehiculoPesados').style.display = 'block';
           document.getElementById('DatosVehiculo').style.display = 'none';
