@@ -1044,11 +1044,11 @@ function editarCotizacion(id) {
       console.log(valorMundial);
     
       if (valorMundial === null || valorMundial === "") {
-          document.getElementById('DatosVehiculoPesados').style.display = 'block';
-          document.getElementById('DatosVehiculo').style.display = 'none';
-      } else {
           document.getElementById('DatosVehiculoPesados').style.display = 'none';
           document.getElementById('DatosVehiculo').style.display = 'block';
+      } else {
+          document.getElementById('DatosVehiculoPesados').style.display = 'block';
+          document.getElementById('DatosVehiculo').style.display = 'none';
       }
 
       /*=============================================			
