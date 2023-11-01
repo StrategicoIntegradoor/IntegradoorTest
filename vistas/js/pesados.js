@@ -676,7 +676,7 @@ function masAseg() {
                 } else if (codigoClase == 12) {
                   claseVehiculo = "MOTOCICLETA";
                   limiteRCESTADO = 6;
-                } else if (codigoClase == 14) {
+                } else if (codigoClase == 14 || codigoClase == 21) {
                   claseVehiculo = "PESADO";
                   limiteRCESTADO = 18;
                 } else if (codigoClase == 19) {
