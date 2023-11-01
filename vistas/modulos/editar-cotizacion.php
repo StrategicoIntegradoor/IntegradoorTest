@@ -902,22 +902,3 @@
 </div>
 
 <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-<script>
-$(document).ready(function() {
-    $('#mundial').on('input', function() {
-        // Obtenemos el valor del campo #mundial
-        var valorMundial = $(this).val();
-
-        // Mostramos el valor en la consola
-        console.log('Valor de #mundial:', valorMundial);
-
-        if (valorMundial !== '') {
-            $('#DatosVehiculoPesados').show();
-            $('#DatosVehiculo').hide();
-        } else {
-            $('#DatosVehiculoPesados').hide();
-            $('#DatosVehiculo').show();
-        }
-    });
-});
-</script>
