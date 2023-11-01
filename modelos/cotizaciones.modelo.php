@@ -39,6 +39,9 @@ class ModeloCotizaciones{
 
 	static public function mdlMostrarCotizaciones($tabla, $tabla2, $tabla3, $tabla4, $tabla5, $tabla6, $item, $valor) {
 
+		var_dump($item);
+		die();
+
 		if ($item != null) {
 			if ($item == 'id_cotizacion') {
 				$stmt = Conexion::conectar()->prepare("SELECT * FROM $tabla, $tabla2, $tabla3, $tabla4, $tabla5, $tabla6 
