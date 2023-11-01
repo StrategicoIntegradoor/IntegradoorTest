@@ -905,7 +905,7 @@
 <script>
 document.addEventListener('DOMContentLoaded', function() {
     var valorMundial = document.getElementById('mundial').value;
-    console.log('Valor de #mundial:', valorMundial);
+    console.log('Valor de #mundial:' +  valorMundial);
 
     if (valorMundial === null || valorMundial === "") {
         document.getElementById('DatosVehiculoPesados').style.display = 'block';
