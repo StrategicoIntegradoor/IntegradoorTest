@@ -12,7 +12,9 @@
 // }
 
 ?>
-
+<head>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
 <style>
   .botones-agregar-manual {
     margin-top: 20px;
