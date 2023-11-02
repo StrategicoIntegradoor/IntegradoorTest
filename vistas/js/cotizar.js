@@ -1562,6 +1562,7 @@ function cotizarOfertas() {
             contenParrilla.style.display = 'block'
             idCotizacion = data.id_cotizacion;
             raw.cotizacion = idCotizacion
+            console.log(idCotizacion)
 
             var requestOptions = {
               method: "POST",
