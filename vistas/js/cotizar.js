@@ -1383,8 +1383,6 @@ function cotizarOfertas() {
   var cre_est_zona = document.getElementById("cre_est_zona").value;
 
 
-
-
   /**
    * Variables para allianz
    */
@@ -1396,6 +1394,23 @@ function cotizarOfertas() {
   var cre_alli_agentid = document.getElementById("cre_alli_agentid").value;
   var cre_alli_partnercode = document.getElementById("cre_alli_partnercode").value;
   var cre_alli_agentcode = document.getElementById("cre_alli_agentcode").value;
+
+  /**
+   * Variables de AXA
+   */
+  var cre_axa_sslcertfile = document.getElementById("cre_axa_sslcertfile").value;
+  var cre_axa_sslkeyfile = document.getElementById("cre_axa_sslkeyfile").value;
+
+  var cre_axa_passphrase = document.getElementById("cre_axa_passphrase").value;
+  var cre_axa_codigoDistribuidor = document.getElementById("cre_axa_codigoDistribuidor").value;
+
+  var cre_axa_idTipoDistribuidor = document.getElementById("cre_axa_idTipoDistribuidor").value;
+  var cre_axa_codigoDivipola = document.getElementById("cre_axa_codigoDivipola").value;
+
+  var cre_axa_canal = document.getElementById("cre_axa_canal").value;
+  var cre_axa_validacionEventos = document.getElementById("cre_axa_validacionEventos").value;
+  var url_axa =document.getElementById("url_axa").value;
+
 
   if (ciudadCirculacion.length == 4) {
     ciudadCirculacion = "0" + ciudadCirculacion;
@@ -1485,6 +1500,17 @@ function cotizarOfertas() {
           cre_equ_contrasena: cre_equ_contrasena,
           Cre_Est_Entity_Id: Cre_Est_Entity_Id,
           cre_est_zona: cre_est_zona
+        },
+        AXA: {
+          cre_axa_sslcertfile: cre_axa_sslcertfile,
+          cre_axa_sslkeyfile: cre_axa_sslkeyfile,
+          cre_axa_passphrase: cre_axa_passphrase,
+          cre_axa_codigoDistribuidor: cre_axa_codigoDistribuidor,
+          cre_axa_idTipoDistribuidor: cre_axa_idTipoDistribuidor,
+          cre_axa_codigoDivipola: cre_axa_codigoDivipola,
+          cre_axa_canal: cre_axa_canal,
+          cre_axa_validacionEventos: cre_axa_validacionEventos,
+          url_axa:url_axa
         },
 
       };

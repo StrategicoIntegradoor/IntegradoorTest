@@ -94,7 +94,39 @@ if ($numerofilas4 > 0) {
   $cre_est_zona = $fila5['cre_est_zona'];
 }
 
+$query6 = "SELECT *  FROM `Credenciales_AXA` WHERE `id_Intermediario` = '" . $_SESSION["intermediario"] . "'";
 
+$ejecucion6 = mysqli_query($enlace, $query6);
+$numerofilas6 = mysqli_num_rows($ejecucion6);
+$fila6 = mysqli_fetch_assoc($ejecucion6);
+
+if ($numerofilas4 > 0) {
+  $cre_axa_sslcertfile = $fila6['cre_axa_sslcertfile'];
+  $cre_axa_sslkeyfile = $fila6['cre_axa_sslkeyfile'];
+  $cre_axa_passphrase = $fila6['cre_axa_passphrase'];
+  $cre_axa_codigoDistribuidor = $fila6['cre_axa_codigoDistribuidor'];
+  $cre_axa_idTipoDistribuidor = $fila6['cre_axa_idTipoDistribuidor'];
+  $cre_axa_codigoDivipola = $fila6['cre_axa_codigoDivipola'];
+  $cre_axa_canal = $fila6['cre_axa_canal'];
+  $cre_axa_validacionEventos = $fila6['cre_axa_validacionEventos'];
+  $url_axa =$fila6['url_axa'];
+} else {
+  $query7 = "SELECT * FROM `Credenciales_AXA` WHERE `id_Intermediario` = 3";
+
+  $ejecucion7 = mysqli_query($enlace, $query7);
+  $numerofilas7 = mysqli_num_rows($ejecucion5);
+  $fila7 = mysqli_fetch_assoc($ejecucion7);
+
+  $cre_axa_sslcertfile = $fila7['cre_axa_sslcertfile'];
+  $cre_axa_sslkeyfile = $fila7['cre_axa_sslkeyfile'];
+  $cre_axa_passphrase = $fila7['cre_axa_passphrase'];
+  $cre_axa_codigoDistribuidor = $fila7['cre_axa_codigoDistribuidor'];
+  $cre_axa_idTipoDistribuidor = $fila7['cre_axa_idTipoDistribuidor'];
+  $cre_axa_codigoDivipola = $fila7['cre_axa_codigoDivipola'];
+  $cre_axa_canal = $fila7['cre_axa_canal'];
+  $cre_axa_validacionEventos = $fila7['cre_axa_validacionEventos'];
+  $url_axa = $fila7['url_axa'];
+}
 
 
 
@@ -762,6 +794,17 @@ if ($_SESSION["permisos"]["Cotizarlivianos"] != "x") {
           <input type="text" class="form-control" id="cre_alli_agentid" value="<?php echo $cre_alli_agentid; ?>">
           <input type="text" class="form-control" id="cre_alli_partnercode" value="<?php echo $cre_alli_partnercode; ?>">
           <input type="text" class="form-control" id="cre_alli_agentcode" value="<?php echo $cre_alli_agentcode; ?>">
+
+          <!--AXA-->
+          <input type="text" class="form-control" id="cre_axa_sslcertfile" value="<?php echo $cre_axa_sslcertfile; ?>">
+          <input type="text" class="form-control" id="cre_axa_sslkeyfile" value="<?php echo $cre_axa_sslkeyfile; ?>">
+          <input type="text" class="form-control" id="cre_axa_passphrase" value="<?php echo $cre_axa_passphrase; ?>">
+          <input type="text" class="form-control" id="cre_axa_codigoDistribuidor" value="<?php echo $cre_axa_codigoDistribuidor; ?>">
+          <input type="text" class="form-control" id="cre_axa_idTipoDistribuidor" value="<?php echo $cre_axa_idTipoDistribuidor; ?>">
+          <input type="text" class="form-control" id="cre_axa_codigoDivipola" value="<?php echo $cre_axa_codigoDivipola; ?>">
+          <input type="text" class="form-control" id="cre_axa_canal" value="<?php echo $cre_axa_canal; ?>">
+          <input type="text" class="form-control" id="cre_axa_validacionEventos" value="<?php echo $cre_axa_validacionEventos; ?>">
+          <input type="text" class="form-control" id="url_axa" value="<?php echo $url_axa; ?>">
 
         </div>
 
