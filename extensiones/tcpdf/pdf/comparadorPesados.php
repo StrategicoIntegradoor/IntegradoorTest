@@ -80,13 +80,23 @@ if ($genero == 1) {
 	$nomGenero = "Femenino";
 }
 
-$idUsuario = $fila["id_usuario"];
-$respAsesor = $conexion->query("SELECT usu_nombre, usu_apellido, usu_telefono, usu_email FROM usuarios WHERE id_usuario = $idUsuario");
-$asesor = $respAsesor->fetch_assoc();
+$generarPDF = $_GET['generar_pdf'] ?? '';
+$ocultarAsesor = ($generarPDF == 1);
+if ($ocultarAsesor) {
 
-$nomAsesor = $asesor["usu_nombre"] . ' ' . $asesor["usu_apellido"];
-$telAsesor = $asesor["usu_telefono"];
-$emailAsesor = $asesor["usu_email"];
+	$idUsuario = $fila["id_usuario"];
+	$respAsesor = $conexion->query("SELECT usu_nombre, usu_apellido, usu_telefono, usu_email FROM usuarios WHERE id_usuario = $idUsuario");
+	$asesor = $respAsesor->fetch_assoc();
+
+	$nomAsesor = '  ' . $asesor["usu_nombre"] . ' ' . $asesor["usu_apellido"];
+	$telAsesor = '  ' . $asesor["usu_telefono"];
+	$emailAsesor = '  ' . $asesor["usu_email"];
+} else {
+
+	$nomAsesor = '   ASESOR DIGITAL';
+	$telAsesor = '   NO APLICA';
+	$emailAsesor = '   NO APLICA';
+}
 
 
 $fecha = $fila["f_registro"];
