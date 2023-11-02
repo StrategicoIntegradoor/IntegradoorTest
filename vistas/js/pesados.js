@@ -676,7 +676,7 @@ function masAseg() {
                 } else if (codigoClase == 12) {
                   claseVehiculo = "MOTOCICLETA";
                   limiteRCESTADO = 6;
-                } else if (codigoClase == 14) {
+                } else if (codigoClase == 14 || codigoClase == 21) {
                   claseVehiculo = "PESADO";
                   limiteRCESTADO = 18;
                 } else if (codigoClase == 19) {
@@ -685,8 +685,12 @@ function masAseg() {
                 } else if (codigoClase == 16) {
                   claseVehiculo = "MOTOCICLETA";
                   limiteRCESTADO = 6;
+                }else if (codigoClase == 25) {
+                  claseVehiculo = "TRAILER";
+                  limiteRCESTADO = 6;
                 }
   
+                console.log(codigoClase)
                 $("#CodigoClase").val(codigoClase);
                 $("#txtClaseVeh").val(claseVehiculo);
                 $("#LimiteRC").val(limiteRCESTADO);
@@ -866,7 +870,7 @@ function masAseg() {
             claseVehiculo = "MOTOCICLETA";
             limiteRCESTADO = 6;
           }
-  
+          
           $("#CodigoClase").val(codigoClase);
           $("#txtClaseVeh").val(claseVehiculo);
           $("#LimiteRC").val(limiteRCESTADO);
@@ -1329,6 +1333,7 @@ function cotizarOfertasPesados() {
     var linea = document.getElementById("txtReferenciaVeh").value;
   
     var mundial = document.getElementById("mundialseguros").value;
+    console.log(mundial)
     // var hdi = document.getElementById("hdiseguros").value;
     // var estado = document.getElementById("estadoseguros").value;
   

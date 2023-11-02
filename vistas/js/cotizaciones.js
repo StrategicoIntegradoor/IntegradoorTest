@@ -810,7 +810,6 @@ $(document).ready(function () {
 });
 
 
-
 /*================================================
 
 // CAPTURA LA URL DE LA PAGINA EDITAR COTIZACIONES
@@ -901,9 +900,9 @@ function editarCotizacion(id) {
 
       $("#telefonoID").val(respuesta["cli_telefono"]);
 
-      $("#mundial").val(respuesta["cot_mundial"])
+      $("#mundial").val(respuesta["cot_mundial"]);
 
-      console.log(mundial)
+      console.log("Valor de #mundial:", respuesta["cot_mundial"]);
 
       var fecha = respuesta["cli_fch_nacimiento"].split("-");
 
@@ -1041,7 +1040,83 @@ function editarCotizacion(id) {
 
       }
 
+      //FORMULARIO DE PESADOS//
 
+      if (respuesta["cot_placa"] == "CAT770") {
+
+        $("#txtPlacaVehPesado").val(respuesta["cot_placa"]).val();
+
+      } else {
+
+        $("#txtPlacaVehPesado").val(respuesta["cot_placa"]).val();
+
+      }
+
+      $("#txtModeloVehPesado").val(respuesta["cot_modelo"]);
+
+      $("#clasepesados").val(respuesta["cot_clase"]);
+
+
+      $("#txtMarcaVehPesado").val(respuesta["cot_marca"]);
+
+
+      $("#txtReferenciaVehPesado").val(respuesta["cot_linea"]);
+
+      $("#txtFasecoldaPesado").val(respuesta["cot_fasecolda"]);
+
+      $("#txtValorFasecoldaPesado").val(respuesta["cot_valor_asegurado"]);
+
+      $("#txtTipoUsoVehiculoPesado").val(respuesta["cot_tip_uso"]);
+
+      $("#txtTipoServicioPesado").val(respuesta["cot_tip_servicio"]);
+
+      $("#txtTipoServicioPesado").val(respuesta["cot_tip_servicio"]);
+
+      $("#DptoCirculacionPesado").append(
+
+        "<option value='" +
+
+        respuesta["cot_departamento"] +
+
+        "' selected>" +
+
+        departamentoVeh(respuesta["cot_departamento"]) +
+
+        "</option>"
+
+      );
+
+      $("#ciudadCirculacionPesado").append(
+
+        "<option value='" +
+
+        respuesta["cot_ciudad"] +
+
+        "' selected>" +
+
+        nomCiudad +
+
+        "</option>"
+
+      );      
+
+      $("#mundialseguros").val(respuesta["cot_mundial"]);
+
+      
+      
+      var valorMundial = document.getElementById('mundial').value;
+      console.log(valorMundial);
+    
+      if (valorMundial === null || valorMundial === "") {
+          document.getElementById('DatosVehiculoPesados').style.display = 'none';
+          document.getElementById('DatosVehiculo').style.display = 'block';
+          
+      } else {
+          document.getElementById('DatosVehiculoPesados').style.display = 'block';
+          document.getElementById('DatosVehiculo').style.display = 'none';
+          console.log(respuesta)
+         
+      }
 
       /*=============================================			
  
@@ -1163,8 +1238,8 @@ function editarCotizacion(id) {
 												
 
                       <div class='col-12' style='margin-top:2%;'>
-                        ${permisos.Vernumerodecotizacionencadaaseguradora == "x" ?
-                  `<center>
+                        ${oferta.Aseguradora !== "Mundial" && permisos.Vernumerodecotizacionencadaaseguradora == "x" ?
+                      `<center>
                             <label class='entidad'>N° Cot: <span style='color:black'> ${oferta.NumCotizOferta}</span></label>
                           </center>`
                   : ''}
