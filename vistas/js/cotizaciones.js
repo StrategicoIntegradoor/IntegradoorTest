@@ -1879,6 +1879,8 @@ function verPdfOferta(aseguradora, numCotizOferta, numId) {
 
       .then(function (response) {
 
+        console.log(response)
+
         if (!response.ok) {
 
           throw Error(response.statusText);
