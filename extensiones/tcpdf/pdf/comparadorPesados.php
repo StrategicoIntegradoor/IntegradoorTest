@@ -962,7 +962,8 @@ if($valorlimiterow==10){
 
 		$valorRC = $rowRespuesta9['ValorRC'];
 		if (is_numeric($valorRC)) {
-			$pdfValorRC = $valorRC/1000000;
+			$pdfValorRCM = $valorRC/1000000;
+			$pdfValorRC = number_format($pdfValorRCM, 0, ',', '.');
 		} else {
 			$pdfValorRC = $rowRespuesta9['ValorRC'];
 		} 
@@ -983,7 +984,8 @@ if($valorlimiterow==10){
 
 		$valorRC = $rowRespuesta9['ValorRC'];
 		if (is_numeric($valorRC)) {
-			$pdfValorRC = $valorRC/1000000;
+			$pdfValorRCM = $valorRC/1000000;
+			$pdfValorRC = number_format($pdfValorRCM, 0, ',', '.');
 		} else {
 			$pdfValorRC = $rowRespuesta9['ValorRC'];
 		} 
@@ -1004,7 +1006,8 @@ if($valorlimiterow==10){
 
 		$valorRC = $rowRespuesta9['ValorRC'];
 		if (is_numeric($valorRC)) {
-			$pdfValorRC = $valorRC/1000000;
+			$pdfValorRCM = $valorRC/1000000;
+			$pdfValorRC = number_format($pdfValorRCM, 0, ',', '.');
 		} else {
 			$pdfValorRC = $rowRespuesta9['ValorRC'];
 		} 
@@ -1091,7 +1094,8 @@ while ($rowRespuestap1 = mysqli_fetch_assoc($respuestaqueryp1)) {
 	$rce_excesoNumeric = $rowRespuestaAsistencia1['rceexceso'];
 
 	if (is_numeric($rce_excesoNumeric)) {
-		$pdfValorRC_Exceso = $rce_excesoNumeric/1000000;
+		$pdfValorRCM = $rce_excesoNumeric/1000000;
+		$pdfValorRC_Exceso = number_format($pdfValorRCM, 0, ',', '.');
 	} else {
 		$pdfValorRC_Exceso = $rowRespuestaAsistencia1['rceexceso'];
 	} 
