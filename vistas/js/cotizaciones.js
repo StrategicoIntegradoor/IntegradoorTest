@@ -1836,7 +1836,7 @@ function verPdfOferta(aseguradora, numCotizOferta, numId) {
 
     // var ventanaPDF = window.open('http://example.com/waiting.html', '_blank'); // Carga otra pagina
 
-    ventanaPDF.document.write("Cargando vista previa Pdf " + aseguradora + "..."); // Carga un mensaje de espera
+    // ventanaPDF.document.write("Cargando vista previa Pdf " + aseguradora + "..."); // Carga un mensaje de espera
 
 
 
