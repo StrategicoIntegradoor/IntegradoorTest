@@ -109,8 +109,7 @@ if($idCotizacion == ""){
 		$cot_codigo = "COT-1";
 	}
 
-	var_dump($cot_codigo);
-	die();
+
 	// INSERCIÓN DATOS DE LA COTIZACION REALIZADA
 	$sql = "INSERT INTO `cotizaciones` (`id_cotizacion`, `cot_codigo`, `cot_fch_cotizacion`, `cot_placa`, `cot_cerokm`, `cot_cod_clase`, `cot_clase`, 
 										`cot_marca`, `cot_modelo`, `cot_linea`, `cot_fasecolda`, `cot_valor_asegurado`, `cot_tip_uso`, `cot_tip_servicio`, `cot_departamento`, 
@@ -120,6 +119,8 @@ if($idCotizacion == ""){
 
 	$res = mysqli_query($con, $sql);
 	$num_rows = mysqli_affected_rows($con);
+	var_dump($cot_codigo);
+	die();
 
 	if ($num_rows > 0) {
 		$data['Message 2'] = 'Cotización creada exitosamente';
