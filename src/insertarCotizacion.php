@@ -119,7 +119,7 @@ if($idCotizacion == ""){
 
 	$res = mysqli_query($con, $sql);
 	$num_rows = mysqli_affected_rows($con);
-	var_dump($cot_codigo);
+	var_dump($res);
 	die();
 
 	if ($num_rows > 0) {
