@@ -1555,6 +1555,7 @@ function cotizarOfertas() {
             Ciudad: ciudadCirculacion,
             benefOneroso: benefOneroso,
             idCotizacion: idCotizacion,
+            mundial: null
           },
           cache: false,
           success: function (data) {
