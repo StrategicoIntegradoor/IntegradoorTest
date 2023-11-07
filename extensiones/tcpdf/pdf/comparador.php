@@ -945,12 +945,19 @@ $valorlimiterow = mysqli_num_rows($respuestaquery9);
 if ($valorlimiterow == 10) {
 	while ($rowRespuesta9 = mysqli_fetch_assoc($respuestaquery9)) {
 
+		if (is_numeric($rowRespuesta9['ValorRC'])) {
+			$pdfValorRCM = $rowRespuesta9['ValorRC']/1000000;
+			$pdfValorRC = '$' . number_format($pdfValorRCM, 0, ',', '.'); // Agregar el símbolo de peso aquí
+		} else {
+			$pdfValorRC = $rowRespuesta9['ValorRC'];
+		} 
+
 		if ($cont4 % 2 == 0) {
 
-			$html3 .= '<td class="puntos fondo" style="width:' . $valorTabla . '%; font-family:dejavusanscondensed;"><center><font size="6" style="text-align: center;"><div style="font-size:4pt">&nbsp;</div>' . $rowRespuesta9['ValorRC'] . '</font></center></td>';
+			$html3 .= '<td class="puntos fondo" style="width:' . $valorTabla . '%; font-family:dejavusanscondensed;"><center><font size="6" style="text-align: center;"><div style="font-size:4pt">&nbsp;</div>' . $pdfValorRC . '</font></center></td>';
 		} else {
 
-			$html3 .= '<td class="puntos fondo2" style="width:' . $valorTabla . '%; font-family:dejavusanscondensed;"><center><font size="6" style="text-align: center;"><div style="font-size:4pt">&nbsp;</div>' . $rowRespuesta9['ValorRC'] . '</font></center></td>';
+			$html3 .= '<td class="puntos fondo2" style="width:' . $valorTabla . '%; font-family:dejavusanscondensed;"><center><font size="6" style="text-align: center;"><div style="font-size:4pt">&nbsp;</div>' . $pdfValorRC . '</font></center></td>';
 		}
 
 		$cont4 += 1;
@@ -958,12 +965,19 @@ if ($valorlimiterow == 10) {
 } else if ($valorlimiterow > 10) {
 	while ($rowRespuesta9 = mysqli_fetch_assoc($respuestaquery9)) {
 
+		if (is_numeric($rowRespuesta9['ValorRC'])) {
+			$pdfValorRCM = $rowRespuesta9['ValorRC']/1000000;
+			$pdfValorRC = '$' . number_format($pdfValorRCM, 0, ',', '.'); // Agregar el símbolo de peso aquí
+		} else {
+			$pdfValorRC = $rowRespuesta9['ValorRC'];
+		} 
+
 		if ($cont4 % 2 == 0) {
 
-			$html3 .= '<td class="puntos fondo" style="width:' . $valorTabla . '%; font-family:dejavusanscondensed;"><center><font size="5" style="text-align: center;"><div style="font-size:4pt">&nbsp;</div>' . $rowRespuesta9['ValorRC'] . '</font></center></td>';
+			$html3 .= '<td class="puntos fondo" style="width:' . $valorTabla . '%; font-family:dejavusanscondensed;"><center><font size="5" style="text-align: center;"><div style="font-size:4pt">&nbsp;</div>' . $pdfValorRC . '</font></center></td>';
 		} else {
 
-			$html3 .= '<td class="puntos fondo2" style="width:' . $valorTabla . '%; font-family:dejavusanscondensed;"><center><font size="5" style="text-align: center;"><div style="font-size:4pt">&nbsp;</div>' . $rowRespuesta9['ValorRC'] . '</font></center></td>';
+			$html3 .= '<td class="puntos fondo2" style="width:' . $valorTabla . '%; font-family:dejavusanscondensed;"><center><font size="5" style="text-align: center;"><div style="font-size:4pt">&nbsp;</div>' . $pdfValorRC . '</font></center></td>';
 		}
 
 		$cont4 += 1;
@@ -971,12 +985,19 @@ if ($valorlimiterow == 10) {
 } else {
 	while ($rowRespuesta9 = mysqli_fetch_assoc($respuestaquery9)) {
 
+		if (is_numeric($rowRespuesta9['ValorRC'])) {
+			$pdfValorRCM = $rowRespuesta9['ValorRC']/1000000;
+			$pdfValorRC = '$' . number_format($pdfValorRCM, 0, ',', '.'); // Agregar el símbolo de peso aquí
+		} else {
+			$pdfValorRC = $rowRespuesta9['ValorRC'];
+		} 
+
 		if ($cont4 % 2 == 0) {
 
-			$html3 .= '<td class="puntos fondo" style="width:' . $valorTabla . '%; font-family:dejavusanscondensed;"><center><font size="7" style="text-align: center;"><div style="font-size:4pt">&nbsp;</div>' . $rowRespuesta9['ValorRC'] . '</font></center></td>';
+			$html3 .= '<td class="puntos fondo" style="width:' . $valorTabla . '%; font-family:dejavusanscondensed;"><center><font size="7" style="text-align: center;"><div style="font-size:4pt">&nbsp;</div>' . $pdfValorRC . '</font></center></td>';
 		} else {
 
-			$html3 .= '<td class="puntos fondo2" style="width:' . $valorTabla . '%; font-family:dejavusanscondensed;"><center><font size="7" style="text-align: center;"><div style="font-size:4pt">&nbsp;</div>' . $rowRespuesta9['ValorRC'] . '</font></center></td>';
+			$html3 .= '<td class="puntos fondo2" style="width:' . $valorTabla . '%; font-family:dejavusanscondensed;"><center><font size="7" style="text-align: center;"><div style="font-size:4pt">&nbsp;</div>' . $pdfValorRC . '</font></center></td>';
 		}
 
 		$cont4 += 1;
