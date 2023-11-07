@@ -1715,13 +1715,13 @@ $html4 .= '</tr>';
 $html4 .= '</table>';
 
 //::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
-//CONSULTA ResponsabilidadCivilGeneralFamiliar
+//CONSULTA ACCIDENTES PERSONALES
 //::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
 $html4 .= '<table style="width: 100%; vertical-align: middle;" class="second2" cellpadding="2"  border="0">';
 
 $html4 .= '<tr>';
-$html4 .= '<td class ="fondo puntos" style="width:10%; text-align: center; font-family:dejavusanscondensedb;"><center><div style="font-size:6pt">&nbsp;</div><font size="8">RC familiar</font></center></td>';
+$html4 .= '<td class ="fondo puntos" style="width:10%; text-align: center; font-family:dejavusanscondensedb;"><center><div style="font-size:6pt">&nbsp;</div><font size="8">Accidentes personales</font></center></td>';
 
 $query23 = "SELECT * FROM ofertas WHERE `id_cotizacion` = $identificador AND `seleccionar` = 'Si'";
 $respuestaquery23 =  $conexion->query($query23);
@@ -1734,7 +1734,7 @@ while ($rowRespuesta23 = mysqli_fetch_assoc($respuestaquery23)) {
 	$queryConsultaAsistencia17 = "SELECT * FROM asistencias WHERE `aseguradora` LIKE '$nombreAseguradora' AND `producto` LIKE '$nombreProducto'";
 	$respuestaqueryAsistencia17 =  $conexion->query($queryConsultaAsistencia17);
 	$rowRespuestaAsistencia17 = mysqli_fetch_assoc($respuestaqueryAsistencia17);
-	$ampara = $rowRespuestaAsistencia17['ResponsabilidadCivilGeneralFamiliar'];
+	$ampara = $rowRespuestaAsistencia17['Accidentespersonales'];
 
 
 	if ($cont21 % 2 == 0) {
