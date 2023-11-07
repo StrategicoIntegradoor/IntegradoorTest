@@ -1259,6 +1259,7 @@ $html4 .= '<tr style="width: 100%;" class="izquierda">';
 $html4 .= '<table style="width: 100%;" class="second2" cellpadding="2"  border="0">';
 
 $html4 .= '<td class="fondo puntos" style="width:10%; text-align: center; font-family:dejavusanscondensedb;"><div style="font-size:2pt">&nbsp;</div><font size="8">Grua varada o accidente</font></td>';
+$html4 .= '</tr>';
 
 $query15 = "SELECT * FROM ofertas WHERE `id_cotizacion` = $identificador AND `seleccionar` = 'Si'";
 $respuestaquery15 =  $conexion->query($query15);
