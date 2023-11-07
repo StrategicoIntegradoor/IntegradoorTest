@@ -1234,36 +1234,36 @@ $html4 .= '<td style ="width: 100%; background-color: #D1D1D1; font-family:dejav
 $html4 .= '</tr>';
 
 $html4 .= '<tr>';
-$html4 .= '<td class="fondo puntos" style="width:10%; text-align: center; font-family:dejavusanscondensedb;"><div style="font-size:2pt">&nbsp;</div><font size="8">Grua varada o accidente</font></td>';
+// $html4 .= '<td class="fondo puntos" style="width:10%; text-align: center; font-family:dejavusanscondensedb;"><div style="font-size:2pt">&nbsp;</div><font size="8">Grua varada o accidente</font></td>';
 
-$query15 = "SELECT * FROM ofertas WHERE `id_cotizacion` = $identificador AND `seleccionar` = 'Si'";
-$respuestaquery15 =  $conexion->query($query15);
+// $query15 = "SELECT * FROM ofertas WHERE `id_cotizacion` = $identificador AND `seleccionar` = 'Si'";
+// $respuestaquery15 =  $conexion->query($query15);
 
-$cont11 = 1;
-while ($rowRespuesta15 = mysqli_fetch_assoc($respuestaquery15)) {
+// $cont11 = 1;
+// while ($rowRespuesta15 = mysqli_fetch_assoc($respuestaquery15)) {
 
-	$nombreAseguradora = nombreAseguradora($rowRespuesta15['Aseguradora']);
-	$nombreProducto = productoAseguradora($rowRespuesta15['Aseguradora'], $rowRespuesta15['Producto']);
+// 	$nombreAseguradora = nombreAseguradora($rowRespuesta15['Aseguradora']);
+// 	$nombreProducto = productoAseguradora($rowRespuesta15['Aseguradora'], $rowRespuesta15['Producto']);
 
-	$queryConsultaAsistencia7 = "SELECT * FROM asistencias WHERE `aseguradora` LIKE '$nombreAseguradora' AND `producto` LIKE '$nombreProducto'";
-	$respuestaqueryAsistencia7 =  $conexion->query($queryConsultaAsistencia7);
-	$rowRespuestaAsistencia7 = mysqli_fetch_assoc($respuestaqueryAsistencia7);
+// 	$queryConsultaAsistencia7 = "SELECT * FROM asistencias WHERE `aseguradora` LIKE '$nombreAseguradora' AND `producto` LIKE '$nombreProducto'";
+// 	$respuestaqueryAsistencia7 =  $conexion->query($queryConsultaAsistencia7);
+// 	$rowRespuestaAsistencia7 = mysqli_fetch_assoc($respuestaqueryAsistencia7);
 
-	if ($cont11 % 2 == 0) {
-		if ($rowRespuestaAsistencia7['Grua'] == "Si ampara") {
-			$html4 .= '<td class="puntos fondo" style="width:' . $valorTabla . '%;text-align: center;"><div style="font-size:6pt">&nbsp;</div><img style="width:16px;" src="../../../vistas/img/logos/cheque.png" alt=""></td>';
-		} else {
-			$html4 .= '<td class="puntos fondo" style="width:' . $valorTabla . '%;"><center><font size="7"style="text-align: center; font-family:dejavusanscondensed;"><div style="font-size:6pt">&nbsp;</div>' . $rowRespuestaAsistencia7['Grua'] . '</font></center></td>';
-		}
-	} else {
-		if ($rowRespuestaAsistencia7['Grua'] == "Si ampara") {
-			$html4 .= '<td class="puntos fondo2" style="width:' . $valorTabla . '%;text-align: center;"><div style="font-size:6pt">&nbsp;</div><img style="width:16px;" src="../../../vistas/img/logos/cheque.png" alt=""></td>';
-		} else {
-			$html4 .= '<td class="puntos fondo2" style="width:' . $valorTabla . '%;"><center><font size="7"style="text-align: center; font-family:dejavusanscondensed;"><div style="font-size:6pt">&nbsp;</div>' . $rowRespuestaAsistencia7['Grua'] . '</font></center></td>';
-		}
-	}
-	$cont11 += 1;
-}
+// 	if ($cont11 % 2 == 0) {
+// 		if ($rowRespuestaAsistencia7['Grua'] == "Si ampara") {
+// 			$html4 .= '<td class="puntos fondo" style="width:' . $valorTabla . '%;text-align: center;"><div style="font-size:6pt">&nbsp;</div><img style="width:16px;" src="../../../vistas/img/logos/cheque.png" alt=""></td>';
+// 		} else {
+// 			$html4 .= '<td class="puntos fondo" style="width:' . $valorTabla . '%;"><center><font size="7"style="text-align: center; font-family:dejavusanscondensed;"><div style="font-size:6pt">&nbsp;</div>' . $rowRespuestaAsistencia7['Grua'] . '</font></center></td>';
+// 		}
+// 	} else {
+// 		if ($rowRespuestaAsistencia7['Grua'] == "Si ampara") {
+// 			$html4 .= '<td class="puntos fondo2" style="width:' . $valorTabla . '%;text-align: center;"><div style="font-size:6pt">&nbsp;</div><img style="width:16px;" src="../../../vistas/img/logos/cheque.png" alt=""></td>';
+// 		} else {
+// 			$html4 .= '<td class="puntos fondo2" style="width:' . $valorTabla . '%;"><center><font size="7"style="text-align: center; font-family:dejavusanscondensed;"><div style="font-size:6pt">&nbsp;</div>' . $rowRespuestaAsistencia7['Grua'] . '</font></center></td>';
+// 		}
+// 	}
+// 	$cont11 += 1;
+// }
 $html4 .= '</tr>';
 $html4 .= '</table>';
 
