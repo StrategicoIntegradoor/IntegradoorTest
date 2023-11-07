@@ -1653,7 +1653,7 @@ $html4 .= '</table>';
 $html4 .= '<table style="width: 100%; vertical-align: middle;" class="second2" cellpadding="2"  border="0">';
 
 $html4 .= '<tr>';
-$html4 .= '<td class ="fondo puntos" style="width:10%; text-align: center; font-family:dejavusanscondensedb;"><center><div style="font-size:7pt">&nbsp;</div><font size="8">RC familiar</font></center></td>';
+$html4 .= '<td class ="fondo puntos" style="width:10%; text-align: center; font-family:dejavusanscondensedb;"><center><div style="font-size:6pt">&nbsp;</div><font size="8">RC familiar</font></center></td>';
 
 $query23 = "SELECT * FROM ofertas WHERE `id_cotizacion` = $identificador AND `seleccionar` = 'Si'";
 $respuestaquery23 =  $conexion->query($query23);
