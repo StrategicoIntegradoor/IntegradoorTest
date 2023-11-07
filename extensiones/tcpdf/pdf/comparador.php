@@ -1784,7 +1784,7 @@ $html4 .= '</table>';
 
 $html4 .= '<table>';
 $html4 .= '<tr>';
-$html4 .= '<td class ="fondo puntos" style="width:10%; text-align: center; font-family:dejavusanscondensedb;"><font size="8">Asistencia odontológica</font></td>';
+$html4 .= '<td class ="fondo puntos" style="width:10%; text-align: center; font-family:dejavusanscondensedb;"><div style="font-size:7pt">&nbsp;</div><font size="8">Asistencia odontológica</font></td>';
 
 $query26 = "SELECT * FROM ofertas WHERE `id_cotizacion` = $identificador AND `seleccionar` = 'Si'";
 $respuestaquery26 =  $conexion->query($query26);
