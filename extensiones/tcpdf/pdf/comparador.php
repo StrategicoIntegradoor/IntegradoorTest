@@ -2066,7 +2066,7 @@ $html4 .= '</table>';
 $html4 .= '<table>';
 
 $html4 .= '<tr>';
-$html4 .= '<td class="fondo puntos" style="width:10%;"><font size="8" style="font-family:dejavusanscondensedb; text-align: center;">Accidentes personales</font></td>';
+$html4 .= '<td class ="fondo puntos" style="width:10%; text-align: center; font-family:dejavusanscondensedb;"><font size="8">Accidentes personales</font></td>';
 
 $query25 = "SELECT * FROM ofertas WHERE `id_cotizacion` = $identificador AND `seleccionar` = 'Si'";
 $respuestaquery25 =  $conexion->query($query25);
