@@ -1552,7 +1552,7 @@ $html4 .= '<td class="puntos fondo" style="width:10%; text-align: center; font-f
 
 $query20 = "SELECT * FROM ofertas WHERE `id_cotizacion` = $identificador AND `seleccionar` = 'Si'";
 $respuestaquery20 =  $conexion->query($query20);
-$cont18 = 1;
+$cont18 = 2;
 
 while ($rowRespuesta20 = mysqli_fetch_assoc($respuestaquery20)) {
 
