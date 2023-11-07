@@ -2073,9 +2073,12 @@ $html5 = '
   
 <table style="width: 100%;" class="second2" cellpadding="2"  border="0">';
 
+$html5 .= '<table>';
+
 $html5 .= '<tr style="width: 100%;" class="izquierda">';
 $html5 .= '<td style ="width: 100%;  background-color: #D1D1D1; font-family:dejavusanscondensedb;" colspan="' . ($fila6 + 1) . '"><div style="font-size:3pt">&nbsp;</div>ASISTENCIAS<div style="font-size:3pt">&nbsp;</div></td>';
 $html5 .= '</tr>';
+$html5 .= '</table>';
 
 //::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 //LOGOS
