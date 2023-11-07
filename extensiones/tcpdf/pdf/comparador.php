@@ -1717,13 +1717,13 @@ while ($rowRespuesta24 = mysqli_fetch_assoc($respuestaquery24)) {
 		// if ($rowRespuestaAsistencia18['CoberturaDeVidrios'] == "Si ampara") {
 		// $html4 .= '<td class="puntos fondo" style="width:' . $valorTabla . '%;text-align: center;"><div style="font-size:12pt">&nbsp;</div><img style="width:16px;" src="../../../vistas/img/logos/cheque.png" alt=""></td>';
 		// } else {
-		$html4 .= '<td class="puntos fondo" style="width:' . $valorTabla . '%; text-align: center"><center><div style="font-size:14pt">&nbsp;</div><font size="7"style="text-align: center; font-family:dejavusanscondensed;">' . $rowRespuestaAsistencia18['CoberturaDeVidrios'] . '</font></center></td>';
+		$html4 .= '<td class="puntos fondo" style="width:' . $valorTabla . '%; text-align: center"><center><div style="font-size:7pt">&nbsp;</div><font size="7"style="text-align: center; font-family:dejavusanscondensed;">' . $rowRespuestaAsistencia18['CoberturaDeVidrios'] . '</font></center></td>';
 		// }
 	} else {
 		// if ($rowRespuestaAsistencia18['CoberturaDeVidrios'] == "Si ampara") {
 		// $html4 .= '<td class="puntos fondo2" style="width:' . $valorTabla . '%;text-align: center;"><div style="font-size:12pt">&nbsp;</div><img style="width:16px;" src="../../../vistas/img/logos/cheque.png" alt=""></td>';
 		// } else {
-		$html4 .= '<td class="puntos fondo2" style="width:' . $valorTabla . '%; text-align: center"><center><div style="font-size:14pt">&nbsp;</div><font size="7"style="text-align: center; font-family:dejavusanscondensed;">' . $rowRespuestaAsistencia18['CoberturaDeVidrios'] . '</font></center></td>';
+		$html4 .= '<td class="puntos fondo2" style="width:' . $valorTabla . '%; text-align: center"><center><div style="font-size:7pt">&nbsp;</div><font size="7"style="text-align: center; font-family:dejavusanscondensed;">' . $rowRespuestaAsistencia18['CoberturaDeVidrios'] . '</font></center></td>';
 		// }
 	}
 
