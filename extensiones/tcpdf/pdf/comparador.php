@@ -1229,7 +1229,6 @@ $html4 = '
 //CONSULTA GRUA
 //::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
-
 $html4 .= '<tr style="width: 100%;" class="izquierda">';
 $html4 .= '<td style ="width: 100%;  background-color: #D1D1D1; font-family:dejavusanscondensedb; " colspan="' . ($fila6 + 1) . '"><div style="font-size:3pt">&nbsp;</div>ASISTENCIAS<div style="font-size:3pt">&nbsp;</div></td>';
 $html4 .= '</tr>';
@@ -1266,6 +1265,7 @@ while ($rowRespuesta15 = mysqli_fetch_assoc($respuestaquery15)) {
 	$cont11 += 1;
 }
 $html4 .= '</tr>';
+$html4 .= '</table>';
 
 
 //::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
@@ -1312,6 +1312,7 @@ $html4 .= '</tr>';
 //::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 //CONSULTA ASISTENCIA JURIDICA
 //::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+$html4 .= '<table>';
 
 $html4 .= '<tr>';
 $html4 .= '<td class="fondo puntos" style="width:10%; text-align: center; font-family:dejavusanscondensedb;"><font size="8">Asistencia juridica en proceso penal </font></td>';
@@ -1348,11 +1349,13 @@ while ($rowRespuesta17 = mysqli_fetch_assoc($respuestaquery17)) {
 }
 
 $html4 .= '</tr>';
+$html4 .= '</table>';
 
 
 //::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 //CONSULTA TRANSPORTE PT
 //::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+$html4 .= '<table>';
 
 $html4 .= '<tr>';
 $html4 .= '<td class="fondo puntos" style="width:10%; text-align: center; font-family:dejavusanscondensedb;"><font size="8">Gastos de Transporte en pérdida total</font></td>';
@@ -1391,6 +1394,7 @@ while ($rowRespuesta27 = mysqli_fetch_assoc($respuestaquery27)) {
 }
 
 $html4 .= '</tr>';
+$html4 .= '</table>';
 
 //::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 //CONSULTA TRANSPORTE PP
