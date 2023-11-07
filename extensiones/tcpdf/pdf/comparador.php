@@ -2023,41 +2023,39 @@ $html4 .= '</table>';
 //ACCIDENTES PERSONALES
 //::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 $html4 .= '<table>';
-
 $html4 .= '<tr>';
-$html4 .= '<td class ="fondo puntos" style="width:10%; text-align: center; font-family:dejavusanscondensedb;"><font size="8">Accidentes personales</font></td>';
+$html4 .= '<td class ="fondo puntos" style="width:10%; text-align: center; font-family:dejavusanscondensedb;"><font size="8">Lucro Cesante</font></td>';
 
-$query25 = "SELECT * FROM ofertas WHERE `id_cotizacion` = $identificador AND `seleccionar` = 'Si'";
-$respuestaquery25 =  $conexion->query($query25);
+$query28 = "SELECT * FROM ofertas WHERE `id_cotizacion` = $identificador AND `seleccionar` = 'Si'";
+$respuestaquery28 =  $conexion->query($query28);
 
 $cont26 = 1;
-while ($rowRespuesta25 = mysqli_fetch_assoc($respuestaquery25)) {
+while ($rowRespuesta28 = mysqli_fetch_assoc($respuestaquery28)) {
 
-	$nombreAseguradora = nombreAseguradora($rowRespuesta25['Aseguradora']);
-	$nombreProducto = productoAseguradora($rowRespuesta25['Aseguradora'], $rowRespuesta25['Producto']);
+	$nombreAseguradora = nombreAseguradora($rowRespuesta28['Aseguradora']);
+	$nombreProducto = productoAseguradora($rowRespuesta28['Aseguradora'], $rowRespuesta28['Producto']);
 
-	$queryConsultaAsistencia18 = "SELECT * FROM asistencias WHERE `aseguradora` LIKE '$nombreAseguradora' AND `producto` LIKE '$nombreProducto'";
-	$respuestaqueryAsistencia18 =  $conexion->query($queryConsultaAsistencia18);
-	$rowRespuestaAsistencia18 = mysqli_fetch_assoc($respuestaqueryAsistencia18);
+	$queryConsultaAsistencia22 = "SELECT * FROM asistencias WHERE `aseguradora` LIKE '$nombreAseguradora' AND `producto` LIKE '$nombreProducto'";
+	$respuestaqueryAsistencia22 =  $conexion->query($queryConsultaAsistencia22);
+	$rowRespuestaAsistencia22 = mysqli_fetch_assoc($respuestaqueryAsistencia22);
 
-	if ($cont26 % 2 != 0) {
-		if ($rowRespuestaAsistencia18['Accidentespersonales'] == "Si ampara") {
-			$html4 .= '<td class="puntos fondo" style="width:' . $valorTabla . '%;text-align: center;"><div style="font-size:4pt">&nbsp;</div><img style="width:16px;" src="../../../vistas/img/logos/cheque.png" alt=""></td>';
+	if ($cont26 % 2 == 0) {
+		if ($rowRespuestaAsistencia22['Accidentespersonales'] == "Si ampara") {
+			$html4 .= '<td class="puntos fondo" style="width:' . $valorTabla . '%;text-align: center;"><div style="font-size:6pt">&nbsp;</div><img style="width:16px;" src="../../../vistas/img/logos/cheque.png" alt=""></td>';
 		} else {
 			$html4 .= '<td class="puntos fondo" style="width:' . $valorTabla . '%;"><center><div style="font-size:7pt">&nbsp;</div><font size="7"style="text-align: center; font-family:dejavusanscondensed;">' . $rowRespuestaAsistencia22['Accidentespersonales'] . '</font></center></td>';
 		}
 	} else {
-		if ($rowRespuestaAsistencia18['Accidentespersonales'] == "Si ampara") {
-			$html4 .= '<td class="puntos fondo2" style="width:' . $valorTabla . '%;text-align: center;"><div style="font-size:4pt">&nbsp;</div><img style="width:16px;" src="../../../vistas/img/logos/cheque.png" alt=""></td>';
+		if ($rowRespuestaAsistencia22['Accidentespersonales'] == "Si ampara") {
+			$html4 .= '<td class="puntos fondo2" style="width:' . $valorTabla . '%;text-align: center;"><div style="font-size:6pt">&nbsp;</div><img style="width:16px;" src="../../../vistas/img/logos/cheque.png" alt=""></td>';
 		} else {
 			$html4 .= '<td class="puntos fondo2" style="width:' . $valorTabla . '%;"><center><div style="font-size:7pt">&nbsp;</div><font size="7"style="text-align: center; font-family:dejavusanscondensed;">' . $rowRespuestaAsistencia22['Accidentespersonales'] . '</font></center></td>';
 		}
 	}
 
-
 	$cont26 += 1;
 }
-
+ 
 $html4 .= '</tr>';
 $html4 .= '</table>';
 
