@@ -1966,6 +1966,8 @@ while ($rowRespuesta28 = mysqli_fetch_assoc($respuestaquery28)) {
     $queryConsultaAsistencia22 = "SELECT * FROM asistencias WHERE `aseguradora` LIKE '$nombreAseguradora' AND `producto` LIKE '$nombreProducto'";
     $respuestaqueryAsistencia22 =  $conexion->query($queryConsultaAsistencia22);
     $rowRespuestaAsistencia22 = mysqli_fetch_assoc($respuestaqueryAsistencia22);
+	var_dump($rowRespuestaAsistencia22);
+	die();
 	
     if ($cont26 % 2 == 0) {
         if ($PT == "Deducible: 10% min 1.2 SMMLV" || $PT == "Deducible: 10% min 1 SMMLV") {
