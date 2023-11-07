@@ -2030,7 +2030,7 @@ $html4 .= '<td class ="fondo puntos" style="width:10%; text-align: center; font-
 $query25 = "SELECT * FROM ofertas WHERE `id_cotizacion` = $identificador AND `seleccionar` = 'Si'";
 $respuestaquery25 =  $conexion->query($query25);
 
-$cont35 = 1;
+$cont26 = 1;
 while ($rowRespuesta25 = mysqli_fetch_assoc($respuestaquery25)) {
 
 	$nombreAseguradora = nombreAseguradora($rowRespuesta25['Aseguradora']);
@@ -2040,7 +2040,7 @@ while ($rowRespuesta25 = mysqli_fetch_assoc($respuestaquery25)) {
 	$respuestaqueryAsistencia18 =  $conexion->query($queryConsultaAsistencia18);
 	$rowRespuestaAsistencia18 = mysqli_fetch_assoc($respuestaqueryAsistencia18);
 
-	if ($cont35 % 2 != 0) {
+	if ($cont26 % 2 != 0) {
 		if ($rowRespuestaAsistencia18['Accidentespersonales'] == "Si ampara") {
 			$html4 .= '<td class="puntos fondo" style="width:' . $valorTabla . '%;text-align: center;"><div style="font-size:4pt">&nbsp;</div><img style="width:16px;" src="../../../vistas/img/logos/cheque.png" alt=""></td>';
 		} else {
@@ -2050,12 +2050,12 @@ while ($rowRespuesta25 = mysqli_fetch_assoc($respuestaquery25)) {
 		if ($rowRespuestaAsistencia18['Accidentespersonales'] == "Si ampara") {
 			$html4 .= '<td class="puntos fondo2" style="width:' . $valorTabla . '%;text-align: center;"><div style="font-size:4pt">&nbsp;</div><img style="width:16px;" src="../../../vistas/img/logos/cheque.png" alt=""></td>';
 		} else {
-			$html4 .= '<td class="puntos fondo" style="width:' . $valorTabla . '%;"><center><div style="font-size:7pt">&nbsp;</div><font size="7"style="text-align: center; font-family:dejavusanscondensed;">' . $rowRespuestaAsistencia22['Accidentespersonales'] . '</font></center></td>';
+			$html4 .= '<td class="puntos fondo2" style="width:' . $valorTabla . '%;"><center><div style="font-size:7pt">&nbsp;</div><font size="7"style="text-align: center; font-family:dejavusanscondensed;">' . $rowRespuestaAsistencia22['Accidentespersonales'] . '</font></center></td>';
 		}
 	}
 
 
-	$cont35 += 1;
+	$cont26 += 1;
 }
 
 $html4 .= '</tr>';
