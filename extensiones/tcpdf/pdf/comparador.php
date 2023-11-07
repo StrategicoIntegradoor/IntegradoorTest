@@ -2056,14 +2056,14 @@ while ($rowRespuesta28 = mysqli_fetch_assoc($respuestaquery28)) {
 
 	$cont26 += 1;
 }
-
+ 
 $html4 .= '</tr>';
 $html4 .= '</table>';
 
 //::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 //ACCIDENTES PERSONALES
 //::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
-$html4 .= '<table>';
+// $html4 .= '<table>';
 
 $html4 .= '<tr>';
 $html4 .= '<td class="fondo puntos" style="width:10%;"><font size="8" style="font-family:dejavusanscondensedb; text-align: center;">Accidentes personales</font></td>';
@@ -2089,9 +2089,9 @@ while ($rowRespuesta25 = mysqli_fetch_assoc($respuestaquery25)) {
 		}
 	} else {
 		if ($rowRespuestaAsistencia18['Accidentespersonales'] == "Si ampara") {
-			$html4 .= '<td class="puntos fondo" style="width:' . $valorTabla . '%;text-align: center;"><div style="font-size:4pt">&nbsp;</div><img style="width:16px;" src="../../../vistas/img/logos/cheque.png" alt=""></td>';
+			$html4 .= '<td class="puntos fondo2" style="width:' . $valorTabla . '%;text-align: center;"><div style="font-size:4pt">&nbsp;</div><img style="width:16px;" src="../../../vistas/img/logos/cheque.png" alt=""></td>';
 		} else {
-			$html4 .= '<td class="puntos fondo" style="width:' . $valorTabla . '%;"><center><div style="font-size:6pt">&nbsp;</div><font size="7"style="text-align: center; font-family:dejavusanscondensed;">' . $rowRespuestaAsistencia18['Accidentespersonales'] . '</font></center></td>';
+			$html4 .= '<td class="puntos fondo2" style="width:' . $valorTabla . '%;"><center><div style="font-size:6pt">&nbsp;</div><font size="7"style="text-align: center; font-family:dejavusanscondensed;">' . $rowRespuestaAsistencia18['Accidentespersonales'] . '</font></center></td>';
 		}
 	}
 
@@ -2100,7 +2100,7 @@ while ($rowRespuesta25 = mysqli_fetch_assoc($respuestaquery25)) {
 }
 
 $html4 .= '</tr>';
-$html4 .= '</table>';
+// $html4 .= '</table>';
 
 
 //::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
