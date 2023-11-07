@@ -2030,7 +2030,7 @@ $html4 .= '<td class ="fondo puntos" style="width:10%; text-align: center; font-
 $query25 = "SELECT * FROM ofertas WHERE `id_cotizacion` = $identificador AND `seleccionar` = 'Si'";
 $respuestaquery25 =  $conexion->query($query25);
 
-$cont27 = 1;
+$cont35 = 1;
 while ($rowRespuesta25 = mysqli_fetch_assoc($respuestaquery25)) {
 
 	$nombreAseguradora = nombreAseguradora($rowRespuesta25['Aseguradora']);
@@ -2040,7 +2040,7 @@ while ($rowRespuesta25 = mysqli_fetch_assoc($respuestaquery25)) {
 	$respuestaqueryAsistencia18 =  $conexion->query($queryConsultaAsistencia18);
 	$rowRespuestaAsistencia18 = mysqli_fetch_assoc($respuestaqueryAsistencia18);
 
-	if ($cont27 % 2 != 0) {
+	if ($cont35 % 2 != 0) {
 		if ($rowRespuestaAsistencia18['Accidentespersonales'] == "Si ampara") {
 			$html4 .= '<td class="puntos fondo" style="width:' . $valorTabla . '%;text-align: center;"><div style="font-size:4pt">&nbsp;</div><img style="width:16px;" src="../../../vistas/img/logos/cheque.png" alt=""></td>';
 		} else {
@@ -2055,7 +2055,7 @@ while ($rowRespuesta25 = mysqli_fetch_assoc($respuestaquery25)) {
 	}
 
 
-	$cont27 += 1;
+	$cont35 += 1;
 }
 
 $html4 .= '</tr>';
