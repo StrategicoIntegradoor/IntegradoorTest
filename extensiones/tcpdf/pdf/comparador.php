@@ -1439,6 +1439,7 @@ $html4 .= '</table>';
 //::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 //CONSULTA VEHICULO REEMPLAZO PERDIDA TOTAL
 //::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+$html4 .= '<table>';
 
 $html4 .= '<tr>';
 $html4 .= '<td class="puntos fondo" style="width:10%; text-align: center; font-family:dejavusanscondensedb;"><font size="8">Vehículo de reemplazo en pérdida total</font></td>';
@@ -1473,10 +1474,12 @@ while ($rowRespuesta28 = mysqli_fetch_assoc($respuestaquery28)) {
 }
 
 $html4 .= '</tr>';
+$html4 .= '</table>';
 
 //::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 //CONSULTA VEHICULO REEMPLAZO PERDIDA PARCIAL
 //::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+$html4 .= '<table>';
 
 $html4 .= '<tr>';
 $html4 .= '<td class ="fondo puntos" style="width:10%; text-align: center; font-family:dejavusanscondensedb;"><font size="8">Vehículo de reemplazo en pérdida parcial</font></td>';
@@ -1514,6 +1517,7 @@ while ($rowRespuesta19 = mysqli_fetch_assoc($respuestaquery19)) {
 }
 
 $html4 .= '</tr>';
+$html4 .= '</table>';
 
 
 //::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
@@ -2341,6 +2345,7 @@ $html5 .= '</tr>';
 //::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 //ACCIDENTES PERSONALES
 //::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+$html5 .= '<table>';
 
 $html5 .= '<tr>';
 $html5 .= '<td class="fondo puntos" style="width:10%;"><font size="8" style="font-family:dejavusanscondensedb; text-align: center;">Accidentes personales</font></td>';
@@ -2377,6 +2382,7 @@ while ($rowRespuesta25 = mysqli_fetch_assoc($respuestaquery25)) {
 }
 
 $html5 .= '</tr>';
+$html5 .= '</table>';
 
 //::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 //LLANTAS ESTALLADAS
