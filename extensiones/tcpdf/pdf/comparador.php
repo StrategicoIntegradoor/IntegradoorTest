@@ -1546,13 +1546,13 @@ $html4 .= '</table>';
 //::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 //CONSULTA CONDUCTOR ELEGIDO
 //::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
-$html4 .= '<table>';
+
 $html4 .= '<tr>';
-$html4 .= '<td class="puntos fondo" style="width:10%; text-align: center; font-family:dejavusanscondensedb;"><font size="8">Accidentes personales</font></td>';
+$html4 .= '<td class="fondo puntos" style="width:10%; text-align: center; font-family:dejavusanscondensedb;"><font size="8">Accidentes personales</font></td>';
 
 $query20 = "SELECT * FROM ofertas WHERE `id_cotizacion` = $identificador AND `seleccionar` = 'Si'";
 $respuestaquery20 =  $conexion->query($query20);
-$cont18 = 2;
+$cont18 = 1;
 
 while ($rowRespuesta20 = mysqli_fetch_assoc($respuestaquery20)) {
 
@@ -1578,11 +1578,14 @@ while ($rowRespuesta20 = mysqli_fetch_assoc($respuestaquery20)) {
 		}
 	}
 
+
+
+
+
 	$cont18 += 1;
 }
 
 $html4 .= '</tr>';
-$html4 .= '</table>';
 
 //::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 //CONSULTA Transporte del vehículo recuperado
@@ -2060,42 +2063,42 @@ $html4 .= '</table>';
 //::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 //ACCIDENTES PERSONALES
 //::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
-// $html4 .= '<table>';
-// $html4 .= '<tr>';
-// $html4 .= '<td class ="fondo puntos" style="width:10%; text-align: center; font-family:dejavusanscondensedb;"><font size="8">Accidentes personales</font></td>';
+$html4 .= '<table>';
+$html4 .= '<tr>';
+$html4 .= '<td class ="fondo puntos" style="width:10%; text-align: center; font-family:dejavusanscondensedb;"><font size="8">Accidentes personales</font></td>';
 
-// $query28 = "SELECT * FROM ofertas WHERE `id_cotizacion` = $identificador AND `seleccionar` = 'Si'";
-// $respuestaquery28 =  $conexion->query($query28);
+$query28 = "SELECT * FROM ofertas WHERE `id_cotizacion` = $identificador AND `seleccionar` = 'Si'";
+$respuestaquery28 =  $conexion->query($query28);
 
-// $cont26 = 1;
-// while ($rowRespuesta28 = mysqli_fetch_assoc($respuestaquery28)) {
+$cont26 = 1;
+while ($rowRespuesta28 = mysqli_fetch_assoc($respuestaquery28)) {
 
-// 	$nombreAseguradora = nombreAseguradora($rowRespuesta28['Aseguradora']);
-// 	$nombreProducto = productoAseguradora($rowRespuesta28['Aseguradora'], $rowRespuesta28['Producto']);
+	$nombreAseguradora = nombreAseguradora($rowRespuesta28['Aseguradora']);
+	$nombreProducto = productoAseguradora($rowRespuesta28['Aseguradora'], $rowRespuesta28['Producto']);
 
-// 	$queryConsultaAsistencia22 = "SELECT * FROM asistencias WHERE `aseguradora` LIKE '$nombreAseguradora' AND `producto` LIKE '$nombreProducto'";
-// 	$respuestaqueryAsistencia22 =  $conexion->query($queryConsultaAsistencia22);
-// 	$rowRespuestaAsistencia22 = mysqli_fetch_assoc($respuestaqueryAsistencia22);
+	$queryConsultaAsistencia22 = "SELECT * FROM asistencias WHERE `aseguradora` LIKE '$nombreAseguradora' AND `producto` LIKE '$nombreProducto'";
+	$respuestaqueryAsistencia22 =  $conexion->query($queryConsultaAsistencia22);
+	$rowRespuestaAsistencia22 = mysqli_fetch_assoc($respuestaqueryAsistencia22);
 
-// 	if ($cont26 % 2 == 0) {
-// 		if ($rowRespuestaAsistencia22['Accidentespersonales'] == "Si ampara") {
-// 			$html4 .= '<td class="puntos fondo" style="width:' . $valorTabla . '%;text-align: center;"><div style="font-size:6pt">&nbsp;</div><img style="width:16px;" src="../../../vistas/img/logos/cheque.png" alt=""></td>';
-// 		} else {
-// 			$html4 .= '<td class="puntos fondo" style="width:' . $valorTabla . '%;"><center><div style="font-size:7pt">&nbsp;</div><font size="7"style="text-align: center; font-family:dejavusanscondensed;">' . $rowRespuestaAsistencia22['Accidentespersonales'] . '</font></center></td>';
-// 		}
-// 	} else {
-// 		if ($rowRespuestaAsistencia22['Accidentespersonales'] == "Si ampara") {
-// 			$html4 .= '<td class="puntos fondo2" style="width:' . $valorTabla . '%;text-align: center;"><div style="font-size:6pt">&nbsp;</div><img style="width:16px;" src="../../../vistas/img/logos/cheque.png" alt=""></td>';
-// 		} else {
-// 			$html4 .= '<td class="puntos fondo2" style="width:' . $valorTabla . '%;"><center><div style="font-size:7pt">&nbsp;</div><font size="7"style="text-align: center; font-family:dejavusanscondensed;">' . $rowRespuestaAsistencia22['Accidentespersonales'] . '</font></center></td>';
-// 		}
-// 	}
+	if ($cont26 % 2 == 0) {
+		if ($rowRespuestaAsistencia22['Accidentespersonales'] == "Si ampara") {
+			$html4 .= '<td class="puntos fondo" style="width:' . $valorTabla . '%;text-align: center;"><div style="font-size:6pt">&nbsp;</div><img style="width:16px;" src="../../../vistas/img/logos/cheque.png" alt=""></td>';
+		} else {
+			$html4 .= '<td class="puntos fondo" style="width:' . $valorTabla . '%;"><center><div style="font-size:7pt">&nbsp;</div><font size="7"style="text-align: center; font-family:dejavusanscondensed;">' . $rowRespuestaAsistencia22['Accidentespersonales'] . '</font></center></td>';
+		}
+	} else {
+		if ($rowRespuestaAsistencia22['Accidentespersonales'] == "Si ampara") {
+			$html4 .= '<td class="puntos fondo2" style="width:' . $valorTabla . '%;text-align: center;"><div style="font-size:6pt">&nbsp;</div><img style="width:16px;" src="../../../vistas/img/logos/cheque.png" alt=""></td>';
+		} else {
+			$html4 .= '<td class="puntos fondo2" style="width:' . $valorTabla . '%;"><center><div style="font-size:7pt">&nbsp;</div><font size="7"style="text-align: center; font-family:dejavusanscondensed;">' . $rowRespuestaAsistencia22['Accidentespersonales'] . '</font></center></td>';
+		}
+	}
 
-// 	$cont26 += 1;
-// }
+	$cont26 += 1;
+}
  
-// $html4 .= '</tr>';
-// $html4 .= '</table>';
+$html4 .= '</tr>';
+$html4 .= '</table>';
 
 //::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 //SEGUNDA TABLA DE ASISTENCIAS
