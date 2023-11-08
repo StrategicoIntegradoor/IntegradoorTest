@@ -232,9 +232,11 @@ select:invalid + .error-message {
                     <div class="row">
                         <!-- Primera tarjeta con el logo -->
                         <div class="col-md-4 col-sm-12 mb-3">
-                            <div class="card-exequias">
-                                <div class="card-body text-center">
-                                    <img src="vistas/img/plantilla/logo_assistcard.jpg" class="img-fluid" style="max-width: 70%;">
+                            <div class="rounded-container">
+                                <div class="card-exequias">
+                                    <div class="card-body text-center">
+                                        <img src="vistas/img/plantilla/logo_assistcard.jpg" class="img-fluid" style="max-width: 70%;">
+                                    </div>
                                 </div>
                             </div>
                         </div>
