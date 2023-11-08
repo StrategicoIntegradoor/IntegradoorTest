@@ -100,9 +100,9 @@
   background-color: white;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
   padding: 10px;
-  max-width: 400px; /*Ajusta el valor según tus necesidades*/
-  width: 390px;
-  height: 300px;
+  /* max-width: 400px; Ajusta el valor según tus necesidades */
+  /* width: 390px; */
+  /* height: 300px; */
   margin: 0 auto;
   /* margin: 10% 0% 10% 0%; */
   display: flex;
