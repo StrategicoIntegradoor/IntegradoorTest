@@ -242,9 +242,6 @@ select:invalid + .error-message {
 .card-exequias .card-text {
     font-size: 14px;
     margin-bottom: 3%;
-    display: flex; 
-    flex-direction: column; 
-    justify-content: center;
 }
 
 </style>
@@ -367,7 +364,7 @@ select:invalid + .error-message {
                             <div class="card-exequias">
                                 <div class="card-body">
                                     <h4 class="card-title" style="font-weight: bold;">Comisión</h4>
-                                    <p class="card-text">Todas las ventas que se generen de este producto tienen una comisión del 15% (75% de participación).</p>
+                                    <p class="card-text" style="display: flex; align-items: center;">Todas las ventas que se generen de este producto tienen una comisión del 15% (75% de participación).</p>
                                 </div>
                             </div>
                         </div>
