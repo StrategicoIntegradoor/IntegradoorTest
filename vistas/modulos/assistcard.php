@@ -229,64 +229,37 @@ select:invalid + .error-message {
                     </div>
                     <!-- //LOGO Y DESCRIPCIÓN// -->
                     <!-- <div class="row1; col-sm-12"> -->
-                        <div class="col-md-4 col-sm-12" style="text-align: center; margin-bottom: 10px;">
-                            <div class="rounded-container">
-                                <div class="login-logo">
-                                    <img src="vistas/img/plantilla/logo_assistcard.jpg" class="img-responsive" style="width: 60%;  text-align: center;margin-bottom: 10px; display: flex; flex-direction: column; justify-content: center;">
-                                </div>
-                            </div>               
-                        </div>
-                        <!-- //PLAN MUY PERSONAL// -->
-                        <div class="col-md-4 col-sm-12" style="margin-bottom: 10px;">
-                            <div class="rounded-container" style="min-height: 275px;">
-                                <div class="row-card" style="display: flex; align-items: start;">
-                                    <div class="col-md-4 col-sm-4" style="display: flex; align-items: center; justify-content: center;">
-                                        <div class="circle" style="aspect-ratio: 1/1; max-width: 250px;">
-                                            <img src="vistas/img/plantilla/plan_personal.jpg" style="max-width: 100%; max-height: 100%; object-fit: contain;">
-                                        </div>
-                                    </div>
-                                    <div class="col-md-8 col-sm-8" style="text-align: center;">
-                                        <h4 style="font-family: 'Arial Narrow OS Bold', Arial, sans-serif; font-size: 15px;"><strong>PLAN MUY PERSONAL</strong></h4>
-                                        <h3><strong style="color: #82d600;">$72.000</strong></h3>
-                                        <p style="margin-bottom: 0px; margin-top: 0;">Pago anual</p>
-                                        <br>
-                                        <br>
-                                        <br>
-                                    </div>         
-                                </div>
-                                <div class="row-card-end" style="text-align: center;">
-                                    <p style="margin-bottom: 0px; margin-top: -40px; font-size: 13px; font-family: 'Arial Arabic', Arial, sans-serif;">AFILIADO TITULAR:</p>
-                                    <P style="margin-bottom: 5%; margin-top: 0; font-size: 13px; font-family: 'Arial Arabic', Arial, sans-serif;">Titular hasta los 60 años</P>
-                                    <p style="margin-bottom: 0px; font-size: 13px; font-family: 'Arial Arabic', Arial, sans-serif;">Máx. 8 afiliados adicionales por titular</p>
-                                </div>
-                                <div></div>
-                            </div>
-                        </div>
-                        <!-- //PLAN NUESTRA FAMILIA -->
-                        <div class="col-md-4 col-sm-12" style="margin-bottom: 10px;">
-                            <div class="rounded-container" style="min-height: 275px;">
-                                <div class="row-card" style="display: flex; align-items: start;">
-                                    <div class="col-md-4 col-sm-4" style="display: flex; align-items: center; justify-content: center;">
-                                        <div class="circle" style="aspect-ratio: 1/1; max-width: 250px;">
-                                            <img src="vistas/img/plantilla/plan_familiar.jpg" style="max-width: 100%; max-height: 100%; object-fit: contain;">
-                                        </div>
-                                    </div>
-                                    <div class="col-md-8 col-sm-8" style="text-align: center;">
-                                        <h4 style="font-family: 'Arial Narrow OS Bold', Arial, sans-serif; font-size: 15px;"><strong>PLAN NUESTRA FAMILIA</strong></h4>
-                                        <h3><strong style="color: #82d600;">$264.000</strong></h3>
-                                        <p style="margin-bottom: 0px; margin-top: 0;">Pago anual</p>
-                                        <br>
-                                    </div>         
-                                </div>
-                                <div class="row-card-end">
-                                    <div style="text-align: center;">
-                                        <p style="margin-bottom: 0px; margin-top: 0; font-size: 13px; font-family: 'Arial Arabic', Arial, sans-serif;">AFILIADO TITULAR:</p>
-                                        <P style="margin-bottom: 5%; margin-top: 0; font-size: 13px; font-family: 'Arial Arabic', Arial, sans-serif;">Titular hasta los 60 años</P>
-                                        <p style="margin-bottom: 0px; margin-top: 0; font-size: 13px; font-family: 'Arial Arabic', Arial, sans-serif;">2 Beneficiarios hasta 72 años (Padres o suegros), 4 Beneficiarios hasta 55 años (Hijos, Hermanos,Nietos, Cónyuge)</p>
-                                    </div>
+                    <div class="row">
+                        <!-- Primera tarjeta con el logo -->
+                        <div class="col-md-4 col-sm-12 mb-3">
+                            <div class="card rounded">
+                                <div class="card-body text-center">
+                                    <img src="vistas/img/plantilla/logo_olivos.png" class="img-fluid" style="max-width: 70%;">
                                 </div>
                             </div>
                         </div>
+
+                        <!-- Segunda tarjeta con título y párrafo -->
+                        <div class="col-md-4 col-sm-12 mb-3">
+                            <div class="card rounded">
+                                <div class="card-body">
+                                    <h5 class="card-title">Título de la tarjeta</h5>
+                                    <p class="card-text">Este es un ejemplo de contenido debajo del título. Puedes personalizarlo según tus necesidades.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Tercera tarjeta con título y párrafo -->
+                        <div class="col-md-4 col-sm-12 mb-3">
+                            <div class="card rounded">
+                                <div class="card-body">
+                                    <h5 class="card-title">Título de la tarjeta</h5>
+                                    <p class="card-text">Este es otro ejemplo de contenido debajo del título en la tercera tarjeta.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
                     <!-- </div> -->
                 </div>
             </div>
