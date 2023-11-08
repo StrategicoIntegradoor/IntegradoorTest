@@ -227,14 +227,8 @@ select:invalid + .error-message {
                         <div class="col-md-4 col-sm-12" style="text-align: center; margin-bottom: 10px;">
                             <div class="rounded-container-logo">
                                 <div class="login-logo">
-                                    <img src="vistas/img/plantilla/logo_olivos.png" class="img-responsive" style="width: 60%;">
+                                    <img src="vistas/img/plantilla/logo_assistcard.jpg" class="img-responsive" style="width: 60%;">
                                 </div>
-                                    <div class="text" style="text-align: justify;">
-                                        <p style="margin-bottom: 10px; margin-top: 10px; font-size: 13px; font-family: 'Arial Arabic', Arial, sans-serif; margin-left: 35px;"><i class="fas fa-check" style="color: #82d600;"></i> La mejor y más grande red de servicios exequiales.</p>
-                                        <p style="margin-bottom: 10px; margin-top: 10px; font-size: 13px; font-family: 'Arial Arabic', Arial, sans-serif; margin-left: 35px;"><i class="fas fa-check" style="color: #82d600;"></i> 47 años creando experiencias memorables.</p>
-                                        <p style="margin-bottom: 10px; margin-top: 10px; font-size: 13px; font-family: 'Arial Arabic', Arial, sans-serif; margin-left: 35px;"><i class="fas fa-check" style="color: #82d600;"></i> Cumplimiento de promesa del producto garantizada.</p>
-                                        <p style="margin-bottom: 10px; margin-top: 10px; font-size: 13px; font-family: 'Arial Arabic', Arial, sans-serif; margin-left: 35px;"><i class="fas fa-check" style="color: #82d600;"></i> Cubrimiento del 100% del territorio Colombiano.</p>
-                                    </div>
                             </div>               
                         </div>
                         <!-- //PLAN MUY PERSONAL// -->
