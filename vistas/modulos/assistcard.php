@@ -262,7 +262,7 @@ select:invalid + .error-message {
                         <div class="col-md-4 col-sm-12 mb-3">
                             <div class="card-exequias">
                                 <div class="card-body">
-                                    <h5 class="card-title  card-container" style="font-weight: bold; font-size: 20px;">¿Qué es una Asistencia en Viajes?</h5>
+                                    <h5 class="card-title" style="font-weight: bold; font-size: 20px;">¿Qué es una Asistencia en Viajes?</h5>
                                     <p class="card-text">Conjunto de servicios ofrecidos que cubren los eventos penosos que se pueda incurrir durante un viaje en el extranjero, como gastos médicos, asistencia legal, cancelaciones de vuelos, perdidas de equipaje, muerte, entre otros.</p>
                                     <br>
                                     <p class="card-text">Con una asistencia de viaje, el pasajero cuenta con coberturas y montos de dinero específicos en caso de que le ocurra una emergencia estando en el exterior.</p>
@@ -274,7 +274,7 @@ select:invalid + .error-message {
                         <div class="col-md-4 col-sm-12 mb-3">
                             <div class="card-exequias">
                                 <div class="card-body">
-                                    <h5 class="card-title  card-container" style="font-weight: bold; font-size: 20px;">Sobre Assist Card</h5>
+                                    <h5 class="card-title" style="font-weight: bold; font-size: 20px;">Sobre Assist Card</h5>
                                     <p class="card-text">Pertenece al grupo STARR Companies, es la compañía N° 1 en el mundo dedicada a brindar asistencia al viajero de manera integral desde hace más de 43 años.</p>
                                     <br>
                                     <p class="card-text">Para conocer más sobre Assist Card, ingresa AQUI</p>
@@ -298,7 +298,7 @@ select:invalid + .error-message {
                      <div class="col-md-4 col-sm-12 mb-3">
                             <div class="card-exequias">
                                 <div class="card-body">
-                                    <h5 class="card-title  card-container" style="font-weight: bold; font-size: 20px;">¿Cuales son sus principales coberturas?</h5>
+                                    <h5 class="card-title" style="font-weight: bold; font-size: 20px;">¿Cuales son sus principales coberturas?</h5>
                                     <p class="card-text">Conjunto de servicios ofrecidos que cubren los eventos penosos que se pueda incurrir durante un viaje en el extranjero, como gastos médicos, asistencia legal, cancelaciones de vuelos, perdidas de equipaje, muerte, entre otros.</p>
                                     <br>
                                     <p class="card-text">Con una asistencia de viaje, el pasajero cuenta con coberturas y montos de dinero específicos en caso de que le ocurra una emergencia estando en el exterior.</p>
@@ -310,7 +310,7 @@ select:invalid + .error-message {
                         <div class="col-md-4 col-sm-12 mb-3">
                             <div class="card-exequias">
                                 <div class="card-body">
-                                    <h5 class="card-title  card-container" style="font-weight: bold; font-size: 20px;">¿Qué datos se requieren para cotizar?</h5>
+                                    <h5 class="card-title" style="font-weight: bold; font-size: 20px;">¿Qué datos se requieren para cotizar?</h5>
                                     <p class="card-text">Pertenece al grupo STARR Companies, es la compañía N° 1 en el mundo dedicada a brindar asistencia al viajero de manera integral desde hace más de 43 años.</p>
                                     <br>
                                     <p class="card-text">Para conocer más sobre Assist Card, ingresa AQUI</p>
@@ -322,7 +322,7 @@ select:invalid + .error-message {
                         <div class="col-md-4 col-sm-12 mb-3">
                             <div class="card-exequias">
                                 <div class="card-body">
-                                    <h5 class="card-title  card-container" style="font-weight: bold; font-size: 20px;">Comisión</h5>
+                                    <h5 class="card-title" style="font-weight: bold; font-size: 20px;">Comisión</h5>
                                     <p class="card-text">Todas las ventas que se generen de este producto tienen una comisión del 15% (75% de participación).</p>
                                 </div>
                             </div>
