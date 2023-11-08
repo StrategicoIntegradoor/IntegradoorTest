@@ -425,8 +425,8 @@ select:invalid + .error-message {
 </div>
 
 
-<script src="vistas/js/invitar.js?v=<?php echo (rand()); ?>"></script>
+<!-- <script src="vistas/js/invitar.js?v=<?php echo (rand()); ?>"></script>
 <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 <script src="vistas/js/exequias.js?v=<?php echo (rand()); ?>"></script>
-<script src="vistas/js/cotizar.js?v=<?php echo (rand()); ?>"></script>
+<script src="vistas/js/cotizar.js?v=<?php echo (rand()); ?>"></script> -->
 
