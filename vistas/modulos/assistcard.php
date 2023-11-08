@@ -224,10 +224,10 @@ select:invalid + .error-message {
                     </div>
                     <!-- //LOGO Y DESCRIPCIÓN// -->
                     <!-- <div class="row1; col-sm-12"> -->
-                    <div class="col-md-4 col-sm-12" style="text-align: center; margin-bottom: 10px;">
-                        <div class="rounded-container-logo" style="display: flex; flex-direction: column; align-items: center;">
+                    <div class="col-md-4 col-sm-12 card" style="text-align: center; margin-bottom: 10px; display: flex; flex-direction: column; justify-content: center;">
+                        <div class="rounded-container-logo">
                             <div class="login-logo">
-                                <img src="vistas/img/plantilla/logo_assistcard.jpg" class="img-responsive" style="width: 70%;">
+                                <img src="vistas/img/plantilla/logo_assistcard.jpg" class="img-responsive" style="width: 70%; margin: 0 auto;">
                             </div>
                         </div>
                     </div>
