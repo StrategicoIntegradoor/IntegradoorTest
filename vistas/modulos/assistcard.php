@@ -339,9 +339,16 @@ select:invalid + .error-message {
                             <div class="card-exequias">
                                 <div class="card-body">
                                     <h5 class="card-title" style="font-weight: bold; font-size: 20px;">¿Qué datos se requieren para cotizar?</h5>
-                                    <p class="card-text">Pertenece al grupo STARR Companies, es la compañía N° 1 en el mundo dedicada a brindar asistencia al viajero de manera integral desde hace más de 43 años.</p>
+                                    <p class="card-text">Este producto esta diseñado para todas las edades y necesidades. Para cotizarlo se requiere la siguiente información:</p>
                                     <br>
-                                    <p class="card-text">Para conocer más sobre Assist Card, ingresa AQUI</p>
+                                    <ul class="card-text" style="list-style-type: disc; padding-left: 20px;">
+                                        <li>Nombre Completo</li>
+                                        <li>Fecha de Nacimiento</li>
+                                        <li>Motivo del viaje</li>
+                                        <li>País de origen y destino</li>
+                                        <li>Fecha de salida</li>
+                                        <li>Fecha de regreso</li>
+                                    </ul>
                                 </div>
                             </div>
                         </div>
