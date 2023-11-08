@@ -187,7 +187,7 @@
 		ASSITCARD
 		=============================================*/	
 			echo '<li>
-				<a href="assistcard">
+				<a href="assistcard.php">
 					<i class="fa fa-plane"></i>
 					<span>AssitCard</span>
 				</a>
