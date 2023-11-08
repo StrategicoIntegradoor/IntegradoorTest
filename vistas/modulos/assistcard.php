@@ -203,6 +203,12 @@ select:invalid + .error-message {
 
 }
 
+.card-text{
+
+    text-align: justify;
+
+}
+
 
 </style>
 
