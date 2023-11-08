@@ -173,16 +173,26 @@
 		/*=============================================
 		INTERMEDIARIO
 		=============================================*/	
-		if($_SESSION["permisos"]["Agregarintermediario"] == "x"){	
+		// if($_SESSION["permisos"]["Agregarintermediario"] == "x"){	
+		// 	echo '<li>
+		// 		<a href="intermediario">
+		// 			<i class="fa fa-briefcase"></i>
+		// 			<span>Intermediario</span>
+		// 		</a>
+		// 	</li>';
+		
+		// }
+
+		/*=============================================
+		ASSITCARD
+		=============================================*/	
 			echo '<li>
-				<a href="intermediario">
-					<i class="fa fa-briefcase"></i>
-					<span>Intermediario</span>
+				<a href="">
+					<i class="fa fa-plane"></i>
+					<span>AssitCard</span>
 				</a>
 			</li>';
-		
-		}
-	
+			
 		/*=============================================
 		INVITACIÓN
 		=============================================*/
