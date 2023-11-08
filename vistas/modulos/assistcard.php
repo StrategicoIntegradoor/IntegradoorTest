@@ -239,18 +239,19 @@ select:invalid + .error-message {
     margin-bottom: 3%;
 }
 
-.card-exequias .card-text {
+/* .card-exequias .card-text {
     font-size: 14px;
     margin-bottom: 3%;
-}
-
-/* .card-exequias .card-text {
-  text-align: center; 
-  margin-bottom: 10px; 
-  display: flex; 
-  flex-direction: column; 
-  justify-content: center;
 } */
+
+.card-exequias .card-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 100%;
+}
 
 </style>
 
