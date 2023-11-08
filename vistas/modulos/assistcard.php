@@ -232,7 +232,7 @@ select:invalid + .error-message {
                         <div class="col-md-4 col-sm-12" style="text-align: center; margin-bottom: 10px;">
                             <div class="rounded-container">
                                 <div class="login-logo">
-                                    <img src="vistas/img/plantilla/logo_assistcard.jpg" class="img-responsive" style="width: 60%;">
+                                    <img src="vistas/img/plantilla/logo_assistcard.jpg" class="img-responsive" style="width: 60%;  text-align: center; margin-bottom: 10px; display: flex; flex-direction: column; justify-content: center;">
                                 </div>
                             </div>               
                         </div>
