@@ -231,6 +231,7 @@ echo'<a href="https://web.whatsapp.com/send?phone=+573153539141" target="_blank"
         $_GET["ruta"] == "Productos" ||
         $_GET["ruta"] == "invitar" ||
         $_GET["ruta"] == "exequias" ||
+        $_GET["ruta"] == "assistcard" ||
         $_GET["ruta"] == "configuracion-pdf"
       ) {
         if ($_GET['ruta'] == 'modificacion-productos') {
