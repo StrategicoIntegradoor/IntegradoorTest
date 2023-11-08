@@ -282,71 +282,29 @@ select:invalid + .error-message {
                         <HR>
                     </div>
                     <!-- //AFILIADO ADICIONAL -->
-                    <div class="col-md-4 col-sm-12" style="text-align: center;  margin-bottom: 7px;">
-                        <div class="rounded-container">
-                            <div class="row-card" style="display: flex; align-items: start;">
-                                <div class="col-md-4 col-sm-4" style="display: flex; align-items: center; justify-content: center;">
-                                    <div class="circle" style="aspect-ratio: 1/1; max-width: 250px;">
-                                        <img src="vistas/img/plantilla/afiliado_adicional.jpg" style="max-width: 100%; max-height: 100%; object-fit: contain;">
-                                    </div>
+                     <!-- Segunda tarjeta con título y párrafo -->
+                     <div class="col-md-4 col-sm-12 mb-3">
+                            <div class="card-exequias">
+                                <div class="card-body">
+                                    <h5 class="card-title">¿Qué es una Asistencia en Viajes? Sobre Assist Card</h5>
+                                    <p class="card-text">Conjunto de servicios ofrecidos que cubren los eventos penosos que se pueda incurrir durante un viaje en el extranjero, como gastos médicos, asistencia legal, cancelaciones de vuelos, perdidas de equipaje, muerte, entre otros.</p>
+                                    <br>
+                                    <p class="card-text">Con una asistencia de viaje, el pasajero cuenta con coberturas y montos de dinero específicos en caso de que le ocurra una emergencia estando en el exterior.</p>
                                 </div>
-                                <div class="col-md-8 col-sm-8" style="text-align: center;">
-                                    <h4 style="font-family: 'Arial Narrow OS Bold', Arial, sans-serif; font-size: 15px;"><strong>AFILIADO ADICIONAL</strong></h4>
-                                    <h3><strong style="color: #82d600;">$72.000</strong></h3>
-                                    <p style="margin-bottom: 0px; margin-top: 0;">Pago anual</p>
-                                </div>         
-                            </div>
-                            <br>
-                            <div class="row-card-end">
-                                <p style="margin-bottom: 0px; margin-top: 0; font-size: 13px; font-family: 'Arial Arabic', Arial, sans-serif;">Máx. 8 afiliados adicionales por titular</p>
-                                <p style="margin-bottom: 0px; margin-top: 0; font-size: 13px; font-family: 'Arial Arabic', Arial, sans-serif;">Para alguno de los planes hasta los 60 años y sin restricción de parentesco</p>
                             </div>
                         </div>
-                    </div>
-                    <!-- //MASCOTAS -->
-                    <div class="col-md-4 col-sm-12" style="text-align: center;  margin-bottom: 7px;">
-                        <div class="rounded-container">
-                            <div class="row-card" style="display: flex; align-items: start;">
-                                <div class="col-md-4 col-sm-4" style="display: flex; align-items: center; justify-content: center;">
-                                    <div class="circle" style="aspect-ratio: 1/1; max-width: 250px;">
-                                        <img src="vistas/img/plantilla/mascotas.jpg">
-                                    </div>
+
+                        <!-- Tercera tarjeta con título y párrafo -->
+                        <div class="col-md-4 col-sm-12 mb-3">
+                            <div class="card-exequias">
+                                <div class="card-body">
+                                    <h5 class="card-title">Sobre Assist Card</h5>
+                                    <p class="card-text">Pertenece al grupo STARR Companies, es la compañía N° 1 en el mundo dedicada a brindar asistencia al viajero de manera integral desde hace más de 43 años.</p>
+                                    <br>
+                                    <p class="card-text">Para conocer más sobre Assist Card, ingresa AQUI</p>
                                 </div>
-                                <div class="col-md-8 col-sm-8" style="text-align: center;">
-                                    <h4 style="font-family: 'Arial Narrow OS Bold', Arial, sans-serif; font-size: 15px;"><strong>MASCOTAS</strong></h4>
-                                    <h3><strong style="color: #82d600;">$114.000</strong></h3>
-                                    <p style="margin-bottom: 0px; margin-top: 0;">Pago anual</p>
-                                </div>         
-                            </div>
-                            <br>
-                            <div class="row-card-end">
-                                <p style="margin-bottom: 0px; margin-top: 0; font-size: 13px; font-family: 'Arial Arabic', Arial, sans-serif;">Sólo para perros y gatos</p>
-                                <p style="margin-bottom: 0px; margin-top: 0; font-size: 13px; font-family: 'Arial Arabic', Arial, sans-serif;">Se debe contar con un plan exequial para incluir a la mascota como un adicional</p>
                             </div>
                         </div>
-                    </div>
-                    <!-- //REPATRIACION -->
-                    <div class="col-md-4 col-sm-12" style="text-align: center;">
-                        <div class="rounded-container">
-                            <div class="row-card" style="display: flex; align-items: start;">
-                                <div class="col-md-4 col-sm-4" style="display: flex; align-items: center; justify-content: center;">
-                                    <div class="circle" style="aspect-ratio: 1/1; max-width: 250px;">
-                                        <img src="vistas/img/plantilla/avion.jpg" style="max-width: 100%; max-height: 100%; object-fit: contain;">
-                                    </div>
-                                </div>
-                                <div class="col-md-8 col-sm-8" style="text-align: center;">
-                                    <h4 style="margin-bottom: 5px;  font-family: 'Arial Narrow OS Bold', Arial, sans-serif; font-size: 15px;"><strong>REPATRIACIÓN</strong></h4>
-                                    <h3><strong style="color: #82d600;">$144.000</strong></h3>
-                                    <p style="margin-bottom: 0px; margin-top: 0;">Pago anual</p>
-                                </div>         
-                            </div>
-                            <br>
-                            <div class="row-card-end">
-                                <p style="margin-bottom: 0px; margin-top: 0; font-size: 13px; font-family: 'Arial Arabic', Arial, sans-serif;">Cobertura Internacional</p>
-                                <p style="margin-bottom: 0px; margin-top: 0; font-size: 13px; font-family: 'Arial Arabic', Arial, sans-serif;">Se debe contar con un plan exequial para incluirlo como un adicional</p>
-                            </div>
-                        </div>
-                    </div>
                 </div>
             </div>
             
