@@ -198,7 +198,13 @@ select:invalid + .error-message {
 }
 
 .custom-card {
+    display: flex;
+    flex-direction: column;
     height: 100%;
+}
+
+.card {
+    margin: 10px;
 }
 
 
