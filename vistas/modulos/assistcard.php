@@ -230,7 +230,7 @@ select:invalid + .error-message {
                     <!-- //LOGO Y DESCRIPCIÓN// -->
                     <!-- <div class="row1; col-sm-12"> -->
                         <div class="col-md-4 col-sm-12" style="text-align: center; margin-bottom: 10px;">
-                            <div class="rounded-container-logo">
+                            <div class="rounded-container">
                                 <div class="login-logo">
                                     <img src="vistas/img/plantilla/logo_assistcard.jpg" class="img-responsive" style="width: 60%;">
                                 </div>
