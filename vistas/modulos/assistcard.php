@@ -240,7 +240,7 @@ select:invalid + .error-message {
                             <!-- <div class="rounded-container"> -->
                                 <div class="card-exequias">
                                     <div class="card-body text-center">
-                                        <img src="vistas/img/plantilla/logo_assistcard.jpg" class="img-fluid" style="max-width: 70%;">
+                                        <img src="vistas/img/plantilla/logo_assistcard.jpg" class="img-fluid" style="max-width: 100%;">
                                     </div>
                                 </div>
                             <!-- </div> -->
