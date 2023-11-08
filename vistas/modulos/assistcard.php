@@ -160,14 +160,14 @@
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
   padding: 10px;
   /* max-width: 100%;   */
-  margin: 0 auto;  
+  /* margin: 0 auto;   */
   min-height: 300px; /* Asigna la altura mínima deseada en píxeles o cualquier otra unidad de medida */
-  border-radius: 20px;
   text-align: center; 
   margin-bottom: 10px; 
   display: flex; 
   flex-direction: column; 
-  justify-content: center;
+  /* justify-content: center; */
+  align-items: center;
 }
 
 
@@ -218,7 +218,7 @@ select:invalid + .error-message {
 
 .card-exequias .card-title,
 .card-exequias .card-text {
-  margin: 0; /* Elimina márgenes superiores e inferiores */
+  margin: 0;
 }
 
 </style>
