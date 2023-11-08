@@ -213,6 +213,7 @@ select:invalid + .error-message {
     display: flex;
     align-items: baseline;
     flex-direction: column;
+    height: 100%
 }
 
 
