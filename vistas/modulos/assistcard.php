@@ -239,13 +239,12 @@ select:invalid + .error-message {
     margin-bottom: 3%;
 }
 
-.card-exequias .card-text {
+/* .card-exequias .card-text {
     font-size: 14px;
-    border-radius: 20px;
-  background-color: white;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
-  padding: 10px;
-  /* max-width: 100%;   */
+    margin-bottom: 3%;
+} */
+
+.card-exequias .card-text {
   margin: 0 auto;  
   min-height: 300px; /* Asigna la altura mínima deseada en píxeles o cualquier otra unidad de medida */
   border-radius: 20px;
