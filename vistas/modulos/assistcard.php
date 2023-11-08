@@ -245,7 +245,6 @@ select:invalid + .error-message {
 } */
 
 .card-exequias .card-text {
-  /* margin: 0 auto;   */
   text-align: center; 
   margin-bottom: 10px; 
   display: flex; 
