@@ -241,7 +241,19 @@ select:invalid + .error-message {
 
 .card-exequias .card-text {
     font-size: 14px;
-    margin-bottom: 3%;
+    border-radius: 20px;
+  background-color: white;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  padding: 10px;
+  /* max-width: 100%;   */
+  margin: 0 auto;  
+  min-height: 300px; /* Asigna la altura mínima deseada en píxeles o cualquier otra unidad de medida */
+  border-radius: 20px;
+  text-align: center; 
+  margin-bottom: 10px; 
+  display: flex; 
+  flex-direction: column; 
+  justify-content: center;
 }
 
 </style>
@@ -362,7 +374,7 @@ select:invalid + .error-message {
                         <!-- sexta tarjeta con título y párrafo -->
                         <div class="col-md-4 col-sm-12 mb-3">
                             <div class="card-exequias">
-                                <div class="card-body" style="display: flex; align-items: center;">
+                                <div class="card-body">
                                     <h4 class="card-title" style="font-weight: bold;">Comisión</h4>
                                     <p class="card-text">Todas las ventas que se generen de este producto tienen una comisión del 15% (75% de participación).</p>
                                 </div>
