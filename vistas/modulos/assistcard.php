@@ -282,7 +282,7 @@ select:invalid + .error-message {
                         <HR>
                     </div>
                     <!-- //AFILIADO ADICIONAL -->
-                     <!-- Segunda tarjeta con título y párrafo -->
+                     <!-- cuarta tarjeta con título y párrafo -->
                      <div class="col-md-4 col-sm-12 mb-3">
                             <div class="card-exequias">
                                 <div class="card-body">
@@ -294,7 +294,19 @@ select:invalid + .error-message {
                             </div>
                         </div>
 
-                        <!-- Tercera tarjeta con título y párrafo -->
+                        <!-- quinta tarjeta con título y párrafo -->
+                        <div class="col-md-4 col-sm-12 mb-3">
+                            <div class="card-exequias">
+                                <div class="card-body">
+                                    <h5 class="card-title">Sobre Assist Card</h5>
+                                    <p class="card-text">Pertenece al grupo STARR Companies, es la compañía N° 1 en el mundo dedicada a brindar asistencia al viajero de manera integral desde hace más de 43 años.</p>
+                                    <br>
+                                    <p class="card-text">Para conocer más sobre Assist Card, ingresa AQUI</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- sexta tarjeta con título y párrafo -->
                         <div class="col-md-4 col-sm-12 mb-3">
                             <div class="card-exequias">
                                 <div class="card-body">
