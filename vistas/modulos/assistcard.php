@@ -321,9 +321,12 @@ select:invalid + .error-message {
                             <div class="card-exequias">
                                 <div class="card-body">
                                     <h5 class="card-title" style="font-weight: bold; font-size: 20px;">¿Cuales son sus principales coberturas?</h5>
-                                    <p class="card-text">Conjunto de servicios ofrecidos que cubren los eventos penosos que se pueda incurrir durante un viaje en el extranjero, como gastos médicos, asistencia legal, cancelaciones de vuelos, perdidas de equipaje, muerte, entre otros.</p>
-                                    <br>
-                                    <p class="card-text">Con una asistencia de viaje, el pasajero cuenta con coberturas y montos de dinero específicos en caso de que le ocurra una emergencia estando en el exterior.</p>
+                                    <ul class="card-text" style="list-style-type: disc; padding-left: 20px;">
+                                        <li>Urgencias Odontológicas</li>
+                                        <li>Repatriación o traslados sanitarios o funerarios</li>
+                                        <li>Gastos de hotel por reposo forzoso (hospitalización)</li>
+                                        <li>Traslado y estancia de un familiar (hospitalización)</li>
+                                    </ul>
                                 </div>
                             </div>
                         </div>
