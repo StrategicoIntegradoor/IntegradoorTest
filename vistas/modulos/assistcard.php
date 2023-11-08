@@ -159,9 +159,16 @@
   background-color: white;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
   padding: 10px;
-  max-width: 100%;  
+  /* max-width: 100%;   */
   margin: 0 auto;  
   min-height: 200px; /* Asigna la altura mínima deseada en píxeles o cualquier otra unidad de medida */
+  border-radius: 20px;
+  max-width: 400px; /* Ajusta el valor según tus necesidades */
+  text-align: center; 
+  margin-bottom: 10px; 
+  display: flex; 
+  flex-direction: column; 
+  justify-content: center;
 }
 
 
