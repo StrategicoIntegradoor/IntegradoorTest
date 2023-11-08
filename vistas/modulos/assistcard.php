@@ -118,6 +118,11 @@
   padding: 10px;
   max-width: 400px; /* Ajusta el valor según tus necesidades */
   margin: 0 auto;
+  text-align: center; 
+  margin-bottom: 10px; 
+  display: flex; 
+  flex-direction: column; 
+  justify-content: center;
 }
 
 .circle-container {
