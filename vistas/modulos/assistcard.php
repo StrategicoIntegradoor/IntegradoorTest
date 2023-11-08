@@ -234,8 +234,7 @@ select:invalid + .error-message {
                         <hr>
                     </div>
                     <!-- //LOGO Y DESCRIPCIÓN// -->
-                    <!-- <div class="row1; col-sm-12"> -->
-                    <div class="row">
+                    <!-- <div class="row"> -->
                         <!-- Primera tarjeta con el logo -->
                         <div class="col-md-4 col-sm-12 mb-3">
                             <!-- <div class="rounded-container"> -->
@@ -266,8 +265,6 @@ select:invalid + .error-message {
                                 </div>
                             </div>
                         </div>
-                    </div>
-
                     <!-- </div> -->
                 </div>
             </div>
