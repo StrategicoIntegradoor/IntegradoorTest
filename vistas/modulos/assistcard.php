@@ -100,9 +100,9 @@
   background-color: white;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
   padding: 10px;
-  /* max-width: 400px; Ajusta el valor según tus necesidades */
-  /* width: 390px; */
-  height: 30pt;
+  max-width: 400px; /*Ajusta el valor según tus necesidades*/
+  width: 390px;
+  height: 300px;
   margin: 0 auto;
   /* margin: 10% 0% 10% 0%; */
   display: flex;
@@ -232,7 +232,7 @@ select:invalid + .error-message {
                         <div class="col-md-4 col-sm-12" style="text-align: center; margin-bottom: 10px;">
                             <div class="rounded-container">
                                 <div class="login-logo">
-                                    <img src="vistas/img/plantilla/logo_assistcard.jpg" class="img-responsive" style="width: 60%;  text-align: center; margin-bottom: 10px; display: flex; flex-direction: column; justify-content: center;">
+                                    <img src="vistas/img/plantilla/logo_assistcard.jpg" class="img-responsive" style="width: 60%;  text-align: center;margin-bottom: 10px; display: flex; flex-direction: column; justify-content: center;">
                                 </div>
                             </div>               
                         </div>
