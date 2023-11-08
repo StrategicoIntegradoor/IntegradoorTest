@@ -180,32 +180,7 @@
   padding-right: 7%;
 }
 
-.error-message {
-    display: none;
-    color: red;
-    font-size: 12px;
-    margin-top: 5px;
-}
 
-input:invalid + .error-message,
-select:invalid + .error-message {
-    display: block;
-}
-
-.row1 {
-    display: flex;
-
-}
-
-.custom-card {
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-}
-
-.card {
-    margin: 10px;
-}
 
 
 </style>
@@ -242,7 +217,7 @@ select:invalid + .error-message {
                     <div class="row">
                         <!-- Primera tarjeta con el logo -->
                         <div class="col-md-4 col-sm-12 mb-3">
-                            <div class="card rounded custom-card">
+                            <div class="card-exequias">
                                 <div class="card-body text-center">
                                     <img src="vistas/img/plantilla/logo_olivos.png" class="img-fluid" style="max-width: 70%;">
                                 </div>
@@ -251,7 +226,7 @@ select:invalid + .error-message {
 
                         <!-- Segunda tarjeta con título y párrafo -->
                         <div class="col-md-4 col-sm-12 mb-3">
-                            <div class="card rounded custom-card">
+                            <div class="card-exequias">
                                 <div class="card-body">
                                     <h5 class="card-title">Título de la tarjeta</h5>
                                     <p class="card-text">Este es un ejemplo de contenido debajo del título. Puedes personalizarlo según tus necesidades.</p>
@@ -261,7 +236,7 @@ select:invalid + .error-message {
 
                         <!-- Tercera tarjeta con título y párrafo -->
                         <div class="col-md-4 col-sm-12 mb-3">
-                            <div class="card rounded custom-card">
+                            <div class="card-exequias">
                                 <div class="card-body">
                                     <h5 class="card-title">Título de la tarjeta</h5>
                                     <p class="card-text">Este es otro ejemplo de contenido debajo del título en la tercera tarjeta.</p>
