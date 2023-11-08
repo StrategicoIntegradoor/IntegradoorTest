@@ -262,8 +262,10 @@ select:invalid + .error-message {
                         <div class="col-md-4 col-sm-12 mb-3">
                             <div class="card-exequias">
                                 <div class="card-body">
-                                    <h5 class="card-title">Título de la tarjeta</h5>
-                                    <p class="card-text">Este es otro ejemplo de contenido debajo del título en la tercera tarjeta.</p>
+                                    <h5 class="card-title">Sobre Assist Card</h5>
+                                    <p class="card-text">Pertenece al grupo STARR Companies, es la compañía N° 1 en el mundo dedicada a brindar asistencia al viajero de manera integral desde hace más de 43 años.</p>
+                                    <br>
+                                    <p class="card-text">Para conocer más sobre Assist Card, ingresa AQUI</p>
                                 </div>
                             </div>
                         </div>
