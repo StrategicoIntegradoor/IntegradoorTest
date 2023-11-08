@@ -161,9 +161,9 @@
   padding: 10px;
   max-width: 100%;  
   margin: 0 auto;  
-  height: 100%;
-  /* margin: 1% 0% 1% 0%; */
+  min-height: 200px; /* Asigna la altura mínima deseada en píxeles o cualquier otra unidad de medida */
 }
+
 
 .row-card {
 
