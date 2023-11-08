@@ -322,6 +322,9 @@ select:invalid + .error-message {
                                 <div class="card-body">
                                     <h5 class="card-title" style="font-weight: bold; font-size: 20px;">¿Cuales son sus principales coberturas?</h5>
                                     <ul class="card-text" style="list-style-type: disc; padding-left: 20px;">
+                                        <li>Asistencia médica en caso de enfermedad (preexistente o no preexistente)</li>
+                                        <li>Atención con especialistas </li>
+                                        <li>Medicamentos ambulatorios</li>
                                         <li>Urgencias Odontológicas</li>
                                         <li>Repatriación o traslados sanitarios o funerarios</li>
                                         <li>Gastos de hotel por reposo forzoso (hospitalización)</li>
