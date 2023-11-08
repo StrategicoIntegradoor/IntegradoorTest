@@ -180,7 +180,22 @@
   padding-right: 7%;
 }
 
+.error-message {
+    display: none;
+    color: red;
+    font-size: 12px;
+    margin-top: 5px;
+}
 
+input:invalid + .error-message,
+select:invalid + .error-message {
+    display: block;
+}
+
+.row1 {
+    display: flex;
+
+}
 
 
 </style>
