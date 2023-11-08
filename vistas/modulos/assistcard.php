@@ -162,7 +162,7 @@
   /* max-width: 100%;   */
   /* margin: 0 auto;   */
   /* min-height: 300px; */
-  min-height: 50%; 
+  min-height: 150%; 
   text-align: center; 
   margin-bottom: 10px; 
   display: flex; 
