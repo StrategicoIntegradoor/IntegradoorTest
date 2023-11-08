@@ -211,8 +211,8 @@ select:invalid + .error-message {
 
 .card-container {
     display: flex;
-    align-items: baseline;
     flex-direction: column;
+    align-items: center;
     height: 100%
 }
 
