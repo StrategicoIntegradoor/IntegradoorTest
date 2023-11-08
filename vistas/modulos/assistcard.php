@@ -161,7 +161,7 @@
   padding: 7%;
   /* max-width: 100%;   */
   /* margin: 0 auto;   */
-  min-height: 400px;
+  min-height: 350px;
   /* min-height: 150%;  */
   text-align: center; 
   margin-bottom: 10px; 
