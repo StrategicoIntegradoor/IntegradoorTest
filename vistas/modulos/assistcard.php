@@ -102,7 +102,7 @@
   padding: 10px;
   /* max-width: 400px; Ajusta el valor según tus necesidades */
   /* width: 390px; */
-  /* height: 300px; */
+  height: 30pt;
   margin: 0 auto;
   /* margin: 10% 0% 10% 0%; */
   display: flex;
