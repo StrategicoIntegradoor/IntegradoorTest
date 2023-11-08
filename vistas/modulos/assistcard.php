@@ -161,7 +161,8 @@
   padding: 7%;
   /* max-width: 100%;   */
   /* margin: 0 auto;   */
-  min-height: 300px; /* Asigna la altura mínima deseada en píxeles o cualquier otra unidad de medida */
+  /* min-height: 300px; */
+  min-height: 50%; 
   text-align: center; 
   margin-bottom: 10px; 
   display: flex; 
