@@ -362,9 +362,9 @@ select:invalid + .error-message {
                         <!-- sexta tarjeta con título y párrafo -->
                         <div class="col-md-4 col-sm-12 mb-3">
                             <div class="card-exequias">
-                                <div class="card-body">
+                                <div class="card-body" style="display: flex; align-items: center;">
                                     <h4 class="card-title" style="font-weight: bold;">Comisión</h4>
-                                    <p class="card-text" style="display: flex; align-items: center;">Todas las ventas que se generen de este producto tienen una comisión del 15% (75% de participación).</p>
+                                    <p class="card-text" style="list-style-type: disc; padding-left: 20px;">Todas las ventas que se generen de este producto tienen una comisión del 15% (75% de participación).</p>
                                 </div>
                             </div>
                         </div>
