@@ -235,7 +235,7 @@ select:invalid + .error-message {
 .card-exequias .card-title,
 .card-exequias .card-text {
 
-    margin-bottom: 20px;
+    margin-bottom: 10%;
 }
 
 </style>
