@@ -427,8 +427,7 @@ if ($_SESSION["permisos"]["Cotizarpesados"] != "x") {
                       <select class="form-control" id="txtTipoServicio" required>
                         <option value=""></option>
                         <option value="14" selected>Particular</option>
-                        <option value="11">Publico Municipal</option>
-                        <option value="12">Publico Intermunicipal</option>
+                        <option value="11">Publico</option>
                       </select>
                     </div>
 
