@@ -402,7 +402,7 @@ select:invalid + .error-message {
             <br>
             <div class="content" style="margin-bottom: 0px;">
                 <!-- TITULO GENERADOR DE PDF -->
-                <h4 style="font-family: 'Arial Arabic', Arial; text-align: left; font-weight: bold; margin-bottom: -12px; margin-top: -3px;">Generar cotización en PDF</h4>
+                <h4 style="font-family: 'Arial Arabic', Arial; text-align: left; font-weight: bold; margin-bottom: -12px; margin-top: -3px;">Solicita una cotización en el siguiente formulario</h4>
                 <hr>
                 <form class="form-group" id="formResumTitu">
                     <div class="row">
