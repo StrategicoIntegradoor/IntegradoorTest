@@ -258,6 +258,7 @@ select:invalid + .error-message {
     flex-direction: column;
     align-items: center;
     text-align: center;
+    justify-content: center;
     height: 100%;
 }
 
