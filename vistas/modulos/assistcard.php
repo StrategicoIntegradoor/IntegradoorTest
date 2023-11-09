@@ -242,11 +242,6 @@ select:invalid + .error-message {
 .card-exequias .card-text {
     font-size: 14px;
     margin-bottom: 3%;
-    text-align: center; 
-    margin-bottom: 10px; 
-    display: flex; 
-    flex-direction: column; 
-    justify-content: center;
 }
 
 /* .card-exequias .card-text {
