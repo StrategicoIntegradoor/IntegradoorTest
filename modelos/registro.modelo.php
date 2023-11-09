@@ -44,6 +44,7 @@ class ModeloRegistroFreeLancer{
         $usu_estado = '1';
         $fecha_nacimiento = $anio_nacimiento . '-' . $mes_nacimiento . '-' . $dia_nacimiento;
         // Obtener la fecha actual en formato timestamp
+        date_default_timezone_set("America/Bogota");
         $timestamp = date("U");
         $fecha = date("Y-m-d H:i:s", $timestamp);
         $encriptar_password = crypt($password, '$2a$07$asxx54ahjppf45sd87a5a4dDDGsystemdev$');
