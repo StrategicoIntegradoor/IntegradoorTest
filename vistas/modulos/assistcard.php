@@ -246,7 +246,6 @@ select:invalid + .error-message {
 
 .card-exequias .card-text {
     margin: 0 auto;  
-  min-height: 300px; /* Asigna la altura mínima deseada en píxeles o cualquier otra unidad de medida */
   border-radius: 20px;
   text-align: center; 
   margin-bottom: 10px; 
