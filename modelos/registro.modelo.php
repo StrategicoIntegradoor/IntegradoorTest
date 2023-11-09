@@ -47,7 +47,7 @@ class ModeloRegistroFreeLancer{
         $timestamp = date("U");
         $encriptar_password = crypt($password, '$2a$07$asxx54ahjppf45sd87a5a4dDDGsystemdev$');
     
-        $stmt = Conexion::conectar()->prepare("UPDATE $tabla SET usu_nombre = :nombre, usu_apellido = :apellido, direccion = :direccion, ciudades_id = :ciudad, usu_usuario = :usuario, usu_password = :password, usu_genero = :genero, usu_telefono = :telefono, usu_email = :email, usu_fch_creacion = DATE(:fch_creacion), usu_estado = :usu_estado, usu_cargo = :usu_cargo, id_rol = :id_rol, id_Intermediario = :id_intermediario, usu_fch_nac = DATE(:fecha_nacimiento) WHERE tokenGuest = :clave");
+        $stmt = Conexion::conectar()->prepare("UPDATE $tabla SET usu_nombre = :nombre, usu_apellido = :apellido, direccion = :direccion, ciudades_id = :ciudad, usu_usuario = :usuario, usu_password = :password, usu_genero = :genero, usu_telefono = :telefono, usu_email = :email, usu_fch_creacion = :fch_creacion, usu_estado = :usu_estado, usu_cargo = :usu_cargo, id_rol = :id_rol, id_Intermediario = :id_intermediario, usu_fch_nac = DATE(:fecha_nacimiento) WHERE tokenGuest = :clave");
     
         $stmt->bindParam(':nombre', $nombre);
         $stmt->bindParam(':apellido', $apellido);
@@ -65,12 +65,13 @@ class ModeloRegistroFreeLancer{
         $stmt->bindParam(':id_intermediario', $id_intermediario);
         $stmt->bindParam(':fecha_nacimiento', $fecha_nacimiento);
         $stmt->bindParam(':clave', $clave);
-        var_dump($stmt->execute());
-        die();
+        
         if ($stmt->execute()) {
             $registro = new ModeloRegistroFreeLancer();
             $response = $registro->mdlEliminarToken($usuario, $tabla);
         } else {
+            var_dump($stmt->errorInfo()[2]);
+            die();
             return "Error de conexión: " . $stmt->errorInfo()[2];
         }
     }
