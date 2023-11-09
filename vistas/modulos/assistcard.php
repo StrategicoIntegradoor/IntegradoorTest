@@ -390,8 +390,6 @@ select:invalid + .error-message {
                                     <h4 class="card-title" style="font-weight: bold;">Comisión</h4>
                                     <br>
                                     <br>
-                                    <br>
-                                    <br>
                                     <p class="card-text">Todas las ventas que se generen de este producto tienen una comisión del 15% (75% de participación).</p>
                                 </div>
                             </div>
