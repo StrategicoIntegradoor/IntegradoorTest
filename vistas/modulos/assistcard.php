@@ -237,7 +237,7 @@ select:invalid + .error-message {
 .card-exequias .card-title{
 
     font-size: 24px;
-    margin-bottom: 2%;
+    margin-bottom: 5%;
 }
 
 .card-exequias .card-text {
