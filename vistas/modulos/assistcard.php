@@ -244,11 +244,19 @@ select:invalid + .error-message {
     margin-bottom: 3%;
 } */
 
-.card-exequias .card-text {
+/* .card-exequias .card-text {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    text-align: center;
+    height: 100%;
+} */
+
+.card-exequias .card-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     text-align: center;
     height: 100%;
 }
