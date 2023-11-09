@@ -45,7 +45,7 @@ class ModeloRegistroFreeLancer{
         $usu_estado = '1';
         $fecha_nacimiento = $anio_nacimiento . '-' . $mes_nacimiento . '-' . $dia_nacimiento;
         $fecha_registro = date("Y-m-d", implode("-", $hoy));
-        echo $fecha_registro;
+        echo $hoy;
         die();
         $encriptar_password = crypt($password, '$2a$07$asxx54ahjppf45sd87a5a4dDDGsystemdev$');
     
