@@ -35,6 +35,9 @@ class ModeloRegistroFreeLancer{
 
     static public function mdlRegistrarFreeLancer($nombre, $apellido, $direccion, $ciudad, $usuario, $password, $genero, $telefono, $email, $dia_nacimiento, $mes_nacimiento, $anio_nacimiento, $tabla, $clave) {
         
+        $hoy = getdate();
+        print_r($hoy);
+        die();
         $id_rol = '19';
         $id_intermediario = '3';
         $usu_cargo = 'Freelance';
