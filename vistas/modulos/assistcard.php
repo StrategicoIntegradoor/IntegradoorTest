@@ -239,12 +239,17 @@ select:invalid + .error-message {
     margin-bottom: 3%;
 }
 
-/* .card-exequias .card-text {
+.card-exequias .card-text {
     font-size: 14px;
     margin-bottom: 3%;
-} */
+    text-align: center; 
+    margin-bottom: 10px; 
+    display: flex; 
+    flex-direction: column; 
+    justify-content: center;
+}
 
-.card-exequias .card-text {
+/* .card-exequias .card-text {
     margin: 0 auto;  
   min-height: 100px;
   border-radius: 20px;
@@ -253,7 +258,7 @@ select:invalid + .error-message {
   display: flex; 
   flex-direction: column; 
   justify-content: center;
-}
+} */
 
 /* .card-exequias .card-body {
     display: flex;
