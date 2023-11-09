@@ -44,9 +44,8 @@ class ModeloRegistroFreeLancer{
         $usu_cargo = 'Freelance';
         $usu_estado = '1';
         $fecha_nacimiento = $anio_nacimiento . '-' . $mes_nacimiento . '-' . $dia_nacimiento;
-        $registro = new ModeloRegistroFreeLancer();
-        $fecha_registro = $registro->arrayToDate($hoy);
-        var_dump($fecha_registro);
+        $fecha_registro = date("Y-m-d", implode("-", $hoy));
+        echo $fecha_registro;
         die();
         $encriptar_password = crypt($password, '$2a$07$asxx54ahjppf45sd87a5a4dDDGsystemdev$');
     
