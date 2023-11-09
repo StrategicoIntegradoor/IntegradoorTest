@@ -341,10 +341,10 @@ select:invalid + .error-message {
             <!-- //PLANES ADICIONALES -->
             <div class="row">
                 <div class="content">
-                    <div class="content-header">
+                    <!-- <div class="content-header">
                         <h4 style="font-family: 'Arial Arabic', Arial; text-align: left; font-weight: bold; margin-bottom: -12px; margin-top: -8px;">Adicionales Opcionales</h4>
                         <HR>
-                    </div>
+                    </div> -->
                     <!-- //AFILIADO ADICIONAL -->
                      <!-- cuarta tarjeta con título y párrafo -->
                      <div class="col-md-4 col-sm-12 mb-3">
