@@ -669,7 +669,7 @@ function consulPlacaMapfre(valnumplaca){
               $("#txtValorFasecolda").val(resp.valorVeh);
             }
           );
-          const valor = resp[llave];
+          // const valor = resp[llave];
           // $("#txtValorFasecolda").val(valorAsegurado);
 
         }else{
