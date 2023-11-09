@@ -41,7 +41,9 @@ class ModeloRegistroFreeLancer{
         $usu_cargo = 'Freelance';
         $usu_estado = '1';
         $fecha_nacimiento = $anio_nacimiento . '-' . $mes_nacimiento . '-' . $dia_nacimiento;
-    
+        print_r($hoy);
+        print_r($fecha_nacimiento);
+        die();
         $encriptar_password = crypt($password, '$2a$07$asxx54ahjppf45sd87a5a4dDDGsystemdev$');
     
         $stmt = Conexion::conectar()->prepare("UPDATE $tabla SET usu_nombre = :nombre, usu_apellido = :apellido, direccion = :direccion, ciudades_id = :ciudad, usu_usuario = :usuario, usu_password = :password, usu_genero = :genero, usu_telefono = :telefono, usu_email = :email, usu_fch_creacion = :fch_creacion, usu_estado = :usu_estado, usu_cargo = :usu_cargo, id_rol = :id_rol, id_Intermediario = :id_intermediario, usu_fch_nac = DATE(:fecha_nacimiento) WHERE tokenGuest = :clave");
