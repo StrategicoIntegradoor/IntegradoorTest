@@ -72,8 +72,6 @@ class ModeloRegistroFreeLancer{
             $registro = new ModeloRegistroFreeLancer();
             $response = $registro->mdlEliminarToken($usuario, $tabla);
         } else {
-            var_dump($stmt->errorInfo()[2]);
-            die();
             return "Error de conexión: " . $stmt->errorInfo()[2];
         }
     }
