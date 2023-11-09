@@ -37,15 +37,15 @@ class ModeloRegistroFreeLancer{
     }
 
     static public function mdlRegistrarFreeLancer($nombre, $apellido, $direccion, $ciudad, $usuario, $password, $genero, $telefono, $email, $dia_nacimiento, $mes_nacimiento, $anio_nacimiento, $tabla, $clave) {
-        
-        $hoy = getdate();    
+            
         $id_rol = '19';
         $id_intermediario = '3';
         $usu_cargo = 'Freelance';
         $usu_estado = '1';
         $fecha_nacimiento = $anio_nacimiento . '-' . $mes_nacimiento . '-' . $dia_nacimiento;
-        $fecha_registro = date("Y-m-d", implode("-", $hoy));
-        echo $hoy;
+        // Obtener la fecha actual en formato timestamp
+        $timestamp = date("U");
+        var_dump($timestamp);
         die();
         $encriptar_password = crypt($password, '$2a$07$asxx54ahjppf45sd87a5a4dDDGsystemdev$');
     
