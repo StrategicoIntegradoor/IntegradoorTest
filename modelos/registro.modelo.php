@@ -32,7 +32,7 @@ class ModeloRegistroFreeLancer{
         }       
     }
 
-    public function arrayToDate($array) {
+    public function arrayToDate(array $array) {
         return DateTime::createFromFormat("d/m/Y", implode(" ", $array));
     }
 
