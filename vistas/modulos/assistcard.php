@@ -391,6 +391,7 @@ select:invalid + .error-message {
                                     <br>
                                     <br>
                                     <br>
+                                    <br>
                                     <p class="card-text">Todas las ventas que se generen de este producto tienen una comisión del 15% (75% de participación).</p>
                                 </div>
                             </div>
