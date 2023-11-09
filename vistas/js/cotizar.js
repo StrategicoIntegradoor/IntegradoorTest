@@ -473,7 +473,7 @@ function consulPlaca() {
     };
 
     // Llama la informacion del Vehiculo por medio de la Placa
-    fetch("https://grupoasistencia.com/motor_webservic/Vehiculo", requestOptions)
+    fetch("https://grupoasistencia.com/motor_webservice/Vehiculo", requestOptions)
       .then(function (response) {
         if (!response.ok) {
           throw Error(response.statusText);
@@ -588,7 +588,7 @@ function consulPlacaMapfre(valnumplaca){
     "Content-Type": "application/json"
   }
 
-    fetch("https://grupoasistencia.com/webserviceAuto/ultimaPolizaMapfre", {
+    fetch("https://grupoasistencia.com/webserviceAutos/ultimaPolizaMapfre", {
       method: "POST",
       body: bodyContent,
       headers: headersList
