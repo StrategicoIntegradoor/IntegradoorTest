@@ -244,23 +244,25 @@ select:invalid + .error-message {
     margin-bottom: 3%;
 } */
 
-/* .card-exequias .card-text {
+.card-exequias .card-text {
+    margin: 0 auto;  
+  min-height: 300px; /* Asigna la altura mínima deseada en píxeles o cualquier otra unidad de medida */
+  border-radius: 20px;
+  text-align: center; 
+  margin-bottom: 10px; 
+  display: flex; 
+  flex-direction: column; 
+  justify-content: center;
+}
+
+/* .card-exequias .card-body {
     display: flex;
     flex-direction: column;
-    align-items: center;
     justify-content: center;
+    align-items: center;
     text-align: center;
     height: 100%;
 } */
-
-.card-exequias .card-body {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    height: 100%;
-}
 
 </style>
 
