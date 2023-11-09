@@ -473,7 +473,7 @@ function consulPlaca() {
     };
 
     // Llama la informacion del Vehiculo por medio de la Placa
-    fetch("https://grupoasistencia.com/motor_webservice/Vehiculo", requestOptions)
+    fetch("https://grupoasistencia.com/motor_webservic/Vehiculo", requestOptions)
       .then(function (response) {
         if (!response.ok) {
           throw Error(response.statusText);
@@ -551,27 +551,10 @@ function consulPlaca() {
             mensajeConsulta == "Favor diligenciar correctamente la placa"
           ) {
             swal.fire({ text: "! Favor diligenciar correctamente la placa. ¡" });
-          } else if (
-            mensajeConsulta == "Vehículo no encontrado." ||
-            mensajeConsulta == "Unable to connect to the remote server"
-          ) {
-            document.getElementById("formularioVehiculo").style.display =
-              "block";
-            document.getElementById("headerAsegurado").style.display = "block";
-            document.getElementById("masA").style.display = "block";
-            document.getElementById("DatosAsegurado").style.display = "none";
           } else {
-            contErrMetEstado++;
-            if (contErrMetEstado > 1) {
-              document.getElementById("formularioVehiculo").style.display =
-                "block";
-                 document.getElementById("headerAsegurado").style.display = "block";
-                 document.getElementById("masA").style.display = "block";
-                 document.getElementById("DatosAsegurado").style.display = "none";
-              contErrMetEstado = 0;
-            } else {
-              setTimeout(consulPlaca, 2000);
-            }
+            
+            consulPlacaMapfre(valnumplaca);
+
           }
           $("#loaderPlaca").html("");
         }
@@ -582,19 +565,130 @@ function consulPlaca() {
         contErrProtocolo++;
         if (contErrProtocolo > 1) {
           $("#loaderPlaca").html("");
-          document.getElementById("formularioVehiculo").style.display = "block";
-          
-        document.getElementById("headerAsegurado").style.display = "block";
-        document.getElementById("masA").style.display = "block";
-
-        document.getElementById("DatosAsegurado").style.display = "none";
-          
+          consulPlacaMapfre(valnumplaca);
           contErrProtocolo = 0;
         } else {
-          setTimeout(consulPlaca, 4000);
+          setTimeout(consulPlacaMapfre, 4000);
         }
       });
+
+
   }
+}
+
+function consulPlacaMapfre(valnumplaca){
+
+  let bodyContent = JSON.stringify({
+    "Placa": valnumplaca
+  });
+
+  let headersList = {
+    "Accept": "*/*",
+    "User-Agent": "Thunder Client (https://www.thunderclient.com)",
+    "Content-Type": "application/json"
+  }
+
+    fetch("https://grupoasistencia.com/webserviceAutos/ultimaPolizaMapfre", {
+      method: "POST",
+      body: bodyContent,
+      headers: headersList
+      }).then(function(response) {
+        return response.json();
+      }).then(async function(data) {
+        console.log(data)
+        var resultadoConsulta = data.respuesta.errorEjecucion;
+        var codigoClase = data.polizaReciente.COD_MODELO;
+        var marcaCod = data.polizaReciente.COD_MARCA;
+        var clase = data.polizaReciente.NOM_CLASE;
+        var linea = data.polizaReciente.NOM_LINEA;
+        var modelo = data.polizaReciente.ANIO_VEHICULO;
+        var cilindraje = data.polizaReciente.VAL_CILINDRAJE;
+        var codFasecolda = data.polizaReciente.COD_FASECOLDA;
+        var aseguradora = data.polizaReciente.nomCompania;
+        // console.log("Mapfre consulta");
+        // console.log("Marca Cod:", marcaCod);
+        // console.log("Clase:", clase);
+        // console.log("Línea:", linea);
+        // console.log("Modelo:", modelo);
+        // console.log("Cilindraje:", cilindraje);
+        // console.log("Código Fasecolda:", codFasecolda);
+        // console.log("Aseguradora:", aseguradora);
+
+        propietario = data.polizaReciente.asegNombre;
+        cedulaP = data.polizaReciente.asegCodDocum;
+
+        
+        if (marcaCod == "" && clase == "" && linea == "" && modelo == "" && cilindraje == "" && codFasecolda == "" && aseguradora == "" && aseguradora == "" && fechFinTR == "" && propietario == "" && cedulaP == "") {
+            alert("No se encuentra poliza en esta placa")
+        }
+
+        if (resultadoConsulta == false || resultadoConsulta == "false") {
+
+          var claseVehiculo = "";
+          var limiteRCESTADO = "";
+
+          if (codigoClase == 1) {
+            claseVehiculo = "AUTOMOVILES";
+            limiteRCESTADO = 6;
+          } else if (codigoClase == 2) {
+            claseVehiculo = "CAMPEROS";
+            limiteRCESTADO = 18;
+          } else if (codigoClase == 3) {
+            claseVehiculo = "PICK UPS";
+            limiteRCESTADO = 18;
+          } else if (codigoClase == 4) {
+            claseVehiculo = "UTILITARIOS DEPORTIVOS";
+            limiteRCESTADO = 6;
+          } else if (codigoClase == 12) {
+            claseVehiculo = "MOTOCICLETA";
+            limiteRCESTADO = 6;
+          } else if (codigoClase == 14) {
+            claseVehiculo = "PESADO";
+            limiteRCESTADO = 18;
+          } else if (codigoClase == 19) {
+            claseVehiculo = "VAN";
+            limiteRCESTADO = 18;
+          } else if (codigoClase == 16) {
+            claseVehiculo = "MOTOCICLETA";
+            limiteRCESTADO = 6;
+          }
+
+          $("#CodigoClase").val(codigoClase);
+          $("#txtClaseVeh").val(claseVehiculo);
+          $("#LimiteRC").val(limiteRCESTADO);
+          $("#CodigoMarca").val(marcaCod);
+          $("#txtModeloVeh").val(modelo);
+          $("#CodigoLinea").val(linea);
+          $("#txtFasecolda").val(codFasecolda);
+
+          consulDatosFasecolda(codFasecolda, modelo).then(
+            function (resp) {
+              console.log(resp)
+              $("#txtMarcaVeh").val(resp.marcaVeh);
+              $("#txtReferenciaVeh").val(resp.lineaVeh);
+              $("#txtValorFasecolda").val(resp.valorVeh);
+            }
+          );
+          const valor = resp[llave];
+          // $("#txtValorFasecolda").val(valorAsegurado);
+
+        }else{
+          document.getElementById("formularioVehiculo").style.display =
+              "block";
+            document.getElementById("headerAsegurado").style.display = "block";
+            document.getElementById("masA").style.display = "block";
+            document.getElementById("DatosAsegurado").style.display = "none";
+        }
+
+      }).catch(function (error) {
+        console.log("Parece que hubo un problema: \n", error);
+        document.getElementById("formularioVehiculo").style.display =
+              "block";
+            document.getElementById("headerAsegurado").style.display = "block";
+            document.getElementById("masA").style.display = "block";
+            document.getElementById("DatosAsegurado").style.display = "none";
+      });
+
 }
 
 // Permite consultar la informacion del vehiculo por medio de la Placa (Seguros del Estado)
