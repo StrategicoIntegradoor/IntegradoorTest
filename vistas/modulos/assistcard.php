@@ -272,7 +272,7 @@ select:invalid + .error-message {
 
         <h1 style="margin-bottom: 0%;">
 
-        Cotización Plan Exequial Los Olivos
+        Cotización seguro de viajes
 
         </h1>
 
