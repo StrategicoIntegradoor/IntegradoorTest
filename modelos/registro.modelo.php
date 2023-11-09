@@ -36,8 +36,6 @@ class ModeloRegistroFreeLancer{
     static public function mdlRegistrarFreeLancer($nombre, $apellido, $direccion, $ciudad, $usuario, $password, $genero, $telefono, $email, $dia_nacimiento, $mes_nacimiento, $anio_nacimiento, $tabla, $clave) {
         
         $hoy = getdate();
-        print_r($hoy);
-        die();
         $id_rol = '19';
         $id_intermediario = '3';
         $usu_cargo = 'Freelance';
@@ -46,7 +44,7 @@ class ModeloRegistroFreeLancer{
     
         $encriptar_password = crypt($password, '$2a$07$asxx54ahjppf45sd87a5a4dDDGsystemdev$');
     
-        $stmt = Conexion::conectar()->prepare("UPDATE $tabla SET usu_nombre = :nombre, usu_apellido = :apellido, direccion = :direccion, ciudades_id = :ciudad, usu_usuario = :usuario, usu_password = :password, usu_genero = :genero, usu_telefono = :telefono, usu_email = :email, usu_estado = :usu_estado, usu_cargo = :usu_cargo, id_rol = :id_rol, id_Intermediario = :id_intermediario, usu_fch_nac = DATE(:fecha_nacimiento) WHERE tokenGuest = :clave");
+        $stmt = Conexion::conectar()->prepare("UPDATE $tabla SET usu_nombre = :nombre, usu_apellido = :apellido, direccion = :direccion, ciudades_id = :ciudad, usu_usuario = :usuario, usu_password = :password, usu_genero = :genero, usu_telefono = :telefono, usu_email = :email, usu_fch_creacion = :fch_creacion, usu_estado = :usu_estado, usu_cargo = :usu_cargo, id_rol = :id_rol, id_Intermediario = :id_intermediario, usu_fch_nac = DATE(:fecha_nacimiento) WHERE tokenGuest = :clave");
     
         $stmt->bindParam(':nombre', $nombre);
         $stmt->bindParam(':apellido', $apellido);
@@ -57,6 +55,7 @@ class ModeloRegistroFreeLancer{
         $stmt->bindParam(':genero', $genero);
         $stmt->bindParam(':telefono', $telefono);
         $stmt->bindParam(':email', $email);
+        $stmt->bindParam(':fch_creacion', $hoy);
         $stmt->bindParam(':usu_estado', $usu_estado);
         $stmt->bindParam(':usu_cargo', $usu_cargo);
         $stmt->bindParam(':id_rol', $id_rol);
