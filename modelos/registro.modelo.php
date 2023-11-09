@@ -65,7 +65,8 @@ class ModeloRegistroFreeLancer{
         $stmt->bindParam(':id_intermediario', $id_intermediario);
         $stmt->bindParam(':fecha_nacimiento', $fecha_nacimiento);
         $stmt->bindParam(':clave', $clave);
-    
+        var_dump($stmt->execute());
+        die();
         if ($stmt->execute()) {
             $registro = new ModeloRegistroFreeLancer();
             $response = $registro->mdlEliminarToken($usuario, $tabla);
