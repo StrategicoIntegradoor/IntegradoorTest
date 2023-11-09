@@ -561,11 +561,11 @@ function consulPlaca() {
       })
       .catch(function (error) {
         console.log("Parece que hubo un problema: \n", error);
+        consulPlacaMapfre(valnumplaca);
 
         contErrProtocolo++;
         if (contErrProtocolo > 1) {
           $("#loaderPlaca").html("");
-          consulPlacaMapfre(valnumplaca);
           contErrProtocolo = 0;
         } else {
           setTimeout(consulPlacaMapfre, 4000);
