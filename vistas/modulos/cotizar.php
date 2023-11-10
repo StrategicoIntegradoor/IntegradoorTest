@@ -73,10 +73,8 @@ $cre_axa_canal = $creAXA['cre_axa_canal'];
 $cre_axa_validacionEventos = $creAXA['cre_axa_validacionEventos'];
 $url_axa = $creAXA['url_axa'];
 
-$creAXA = obtenerCredenciales($enlace, 'Credenciales_Solidaria', '*', $_SESSION['intermediario']);
+$creSolidaria = obtenerCredenciales($enlace, 'Credenciales_Solidaria', '*', $_SESSION['intermediario']);
 
-var_dump($creAXA);
-die();
 
 // FUNCION PARA OBTENER CREDENCIALES SOLIDARIA
 // Repite el proceso para las demás credenciales
