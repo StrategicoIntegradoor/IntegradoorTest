@@ -11,32 +11,34 @@ if (!$enlace) {
   die("Conexion Fallida " . mysqli_connect_error());
 }
 
+mysqli_set_charset($enlace, "utf8");
 
-// function obtenerCredenciales($enlace, $tabla, $columnas, $idIntermediario) {
-//     $query = "SELECT $columnas FROM `$tabla` WHERE `id_intermediario` = '$idIntermediario'";
-//     $ejecucion = mysqli_query($enlace, $query);
-//     $numerofilas = mysqli_num_rows($ejecucion);
-//     $fila = mysqli_fetch_assoc($ejecucion);
 
-//     if ($numerofilas > 0) {
-//         return $fila;
-//     } else {
-//         $query2 = "SELECT * FROM `$tabla` WHERE `id_intermediario` = 3";
-//         $ejecucion2 = mysqli_query($enlace, $query2);
-//         $fila2 = mysqli_fetch_assoc($ejecucion2);
-//         return $fila2;
-//     }
-// }
+function obtenerCredenciales($enlace, $tabla, $columnas, $idIntermediario) {
+    $query = "SELECT $columnas FROM `$tabla` WHERE `id_intermediario` = '$idIntermediario'";
+    $ejecucion = mysqli_query($enlace, $query);
+    $numerofilas = mysqli_num_rows($ejecucion);
+    $fila = mysqli_fetch_assoc($ejecucion);
 
-// // Uso de la función para obtener credenciales SBS
-// $creSBS = obtenerCredenciales($enlace, 'Credenciales_SBS2', 'cre_sbs_usuario, cre_sbs_contrasena', $_SESSION['intermediario']);
+    if ($numerofilas > 0) {
+        return $fila;
+    } else {
+        $query2 = "SELECT * FROM `$tabla` WHERE `id_intermediario` = 3";
+        $ejecucion2 = mysqli_query($enlace, $query2);
+        $fila2 = mysqli_fetch_assoc($ejecucion2);
+        return $fila2;
+    }
+}
 
-// $cre_sbs_usuario = $creSBS['cre_sbs_usuario'];
-// $creSBSContrasena = $creSBS['cre_sbs_contrasena'];
-// var_dump($creSBSContrasena);
-// var_dump($cre_sbs_usuario);
-// var_dump($creSBS);
-// die();
+// Uso de la función para obtener credenciales SBS
+$creSBS = obtenerCredenciales($enlace, 'Credenciales_SBS2', 'cre_sbs_usuario, cre_sbs_contrasena', $_SESSION['intermediario']);
+
+$cre_sbs_usuario = $creSBS['cre_sbs_usuario'];
+$creSBSContrasena = $creSBS['cre_sbs_contrasena'];
+var_dump($creSBSContrasena);
+var_dump($cre_sbs_usuario);
+var_dump($creSBS);
+die();
 
 // Repite el proceso para las demás credenciales
 // ...
@@ -44,32 +46,32 @@ if (!$enlace) {
 
 
 //CREDENCIALES SBS//
-$query = "SELECT cre_sbs_usuario AS cre_sbs_usuario, cre_sbs_contrasena AS cre_sbs_contrasena,  FROM `Credenciales_SBS2` WHERE `id_intermediario` = '" . $_SESSION["intermediario"] . "'";
+// $query = "SELECT cre_sbs_usuario AS cre_sbs_usuario, cre_sbs_contrasena AS cre_sbs_contrasena,  FROM `Credenciales_SBS2` WHERE `id_intermediario` = '" . $_SESSION["intermediario"] . "'";
 
-$ejecucion = mysqli_query($enlace, $query);
-// echo mysqli_num_rows($ejecucion);
-$numerofilas = mysqli_num_rows($ejecucion);
-$fila = mysqli_fetch_assoc($ejecucion);
+// $ejecucion = mysqli_query($enlace, $query);
+// // echo mysqli_num_rows($ejecucion);
+// $numerofilas = mysqli_num_rows($ejecucion);
+// $fila = mysqli_fetch_assoc($ejecucion);
 
-if ($numerofilas > 0) {
-  $cre_sbs_usuario = $fila['cre_sbs_usuario'];
-  $cre_sbs_contrasena = $fila['cre_sbs_contrasena'];
-} else {
-  $query2 = "SELECT * FROM `Credenciales_SBS` WHERE `id_intermediario` = 3";
+// if ($numerofilas > 0) {
+//   $cre_sbs_usuario = $fila['cre_sbs_usuario'];
+//   $cre_sbs_contrasena = $fila['cre_sbs_contrasena'];
+// } else {
+//   $query2 = "SELECT * FROM `Credenciales_SBS` WHERE `id_intermediario` = 3";
 
-  $ejecucion2 = mysqli_query($enlace, $query2);
-  // echo mysqli_num_rows($ejecucion);
-  $numerofilas = mysqli_num_rows($ejecucion2);
-  $fila2 = mysqli_fetch_assoc($ejecucion2);
+//   $ejecucion2 = mysqli_query($enlace, $query2);
+//   // echo mysqli_num_rows($ejecucion);
+//   $numerofilas = mysqli_num_rows($ejecucion2);
+//   $fila2 = mysqli_fetch_assoc($ejecucion2);
 
-  $cre_sbs_usuario = $fila2['cre_sbs_usuario'];
-  $cre_sbs_contrasena = $fila2['cre_sbs_contrasena'];
-}
+//   $cre_sbs_usuario = $fila2['cre_sbs_usuario'];
+//   $cre_sbs_contrasena = $fila2['cre_sbs_contrasena'];
+// }
 
-var_dump($fila2);
-var_dump($cre_sbs_usuario);
-var_dump($cre_sbs_contrasena);
-die();
+// var_dump($fila2);
+// var_dump($cre_sbs_usuario);
+// var_dump($cre_sbs_contrasena);
+// die();
 
 //CREDENCIALES ALLIANZ//
 $query3 = "SELECT *  FROM `Credenciales_Allianz` WHERE `id_intermediario` = '" . $_SESSION["intermediario"] . "'";
