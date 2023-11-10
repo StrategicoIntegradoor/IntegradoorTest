@@ -28,12 +28,12 @@ function obtenerCredenciales($enlace, $tabla, $columnas, $idIntermediario) {
   } else {
       $query2 = "SELECT * FROM `$tabla` WHERE `id_intermediario` = 3";
       $ejecucion2 = mysqli_query($enlace, $query2);
-      $fila2 = mysqli_fetch_assoc($ejecucion2);
+      $fila = mysqli_fetch_assoc($ejecucion2);
 
-      $credenciales['usuario'] = $fila2['cre_sbs_usuario'];
-      $credenciales['contrasena'] = $fila2['cre_sbs_contrasena'];
   }
 
+  var_dump($fila);
+  die();
   return $credenciales;  // Devuelve el array de credenciales
 }
 
@@ -55,27 +55,27 @@ echo "Contraseña SBS: $cre_sbs_contrasena<br>";
 
 
 //CREDENCIALES SBS//
-$query = "SELECT cre_sbs_usuario AS cre_sbs_usuario, cre_sbs_contrasena AS cre_sbs_contrasena,  FROM `Credenciales_SBS2` WHERE `id_intermediario` = '" . $_SESSION["intermediario"] . "'";
+// $query = "SELECT cre_sbs_usuario AS cre_sbs_usuario, cre_sbs_contrasena AS cre_sbs_contrasena,  FROM `Credenciales_SBS2` WHERE `id_intermediario` = '" . $_SESSION["intermediario"] . "'";
 
-$ejecucion = mysqli_query($enlace, $query);
-// echo mysqli_num_rows($ejecucion);
-$numerofilas = mysqli_num_rows($ejecucion);
-$fila = mysqli_fetch_assoc($ejecucion);
+// $ejecucion = mysqli_query($enlace, $query);
+// // echo mysqli_num_rows($ejecucion);
+// $numerofilas = mysqli_num_rows($ejecucion);
+// $fila = mysqli_fetch_assoc($ejecucion);
 
-if ($numerofilas > 0) {
-  $cre_sbs_usuario = $fila['cre_sbs_usuario'];
-  $cre_sbs_contrasena = $fila['cre_sbs_contrasena'];
-} else {
-  $query2 = "SELECT * FROM `Credenciales_SBS` WHERE `id_intermediario` = 3";
+// if ($numerofilas > 0) {
+//   $cre_sbs_usuario = $fila['cre_sbs_usuario'];
+//   $cre_sbs_contrasena = $fila['cre_sbs_contrasena'];
+// } else {
+//   $query2 = "SELECT * FROM `Credenciales_SBS` WHERE `id_intermediario` = 3";
 
-  $ejecucion2 = mysqli_query($enlace, $query2);
-  // echo mysqli_num_rows($ejecucion);
-  $numerofilas = mysqli_num_rows($ejecucion2);
-  $fila2 = mysqli_fetch_assoc($ejecucion2);
+//   $ejecucion2 = mysqli_query($enlace, $query2);
+//   // echo mysqli_num_rows($ejecucion);
+//   $numerofilas = mysqli_num_rows($ejecucion2);
+//   $fila2 = mysqli_fetch_assoc($ejecucion2);
 
-  $cre_sbs_usuario = $fila2['cre_sbs_usuario'];
-  $cre_sbs_contrasena = $fila2['cre_sbs_contrasena'];
-}
+//   $cre_sbs_usuario = $fila2['cre_sbs_usuario'];
+//   $cre_sbs_contrasena = $fila2['cre_sbs_contrasena'];
+// }
 
 //CREDENCIALES ALLIANZ//
 $query3 = "SELECT *  FROM `Credenciales_Allianz` WHERE `id_intermediario` = '" . $_SESSION["intermediario"] . "'";
