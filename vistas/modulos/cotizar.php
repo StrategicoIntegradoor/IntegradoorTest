@@ -60,6 +60,7 @@ $Cre_Est_Entity_Id = $creEstado['Cre_Est_Entity_Id'];
 $cre_est_zona = $creEstado['cre_est_zona'];
 
 
+// FUNCION PARA OBTENER CREDENCIALES AXA
 $creAXA = obtenerCredenciales($enlace, 'Credenciales_AXA', '*', $_SESSION['intermediario']);
 
 $cre_axa_sslcertfile = $creAXA['cre_axa_sslcertfile'];
@@ -72,6 +73,12 @@ $cre_axa_canal = $creAXA['cre_axa_canal'];
 $cre_axa_validacionEventos = $creAXA['cre_axa_validacionEventos'];
 $url_axa = $creAXA['url_axa'];
 
+$creAXA = obtenerCredenciales($enlace, 'Credenciales_Solidaria', '*', $_SESSION['intermediario']);
+
+var_dump($creAXA);
+die();
+
+// FUNCION PARA OBTENER CREDENCIALES SOLIDARIA
 // Repite el proceso para las demás credenciales
 // ...
 
