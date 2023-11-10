@@ -174,7 +174,7 @@
 .card-exequias-logo {
   border-radius: 20px;
   background-color: white;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0 0px rgba(0, 0, 0, 0.3);
   padding: 10px;
   /* max-width: 100%;   */
   margin: 0 auto;  
