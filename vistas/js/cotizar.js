@@ -1693,31 +1693,31 @@ function cotizarOfertas() {
 
   
             /* Solidaria */
-            // cont.push(
-            //   fetch(
-            //     "https://grupoasistencia.com/motor_webservice_tst/Solidaria",
-            //     requestOptions
-            //   )
-            //     .then((res) => {
-            //       if (!res.ok) throw Error(res.statusText);
-            //       return res.json();
-            //     })
-            //     .then((ofertas) => {
-            //       console.log('Ofertas de Solidaria:', ofertas[0].Resultado); // Imprime las ofertas en la consola
-            //       if (typeof ofertas[0].Resultado !== 'undefined') {
-            //         agregarAseguradoraFallida('Solidaria')
-            //         ofertas[0].Mensajes.forEach(mensaje => {
-            //           mostrarAlertarCotizacionFallida('Solidaria', mensaje)
-            //         })
-            //       } else {
-            //         validarOfertas(ofertas);
-            //         mostrarAlertaCotizacionExitosa('Solidaria')
-            //       }
-            //     })
-            //     .catch((err) => {
-            //       console.error(err);
-            //     })
-            // );
+            cont.push(
+              fetch(
+                "https://grupoasistencia.com/motor_webservice_tst/Solidaria",
+                requestOptions
+              )
+                .then((res) => {
+                  if (!res.ok) throw Error(res.statusText);
+                  return res.json();
+                })
+                .then((ofertas) => {
+                  console.log('Ofertas de Solidaria:', ofertas[0].Resultado); // Imprime las ofertas en la consola
+                  if (typeof ofertas[0].Resultado !== 'undefined') {
+                    agregarAseguradoraFallida('Solidaria')
+                    ofertas[0].Mensajes.forEach(mensaje => {
+                      mostrarAlertarCotizacionFallida('Solidaria', mensaje)
+                    })
+                  } else {
+                    validarOfertas(ofertas);
+                    mostrarAlertaCotizacionExitosa('Solidaria')
+                  }
+                })
+                .catch((err) => {
+                  console.error(err);
+                })
+            );
 
             /* Mapfre */
             // cont.push(
@@ -2074,28 +2074,28 @@ function cotizarOfertas() {
             
 
             /* SBS */
-            cont.push(
-              fetch("https://grupoasistencia.com/motor_webservice_tst/SBS", requestOptions)
-                .then((res) => {
-                  if (!res.ok) throw Error(res.statusText);
-                  return res.json();
-                })
-                .then((ofertas) => {
-                  let result = ofertas
-                  if (typeof result[0].Resultado !== 'undefined') {
-                    agregarAseguradoraFallida('SBS')
-                    result[0].Mensajes.forEach(mensaje => {
-                      mostrarAlertarCotizacionFallida('SBS', mensaje)
-                    })
-                  } else {
-                    validarOfertas(result);
-                    mostrarAlertaCotizacionExitosa('SBS')
-                  }
-                })
-                .catch((err) => {
-                  console.error(err);
-                })
-            );
+            // cont.push(
+            //   fetch("https://grupoasistencia.com/motor_webservice_tst/SBS", requestOptions)
+            //     .then((res) => {
+            //       if (!res.ok) throw Error(res.statusText);
+            //       return res.json();
+            //     })
+            //     .then((ofertas) => {
+            //       let result = ofertas
+            //       if (typeof result[0].Resultado !== 'undefined') {
+            //         agregarAseguradoraFallida('SBS')
+            //         result[0].Mensajes.forEach(mensaje => {
+            //           mostrarAlertarCotizacionFallida('SBS', mensaje)
+            //         })
+            //       } else {
+            //         validarOfertas(result);
+            //         mostrarAlertaCotizacionExitosa('SBS')
+            //       }
+            //     })
+            //     .catch((err) => {
+            //       console.error(err);
+            //     })
+            // );
 
 
             Promise.all(cont).then(() => {
