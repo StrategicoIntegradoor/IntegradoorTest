@@ -31,8 +31,8 @@ function obtenerCredenciales($enlace, $tabla, $columnas, $idIntermediario) {
 // Uso de la función para obtener credenciales SBS
 $creSBS = obtenerCredenciales($enlace, 'Credenciales_SBS2', 'cre_sbs_usuario, cre_sbs_contrasena', $_SESSION['intermediario']);
 
-$creSBSUsuario = $creSBS['cre_sbs_usuario'];
-$creSBSContrasena = $creSBS['cre_sbs_contrasena'];
+$cre_sbs_usuario = $creSBS['cre_sbs_usuario'];
+$cre_sbs_contrasena = $creSBS['cre_sbs_contrasena'];
 
 // Repite el proceso para las demás credenciales
 // ...
