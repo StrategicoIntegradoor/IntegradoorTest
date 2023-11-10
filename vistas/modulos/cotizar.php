@@ -20,27 +20,34 @@ function obtenerCredenciales($enlace, $tabla, $columnas, $idIntermediario) {
   $numerofilas = mysqli_num_rows($ejecucion);
   $fila = mysqli_fetch_assoc($ejecucion);
 
+  $credenciales = array();  // Array local para almacenar credenciales
+
   if ($numerofilas > 0) {
-      return $fila;
+      $credenciales['usuario'] = $fila['cre_sbs_usuario'];
+      $credenciales['contrasena'] = $fila['cre_sbs_contrasena'];
   } else {
       $query2 = "SELECT * FROM `$tabla` WHERE `id_intermediario` = 3";
       $ejecucion2 = mysqli_query($enlace, $query2);
       $fila2 = mysqli_fetch_assoc($ejecucion2);
-      return $fila2;
+
+      $credenciales['usuario'] = $fila2['cre_sbs_usuario'];
+      $credenciales['contrasena'] = $fila2['cre_sbs_contrasena'];
   }
+
+  return $credenciales;  // Devuelve el array de credenciales
 }
 
 // Uso de la función para obtener credenciales SBS
 $creSBS = obtenerCredenciales($enlace, 'Credenciales_SBS2', 'cre_sbs_usuario, cre_sbs_contrasena', $_SESSION['intermediario']);
 
 // Acceso a las credenciales obtenidas
-$cre_sbs_usuario = $creSBS['cre_sbs_usuario'];
-$cre_sbs_contrasena = $creSBS['cre_sbs_contrasena'];
+$cre_sbs_usuario = $creSBS['usuario'];
+$cre_sbs_contrasena = $creSBS['contrasena'];
 
 // Imprimir credenciales
 echo "Usuario SBS: $cre_sbs_usuario<br>";
 echo "Contraseña SBS: $cre_sbs_contrasena<br>";
-die();
+
 
 // Repite el proceso para las demás credenciales
 // ...
