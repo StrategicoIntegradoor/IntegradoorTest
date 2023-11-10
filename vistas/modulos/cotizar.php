@@ -39,9 +39,38 @@ $cre_sbs_contrasena = $creSBS['cre_sbs_contrasena']; // Aquí está el cambio
 // FUNCION PARA OBTENER CREDENCIALES ALLIANZ
 $creAllianz = obtenerCredenciales($enlace, 'Credenciales_Allianz', '*', $_SESSION['intermediario']);
 
-var_dump($creAllianz);
-die();
+$cre_alli_sslcertfile = $creAllianz['cre_alli_sslcertfile'];
+$cre_alli_sslkeyfile = $creAllianz['cre_alli_sslkeyfile'];
 
+$cre_alli_passphrase = $creAllianz['cre_alli_passphrase'];
+$cre_alli_partnerid = $creAllianz['cre_alli_partnerid'];
+
+$cre_alli_agentid = $creAllianz['cre_alli_agentid'];
+$cre_alli_partnercode = $creAllianz['cre_alli_partnercode'];
+
+$cre_alli_agentcode = $creAllianz['cre_alli_agentcode'];
+
+
+// FUNCION PARA OBTENER CREDENCIALES ESTADO
+$creEstado = obtenerCredenciales($enlace, 'Credenciales_Estado', '*', $_SESSION['intermediario']);
+
+$cre_est_usuario = $creEstado['cre_est_usuario'];
+$cre_equ_contrasena = $creEstado['cre_equ_contrasena'];
+$Cre_Est_Entity_Id = $creEstado['Cre_Est_Entity_Id'];
+$cre_est_zona = $creEstado['cre_est_zona'];
+
+
+$creAXA = obtenerCredenciales($enlace, 'Credenciales_AXA', '*', $_SESSION['intermediario']);
+
+$cre_axa_sslcertfile = $creAXA['cre_axa_sslcertfile'];
+$cre_axa_sslkeyfile = $creAXA['cre_axa_sslkeyfile'];
+$cre_axa_passphrase = $creAXA['cre_axa_passphrase'];
+$cre_axa_codigoDistribuidor = $creAXA['cre_axa_codigoDistribuidor'];
+$cre_axa_idTipoDistribuidor = $creAXA['cre_axa_idTipoDistribuidor'];
+$cre_axa_codigoDivipola = $creAXA['cre_axa_codigoDivipola'];
+$cre_axa_canal = $creAXA['cre_axa_canal'];
+$cre_axa_validacionEventos = $creAXA['cre_axa_validacionEventos'];
+$url_axa = $creAXA['url_axa'];
 
 // Repite el proceso para las demás credenciales
 // ...
@@ -72,104 +101,103 @@ die();
 // }
 
 //CREDENCIALES ALLIANZ//
-$query3 = "SELECT *  FROM `Credenciales_Allianz` WHERE `id_intermediario` = '" . $_SESSION["intermediario"] . "'";
+// $query3 = "SELECT *  FROM `Credenciales_Allianz` WHERE `id_intermediario` = '" . $_SESSION["intermediario"] . "'";
 
-$ejecucion3 = mysqli_query($enlace, $query3);
-$numerofilas3 = mysqli_num_rows($ejecucion3);
-$fila3 = mysqli_fetch_assoc($ejecucion3);
+// $ejecucion3 = mysqli_query($enlace, $query3);
+// $numerofilas3 = mysqli_num_rows($ejecucion3);
+// $fila3 = mysqli_fetch_assoc($ejecucion3);
 
-if ($numerofilas3 > 0) {
-  $cre_alli_sslcertfile = $fila3['cre_alli_sslcertfile'];
-  $cre_alli_sslkeyfile = $fila3['cre_alli_sslkeyfile'];
+// if ($numerofilas3 > 0) {
+//   $cre_alli_sslcertfile = $fila3['cre_alli_sslcertfile'];
+//   $cre_alli_sslkeyfile = $fila3['cre_alli_sslkeyfile'];
 
-  $cre_alli_passphrase = $fila3['cre_alli_passphrase'];
-  $cre_alli_partnerid = $fila3['cre_alli_partnerid'];
+//   $cre_alli_passphrase = $fila3['cre_alli_passphrase'];
+//   $cre_alli_partnerid = $fila3['cre_alli_partnerid'];
 
-  $cre_alli_agentid = $fila3['cre_alli_agentid'];
-  $cre_alli_partnercode = $fila3['cre_alli_partnercode'];
+//   $cre_alli_agentid = $fila3['cre_alli_agentid'];
+//   $cre_alli_partnercode = $fila3['cre_alli_partnercode'];
 
-  $cre_alli_agentcode = $fila3['cre_alli_agentcode'];
-} else {
-  $query2 = "SELECT * FROM `Credenciales_Allianz` WHERE `id_intermediario` = 3";
+//   $cre_alli_agentcode = $fila3['cre_alli_agentcode'];
+// } else {
+//   $query2 = "SELECT * FROM `Credenciales_Allianz` WHERE `id_intermediario` = 3";
 
-  $ejecucion2 = mysqli_query($enlace, $query2);
-  $numerofilas = mysqli_num_rows($ejecucion2);
-  $fila2 = mysqli_fetch_assoc($ejecucion2);
+//   $ejecucion2 = mysqli_query($enlace, $query2);
+//   $numerofilas = mysqli_num_rows($ejecucion2);
+//   $fila2 = mysqli_fetch_assoc($ejecucion2);
 
-  $cre_alli_sslcertfile = $fila2['cre_alli_sslcertfile'];
-  $cre_alli_sslkeyfile = $fila2['cre_alli_sslkeyfile'];
+//   $cre_alli_sslcertfile = $fila2['cre_alli_sslcertfile'];
+//   $cre_alli_sslkeyfile = $fila2['cre_alli_sslkeyfile'];
 
-  $cre_alli_passphrase = $fila2['cre_alli_passphrase'];
-  $cre_alli_partnerid = $fila2['cre_alli_partnerid'];
+//   $cre_alli_passphrase = $fila2['cre_alli_passphrase'];
+//   $cre_alli_partnerid = $fila2['cre_alli_partnerid'];
 
-  $cre_alli_agentid = $fila2['cre_alli_agentid'];
-  $cre_alli_partnercode = $fila2['cre_alli_partnercode'];
+//   $cre_alli_agentid = $fila2['cre_alli_agentid'];
+//   $cre_alli_partnercode = $fila2['cre_alli_partnercode'];
 
-  $cre_alli_agentcode = $fila2['cre_alli_agentcode'];
-}
+//   $cre_alli_agentcode = $fila2['cre_alli_agentcode'];
+// }
 
 //CREDENCIALES ESTADO//
-$query4 = "SELECT *  FROM `Credenciales_Estado` WHERE `id_intermediario` = '" . $_SESSION["intermediario"] . "'";
+// $query4 = "SELECT *  FROM `Credenciales_Estado` WHERE `id_intermediario` = '" . $_SESSION["intermediario"] . "'";
 
-$ejecucion4 = mysqli_query($enlace, $query4);
-$numerofilas4 = mysqli_num_rows($ejecucion4);
-$fila4 = mysqli_fetch_assoc($ejecucion4);
+// $ejecucion4 = mysqli_query($enlace, $query4);
+// $numerofilas4 = mysqli_num_rows($ejecucion4);
+// $fila4 = mysqli_fetch_assoc($ejecucion4);
 
-if ($numerofilas4 > 0) {
-  $cre_est_usuario = $fila4['cre_est_usuario'];
-  $cre_equ_contrasena = $fila4['cre_equ_contrasena'];
-  $Cre_Est_Entity_Id = $fila4['Cre_Est_Entity_Id'];
-  $cre_est_zona = $fila4['cre_est_zona'];
-} else {
-  $query5 = "SELECT * FROM `Credenciales_Estado` WHERE `id_intermediario` = 3";
+// if ($numerofilas4 > 0) {
+//   $cre_est_usuario = $fila4['cre_est_usuario'];
+//   $cre_equ_contrasena = $fila4['cre_equ_contrasena'];
+//   $Cre_Est_Entity_Id = $fila4['Cre_Est_Entity_Id'];
+//   $cre_est_zona = $fila4['cre_est_zona'];
+// } else {
+//   $query5 = "SELECT * FROM `Credenciales_Estado` WHERE `id_intermediario` = 3";
 
-  $ejecucion5 = mysqli_query($enlace, $query5);
-  $numerofilas5 = mysqli_num_rows($ejecucion5);
-  $fila5 = mysqli_fetch_assoc($ejecucion5);
+//   $ejecucion5 = mysqli_query($enlace, $query5);
+//   $numerofilas5 = mysqli_num_rows($ejecucion5);
+//   $fila5 = mysqli_fetch_assoc($ejecucion5);
 
-  $cre_est_usuario = $fila5['cre_est_usuario'];
-  $cre_equ_contrasena = $fila5['cre_equ_contrasena'];
-  $Cre_Est_Entity_Id = $fila5['Cre_Est_Entity_Id'];
-  $cre_est_zona = $fila5['cre_est_zona'];
-}
+//   $cre_est_usuario = $fila5['cre_est_usuario'];
+//   $cre_equ_contrasena = $fila5['cre_equ_contrasena'];
+//   $Cre_Est_Entity_Id = $fila5['Cre_Est_Entity_Id'];
+//   $cre_est_zona = $fila5['cre_est_zona'];
+// }
 
 //CREDENCIALES AXA//
-$query6 = "SELECT *  FROM `Credenciales_AXA` WHERE `id_Intermediario` = '" . $_SESSION["intermediario"] . "'";
+// $query6 = "SELECT *  FROM `Credenciales_AXA` WHERE `id_Intermediario` = '" . $_SESSION["intermediario"] . "'";
 
-$ejecucion6 = mysqli_query($enlace, $query6);
-$numerofilas6 = mysqli_num_rows($ejecucion6);
-$fila6 = mysqli_fetch_assoc($ejecucion6);
+// $ejecucion6 = mysqli_query($enlace, $query6);
+// $numerofilas6 = mysqli_num_rows($ejecucion6);
+// $fila6 = mysqli_fetch_assoc($ejecucion6);
 
-if ($numerofilas4 > 0) {
-  $cre_axa_sslcertfile = $fila6['cre_axa_sslcertfile'];
-  $cre_axa_sslkeyfile = $fila6['cre_axa_sslkeyfile'];
-  $cre_axa_passphrase = $fila6['cre_axa_passphrase'];
-  $cre_axa_codigoDistribuidor = $fila6['cre_axa_codigoDistribuidor'];
-  $cre_axa_idTipoDistribuidor = $fila6['cre_axa_idTipoDistribuidor'];
-  $cre_axa_codigoDivipola = $fila6['cre_axa_codigoDivipola'];
-  $cre_axa_canal = $fila6['cre_axa_canal'];
-  $cre_axa_validacionEventos = $fila6['cre_axa_validacionEventos'];
-  $url_axa =$fila6['url_axa'];
-} else {
-  $query7 = "SELECT * FROM `Credenciales_AXA` WHERE `id_Intermediario` = 3";
+// if ($numerofilas4 > 0) {
+//   $cre_axa_sslcertfile = $fila6['cre_axa_sslcertfile'];
+//   $cre_axa_sslkeyfile = $fila6['cre_axa_sslkeyfile'];
+//   $cre_axa_passphrase = $fila6['cre_axa_passphrase'];
+//   $cre_axa_codigoDistribuidor = $fila6['cre_axa_codigoDistribuidor'];
+//   $cre_axa_idTipoDistribuidor = $fila6['cre_axa_idTipoDistribuidor'];
+//   $cre_axa_codigoDivipola = $fila6['cre_axa_codigoDivipola'];
+//   $cre_axa_canal = $fila6['cre_axa_canal'];
+//   $cre_axa_validacionEventos = $fila6['cre_axa_validacionEventos'];
+//   $url_axa =$fila6['url_axa'];
+// } else {
+//   $query7 = "SELECT * FROM `Credenciales_AXA` WHERE `id_Intermediario` = 3";
 
-  $ejecucion7 = mysqli_query($enlace, $query7);
-  $numerofilas7 = mysqli_num_rows($ejecucion5);
-  $fila7 = mysqli_fetch_assoc($ejecucion7);
+//   $ejecucion7 = mysqli_query($enlace, $query7);
+//   $numerofilas7 = mysqli_num_rows($ejecucion5);
+//   $fila7 = mysqli_fetch_assoc($ejecucion7);
 
-  $cre_axa_sslcertfile = $fila7['cre_axa_sslcertfile'];
-  $cre_axa_sslkeyfile = $fila7['cre_axa_sslkeyfile'];
-  $cre_axa_passphrase = $fila7['cre_axa_passphrase'];
-  $cre_axa_codigoDistribuidor = $fila7['cre_axa_codigoDistribuidor'];
-  $cre_axa_idTipoDistribuidor = $fila7['cre_axa_idTipoDistribuidor'];
-  $cre_axa_codigoDivipola = $fila7['cre_axa_codigoDivipola'];
-  $cre_axa_canal = $fila7['cre_axa_canal'];
-  $cre_axa_validacionEventos = $fila7['cre_axa_validacionEventos'];
-  $url_axa = $fila7['url_axa'];
-}
+//   $cre_axa_sslcertfile = $fila7['cre_axa_sslcertfile'];
+//   $cre_axa_sslkeyfile = $fila7['cre_axa_sslkeyfile'];
+//   $cre_axa_passphrase = $fila7['cre_axa_passphrase'];
+//   $cre_axa_codigoDistribuidor = $fila7['cre_axa_codigoDistribuidor'];
+//   $cre_axa_idTipoDistribuidor = $fila7['cre_axa_idTipoDistribuidor'];
+//   $cre_axa_codigoDivipola = $fila7['cre_axa_codigoDivipola'];
+//   $cre_axa_canal = $fila7['cre_axa_canal'];
+//   $cre_axa_validacionEventos = $fila7['cre_axa_validacionEventos'];
+//   $url_axa = $fila7['url_axa'];
+// }
 
 //CREDENCIALES SOLIDARIA//
-$query6 = "SELECT *  FROM `Credenciales_Solidaria` WHERE `id_Intermediario` = '" . $_SESSION["intermediario"] . "'";
 
 
 
