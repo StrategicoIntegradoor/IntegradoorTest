@@ -11,31 +11,35 @@ if (!$enlace) {
   die("Conexion Fallida " . mysqli_connect_error());
 }
 
-mysqli_set_charset($enlace, "utf8");
+// mysqli_set_charset($enlace, "utf8");
 
 
 function obtenerCredenciales($enlace, $tabla, $columnas, $idIntermediario) {
-    $query = "SELECT $columnas FROM `$tabla` WHERE `id_intermediario` = '$idIntermediario'";
-    $ejecucion = mysqli_query($enlace, $query);
-    $numerofilas = mysqli_num_rows($ejecucion);
-    $fila = mysqli_fetch_assoc($ejecucion);
+  $query = "SELECT $columnas FROM `$tabla` WHERE `id_intermediario` = '$idIntermediario'";
+  $ejecucion = mysqli_query($enlace, $query);
+  $numerofilas = mysqli_num_rows($ejecucion);
+  $fila = mysqli_fetch_assoc($ejecucion);
 
-    if ($numerofilas > 0) {
-        return $fila;
-    } else {
-        $query2 = "SELECT * FROM `$tabla` WHERE `id_intermediario` = 3";
-        $ejecucion2 = mysqli_query($enlace, $query2);
-        $fila2 = mysqli_fetch_assoc($ejecucion2);
-        return $fila2;
-    }
+  if ($numerofilas > 0) {
+      return $fila;
+  } else {
+      $query2 = "SELECT * FROM `$tabla` WHERE `id_intermediario` = 3";
+      $ejecucion2 = mysqli_query($enlace, $query2);
+      $fila2 = mysqli_fetch_assoc($ejecucion2);
+      return $fila2;
+  }
 }
 
 // Uso de la función para obtener credenciales SBS
 $creSBS = obtenerCredenciales($enlace, 'Credenciales_SBS2', 'cre_sbs_usuario, cre_sbs_contrasena', $_SESSION['intermediario']);
 
+// Acceso a las credenciales obtenidas
 $cre_sbs_usuario = $creSBS['cre_sbs_usuario'];
-$creSBSContrasena = $creSBS['cre_sbs_contrasena'];
-var_dump($creSBSContrasena);
+$cre_sbs_contrasena = $creSBS['cre_sbs_contrasena'];
+
+// Imprimir credenciales
+echo "Usuario SBS: $cre_sbs_usuario<br>";
+echo "Contraseña SBS: $cre_sbs_contrasena<br>";
 die();
 
 // Repite el proceso para las demás credenciales
