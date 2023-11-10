@@ -329,7 +329,7 @@ select:invalid + .error-message {
                                     <br>
                                     <p class="card-text">Pertenece al grupo STARR Companies, es la compañía N° 1 en el mundo dedicada a brindar asistencia al viajero de manera integral desde hace más de 43 años.</p>
                                     <br>
-                                    <p class="card-text">Para conocer más sobre Assist Card, ingresa <a href="https://Grupoasistencia.com/pdfExequias/PRESENTACION_CORPORATIVA ASSIST_CARD.pdf" target="_blank">AQUI</a></p>
+                                    <p class="card-text">Para conocer más sobre Assist Card, ingresa <a href="https://Grupoasistencia.com/pdfExequias/PRESENTACION_CORPORATIVA_ASSIST_CARD.pdf" target="_blank">AQUI</a></p>
                                 </div>
                             </div>
                         </div>
