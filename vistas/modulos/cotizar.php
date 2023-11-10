@@ -32,7 +32,7 @@ function obtenerCredenciales($enlace, $tabla, $columnas, $idIntermediario) {
 $creSBS = obtenerCredenciales($enlace, 'Credenciales_SBS2', 'cre_sbs_usuario, cre_sbs_contrasena', $_SESSION['intermediario']);
 
 $cre_sbs_usuario = $creSBS['cre_sbs_usuario'];
-$cre_sbs_contrasena = $creSBS['cre_sbs_contrasena'];
+$cre_sbs_contrasena = $creSBS['cre_sbs_contraseña'];
 var_dump($cre_sbs_contrasena);
 die();
 
