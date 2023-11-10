@@ -30,11 +30,18 @@ function obtenerCredenciales($enlace, $tabla, $columnas, $idIntermediario) {
   }
 }
 
-// Uso de la función para obtener credenciales SBS
+// FUNCION PARA OBTENER CREDENCIALES SBS
 $creSBS = obtenerCredenciales($enlace, 'Credenciales_SBS2', 'cre_sbs_usuario, cre_sbs_contrasena', $_SESSION['intermediario']);
 
 $cre_sbs_usuario = $creSBS['cre_sbs_usuario'];
 $cre_sbs_contrasena = $creSBS['cre_sbs_contrasena']; // Aquí está el cambio
+
+// FUNCION PARA OBTENER CREDENCIALES ALLIANZ
+$creAllianz = obtenerCredenciales($enlace, 'Credenciales_Allianz', '*', $_SESSION['intermediario']);
+
+var_dump($creAllianz);
+die();
+
 
 // Repite el proceso para las demás credenciales
 // ...
