@@ -33,7 +33,7 @@ $creSBS = obtenerCredenciales($enlace, 'Credenciales_SBS2', 'cre_sbs_usuario, cr
 
 $cre_sbs_usuario = $creSBS['cre_sbs_usuario'];
 $cre_sbs_contrasena = $fila2['cre_sbs_contrasena'];
-var_dump($cre_sbs_contrasena);
+var_dump($creSBS);
 die();
 
 // Repite el proceso para las demás credenciales
