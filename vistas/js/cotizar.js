@@ -2050,52 +2050,52 @@ function cotizarOfertas() {
             // );
 
             /* AXA */
-            cont.push(
-              fetch("https://grupoasistencia.com/motor_webservice_tst/AXA", requestOptions)
-                .then((res) => {
-                  if (!res.ok) throw Error(res.statusText);
-                  return res.json();
-                })
-                .then((ofertas) => {
-                  if (typeof ofertas[0].Resultado !== 'undefined') {
-                    agregarAseguradoraFallida('AXA')
-                    ofertas[0].Mensajes.forEach(mensaje => {
-                      mostrarAlertarCotizacionFallida('AXA', mensaje)
-                    })
-                  } else {
-                    validarOfertas(ofertas)
-                    mostrarAlertaCotizacionExitosa('AXA')
-                  }
-                })
-                .catch((err) => {
-                  console.error(err);
-                })
-            );
-            
-
-            /* SBS */
             // cont.push(
-            //   fetch("https://grupoasistencia.com/motor_webservice_tst/SBS", requestOptions)
+            //   fetch("https://grupoasistencia.com/motor_webservice_tst/AXA", requestOptions)
             //     .then((res) => {
             //       if (!res.ok) throw Error(res.statusText);
             //       return res.json();
             //     })
             //     .then((ofertas) => {
-            //       let result = ofertas
-            //       if (typeof result[0].Resultado !== 'undefined') {
-            //         agregarAseguradoraFallida('SBS')
-            //         result[0].Mensajes.forEach(mensaje => {
-            //           mostrarAlertarCotizacionFallida('SBS', mensaje)
+            //       if (typeof ofertas[0].Resultado !== 'undefined') {
+            //         agregarAseguradoraFallida('AXA')
+            //         ofertas[0].Mensajes.forEach(mensaje => {
+            //           mostrarAlertarCotizacionFallida('AXA', mensaje)
             //         })
             //       } else {
-            //         validarOfertas(result);
-            //         mostrarAlertaCotizacionExitosa('SBS')
+            //         validarOfertas(ofertas)
+            //         mostrarAlertaCotizacionExitosa('AXA')
             //       }
             //     })
             //     .catch((err) => {
             //       console.error(err);
             //     })
             // );
+            
+
+            /* SBS */
+            cont.push(
+              fetch("https://grupoasistencia.com/motor_webservice_tst/SBS", requestOptions)
+                .then((res) => {
+                  if (!res.ok) throw Error(res.statusText);
+                  return res.json();
+                })
+                .then((ofertas) => {
+                  let result = ofertas
+                  if (typeof result[0].Resultado !== 'undefined') {
+                    agregarAseguradoraFallida('SBS')
+                    result[0].Mensajes.forEach(mensaje => {
+                      mostrarAlertarCotizacionFallida('SBS', mensaje)
+                    })
+                  } else {
+                    validarOfertas(result);
+                    mostrarAlertaCotizacionExitosa('SBS')
+                  }
+                })
+                .catch((err) => {
+                  console.error(err);
+                })
+            );
 
 
             Promise.all(cont).then(() => {
