@@ -1114,7 +1114,6 @@ function editarCotizacion(id) {
       } else {
           document.getElementById('DatosVehiculoPesados').style.display = 'block';
           document.getElementById('DatosVehiculo').style.display = 'none';
-          console.log(respuesta)
          
       }
 
