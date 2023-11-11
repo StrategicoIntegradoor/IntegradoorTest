@@ -402,58 +402,11 @@ select:invalid + .error-message {
             <div class="content" style="margin-bottom: 0px;">
                 <!-- TITULO GENERADOR DE PDF -->
                 <h4 style="font-family: 'Arial Arabic', Arial; text-align: left; font-weight: bold; margin-bottom: -12px; margin-top: -3px;">Solicita una cotización en el siguiente formulario</h4>
-                <hr>
-                <form class="form-group" id="formResumTitu">
-                    <div class="row">
-                            <input type="hidden" id="nombre" value="<?php echo $_SESSION['nombre']; ?>">
-                            <input type="hidden" id="apellido" value="<?php echo $_SESSION['apellido']; ?>">
-                            <input type="hidden" id="idUsuario" value="<?php echo $_SESSION['idUsuario']; ?>">
-                        <div class="col-xs-12 col-sm-6 col-lg-3 form-group" style="margin-bottom: 0px;">
-                            <label for="nombreTitular">Nombre Titular</label>
-                            <input type="text" class="form-control" id="nombreTitular" name="nombreTitular" placeholder="Nombre completo" required>
-                        </div>
-                        
-                        <div class="col-xs-12 col-sm-6 col-lg-3 form-group" style="margin-bottom: 0px;">
-                            <label for="">Edad Titular</label>
-                                <select class="form-control edad" name="edad" id="edad" required>
-                                    <option value="">Edad Titular</option>
-                                    <?php
-                                    for ($i = 18; $i <= 60; $i++) {
-                                    if (strlen($i) == 1) { ?>
-                                        <option value="<?php echo "0" . $i ?>"><?php echo "0" . $i ?></option><?php
-                                                                                                            } else { ?>
-                                        <option value="<?php echo $i ?>"><?php echo $i ?></option><?php
-                                                                                                            }
-                                                                                                        }
-                                                                                                ?>
-                                </select>
-                        </div>
-
-                        <div class="col-xs-12 col-sm-6 col-lg-3 form-group" style="margin-bottom: 0px;">
-                            <label for="tipoPlanExequialID">Tipo Plan exequial</label>
-                            <select class="form-control" id="tipoPlanExequialID" required>
-                                <option value="" selected>Tipo de plan</option>
-                                <option value="Plan Muy Personal">Plan Muy Personal</option>
-                                <option value="Plan Nuestra Familia">Plan Nuestra Familia</option>
-                            </select>
-                        </div>
-
-                        <div class="col-xs-12 col-sm-6 col-lg-3 form-group" style="margin-bottom: 0px;" id="contenBtnConsultarExequial">
-                            <button type="submit" class="btn btn-primary btn-block" id="btnExequial">Cotizar</button>
-                        </div>
-                    </div>
-                </form>
-                <br>
-                <p style="font-size: 16px; margin-bottom: 0px;">Consulta la presentación del producto Exequial Los Olivos <b style="font-size: 17px;"><a href="https://Grupoasistencia.com/pdfExequias/PresentaciónComercialExequialLosOlivos.pdf" target="_blank">AQUI</a></b></p>
-
+                <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdNXEYeuq8L5G15BQpGNKKt12cs7jzGvxYuqw2gdQaIH3qwGw/viewform?embedded=true" width="640" height="2219" frameborder="0" marginheight="0" marginwidth="0">Cargando…</iframe>
             </div>
         </div>           
     </section>
 </div>
 
 
-<!-- <script src="vistas/js/invitar.js?v=<?php echo (rand()); ?>"></script>
-<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-<script src="vistas/js/exequias.js?v=<?php echo (rand()); ?>"></script>
-<script src="vistas/js/cotizar.js?v=<?php echo (rand()); ?>"></script> -->
 
