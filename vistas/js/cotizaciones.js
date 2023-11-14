@@ -239,7 +239,7 @@ $(document).ready(function () {
     var todosOn = $(".classSelecOferta:checked").length;
 
     var idCotizacionPDF = idCotizacion;
-
+    
     var checkboxAsesorEditar = $("#checkboxAsesorEditar");
 
     var valorTxtFasecolda = $("#txtFasecolda").val(); // Obtener el valor del input con el id "txtFasecolda"
