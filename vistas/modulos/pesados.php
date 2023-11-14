@@ -419,9 +419,7 @@ if ($_SESSION["permisos"]["Cotizarpesados"] != "x") {
                         <option value="Trabajo">Trabajo</option>
                       </select>
                     </div>
-                  </div>
 
-                  <div class="row">
                     <div class="col-xs-12 col-sm-6 col-md-3 form-group">
                       <label for="txtTipoServicio">Tipo de Servicio</label>
                       <select class="form-control" id="txtTipoServicio" required>
@@ -430,6 +428,11 @@ if ($_SESSION["permisos"]["Cotizarpesados"] != "x") {
                         <option value="11">Publico</option>
                       </select>
                     </div>
+
+                  </div>
+
+                  <div class="row">
+                    
 
                     <div class="col-xs-12 col-sm-6 col-md-3 form-group">
                       <label for="DptoCirculacion">Departamento de Circulación</label>
