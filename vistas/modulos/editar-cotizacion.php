@@ -429,7 +429,7 @@
                       <label for="txtValorFasecolda">Valor Asegurado</label>
                       <input type="text" class="form-control" id="txtValorFasecoldaPesado" placeholder="" required>
                     </div>
-                    <div class="col-xs-12 col-sm-6 col-md-3 form-group">
+                    <div class="col-xs-12 col-sm-6 col-md-3 form-group" style="display: none;">
                       <label for="txtTipoUsoVehiculo">Tipo de Uso</label>
                       <select class="form-control" id="txtTipoUsoVehiculoPesado" required>
                         <option value=""></option>
@@ -437,9 +437,7 @@
                         <option value="Trabajo">Trabajo</option>
                       </select>
                     </div>
-                  </div>
 
-                  <div class="row">
                     <div class="col-xs-12 col-sm-6 col-md-3 form-group">
                       <label for="txtTipoServicio">Tipo de Servicio</label>
                       <select class="form-control" id="txtTipoServicioPesado" required>
@@ -449,6 +447,10 @@
                         <option value="12">Publico Intermunicipal</option>
                       </select>
                     </div>
+                  </div>
+
+                  <div class="row">
+                    
 
                     <div class="col-xs-12 col-sm-6 col-md-3 form-group">
                       <label for="DptoCirculacion">Departamento de Circulación</label>
