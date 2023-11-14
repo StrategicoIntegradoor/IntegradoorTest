@@ -21,7 +21,7 @@ $(document).ready(function () {
 
       headers: { 'Content-Type': 'application/json' },
 
-      body: JSON.stringify({ obtenerAlertas: true, cotizacion: idCotizacion }),
+      body: JSON.stringify({ obtenerAlertas: true, cotizacion: options[0] }),
 
     };
 
