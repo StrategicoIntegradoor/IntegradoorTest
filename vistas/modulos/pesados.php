@@ -411,7 +411,7 @@ if ($_SESSION["permisos"]["Cotizarpesados"] != "x") {
                       <label for="txtValorFasecolda">Valor Asegurado</label>
                       <input type="text" class="form-control" id="txtValorFasecolda" placeholder="" required>
                     </div>
-                    <div class="col-xs-12 col-sm-6 col-md-3 form-group">
+                    <div class="col-xs-12 col-sm-6 col-md-3 form-group" style="display: none;">
                       <label for="txtTipoUsoVehiculo">Tipo de Uso</label>
                       <select class="form-control" id="txtTipoUsoVehiculo" required>
                         <option value=""></option>
@@ -534,18 +534,7 @@ if ($_SESSION["permisos"]["Cotizarpesados"] != "x") {
                       </select>
                     </div>
 
-                    <!-- <div id="contenBtnCotizar"> -->
-                      <!-- <div class="col-lg-12 conten-cotizar"> -->
-                        <!-- <div class="row"> -->
-                          <div class="col-xs-12 col-sm-6 col-md-3 form-group" id="contenBtnCotizar">
-                            <button class="btn btn-primary btn-block" id="btnCotizarPesados">Cotizar Ofertas</button>
-                          </div>
-                          <div class="col-xs-12 col-sm-6 col-md-3 form-group">
-                            <div id="loaderOferta"></div>
-                          </div>
-                        <!-- </div> -->
-                      <!-- </div> -->
-                    <!-- </div> -->
+                    
                   </div>
 
 
@@ -571,6 +560,18 @@ if ($_SESSION["permisos"]["Cotizarpesados"] != "x") {
               </div>
             </div>
 
+            <div id="contenBtnCotizar">
+              <div class="col-lg-12 conten-cotizar">
+                <div class="row">
+                  <div class="col-xs-12 col-sm-6 col-md-3 form-group" id="contenBtnCotizar">
+                    <button class="btn btn-primary btn-block" id="btnCotizarPesados">Cotizar Ofertas</button>
+                  </div>
+                  <div class="col-xs-12 col-sm-6 col-md-3 form-group">
+                    <div id="loaderOferta"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
         
           </form>
 
