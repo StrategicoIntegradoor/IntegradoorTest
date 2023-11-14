@@ -534,7 +534,7 @@ if ($_SESSION["permisos"]["Cotizarpesados"] != "x") {
                       </select>
                     </div>
 
-                    <div id="contenBtnCotizar">
+                    <!-- <div id="contenBtnCotizar"> -->
                       <!-- <div class="col-lg-12 conten-cotizar"> -->
                         <!-- <div class="row"> -->
                           <div class="col-xs-12 col-sm-6 col-md-3 form-group">
@@ -545,7 +545,7 @@ if ($_SESSION["permisos"]["Cotizarpesados"] != "x") {
                           </div>
                         <!-- </div> -->
                       <!-- </div> -->
-                    </div>
+                    <!-- </div> -->
                   </div>
 
 
