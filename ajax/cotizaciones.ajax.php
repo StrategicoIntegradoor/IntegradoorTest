@@ -32,9 +32,7 @@ class AjaxCotizaciones {
 
 		$item = "id_cotizacion";
 		$valor = $this->idCotizaOferta;
-		var_dump($item);
-        var_dump($valor);
-        die();
+
 		$respuesta = ControladorCotizaciones::ctrMostrarCotizaOfertas($item, $valor);
 
 		echo json_encode($respuesta);
