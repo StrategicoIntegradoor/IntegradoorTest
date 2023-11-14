@@ -534,6 +534,18 @@ if ($_SESSION["permisos"]["Cotizarpesados"] != "x") {
                       </select>
                     </div>
 
+                    <div id="contenBtnCotizar">
+                      <!-- <div class="col-lg-12 conten-cotizar"> -->
+                        <!-- <div class="row"> -->
+                          <div class="col-xs-12 col-sm-6 col-md-3 form-group">
+                            <button class="btn btn-primary btn-block" id="btnCotizarPesados">Cotizar Ofertas</button>
+                          </div>
+                          <div class="col-xs-12 col-sm-6 col-md-3 form-group">
+                            <div id="loaderOferta"></div>
+                          </div>
+                        <!-- </div> -->
+                      <!-- </div> -->
+                    </div>
                   </div>
 
 
@@ -554,21 +566,7 @@ if ($_SESSION["permisos"]["Cotizarpesados"] != "x") {
                       </div>
                     </div>
                   </div>
-
-
-                  <div id="contenBtnCotizar">
-                    <!-- <div class="col-lg-12 conten-cotizar"> -->
-                      <!-- <div class="row"> -->
-                        <div class="col-xs-12 col-sm-6 col-md-3 form-group">
-                          <button class="btn btn-primary btn-block" id="btnCotizarPesados">Cotizar Ofertas</button>
-                        </div>
-                        <div class="col-xs-12 col-sm-6 col-md-3 form-group">
-                          <div id="loaderOferta"></div>
-                        </div>
-                      <!-- </div> -->
-                    <!-- </div> -->
-                  </div>
-                  
+        
                 </div>
               </div>
             </div>
