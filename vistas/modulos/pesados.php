@@ -557,7 +557,7 @@ if ($_SESSION["permisos"]["Cotizarpesados"] != "x") {
 
 
                   <div id="contenBtnCotizar">
-                    <div class="col-lg-12 conten-cotizar">
+                    <!-- <div class="col-lg-12 conten-cotizar"> -->
                       <div class="row">
                         <div class="col-xs-12 col-sm-6 col-md-3 form-group">
                           <button class="btn btn-primary btn-block" id="btnCotizarPesados">Cotizar Ofertas</button>
@@ -566,7 +566,7 @@ if ($_SESSION["permisos"]["Cotizarpesados"] != "x") {
                           <div id="loaderOferta"></div>
                         </div>
                       </div>
-                    </div>
+                    <!-- </div> -->
                   </div>
                   
                 </div>
