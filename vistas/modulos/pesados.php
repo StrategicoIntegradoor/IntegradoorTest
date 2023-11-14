@@ -499,12 +499,18 @@ if ($_SESSION["permisos"]["Cotizarpesados"] != "x") {
                       </select>
                     </div>
 
-
+                    <div class="col-xs-12 col-sm-6 col-md-3 form-group">
+                      <label for="obligacionfinanciera">Obligaciones Financieras</label>
+                      <select class="form-control" id="obligacionfinanciera" required>
+                        <option value="1">No</option>
+                        <option value="2">Si</option>
+                      </select>
+                    </div>
+                    
                   </div>
 
                   <div class="row">
               
-                    
                     <!-- <div class="col-xs-12 col-sm-6 col-md-3 form-group">
                       <label for="hdiseguros">Tipo Vehiculo HDI</label>
                       <select class="form-control" id="hdiseguros" required>
@@ -528,15 +534,6 @@ if ($_SESSION["permisos"]["Cotizarpesados"] != "x") {
                         <option value="4">Trailer</option>
                       </select>
                     </div> -->
-
-                    <div class="col-xs-12 col-sm-6 col-md-3 form-group">
-                      <label for="obligacionfinanciera">Obligaciones Financieras</label>
-                      <select class="form-control" id="obligacionfinanciera" required>
-                        <option value="1">No</option>
-                        <option value="2">Si</option>
-                      </select>
-                    </div>
-
                     
                   </div>
 
