@@ -1533,8 +1533,6 @@ function cotizarOfertas() {
   var cre_sol_fecha_token = document.getElementById("cre_sol_fecha_token").value;
 
   console.log("Valores de las variables para Solidaria:");
-  console.log("cre_sol_id:", cre_sol_id);
-  console.log("id_Intermediario:", id_Intermediario);
   console.log("cre_sol_cod_sucursal:", cre_sol_cod_sucursal);
   console.log("cre_sol_cod_per:", cre_sol_cod_per);
   console.log("cre_sol_cod_tipo_agente:", cre_sol_cod_tipo_agente);
@@ -1545,7 +1543,7 @@ function cotizarOfertas() {
   console.log("cre_sol_token:", cre_sol_token);
   console.log("cre_sol_fecha_token:", cre_sol_fecha_token);
 
-  
+
 
   if (ciudadCirculacion.length == 4) {
     ciudadCirculacion = "0" + ciudadCirculacion;
@@ -1648,8 +1646,6 @@ function cotizarOfertas() {
           url_axa:url_axa
         },
         SOLIDARIA: {
-          cre_sol_id: cre_sol_id,
-          id_Intermediario: id_Intermediario,
           cre_sol_cod_sucursal: cre_sol_cod_sucursal,
           cre_sol_cod_per: cre_sol_cod_per,
           cre_sol_cod_tipo_agente: cre_sol_cod_tipo_agente,
