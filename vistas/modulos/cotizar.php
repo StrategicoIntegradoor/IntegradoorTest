@@ -101,8 +101,6 @@ $cre_sol_Cookie_token = $creSolidaria['cre_sol_Cookie_token'] ?? null;
 $cre_sol_token = $creSolidaria['cre_sol_token'] ?? null;
 $cre_sol_fecha_token = $creSolidaria['cre_sol_fecha_token'] ?? null;
 
-// Utiliza var_dump para imprimir la información sobre las variables
-var_dump($creSolidaria, $cre_sol_id, $id_Intermediario, $cre_sol_cod_sucursal, $cre_sol_cod_per, $cre_sol_cod_tipo_agente, $cre_sol_cod_agente, $cre_sol_cod_pto_vta, $cre_sol_grant_type, $cre_sol_Cookie_token, $cre_sol_token, $cre_sol_fecha_token);
 
 // FUNCION PARA OBTENER CREDENCIALES SOLIDARIA
 // Repite el proceso para las demás credenciales
