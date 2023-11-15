@@ -222,8 +222,26 @@ if ($_SESSION["permisos"]["Cotizarlivianos"] != "x") {
 }
 
 
-var_dump($_SESSION);
-die();
+if ($_SESSION["id_rol" ] == '19') {
+  echo '<script>
+      // Muestra el SweetAlert con un mensaje profesional
+      swal({
+          title: "Advertencia",
+          text: "Detectamos que estás accediendo a un ambiente incorrecto. Serás redirigido automáticamente al ambiente correcto.",
+          icon: "warning",
+          button: false,
+      });
+
+      // Espera 3 segundos (3000 milisegundos) y luego redirige
+      setTimeout(function() {
+          window.location.href = "https://integradoor.com/app/cotizar";
+      }, 3000);
+  </script>';
+  
+  // Detén la ejecución del script actual
+  return;
+}
+
 
 
 
