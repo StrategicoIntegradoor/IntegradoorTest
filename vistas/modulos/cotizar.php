@@ -222,7 +222,7 @@ if ($_SESSION["permisos"]["Cotizarlivianos"] != "x") {
 }
 
 
-if ($_SESSION["id_rol" ] == '19') {
+if ($_SESSION["id_rol"] == '19') {
   echo '<script>
       // Muestra el SweetAlert con un mensaje profesional
       swal({
