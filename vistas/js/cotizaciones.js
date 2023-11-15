@@ -322,6 +322,7 @@ $(document).ready(function () {
       } else {
 
         if( claseFasecolda == 4 ||
+          claseFasecolda == 12 ||
           claseFasecolda == 10 ||
           claseFasecolda == 14 ||
           claseFasecolda == 22 ||
