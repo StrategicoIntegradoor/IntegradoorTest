@@ -222,7 +222,8 @@ if ($_SESSION["permisos"]["Cotizarlivianos"] != "x") {
 }
 
 
-
+var_dump($_SESSION);
+die();
 
 
 
