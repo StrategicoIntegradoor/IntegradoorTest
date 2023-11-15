@@ -221,7 +221,7 @@ if ($_SESSION["permisos"]["Cotizarlivianos"] != "x") {
   return;
 }
 
-var_dump($_SESSION["id_rol"]);
+var_dump($_SESSION);
 die(); 
 if ($_SESSION["id_rol"] == '19') {
   echo '<script>
