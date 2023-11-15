@@ -854,15 +854,15 @@ if ($_SESSION['permisos']['id_rol'] == '19') {
           <input type="text" class="form-control" id="cre_zur_fecha_token" value="<?php echo $_SESSION["cre_zur_fecha_token"]; ?>">
 
           <!--SOLIDARIA-->
-          <input type="text" class="form-control" id="cre_sol_cod_sucursal" value="<?php echo $_SESSION["cre_sol_cod_sucursal"]; ?>">
-          <input type="text" class="form-control" id="cre_sol_cod_per" value="<?php echo $_SESSION["cre_sol_cod_per"]; ?>">
-          <input type="text" class="form-control" id="cre_sol_cod_tipo_agente" value="<?php echo $_SESSION["cre_sol_cod_tipo_agente"]; ?>">
-          <input type="text" class="form-control" id="cre_sol_cod_agente" value="<?php echo $_SESSION["cre_sol_cod_agente"]; ?>">
-          <input type="text" class="form-control" id="cre_sol_cod_pto_vta" value="<?php echo $_SESSION["cre_sol_cod_pto_vta"]; ?>">
-          <input type="text" class="form-control" id="cre_sol_grant_type" value="<?php echo $_SESSION["cre_sol_grant_type"]; ?>">
-          <input type="text" class="form-control" id="cre_sol_Cookie_token" value="<?php echo $_SESSION["cre_sol_Cookie_token"]; ?>">
-          <input type="text" class="form-control" id="cre_sol_token" value="<?php echo $_SESSION["cre_sol_token"]; ?>">
-          <input type="text" class="form-control" id="cre_sol_fecha_token" value="<?php echo $_SESSION["cre_sol_fecha_token"]; ?>">
+          <input type="text" class="form-control" id="cre_sol_cod_sucursal" value="<?php echo $cre_sol_cod_sucursal; ?>">
+          <input type="text" class="form-control" id="cre_sol_cod_per" value="<?php echo $cre_sol_cod_per; ?>">
+          <input type="text" class="form-control" id="cre_sol_cod_tipo_agente" value="<?php echo $cre_sol_cod_tipo_agente; ?>">
+          <input type="text" class="form-control" id="cre_sol_cod_agente" value="<?php echo $cre_sol_cod_agente; ?>">
+          <input type="text" class="form-control" id="cre_sol_cod_pto_vta" value="<?php echo $cre_sol_cod_pto_vta; ?>">
+          <input type="text" class="form-control" id="cre_sol_grant_type" value="<?php echo $cre_sol_grant_type; ?>">
+          <input type="text" class="form-control" id="cre_sol_Cookie_token" value="<?php echo $cre_sol_Cookie_token; ?>">
+          <input type="text" class="form-control" id="cre_sol_token" value="<?php echo $cre_sol_token; ?>">
+          <input type="text" class="form-control" id="cre_sol_fecha_token" value="<?php echo $cre_sol_fecha_token; ?>">
 
           <!--PREVISORA-->
           <input type="text" class="form-control" id="cre_pre_AgentCodeListCoin" value="<?php echo $_SESSION["cre_pre_AgentCodeListCoin"]; ?>">
