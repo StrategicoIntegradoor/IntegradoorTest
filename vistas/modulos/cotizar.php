@@ -221,7 +221,8 @@ if ($_SESSION["permisos"]["Cotizarlivianos"] != "x") {
   return;
 }
 
-
+var_dump($_SESSION["id_rol"]);
+die(); 
 if ($_SESSION["id_rol"] == '19') {
   echo '<script>
       // Muestra el SweetAlert con un mensaje profesional
