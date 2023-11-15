@@ -1492,7 +1492,7 @@ function cotizarOfertas() {
 
 
   /**
-   * Variables para allianz
+   * Variables para Allianz
    */
 
   var cre_alli_sslcertfile = document.getElementById("cre_alli_sslcertfile").value;
@@ -1519,6 +1519,33 @@ function cotizarOfertas() {
   var cre_axa_validacionEventos = document.getElementById("cre_axa_validacionEventos").value;
   var url_axa =document.getElementById("url_axa").value;
 
+  /**
+   * Variables de Solidaria
+   */
+  var cre_sol_cod_sucursal = document.getElementById("cre_sol_cod_sucursal").value;
+  var cre_sol_cod_per = document.getElementById("cre_sol_cod_per").value;
+  var cre_sol_cod_tipo_agente = document.getElementById("cre_sol_cod_tipo_agente").value;
+  var cre_sol_cod_agente = document.getElementById("cre_sol_cod_agente").value;
+  var cre_sol_cod_pto_vta = document.getElementById("cre_sol_cod_pto_vta").value;
+  var cre_sol_grant_type = document.getElementById("cre_sol_grant_type").value;
+  var cre_sol_Cookie_token = document.getElementById("cre_sol_Cookie_token").value;
+  var cre_sol_token = document.getElementById("cre_sol_token").value;
+  var cre_sol_fecha_token = document.getElementById("cre_sol_fecha_token").value;
+
+  console.log("Valores de las variables para Solidaria:");
+  console.log("cre_sol_id:", cre_sol_id);
+  console.log("id_Intermediario:", id_Intermediario);
+  console.log("cre_sol_cod_sucursal:", cre_sol_cod_sucursal);
+  console.log("cre_sol_cod_per:", cre_sol_cod_per);
+  console.log("cre_sol_cod_tipo_agente:", cre_sol_cod_tipo_agente);
+  console.log("cre_sol_cod_agente:", cre_sol_cod_agente);
+  console.log("cre_sol_cod_pto_vta:", cre_sol_cod_pto_vta);
+  console.log("cre_sol_grant_type:", cre_sol_grant_type);
+  console.log("cre_sol_Cookie_token:", cre_sol_Cookie_token);
+  console.log("cre_sol_token:", cre_sol_token);
+  console.log("cre_sol_fecha_token:", cre_sol_fecha_token);
+
+  
 
   if (ciudadCirculacion.length == 4) {
     ciudadCirculacion = "0" + ciudadCirculacion;
@@ -1620,6 +1647,19 @@ function cotizarOfertas() {
           cre_axa_validacionEventos: cre_axa_validacionEventos,
           url_axa:url_axa
         },
+        SOLIDARIA: {
+          cre_sol_id: cre_sol_id,
+          id_Intermediario: id_Intermediario,
+          cre_sol_cod_sucursal: cre_sol_cod_sucursal,
+          cre_sol_cod_per: cre_sol_cod_per,
+          cre_sol_cod_tipo_agente: cre_sol_cod_tipo_agente,
+          cre_sol_cod_agente: cre_sol_cod_agente,
+          cre_sol_cod_pto_vta: cre_sol_cod_pto_vta,
+          cre_sol_grant_type: cre_sol_grant_type,
+          cre_sol_Cookie_token: cre_sol_Cookie_token,
+          cre_sol_token: cre_sol_token,
+          cre_sol_fecha_token: cre_sol_fecha_token
+      },
 
       };
 
