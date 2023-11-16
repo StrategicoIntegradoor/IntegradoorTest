@@ -162,11 +162,11 @@
   padding: 3.5% 7%;
   max-width: 100%;  
   margin: 0 auto;
-  margin-top: 10px; 
+  margin-top: 12px; 
   /* min-height: 370px; */
   /* max-height: 370px;  */
   text-align: center; 
-  margin-bottom: 30px; 
+  margin-bottom: 10px; 
   display: flex; 
   flex-direction: column; 
   /* justify-content: center; */
