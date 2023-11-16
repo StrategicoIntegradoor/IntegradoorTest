@@ -392,7 +392,7 @@ select:invalid + .error-message {
                     <!-- <div class="col-md-4 col-sm-12 mb-3"> -->
                         <!-- TITULO FORMULARIO VIAJES -->
                         <h4 style="font-family: 'Arial Arabic', Arial; font-weight: bold; margin-bottom: 5px; margin-top: 3px;">Solicita una cotización en el siguiente formulario</h4>
-                        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdNXEYeuq8L5G15BQpGNKKt12cs7jzGvxYuqw2gdQaIH3qwGw/viewform?embedded=true" width="600" height="1200" frameborder="0" marginheight="0" marginwidth="0">Cargando…</iframe>
+                        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdNXEYeuq8L5G15BQpGNKKt12cs7jzGvxYuqw2gdQaIH3qwGw/viewform?embedded=true" width="100%; max-width: none;" height="1200" frameborder="0" marginheight="0" marginwidth="0">Cargando…</iframe>
                 </div>
             <!-- </div> -->
 
