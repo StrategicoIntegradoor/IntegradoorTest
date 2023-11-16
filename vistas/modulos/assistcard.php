@@ -155,7 +155,7 @@
 }
 
 .card-exequias {
-  flex: 0 1 48%; /* Ajusta el porcentaje según tus necesidades */
+  flex: 0 1 calc(48% - 10px); /* 48% es solo un ejemplo, ajusta según tus necesidades */
   border-radius: 20px;
   background-color: white;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
@@ -231,7 +231,7 @@ select:invalid + .error-message {
 .card-container {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  /* justify-content: space-between; */
 }
 
 .card-exequias .card-title{
