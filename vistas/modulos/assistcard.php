@@ -175,20 +175,23 @@
 }
 
 .card-exequias-logo {
+  flex: 0 1 calc(15% - 0px); /* 48% es solo un ejemplo, ajusta según tus necesidades */
   border-radius: 20px;
   background-color: white;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
-  padding: 9px;
-  max-width: 85%;  
+  box-shadow: 0 0 0px rgba(0, 0, 0, 0.3);
+  /* padding: 3.5% 7%; */
+  padding: 10px 30px;
+  max-width: 100%;  
   margin: 0 auto;
+  margin-top: 12px; 
   /* min-height: 370px; */
-  /* max-height: 370px;   */
-  border-radius: 20px;
+  /* max-height: 370px;  */
   text-align: center; 
-  margin-bottom: 10px; 
+  margin-bottom: 12px; 
   display: flex; 
   flex-direction: column; 
-  justify-content: center;
+  /* justify-content: center; */
+  align-items: center;
 }
 
 
@@ -296,7 +299,7 @@ select:invalid + .error-message {
                     <!-- //LOGO Y DESCRIPCIÓN// -->
                         <!-- Primera tarjeta con el logo -->
                         <div class="col-md-4 col-sm-12 mb-3">
-                            <div class="card-exequias special-card">
+                            <div class="card-exequias-logo special-card">
                                 <div class="card-body">
                                     <img src="vistas/img/plantilla/logo_assistcard.jpg" class="img-fluid mx-auto" style="max-width: 100%;">
                                 </div>
