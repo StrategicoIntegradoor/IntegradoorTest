@@ -394,13 +394,18 @@ select:invalid + .error-message {
             <br>
             <div class="row">
                 <div class="col-md-4 col-sm-12 mb-3">
-                    <!-- <div class="content"> -->
-                        <!-- TITULO GENERADOR DE PDF -->
-                        <h4 style="font-family: 'Arial Arabic', Arial; font-weight: bold; margin-bottom: 3px; margin-top: 3px;">Solicita una cotización en el siguiente formulario</h4>
-                    <!-- </div> -->
+                    <div class="card-exequias">
+                        <div class="card-body">
+                            <!-- TITULO GENERADOR DE PDF -->
+                            <h4 style="font-family: 'Arial Arabic', Arial; font-weight: bold; margin-bottom: 3px; margin-top: 3px; text-align: left;">Solicita una cotización en el siguiente formulario</h4>
+                        </div>
+                    </div>
                 </div>
-                <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdNXEYeuq8L5G15BQpGNKKt12cs7jzGvxYuqw2gdQaIH3qwGw/viewform?embedded=true" width="100%" height="2219" frameborder="0" marginheight="0" marginwidth="0">Cargando…</iframe>
+                <div class="col-md-8 col-sm-12 mb-3">
+                    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdNXEYeuq8L5G15BQpGNKKt12cs7jzGvxYuqw2gdQaIH3qwGw/viewform?embedded=true" width="100%" height="2219" frameborder="0" marginheight="0" marginwidth="0">Cargando…</iframe>
+                </div>
             </div>
+
         </div>           
     </section>
 </div>
