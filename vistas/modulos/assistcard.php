@@ -162,7 +162,7 @@
   padding: 3.5% 7%;
   max-width: 100%;  
   margin: 0 auto;
-  margin-top: 50px; 
+  margin-top: 10px; 
   /* min-height: 370px; */
   /* max-height: 370px;  */
   text-align: center; 
