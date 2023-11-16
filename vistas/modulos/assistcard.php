@@ -402,31 +402,38 @@ select:invalid + .error-message {
 </div>
 
 <script>
-$(document).ready(function() {
+console.log("Script de ajuste de alturas en ejecución.");
+
+document.addEventListener("DOMContentLoaded", function() {
   function ajustarAlturaTarjetas() {
-    var filas = $('.card-container .row');
+    var filas = document.querySelectorAll('.card-container .row');
     
-    filas.each(function() {
-      var tarjetas = $(this).find('.card-exequias');
+    filas.forEach(function(fila) {
+      var tarjetas = fila.querySelectorAll('.card-exequias');
       var alturaMaxima = 0;
 
-      tarjetas.each(function() {
-        $(this).css('height', 'auto'); // Restablecer la altura a 'auto' antes de medir
-        var altura = $(this).height();
+      tarjetas.forEach(function(tarjeta) {
+        tarjeta.style.height = 'auto'; // Restablecer la altura a 'auto' antes de medir
+        var altura = tarjeta.offsetHeight;
 
         if (altura > alturaMaxima) {
           alturaMaxima = altura;
         }
       });
 
-      tarjetas.css('height', alturaMaxima + 'px');
+      tarjetas.forEach(function(tarjeta) {
+        tarjeta.style.height = alturaMaxima + 'px';
+      });
     });
+
+    console.log("Alturas ajustadas correctamente.");
   }
 
   // Llamada inicial y en redimensionamiento de la ventana
   ajustarAlturaTarjetas();
-  $(window).resize(ajustarAlturaTarjetas);
+  window.addEventListener('resize', ajustarAlturaTarjetas);
 });
 </script>
+
 
 
