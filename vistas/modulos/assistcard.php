@@ -402,7 +402,6 @@ select:invalid + .error-message {
 </div>
 
 <script>
-console.log("Script de ajuste de alturas en ejecución.");
 
 document.addEventListener("DOMContentLoaded", function() {
   function ajustarAlturaTarjetas() {
@@ -411,7 +410,7 @@ document.addEventListener("DOMContentLoaded", function() {
     filas.forEach(function(fila) {
       var tarjetas = fila.querySelectorAll('.card-exequias');
       var alturaMaxima = 0;
-
+      console.log(filas, tarjetas)
       tarjetas.forEach(function(tarjeta) {
         tarjeta.style.height = 'auto'; // Restablecer la altura a 'auto' antes de medir
         var altura = tarjeta.offsetHeight;
