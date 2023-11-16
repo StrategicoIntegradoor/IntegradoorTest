@@ -405,14 +405,14 @@ select:invalid + .error-message {
 
 document.addEventListener("DOMContentLoaded", function() {
   function ajustarAlturaTarjetas() {
-    var filas = document.querySelectorAll('.card-container .row');
-    console.log(filas)
-
+    var filas = document.querySelectorAll('.row.card-container'); // Modificado el selector
+    
     filas.forEach(function(fila) {
       var tarjetas = fila.querySelectorAll('.card-exequias');
-
+      console.log(filas, tarjetas); // Agrega este console.log para depuración
 
       var alturaMaxima = 0;
+
       tarjetas.forEach(function(tarjeta) {
         tarjeta.style.height = 'auto'; // Restablecer la altura a 'auto' antes de medir
         var altura = tarjeta.offsetHeight;
@@ -426,7 +426,7 @@ document.addEventListener("DOMContentLoaded", function() {
         tarjeta.style.height = alturaMaxima + 'px';
       });
     });
-
+    
     console.log("Alturas ajustadas correctamente.");
   }
 
