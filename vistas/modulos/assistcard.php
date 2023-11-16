@@ -342,7 +342,7 @@ select:invalid + .error-message {
                             <div class="card-exequias">
                                 <div class="card-body">
                                     <h4 class="card-title" style="font-weight: bold;">¿Cuales son sus principales coberturas?</h4>
-                                    <ul class="card-text" style="list-style-type: disc;">
+                                    <ul class="card-text" style="padding-left: 0px; list-style-position: inside;">
                                         <li>Asistencia médica en caso de enfermedad (preexistente o no preexistente)</li>
                                         <li>Atención con especialistas </li>
                                         <li>Medicamentos ambulatorios</li>
