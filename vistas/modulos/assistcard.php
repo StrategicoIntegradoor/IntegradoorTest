@@ -327,13 +327,13 @@ select:invalid + .error-message {
                                 </div>
                             </div>
                         </div>
-                </div>
+                <!-- </div> -->
                 <!-- </div> -->
 
 
                 <!-- //INFORMACION SEGUNDA FILA -->
                 <!-- <div class="row card-container"> -->
-                <div class="content">
+                <!-- <div class="content"> -->
                     <!-- <div class="content-header">
                         <h4 style="font-family: 'Arial Arabic', Arial; text-align: left; font-weight: bold; margin-bottom: -12px; margin-top: -8px;">Adicionales Opcionales</h4>
                         <HR>
