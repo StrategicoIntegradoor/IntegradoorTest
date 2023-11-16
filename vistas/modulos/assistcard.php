@@ -280,7 +280,7 @@ select:invalid + .error-message {
 
             <li><a href="inicio"><i class="fa fa-dashboard"></i> Inicio</a></li>
 
-            <li class="active">Exequias</li>
+            <li class="active">Viajes</li>
 
         </ol>
 
