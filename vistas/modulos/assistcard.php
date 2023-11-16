@@ -291,50 +291,18 @@ select:invalid + .error-message {
                 <!-- TITULO PLANES -->
                 <div class="content justify-content-center">
                     
-
-                <div class="row justify-content-between">
-                    <!-- Primera tarjeta a la izquierda -->
-                    <div class="col-md-3 col-sm-12 mb-3">
-                        <div class="card-exequias-logo">
-                            <div class="card-body text-center">
-                                <img src="vistas/img/plantilla/logo_assistcard.jpg" class="img-fluid" style="max-width: 100%;">
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Segunda tarjeta centrada -->
-                    <div class="col-md-3 col-sm-12 mb-3">
-                        <div class="card-exequias">
-                            <div class="card-body">
-                                <h4 class="card-title" style="font-weight: bold;">¿Qué es una Asistencia en Viajes?</h4>
-                                <!-- Resto del contenido de la tarjeta -->
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Tercera tarjeta a la derecha -->
-                    <div class="col-md-3 col-sm-12 mb-3">
-                        <div class="card-exequias">
-                            <div class="card-body">
-                                <h4 class="card-title" style="font-weight: bold;">Sobre Assist Card</h4>
-                                <!-- Resto del contenido de la tarjeta -->
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
                     <!-- //LOGO Y DESCRIPCIÓN// -->
                         <!-- Primera tarjeta con el logo -->
-                        <!-- <div class="col-md-3 col-sm-12 mb-3">
+                        <div class="col-md-3 col-sm-12 mb-3">
                                 <div class="card-exequias-logo">
                                     <div class="card-body text-center">
                                         <img src="vistas/img/plantilla/logo_assistcard.jpg" class="img-fluid" style="max-width: 100%;">
                                     </div>
                                 </div>
-                        </div> -->
+                        </div>
 
                         <!-- Segunda tarjeta con título y párrafo -->
-                        <!-- <div class="col-md-3 col-sm-12 mb-3">
+                        <div class="col-md-3 col-sm-12 mb-3">
                             <div class="card-exequias">
                                 <div class="card-body">
                                     <h4 class="card-title" style="font-weight: bold;">¿Qué es una Asistencia en Viajes?</h4>
@@ -344,10 +312,10 @@ select:invalid + .error-message {
                                     <p class="card-text">Con una asistencia de viaje, el pasajero cuenta con coberturas y montos de dinero específicos en caso de que le ocurra una emergencia estando en el exterior.</p>
                                 </div>
                             </div>
-                        </div> -->
+                        </div>
 
                         <!-- Tercera tarjeta con título y párrafo -->
-                        <!-- <div class="col-md-3 col-sm-12 mb-3">
+                        <div class="col-md-3 col-sm-12 mb-3">
                             <div class="card-exequias">
                                 <div class="card-body">
                                     <h4 class="card-title" style="font-weight: bold;">Sobre Assist Card</h4>
@@ -358,7 +326,7 @@ select:invalid + .error-message {
                                     <p class="card-text">Para conocer más sobre Assist Card, ingresa <a href="https://Grupoasistencia.com/pdfViajes/assistCard.pdf" target="_blank">AQUI</a></p>
                                 </div>
                             </div>
-                        </div> -->
+                        </div>
                 </div>
             </div>
 
