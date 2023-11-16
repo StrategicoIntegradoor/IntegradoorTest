@@ -2064,7 +2064,7 @@ function cotizarOfertas() {
 
             /* Allianz */
             cont.push(
-              fetch("https://grupoasistencia.com/motor_webservice_tst/Allianz", requestOptions)
+              fetch("https://grupoasistencia.com/motor_webservice/Allianz", requestOptions)
                 .then((res) => {
                   if (!res.ok) throw Error(res.statusText);
                   return res.json();
