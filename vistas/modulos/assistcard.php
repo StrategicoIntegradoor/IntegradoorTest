@@ -155,7 +155,7 @@
 }
 
 .card-exequias {
-  flex: 0 1 calc(30% - 5px); /* 48% es solo un ejemplo, ajusta según tus necesidades */
+  flex: 0 1 calc(30% - 0px); /* 48% es solo un ejemplo, ajusta según tus necesidades */
   border-radius: 20px;
   background-color: white;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
