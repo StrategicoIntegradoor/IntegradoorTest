@@ -406,11 +406,11 @@ select:invalid + .error-message {
 document.addEventListener("DOMContentLoaded", function() {
   function ajustarAlturaTarjetas() {
     var filas = document.querySelectorAll('.card-container .row');
-    
+    console.log(filas)
+
     filas.forEach(function(fila) {
       var tarjetas = fila.querySelectorAll('.card-exequias');
 
-      console.log(filas, tarjetas)
 
       var alturaMaxima = 0;
       tarjetas.forEach(function(tarjeta) {
