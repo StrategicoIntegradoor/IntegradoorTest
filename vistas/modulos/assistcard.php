@@ -344,7 +344,7 @@ select:invalid + .error-message {
                             <div class="card-exequias">
                                 <div class="card-body">
                                     <h4 class="card-title" style="font-weight: bold;">¿Cuales son sus principales coberturas?</h4>
-                                    <ul class="card-text" style="list-style-type: disc; padding-left: 20px;">
+                                    <ul class="card-text" style="list-style-type: disc;">
                                         <li>Asistencia médica en caso de enfermedad (preexistente o no preexistente)</li>
                                         <li>Atención con especialistas </li>
                                         <li>Medicamentos ambulatorios</li>
@@ -363,7 +363,7 @@ select:invalid + .error-message {
                                 <div class="card-body">
                                     <h4 class="card-title" style="font-weight: bold;">¿Qué datos se requieren para cotizar?</h4>
                                     <p class="card-text">Este producto esta diseñado para todas las edades y necesidades. Para cotizarlo se requiere la siguiente información:</p>
-                                    <ul class="card-text" style="list-style-type: disc; padding-left: 20px;">
+                                    <ul class="card-text" style="list-style-type: disc;">
                                         <li>Nombre Completo</li>
                                         <li>Fecha de Nacimiento</li>
                                         <li>Motivo del viaje</li>
