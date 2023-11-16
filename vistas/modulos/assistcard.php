@@ -179,8 +179,8 @@
   padding: 9px;
   max-width: 85%;  
   margin: 0 auto;  
-  min-height: 370px;
-  max-height: 370px;  
+  /* min-height: 370px; */
+  /* max-height: 370px;   */
   border-radius: 20px;
   text-align: center; 
   margin-bottom: 10px; 
@@ -294,7 +294,7 @@ select:invalid + .error-message {
                     <!-- //LOGO Y DESCRIPCIÓN// -->
                         <!-- Primera tarjeta con el logo -->
                         <div class="col-md-4 col-sm-12 mb-3 justify-content-center">
-                            <div class="card-exequias">
+                            <div class="card-exequias-logo">
                                 <div class="card-body text-center">
                                     <img src="vistas/img/plantilla/logo_assistcard.jpg" class="img-fluid" style="max-width: 100%;">
                                 </div>
