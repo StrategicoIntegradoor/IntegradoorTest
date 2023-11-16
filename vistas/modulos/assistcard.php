@@ -287,13 +287,13 @@ select:invalid + .error-message {
     </section>
     <section class="content">
         <div class="box">
-            <div class="row justify-content-center">
+            <div class="row">
                 <!-- TITULO PLANES -->
-                <div class="content justify-content-center">
+                <div class="content">
                     
                     <!-- //LOGO Y DESCRIPCIÓN// -->
                         <!-- Primera tarjeta con el logo -->
-                        <div class="col-md-4 col-sm-12 mb-3">
+                        <div class="col-md-4 col-sm-12 mb-3 justify-content-center">
                                 <div class="card-exequias-logo">
                                     <div class="card-body text-center">
                                         <img src="vistas/img/plantilla/logo_assistcard.jpg" class="img-fluid" style="max-width: 100%;">
@@ -302,7 +302,7 @@ select:invalid + .error-message {
                         </div>
 
                         <!-- Segunda tarjeta con título y párrafo -->
-                        <div class="col-md-4 col-sm-12 mb-3">
+                        <div class="col-md-4 col-sm-12 mb-3 justify-content-center">
                             <div class="card-exequias">
                                 <div class="card-body">
                                     <h4 class="card-title" style="font-weight: bold;">¿Qué es una Asistencia en Viajes?</h4>
@@ -315,7 +315,7 @@ select:invalid + .error-message {
                         </div>
 
                         <!-- Tercera tarjeta con título y párrafo -->
-                        <div class="col-md-4 col-sm-12 mb-3">
+                        <div class="col-md-4 col-sm-12 mb-3 justify-content-center">
                             <div class="card-exequias">
                                 <div class="card-body">
                                     <h4 class="card-title" style="font-weight: bold;">Sobre Assist Card</h4>
