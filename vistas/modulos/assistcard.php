@@ -155,6 +155,7 @@
 }
 
 .card-exequias {
+  flex: 0 1 48%; /* Ajusta el porcentaje según tus necesidades */
   border-radius: 20px;
   background-color: white;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
@@ -162,7 +163,7 @@
   max-width: 85%;  
   margin: 0 auto;  
   min-height: 370px;
-  max-height: 370px; 
+  /* max-height: 370px;  */
   text-align: center; 
   margin-bottom: 10px; 
   display: flex; 
@@ -228,10 +229,9 @@ select:invalid + .error-message {
 }
 
 .card-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    height: 100%
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 
 .card-exequias .card-title{
@@ -287,7 +287,7 @@ select:invalid + .error-message {
     </section>
     <section class="content">
         <div class="box">
-            <div class="row">
+            <div class="row card-container">
                 <!-- TITULO PLANES -->
                 <div class="content">
                     
