@@ -250,6 +250,11 @@ select:invalid + .error-message {
     margin-bottom: 14px;
 }
 
+/* Estilo para la card especial sin sombra en el borde */
+.special-card {
+  box-shadow: none; /* Esto elimina la sombra */
+}
+
 /* .card-exequias .card-text {
     margin: 0 auto;  
   min-height: 100px;
