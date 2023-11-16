@@ -159,7 +159,7 @@
   background-color: white;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
   padding: 9%;
-  /* max-width: 100%;   */
+  max-width: 70%;  
   /* margin: 0 auto;   */
   min-height: 350px;
   max-height: 350px; 
@@ -176,7 +176,7 @@
   background-color: white;
   box-shadow: 0 0 0px rgba(0, 0, 0, 0.3);
   padding: 10px;
-  /* max-width: 100%;   */
+  max-width: 70%;  
   margin: 0 auto;  
   min-height: 350px;
   max-height: 350px;  
