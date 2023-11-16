@@ -424,7 +424,10 @@ document.addEventListener("DOMContentLoaded", function() {
 
       tarjetas.forEach(function(tarjeta) {
         tarjeta.style.height = alturaMaxima + 'px';
-        tarjeta.classList.add('align-self-center'); // Agregar la clase align-self-center
+        tarjeta.style.display = 'flex'; // Asegúrate de que la tarjeta use flexbox
+        tarjeta.style.flexDirection = 'column'; // Ajusta la dirección del eje principal a columna
+        tarjeta.style.alignItems = 'center'; // Centra verticalmente los elementos hijos
+        tarjeta.style.justifyContent = 'center'; // Centra horizontalmente los elementos hijos
       });
     });
     
