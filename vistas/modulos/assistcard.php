@@ -401,5 +401,32 @@ select:invalid + .error-message {
     </section>
 </div>
 
+<script>
+$(document).ready(function() {
+  function ajustarAlturaTarjetas() {
+    var filas = $('.card-container .row');
+    
+    filas.each(function() {
+      var tarjetas = $(this).find('.card-exequias');
+      var alturaMaxima = 0;
+
+      tarjetas.each(function() {
+        $(this).css('height', 'auto'); // Restablecer la altura a 'auto' antes de medir
+        var altura = $(this).height();
+
+        if (altura > alturaMaxima) {
+          alturaMaxima = altura;
+        }
+      });
+
+      tarjetas.css('height', alturaMaxima + 'px');
+    });
+  }
+
+  // Llamada inicial y en redimensionamiento de la ventana
+  ajustarAlturaTarjetas();
+  $(window).resize(ajustarAlturaTarjetas);
+});
+</script>
 
 
