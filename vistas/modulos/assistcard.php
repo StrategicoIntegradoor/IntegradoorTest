@@ -159,7 +159,7 @@
   border-radius: 20px;
   background-color: white;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
-  padding: 9%;
+  padding: 8%;
   max-width: 90%;  
   margin: 0 auto;  
   /* min-height: 370px; */
