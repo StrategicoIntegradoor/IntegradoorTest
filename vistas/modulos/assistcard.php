@@ -399,7 +399,7 @@ select:invalid + .error-message {
 
             <!-- //GENERADOR DE PDF -->
             <br>
-            <div class="content" style="margin-bottom: 0px;">
+            <div class="content" style="margin-bottom: 40px;">
                 <!-- TITULO GENERADOR DE PDF -->
                 <h4 style="font-family: 'Arial Arabic', Arial; text-align: left; font-weight: bold; margin-bottom: -12px; margin-top: -3px;">Solicita una cotización en el siguiente formulario</h4>
                 <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdNXEYeuq8L5G15BQpGNKKt12cs7jzGvxYuqw2gdQaIH3qwGw/viewform?embedded=true" width="640" height="2219" frameborder="0" marginheight="0" marginwidth="0">Cargando…</iframe>
