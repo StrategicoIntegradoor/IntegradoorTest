@@ -238,7 +238,6 @@ select:invalid + .error-message {
 
     font-size: 24px;
     margin-bottom: 5%;
-    margin-top: 10px;
 }
 
 .card-exequias .card-text {
@@ -295,7 +294,7 @@ select:invalid + .error-message {
                     <!-- //LOGO Y DESCRIPCIÓN// -->
                         <!-- Primera tarjeta con el logo -->
                         <div class="col-md-4 col-sm-12 mb-3">
-                            <div class="card-exequias">
+                            <div class="card-exequias special-card">
                                 <div class="card-body">
                                     <img src="vistas/img/plantilla/logo_assistcard.jpg" class="img-fluid mx-auto" style="max-width: 100%;">
                                 </div>
@@ -425,10 +424,14 @@ document.addEventListener("DOMContentLoaded", function() {
 
       tarjetas.forEach(function(tarjeta) {
         tarjeta.style.height = alturaMaxima + 'px';
-        tarjeta.style.display = 'flex'; // Asegúrate de que la tarjeta use flexbox
-        tarjeta.style.flexDirection = 'column'; // Ajusta la dirección del eje principal a columna
-        tarjeta.style.alignItems = 'center'; // Centra verticalmente los elementos hijos
-        tarjeta.style.justifyContent = 'center'; // Centra horizontalmente los elementos hijos
+
+        if (tarjeta.classList.contains('special-card')) {
+        tarjeta.style.display = 'flex'; 
+        tarjeta.style.flexDirection = 'column';
+        tarjeta.style.alignItems = 'center'; 
+        tarjeta.style.justifyContent = 'center'; 
+        }
+
       });
     });
     
