@@ -287,9 +287,9 @@ select:invalid + .error-message {
     </section>
     <section class="content">
         <div class="box">
-            <div class="row">
+            <div class="row justify-content-center">
                 <!-- TITULO PLANES -->
-                <div class="content">
+                <div class="content justify-content-center">
                     
                     <!-- //LOGO Y DESCRIPCIÓN// -->
                         <!-- Primera tarjeta con el logo -->
