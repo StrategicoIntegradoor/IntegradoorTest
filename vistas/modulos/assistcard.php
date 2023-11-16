@@ -160,7 +160,7 @@
   background-color: white;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
   /* padding: 3.5% 7%; */
-  padding: 10px 20px;
+  padding: 10px 30px;
   max-width: 100%;  
   margin: 0 auto;
   margin-top: 12px; 
