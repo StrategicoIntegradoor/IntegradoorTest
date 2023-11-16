@@ -392,14 +392,14 @@ select:invalid + .error-message {
 
             <!-- //GENERADOR DE PDF -->
             <br>
-            <div class="row">
+            <!-- <div class="row"> -->
                 <div class="content">
                     <!-- <div class="col-md-4 col-sm-12 mb-3"> -->
                         <!-- TITULO GENERADOR DE PDF -->
                         <h4 style="font-family: 'Arial Arabic', Arial; font-weight: bold; margin-bottom: 3px; margin-top: 3px; margin-left: 3.33333%;">Solicita una cotización en el siguiente formulario</h4>
                         <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdNXEYeuq8L5G15BQpGNKKt12cs7jzGvxYuqw2gdQaIH3qwGw/viewform?embedded=true" width="100%" height="500" frameborder="0" marginheight="0" marginwidth="0">Cargando…</iframe>
                 </div>
-            </div>
+            <!-- </div> -->
 
         </div>           
     </section>
