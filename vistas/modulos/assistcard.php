@@ -395,7 +395,7 @@ select:invalid + .error-message {
             <div class="row">
                 <div class="col-md-12 mb-3">
                     <!-- TITULO GENERADOR DE PDF -->
-                    <h4 style="font-family: 'Arial Arabic', Arial; font-weight: bold; margin-bottom: 3px; margin-top: 3px; text-align: left;">Solicita una cotización en el siguiente formulario</h4>
+                    <h4 style="font-family: 'Arial Arabic', Arial; font-weight: bold; margin-bottom: 3px; margin-top: 3px; margin-left: 7.5%;">Solicita una cotización en el siguiente formulario</h4>
                 </div>
             </div>
 
