@@ -290,21 +290,15 @@ select:invalid + .error-message {
             <div class="row">
                 <!-- TITULO PLANES -->
                 <div class="content">
-                    <!-- <div class="content-header">
-                        <h4 style="font-family: 'Arial Arabic', Arial; text-align: left; font-weight: bold; margin-bottom: -13px; margin-top: -15px;">Planes</h4>
-                        <hr>
-                    </div> -->
+                    
                     <!-- //LOGO Y DESCRIPCIÓN// -->
-                    <!-- <div class="row"> -->
                         <!-- Primera tarjeta con el logo -->
                         <div class="col-md-3 col-sm-12 mb-3">
-                            <!-- <div class="rounded-container"> -->
                                 <div class="card-exequias-logo">
                                     <div class="card-body text-center">
                                         <img src="vistas/img/plantilla/logo_assistcard.jpg" class="img-fluid" style="max-width: 100%;">
                                     </div>
                                 </div>
-                            <!-- </div> -->
                         </div>
 
                         <!-- Segunda tarjeta con título y párrafo -->
@@ -333,7 +327,6 @@ select:invalid + .error-message {
                                 </div>
                             </div>
                         </div>
-                    <!-- </div> -->
                 </div>
             </div>
 
