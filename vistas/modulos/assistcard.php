@@ -161,7 +161,8 @@
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
   padding: 3.5% 7%;
   max-width: 100%;  
-  margin: 0 auto;  
+  margin: 0 auto;
+  margin-top: 50px; 
   /* min-height: 370px; */
   /* max-height: 370px;  */
   text-align: center; 
@@ -179,7 +180,6 @@
   padding: 9px;
   max-width: 85%;  
   margin: 0 auto;
-  margin-top: 10px;
   /* min-height: 370px; */
   /* max-height: 370px;   */
   border-radius: 20px;
