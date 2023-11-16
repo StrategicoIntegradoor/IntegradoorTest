@@ -393,8 +393,7 @@ select:invalid + .error-message {
                 <div class="content" style="margin-top: -5px; margin-bottom: 5px">
                         <!-- TITULO FORMULARIO VIAJES -->
                     <h4 style="font-family: 'Arial Arabic', Arial; font-weight: bold; margin-bottom: 5px; margin-top: 3px;">Solicita una cotización en el siguiente formulario</h4>
-                    <div style="background-image: url('vistas/img/plantilla/logo_assistcard.jpg'); height: 200px; width: 350px; background-size: cover; background-position: center;"></div>
-                    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdNXEYeuq8L5G15BQpGNKKt12cs7jzGvxYuqw2gdQaIH3qwGw/viewform?embedded=true" width="100%; max-width: none;" height="1200" frameborder="0" marginheight="0" marginwidth="0">Cargando…</iframe>
+                    <div style="background-image: url('vistas/img/plantilla/logo_assistcard.jpg'); height: 200px; width: 350px; background-size: cover; background-position: center;">                    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdNXEYeuq8L5G15BQpGNKKt12cs7jzGvxYuqw2gdQaIH3qwGw/viewform?embedded=true" width="100%; max-width: none;" height="1200" frameborder="0" marginheight="0" marginwidth="0">Cargando…</iframe></div>
                 </div>
 
         </div>           
