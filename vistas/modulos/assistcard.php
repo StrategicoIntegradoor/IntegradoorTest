@@ -294,9 +294,9 @@ select:invalid + .error-message {
                     <!-- //LOGO Y DESCRIPCIÓN// -->
                         <!-- Primera tarjeta con el logo -->
                         <div class="col-md-4 col-sm-12 mb-3">
-                            <div class="card-exequias justify-content-center">
-                                <div class="card-body text-center d-flex align-items-center">
-                                    <img src="vistas/img/plantilla/logo_assistcard.jpg" class="img-fluid mx-auto" style="max-width: 100%;">
+                            <div class="card-exequias d-flex justify-content-center align-items-center">
+                                <div class="card-body text-center">
+                                    <img src="vistas/img/plantilla/logo_assistcard.jpg" class="img-fluid mx-auto h-100" style="max-width: 100%;">
                                 </div>
                             </div>
                         </div>
