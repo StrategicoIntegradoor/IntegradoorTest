@@ -166,7 +166,7 @@
   /* min-height: 370px; */
   /* max-height: 370px;  */
   text-align: center; 
-  margin-bottom: 10px; 
+  margin-bottom: 12px; 
   display: flex; 
   flex-direction: column; 
   /* justify-content: center; */
