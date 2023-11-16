@@ -409,8 +409,10 @@ document.addEventListener("DOMContentLoaded", function() {
     
     filas.forEach(function(fila) {
       var tarjetas = fila.querySelectorAll('.card-exequias');
-      var alturaMaxima = 0;
+
       console.log(filas, tarjetas)
+
+      var alturaMaxima = 0;
       tarjetas.forEach(function(tarjeta) {
         tarjeta.style.height = 'auto'; // Restablecer la altura a 'auto' antes de medir
         var altura = tarjeta.offsetHeight;
