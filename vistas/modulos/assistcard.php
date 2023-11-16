@@ -331,7 +331,7 @@ select:invalid + .error-message {
             </div>
 
 
-            <!-- //PLANES ADICIONALES -->
+            <!-- //INFORMACION SEGUNDA FILA -->
             <div class="row card-container">
                 <div class="content">
                     <!-- <div class="content-header">
@@ -378,7 +378,7 @@ select:invalid + .error-message {
                         <!-- sexta tarjeta con título y párrafo -->
                         <div class="col-md-4 col-sm-12 mb-3">
                             <div class="card-exequias">
-                                <div class="card-body  text-center">
+                                <div class="card-body text-center">
                                     <h4 class="card-title" style="font-weight: bold;">Comisión</h4>
                                     <br>
                                     <br>
