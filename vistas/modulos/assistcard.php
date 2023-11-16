@@ -390,7 +390,7 @@ select:invalid + .error-message {
 
             <!-- //FORMULARIO VIAJES -->
             <!-- <div class="row"> -->
-                <div class="content" style="margin-top: -5px;">
+                <div class="content" style="margin-top: -5px; margin-bottom: 5px">
                     <!-- <div class="col-md-4 col-sm-12 mb-3"> -->
                         <!-- TITULO FORMULARIO VIAJES -->
                         <h4 style="font-family: 'Arial Arabic', Arial; font-weight: bold; margin-bottom: 5px; margin-top: 3px;">Solicita una cotización en el siguiente formulario</h4>
