@@ -424,6 +424,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
       tarjetas.forEach(function(tarjeta) {
         tarjeta.style.height = alturaMaxima + 'px';
+        tarjeta.classList.add('align-self-center'); // Agregar la clase align-self-center
       });
     });
     
