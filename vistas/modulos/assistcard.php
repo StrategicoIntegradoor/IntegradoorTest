@@ -160,7 +160,7 @@
   background-color: white;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
   padding: 9%;
-  max-width: 85%;  
+  max-width: 90%;  
   margin: 0 auto;  
   /* min-height: 370px; */
   /* max-height: 370px;  */
@@ -242,7 +242,7 @@ select:invalid + .error-message {
 
 .card-exequias .card-text {
     font-size: 13px;
-    margin-bottom: 0px;
+    margin-bottom: 3px;
 }
 
 /* .card-exequias .card-text {
