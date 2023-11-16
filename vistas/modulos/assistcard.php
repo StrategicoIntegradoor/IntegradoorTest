@@ -294,11 +294,11 @@ select:invalid + .error-message {
                     <!-- //LOGO Y DESCRIPCIÓN// -->
                         <!-- Primera tarjeta con el logo -->
                         <div class="col-md-4 col-sm-12 mb-3 justify-content-center">
-                                <div class="card-exequias-logo">
-                                    <div class="card-body text-center">
-                                        <img src="vistas/img/plantilla/logo_assistcard.jpg" class="img-fluid" style="max-width: 100%;">
-                                    </div>
+                            <div class="card-exequias-logo">
+                                <div class="card-body text-center">
+                                    <img src="vistas/img/plantilla/logo_assistcard.jpg" class="img-fluid" style="max-width: 100%;">
                                 </div>
+                            </div>
                         </div>
 
                         <!-- Segunda tarjeta con título y párrafo -->
