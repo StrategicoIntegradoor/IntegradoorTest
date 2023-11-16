@@ -304,7 +304,7 @@ select:invalid + .error-message {
                         <!-- Segunda tarjeta con título y párrafo -->
                         <div class="col-md-4 col-sm-12 mb-3 justify-content-center">
                             <div class="card-exequias">
-                                <div class="card-body">
+                                <div class="card-body text-center">
                                     <h4 class="card-title" style="font-weight: bold;">¿Qué es una Asistencia en Viajes?</h4>
                                     <br>
                                     <p class="card-text">Conjunto de servicios ofrecidos que cubren los eventos penosos que se pueda incurrir durante un viaje en el extranjero, como gastos médicos, asistencia legal, cancelaciones de vuelos, perdidas de equipaje, muerte, entre otros.</p>
@@ -317,7 +317,7 @@ select:invalid + .error-message {
                         <!-- Tercera tarjeta con título y párrafo -->
                         <div class="col-md-4 col-sm-12 mb-3 justify-content-center">
                             <div class="card-exequias">
-                                <div class="card-body">
+                                <div class="card-body text-center">
                                     <h4 class="card-title" style="font-weight: bold;">Sobre Assist Card</h4>
                                     <br>
                                     <br>
