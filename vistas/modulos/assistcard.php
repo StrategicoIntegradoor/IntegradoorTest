@@ -369,8 +369,8 @@ select:invalid + .error-message {
                                     <h4 class="card-title" style="font-weight: bold;">¿Qué datos se requieren para cotizar?</h4>
                                     <p class="card-text">Este producto esta diseñado para todas las edades y necesidades. Para cotizarlo se requiere la siguiente información:</p>
                                     <ul class="card-text" style="padding-left: 0px; list-style-position: inside;">
-                                        <li>Nombre Completo</li>
-                                        <li>Fecha de Nacimiento</li>
+                                        <li>Nombre completo</li>
+                                        <li>Fecha de nacimiento</li>
                                         <li>Motivo del viaje</li>
                                         <li>País de origen y destino</li>
                                         <li>Fecha de salida</li>
