@@ -396,7 +396,7 @@ select:invalid + .error-message {
                      <!-- //FORMULARIO VIAJES -->
                 <div class="content" style="margin-top: -5px; margin-bottom: 5px">
                         <!-- TITULO FORMULARIO VIAJES -->
-                    <h4 style="font-family: 'Arial Arabic', Arial; font-weight: bold; margin-bottom: 5px; margin-top: 3px;">Solicita una cotización en el siguiente formulario</h4>
+                    <h4 style="font-family: 'Arial Arabic', Arial; font-weight: bold; margin-bottom: 5px; margin-top: 3px;">Solicita una cotización en el siguiente formulario:</h4>
                     <div style="width: 100%; max-width: 639px; margin: 0 auto; margin-top: 35px; margin-bottom: -10px">
                         <img src="vistas/img/plantilla/banner_viajes.png" alt="Banner de Viajes" style="width: 100%; height: auto; display: block; margin: 0 auto;">
                     </div>
