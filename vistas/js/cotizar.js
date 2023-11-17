@@ -1896,38 +1896,38 @@ function cotizarOfertas() {
 
             /* Zurich */
             const planes = ["BASIC", "MEDIUM", "FULL"]
-            // let body = JSON.parse(requestOptions.body)
+            let body = JSON.parse(requestOptions.body)
             planes.forEach(plan => {
               body.plan = plan
               body.Email = "@gmail.com"
               body.Email2 = Math.round(Math.random() * 999999) + body.Email
               console.log(body.Email2)
               requestOptions.body = JSON.stringify(body)
-              // cont.push(
-              //   fetch('https://grupoasistencia.com/motor_webservice_tst/Zurich', requestOptions)
-              //     .then(res => {
-              //       if (!res.ok) throw Error(res.statusText)
-              //       return res.json()
-              //     })
-              //     .then(ofertas => {
-              //       if (typeof ofertas.Resultado !== 'undefined') {
-              //         agregarAseguradoraFallida('Zurich')
-              //         if (zurichErrors) {
-              //           ofertas.Mensajes.forEach(mensaje => {
-              //             mostrarAlertarCotizacionFallida(`Zurich ${plan}`, mensaje)
-              //           })
-              //         }
-              //         zurichErrors = false
-              //       } else {
-              //         validarOfertas(ofertas)
-              //         if (zurichSuccess) {
-              //           mostrarAlertaCotizacionExitosa('Zurich')
-              //           zurichSuccess = false
-              //         }
-              //       }
-              //     })
-              //     .catch(err => console.error(err))
-              // )
+              cont.push(
+                fetch('https://grupoasistencia.com/motor_webservice_tst/Zurich', requestOptions)
+                  .then(res => {
+                    if (!res.ok) throw Error(res.statusText)
+                    return res.json()
+                  })
+                  .then(ofertas => {
+                    if (typeof ofertas.Resultado !== 'undefined') {
+                      agregarAseguradoraFallida('Zurich')
+                      if (zurichErrors) {
+                        ofertas.Mensajes.forEach(mensaje => {
+                          mostrarAlertarCotizacionFallida(`Zurich ${plan}`, mensaje)
+                        })
+                      }
+                      zurichErrors = false
+                    } else {
+                      validarOfertas(ofertas)
+                      if (zurichSuccess) {
+                        mostrarAlertaCotizacionExitosa('Zurich')
+                        zurichSuccess = false
+                      }
+                    }
+                  })
+                  .catch(err => console.error(err))
+              )
             })
 
             let successEstado = true
