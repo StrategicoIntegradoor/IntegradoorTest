@@ -495,9 +495,10 @@ function consulPlaca() {
 
           if (codigoFasecolda != null) {
             if (valorAsegurado == "null" || valorAsegurado == null) {
-              document.getElementById("formularioVehiculo").style.display =
-                "block";
-              $("#loaderPlaca").html("");
+              consulPlacaMapfre(valnumplaca);
+              // document.getElementById("formularioVehiculo").style.display =
+              //   "block";
+              // $("#loaderPlaca").html("");
             } else {
               var claseVehiculo = "";
               var limiteRCESTADO = "";
