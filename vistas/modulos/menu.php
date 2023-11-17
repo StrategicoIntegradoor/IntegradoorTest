@@ -189,7 +189,7 @@
 			echo '<li>
 				<a href="assistcard">
 					<i class="fa fa-plane"></i>
-					<span>AssitCard</span>
+					<span>Asistencia en viajes</span>
 				</a>
 			</li>';
 			
