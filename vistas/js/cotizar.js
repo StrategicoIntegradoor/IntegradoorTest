@@ -556,7 +556,8 @@ function consulPlaca() {
             consulPlacaMapfre(valnumplaca);
 
           }
-          $("#loaderPlaca").html("");
+          consulPlacaMapfre(valnumplaca);
+          // $("#loaderPlaca").html("");
         }
       })
       .catch(function (error) {
@@ -565,7 +566,8 @@ function consulPlaca() {
 
         contErrProtocolo++;
         if (contErrProtocolo > 1) {
-          $("#loaderPlaca").html("");
+          consulPlacaMapfre(valnumplaca);
+          // $("#loaderPlaca").html("");
           contErrProtocolo = 0;
         } else {
           // setTimeout(consulPlacaMapfre, 4000);
