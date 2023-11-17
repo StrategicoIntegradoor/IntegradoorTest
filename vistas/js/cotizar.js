@@ -577,6 +577,7 @@ function consulPlaca() {
 }
 
 function consulPlacaMapfre(valnumplaca){
+  console.log("MAPFRE FUNCIONANDO")
 
   let bodyContent = JSON.stringify({
     "Placa": valnumplaca
@@ -595,7 +596,6 @@ function consulPlacaMapfre(valnumplaca){
       }).then(function(response) {
         return response.json();
       }).then(async function(data) {
-        console.log(data)
         var resultadoConsulta = data.respuesta.errorEjecucion;
         var codigoClase = data.polizaReciente.COD_MODELO;
         var marcaCod = data.polizaReciente.COD_MARCA;
