@@ -328,7 +328,6 @@ select:invalid + .error-message {
                                 <div class="card-body">
                                     <h4 class="card-title" style="font-weight: bold;">Sobre Assist Card</h4>
                                     <p class="card-text">Pertenece al grupo STARR Companies, es la compañía N° 1 en el mundo dedicada a brindar asistencia al viajero de manera integral desde hace más de 43 años.</p>
-                                    <br>
                                     <p class="card-text">Para conocer más sobre Assist Card, ingresa <a href="https://Grupoasistencia.com/pdfViajes/assistCard.pdf" target="_blank">AQUI</a></p>
                                 </div>
                             </div>
