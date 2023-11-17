@@ -158,7 +158,7 @@
   flex: 0 1 calc(15% - 0px); /* 48% es solo un ejemplo, ajusta según tus necesidades */
   border-radius: 20px;
   background-color: white;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0 7px rgba(0, 0, 0, 0.3);
   /* padding: 3.5% 7%; */
   padding: 10px 30px;
   max-width: 100%;  
