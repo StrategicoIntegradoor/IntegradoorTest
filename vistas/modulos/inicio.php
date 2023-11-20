@@ -15,22 +15,24 @@
 
     </ol>
 
-    <?php
-
-    if ($_SESSION['permisos']['id_rol'] == '19') {
-      echo '<script>
-          Swal.fire({
-              title: "Módulo Habilitado",
-              text: "Ya está habilitado el módulo para cotizar pesados.",
-              icon: "success",
-          }).then(function() {
-              // Redirige si es necesario
-          });
-      </script>';
-
-      return;
-      // Detén la ejecución del script actual
-    }
-
-    ?>
+ 
   </section>
+
+  <?php
+
+if ($_SESSION['permisos']['id_rol'] == '19') {
+  echo '<script>
+      Swal.fire({
+          title: "Módulo Habilitado",
+          text: "Ya está habilitado el módulo para cotizar pesados.",
+          icon: "success",
+      }).then(function() {
+          // Redirige si es necesario
+      });
+  </script>';
+
+  return;
+  // Detén la ejecución del script actual
+}
+
+?>
