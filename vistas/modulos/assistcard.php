@@ -461,31 +461,31 @@ select:invalid + .error-message {
   });
 </script>
 <script>
-document.addEventListener("DOMContentLoaded", function() {
-    // Obtén el elemento que quieres evaluar usando un selector de CSS
-    var elementoAEvaluar = document.querySelector('.content[data-evaluar="si"]');
-    console.log(elementoAEvaluar)
-    if (elementoAEvaluar) {
-        // Guarda la altura original del elemento
-        var alturaOriginal = elementoAEvaluar.clientHeight;
+// document.addEventListener("DOMContentLoaded", function() {
+//     // Obtén el elemento que quieres evaluar usando un selector de CSS
+//     var elementoAEvaluar = document.querySelector('.content[data-evaluar="si"]');
+//     console.log(elementoAEvaluar)
+//     if (elementoAEvaluar) {
+//         // Guarda la altura original del elemento
+//         var alturaOriginal = elementoAEvaluar.clientHeight;
 
-        // Función para verificar y actuar en consecuencia
-        function verificarAltura() {
-            if (elementoAEvaluar.clientHeight > alturaOriginal) {
-                console.log('El elemento es más largo que al principio.');
-                // Puedes realizar acciones adicionales aquí
-            }
-        }
+//         // Función para verificar y actuar en consecuencia
+//         function verificarAltura() {
+//             if (elementoAEvaluar.clientHeight > alturaOriginal) {
+//                 console.log('El elemento es más largo que al principio.');
+//                 // Puedes realizar acciones adicionales aquí
+//             }
+//         }
 
-        // Verifica la altura inicial del elemento
-        verificarAltura();
+//         // Verifica la altura inicial del elemento
+//         verificarAltura();
 
-        // Agrega un evento de redimensionamiento al elemento
-        window.addEventListener('resize', function() {
-            verificarAltura();
-        });
-    }
-});
+//         // Agrega un evento de redimensionamiento al elemento
+//         window.addEventListener('resize', function() {
+//             verificarAltura();
+//         });
+//     }
+// });
 </script>
 
 
