@@ -462,17 +462,26 @@ select:invalid + .error-message {
 </script>
 
 <script>
-document.getElementsByClassName("RH5hzf RLS9Fe").onload = function() {
-    var iframeContent = document.getElementById('miIframe').contentWindow;
+// Obtén todos los elementos con la clase "RH5hzf RLS9Fe"
+var elements = document.getElementsByClassName("RH5hzf RLS9Fe");
 
-    if (iframeContent.location.href.indexOf('formResponse') !== -1) {
-        // Código para la segunda página
-        // Puedes ajustar aquí el ancho del iframe, por ejemplo:
-        document.getElementById('miIframe').style.width = '20%';
-    } else {
-        // Código para otras páginas si es necesario
-    }
-};
+// Itera sobre los elementos y asigna el controlador de eventos a cada uno
+for (var i = 0; i < elements.length; i++) {
+    elements[i].onload = function() {
+        // Accede al contenido del iframe cuando se haya cargado
+        var iframeContent = this.contentWindow;
+
+        // Verifica la URL del iframe para determinar la acción
+        if (iframeContent.location.href.indexOf('formResponse') !== -1) {
+            // Código para la segunda página
+            // Puedes ajustar aquí el ancho del iframe, por ejemplo:
+            this.style.width = '20%';
+        } else {
+            // Código para otras páginas si es necesario
+        }
+    };
+}
+
 </script>
 
 
