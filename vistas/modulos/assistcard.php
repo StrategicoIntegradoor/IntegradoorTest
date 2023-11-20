@@ -468,8 +468,10 @@ document.addEventListener("DOMContentLoaded", function() {
         function ajustarAnchoIframe() {
             if (thHDzeElement && myIframe) {
                 if (esVisible(thHDzeElement)) {
+                    console.log("SEGUNDA PAGINA")
                     myIframe.style.width = '70%'; // Ajusta el ancho según tus necesidades
                 } else {
+                    console.log("PRIMERA PAGINA")
                     myIframe.style.width = '50%'; // Otra anchura cuando no está visible
                 }
             }
