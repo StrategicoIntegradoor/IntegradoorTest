@@ -455,25 +455,35 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 </script>
 <script>
-    // Function to set the width of the iframe to 101% when the specified element appears
-    function adjustIframeWidth() {
-        var targetElement = $('.ThHDze'); // Change this to the actual element you want to trigger the width change
-        var iframe = $('#myIframe');
+    document.addEventListener('DOMContentLoaded', function() {
+        // Espera a que se cargue el DOM
 
-        if (targetElement.is(':visible')) {
-          console.log("AJUSTANDO FORM SEGUNDA PÁGINA")
+        // Obtén el elemento con clase 'ThHDze'
+        var thHDzeElement = document.querySelector('.ThHDze');
 
-            iframe.css('width', '30%');
-        } else {
-          console.log("AJUSTANDO FORM PRIMERA PAGINA")
+        // Obtén el iframe por su ID
+        var myIframe = document.getElementById('myIframe');
 
-            iframe.css('width', '99.5%');
+        // Verifica si el elemento es visible y ajusta el ancho del iframe
+        function ajustarAnchoIframe() {
+            if (esVisible(thHDzeElement)) {
+                myIframe.style.width = '100%'; // Ajusta el ancho según tus necesidades
+            } else {
+                myIframe.style.width = '50%'; // Otra anchura cuando no está visible
+            }
         }
-    }
 
-    // Call the function on page load
-    $(document).ready(function () {
-        adjustIframeWidth();
+        // Función para verificar la visibilidad de un elemento
+        function esVisible(elemento) {
+            var rect = elemento.getBoundingClientRect();
+            return (rect.width > 0 || rect.height > 0);
+        }
+
+        // Llama a la función al cargar la página y también en eventos que puedan cambiar la visibilidad
+        ajustarAnchoIframe();
+
+        // Puedes agregar más eventos aquí, por ejemplo, si la visibilidad cambia dinámicamente
+        // thHDzeElement.addEventListener('cambioDeVisibilidad', ajustarAnchoIframe);
     });
 </script>
 
