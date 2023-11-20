@@ -1874,7 +1874,7 @@ function verPdfOferta(aseguradora, numCotizOferta, numId) {
 
     fetch(
 
-      "https://www.grupoasistencia.com/motor_webservice_tst/ImpresionPdf",
+      "https://www.grupoasistencia.com/motor_webservice/ImpresionPdf",
 
       requestOptions
 
