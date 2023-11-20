@@ -276,7 +276,7 @@ select:invalid + .error-message {
 } */
 
 .miIframe {
-            width: 620px;
+            width: 100%;
             max-width: none;
             height: 1200px;
             transition: width 0.5s;
@@ -410,7 +410,7 @@ select:invalid + .error-message {
                 <div class="content" style="margin-top: -5px; margin-bottom: 5px" data-evaluar="si">
                         <!-- TITULO FORMULARIO VIAJES -->
                     <h4 style="font-family: 'Arial Arabic', Arial; font-weight: bold; margin-bottom: 5px; margin-top: 3px;">Solicita una cotización en el siguiente formulario:</h4>
-                    <div style="width: 80%; max-width: 590px; margin: 0 auto; margin-top: 35px; margin-bottom: -2px">
+                    <div style="width: 100%; max-width: 590px; margin: 0 auto; margin-top: 35px; margin-bottom: -2px">
                         <img src="vistas/img/plantilla/banner_viajes.png" alt="Banner de Viajes" style="width: 100%; height: auto; display: block; margin: 0 auto;">
                         <iframe class="miIframe" src="https://docs.google.com/forms/d/e/1FAIpQLSdNXEYeuq8L5G15BQpGNKKt12cs7jzGvxYuqw2gdQaIH3qwGw/viewform?embedded=true" frameborder="0" marginheight="0" marginwidth="0">Cargando…</iframe>
                     </div>
