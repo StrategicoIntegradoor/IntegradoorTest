@@ -463,7 +463,7 @@ select:invalid + .error-message {
 
 <script>
 // Obtén todos los elementos con la clase "RH5hzf RLS9Fe"
-var elements = document.getElementsByClassName("RH5hzf RLS9Fe");
+var elements = document.getElementsByClass("RH5hzf RLS9Fe");
 console.log(elements)
 // Itera sobre los elementos y asigna el controlador de eventos a cada uno
 for (var i = 0; i < elements.length; i++) {
