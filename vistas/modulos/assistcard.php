@@ -467,9 +467,9 @@ document.addEventListener("DOMContentLoaded", function() {
         // Verifica si el elemento es visible y ajusta el ancho del iframe
         function ajustarAnchoIframe() {
             if (esVisible(thHDzeElement)) {
-                myIframe.style.width = '100%'; // Ajusta el ancho según tus necesidades
+                myIframe.style.width = '70%'; // Ajusta el ancho según tus necesidades
             } else {
-                myIframe.style.width = '50%'; // Otra anchura cuando no está visible
+                myIframe.style.width = '99.5%'; // Otra anchura cuando no está visible
             }
         }
 
