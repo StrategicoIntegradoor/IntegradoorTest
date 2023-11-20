@@ -460,28 +460,26 @@ select:invalid + .error-message {
     window.addEventListener('resize', ajustarAlturaTarjetas);
   });
 </script>
-
 <script>
-// Obtén todos los elementos con la clase "RH5hzf RLS9Fe"
-var elements = document.getElementsByClass("RH5hzf RLS9Fe");
-console.log(elements)
-// Itera sobre los elementos y asigna el controlador de eventos a cada uno
-for (var i = 0; i < elements.length; i++) {
-    elements[i].onload = function() {
-        // Accede al contenido del iframe cuando se haya cargado
-        var iframeContent = this.contentWindow;
+document.addEventListener("DOMContentLoaded", function() {
+    var iframe = document.getElementById('miIframe');
 
-        // Verifica la URL del iframe para determinar la acción
-        if (iframeContent.location.href.indexOf('formResponse') !== -1) {
-            // Código para la segunda página
-            // Puedes ajustar aquí el ancho del iframe, por ejemplo:
-            this.style.width = '20%';
-        } else {
-            // Código para otras páginas si es necesario
+    iframe.onload = function() {
+        // Encuentra el formulario dentro del iframe por su ID
+        var formulario = iframe.contentDocument.getElementById('mG61Hd');
+
+        // Cambia los estilos del formulario como desees
+        formulario.style.backgroundColor = '#f2f2f2';
+        formulario.style.border = '2px solid #333';
+        formulario.style.padding = '20px';
+
+        // También puedes aplicar estilos a elementos específicos dentro del formulario
+        var elementoEspecifico = formulario.getElementsByClassName('OIC90c')[0];
+        if (elementoEspecifico) {
+            elementoEspecifico.style.color = 'blue';
         }
     };
-}
-
+});
 </script>
 
 
