@@ -276,7 +276,7 @@ select:invalid + .error-message {
 } */
 
 .miIframe {
-            width: 99.5%;
+            width: 620px;
             max-width: none;
             height: 1200px;
             transition: width 0.5s;
