@@ -406,7 +406,7 @@ select:invalid + .error-message {
                     <div style="width: 100%; max-width: 639px; margin: 0 auto; margin-top: 35px; margin-bottom: -10px">
                         <img src="vistas/img/plantilla/banner_viajes.png" alt="Banner de Viajes" style="width: 100%; height: auto; display: block; margin: 0 auto;">
                     </div>
-                    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdNXEYeuq8L5G15BQpGNKKt12cs7jzGvxYuqw2gdQaIH3qwGw/viewform?embedded=true" width="100%; max-width: none;" height="1200" frameborder="0" marginheight="0" marginwidth="0">Cargando…</iframe>
+                    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdNXEYeuq8L5G15BQpGNKKt12cs7jzGvxYuqw2gdQaIH3qwGw/viewform?embedded=true" width="99.5%; max-width: none;" height="1200" frameborder="0" marginheight="0" marginwidth="0">Cargando…</iframe>
                 </div>
 
         </div>           
