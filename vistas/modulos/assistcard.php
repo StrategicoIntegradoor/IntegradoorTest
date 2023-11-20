@@ -464,6 +464,7 @@ select:invalid + .error-message {
 document.addEventListener("DOMContentLoaded", function() {
     // Obtén el elemento que quieres monitorear
     var elemento = document.querySelector('.content');
+    console.log(elemento);
 
     // Guarda la altura original del elemento
     var alturaOriginal = elemento.clientHeight;
