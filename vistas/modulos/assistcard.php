@@ -422,52 +422,53 @@ select:invalid + .error-message {
 
 <script>
 
-document.addEventListener("DOMContentLoaded", function() {
-  function ajustarAlturaTarjetas() {
-    var filas = document.querySelectorAll('.row.card-container'); // Modificado el selector
-    
-    filas.forEach(function(fila) {
-      var tarjetas = fila.querySelectorAll('.card-exequias');
+  document.addEventListener("DOMContentLoaded", function() {
+    function ajustarAlturaTarjetas() {
+      var filas = document.querySelectorAll('.row.card-container'); // Modificado el selector
+      
+      filas.forEach(function(fila) {
+        var tarjetas = fila.querySelectorAll('.card-exequias');
 
-      var alturaMaxima = 0;
+        var alturaMaxima = 0;
 
-      tarjetas.forEach(function(tarjeta) {
-        tarjeta.style.height = 'auto'; // Restablecer la altura a 'auto' antes de medir
-        var altura = tarjeta.offsetHeight;
+        tarjetas.forEach(function(tarjeta) {
+          tarjeta.style.height = 'auto'; // Restablecer la altura a 'auto' antes de medir
+          var altura = tarjeta.offsetHeight;
 
-        if (altura > alturaMaxima) {
-          alturaMaxima = altura;
-        }
+          if (altura > alturaMaxima) {
+            alturaMaxima = altura;
+          }
+        });
+
+        tarjetas.forEach(function(tarjeta) {
+          tarjeta.style.height = alturaMaxima + 'px';
+
+          if (tarjeta.classList.contains('special-card')) {
+          tarjeta.style.display = 'flex'; 
+          tarjeta.style.flexDirection = 'column';
+          tarjeta.style.alignItems = 'center'; 
+          tarjeta.style.justifyContent = 'center'; 
+          }
+
+        });
       });
+      
+    }
 
-      tarjetas.forEach(function(tarjeta) {
-        tarjeta.style.height = alturaMaxima + 'px';
-
-        if (tarjeta.classList.contains('special-card')) {
-        tarjeta.style.display = 'flex'; 
-        tarjeta.style.flexDirection = 'column';
-        tarjeta.style.alignItems = 'center'; 
-        tarjeta.style.justifyContent = 'center'; 
-        }
-
-      });
-    });
-    
-  }
-
-  // Llamada inicial y en redimensionamiento de la ventana
-  ajustarAlturaTarjetas();
-  window.addEventListener('resize', ajustarAlturaTarjetas);
-});
+    // Llamada inicial y en redimensionamiento de la ventana
+    ajustarAlturaTarjetas();
+    window.addEventListener('resize', ajustarAlturaTarjetas);
+  });
 </script>
+
 <script>
-document.getElementById('myIframe').onload = function() {
-    var iframeContent = document.getElementById('myIframe').contentWindow;
+document.getElementById('miIframe').onload = function() {
+    var iframeContent = document.getElementById('miIframe').contentWindow;
 
     if (iframeContent.location.href.indexOf('formResponse') !== -1) {
         // Código para la segunda página
         // Puedes ajustar aquí el ancho del iframe, por ejemplo:
-        document.getElementById('myIframe').style.width = '80%';
+        document.getElementById('miIframe').style.width = '80%';
     } else {
         // Código para otras páginas si es necesario
     }
