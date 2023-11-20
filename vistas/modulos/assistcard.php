@@ -462,9 +462,9 @@ document.addEventListener("DOMContentLoaded", function() {
         var iframe = $('#myIframe');
 
         if (targetElement.is(':visible')) {
-            iframe.css('width', '101%');
+            iframe.css('width', '120%');
         } else {
-            iframe.css('width', '99.5%');
+            iframe.css('width', '30%');
         }
     }
 
