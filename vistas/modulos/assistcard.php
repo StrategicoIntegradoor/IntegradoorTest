@@ -386,7 +386,7 @@ select:invalid + .error-message {
                             <div class="card-exequias">
                                 <div class="card-body text-center">
                                     <h4 class="card-title" style="font-weight: bold;">Comisión</h4>
-                                    <p class="card-text">La comisión que Assist Card nos ofrece por este producto es del 23%. De este porcentaje, tu participación será de acuerdo al nivel de ventas de todos los negocios (sin IVA), sumando todos los ramos, que realices en el mes.</p>
+                                    <p class="card-text">La <b>comisión que Assist Card ofrece para nuestra alianza de asesores es del 23%</b>. De este porcentaje, tu participación será de acuerdo al nivel de ventas de todos los negocios (sin IVA), sumando todos los ramos, que realices en el mes.</p>
                                     <ul class="card-text" style="padding-left: 0px; list-style-position: inside;">
                                         <li>Nivel 1: 67,5%</li>
                                         <li>Nivel 2: 70%</li>
