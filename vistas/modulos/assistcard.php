@@ -462,7 +462,7 @@ select:invalid + .error-message {
 </script>
 
 <script>
-document.getElementById('miIframe').onload = function() {
+document.getElementsByClassName("RH5hzf RLS9Fe").onload = function() {
     var iframeContent = document.getElementById('miIframe').contentWindow;
 
     if (iframeContent.location.href.indexOf('formResponse') !== -1) {
