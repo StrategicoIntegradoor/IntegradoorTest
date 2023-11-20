@@ -462,23 +462,27 @@ select:invalid + .error-message {
 </script>
 <script>
 document.addEventListener("DOMContentLoaded", function() {
-    var iframe = document.getElementById('miIframe');
+    // Obtén el elemento que quieres monitorear
+    var elemento = document.querySelector('.content');
 
-    iframe.onload = function() {
-        // Encuentra el formulario dentro del iframe por su ID
-        var formulario = iframe.contentDocument.getElementById('mG61Hd');
+    // Guarda la altura original del elemento
+    var alturaOriginal = elemento.clientHeight;
 
-        // Cambia los estilos del formulario como desees
-        formulario.style.backgroundColor = '#f2f2f2';
-        formulario.style.border = '2px solid #333';
-        formulario.style.padding = '20px';
+    // Función para verificar y actuar en consecuencia
+    function verificarAltura() {
+        // Compara la altura actual con la altura original
+        if (elemento.clientHeight > alturaOriginal) {
+            console.log('El elemento es más largo que al principio.');
 
-        // También puedes aplicar estilos a elementos específicos dentro del formulario
-        var elementoEspecifico = formulario.getElementsByClassName('OIC90c')[0];
-        if (elementoEspecifico) {
-            elementoEspecifico.style.color = 'blue';
+            // Puedes realizar acciones adicionales aquí
         }
-    };
+    }
+
+    // Verifica la altura inicial
+    verificarAltura();
+
+    // Agrega un evento de redimensionamiento (por si cambia la altura sin recargar la página)
+    window.addEventListener('resize', verificarAltura);
 });
 </script>
 
