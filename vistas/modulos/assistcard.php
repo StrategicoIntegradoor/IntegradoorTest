@@ -456,6 +456,7 @@ document.addEventListener("DOMContentLoaded", function() {
 <script>
     document.addEventListener('DOMContentLoaded', function() {
         // Espera a que se cargue el DOM
+        console.log("FUNCION PARA ACOMODAR EL FORM")
 
         // Obtén el elemento con clase 'ThHDze'
         var thHDzeElement = document.querySelector('.ThHDze');
