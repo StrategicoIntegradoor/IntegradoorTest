@@ -316,8 +316,8 @@ select:invalid + .error-message {
                             <div class="card-exequias">
                                 <div class="card-body">
                                     <h4 class="card-title" style="font-weight: bold;">¿Qué es una Asistencia en Viajes?</h4>
-                                    <p class="card-text">Conjunto de servicios ofrecidos que cubren los eventos fortuitos que se pueda incurrir durante un viaje en el extranjero, como gastos médicos, asistencia legal, cancelaciones de vuelos, perdidas de equipaje, muerte, entre otros.</p>
-                                    <p class="card-text">Con una asistencia de viaje, el pasajero cuenta con coberturas y montos de dinero específicos en caso de que le ocurra una emergencia estando en el exterior.</p>
+                                    <p class="card-text">Conjunto de servicios ofrecidos que cubren los eventos fortuitos que puedan ocurrir durante un viaje en el extranjero, como gastos médicos, asistencia legal, cancelaciones de vuelos, perdidas de equipaje, muerte, entre otros.</p>
+                                    <p class="card-text">Con una asistencia de viaje, el pasajero cuenta con coberturas y montos de dinero específicos en caso de que se presenten imprevistos o emergencias en el exterior.</p>
                                 </div>
                             </div>
                         </div>
