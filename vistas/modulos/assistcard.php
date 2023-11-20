@@ -403,10 +403,10 @@ select:invalid + .error-message {
                 <div class="content" style="margin-top: -5px; margin-bottom: 5px">
                         <!-- TITULO FORMULARIO VIAJES -->
                     <h4 style="font-family: 'Arial Arabic', Arial; font-weight: bold; margin-bottom: 5px; margin-top: 3px;">Solicita una cotización en el siguiente formulario:</h4>
-                    <div style="width: 100%; max-width: 639px; margin: 0 auto; margin-top: 37px; margin-bottom: -10px">
-                        <img src="vistas/img/plantilla/banner_viajes.png" alt="Banner de Viajes" style="width: 98%; height: auto; display: block; margin: 0 auto;">
+                    <div style="width: 100%; max-width: 639px; margin: 0 auto; margin-top: 35px; margin-bottom: -10px">
+                        <img src="vistas/img/plantilla/banner_viajes.png" alt="Banner de Viajes" style="width: 100%; height: auto; display: block; margin: 0 auto;">
                     </div>
-                    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdNXEYeuq8L5G15BQpGNKKt12cs7jzGvxYuqw2gdQaIH3qwGw/viewform?embedded=true" width="100%; max-width: none;" height="1200" frameborder="0" marginheight="0" marginwidth="0">Cargando…</iframe>
+                    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdNXEYeuq8L5G15BQpGNKKt12cs7jzGvxYuqw2gdQaIH3qwGw/viewform?embedded=true" width="98%; max-width: none;" height="1200" frameborder="0" marginheight="0" marginwidth="0">Cargando…</iframe>
                 </div>
 
         </div>           
