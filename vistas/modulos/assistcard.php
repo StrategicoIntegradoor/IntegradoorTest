@@ -468,7 +468,7 @@ document.getElementsByClassName("RH5hzf RLS9Fe").onload = function() {
     if (iframeContent.location.href.indexOf('formResponse') !== -1) {
         // Código para la segunda página
         // Puedes ajustar aquí el ancho del iframe, por ejemplo:
-        document.getElementById('miIframe').style.width = '80%';
+        document.getElementById('miIframe').style.width = '20%';
     } else {
         // Código para otras páginas si es necesario
     }
