@@ -458,13 +458,16 @@ document.addEventListener("DOMContentLoaded", function() {
 <script>
     // Function to set the width of the iframe to 101% when the specified element appears
     function adjustIframeWidth() {
-      console.log("AJUSTANDO FORM")
         var targetElement = $('.ThHDze'); // Change this to the actual element you want to trigger the width change
         var iframe = $('#myIframe');
 
         if (targetElement.is(':visible')) {
+          console.log("AJUSTANDO FORM")
+
             iframe.css('width', '120%');
         } else {
+          console.log("AJUSTANDO FORM")
+
             iframe.css('width', '30%');
         }
     }
