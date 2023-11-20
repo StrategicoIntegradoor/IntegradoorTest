@@ -421,7 +421,6 @@ document.addEventListener("DOMContentLoaded", function() {
     
     filas.forEach(function(fila) {
       var tarjetas = fila.querySelectorAll('.card-exequias');
-      console.log(filas, tarjetas); // Agrega este console.log para depuración
 
       var alturaMaxima = 0;
 
