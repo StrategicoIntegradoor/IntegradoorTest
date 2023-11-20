@@ -357,6 +357,7 @@ select:invalid + .error-message {
                                         <li>Repatriación o traslados sanitarios o funerarios</li>
                                         <li>Gastos de hotel por reposo forzoso (hospitalización)</li>
                                         <li>Traslado y estancia de un familiar (hospitalización)</li>
+                                        <li>Coberturas por extravío de equipajes</li>
                                     </ul>
                                 </div>
                             </div>
