@@ -406,7 +406,7 @@ select:invalid + .error-message {
                     <div style="width: 100%; max-width: 639px; margin: 0 auto; margin-top: 35px; margin-bottom: -2px">
                         <img src="vistas/img/plantilla/banner_viajes.png" alt="Banner de Viajes" style="width: 100%; height: auto; display: block; margin: 0 auto;">
                     </div>
-                    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdNXEYeuq8L5G15BQpGNKKt12cs7jzGvxYuqw2gdQaIH3qwGw/viewform?embedded=true" width="99.5%; max-width: none;" height="1200" frameborder="0" marginheight="0" marginwidth="0">Cargando…</iframe>
+                    <iframe id="myIframe" src="https://docs.google.com/forms/d/e/1FAIpQLSdNXEYeuq8L5G15BQpGNKKt12cs7jzGvxYuqw2gdQaIH3qwGw/viewform?embedded=true" width="99.5%; max-width: none;" height="1200" frameborder="0" marginheight="0" marginwidth="0">Cargando…</iframe>
                 </div>
 
         </div>           
@@ -464,11 +464,11 @@ document.addEventListener("DOMContentLoaded", function() {
         if (targetElement.is(':visible')) {
           console.log("AJUSTANDO FORM")
 
-            iframe.css('width', '120%');
+            iframe.css('width', '30%');
         } else {
           console.log("AJUSTANDO FORM")
 
-            iframe.css('width', '30%');
+            iframe.css('width', '70%');
         }
     }
 
