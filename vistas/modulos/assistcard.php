@@ -462,7 +462,7 @@ document.addEventListener("DOMContentLoaded", function() {
         var iframe = $('#myIframe');
 
         if (targetElement.is(':visible')) {
-          console.log("AJUSTANDO FORM")
+          console.log("AJUSTANDO FORM SEGUNDA PÁGINA")
 
             iframe.css('width', '30%');
         } else {
