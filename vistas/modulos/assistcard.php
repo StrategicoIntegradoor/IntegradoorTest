@@ -282,7 +282,7 @@ select:invalid + .error-message {
 
         <h1 style="margin-bottom: 0%;">
 
-        Cotización seguro de viajes
+        Solicitud de Cotización Asistencia en Viajes Internacionales
 
         </h1>
 
@@ -316,7 +316,7 @@ select:invalid + .error-message {
                             <div class="card-exequias">
                                 <div class="card-body">
                                     <h4 class="card-title" style="font-weight: bold;">¿Qué es una Asistencia en Viajes?</h4>
-                                    <p class="card-text">Conjunto de servicios ofrecidos que cubren los eventos penosos que se pueda incurrir durante un viaje en el extranjero, como gastos médicos, asistencia legal, cancelaciones de vuelos, perdidas de equipaje, muerte, entre otros.</p>
+                                    <p class="card-text">Conjunto de servicios ofrecidos que cubren los eventos fortuitos que se pueda incurrir durante un viaje en el extranjero, como gastos médicos, asistencia legal, cancelaciones de vuelos, perdidas de equipaje, muerte, entre otros.</p>
                                     <p class="card-text">Con una asistencia de viaje, el pasajero cuenta con coberturas y montos de dinero específicos en caso de que le ocurra una emergencia estando en el exterior.</p>
                                 </div>
                             </div>
@@ -327,7 +327,7 @@ select:invalid + .error-message {
                             <div class="card-exequias">
                                 <div class="card-body">
                                     <h4 class="card-title" style="font-weight: bold;">Sobre Assist Card</h4>
-                                    <p class="card-text">Pertenece al grupo STARR Companies, es la compañía N° 1 en el mundo dedicada a brindar asistencia al viajero de manera integral desde hace más de 43 años.</p>
+                                    <p class="card-text">Pertenece al grupo STARR Companies, es la compañía N° 1 en el mundo dedicada a brindar asistencia al viajero de manera integral desde 1972.</p>
                                     <p class="card-text">Para conocer más sobre Assist Card, ingresa <a href="https://Grupoasistencia.com/pdfViajes/assistCard.pdf" target="_blank">AQUI</a></p>
                                 </div>
                             </div>
@@ -385,7 +385,12 @@ select:invalid + .error-message {
                             <div class="card-exequias">
                                 <div class="card-body text-center">
                                     <h4 class="card-title" style="font-weight: bold;">Comisión</h4>
-                                    <p class="card-text">Todas las ventas que se generen de este producto tienen una comisión del 15% (75% de participación).</p>
+                                    <p class="card-text">La comisión que Assist Card nos ofrece por este producto es del 23%. De este porcentaje, tu participación será de acuerdo al nivel de ventas de todos los negocios (sin IVA), sumando todos los ramos, que realices en el mes.</p>
+                                    <ul class="card-text" style="padding-left: 0px; list-style-position: inside;">
+                                        <li>Nivel 1: 67,5%</li>
+                                        <li>Nivel 2: 70%</li>
+                                        <li>Nivel 3: 75%</li>
+                                    </ul>
                                 </div>
                             </div>
                         </div>
