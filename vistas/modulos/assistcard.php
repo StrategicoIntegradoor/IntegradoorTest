@@ -275,6 +275,13 @@ select:invalid + .error-message {
     height: 100%;
 } */
 
+.miIframe {
+            width: 99.5%;
+            max-width: none;
+            height: 1200px;
+            transition: width 0.5s;
+        }
+
 </style>
 
 <div class="content-wrapper">
@@ -406,7 +413,7 @@ select:invalid + .error-message {
                     <div style="width: 100%; max-width: 639px; margin: 0 auto; margin-top: 35px; margin-bottom: -2px">
                         <img src="vistas/img/plantilla/banner_viajes.png" alt="Banner de Viajes" style="width: 100%; height: auto; display: block; margin: 0 auto;">
                     </div>
-                    <iframe id="myIframe" src="https://docs.google.com/forms/d/e/1FAIpQLSdNXEYeuq8L5G15BQpGNKKt12cs7jzGvxYuqw2gdQaIH3qwGw/viewform?embedded=true" width="99.5%; max-width: none;" height="1200" frameborder="0" marginheight="0" marginwidth="0">Cargando…</iframe>
+                    <iframe class="miIframe" src="https://docs.google.com/forms/d/e/1FAIpQLSdNXEYeuq8L5G15BQpGNKKt12cs7jzGvxYuqw2gdQaIH3qwGw/viewform?embedded=true" frameborder="0" marginheight="0" marginwidth="0">Cargando…</iframe>
                 </div>
 
         </div>           
@@ -454,41 +461,17 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 </script>
 <script>
-    document.addEventListener('DOMContentLoaded', function() {
-        // Espera a que se cargue el DOM
-        console.log("FUNCION PARA ACOMODAR EL FORM")
+document.getElementById('myIframe').onload = function() {
+    var iframeContent = document.getElementById('myIframe').contentWindow;
 
-        // Obtén el elemento con clase 'ThHDze'
-        var thHDzeElement = document.querySelector('.ThHDze');
-
-        // Obtén el iframe por su ID
-        var myIframe = document.getElementById('myIframe');
-
-        // Verifica si el elemento es visible y ajusta el ancho del iframe
-        function ajustarAnchoIframe() {
-            if (thHDzeElement && myIframe) {
-                if (esVisible(thHDzeElement)) {
-                    console.log("SEGUNDA PAGINA")
-                    myIframe.style.width = '70%'; // Ajusta el ancho según tus necesidades
-                } else {
-                    console.log("PRIMERA PAGINA")
-                    myIframe.style.width = '50%'; // Otra anchura cuando no está visible
-                }
-            }
-        }
-
-        // Función para verificar la visibilidad de un elemento
-        function esVisible(elemento) {
-            var rect = elemento.getBoundingClientRect();
-            return (rect.width > 0 || rect.height > 0);
-        }
-
-        // Llama a la función al cargar la página y también en eventos que puedan cambiar la visibilidad
-        ajustarAnchoIframe();
-
-        // Puedes agregar más eventos aquí, por ejemplo, si la visibilidad cambia dinámicamente
-        // thHDzeElement.addEventListener('cambioDeVisibilidad', ajustarAnchoIframe);
-    });
+    if (iframeContent.location.href.indexOf('formResponse') !== -1) {
+        // Código para la segunda página
+        // Puedes ajustar aquí el ancho del iframe, por ejemplo:
+        document.getElementById('myIframe').style.width = '80%';
+    } else {
+        // Código para otras páginas si es necesario
+    }
+};
 </script>
 
 
