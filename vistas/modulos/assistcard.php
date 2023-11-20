@@ -407,7 +407,7 @@ select:invalid + .error-message {
             
 
                      <!-- //FORMULARIO VIAJES -->
-                <div class="content" style="margin-top: -5px; margin-bottom: 5px">
+                <div class="content" style="margin-top: -5px; margin-bottom: 5px" data-evaluar="si">
                         <!-- TITULO FORMULARIO VIAJES -->
                     <h4 style="font-family: 'Arial Arabic', Arial; font-weight: bold; margin-bottom: 5px; margin-top: 3px;">Solicita una cotización en el siguiente formulario:</h4>
                     <div style="width: 100%; max-width: 639px; margin: 0 auto; margin-top: 35px; margin-bottom: -2px">
@@ -462,28 +462,29 @@ select:invalid + .error-message {
 </script>
 <script>
 document.addEventListener("DOMContentLoaded", function() {
-    // Obtén el elemento que quieres monitorear
-    var elemento = document.querySelector('.content');
-    console.log(elemento);
+    // Obtén el elemento que quieres evaluar usando un selector de CSS
+    var elementoAEvaluar = document.querySelector('.content[data-evaluar="si"]');
+    console.log(elementoAEvaluar)
+    if (elementoAEvaluar) {
+        // Guarda la altura original del elemento
+        var alturaOriginal = elementoAEvaluar.clientHeight;
 
-    // Guarda la altura original del elemento
-    var alturaOriginal = elemento.clientHeight;
-
-    // Función para verificar y actuar en consecuencia
-    function verificarAltura() {
-        // Compara la altura actual con la altura original
-        if (elemento.clientHeight > alturaOriginal) {
-            console.log('El elemento es más largo que al principio.');
-
-            // Puedes realizar acciones adicionales aquí
+        // Función para verificar y actuar en consecuencia
+        function verificarAltura() {
+            if (elementoAEvaluar.clientHeight > alturaOriginal) {
+                console.log('El elemento es más largo que al principio.');
+                // Puedes realizar acciones adicionales aquí
+            }
         }
+
+        // Verifica la altura inicial del elemento
+        verificarAltura();
+
+        // Agrega un evento de redimensionamiento al elemento
+        window.addEventListener('resize', function() {
+            verificarAltura();
+        });
     }
-
-    // Verifica la altura inicial
-    verificarAltura();
-
-    // Agrega un evento de redimensionamiento (por si cambia la altura sin recargar la página)
-    window.addEventListener('resize', verificarAltura);
 });
 </script>
 
