@@ -447,7 +447,6 @@ document.addEventListener("DOMContentLoaded", function() {
       });
     });
     
-    console.log("Alturas ajustadas correctamente.");
   }
 
   // Llamada inicial y en redimensionamiento de la ventana
@@ -466,7 +465,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
             iframe.css('width', '30%');
         } else {
-          console.log("AJUSTANDO FORM")
+          console.log("AJUSTANDO FORM PRIMERA PAGINA")
 
             iframe.css('width', '99.5%');
         }
