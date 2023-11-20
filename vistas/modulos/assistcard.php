@@ -468,7 +468,7 @@ document.addEventListener("DOMContentLoaded", function() {
         } else {
           console.log("AJUSTANDO FORM")
 
-            iframe.css('width', '70%');
+            iframe.css('width', '99.5%');
         }
     }
 
