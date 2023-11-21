@@ -905,6 +905,10 @@ if ($_SESSION['permisos']['id_rol'] == '19') {
           <input type="text" class="form-control" id="cre_axa_validacionEventos" value="<?php echo $cre_axa_validacionEventos; ?>">
           <input type="text" class="form-control" id="url_axa" value="<?php echo $url_axa; ?>">
 
+          <!--Bolivar-->
+          <input type="text" class="form-control" id="cre_bol_api_key" value="<?php echo $cre_bol_api_key; ?>">
+          <input type="text" class="form-control" id="cre_bol_claveAsesor" value="<?php echo $cre_bol_claveAsesor; ?>">
+
         </div>
 
       </div>
