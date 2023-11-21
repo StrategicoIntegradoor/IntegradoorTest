@@ -1535,19 +1535,8 @@ function cotizarOfertas() {
   var cre_sol_token = document.getElementById("cre_sol_token").value;
   var cre_sol_fecha_token = document.getElementById("cre_sol_fecha_token").value;
 
-  console.log("Valores de las variables para Solidaria:");
-  console.log("cre_sol_cod_sucursal:", cre_sol_cod_sucursal);
-  console.log("cre_sol_cod_per:", cre_sol_cod_per);
-  console.log("cre_sol_cod_tipo_agente:", cre_sol_cod_tipo_agente);
-  console.log("cre_sol_cod_agente:", cre_sol_cod_agente);
-  console.log("cre_sol_cod_pto_vta:", cre_sol_cod_pto_vta);
-  console.log("cre_sol_grant_type:", cre_sol_grant_type);
-  console.log("cre_sol_Cookie_token:", cre_sol_Cookie_token);
-  console.log("cre_sol_token:", cre_sol_token);
-  console.log("cre_sol_fecha_token:", cre_sol_fecha_token);
 
-
-
+  
   if (ciudadCirculacion.length == 4) {
     ciudadCirculacion = "0" + ciudadCirculacion;
   } else if (ciudadCirculacion.length == 3) {
@@ -1841,28 +1830,28 @@ function cotizarOfertas() {
             // );
 
             /* Bolivar */
-            // cont.push(
-            //   fetch("https://grupoasistencia.com/motor_webservice/Bolivar", requestOptions)
-            //     .then((res) => {
-            //       if (!res.ok) throw Error(res.statusText);
-            //       return res.json();
-            //     })
-            //     .then((ofertas) => {
-            //       console.log(ofertas)
-            //       if (typeof ofertas[0].Resultado !== 'undefined') {
-            //         agregarAseguradoraFallida('Bolivar')
-            //         ofertas[0].Mensajes.forEach(mensaje => {
-            //           mostrarAlertarCotizacionFallida('Bolivar', mensaje)
-            //         })
-            //       } else {
-            //         validarOfertas(ofertas);
-            //         mostrarAlertaCotizacionExitosa('Bolivar')
-            //       }
-            //     })
-            //     .catch((err) => {
-            //       console.error(err);
-            //     })
-            // );
+            cont.push(
+              fetch("https://grupoasistencia.com/motor_webservice/Bolivar", requestOptions)
+                .then((res) => {
+                  if (!res.ok) throw Error(res.statusText);
+                  return res.json();
+                })
+                .then((ofertas) => {
+                  console.log(ofertas)
+                  if (typeof ofertas[0].Resultado !== 'undefined') {
+                    agregarAseguradoraFallida('Bolivar')
+                    ofertas[0].Mensajes.forEach(mensaje => {
+                      mostrarAlertarCotizacionFallida('Bolivar', mensaje)
+                    })
+                  } else {
+                    validarOfertas(ofertas);
+                    mostrarAlertaCotizacionExitosa('Bolivar')
+                  }
+                })
+                .catch((err) => {
+                  console.error(err);
+                })
+            );
 
             /* HDI */
             // cont.push(
@@ -2089,27 +2078,27 @@ function cotizarOfertas() {
             // );
 
             /* AXA */
-            cont.push(
-              fetch("https://grupoasistencia.com/motor_webservice_tst/AXA", requestOptions)
-                .then((res) => {
-                  if (!res.ok) throw Error(res.statusText);
-                  return res.json();
-                })
-                .then((ofertas) => {
-                  if (typeof ofertas[0].Resultado !== 'undefined') {
-                    agregarAseguradoraFallida('AXA')
-                    ofertas[0].Mensajes.forEach(mensaje => {
-                      mostrarAlertarCotizacionFallida('AXA', mensaje)
-                    })
-                  } else {
-                    validarOfertas(ofertas)
-                    mostrarAlertaCotizacionExitosa('AXA')
-                  }
-                })
-                .catch((err) => {
-                  console.error(err);
-                })
-            );
+            // cont.push(
+            //   fetch("https://grupoasistencia.com/motor_webservice_tst/AXA", requestOptions)
+            //     .then((res) => {
+            //       if (!res.ok) throw Error(res.statusText);
+            //       return res.json();
+            //     })
+            //     .then((ofertas) => {
+            //       if (typeof ofertas[0].Resultado !== 'undefined') {
+            //         agregarAseguradoraFallida('AXA')
+            //         ofertas[0].Mensajes.forEach(mensaje => {
+            //           mostrarAlertarCotizacionFallida('AXA', mensaje)
+            //         })
+            //       } else {
+            //         validarOfertas(ofertas)
+            //         mostrarAlertaCotizacionExitosa('AXA')
+            //       }
+            //     })
+            //     .catch((err) => {
+            //       console.error(err);
+            //     })
+            // );
             
 
             /* SBS */
