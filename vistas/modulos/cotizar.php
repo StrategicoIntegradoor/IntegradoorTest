@@ -88,6 +88,26 @@ $cre_sol_token = $creSolidaria['cre_sol_token'] ?? null;
 $cre_sol_fecha_token = $creSolidaria['cre_sol_fecha_token'] ?? null;
 
 
+$query8 = "SELECT *  FROM `Credenciales_Bolivar` WHERE `id_Intermediario` = '" . $_SESSION["intermediario"] . "'";
+
+$ejecucion8 = mysqli_query($enlace, $query8);
+$numerofilas8 = mysqli_num_rows($ejecucion8);
+$fila8 = mysqli_fetch_assoc($ejecucion8);
+
+if ($numerofilas8 > 0) {
+  $cre_bol_api_key = $fila6['cre_bol_api_key'];
+  $cre_bol_claveAsesor = $fila6['cre_bol_claveAsesor'];
+} else {
+  $query9 = "SELECT * FROM `Credenciales_Bolivar` WHERE `id_Intermediario` = 3";
+
+  $ejecucion9 = mysqli_query($enlace, $query9);
+  $numerofilas9 = mysqli_num_rows($ejecucion9);
+  $fila9 = mysqli_fetch_assoc($ejecucion9);
+
+  $cre_bol_api_key = $fila9['cre_bol_api_key'];
+  $cre_bol_claveAsesor = $fila9['cre_bol_claveAsesor'];
+}
+
 // FUNCION PARA OBTENER CREDENCIALES SOLIDARIA
 // Repite el proceso para las demás credenciales
 // ...
