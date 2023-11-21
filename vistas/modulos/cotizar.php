@@ -108,6 +108,9 @@ if ($numerofilas8 > 0) {
   $cre_bol_claveAsesor = $fila9['cre_bol_claveAsesor'];
 }
 
+var_dump($fila6);
+die();
+
 // FUNCION PARA OBTENER CREDENCIALES SOLIDARIA
 // Repite el proceso para las demás credenciales
 // ...
