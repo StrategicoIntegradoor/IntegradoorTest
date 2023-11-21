@@ -1831,7 +1831,7 @@ function cotizarOfertas() {
 
             /* Bolivar */
             cont.push(
-              fetch("https://grupoasistencia.com/motor_webservice_tst/Bolivar", requestOptions)
+              fetch("https://grupoasistencia.com/motor_webservice/Bolivar", requestOptions)
                 .then((res) => {
                   if (!res.ok) throw Error(res.statusText);
                   return res.json();
