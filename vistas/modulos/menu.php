@@ -188,7 +188,7 @@
 		=============================================*/	
 			echo '<li>
 				<a href="assistcard">
-					<i class="fa fa-plane"></i>
+					<i class="fa fa-plane" aria-hidden="true" style="font-size: 1.2em;"></i>
 					<span>Asistencia en viajes</span>
 				</a>
 			</li>';
