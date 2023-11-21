@@ -95,8 +95,8 @@ $numerofilas8 = mysqli_num_rows($ejecucion8);
 $fila8 = mysqli_fetch_assoc($ejecucion8);
 
 if ($numerofilas8 > 0) {
-  $cre_bol_api_key = $fila6['cre_bol_api_key'];
-  $cre_bol_claveAsesor = $fila6['cre_bol_claveAsesor'];
+  $cre_bol_api_key = $fila8['cre_bol_api_key'];
+  $cre_bol_claveAsesor = $fila8['cre_bol_claveAsesor'];
 } else {
   $query9 = "SELECT * FROM `Credenciales_Bolivar` WHERE `id_Intermediario` = 3";
 
@@ -108,7 +108,8 @@ if ($numerofilas8 > 0) {
   $cre_bol_claveAsesor = $fila9['cre_bol_claveAsesor'];
 }
 
-var_dump($fila6);
+var_dump($fila8);
+var_dump($fila9);
 die();
 
 // FUNCION PARA OBTENER CREDENCIALES SOLIDARIA
