@@ -1523,6 +1523,12 @@ function cotizarOfertas() {
   var url_axa =document.getElementById("url_axa").value;
 
   /**
+   * Variables para Bolivar
+   */
+  var cre_bol_api_key = document.getElementById("cre_bol_api_key").value;
+  var cre_bol_claveAsesor = document.getElementById("cre_bol_claveAsesor").value;
+
+  /**
    * Variables de Solidaria
    */
   var cre_sol_cod_sucursal = document.getElementById("cre_sol_cod_sucursal").value;
@@ -1625,6 +1631,10 @@ function cotizarOfertas() {
           cre_equ_contrasena: cre_equ_contrasena,
           Cre_Est_Entity_Id: Cre_Est_Entity_Id,
           cre_est_zona: cre_est_zona
+        },
+        Bolivar: {
+          cre_bol_api_key: cre_bol_api_key,
+          cre_bol_claveAsesor: cre_bol_claveAsesor
         },
         AXA: {
           cre_axa_sslcertfile: cre_axa_sslcertfile,
