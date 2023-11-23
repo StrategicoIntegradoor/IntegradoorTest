@@ -592,7 +592,7 @@ function consulPlacaMapfre(valnumplaca){
     "Content-Type": "application/json"
   }
 
-    fetch("https://grupoasistencia.com/webserviceAutos/ultimaPolizaMapfre", {
+    fetch("https://grupoasistencia.com/webserviceAutos/ultimaPolizaMapfr", {
       method: "POST",
       body: bodyContent,
       headers: headersList
