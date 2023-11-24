@@ -166,7 +166,7 @@ $(document).ready(function () {
   $("#txtConocesLaPlacaNo").click(function () {
     document.getElementById("contenPlaca").style.display = "none";
     document.getElementById("contenCeroKM").style.display = "block";
-    document.getElementById("placaVeh").value = "CAT770";
+    document.getElementById("placaVeh").value = "CAT750";
     $("#txtEsCeroKmNo").prop("checked", false);
   });
 
