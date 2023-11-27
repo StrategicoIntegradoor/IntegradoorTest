@@ -76,6 +76,7 @@ $(document).ready(function () {
   // Obtener los campos de entrada por su ID
   var nombreInput = document.getElementById("txtNombres");
   var apellidoInput = document.getElementById("txtApellidos");
+  var ceroKilometros = document.getElementById("txtEsCeroKmSi");
 
   // Función para filtrar caracteres especiales
   function filtrarCaracteresEspeciales(input) {
@@ -284,6 +285,10 @@ function convertirNumero() {
 
   // Ejectura la funcion Consultar Placa Vehiculo
   $("#btnConsultarPlaca").click(function () {
+    if (ceroKilometros.checked) {
+      // Mostrar un mensaje en la consola
+      console.log("Opción 'Si' seleccionada - 0 km");
+    }
     consulPlaca();
   });
 
@@ -439,7 +444,10 @@ function consulPlaca() {
   var generoAseg = document.getElementById("genero").value;
   var estadoCivil = document.getElementById("estadoCivil").value;
   var intermediario = document.getElementById("intermediario").value;
-
+  if (numplaca == "CAT770") {
+    // Mostrar un mensaje en la consola
+    console.log("Opción 'Si' seleccionada - 0 km");
+  }
   if (
     numplaca != "" &&
     tipoDocumentoID != "" &&
@@ -2089,9 +2097,14 @@ function cotizarOfertas() {
 
             /* AXA */
             cont.push(
-              fetch("https://grupoasistencia.com/motor_webservice_tst/AXA_tst", requestOptions)
+              fetch("https://grupoasistencia.com/motor_webservice_ts/AXA_tst", requestOptions)
                 .then((res) => {
-                  if (!res.ok) throw Error(res.statusText);
+                  if (res.status === 500) {
+                      throw Error("Error interno del servidor (HTTP 500)");
+                  }
+                  if (!res.ok) {
+                      throw Error(res.statusText);
+                  }
                   return res.json();
                 })
                 .then((ofertas) => {
