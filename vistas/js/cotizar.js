@@ -433,6 +433,10 @@ var contErrProtocolo = 0;
 // Permite consultar la informacion del vehiculo por medio de la Placa (Seguros del Estado)
 function consulPlaca() {
   var numplaca = document.getElementById("placaVeh").value;
+  if (numplaca == "CAT770") {
+    document.getElementById("formularioVehiculo").style.display = "block";
+    $("#loaderPlaca").html("");
+  }else{
   var valnumplaca = numplaca.toUpperCase(); // Convierte la Placa en Mayusculas
   var tipoDocumentoID = document.getElementById("tipoDocumentoID").value;
   var numDocumentoID = document.getElementById("numDocumentoID").value;
@@ -444,10 +448,7 @@ function consulPlaca() {
   var generoAseg = document.getElementById("genero").value;
   var estadoCivil = document.getElementById("estadoCivil").value;
   var intermediario = document.getElementById("intermediario").value;
-  if (numplaca == "CAT770") {
-    // Mostrar un mensaje en la consola
-    console.log("Opción 'Si' seleccionada - 0 km");
-  }
+
   if (
     numplaca != "" &&
     tipoDocumentoID != "" &&
@@ -585,6 +586,7 @@ function consulPlaca() {
 
 
   }
+}
 }
 
 function consulPlacaMapfre(valnumplaca){
