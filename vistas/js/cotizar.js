@@ -1763,6 +1763,10 @@ function cotizarOfertas() {
                   }
                 })
                 .catch((err) => {
+                  agregarAseguradoraFallida('SBS')
+                    result[0].Mensajes.forEach(mensaje => {
+                      mostrarAlertarCotizacionFallida('SBS', mensaje)
+                    })
                   console.error(err);
                 })
             );
@@ -1798,6 +1802,10 @@ function cotizarOfertas() {
                   }
                 })
                 .catch((err) => {
+                  agregarAseguradoraFallida('SBS')
+                    result[0].Mensajes.forEach(mensaje => {
+                      mostrarAlertarCotizacionFallida('SBS', mensaje)
+                    })
                   console.error(err);
                 })
             );
@@ -1822,6 +1830,10 @@ function cotizarOfertas() {
                   }
                 })
                 .catch((err) => {
+                  agregarAseguradoraFallida('SBS')
+                    result[0].Mensajes.forEach(mensaje => {
+                      mostrarAlertarCotizacionFallida('SBS', mensaje)
+                    })
                   console.error(err);
                 })
             );
@@ -1845,6 +1857,10 @@ function cotizarOfertas() {
                   }
                 })
                 .catch((err) => {
+                  agregarAseguradoraFallida('SBS')
+                    result[0].Mensajes.forEach(mensaje => {
+                      mostrarAlertarCotizacionFallida('SBS', mensaje)
+                    })
                   console.error(err);
                 })
             );
@@ -1869,6 +1885,10 @@ function cotizarOfertas() {
                   }
                 })
                 .catch((err) => {
+                  agregarAseguradoraFallida('SBS')
+                    result[0].Mensajes.forEach(mensaje => {
+                      mostrarAlertarCotizacionFallida('SBS', mensaje)
+                    })
                   console.error(err);
                 })
             );
@@ -1947,60 +1967,68 @@ function cotizarOfertas() {
             let successEstado = true
 
             /* Estado */
-            // cont.push(
-            //   fetch("https://grupoasistencia.com/motor_webservice_tst/Estado", requestOptions)
-            //     .then((res) => {
-            //       if (!res.ok) throw Error(res.statusText);
-            //       return res.json();
-            //     })
-            //     .then((ofertas) => {
-            //       let result = []
-            //       result.push(ofertas)
-            //       if (typeof result[0].Resultado !== 'undefined') {
-            //         agregarAseguradoraFallida('Estado')
-            //         result[0].Mensajes.forEach(mensaje => {
-            //           mostrarAlertarCotizacionFallida('Estado', mensaje)
-            //         })
-            //       } else {
-            //         validarOfertas(result);
-            //         if (successEstado) {
-            //           mostrarAlertaCotizacionExitosa('Estado')
-            //           successEstado = false
-            //         }
-            //       }
-            //     })
-            //     .catch((err) => {
-            //       console.error(err);
-            //     })
-            // );
+            cont.push(
+              fetch("https://grupoasistencia.com/motor_webservice_tst/Estado", requestOptions)
+                .then((res) => {
+                  if (!res.ok) throw Error(res.statusText);
+                  return res.json();
+                })
+                .then((ofertas) => {
+                  let result = []
+                  result.push(ofertas)
+                  if (typeof result[0].Resultado !== 'undefined') {
+                    agregarAseguradoraFallida('Estado')
+                    result[0].Mensajes.forEach(mensaje => {
+                      mostrarAlertarCotizacionFallida('Estado', mensaje)
+                    })
+                  } else {
+                    validarOfertas(result);
+                    if (successEstado) {
+                      mostrarAlertaCotizacionExitosa('Estado')
+                      successEstado = false
+                    }
+                  }
+                })
+                .catch((err) => {
+                  agregarAseguradoraFallida('SBS')
+                    result[0].Mensajes.forEach(mensaje => {
+                      mostrarAlertarCotizacionFallida('SBS', mensaje)
+                    })
+                  console.error(err);
+                })
+            );
 
             /* Estado2 */
-            // cont.push(
-            //   fetch("https://grupoasistencia.com/motor_webservice_tst/Estado2", requestOptions)
-            //     .then((res) => {
-            //       if (!res.ok) throw Error(res.statusText);
-            //       return res.json();
-            //     })
-            //     .then((ofertas) => {
-            //       let result = []
-            //       result.push(ofertas)
-            //       if (typeof result[0].Resultado !== 'undefined') {
-            //         agregarAseguradoraFallida('Zurich2')
-            //         result[0].Mensajes.forEach(mensaje => {
-            //           mostrarAlertarCotizacionFallida('Estado', mensaje)
-            //         })
-            //       } else {
-            //         validarOfertas(result);
-            //         if (successEstado) {
-            //           mostrarAlertaCotizacionExitosa('Estado')
-            //           successEstado = false
-            //         }
-            //       }
-            //     })
-            //     .catch((err) => {
-            //       console.error(err);
-            //     })
-            // );
+            cont.push(
+              fetch("https://grupoasistencia.com/motor_webservice_tst/Estado2", requestOptions)
+                .then((res) => {
+                  if (!res.ok) throw Error(res.statusText);
+                  return res.json();
+                })
+                .then((ofertas) => {
+                  let result = []
+                  result.push(ofertas)
+                  if (typeof result[0].Resultado !== 'undefined') {
+                    agregarAseguradoraFallida('Zurich2')
+                    result[0].Mensajes.forEach(mensaje => {
+                      mostrarAlertarCotizacionFallida('Estado', mensaje)
+                    })
+                  } else {
+                    validarOfertas(result);
+                    if (successEstado) {
+                      mostrarAlertaCotizacionExitosa('Estado')
+                      successEstado = false
+                    }
+                  }
+                })
+                .catch((err) => {
+                  agregarAseguradoraFallida('SBS')
+                    result[0].Mensajes.forEach(mensaje => {
+                      mostrarAlertarCotizacionFallida('SBS', mensaje)
+                    })
+                  console.error(err);
+                })
+            );
 
             /* Liberty */
             // if (condicional== 4 || condicional== 10 || condicional== 11 || condicional== 12 || condicional== 13 || condicional== 14 || condicional== 22) {
@@ -2080,6 +2108,10 @@ function cotizarOfertas() {
                 }
               })
               .catch((err) => {
+                agregarAseguradoraFallida('SBS')
+                    result[0].Mensajes.forEach(mensaje => {
+                      mostrarAlertarCotizacionFallida('SBS', mensaje)
+                    })
                 console.error(err);
               })
           );
@@ -2108,6 +2140,10 @@ function cotizarOfertas() {
                   }
                 })
                 .catch((err) => {
+                  agregarAseguradoraFallida('SBS')
+                    result[0].Mensajes.forEach(mensaje => {
+                      mostrarAlertarCotizacionFallida('SBS', mensaje)
+                    })
                   console.error(err);
                 })
             );
@@ -2136,6 +2172,10 @@ function cotizarOfertas() {
                   }
                 })
                 .catch((err) => {
+                  agregarAseguradoraFallida('SBS')
+                    result[0].Mensajes.forEach(mensaje => {
+                      mostrarAlertarCotizacionFallida('SBS', mensaje)
+                    })
                   console.error(err);
                 })
             );
@@ -2166,6 +2206,10 @@ function cotizarOfertas() {
                   }
                 })
                 .catch((err) => {
+                  agregarAseguradoraFallida('SBS')
+                    result[0].Mensajes.forEach(mensaje => {
+                      mostrarAlertarCotizacionFallida('SBS', mensaje)
+                    })
                   console.error(err);
                 })
             );
