@@ -1914,9 +1914,15 @@ function cotizarOfertas() {
               requestOptions.body = JSON.stringify(body)
               cont.push(
                 fetch('https://grupoasistencia.com/motor_webservice_tst/Zurich', requestOptions)
-                  .then(res => {
-                    if (!res.ok) throw Error(res.statusText)
-                    return res.json()
+                  .then((res) => {
+                    if (res.status === 500) {
+                        throw Error("Error interno del servidor (HTTP 500)");
+                        console.log("SE PRESENTA ERROR 500")
+                    }
+                    if (!res.ok) {
+                        throw Error(res.statusText);
+                    }
+                    return res.json();
                   })
                   .then(ofertas => {
                     if (typeof ofertas.Resultado !== 'undefined') {
@@ -2055,7 +2061,13 @@ function cotizarOfertas() {
           cont.push(
             fetch("https://grupoasistencia.com/motor_webservice_tst/Liberty", requestOptions)
               .then((res) => {
-                if (!res.ok) throw Error(res.statusText);
+                if (res.status === 500) {
+                    throw Error("Error interno del servidor (HTTP 500)");
+                    console.log("SE PRESENTA ERROR 500")
+                }
+                if (!res.ok) {
+                    throw Error(res.statusText);
+                }
                 return res.json();
               })
               .then((ofertas) => {
@@ -2078,7 +2090,13 @@ function cotizarOfertas() {
             cont.push(
               fetch("https://grupoasistencia.com/motor_webservice_tst/Allianz", requestOptions)
                 .then((res) => {
-                  if (!res.ok) throw Error(res.statusText);
+                  if (res.status === 500) {
+                      throw Error("Error interno del servidor (HTTP 500)");
+                      console.log("SE PRESENTA ERROR 500")
+                  }
+                  if (!res.ok) {
+                      throw Error(res.statusText);
+                  }
                   return res.json();
                 })
                 .then((ofertas) => {
@@ -2103,6 +2121,7 @@ function cotizarOfertas() {
                 .then((res) => {
                   if (res.status === 500) {
                       throw Error("Error interno del servidor (HTTP 500)");
+                      console.log("SE PRESENTA ERROR 500")
                   }
                   if (!res.ok) {
                       throw Error(res.statusText);
@@ -2130,7 +2149,13 @@ function cotizarOfertas() {
             cont.push(
               fetch("https://grupoasistencia.com/motor_webservice_tst/SBS", requestOptions)
                 .then((res) => {
-                  if (!res.ok) throw Error(res.statusText);
+                  if (res.status === 500) {
+                      throw Error("Error interno del servidor (HTTP 500)");
+                      console.log("SE PRESENTA ERROR 500")
+                  }
+                  if (!res.ok) {
+                      throw Error(res.statusText);
+                  }
                   return res.json();
                 })
                 .then((ofertas) => {
