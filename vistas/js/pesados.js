@@ -281,10 +281,6 @@ $(document).ready(function () {
       }
     );
   
-    // Ejectura la funcion Consultar Placa Vehiculo
-    // $("#btnConsultarPlaca").click(function () {
-    //   consulPlaca();
-    // });
   
     // Ejectura la funcion Consultar Placa Vehiculo pesado
     $("#btnConsultarPlacaPesados").click(function () {
@@ -733,7 +729,7 @@ function masAseg() {
                  document.getElementById("DatosAsegurado").style.display = "none";
                  contErrMetEstado = 0;
               } else {
-                setTimeout(consulPlaca, 2000);
+                // setTimeout(consulPlaca, 2000);
               }
             }
             $("#loaderPlaca").html("");
@@ -1540,7 +1536,7 @@ function cotizarOfertasPesados() {
 
           //   });
 
-            /* Mundial */ 
+            /*MUNDIAL*/ 
           if(mundial == 5){
             let body = JSON.parse(requestOptions.body)
             plan = 'Trailer'
@@ -1625,33 +1621,33 @@ function cotizarOfertasPesados() {
             // );
 
              /* LIBERTY */ 
-              // let planesLiberty = ["Full","Integral"];
-              // let body = JSON.parse(requestOptions.body)
+              let planesLiberty = ["Full","Integral"];
+              let body = JSON.parse(requestOptions.body)
 
-              // planesLiberty.forEach(plan => {
-              //   body.plan = plan
-              //   requestOptions.body = JSON.stringify(body)
+              planesLiberty.forEach(plan => {
+                body.plan = plan
+                requestOptions.body = JSON.stringify(body)
               
-              //   fetch("https://grupoasistencia.com/motor_webservice_tst/Liberty", requestOptions)
-              //     .then((res) => {
-              //       if (!res.ok) throw Error(res.statusText);
-              //       return res.json();
-              //     })
-              //     .then((ofertas) => {
-              //       if (typeof ofertas[0].Resultado !== 'undefined') {
-              //         agregarAseguradoraFallida(`Liberty ${plan}`);
-              //         ofertas[0].Mensajes.forEach(mensaje => {
-              //           mostrarAlertarCotizacionFallida(`Liberty ${plan}`, mensaje);
-              //         });
-              //       } else {
-              //         validarOfertasPesados(ofertas);
-              //         mostrarAlertaCotizacionExitosa(`Liberty ${plan}`);
-              //       }
-              //     })
-              //     .catch((err) => {
-              //       console.error(err);
-              //     });
-              // });  
+                fetch("https://grupoasistencia.com/motor_webservice_tst/Liberty", requestOptions)
+                  .then((res) => {
+                    if (!res.ok) throw Error(res.statusText);
+                    return res.json();
+                  })
+                  .then((ofertas) => {
+                    if (typeof ofertas[0].Resultado !== 'undefined') {
+                      agregarAseguradoraFallida(`Liberty ${plan}`);
+                      ofertas[0].Mensajes.forEach(mensaje => {
+                        mostrarAlertarCotizacionFallida(`Liberty ${plan}`, mensaje);
+                      });
+                    } else {
+                      validarOfertasPesados(ofertas);
+                      mostrarAlertaCotizacionExitosa(`Liberty ${plan}`);
+                    }
+                  })
+                  .catch((err) => {
+                    console.error(err);
+                  });
+              });  
         
         
             // Llamar a esta función cuando todas las promesas se resuelvan
