@@ -1917,7 +1917,6 @@ function cotizarOfertas() {
                   .then((res) => {
                     if (res.status === 500) {
                         throw Error("Error interno del servidor (HTTP 500)");
-                        console.log("SE PRESENTA ERROR 500")
                     }
                     if (!res.ok) {
                         throw Error(res.statusText);
@@ -2063,7 +2062,6 @@ function cotizarOfertas() {
               .then((res) => {
                 if (res.status === 500) {
                     throw Error("Error interno del servidor (HTTP 500)");
-                    console.log("SE PRESENTA ERROR 500")
                 }
                 if (!res.ok) {
                     throw Error(res.statusText);
@@ -2092,7 +2090,6 @@ function cotizarOfertas() {
                 .then((res) => {
                   if (res.status === 500) {
                       throw Error("Error interno del servidor (HTTP 500)");
-                      console.log("SE PRESENTA ERROR 500")
                   }
                   if (!res.ok) {
                       throw Error(res.statusText);
@@ -2121,7 +2118,6 @@ function cotizarOfertas() {
                 .then((res) => {
                   if (res.status === 500) {
                       throw Error("Error interno del servidor (HTTP 500)");
-                      console.log("SE PRESENTA ERROR 500")
                   }
                   if (!res.ok) {
                       throw Error(res.statusText);
@@ -2151,7 +2147,6 @@ function cotizarOfertas() {
                 .then((res) => {
                   if (res.status === 500) {
                       throw Error("Error interno del servidor (HTTP 500)");
-                      console.log("SE PRESENTA ERROR 500")
                   }
                   if (!res.ok) {
                       throw Error(res.statusText);
