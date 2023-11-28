@@ -1763,10 +1763,6 @@ function cotizarOfertas() {
                   }
                 })
                 .catch((err) => {
-                  agregarAseguradoraFallida('SBS')
-                    result[0].Mensajes.forEach(mensaje => {
-                      mostrarAlertarCotizacionFallida('SBS', mensaje)
-                    })
                   console.error(err);
                 })
             );
@@ -1803,9 +1799,6 @@ function cotizarOfertas() {
                 })
                 .catch((err) => {
                   agregarAseguradoraFallida('SBS')
-                    result[0].Mensajes.forEach(mensaje => {
-                      mostrarAlertarCotizacionFallida('SBS', mensaje)
-                    })
                   console.error(err);
                 })
             );
@@ -1830,10 +1823,6 @@ function cotizarOfertas() {
                   }
                 })
                 .catch((err) => {
-                  agregarAseguradoraFallida('SBS')
-                    result[0].Mensajes.forEach(mensaje => {
-                      mostrarAlertarCotizacionFallida('SBS', mensaje)
-                    })
                   console.error(err);
                 })
             );
@@ -1857,10 +1846,6 @@ function cotizarOfertas() {
                   }
                 })
                 .catch((err) => {
-                  agregarAseguradoraFallida('SBS')
-                    result[0].Mensajes.forEach(mensaje => {
-                      mostrarAlertarCotizacionFallida('SBS', mensaje)
-                    })
                   console.error(err);
                 })
             );
@@ -1885,10 +1870,6 @@ function cotizarOfertas() {
                   }
                 })
                 .catch((err) => {
-                  agregarAseguradoraFallida('SBS')
-                    result[0].Mensajes.forEach(mensaje => {
-                      mostrarAlertarCotizacionFallida('SBS', mensaje)
-                    })
                   console.error(err);
                 })
             );
@@ -1990,10 +1971,6 @@ function cotizarOfertas() {
                   }
                 })
                 .catch((err) => {
-                  agregarAseguradoraFallida('SBS')
-                    result[0].Mensajes.forEach(mensaje => {
-                      mostrarAlertarCotizacionFallida('SBS', mensaje)
-                    })
                   console.error(err);
                 })
             );
@@ -2022,10 +1999,6 @@ function cotizarOfertas() {
                   }
                 })
                 .catch((err) => {
-                  agregarAseguradoraFallida('SBS')
-                    result[0].Mensajes.forEach(mensaje => {
-                      mostrarAlertarCotizacionFallida('SBS', mensaje)
-                    })
                   console.error(err);
                 })
             );
@@ -2108,10 +2081,6 @@ function cotizarOfertas() {
                 }
               })
               .catch((err) => {
-                agregarAseguradoraFallida('SBS')
-                    result[0].Mensajes.forEach(mensaje => {
-                      mostrarAlertarCotizacionFallida('SBS', mensaje)
-                    })
                 console.error(err);
               })
           );
@@ -2140,10 +2109,6 @@ function cotizarOfertas() {
                   }
                 })
                 .catch((err) => {
-                  agregarAseguradoraFallida('SBS')
-                    result[0].Mensajes.forEach(mensaje => {
-                      mostrarAlertarCotizacionFallida('SBS', mensaje)
-                    })
                   console.error(err);
                 })
             );
@@ -2172,10 +2137,6 @@ function cotizarOfertas() {
                   }
                 })
                 .catch((err) => {
-                  agregarAseguradoraFallida('SBS')
-                    result[0].Mensajes.forEach(mensaje => {
-                      mostrarAlertarCotizacionFallida('SBS', mensaje)
-                    })
                   console.error(err);
                 })
             );
@@ -2206,10 +2167,6 @@ function cotizarOfertas() {
                   }
                 })
                 .catch((err) => {
-                  agregarAseguradoraFallida('SBS')
-                    result[0].Mensajes.forEach(mensaje => {
-                      mostrarAlertarCotizacionFallida('SBS', mensaje)
-                    })
                   console.error(err);
                 })
             );
