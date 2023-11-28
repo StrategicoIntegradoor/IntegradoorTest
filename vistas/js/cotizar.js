@@ -2101,7 +2101,7 @@ function cotizarOfertas() {
             cont.push(
               fetch("https://grupoasistencia.com/motor_webservice_tst/AXA_tst", requestOptions)
                 .then((res) => {
-                  if (res.status === error) {
+                  if (res.status === 500) {
                       throw Error("Error interno del servidor (HTTP 500)");
                   }
                   if (!res.ok) {
