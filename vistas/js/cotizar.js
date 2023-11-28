@@ -2004,59 +2004,59 @@ function cotizarOfertas() {
             // );
 
             /* Liberty */
-            // if (condicional== 4 || condicional== 10 || condicional== 11 || condicional== 12 || condicional== 13 || condicional== 14 || condicional== 22) {
-              // let planesLiberty = ["Full","Integral"];
-              // let body = JSON.parse(requestOptions.body)
-              // planesLiberty.forEach(plan => {
-              //   body.plan = plan
-              //   requestOptions.body = JSON.stringify(body)
+            if (condicional== 4 || condicional== 10 || condicional== 11 || condicional== 12 || condicional== 13 || condicional== 14 || condicional== 22) {
+              let planesLiberty = ["Full","Integral"];
+              let body = JSON.parse(requestOptions.body)
+              planesLiberty.forEach(plan => {
+                body.plan = plan
+                requestOptions.body = JSON.stringify(body)
               
-              //   fetch("https://grupoasistencia.com/motor_webservice_tst/Liberty", requestOptions)
-              //     .then((res) => {
-              //       if (!res.ok) throw Error(res.statusText);
-              //       return res.json();
-              //     })
-              //     .then((ofertas) => {
-              //       if (typeof ofertas[0].Resultado !== 'undefined') {
-              //         agregarAseguradoraFallida(`Liberty ${plan}`);
-              //         ofertas[0].Mensajes.forEach(mensaje => {
-              //           mostrarAlertarCotizacionFallida(`Liberty ${plan}`, mensaje);
-              //         });
-              //       } else {
-              //         validarOfertas(ofertas);
-              //         mostrarAlertaCotizacionExitosa(`Liberty ${plan}`);
-              //       }
-              //     })
-              //     .catch((err) => {
-              //       console.error(err);
-              //     });
-              // });
+                fetch("https://grupoasistencia.com/motor_webservice_tst/Liberty", requestOptions)
+                  .then((res) => {
+                    if (!res.ok) throw Error(res.statusText);
+                    return res.json();
+                  })
+                  .then((ofertas) => {
+                    if (typeof ofertas[0].Resultado !== 'undefined') {
+                      agregarAseguradoraFallida(`Liberty ${plan}`);
+                      ofertas[0].Mensajes.forEach(mensaje => {
+                        mostrarAlertarCotizacionFallida(`Liberty ${plan}`, mensaje);
+                      });
+                    } else {
+                      validarOfertas(ofertas);
+                      mostrarAlertaCotizacionExitosa(`Liberty ${plan}`);
+                    }
+                  })
+                  .catch((err) => {
+                    console.error(err);
+                  });
+              });
               
-          // } 
-          // else {
+          } 
+          else {
 
-          //   fetch("https://grupoasistencia.com/motor_webservice_tst/Liberty", requestOptions)
-          //   .then((res) => {
-          //     if (!res.ok) throw Error(res.statusText);
-          //     return res.json();
-          //   })
-          //   .then((ofertas) => {
-          //     if (typeof ofertas[0].Resultado !== 'undefined') {
-          //       agregarAseguradoraFallida('Liberty')
-          //       ofertas[0].Mensajes.forEach(mensaje => {
-          //         mostrarAlertarCotizacionFallida('Liberty', mensaje)
-          //       })
-          //     } else {
-          //       console.log(ofertas)
-          //       validarOfertas(ofertas);
-          //       mostrarAlertaCotizacionExitosa('Liberty')
-          //     }
-          //   })
-          //   .catch((err) => {
-          //     console.error(err);
-          //   });
+            fetch("https://grupoasistencia.com/motor_webservice_tst/Liberty", requestOptions)
+            .then((res) => {
+              if (!res.ok) throw Error(res.statusText);
+              return res.json();
+            })
+            .then((ofertas) => {
+              if (typeof ofertas[0].Resultado !== 'undefined') {
+                agregarAseguradoraFallida('Liberty')
+                ofertas[0].Mensajes.forEach(mensaje => {
+                  mostrarAlertarCotizacionFallida('Liberty', mensaje)
+                })
+              } else {
+                console.log(ofertas)
+                validarOfertas(ofertas);
+                mostrarAlertaCotizacionExitosa('Liberty')
+              }
+            })
+            .catch((err) => {
+              console.error(err);
+            });
 
-          // }
+          }
           //Liberty
           // cont.push(
           //   fetch("https://grupoasistencia.com/motor_webservice_tst/Liberty", requestOptions)
@@ -2114,32 +2114,32 @@ function cotizarOfertas() {
             // );
 
             /* AXA */
-            cont.push(
-              fetch("https://grupoasistencia.com/motor_webservice_tst/AXA_tst", requestOptions)
-                .then((res) => {
-                  if (res.status === 500) {
-                      throw Error("Error interno del servidor (HTTP 500)");
-                  }
-                  if (!res.ok) {
-                      throw Error(res.statusText);
-                  }
-                  return res.json();
-                })
-                .then((ofertas) => {
-                  if (typeof ofertas[0].Resultado !== 'undefined') {
-                    agregarAseguradoraFallida('AXA')
-                    ofertas[0].Mensajes.forEach(mensaje => {
-                      mostrarAlertarCotizacionFallida('AXA', mensaje)
-                    })
-                  } else {
-                    validarOfertas(ofertas)
-                    mostrarAlertaCotizacionExitosa('AXA')
-                  }
-                })
-                .catch((err) => {
-                  console.error(err);
-                })
-            );
+            // cont.push(
+            //   fetch("https://grupoasistencia.com/motor_webservice_tst/AXA_tst", requestOptions)
+            //     .then((res) => {
+            //       if (res.status === 500) {
+            //           throw Error("Error interno del servidor (HTTP 500)");
+            //       }
+            //       if (!res.ok) {
+            //           throw Error(res.statusText);
+            //       }
+            //       return res.json();
+            //     })
+            //     .then((ofertas) => {
+            //       if (typeof ofertas[0].Resultado !== 'undefined') {
+            //         agregarAseguradoraFallida('AXA')
+            //         ofertas[0].Mensajes.forEach(mensaje => {
+            //           mostrarAlertarCotizacionFallida('AXA', mensaje)
+            //         })
+            //       } else {
+            //         validarOfertas(ofertas)
+            //         mostrarAlertaCotizacionExitosa('AXA')
+            //       }
+            //     })
+            //     .catch((err) => {
+            //       console.error(err);
+            //     })
+            // );
             
 
             /* SBS */
