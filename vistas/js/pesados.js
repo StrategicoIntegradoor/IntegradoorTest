@@ -1647,9 +1647,9 @@ function cotizarOfertasPesados() {
                    return res.json();
                  })
                  .then((ofertas) => {
-                   if (typeof ofertas[0].Resultado !== 'undefined') {
-                     agregarAseguradoraFallida(`Liberty ${plan}`);
-                     ofertas[0].Mensajes.forEach(mensaje => {
+                   if (typeof ofertas.Resultado !== 'undefined') {
+                     agregarAseguradoraFallida(`Liberty`);
+                     ofertas.Mensajes.forEach(mensaje => {
                        mostrarAlertarCotizacionFallida(`Liberty ${plan}`, mensaje);
                      });
                    } else {
