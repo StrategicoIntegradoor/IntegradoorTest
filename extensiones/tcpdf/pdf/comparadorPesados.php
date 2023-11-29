@@ -1061,7 +1061,7 @@ while ($rowRespuesta8 = mysqli_fetch_assoc($respuestaquery8)) {
 $html3 .= '</tr>';
 
 //::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
-//CONSULTA DE RC EXCESO
+//LIMITE MAXIMO RCE EXCESO
 //::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
 $html3 .= '<tr>';
@@ -1080,8 +1080,8 @@ while ($rowRespuestap1 = mysqli_fetch_assoc($respuestaqueryp1)) {
 	$valorRC = $rowRespuestap1['ValorRC'];
 	$perdidaParcial = $rowRespuestap1['PerdidaParcial'];
 
-	$queryConsultaAsistencia1 = "SELECT * FROM asistencias WHERE `aseguradora` LIKE '$nombreAseguradora' AND `producto` LIKE '$nombreProducto' 
-									AND `rce` LIKE '$valorRC' AND `ppd` LIKE '$perdidaParcial'";
+	$queryConsultaAsistencia1 = "SELECT * FROM asistencias WHERE `aseguradora` LIKE '$nombreAseguradora' AND `producto` LIKE '$nombreProducto'";
+									// -- AND `rce` LIKE '$valorRC' AND `ppd` LIKE '$perdidaParcial'";
 	$respuestaqueryAsistencia1 =  $conexion->query($queryConsultaAsistencia1);
 	$rowRespuestaAsistencia1 = mysqli_fetch_assoc($respuestaqueryAsistencia1);
 	$rce_excesoNumeric = $rowRespuestaAsistencia1['rceexceso'];
