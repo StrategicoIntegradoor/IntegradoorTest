@@ -1023,7 +1023,7 @@ function masAseg() {
   }
 
   // REGISTRA CADA UNA DE LAS OFERTAS COTIZADAS EN LA BD
-function registrarOferta(
+function registrarOfertaPesados(
     aseguradora,
     prima,
     producto,
@@ -1254,7 +1254,7 @@ function registrarOferta(
           oferta.pdf
         );
     
-        registrarOferta(
+        registrarOfertaPesados(
           oferta.entidad,
           oferta.precio,
           oferta.producto,
