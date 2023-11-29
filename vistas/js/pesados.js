@@ -1114,7 +1114,7 @@ function registrarOferta(
     logo,
     UrlPdf
   ) => {
-    console.log("aseguradora:", aseguradora);
+    // console.log("aseguradora:", aseguradora);
     // console.log("prima:", prima);
     // console.log("producto:", producto);
     // console.log("numCotizOferta:", numCotizOferta);
@@ -1574,7 +1574,7 @@ function cotizarOfertasPesados() {
               body.plan = plan
               requestOptions.body = JSON.stringify(body)
             
-              fetch("https://grupoasistencia.com/motor_webservice_tst/CotizarPesados", requestOptions)
+              fetch("https://grupoasistencia.com/motor_webservice_tst/CotizarPesados_tst", requestOptions)
                 .then((res) => {
                   if (!res.ok) throw Error(res.statusText);
                   return res.json();
