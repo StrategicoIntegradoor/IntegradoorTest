@@ -1654,7 +1654,7 @@ function cotizarOfertasPesados() {
                      });
                    } else {
                      validarOfertasPesados(ofertas);
-                     mostrarAlertaCotizacionExitosa(`Liberty ${plan}`);
+                     mostrarAlertaCotizacionExitosa(`Liberty`);
                    }
                  })
                  .catch((err) => {
