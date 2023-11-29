@@ -1125,7 +1125,6 @@ function registrarOfertaPesados(
       // Volver a formatear con puntos
       var RC = RC.toLocaleString();
   
-      console.log(RCFormateado);
   }
     // console.log("aseguradora:", aseguradora);
     // console.log("prima:", prima);
