@@ -1115,9 +1115,18 @@ function registrarOfertaPesados(
     UrlPdf
   ) => {
 
-    if(aseguradora == 'Mundial'){
-        console.log(RC)
-    }
+    if (aseguradora == 'Mundial') {
+      // Eliminar los puntos y convertir a número
+      RC = parseFloat(RC.replace(/\./g, ''));
+  
+      // Sumar 1.500.000.000
+      RC += 1500000000;
+  
+      // Volver a formatear con puntos
+      var RCFormateado = RC.toLocaleString();
+  
+      console.log(RCFormateado);
+  }
     // console.log("aseguradora:", aseguradora);
     // console.log("prima:", prima);
     // console.log("producto:", producto);
