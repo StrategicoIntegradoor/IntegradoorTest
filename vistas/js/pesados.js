@@ -1245,7 +1245,7 @@ function registrarOferta(
           oferta.precio,
           oferta.producto,
           oferta.numero_cotizacion,
-          oferta.cubrimiento,
+          oferta.responsabilidad_civil,
           oferta.deducible,
           oferta.PPH,
           oferta.conductores_elegidos,
