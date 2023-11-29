@@ -1115,6 +1115,7 @@ function registrarOfertaPesados(
     UrlPdf
   ) => {
 
+    //FUNCION QUE ACOMODA RCE EN PARRILLA CUANDO LLEGA MUNDIAL
     if (aseguradora == 'Mundial') {
       // Eliminar los puntos y convertir a número
       RC = parseFloat(RC.replace(/\./g, ''));
@@ -1126,16 +1127,17 @@ function registrarOfertaPesados(
       var RC = RC.toLocaleString();
   
   }
-    // console.log("aseguradora:", aseguradora);
-    // console.log("prima:", prima);
-    // console.log("producto:", producto);
-    // console.log("numCotizOferta:", numCotizOferta);
-    // console.log("PT:", PT);
-    // console.log("PP:", PP);
-    // console.log("CE:", CE);
-    // console.log("GR:", GR);
-    // console.log("logo:", logo);
-    // console.log("UrlPdf:", UrlPdf);
+
+    //FUNCION QUE ACOMODA LOS NOMBRES DE LOS PLANES CUANDO LLEGA LIBERTY
+    if (aseguradora == 'Liberty') {
+
+      if(producto == 'Pesados Full1'){
+        prodcuto == 'Pesados Full'
+      }else if(producto == 'Pesados Integral1'){
+        prodcuto == 'Pesados Integral'
+      }  
+  }
+
     let cardCotizacion = `
               <div class='col-lg-12'>
                 <div class='card-ofertas'>
