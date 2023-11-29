@@ -1106,7 +1106,7 @@ function registrarOferta(
     prima,
     producto,
     numCotizOferta,
-    PT,
+    RC,
     PP,
     PPH,
     CE,
@@ -1152,7 +1152,7 @@ function registrarOferta(
                     <div class="col-xs-12 col-sm-6 col-md-4">
                       <ul class="list-group">
                         <li class="list-group-item">
-                          <span class="badge">* $${PT}</span>
+                          <span class="badge">* $${RC}</span>
                           Responsabilidad Civil (RCE)
                         </li>
                         <li class="list-group-item">
