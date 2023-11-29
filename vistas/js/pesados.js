@@ -1107,7 +1107,7 @@ function registrarOferta(
     producto,
     numCotizOferta,
     RC,
-    PP,
+    PT,
     PPH,
     CE,
     GR,
@@ -1156,7 +1156,7 @@ function registrarOferta(
                           Responsabilidad Civil (RCE)
                         </li>
                         <li class="list-group-item">
-                          <span class="badge">* ${PP}</span>
+                          <span class="badge">* ${PT}</span>
                           Pérdida Total Daños y Hurto
                         </li>
                         <li class="list-group-item">
@@ -1246,7 +1246,7 @@ function registrarOferta(
           oferta.producto,
           oferta.numero_cotizacion,
           oferta.responsabilidad_civil,
-          oferta.deducible,
+          oferta.cubrimiento,
           oferta.PPH,
           oferta.conductores_elegidos,
           oferta.servicio_grua,
