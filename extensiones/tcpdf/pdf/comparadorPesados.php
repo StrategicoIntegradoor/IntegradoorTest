@@ -949,13 +949,6 @@ $respuestaquery9 =  $conexion->query($query9);
 
 //$valorlimiterow cuenta el numero de ofertas seleccionadas
 $valorlimiterow = mysqli_num_rows($respuestaquery9);
-// $response = mysqli_fetch_assoc($respuestaquery9);
-// $valorRC = $response['ValorRC'];
-// if (is_numeric($valorRC)) {
-//     $pdfValorRC = $valorRC/1000000;
-// } else {
-// 	$pdfValorRC = $response['ValorRC'];
-// } 
 
 if($valorlimiterow==10){
 	while ($rowRespuesta9 = mysqli_fetch_assoc($respuestaquery9)) {
