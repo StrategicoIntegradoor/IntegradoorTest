@@ -1108,7 +1108,7 @@ function registrarOferta(
     numCotizOferta,
     RC,
     PT,
-    PPH,
+    PP,
     CE,
     GR,
     logo,
@@ -1160,7 +1160,7 @@ function registrarOferta(
                           Pérdida Total Daños y Hurto
                         </li>
                         <li class="list-group-item">
-                          <span class="badge">* ${PPH}</span>
+                          <span class="badge">* ${PP}</span>
                           Pérdida Parcial Daños y Hurto
                         </li>
                         <li class="list-group-item">
@@ -1247,7 +1247,7 @@ function registrarOferta(
           oferta.numero_cotizacion,
           oferta.responsabilidad_civil,
           oferta.cubrimiento,
-          oferta.PPH,
+          oferta.deducible,
           oferta.conductores_elegidos,
           oferta.servicio_grua,
           oferta.imagen,
