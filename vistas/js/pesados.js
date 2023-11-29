@@ -1114,6 +1114,10 @@ function registrarOfertaPesados(
     logo,
     UrlPdf
   ) => {
+
+    if(aseguradora == 'Mundial'){
+        console.log(RC)
+    }
     // console.log("aseguradora:", aseguradora);
     // console.log("prima:", prima);
     // console.log("producto:", producto);
