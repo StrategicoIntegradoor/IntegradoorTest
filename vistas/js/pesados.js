@@ -1123,7 +1123,7 @@ function registrarOfertaPesados(
       RC += 1500000000;
   
       // Volver a formatear con puntos
-      var RCFormateado = RC.toLocaleString();
+      var RC = RC.toLocaleString();
   
       console.log(RCFormateado);
   }
