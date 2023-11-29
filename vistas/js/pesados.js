@@ -1132,9 +1132,9 @@ function registrarOfertaPesados(
     if (aseguradora == 'Liberty') {
 
       if(producto == 'Pesados Full1'){
-        prodcuto == 'Pesados Full'
+        producto == 'Pesados Full'
       }else if(producto == 'Pesados Integral1'){
-        prodcuto == 'Pesados Integral'
+        producto == 'Pesados Integral'
       }  
   }
 
