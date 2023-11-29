@@ -1542,7 +1542,7 @@ function cotizarOfertasPesados() {
             plan = 'Trailer'
             body.plan = plan
             requestOptions.body = JSON.stringify(body)
-            fetch("https://grupoasistencia.com/motor_webservice_tst/CotizarPesados",requestOptions)
+            fetch("https://grupoasistencia.com/motor_webservice_tst/CotizarPesados_tst",requestOptions)
               .then(function (response) {
                 if (!response.ok) throw Error(response.statusText);
                 return response.json();
