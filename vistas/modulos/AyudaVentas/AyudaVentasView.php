@@ -11,10 +11,10 @@ if ($_SESSION["permisos"]["Ayudaventas"] != "x") {
     return;
 }
 
-if ($_SESSION["permisos"]["ayudaventas_freelance"] == "x") {
-    $formasDePago = "x";
+if ($_SESSION["permisos"]["ayudaventas_freelance"] != "x") {
+    $formasDePago = "y";
 }else{
-    $formasDePago = "Y";
+    $formasDePago = "x";
 }
 
 ?>
