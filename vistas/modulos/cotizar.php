@@ -12,7 +12,7 @@ if (!$enlace) {
 }
 
 // mysqli_set_charset($enlace, "utf8");
-
+var_dump($_SESSION);
 
 function obtenerCredenciales($enlace, $tabla, $columnas, $idIntermediario) {
   $query = "SELECT $columnas FROM `$tabla` WHERE `id_intermediario` = '$idIntermediario'";
