@@ -242,10 +242,10 @@ const obtenerAyudaVentas = async () => {
                                             ? ayudaVenta.continuidad.split('-') : []
             let formasDePago = [];
             if(rol == 'x'){
-                const formasDePago = (ayudaVenta.formas_de_pago_freelance != null) 
+                formasDePago = (ayudaVenta.formas_de_pago_freelance != null) 
                                             ? ayudaVenta.formas_de_pago_freelance.split('@') : []
             }else{
-                const formasDePago = (ayudaVenta.formas_de_pago != null) 
+                formasDePago = (ayudaVenta.formas_de_pago != null) 
                                             ? ayudaVenta.formas_de_pago.split('@') : []
             }                                
             let partTemplate = `
