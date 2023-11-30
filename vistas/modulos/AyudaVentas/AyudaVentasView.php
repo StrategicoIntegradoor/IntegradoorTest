@@ -11,10 +11,7 @@ if ($_SESSION["permisos"]["Ayudaventas"] != "x") {
     return;
 }
 
-if ($_SESSION["permisos"]["AyudaVentasFreelance"] != "x") {
-    var_dump($_SESSION["permisos"]);
-    $formasDePago = "y";
-}else{
+if ($_SESSION["permisos"]["AyudaVentasFreelance"] == "x") {
     $formasDePago = "x";
 }
 
