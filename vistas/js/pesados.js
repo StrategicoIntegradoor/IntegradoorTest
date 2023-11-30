@@ -105,7 +105,7 @@ $(document).ready(function () {
     $("#txtConocesLaPlacaNo").click(function () {
       document.getElementById("contenPlaca").style.display = "none";
       document.getElementById("contenCeroKM").style.display = "block";
-      document.getElementById("placaVeh").value = "CAT770";
+      document.getElementById("placaVeh").value = "TR1234";
       $("#txtEsCeroKmNo").prop("checked", false);
     });
   
@@ -958,7 +958,7 @@ function masAseg() {
           $("#clasepesados").val(clase);
   
           var placaVeh = $("#placaVeh").val();
-          if (placaVeh == "CAT770") {
+          if (placaVeh == "TR1234") {
             $("#txtPlacaVeh").val("SIN PLACA - VEHÍCULO 0 KM").val();
           } else {
             $("#txtPlacaVeh").val(placaVeh).val();
@@ -1793,7 +1793,7 @@ function cotizarOfertasPesados() {
            $("#clasepesados").val(clase);
 
            var placaVeh = $("#placaVeh").val();
-           if (placaVeh == "CAT770") {
+           if (placaVeh == "TR1234") {
              $("#txtPlacaVeh").val("SIN PLACA - VEHÍCULO 0 KM").val();
            } else {
              $("#txtPlacaVeh").val(placaVeh).val();
