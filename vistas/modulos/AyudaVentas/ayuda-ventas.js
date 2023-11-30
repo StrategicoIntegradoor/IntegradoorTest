@@ -241,8 +241,13 @@ const obtenerAyudaVentas = async () => {
                                             ? ayudaVenta.centro_de_inspeccion.split('@') : []
             const continuidades = (ayudaVenta.continuidad != null) 
                                             ? ayudaVenta.continuidad.split('-') : []
-            const formasDePago = (ayudaVenta.formas_de_pago != null) 
+            if(rol = 'x'){
+                const formasDePago = (ayudaVenta.formas_de_pago_freelance != null) 
                                             ? ayudaVenta.formas_de_pago.split('@') : []
+            }else{
+                const formasDePago = (ayudaVenta.formas_de_pago != null) 
+                                            ? ayudaVenta.formas_de_pago.split('@') : []
+            }                                
             let partTemplate = `
                 <tr >
                     <td><ul style="margin-top: 60px;"><img src="./vistas/modulos/AyudaVentas/src/logos/${ayudaVenta.aseguradora}.png" class="img-responsive" width="80"></ul></td>
