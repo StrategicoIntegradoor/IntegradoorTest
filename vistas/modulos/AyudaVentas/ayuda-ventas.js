@@ -224,7 +224,6 @@ const obtenerAyudaVentas = async () => {
         let fecha_max1 = '0000-00-00 00:00:00';
 
         let rol = document.getElementById("rol").value;
-        console.log(rol)
         let template = ''
         data.forEach(ayudaVenta => {
 
@@ -241,12 +240,11 @@ const obtenerAyudaVentas = async () => {
                                             ? ayudaVenta.centro_de_inspeccion.split('@') : []
             const continuidades = (ayudaVenta.continuidad != null) 
                                             ? ayudaVenta.continuidad.split('-') : []
+            let formasDePago = [];
             if(rol == 'x'){
-                console.log("camino 1")
                 const formasDePago = (ayudaVenta.formas_de_pago_freelance != null) 
                                             ? ayudaVenta.formas_de_pago_freelance.split('@') : []
             }else{
-                console.log("camino 2")
                 const formasDePago = (ayudaVenta.formas_de_pago != null) 
                                             ? ayudaVenta.formas_de_pago.split('@') : []
             }                                
