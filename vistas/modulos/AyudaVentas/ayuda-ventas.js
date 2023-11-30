@@ -242,6 +242,7 @@ const obtenerAyudaVentas = async () => {
             const continuidades = (ayudaVenta.continuidad != null) 
                                             ? ayudaVenta.continuidad.split('-') : []
             if(rol = 'x'){
+                console.log("Camino 1")
                 const formasDePago = (ayudaVenta.formas_de_pago_freelance != null) 
                                             ? ayudaVenta.formas_de_pago.split('@') : []
             }else{
