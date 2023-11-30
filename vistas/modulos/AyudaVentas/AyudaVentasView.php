@@ -11,6 +11,12 @@ if ($_SESSION["permisos"]["Ayudaventas"] != "x") {
     return;
 }
 
+if ($_SESSION["permisos"]["ayudaventas_freelance"] == "x") {
+    $formasDePago = "x";
+}else{
+    $formasDePago = "Y";
+}
+
 ?>
 
 <style>
@@ -79,7 +85,8 @@ if ($_SESSION["permisos"]["Ayudaventas"] != "x") {
 
                     <input type="hidden" id="aseguradora">
                     <input type="hidden" id="id_ayuda_venta">
-                    <input type="hidden" id="rol" value="<?php echo $_SESSION["rol"]; ?>">
+                    <!-- <input type="hidden" id="rol" value="<?php echo $_SESSION["rol"]; ?>"> -->
+                    <input type="hidden" id="rol" value="<?php echo $formasDePago; ?>">
                     <div class="row">
                         <div class="form-group col-md-6 col-sm-6 col-xs-12">
                             <label>Linea de atención</label>
