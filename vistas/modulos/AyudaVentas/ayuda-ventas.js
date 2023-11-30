@@ -224,6 +224,7 @@ const obtenerAyudaVentas = async () => {
         let fecha_max1 = '0000-00-00 00:00:00';
 
         let rol = document.getElementById("rol").value;
+        console.log(rol)
         let template = ''
         data.forEach(ayudaVenta => {
 
