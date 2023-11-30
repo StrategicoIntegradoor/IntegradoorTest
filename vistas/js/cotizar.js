@@ -167,7 +167,7 @@ $(document).ready(function () {
   $("#txtConocesLaPlacaNo").click(function () {
     document.getElementById("contenPlaca").style.display = "none";
     document.getElementById("contenCeroKM").style.display = "block";
-    document.getElementById("placaVeh").value = "TR1234";
+    document.getElementById("placaVeh").value = "SSS555";
     $("#txtEsCeroKmNo").prop("checked", false);
   });
 
@@ -433,7 +433,7 @@ var contErrProtocolo = 0;
 // Permite consultar la informacion del vehiculo por medio de la Placa (Seguros del Estado)
 function consulPlaca() {
   var numplaca = document.getElementById("placaVeh").value;
-  if (numplaca == "TR1234") {
+  if (numplaca == "SSS555") {
     document.getElementById("formularioVehiculo").style.display = "block";
     $("#loaderPlaca").html("");
   }else{
@@ -1057,7 +1057,7 @@ function consulDatosFasecolda(codFasecolda, edadVeh) {
           var valorVeh = Number(valorFasecVeh) * 1000;
 
           var placaVeh = $("#placaVeh").val();
-          if (placaVeh == "TR1234") {
+          if (placaVeh == "SSS555") {
             $("#txtPlacaVeh").val("SIN PLACA - VEHÍCULO 0 KM").val();
           } else {
             $("#txtPlacaVeh").val(placaVeh).val();
@@ -1111,7 +1111,7 @@ function consulDatosFasecoldaPesados(codFasecolda, edadVeh) {
         $("#clasepesados").val(clase);
 
         var placaVeh = $("#placaVeh").val();
-        if (placaVeh == "TR1234") {
+        if (placaVeh == "SSS555") {
           $("#txtPlacaVeh").val("SIN PLACA - VEHÍCULO 0 KM").val();
         } else {
           $("#txtPlacaVeh").val(placaVeh).val();
@@ -3868,7 +3868,7 @@ $("#btnConsultarVehmanualbuscador").click(function () {
             $("#clasepesados").val(clase);
 
             var placaVeh = $("#placaVeh").val();
-            if (placaVeh == "TR1234") {
+            if (placaVeh == "SSS555") {
               $("#txtPlacaVeh").val("SIN PLACA - VEHÍCULO 0 KM").val();
             } else {
               $("#txtPlacaVeh").val(placaVeh).val();
