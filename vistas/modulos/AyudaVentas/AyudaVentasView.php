@@ -150,10 +150,11 @@ if ($_SESSION["permisos"]["Ayudaventas"] != "x") {
                                 <th style="width: 7%; text-align: center">Sarlaft PJ</th>
                                 <th style="width: 12%; text-align: center">Centro de inspección</th>
                                 <th style="width: 15%; text-align: center">Continuidad</th>
+                                <th style="width: 15%; text-align: center">Formas de pago</th>
                                 <?php
-                                if($_SESSION["permisos"]["ayudaventas_freelance"] == "x"){
-                                    echo '<th style="width: 15%; text-align: center">Formas de pago</th>';
-                                }
+                                // if($_SESSION["permisos"]["ayudaventas_freelance"] == "x"){
+                                //     echo '<th style="width: 15%; text-align: center">Formas de pago</th>';
+                                // }
                                 if ($_SESSION["permisos"]["Editarinformaciondelayudaventas"] == "x") {
                                     echo '<th style="text-align: center">Editar</th>';
                                 }
