@@ -973,6 +973,7 @@ if ($_SESSION['permisos']['id_rol'] == '19') {
 </div>
 
 <script src="vistas/js/cotizar.js?v=<?php echo (rand()); ?>"></script>
+<script src="vistas/js/cotizaciones.js?v=<?php echo (rand()); ?>"></script>
 
 
 <?php
