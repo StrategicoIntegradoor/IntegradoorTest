@@ -282,7 +282,7 @@ echo'<a href="https://web.whatsapp.com/send?phone=+573153539141" target="_blank"
   <script src="vistas/js/invitacion.js?v=<?php echo (rand()); ?>"></script>
   <script src="vistas/js/pesados.js?v=<?php echo (rand()); ?>"></script>
   <script src="vistas/js/plantilla.js?v=<?php echo (rand()); ?>"></script>
-  <script src="vistas/js/count.js?v=<?php echo (rand()); ?>"></script>
+  <!-- <script src="vistas/js/count.js?v=<?php echo (rand()); ?>"></script> -->
   <script src="vistas/js/clientes.js?v=<?php echo (rand()); ?>"></script>
   <script src="vistas/js/fasecolda.js?v=<?php echo (rand()); ?>"></script>
   <script src="vistas/js/cotizaciones.js?v=<?php echo (rand()); ?>"></script>
