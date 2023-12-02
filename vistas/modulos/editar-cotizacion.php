@@ -904,6 +904,8 @@
 </div>
 
 <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="vistas/js/cotizaciones.js?v=<?php echo (rand()); ?>"></script>
+
 <script>
 // document.addEventListener('DOMContentLoaded', function() {
 //     var valorMundial = document.getElementById('mundial').value;
