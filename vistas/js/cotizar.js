@@ -1768,40 +1768,40 @@ function cotizarOfertas() {
             // );
 
             /* Mapfre */
-            // cont.push(
+            cont.push(
 
-            //   fetch("https://grupoasistencia.com/motor_webservice_tst/mapfrecotizacion4", requestOptions)
+              fetch("https://grupoasistencia.com/motor_webservice_tst/mapfrecotizacion4", requestOptions)
 
-            //     .then((res) => {
-            //       if (!res.ok) throw Error(res.statusText);
-            //       return res.json();
-            //     })
-            //     .then((ofertas) => {
-            //       console.log(ofertas)
-            //       let result = []
-            //       result.push(ofertas)
+                .then((res) => {
+                  if (!res.ok) throw Error(res.statusText);
+                  return res.json();
+                })
+                .then((ofertas) => {
+                  console.log(ofertas)
+                  let result = []
+                  result.push(ofertas)
 
-            //       if (typeof ofertas[0].Resultado !== 'undefined') {
-            //         agregarAseguradoraFallida('Mapfre')
-            //         ofertas[0].Mensajes.forEach(mensaje => {
-            //           mostrarAlertarCotizacionFallida('Mapfre', mensaje)
-            //         })
+                  if (typeof ofertas[0].Resultado !== 'undefined') {
+                    agregarAseguradoraFallida('Mapfre')
+                    ofertas[0].Mensajes.forEach(mensaje => {
+                      mostrarAlertarCotizacionFallida('Mapfre', mensaje)
+                    })
 
-            //       } else {
+                  } else {
 
-            //         validarOfertas(ofertas);
-            //         // let successMap = true;
-            //         // if (successMap) {
-            //           mostrarAlertaCotizacionExitosa('Mapfre')
-            //           // successMap = false
-            //         // }
-            //       }
-            //     })
-            //     .catch((err) => {
-            //       agregarAseguradoraFallida('SBS')
-            //       console.error(err);
-            //     })
-            // );
+                    validarOfertas(ofertas);
+                    // let successMap = true;
+                    // if (successMap) {
+                      mostrarAlertaCotizacionExitosa('Mapfre')
+                      // successMap = false
+                    // }
+                  }
+                })
+                .catch((err) => {
+                  agregarAseguradoraFallida('SBS')
+                  console.error(err);
+                })
+            );
 
             /* Previsora */
             cont.push(
