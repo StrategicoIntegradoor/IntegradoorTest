@@ -2058,32 +2058,32 @@ function cotizarOfertas() {
 
           // }
           //Liberty
-          cont.push(
-            fetch("https://grupoasistencia.com/motor_webservice_tst/Liberty", requestOptions)
-              .then((res) => {
-                if (res.status === 500) {
-                    throw Error("Error interno del servidor (HTTP 500)");
-                }
-                if (!res.ok) {
-                    throw Error(res.statusText);
-                }
-                return res.json();
-              })
-              .then((ofertas) => {
-                if (typeof ofertas[0].Resultado !== 'undefined') {
-                  agregarAseguradoraFallida('Liberty')
-                  ofertas[0].Mensajes.forEach(mensaje => {
-                    mostrarAlertarCotizacionFallida('Liberty', mensaje)
-                  })
-                } else {
-                  validarOfertas(ofertas);
-                  mostrarAlertaCotizacionExitosa('Liberty')
-                }
-              })
-              .catch((err) => {
-                console.error(err);
-              })
-          );
+          // cont.push(
+          //   fetch("https://grupoasistencia.com/motor_webservice_tst/Liberty", requestOptions)
+          //     .then((res) => {
+          //       if (res.status === 500) {
+          //           throw Error("Error interno del servidor (HTTP 500)");
+          //       }
+          //       if (!res.ok) {
+          //           throw Error(res.statusText);
+          //       }
+          //       return res.json();
+          //     })
+          //     .then((ofertas) => {
+          //       if (typeof ofertas[0].Resultado !== 'undefined') {
+          //         agregarAseguradoraFallida('Liberty')
+          //         ofertas[0].Mensajes.forEach(mensaje => {
+          //           mostrarAlertarCotizacionFallida('Liberty', mensaje)
+          //         })
+          //       } else {
+          //         validarOfertas(ofertas);
+          //         mostrarAlertaCotizacionExitosa('Liberty')
+          //       }
+          //     })
+          //     .catch((err) => {
+          //       console.error(err);
+          //     })
+          // );
 
             /* Allianz */
             // cont.push(
