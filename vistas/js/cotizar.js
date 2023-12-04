@@ -1804,28 +1804,28 @@ function cotizarOfertas() {
             // );
 
             /* Previsora */
-            // cont.push(
-            //   fetch("https://grupoasistencia.com/motor_webservice_tst/Previsora", requestOptions)
-            //     .then((res) => {
-            //       if (!res.ok) throw Error(res.statusText);
-            //       return res.json();
-            //     })
-            //     .then((ofertas) => {
-            //       console.log(ofertas)
-            //       if (typeof ofertas[0].Resultado !== 'undefined') {
-            //         agregarAseguradoraFallida('Previsora')
-            //         ofertas[0].Mensajes.forEach(mensaje => {
-            //           mostrarAlertarCotizacionFallida('Previsora', mensaje)
-            //         })
-            //       } else {
-            //         validarOfertas(ofertas);
-            //         mostrarAlertaCotizacionExitosa('Previsora')
-            //       }
-            //     })
-            //     .catch((err) => {
-            //       console.error(err);
-            //     })
-            // );
+            cont.push(
+              fetch("https://grupoasistencia.com/motor_webservice_tst/Previsora", requestOptions)
+                .then((res) => {
+                  if (!res.ok) throw Error(res.statusText);
+                  return res.json();
+                })
+                .then((ofertas) => {
+                  console.log(ofertas)
+                  if (typeof ofertas[0].Resultado !== 'undefined') {
+                    agregarAseguradoraFallida('Previsora')
+                    ofertas[0].Mensajes.forEach(mensaje => {
+                      mostrarAlertarCotizacionFallida('Previsora', mensaje)
+                    })
+                  } else {
+                    validarOfertas(ofertas);
+                    mostrarAlertaCotizacionExitosa('Previsora')
+                  }
+                })
+                .catch((err) => {
+                  console.error(err);
+                })
+            );
 
             /* Equidad */
             cont.push(
