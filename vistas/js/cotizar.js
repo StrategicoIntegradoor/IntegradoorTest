@@ -536,6 +536,20 @@ function consulPlaca() {
               } else if (codigoClase == 14 || codigoClase == 21) {
                 claseVehiculo = "PESADO";
                 limiteRCESTADO = 18;
+                var restriccion = '';
+                if(rolAsesor == 19){
+                  restriccion = 'Lo sentimos, no puedes cotizar vehículos pesados por este módulo. Para hacerlo debes ingresar al modulo Cotizar Pesados.';
+                }else{
+                  restriccion = 'Lo sentimos, no puedes cotizar pesados por este módulo.'
+                }
+                Swal.fire({
+                  icon: 'error',
+                  title: 'Lo sentimos',
+                  text: restriccion
+                }).then(() => {
+                  // Recargar la página después de cerrar el SweetAlert
+                  location.reload();
+                });
               } else if (codigoClase == 19) {
                 claseVehiculo = "VAN";
                 limiteRCESTADO = 18;
