@@ -1647,10 +1647,10 @@ function cotizarOfertasPesados() {
                    return res.json();
                  })
                  .then((ofertas) => {
-                   if (typeof ofertas.Resultado !== 'undefined') {
+                   if (typeof ofertas[0].Resultado !== 'undefined') {
                      agregarAseguradoraFallida(`Liberty`);
-                     ofertas.Mensajes.forEach(mensaje => {
-                       mostrarAlertarCotizacionFallida(`Liberty ${plan}`, mensaje);
+                      ofertas[0].Mensajes.forEach(mensaje => {
+                      mostrarAlertarCotizacionFallida(`Liberty ${plan}`, mensaje);
                      });
                    } else {
                      validarOfertasPesados(ofertas);
