@@ -1500,9 +1500,13 @@ function cotizarOfertas() {
       title: 'Lo sentimos',
       text: restriccion
     }).then(() => {
-      // Recargar la página después de cerrar el SweetAlert
-      location.reload();
+      // Agregar un retraso antes de recargar la página (por ejemplo, 2 segundos)
+      setTimeout(() => {
+          // Recargar la página después del retraso
+          location.reload();
+      }, 2000); // 2000 milisegundos = 2 segundos
     });
+    // Salir del código aquí para evitar la ejecución del resto del código
     return;
   }
   var tipoServicio = document.getElementById("txtTipoServicio").value;
@@ -1518,9 +1522,13 @@ function cotizarOfertas() {
       title: 'Lo sentimos',
       text: restriccion
     }).then(() => {
-      // Recargar la página después de cerrar el SweetAlert
-      location.reload();
+      // Agregar un retraso antes de recargar la página (por ejemplo, 2 segundos)
+      setTimeout(() => {
+          // Recargar la página después del retraso
+          location.reload();
+      }, 2000); // 2000 milisegundos = 2 segundos
     });
+    // Salir del código aquí para evitar la ejecución del resto del código
     return;
   }
   var placa = document.getElementById("placaVeh").value;
