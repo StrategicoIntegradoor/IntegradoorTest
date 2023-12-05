@@ -58,7 +58,7 @@ $fechaCotiz = substr($fila['cot_fch_cotizacion'], 0, -9);
 $fechaVigencia = date("d-m-Y", strtotime($fechaCotiz));
 
 $placa = $fila["cot_placa"] . " ";
-if ($placa == "CAT770 ") {
+if ($placa == "WWW404") {
 	$placa = "  0 KMM";
 }
 $modelo = $fila["cot_modelo"];
