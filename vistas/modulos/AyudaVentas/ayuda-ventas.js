@@ -311,7 +311,7 @@ const obtenerAyudaVentas = async () => {
             </style>
                 <td class="fixed-width">${construirHtmlCentrosDeInspeccion(centrosDeInspeccion)}</td>
                 <td class="fixed-width">${construirHtmlContinuidad(continuidades)}</td>
-                <td class="fixed-width">${construirHtmlCambioIntermediario(politicas_cambio_intermediario)}</td>
+                <td class="fixed-width">${construirHtmlCambioIntermediario(cambioPoliticas)}</td>
                 <td class="fixed-width">${construirHtmlFormasDePago(formasDePago)}</td>`
             if(permisos.Editarinformaciondelayudaventas == 'x'){
                 partTemplate += `<td style="line-height: 200px;">
