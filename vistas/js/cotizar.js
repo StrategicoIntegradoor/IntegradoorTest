@@ -346,6 +346,7 @@ function menosAgr() {
 function consultarAsegurado() {
   var tipoDocumentoID = document.getElementById("tipoDocumentoID").value;
   var numDocumentoID = document.getElementById("numDocumentoID").value;
+  console.log(tipoDocumentoID)
   if(tipoDocumentoID == "2"){
     var restriccion = '';
     if(rolAsesor == 19){
