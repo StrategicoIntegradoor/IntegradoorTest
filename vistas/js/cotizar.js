@@ -1960,6 +1960,7 @@ function cotizarOfertas() {
                   }
                 })
                 .catch((err) => {
+                  agregarAseguradoraFallida('Bolivar')
                   console.error(err);
                 })
             );
