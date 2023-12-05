@@ -346,7 +346,22 @@ function menosAgr() {
 function consultarAsegurado() {
   var tipoDocumentoID = document.getElementById("tipoDocumentoID").value;
   var numDocumentoID = document.getElementById("numDocumentoID").value;
-
+  if(tipoDocumentoID == "2"){
+    var restriccion = '';
+    if(rolAsesor == 19){
+      restriccion = 'Lo sentimos, no puedes realizar cotizaciones para personas jurídicas por este cotizador. Para hacerlo debes comunicarte con el Equipo de Asesores Freelance de Grupo Asistencia, quienes podrán ayudarte a cotizar de manera manual con diferentes aseguradoras.';
+    }else{
+      restriccion = 'Lo sentimos, no puedes realizar cotizaciones para personas jurídicas por este cotizador.'
+    }
+    Swal.fire({
+      icon: 'error',
+      title: 'Lo sentimos',
+      text: restriccion
+    }).then(() => {
+      // Recargar la página después de cerrar el SweetAlert
+      location.reload();
+    });
+  }
   $.ajax({
     type: "POST",
     url: "src/consultarAsegurado.php",
