@@ -97,6 +97,20 @@ const construirHtmlContinuidad = continuidades => {
 
     return html
 }
+
+const construirHtmlCambioIntermediario = politicas_cambio_intermediario => {
+    if (continuidades.length === 0) return ''
+    let html = '<ul style="margin-top: 60px;">'
+    continuidades.forEach(continuidad => {
+        if (continuidad !== '') html += `<li>- ${continuidad}</li>`
+    })
+    html += '</ul>'
+
+    return html
+}
+
+
+
 const construirHtmlFormasDePago = formasDePago => {
     if (formasDePago.length === 0) return '';
     let html = '<ul style="margin-top: 60px;">';
@@ -191,6 +205,10 @@ const llenarFormulario = _data => {
         continuidades = _data.continuidad.split('-')
         llenarContinuidades(continuidades)
     }
+    if (_data.politicas_cambio_intermediario != null) {
+        politicas = _data.politicas_cambio_intermediario.split('-')
+        llenarPoliticasCambio(politicas)
+    }
     if (_data.formas_de_pago != null) {
         formasDePago = _data.formas_de_pago.split('-')
         llenarFormasDePago(formasDePago)
@@ -240,6 +258,8 @@ const obtenerAyudaVentas = async () => {
                                             ? ayudaVenta.centro_de_inspeccion.split('@') : []
             const continuidades = (ayudaVenta.continuidad != null) 
                                             ? ayudaVenta.continuidad.split('-') : []
+            const cambioPoliticas = (ayudaVenta.politicas_cambio_intermediario != null) 
+                                            ? ayudaVenta.politicas_cambio_intermediario.split('-') : []
             let formasDePago = [];
             if(rol == 'x'){
                 formasDePago = (ayudaVenta.formas_de_pago_freelance != null) 
@@ -291,6 +311,7 @@ const obtenerAyudaVentas = async () => {
             </style>
                 <td class="fixed-width">${construirHtmlCentrosDeInspeccion(centrosDeInspeccion)}</td>
                 <td class="fixed-width">${construirHtmlContinuidad(continuidades)}</td>
+                <td class="fixed-width">${construirHtmlCambioIntermediario(politicas_cambio_intermediario)}</td>
                 <td class="fixed-width">${construirHtmlFormasDePago(formasDePago)}</td>`
             if(permisos.Editarinformaciondelayudaventas == 'x'){
                 partTemplate += `<td style="line-height: 200px;">
@@ -442,6 +463,20 @@ const llenarFormasDePago = _formasDePago => {
 const editarFormaDePago = (_index, _forma_de_pago_value_index) => {
     const d = document
     formasDePago[_index] = d.querySelector('#' + _forma_de_pago_value_index).value
+}
+const llenarPoliticasCambio = _politicas_cambio_intermediario => {
+    const d = document
+    let template = ''
+    _politicas_cambio_intermediario.forEach((politica, index) => {
+        template += `
+        <div class="form-group">
+            <input type="hidden" value="${index}" />
+            <input class="form-control" type="text" id="politica_value_${index}" value="${politica}" />
+            <button class="btn btn-danger" onclick="editarPolitica(${index}, 'politica_value_${index}')">Editar   </button>
+        </div>
+        `
+    })
+    d.querySelector('#continuidades').innerHTML = template
 }
 /* END - FORMAS DE PAGO */
 
