@@ -2114,32 +2114,32 @@ function cotizarOfertas() {
             // );
 
             /* AXA */
-            // cont.push(
-            //   fetch("https://grupoasistencia.com/motor_webservice_tst/AXA", requestOptions)
-            //     .then((res) => {
-            //       if (res.status === 500) {
-            //           throw Error("Error interno del servidor (HTTP 500)");
-            //       }
-            //       if (!res.ok) {
-            //           throw Error(res.statusText);
-            //       }
-            //       return res.json();
-            //     })
-            //     .then((ofertas) => {
-            //       if (typeof ofertas[0].Resultado !== 'undefined') {
-            //         agregarAseguradoraFallida('AXA')
-            //         ofertas[0].Mensajes.forEach(mensaje => {
-            //           mostrarAlertarCotizacionFallida('AXA', mensaje)
-            //         })
-            //       } else {
-            //         validarOfertas(ofertas)
-            //         mostrarAlertaCotizacionExitosa('AXA')
-            //       }
-            //     })
-            //     .catch((err) => {
-            //       console.error(err);
-            //     })
-            // );
+            cont.push(
+              fetch("https://grupoasistencia.com/motor_webservice_tst/AXA", requestOptions)
+                .then((res) => {
+                  if (res.status === 500) {
+                      throw Error("Error interno del servidor (HTTP 500)");
+                  }
+                  if (!res.ok) {
+                      throw Error(res.statusText);
+                  }
+                  return res.json();
+                })
+                .then((ofertas) => {
+                  if (typeof ofertas[0].Resultado !== 'undefined') {
+                    agregarAseguradoraFallida('AXA')
+                    ofertas[0].Mensajes.forEach(mensaje => {
+                      mostrarAlertarCotizacionFallida('AXA', mensaje)
+                    })
+                  } else {
+                    validarOfertas(ofertas)
+                    mostrarAlertaCotizacionExitosa('AXA')
+                  }
+                })
+                .catch((err) => {
+                  console.error(err);
+                })
+            );
             
 
             /* SBS */
