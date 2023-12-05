@@ -1487,7 +1487,40 @@ function cotizarOfertas() {
     // Concatenar los dígitos en un solo número
     condicional = cuartoDigito + quintoDigito;
   }
-
+  var tipoUsoVehiculo = document.getElementById("txtTipoUsoVehiculo").value;
+  if(tipoUsoVehiculo == "Trabajo"){
+    var restriccion = '';
+    if(rolAsesor == 19){
+      restriccion = 'Lo sentimos, no puedes realizar cotizaciones para vehículo de trabajo por este cotizador. Para hacerlo debes comunicarte con el Equipo de Asesores Freelance de Grupo Asistencia, quienes podrán ayudarte a cotizar de manera manual con diferentes aseguradoras.';
+    }else{
+      restriccion = 'Lo sentimos, no puedes realizar cotizaciones para vehículo de trabajo por este cotizador.'
+    }
+    Swal.fire({
+      icon: 'error',
+      title: 'Lo sentimos',
+      text: restriccion
+    }).then(() => {
+      // Recargar la página después de cerrar el SweetAlert
+      location.reload();
+    });
+  }
+  var tipoServicio = document.getElementById("txtTipoServicio").value;
+  if(tipoUsoVehiculo == "11" || tipoUsoVehiculo == "12"){
+    var restriccion = '';
+    if(rolAsesor == 19){
+      restriccion = 'Lo sentimos, no puedes realizar cotizaciones para vehículo de trabajo por este cotizador. Para hacerlo debes comunicarte con el Equipo de Asesores Freelance de Grupo Asistencia, quienes podrán ayudarte a cotizar de manera manual con diferentes aseguradoras.';
+    }else{
+      restriccion = 'Lo sentimos, no puedes realizar cotizaciones para vehículo de trabajo por este cotizador.'
+    }
+    Swal.fire({
+      icon: 'error',
+      title: 'Lo sentimos',
+      text: restriccion
+    }).then(() => {
+      // Recargar la página después de cerrar el SweetAlert
+      location.reload();
+    });
+  }
   var placa = document.getElementById("placaVeh").value;
   var esCeroKmSi = document.getElementById("txtEsCeroKmSi").checked;
   var esCeroKm = esCeroKmSi.toString();
@@ -1528,8 +1561,6 @@ function cotizarOfertas() {
 
   var fasecoldaVeh = document.getElementById("txtFasecolda").value;
   var valorFasecolda = document.getElementById("txtValorFasecolda").value;
-  var tipoUsoVehiculo = document.getElementById("txtTipoUsoVehiculo").value;
-  var tipoServicio = document.getElementById("txtTipoServicio").value;
   var DptoCirculacion = document.getElementById("DptoCirculacion").value;
   var ciudadCirculacion = document.getElementById("ciudadCirculacion").value;
   var isBenefOneroso = $("input:radio[name=oneroso]:checked").val(); // Valida que alguno de los 2 este selecionado
