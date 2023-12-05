@@ -1510,12 +1510,12 @@ function cotizarOfertas() {
     return;
   }
   var tipoServicio = document.getElementById("txtTipoServicio").value;
-  if(tipoUsoVehiculo == "11" || tipoUsoVehiculo == "12"){
+  if(tipoServicio == "11" || tipoServicio == "12"){
     var restriccion = '';
     if(rolAsesor == 19){
-      restriccion = 'Lo sentimos, no puedes realizar cotizaciones para vehículo de trabajo por este cotizador. Para hacerlo debes comunicarte con el Equipo de Asesores Freelance de Grupo Asistencia, quienes podrán ayudarte a cotizar de manera manual con diferentes aseguradoras.';
+      restriccion = 'Lo sentimos, no puedes realizar cotizaciones para el tipo de servicio público o intermunicipal por este cotizador. Para hacerlo debes comunicarte con el Equipo de Asesores Freelance de Grupo Asistencia, quienes podrán ayudarte a cotizar de manera manual con diferentes aseguradoras.';
     }else{
-      restriccion = 'Lo sentimos, no puedes realizar cotizaciones para vehículo de trabajo por este cotizador.'
+      restriccion = 'Lo sentimos, no puedes realizar cotizaciones para el tipo de servicio público o intermunicipal por este cotizador.'
     }
     Swal.fire({
       icon: 'error',
