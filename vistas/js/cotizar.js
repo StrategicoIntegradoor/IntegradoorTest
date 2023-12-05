@@ -1503,6 +1503,7 @@ function cotizarOfertas() {
       // Recargar la página después de cerrar el SweetAlert
       location.reload();
     });
+    return;
   }
   var tipoServicio = document.getElementById("txtTipoServicio").value;
   if(tipoUsoVehiculo == "11" || tipoUsoVehiculo == "12"){
@@ -1520,6 +1521,7 @@ function cotizarOfertas() {
       // Recargar la página después de cerrar el SweetAlert
       location.reload();
     });
+    return;
   }
   var placa = document.getElementById("placaVeh").value;
   var esCeroKmSi = document.getElementById("txtEsCeroKmSi").checked;
