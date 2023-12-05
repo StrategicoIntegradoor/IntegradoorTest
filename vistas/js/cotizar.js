@@ -288,11 +288,6 @@ function convertirNumero() {
     consulPlaca();
   });
 
-  // Ejectura la funcion Consultar Placa Vehiculo pesado
-  // $("#btnConsultarPlacaPesados").click(function () {
-  //   consulPlacaPesados();
-  // });
-
   // Ejecuta la funcion que trae el Codigo Fasecolda de la Guia
   $("#btnConsultarVeh").click(function () {
     consulCodFasecolda();
@@ -433,6 +428,7 @@ function consulPlaca() {
     document.getElementById("formularioVehiculo").style.display = "block";
     $("#loaderPlaca").html("");
   }else{
+  var rolAsesor = document.getElementById("rolAsesor").value;
   var valnumplaca = numplaca.toUpperCase(); // Convierte la Placa en Mayusculas
   var tipoDocumentoID = document.getElementById("tipoDocumentoID").value;
   var numDocumentoID = document.getElementById("numDocumentoID").value;
@@ -523,11 +519,16 @@ function consulPlaca() {
               } else if (codigoClase == 12) {
                 claseVehiculo = "MOTOCICLETA";
                 limiteRCESTADO = 6;
-                              // Mostrar SweetAlert con el mensaje
+                 var restriccion = '';
+                if(rolAsesor == 19){
+                  restriccion = 'No puedes cotizar motos por este módulo. Para hacerlo, debes comunicarte con el Equipo de Asesores Freelance de Grupo Asistencia, quienes podrán ayudarte a cotizar de manera manual con diferentes aseguradoras.';
+                }else{
+                  restriccion = 'Lo sentimos, no puedes cotizar motos por este módulo.'
+                }
                 Swal.fire({
                   icon: 'error',
                   title: 'Lo sentimos',
-                  text: 'No puedes cotizar motos por este módulo. Para hacerlo, debes comunicarte con el Equipo de Asesores Freelance de Grupo Asistencia, quienes podrán ayudarte a cotizar de manera manual con diferentes aseguradoras.'
+                  text: restriccion
                 }).then(() => {
                   // Recargar la página después de cerrar el SweetAlert
                   location.reload();

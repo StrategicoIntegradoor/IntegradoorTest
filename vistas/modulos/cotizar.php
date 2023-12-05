@@ -254,7 +254,7 @@ if ($_SESSION["permisos"]["Cotizarlivianos"] != "x") {
 }
 
 
-if ($_SESSION['permisos']['id_rol'] == '19') {
+if ($_SESSION['permisos']['id_rol'] == '') {
   echo '<script>
 
     window.location = "https://integradoor.com/app/cotizar";
@@ -266,7 +266,7 @@ if ($_SESSION['permisos']['id_rol'] == '19') {
   // Detén la ejecución del script actual
 }
 
-
+$rolAsesor = $_SESSION['permisos']['id_rol'];
 
 
 ?>
@@ -825,6 +825,8 @@ if ($_SESSION['permisos']['id_rol'] == '19') {
 
         <!-- CAMPOS OCULTOS PARA OPTENER LA INFORMACION-->
         <div style="display: none;">
+          <label>Rol Asesor</label>
+          <input type="hidden" name="rolAsesor" id="rolAsesor" value="<?php echo $rolAsesor; ?>">
           <label>Id Asegurado</label>
           <input type="hidden" name="idCliente" id="idCliente">
           <label>Celular Asegurado</label>
