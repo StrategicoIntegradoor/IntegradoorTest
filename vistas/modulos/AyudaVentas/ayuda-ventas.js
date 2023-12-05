@@ -98,11 +98,11 @@ const construirHtmlContinuidad = continuidades => {
     return html
 }
 
-const construirHtmlCambioIntermediario = politicas_cambio_intermediario => {
-    if (continuidades.length === 0) return ''
+const construirHtmlCambioIntermediario = cambioPoliticas => {
+    if (cambioPoliticas.length === 0) return ''
     let html = '<ul style="margin-top: 60px;">'
-    continuidades.forEach(continuidad => {
-        if (continuidad !== '') html += `<li>- ${continuidad}</li>`
+    cambioPoliticas.forEach(cambioPolitica => {
+        if (cambioPolitica !== '') html += `<li>- ${cambioPolitica}</li>`
     })
     html += '</ul>'
 
