@@ -285,10 +285,6 @@ function convertirNumero() {
 
   // Ejectura la funcion Consultar Placa Vehiculo
   $("#btnConsultarPlaca").click(function () {
-    if (ceroKilometros.checked) {
-      // Mostrar un mensaje en la consola
-      console.log("Opción 'Si' seleccionada - 0 km");
-    }
     consulPlaca();
   });
 
@@ -536,6 +532,16 @@ function consulPlaca() {
               } else if (codigoClase == 16) {
                 claseVehiculo = "MOTOCICLETA";
                 limiteRCESTADO = 6;
+
+              // Mostrar SweetAlert con el mensaje
+              Swal.fire({
+                  icon: 'error',
+                  title: 'Lo sentimos',
+                  text: 'No puedes cotizar motos por este módulo. Para hacerlo, debes comunicarte con el Equipo de Asesores Freelance de Grupo Asistencia, quienes podrán ayudarte a cotizar de manera manual con diferentes aseguradoras.'
+                }).then(() => {
+                  // Recargar la página después de cerrar el SweetAlert
+                  location.reload();
+                });
               }
 
               $("#CodigoClase").val(codigoClase);
