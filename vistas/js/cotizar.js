@@ -523,6 +523,15 @@ function consulPlaca() {
               } else if (codigoClase == 12) {
                 claseVehiculo = "MOTOCICLETA";
                 limiteRCESTADO = 6;
+                              // Mostrar SweetAlert con el mensaje
+                Swal.fire({
+                  icon: 'error',
+                  title: 'Lo sentimos',
+                  text: 'No puedes cotizar motos por este módulo. Para hacerlo, debes comunicarte con el Equipo de Asesores Freelance de Grupo Asistencia, quienes podrán ayudarte a cotizar de manera manual con diferentes aseguradoras.'
+                }).then(() => {
+                  // Recargar la página después de cerrar el SweetAlert
+                  location.reload();
+                });
               } else if (codigoClase == 14 || codigoClase == 21) {
                 claseVehiculo = "PESADO";
                 limiteRCESTADO = 18;
