@@ -532,7 +532,7 @@ function consulPlaca() {
               } else if (codigoClase == 16) {
                 claseVehiculo = "MOTOCICLETA";
                 limiteRCESTADO = 6;
-
+              console.log("MOTOS NO")
               // Mostrar SweetAlert con el mensaje
               Swal.fire({
                   icon: 'error',
