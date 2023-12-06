@@ -289,6 +289,7 @@ const obtenerAyudaVentas = async () => {
 
                     let sarlaftButtons = '<td><ul style="margin-top: 60px;">';
                     sarlaftButtons += ayudaVenta.path_sarlaft ? `<a href="${ayudaVenta.path_sarlaft}" class="btn btn-alert" style="background: red; color: #fff; font-weight: 500;" target="_blank">PDF PN</a>` : '<button class="btn btn-alert" style="background: red; color: #fff; font-weight: 500;">PDF PN</button>';
+                    sarlaftButtons += '<br>'; // Agrega un salto de línea vertical
                     sarlaftButtons += ayudaVenta.path_sarlaft2 ? `<a href="${ayudaVenta.path_sarlaft2}" class="btn btn-alert" style="background: red; color: #fff; font-weight: 500;" target="_blank">PDF PJ</a>` : '<button class="btn btn-alert" style="background: red; color: #fff; font-weight: 500;">PDF PJ</button>';
                     sarlaftButtons += '</ul></td>';
 
