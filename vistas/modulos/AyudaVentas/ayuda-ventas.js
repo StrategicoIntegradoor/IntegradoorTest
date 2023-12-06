@@ -295,17 +295,24 @@ const obtenerAyudaVentas = async () => {
                     partTemplate += sarlaftButtons;
 
 
-
                 }else{
 
-                    let sarlaftButtons = '<td><ul style="margin-top: 60px;">'
-                    sarlaftButtons += ayudaVenta.path_sarlaft ? `<button class="btn btn-alert" style="background: red; color: #fff; font-weight: 500;" onclick="validarPermisoPdfPersonaNatural('./vistas/modulos/AyudaVentas/pdf/sarlaft/${ayudaVenta.path_sarlaft}')">PDF PN</button>` : ''
-                    partTemplate += sarlaftButtons + '</ul></td>'
-                    let sarlaftButtons2 = '<td><ul style="margin-top: 60px;">'
-                    sarlaftButtons2 += ayudaVenta.path_sarlaft2 ? `<button class="btn btn-alert" style="background: red; color: #fff; font-weight: 500;" onclick="validarPermisoPdfPersonaJuridica('./vistas/modulos/AyudaVentas/pdf/sarlaft2/${ayudaVenta.path_sarlaft2}')">PDF PJ</button>` : ''
-                    partTemplate += sarlaftButtons2 + '</ul></td>'
+                    // let sarlaftButtons = '<td><ul style="margin-top: 60px;">'
+                    // sarlaftButtons += ayudaVenta.path_sarlaft ? `<button class="btn btn-alert" style="background: red; color: #fff; font-weight: 500;" onclick="validarPermisoPdfPersonaNatural('./vistas/modulos/AyudaVentas/pdf/sarlaft/${ayudaVenta.path_sarlaft}')">PDF PN</button>` : ''
+                    // partTemplate += sarlaftButtons + '</ul></td>'
+                    // let sarlaftButtons2 = '<td><ul style="margin-top: 60px;">'
+                    // sarlaftButtons2 += ayudaVenta.path_sarlaft2 ? `<button class="btn btn-alert" style="background: red; color: #fff; font-weight: 500;" onclick="validarPermisoPdfPersonaJuridica('./vistas/modulos/AyudaVentas/pdf/sarlaft2/${ayudaVenta.path_sarlaft2}')">PDF PJ</button>` : ''
+                    // partTemplate += sarlaftButtons2 + '</ul></td>'
+
+                    let sarlaftButtons = '<td><ul style="margin-top: 60px; display: flex; flex-direction: column;">';
+                    sarlaftButtons += ayudaVenta.path_sarlaft ? `<button class="btn btn-alert" style="background: red; color: #fff; font-weight: 500; margin-bottom: 5px;" onclick="validarPermisoPdfPersonaNatural('./vistas/modulos/AyudaVentas/pdf/sarlaft/${ayudaVenta.path_sarlaft}')">PDF PN</button>` : '';
+                    sarlaftButtons += ayudaVenta.path_sarlaft2 ? `<button class="btn btn-alert" style="background: red; color: #fff; font-weight: 500;" onclick="validarPermisoPdfPersonaJuridica('./vistas/modulos/AyudaVentas/pdf/sarlaft2/${ayudaVenta.path_sarlaft2}')">PDF PJ</button>` : '';
+                    sarlaftButtons += '</ul></td>';
+
+                    partTemplate += sarlaftButtons;
 
                 }
+                
             } else {
                 partTemplate += '<td></td>'
                 partTemplate += '<td></td>'
