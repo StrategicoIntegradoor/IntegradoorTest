@@ -58,6 +58,8 @@ $fechaCotiz = substr($fila['cot_fch_cotizacion'], 0, -9);
 $fechaVigencia = date("d-m-Y", strtotime($fechaCotiz));
 
 $placa = $fila["cot_placa"] . " ";
+var_dump($placa);
+die();
 if ($placa == "WWW404") {
 	$placa = "  0 KMM";
 }
