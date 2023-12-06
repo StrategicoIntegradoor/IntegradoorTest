@@ -280,12 +280,20 @@ const obtenerAyudaVentas = async () => {
             if (ayudaVenta.path_sarlaft || ayudaVenta.path_sarlaft2) {
                 if(ayudaVenta.aseguradora == 'Allianz' || ayudaVenta.aseguradora == 'Equidad' || ayudaVenta.aseguradora == 'Previsora'){
 
-                    let sarlaftButtons = '<td><ul style="margin-top: 60px;">'
+                    // let sarlaftButtons = '<td><ul style="margin-top: 60px;">'
+                    // sarlaftButtons += ayudaVenta.path_sarlaft ? `<a href="${ayudaVenta.path_sarlaft}" class="btn btn-alert" style="background: red; color: #fff; font-weight: 500;" target="_blank">PDF PN</a>` : '<button class="btn btn-alert" style="background: red; color: #fff; font-weight: 500;">PDF PN</button>';
+                    // partTemplate += sarlaftButtons + '</ul></td>'
+                    // let sarlaftButtons2 = '<td><ul style="margin-top: 60px;">'
+                    // sarlaftButtons2 += ayudaVenta.path_sarlaft2 ? `<a href="${ayudaVenta.path_sarlaft2}" class="btn btn-alert" style="background: red; color: #fff; font-weight: 500;" target="_blank">PDF PJ</a>` : '<button class="btn btn-alert" style="background: red; color: #fff; font-weight: 500;">PDF PJ</button>';
+                    // partTemplate += sarlaftButtons2 + '</ul></td>'
+
+                    let sarlaftButtons = '<td><ul style="margin-top: 60px;">';
                     sarlaftButtons += ayudaVenta.path_sarlaft ? `<a href="${ayudaVenta.path_sarlaft}" class="btn btn-alert" style="background: red; color: #fff; font-weight: 500;" target="_blank">PDF PN</a>` : '<button class="btn btn-alert" style="background: red; color: #fff; font-weight: 500;">PDF PN</button>';
-                    partTemplate += sarlaftButtons + '</ul></td>'
-                    let sarlaftButtons2 = '<td><ul style="margin-top: 60px;">'
-                    sarlaftButtons2 += ayudaVenta.path_sarlaft2 ? `<a href="${ayudaVenta.path_sarlaft2}" class="btn btn-alert" style="background: red; color: #fff; font-weight: 500;" target="_blank">PDF PJ</a>` : '<button class="btn btn-alert" style="background: red; color: #fff; font-weight: 500;">PDF PJ</button>';
-                    partTemplate += sarlaftButtons2 + '</ul></td>'
+                    sarlaftButtons += ayudaVenta.path_sarlaft2 ? `<a href="${ayudaVenta.path_sarlaft2}" class="btn btn-alert" style="background: red; color: #fff; font-weight: 500;" target="_blank">PDF PJ</a>` : '<button class="btn btn-alert" style="background: red; color: #fff; font-weight: 500;">PDF PJ</button>';
+                    sarlaftButtons += '</ul></td>';
+
+                    partTemplate += sarlaftButtons;
+
 
                 }else{
 
