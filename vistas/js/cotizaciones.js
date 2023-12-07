@@ -955,7 +955,7 @@ function editarCotizacion(id) {
 
 
 
-      if (respuesta["cot_placa"] == "KZY000") {
+      if (respuesta["cot_placa"] == "WWW404") {
 
         $("#txtPlacaVeh").val("SIN PLACA - VEHÍCULO 0 KM").val();
 
@@ -1043,9 +1043,9 @@ function editarCotizacion(id) {
 
       //FORMULARIO DE PESADOS//
 
-      if (respuesta["cot_placa"] == "CAT770") {
+      if (respuesta["cot_placa"] == "WWW404") {
 
-        $("#txtPlacaVehPesado").val(respuesta["cot_placa"]).val();
+        $("#txtPlacaVehPesado").val("SIN PLACA - VEHÍCULO 0 KM").val();
 
       } else {
 
