@@ -845,12 +845,25 @@
         <!-- PARRILLA DE COTIZACIONES -->
         <div id="contenParrilla">
           <div class="col-lg-12 form-parrilla">
-            <div class="row row-parrilla">
-              <div class="col-xs-12 col-sm-6 col-md-3">
-                <label for="">PARRILLA DE COTIZACIÓNES</label>
+              <div class="row row-parrilla">
+                <div class="col-xs-12 col-sm-6 col-md-3">
+                  <label for="">RESUMEN DE COTIZACIONES</label>
+                </div>
+                
+                  <div class="col-xs-12 col-sm-6 col-md-3">
+                  </div>
+                  <div class="col-xs-12 col-sm-6 col-md-3">
+                  </div>
+                  <div class="col-xs-12 col-sm-6 col-md-3">
+                    <div id="masAgrOferta">
+                      <p id="masAgr" onclick="masRES();">Ver mas <i class="fa fa-plus-square-o"></i></p>
+                    </div>
+                    <div id="menosAgrOferta">
+                      <p id="menosAgr" onclick="menosRE();">Ver menos <i class="fa fa-minus-square-o"></i></p>
+                    </div>
+                  </div>
               </div>
             </div>
-          </div>
 
           <!-- Mostrar alertas -->
           <div class="col-lg-12" style="display: block;">
