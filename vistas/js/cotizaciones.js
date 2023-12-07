@@ -3687,7 +3687,7 @@ function menosAgr() {
 
 function masRE() {
 
-  document.getElementById("resumenAseguroadoras").style.display = "block";
+  document.getElementById("contenParrilla").style.display = "block";
 
   document.getElementById("menosResOferta").style.display = "block";
 
@@ -3699,7 +3699,7 @@ function masRE() {
 
 function menosRE() {
 
-  document.getElementById("resumenAseguroadoras").style.display = "none";
+  document.getElementById("contenParrilla").style.display = "none";
 
   document.getElementById("menosResOferta").style.display = "none";
 
