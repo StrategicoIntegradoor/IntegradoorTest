@@ -3689,9 +3689,9 @@ function masRE() {
 
   document.getElementById("resumenAseguroadoras").style.display = "block";
 
-  document.getElementById("menosAgrOferta").style.display = "block";
+  document.getElementById("menosResOferta").style.display = "block";
 
-  document.getElementById("masAgrOferta").style.display = "none";
+  document.getElementById("masResOferta").style.display = "none";
 
 }
 
@@ -3701,9 +3701,9 @@ function menosRE() {
 
   document.getElementById("resumenAseguroadoras").style.display = "none";
 
-  document.getElementById("menosAgrOferta").style.display = "none";
+  document.getElementById("menosResOferta").style.display = "none";
 
-  document.getElementById("masAgrOferta").style.display = "block";
+  document.getElementById("masResOferta").style.display = "block";
 
 }
 
