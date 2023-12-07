@@ -3683,5 +3683,28 @@ function menosAgr() {
 
 }
 
+// Maximiza el Formulario Agregar Oferta
+
+function masRE() {
+
+  document.getElementById("resumenAseguroadoras").style.display = "block";
+
+  document.getElementById("menosAgrOferta").style.display = "block";
+
+  document.getElementById("masAgrOferta").style.display = "none";
+
+}
+
+// Minimiza el Formulario Agregar Oferta
+
+function menosRE() {
+
+  document.getElementById("resumenAseguroadoras").style.display = "none";
+
+  document.getElementById("menosAgrOferta").style.display = "none";
+
+  document.getElementById("masAgrOferta").style.display = "block";
+
+}
 
 
