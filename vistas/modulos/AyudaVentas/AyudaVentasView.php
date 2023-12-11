@@ -36,6 +36,12 @@ if ($_SESSION["permisos"]["AyudaVentasFreelance"] == "x") {
     width: 100%; /* Puedes establecer el ancho total de la tabla aquí */
     }
 
+    @media (max-width: 1285px) {
+    .table-media {
+      overflow-x: auto;
+    }
+  }
+
     .table th,
     .table td {
         vertical-align: middle; /* Puedes usar "top" o "bottom" en lugar de "middle" según tus necesidades */
@@ -144,7 +150,7 @@ if ($_SESSION["permisos"]["AyudaVentasFreelance"] == "x") {
 
 
                 <div class="table-responsive">
-                    <table class="table table-bordered table-striped dt-responsive tablas-asistencias" style="width: 100%;">
+                    <table class="table table-bordered table-striped dt-responsive tablas-asistencias table-media" style="width: 100%;">
 
                         <thead style="background: #88d600; color: #FFF; ">
                             <tr>
