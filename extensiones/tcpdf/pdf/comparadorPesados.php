@@ -273,7 +273,7 @@ $pdf->writeHTML($htmlpesado1, true, false, true, false, '');
 $pdf->SetFont('dejavusanscondensed', 'I', 15);
 $pdf->SetTextColor(104, 104, 104);
 $pdf->SetXY(46.5, 115);
-$pdf->Cell(10, 0, 'Hemos ', 0, $ln = 0, 'C', 0, '', 0, false, 'C', 'C');
+$pdf->Cell(10, 0, 'Hemos  ', 0, $ln = 0, 'C', 0, '', 0, false, 'C', 'C');
 
 $pdf->SetFont('dejavusanscondensed', 'BI', 15);
 $pdf->SetTextColor(103,181,252);
