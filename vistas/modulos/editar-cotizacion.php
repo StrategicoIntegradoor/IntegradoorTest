@@ -845,38 +845,39 @@
         <!-- PARRILLA DE COTIZACIONES -->
         <div id="contenParrilla">
           <div class="col-lg-12 form-parrilla">
-              <div class="row row-parrilla">
-                <div class="col-xs-12 col-sm-6 col-md-3">
-                  <label for="">RESUMEN DE COTIZACIONES</label>
-                </div>
-                
-                  <div class="col-xs-12 col-sm-6 col-md-3">
-                  </div>
-                  <div class="col-xs-12 col-sm-6 col-md-3">
-                  </div>
-                  <div class="col-xs-12 col-sm-6 col-md-3">
-                    <div id="masResOferta">
-                      <p id="masResumen" onclick="masRE();">Ver mas <i class="fa fa-plus-square-o"></i></p>
-                    </div>
-                    <div id="menosResOferta">
-                      <p id="menosResumen" onclick="menosRE();">Ver menos <i class="fa fa-minus-square-o"></i></p>
-                    </div>
-                  </div>
+            <div class="row row-parrilla">
+              <div class="col-xs-12 col-sm-6 col-md-3">
+                <label for="">RESUMEN DE COTIZACIONES</label>
               </div>
-            </div>
-
-          <!-- Mostrar alertas -->
-          <div class="col-lg-12" style="display: block;">
-            <div class="card-ofertas">
-              <div class="row card-body">
-                <div class="card-body col-sm-6 col-md-6">
-                  <div style="margin: 20px 25px;" class="exitosas">
-                    <p style="color: #88d600;"><b>Aseguradoras cotizadas</b></p>
+                <div class="col-xs-12 col-sm-6 col-md-3">
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-3">
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-3">
+                  <div id="masResOferta">
+                    <p id="masResumen" onclick="masRE();">Ver mas <i class="fa fa-plus-square-o"></i></p>
+                  </div>
+                  <div id="menosResOferta">
+                    <p id="menosResumen" onclick="menosRE();">Ver menos <i class="fa fa-minus-square-o"></i></p>
                   </div>
                 </div>
-                <div class="card-body col-sm-6 col-md-6">
-                  <div style="margin: 20px 25px;" class="fallidas">
-                    <p style="color: #88d600;"><b>Aseguradoras no cotizadas</b></p>
+            </div>
+          </div>
+
+            <!-- Mostrar alertas -->
+          <div id="resumenCotizaciones">
+            <div class="col-lg-12" style="display: block;">
+              <div class="card-ofertas">
+                <div class="row card-body">
+                  <div class="card-body col-sm-6 col-md-6">
+                    <div style="margin: 20px 25px;" class="exitosas">
+                      <p style="color: #88d600;"><b>Aseguradoras cotizadas</b></p>
+                    </div>
+                  </div>
+                  <div class="card-body col-sm-6 col-md-6">
+                    <div style="margin: 20px 25px;" class="fallidas">
+                      <p style="color: #88d600;"><b>Aseguradoras no cotizadas</b></p>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -884,7 +885,6 @@
           </div>
 
           <div id="cardCotizacion">
-
           </div>
           <div id="cardAgregarCotizacion">
           </div>
