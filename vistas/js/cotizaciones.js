@@ -4,7 +4,7 @@ let permisos = "";
 
 $(document).ready(function () {
 
-  menosVeh()
+  var init = menosVeh()
 
   permisos = JSON.parse(permisosPlantilla);
 
