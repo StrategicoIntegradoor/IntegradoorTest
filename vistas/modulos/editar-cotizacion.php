@@ -897,7 +897,7 @@
 
           <div id="cardAgregarCotizacion">
           </div>
-          
+
           <div id="contenCotizacionPDF">
 
             <div class="col-xs-12" style="width: 100%;">
@@ -925,6 +925,7 @@
   </section>
 
 </div>
-
+<script>  var init = menosVeh()
+</script>
 <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 <!-- <script src="vistas/js/cotizaciones.js?v=<?php echo (rand()); ?>"></script> -->
