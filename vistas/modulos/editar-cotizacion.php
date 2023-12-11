@@ -868,7 +868,7 @@
           <div id="resumenCotizaciones">
             <div class="col-lg-12" style="display: block;">
               <div class="card-ofertas">
-                <table class="table table-bordered">
+                <!-- <table class="table table-bordered">
                   <thead>
                     <tr>
                       <th scope="col">#</th>
@@ -896,8 +896,8 @@
                       <td>@twitter</td>
                     </tr>
                   </tbody>
-                </table>
-                <!-- <div class="row card-body">
+                </table> -->
+                <div class="row card-body">
                   <div class="card-body col-sm-6 col-md-6">
                     <div style="margin: 20px 25px;" class="exitosas">
                       <p style="color: #88d600;"><b>Aseguradoras cotizadas</b></p>
@@ -908,7 +908,7 @@
                       <p style="color: #88d600;"><b>Aseguradoras no cotizadas</b></p>
                     </div>
                   </div>
-                </div> -->
+                </div>
               </div>
             </div>
           </div>
