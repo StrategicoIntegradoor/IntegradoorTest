@@ -1573,6 +1573,7 @@ function editarCotizacion(id) {
           document.getElementById("contenParrilla").style.display = "block";
 
           menosAseg();
+          menosRE();
 
         },
 
