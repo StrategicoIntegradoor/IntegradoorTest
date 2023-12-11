@@ -868,7 +868,36 @@
           <div id="resumenCotizaciones">
             <div class="col-lg-12" style="display: block;">
               <div class="card-ofertas">
-                <div class="row card-body">
+                <table class="table table-bordered">
+                  <thead>
+                    <tr>
+                      <th scope="col">#</th>
+                      <th scope="col">First</th>
+                      <th scope="col">Last</th>
+                      <th scope="col">Handle</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <th scope="row">1</th>
+                      <td>Mark</td>
+                      <td>Otto</td>
+                      <td>@mdo</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">2</th>
+                      <td>Jacob</td>
+                      <td>Thornton</td>
+                      <td>@fat</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">3</th>
+                      <td colspan="2">Larry the Bird</td>
+                      <td>@twitter</td>
+                    </tr>
+                  </tbody>
+                </table>
+                <!-- <div class="row card-body">
                   <div class="card-body col-sm-6 col-md-6">
                     <div style="margin: 20px 25px;" class="exitosas">
                       <p style="color: #88d600;"><b>Aseguradoras cotizadas</b></p>
@@ -879,7 +908,7 @@
                       <p style="color: #88d600;"><b>Aseguradoras no cotizadas</b></p>
                     </div>
                   </div>
-                </div>
+                </div> -->
               </div>
             </div>
           </div>
