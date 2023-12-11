@@ -884,10 +884,20 @@
             </div>
           </div>
 
+          <div class="col-lg-12 form-parrilla">
+            <div class="row row-parrilla">
+              <div class="col-xs-12 col-sm-6 col-md-3">
+                <label for="">PARRILLA DE COTIZACIONES</label>
+              </div>
+            </div>
+          </div>
+
           <div id="cardCotizacion">
           </div>
+
           <div id="cardAgregarCotizacion">
           </div>
+          
           <div id="contenCotizacionPDF">
 
             <div class="col-xs-12" style="width: 100%;">
