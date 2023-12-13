@@ -812,7 +812,7 @@ $rolAsesor = $_SESSION['permisos']['id_rol'];
                       <div class="col-xs-12 col-sm-12 col-md-3 form-group">
                         <button class="btn btn-primary btn-block" id="btnReCotizarFallidas">Recotizar Ofertas Fallidas</button>
                       </div>
-                      <div class="aviso-container" id="mensajeAviso" style="display: none;">
+                      <div class="aviso-container" id="mensajeAviso">
                         <p style="font-weight: bold;">
                           NOTA: Si a tu cliente le interesa Previsora, ten en cuenta que ciertas líneas de vehículos requieren la instalación del dispositivo Cazador al tomar su seguro y este tiene un costo adicional a la póliza. Por favor confirma con tu área comercial.
                         </p>
