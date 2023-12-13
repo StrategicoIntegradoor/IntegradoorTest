@@ -1130,7 +1130,7 @@ function registrarOfertaPesados(
                     <center>
                         <img src='vistas/img/logos/${logo}'>
                       </center>  
-                    <div class='col-12' style='margin-top:2%;'>
+                    <div class='col-12' style='margin-top:-50%;'>
                       ${aseguradora !== "Mundial" && permisos.Vernumerodecotizacionencadaaseguradora == "x" ?
                         `<center>
                           <label class='entidad'>N° Cot: <span style ='color :black'>${numCotizOferta}</span></label>
