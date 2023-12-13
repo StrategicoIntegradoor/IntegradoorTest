@@ -1046,23 +1046,6 @@ function registrarOfertaPesados(
       if (manual == null) { 
         manual = 0;
       }
-      // console.log(placa)
-      // console.log(idCotizOferta)
-      // console.log(numDocumentoID)
-      // console.log(aseguradora)
-      // console.log(numCotizOferta)
-      // console.log(producto)
-      // console.log(prima)
-      // console.log(valorRC)
-      // console.log(PT)
-      // console.log(PP)
-      // console.log(CE)
-      // console.log(GR)
-      // console.log(logo)
-      // console.log(UrlPdf)
-      // console.log(manual)
-      // console.log(pdf)
-      // console.log(responsabilidad_civil_familiar) 
       $.ajax({
         type: "POST",
         url: "src/insertarOferta.php",
@@ -1116,7 +1099,7 @@ function registrarOfertaPesados(
   ) => {
 
     //FUNCION QUE ACOMODA RCE EN PARRILLA CUANDO LLEGA MUNDIAL
-    if (aseguradora == 'Mundial') {
+    if (aseguradora == 'Mundial' && producto == 'Pesados con RCE en exceso') {
       // Eliminar los puntos y convertir a número
       RC = parseFloat(RC.replace(/\./g, ''));
   
