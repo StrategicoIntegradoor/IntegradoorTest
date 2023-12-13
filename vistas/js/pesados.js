@@ -1747,7 +1747,7 @@ function cotizarOfertasPesados() {
             }
 
 
-            Promise.all(cont)
+            Promise.all(promesas)
               .then(() => {
                 ejecutarDespuesDePromesas(); // Llama a la función después de que todas las promesas se resuelvan
               })
