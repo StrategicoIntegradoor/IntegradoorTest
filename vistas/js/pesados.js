@@ -1168,7 +1168,7 @@ function registrarOfertaPesados(
                         `<li class="list-group-item">
                           <span class="badge">* ${GR}</span>
                           Servicio de Grúa
-                        </li>;`
+                        </li>`
                           : ''}
                       </ul>
                     </div>
