@@ -809,18 +809,18 @@ $rolAsesor = $_SESSION['permisos']['id_rol'];
                   </div>
                   <div class="row button-recotizar" style="display: none; margin:5px">
                     <div class="col-md-6"></div>
-                    <div class="col-xs-12 col-sm-12 col-md-3 form-group">
-                      <button class="btn btn-primary btn-block" id="btnReCotizarFallidas">Recotizar Ofertas Fallidas</button>
-                    </div>
+                      <div class="col-xs-12 col-sm-12 col-md-3 form-group">
+                        <button class="btn btn-primary btn-block" id="btnReCotizarFallidas">Recotizar Ofertas Fallidas</button>
+                      </div>
+                      <div class="aviso-container" id="mensajeAviso" style="display: none;">
+                        <p style="font-weight: bold;">
+                          NOTA: Si a tu cliente le interesa Previsora, ten en cuenta que ciertas líneas de vehículos requieren la instalación del dispositivo Cazador al tomar su seguro y este tiene un costo adicional a la póliza. Por favor confirma con tu área comercial.
+                        </p>
+                      </div>
                     <div class="col-md-3"></div>
                   </div>
                 </div>
               </div>
-            </div>
-            <div class="aviso-container">
-              <p style="font-weight: bold;">
-                NOTA: Si a tu cliente le interesa Previsora, ten en cuenta que ciertas líneas de vehículos requieren la instalación del dispositivo Cazador al tomar su seguro y este tiene un costo adicional a la póliza. Por favor confirma con tu área comercial.
-              </p>
             </div>                                                                       
             <div id="contenCotizacionPDF" style="margin-top: 15px;">
             </div>
