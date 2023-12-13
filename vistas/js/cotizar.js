@@ -2154,28 +2154,28 @@ function cotizarOfertas() {
 
           // }
             /* Liberty */
-            // cont.push(
-            //   fetch("https://grupoasistencia.com/motor_webservice_tst/Liberty", requestOptions)
-            //     .then((res) => {
-            //       if (!res.ok) throw Error(res.statusText);
-            //       return res.json();
-            //     })
-            //     .then((ofertas) => {
-            //       if (typeof ofertas[0].Resultado !== 'undefined') {
-            //         agregarAseguradoraFallida('Liberty')
-            //         ofertas[0].Mensajes.forEach(mensaje => {
-            //           mostrarAlertarCotizacionFallida('Liberty', mensaje)
-            //         })
-            //       } else {
-            //         validarOfertas(ofertas);
-            //         mostrarAlertaCotizacionExitosa('Liberty')
-            //       }
-            //     })
-            //     .catch((err) => {
-            //       agregarAseguradoraFallida('Liberty')
-            //       console.error(err);
-            //     })
-            // );
+            cont.push(
+              fetch("https://grupoasistencia.com/motor_webservice_tst/Liberty", requestOptions)
+                .then((res) => {
+                  if (!res.ok) throw Error(res.statusText);
+                  return res.json();
+                })
+                .then((ofertas) => {
+                  if (typeof ofertas[0].Resultado !== 'undefined') {
+                    agregarAseguradoraFallida('Liberty')
+                    ofertas[0].Mensajes.forEach(mensaje => {
+                      mostrarAlertarCotizacionFallida('Liberty', mensaje)
+                    })
+                  } else {
+                    validarOfertas(ofertas);
+                    mostrarAlertaCotizacionExitosa('Liberty')
+                  }
+                })
+                .catch((err) => {
+                  agregarAseguradoraFallida('Liberty')
+                  console.error(err);
+                })
+            );
 
             /* Allianz */
             cont.push(
