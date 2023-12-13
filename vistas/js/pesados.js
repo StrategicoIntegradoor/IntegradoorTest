@@ -1126,18 +1126,35 @@ function registrarOfertaPesados(
                 <div class='card-ofertas'>
                   <div class='row card-body'>
 
-                  <div class="col-xs-12 col-sm-6 col-md-2 oferta-logo" style="display: flex; flex-direction: column; justify-content: center; align-items: center;">
-                      <img src='vistas/img/logos/${logo}' style='margin-top:37px;'>
-                    <div class='col-12' style='margin-top:2%;'>
-                      ${aseguradora !== "Mundial" && permisos.Vernumerodecotizacionencadaaseguradora == "x" ?
+
+                  ${aseguradora !== "Liberty" ?
+                  `<div class="col-xs-12 col-sm-6 col-md-2 oferta-logo">
+                        <center>
+                          <img src='vistas/img/logos/${logo}'>
+                        </center>  
+
+                      <div class='col-12' style='margin-top:2%;'>
+                        ${aseguradora !== "Mundial" && permisos.Vernumerodecotizacionencadaaseguradora == "x" ?
                         `<center>
                           <label class='entidad'>N° Cot: <span style ='color :black'>${numCotizOferta}</span></label>
                         </center>`
                         : ''}
-                    </div>
-                  </div>
+                      </div>
 
-              
+                  </div>`
+                  :   `<div class="col-xs-12 col-sm-6 col-md-2 oferta-logo" style="display: flex; flex-direction: column; justify-content: center; align-items: center;">
+                          <img src='vistas/img/logos/${logo}' style='margin-top:37px;'>
+                        <div class='col-12' style='margin-top:2%;'>
+                          ${aseguradora !== "Mundial" && permisos.Vernumerodecotizacionencadaaseguradora == "x" ?
+                            `<center>
+                              <label class='entidad'>N° Cot: <span style ='color :black'>${numCotizOferta}</span></label>
+                            </center>`
+                            : ''}
+                        </div>
+                      </div>`
+                
+                  }
+                    
                     <div class="col-xs-12 col-sm-6 col-md-2 oferta-header">
                       <h5 class='entidad'>${aseguradora} - ${producto}</h5>
                       <h5 class='precio'>Desde $ ${prima}</h5>
