@@ -817,7 +817,11 @@ $rolAsesor = $_SESSION['permisos']['id_rol'];
                 </div>
               </div>
             </div>
-
+            <div class="aviso-container">
+              <p style="font-weight: bold;">
+                NOTA: Si a tu cliente le interesa Previsora, ten en cuenta que ciertas líneas de vehículos requieren la instalación del dispositivo Cazador al tomar su seguro y este tiene un costo adicional a la póliza. Por favor confirma con tu área comercial.
+              </p>
+            </div>                                                                       
             <div id="contenCotizacionPDF" style="margin-top: 15px;">
             </div>
           </div>
