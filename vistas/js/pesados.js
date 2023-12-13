@@ -1163,11 +1163,13 @@ function registrarOfertaPesados(
                         <li class="list-group-item">
                           <span class="badge">* ${CE}</span>
                           Conductor elegido
-                        </li>
-                        <li class="list-group-item">
-                          <span class="badge">* ${GR}</span>
-                          Servicio de Grúa
-                        </li>
+                        </li>`
+                        if(aseguradora !== 'Liberty'){
+                          `<li class="list-group-item">
+                            <span class="badge">* ${GR}</span>
+                            Servicio de Grúa
+                          </li>`
+                        }`
                       </ul>
                     </div>
                     <div class="col-xs-12 col-sm-6 col-md-2">
