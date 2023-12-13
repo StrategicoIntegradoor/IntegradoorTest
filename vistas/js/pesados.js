@@ -1109,7 +1109,7 @@ function registrarOfertaPesados(
       // Volver a formatear con puntos
       var RC = RC.toLocaleString();
   
-  }
+    }
 
     //FUNCION QUE ACOMODA LOS NOMBRES DE LOS PLANES CUANDO LLEGA LIBERTY
     if (aseguradora == 'Liberty') {
