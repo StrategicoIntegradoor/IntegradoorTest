@@ -1127,8 +1127,8 @@ function registrarOfertaPesados(
                   <div class='row card-body'>
 
                   <div class="col-xs-12 col-sm-6 col-md-2 oferta-logo" style="display: flex; flex-direction: column; justify-content: center; align-items: center;">
-                      <img src='vistas/img/logos/${logo}' style='margin-top: 40px;'>
-                    <div class='col-12' style='margin-top: 0%;'>
+                      <img src='vistas/img/logos/${logo}' style='margin-top:40px;'>
+                    <div class='col-12' style='margin-top:2%;'>
                       ${aseguradora !== "Mundial" && permisos.Vernumerodecotizacionencadaaseguradora == "x" ?
                         `<center>
                           <label class='entidad'>N° Cot: <span style ='color :black'>${numCotizOferta}</span></label>
