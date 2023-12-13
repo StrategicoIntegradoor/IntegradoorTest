@@ -1126,7 +1126,7 @@ function registrarOfertaPesados(
                 <div class='card-ofertas'>
                   <div class='row card-body'>
 
-                  <div class="col-xs-12 col-sm-6 col-md-2 oferta-logo">
+                  <div class="col-xs-12 col-sm-6 col-md-2 oferta-logo" style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
                       <center>
                         <img src='vistas/img/logos/${logo}'>
                       </center>  
