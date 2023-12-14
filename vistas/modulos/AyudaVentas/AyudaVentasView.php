@@ -32,8 +32,9 @@ if ($_SESSION["permisos"]["AyudaVentasFreelance"] == "x") {
     }
 
     table {
-    table-layout: fixed;
-    width: 100%; /* Puedes establecer el ancho total de la tabla aquí */
+    /* table-layout: fixed;
+    width: 100%;  */
+    /* Puedes establecer el ancho total de la tabla aquí */
     }
 
     /* @media (max-width: 790px) {
