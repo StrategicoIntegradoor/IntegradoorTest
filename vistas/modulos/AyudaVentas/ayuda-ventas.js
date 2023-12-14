@@ -91,7 +91,7 @@ const construirHtmlContinuidad = continuidades => {
     if (continuidades.length === 0) return ''
     let html = '<ul style="margin-top: 60px;">'
     continuidades.forEach(continuidad => {
-        if (continuidad !== '') html += `<li>✅ ${continuidad}</li>`
+        if (continuidad !== '') html += `<li><span class="text-config">✅ ${continuidad}</span></li>`
     })
     html += '</ul>'
 
@@ -102,7 +102,7 @@ const construirHtmlCambioIntermediario = cambioPoliticas => {
     if (cambioPoliticas.length === 0) return ''
     let html = '<ul style="margin-top: 60px;">'
     cambioPoliticas.forEach(cambioPolitica => {
-        if (cambioPolitica !== '') html += `<li>✅ ${cambioPolitica}</li>`
+        if (cambioPolitica !== '') html += `<li><span class="text-config">✅ ${cambioPolitica}</span></li>`
     })
     html += '</ul>'
 
@@ -125,9 +125,9 @@ const construirHtmlFormasDePago = formasDePago => {
                 const text = formaDePago.substring(0, colonIndex + 1); // Incluye los dos puntos
                 const link = formaDePago.substring(colonIndex + 1).trim(); // Elimina espacios en blanco
                 
-                html += `<li>${text} <a href="${link}" target="_blank">${link}</a></li>`;
+                html += `<li><span class="text-config">${text}</span> <a class="text-config" href="${link}" target="_blank">${link}</a></li>`;
             } else {
-                html += `<li>${formaDePago}</li>`;
+                html += `<li><span class="text-config">${formaDePago}</span></li>`;
             }
         }
     });
