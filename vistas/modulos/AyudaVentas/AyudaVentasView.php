@@ -31,7 +31,7 @@ if ($_SESSION["permisos"]["AyudaVentasFreelance"] == "x") {
         list-style: none;
     }
 
-    table-column {
+    table {
     table-layout: fixed;
     width: 100%;
     /* Puedes establecer el ancho total de la tabla aquí */
@@ -169,7 +169,7 @@ if ($_SESSION["permisos"]["AyudaVentasFreelance"] == "x") {
                     <!-- END Form -->
 
 
-                <div class="table-media">
+                <div class="table table-media">
                     <table class="table table-bordered table-padding table-striped dt-responsive tablas-asistencias">
 
                         <thead style="background: #88d600; color: #FFF; ">
@@ -179,7 +179,7 @@ if ($_SESSION["permisos"]["AyudaVentasFreelance"] == "x") {
                                 <th style="width: 12%; text-align: center">Clausulado</th>
                                 <th style="width: 8%; text-align: center">Sarlaft</th>
                                 <!-- <th style="width: 7%; text-align: center">Sarlaft PJ</th> -->
-                                <th class="columna-enlace" style="width: 12%; text-align: center">Centro de inspección</th>
+                                <th style="width: 12%; text-align: center">Centro de inspección</th>
                                 <th style="width: 7%; text-align: center">Continuidad</th>
                                 <th style="width: 17%; text-align: center">Politicas cambio de Intermediario</th>
                                 <th style="width: 7%; text-align: center">Formas de pago</th>
