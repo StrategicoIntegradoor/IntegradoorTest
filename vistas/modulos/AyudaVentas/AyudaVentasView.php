@@ -159,7 +159,7 @@ if ($_SESSION["permisos"]["AyudaVentasFreelance"] == "x") {
 
 
                 <div class="table-responsive">
-                    <table class="table table-bordered table-striped dt-responsive tablas-asistencias table-media" style="width: 100%;">
+                    <table class="table table-bordered table-striped dt-responsive tablas-asistencias table-media">
 
                         <thead style="background: #88d600; color: #FFF; ">
                             <tr>
