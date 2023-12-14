@@ -325,10 +325,10 @@ const obtenerAyudaVentas = async () => {
                     word-wrap: break-word; /* Indica que el texto debe envolverse cuando se excede el ancho máximo */
                 }
             </style>
-                <td class="fixed-width">${construirHtmlCentrosDeInspeccion(centrosDeInspeccion)}</td>
+                <td class="">${construirHtmlCentrosDeInspeccion(centrosDeInspeccion)}</td>
                 <td class="fixed-width">${construirHtmlContinuidad(continuidades)}</td>
                 <td class="fixed-width">${construirHtmlCambioIntermediario(cambioPoliticas)}</td>
-                <td class="fixed-width">${construirHtmlFormasDePago(formasDePago)}</td>`
+                <td class="">${construirHtmlFormasDePago(formasDePago)}</td>`
             if(permisos.Editarinformaciondelayudaventas == 'x'){
                 partTemplate += `<td style="line-height: 200px;">
                     <button 
