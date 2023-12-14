@@ -669,7 +669,8 @@ function masAseg() {
                   }
                   Swal.fire({
                     icon: 'error',
-                    text: restriccion
+                    text: restriccion,
+                    confirmButtonText: 'Cerrar'
                   }).then(() => {
                     // Recargar la página después de cerrar el SweetAlert
                     location.reload();
@@ -694,7 +695,8 @@ function masAseg() {
                   }
                   Swal.fire({
                     icon: 'error',
-                    text: restriccion
+                    text: restriccion,
+                    confirmButtonText: 'Cerrar'
                   }).then(() => {
                     // Recargar la página después de cerrar el SweetAlert
                     location.reload();
@@ -716,7 +718,8 @@ function masAseg() {
                   }
                   Swal.fire({
                     icon: 'error',
-                    text: restriccion
+                    text: restriccion,
+                    confirmButtonText: 'Cerrar'
                   }).then(() => {
                     // Recargar la página después de cerrar el SweetAlert
                     location.reload();
