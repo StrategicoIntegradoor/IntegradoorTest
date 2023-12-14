@@ -187,7 +187,7 @@ if ($_SESSION["permisos"]["AyudaVentasFreelance"] == "x") {
                                 ?>
                             </tr>
                         </thead>
-                        <tbody>
+                        <tbody class="ayuda-ventas-body">
                         </tbody>
                     </table>
                 </div>
