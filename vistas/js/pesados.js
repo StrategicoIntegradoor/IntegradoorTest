@@ -663,13 +663,12 @@ function masAseg() {
                   limiteRCESTADO = 6;
                   var restriccion = '';
                   if(rolAsesor == 19){
-                    restriccion = 'Lo sentimos, no puedes cotizar vehiculos livianos por este módulo. Para hacerlo debes ingresar al modulo Cotizar Pesados.';
+                    restriccion = 'Lo sentimos, no puedes cotizar vehÍculos livianos por este módulo. Para hacerlo debes ingresar al modulo Cotizar Pesados.';
                   }else{
-                    restriccion = 'Lo sentimos, no puedes cotizar vehiculos livianos por este módulo.'
+                    restriccion = 'Lo sentimos, no puedes cotizar vehÍculos livianos por este módulo.'
                   }
                   Swal.fire({
                     icon: 'error',
-                    title: 'Lo sentimos',
                     text: restriccion
                   }).then(() => {
                     // Recargar la página después de cerrar el SweetAlert
@@ -695,7 +694,6 @@ function masAseg() {
                   }
                   Swal.fire({
                     icon: 'error',
-                    title: 'Lo sentimos',
                     text: restriccion
                   }).then(() => {
                     // Recargar la página después de cerrar el SweetAlert
@@ -718,7 +716,6 @@ function masAseg() {
                   }
                   Swal.fire({
                     icon: 'error',
-                    title: 'Lo sentimos',
                     text: restriccion
                   }).then(() => {
                     // Recargar la página después de cerrar el SweetAlert
