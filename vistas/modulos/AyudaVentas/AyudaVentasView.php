@@ -36,7 +36,7 @@ if ($_SESSION["permisos"]["AyudaVentasFreelance"] == "x") {
     width: 100%; /* Puedes establecer el ancho total de la tabla aquí */
     }
 
-    @media (max-width: 1285px) {
+    @media (max-width: 790px) {
     .table-media {
       overflow-x: auto;
     }
