@@ -660,6 +660,20 @@ function masAseg() {
                 if (codigoClase == 1) {
                   claseVehiculo = "AUTOMOVILES";
                   limiteRCESTADO = 6;
+                  var restriccion = '';
+                  if(rolAsesor == 19){
+                    restriccion = 'Lo sentimos, no puedes cotizar vehiculos livianos por este módulo. Para hacerlo debes ingresar al modulo Cotizar Pesados.';
+                  }else{
+                    restriccion = 'Lo sentimos, no puedes cotizar vehiculos livianos por este módulo.'
+                  }
+                  Swal.fire({
+                    icon: 'error',
+                    title: 'Lo sentimos',
+                    text: restriccion
+                  }).then(() => {
+                    // Recargar la página después de cerrar el SweetAlert
+                    location.reload();
+                  });
                 } else if (codigoClase == 2) {
                   claseVehiculo = "CAMPEROS";
                   limiteRCESTADO = 18;
@@ -672,6 +686,20 @@ function masAseg() {
                 } else if (codigoClase == 12) {
                   claseVehiculo = "MOTOCICLETA";
                   limiteRCESTADO = 6;
+                  var restriccion = '';
+                  if(rolAsesor == 19){
+                    restriccion = 'Lo sentimos, no puedes cotizar motocicletas por este módulo. Para hacerlo debes ingresar al modulo Cotizar Pesados.';
+                  }else{
+                    restriccion = 'Lo sentimos, no puedes cotizar motocicletas por este módulo.'
+                  }
+                  Swal.fire({
+                    icon: 'error',
+                    title: 'Lo sentimos',
+                    text: restriccion
+                  }).then(() => {
+                    // Recargar la página después de cerrar el SweetAlert
+                    location.reload();
+                  });
                 } else if (codigoClase == 14 || codigoClase == 21) {
                   claseVehiculo = "PESADO";
                   limiteRCESTADO = 18;
@@ -681,6 +709,20 @@ function masAseg() {
                 } else if (codigoClase == 16) {
                   claseVehiculo = "MOTOCICLETA";
                   limiteRCESTADO = 6;
+                  var restriccion = '';
+                  if(rolAsesor == 19){
+                    restriccion = 'Lo sentimos, no puedes cotizar motocicletas por este módulo. Para hacerlo debes ingresar al modulo Cotizar Pesados.';
+                  }else{
+                    restriccion = 'Lo sentimos, no puedes cotizar motocicletas por este módulo.'
+                  }
+                  Swal.fire({
+                    icon: 'error',
+                    title: 'Lo sentimos',
+                    text: restriccion
+                  }).then(() => {
+                    // Recargar la página después de cerrar el SweetAlert
+                    location.reload();
+                  });
                 }else if (codigoClase == 25) {
                   claseVehiculo = "TRAILER";
                   limiteRCESTADO = 6;
