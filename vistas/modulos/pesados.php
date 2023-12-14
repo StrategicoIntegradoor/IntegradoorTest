@@ -11,6 +11,9 @@ if ($_SESSION["permisos"]["Cotizarpesados"] != "x") {
   return;
 }
 
+$rolAsesor = $_SESSION['permisos']['id_rol'];
+
+
 ?>
 
 <div class="content-wrapper">
@@ -618,6 +621,8 @@ if ($_SESSION["permisos"]["Cotizarpesados"] != "x") {
 
         <!-- CAMPOS OCULTOS PARA OPTENER LA INFORMACION-->
         <div style="display: none;">
+          <label>Rol Asesor</label>
+          <input type="hidden" name="rolAsesor" id="rolAsesor" value="<?php echo $rolAsesor; ?>">
           <label>Clase</label>
           <input type="hidden" class="form-control" id="txtClaseVeh" placeholder="" disabled>
           <label>Id Asegurado</label>

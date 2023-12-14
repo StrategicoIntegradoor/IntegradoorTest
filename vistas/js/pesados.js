@@ -582,6 +582,7 @@ function masAseg() {
   
   // Permite consultar la informacion del vehiculo por medio de la Placa (Seguros del Estado)
   function consulPlacaPesados() {
+    var rolAsesor = document.getElementById("rolAsesorPesados").value;
     var numplaca = document.getElementById("placaVeh").value;
     var valnumplaca = numplaca.toUpperCase(); // Convierte la Placa en Mayusculas
     var tipoDocumentoID = document.getElementById("tipoDocumentoID").value;
