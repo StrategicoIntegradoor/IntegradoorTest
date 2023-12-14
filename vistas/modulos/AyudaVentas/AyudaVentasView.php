@@ -44,7 +44,7 @@ if ($_SESSION["permisos"]["AyudaVentasFreelance"] == "x") {
     } */
 
     .table-media {
-        max-width: 1200px;
+        max-width: 1800px;
         overflow-x: auto;
     }
 
@@ -165,7 +165,7 @@ if ($_SESSION["permisos"]["AyudaVentasFreelance"] == "x") {
 
 
                 <div class="table-media">
-                    <table class="table table-bordered table-padding">
+                    <table class="table table-bordered table-padding table-striped dt-responsive tablas-asistencias">
 
                         <thead style="background: #88d600; color: #FFF; ">
                             <tr>
@@ -174,10 +174,10 @@ if ($_SESSION["permisos"]["AyudaVentasFreelance"] == "x") {
                                 <th style="width: 12%; text-align: center">Clausulado</th>
                                 <th style="width: 8%; text-align: center">Sarlaft</th>
                                 <!-- <th style="width: 7%; text-align: center">Sarlaft PJ</th> -->
-                                <th style="max-width: 12%; text-align: center" class="table-column">Centro de inspección</th>
+                                <th style="width: 12%; text-align: center">Centro de inspección</th>
                                 <th style="width: 15%; text-align: center">Continuidad</th>
                                 <th style="width: 17%; text-align: center">Politicas cambio de Intermediario</th>
-                                <th style="max-width: 15%; text-align: center" class="table-column">Formas de pago</th>
+                                <th style="width: 15%; text-align: center">Formas de pago</th>
                                 <?php
                                 // if($_SESSION["permisos"]["ayudaventas_freelance"] == "x"){
                                 //     echo '<th style="width: 15%; text-align: center">Formas de pago</th>';
