@@ -44,7 +44,7 @@ if ($_SESSION["permisos"]["AyudaVentasFreelance"] == "x") {
     } */
 
     .table-media {
-        max-width: 100%;
+        max-width: 1200px;
         overflow-x: auto;
     }
 
