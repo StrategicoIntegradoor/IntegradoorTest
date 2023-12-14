@@ -47,6 +47,11 @@ if ($_SESSION["permisos"]["AyudaVentasFreelance"] == "x") {
         vertical-align: middle; /* Puedes usar "top" o "bottom" en lugar de "middle" según tus necesidades */
     }
 
+    .btn.btn-alert {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    }
 
 </style>
 
