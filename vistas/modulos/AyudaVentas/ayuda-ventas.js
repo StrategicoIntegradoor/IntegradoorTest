@@ -91,7 +91,7 @@ const construirHtmlContinuidad = continuidades => {
     if (continuidades.length === 0) return ''
     let html = '<ul style="margin-top: 60px;">'
     continuidades.forEach(continuidad => {
-        if (continuidad !== '') html += `<li>- ${continuidad}</li>`
+        if (continuidad !== '') html += `<li>✅ ${continuidad}</li>`
     })
     html += '</ul>'
 
@@ -102,7 +102,7 @@ const construirHtmlCambioIntermediario = cambioPoliticas => {
     if (cambioPoliticas.length === 0) return ''
     let html = '<ul style="margin-top: 60px;">'
     cambioPoliticas.forEach(cambioPolitica => {
-        if (cambioPolitica !== '') html += `<li>- ${cambioPolitica}</li>`
+        if (cambioPolitica !== '') html += `<li>✅ ${cambioPolitica}</li>`
     })
     html += '</ul>'
 
