@@ -622,7 +622,7 @@ $rolAsesor = $_SESSION['permisos']['id_rol'];
         <!-- CAMPOS OCULTOS PARA OPTENER LA INFORMACION-->
         <div style="display: none;">
           <label>Rol Asesor</label>
-          <input type="hidden" name="rolAsesor" id="rolAsesor" value="<?php echo $rolAsesor; ?>">
+          <input type="hidden" name="rolAsesor" id="rolAsesorPesados" value="<?php echo $rolAsesor; ?>">
           <label>Clase</label>
           <input type="hidden" class="form-control" id="txtClaseVeh" placeholder="" disabled>
           <label>Id Asegurado</label>
