@@ -164,7 +164,7 @@ if ($_SESSION["permisos"]["AyudaVentasFreelance"] == "x") {
                     <!-- END Form -->
 
 
-                <div class="table-media col-lg-12">
+                <div class="table-media">
                     <table class="table table-bordered table-padding">
 
                         <thead style="background: #88d600; color: #FFF; ">
