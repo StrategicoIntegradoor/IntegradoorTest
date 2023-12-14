@@ -64,9 +64,7 @@ if ($_SESSION["permisos"]["AyudaVentasFreelance"] == "x") {
     }
 
     .columna-enlace {
-    overflow: hidden; /* Para manejar el desbordamiento de texto */
-    text-overflow: ellipsis; /* Para mostrar puntos suspensivos (...) cuando el texto es demasiado largo */
-    white-space: nowrap; /* Para evitar el retorno de línea del texto */
+        word-wrap: break-word;
     }
 
 
