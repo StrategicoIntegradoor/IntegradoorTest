@@ -42,6 +42,11 @@ if ($_SESSION["permisos"]["AyudaVentasFreelance"] == "x") {
     }
     }
 
+    .table-media {
+        overflow-x: auto;
+        min-width: 100%;
+    }
+
     .table th,
     .table td {
         vertical-align: middle; /* Puedes usar "top" o "bottom" en lugar de "middle" según tus necesidades */
