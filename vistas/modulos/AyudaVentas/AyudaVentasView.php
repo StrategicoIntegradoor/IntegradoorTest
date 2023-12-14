@@ -43,7 +43,7 @@ if ($_SESSION["permisos"]["AyudaVentasFreelance"] == "x") {
     } */
 
     .table-media {
-        overflow-x: auto;
+        overflow: auto;
         min-width: 100%;
     }
 
@@ -164,7 +164,7 @@ if ($_SESSION["permisos"]["AyudaVentasFreelance"] == "x") {
 
 
                 <div class="table-media">
-                    <table class="table table-bordered table-striped dt-responsive tablas-asistencias" style="max-width: 100%;">
+                    <table class="table table-bordered table-striped dt-responsive tablas-asistencias">
 
                         <thead style="background: #88d600; color: #FFF; ">
                             <tr>
