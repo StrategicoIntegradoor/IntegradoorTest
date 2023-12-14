@@ -158,7 +158,7 @@ if ($_SESSION["permisos"]["AyudaVentasFreelance"] == "x") {
                     <!-- END Form -->
 
 
-                <div class="table-responsive" style="overflow-x: auto;">
+                <div style="overflow-x: auto;">
                     <table class="table table-bordered table-striped dt-responsive tablas-asistencias" style="min-width: 100%;">
 
                         <thead style="background: #88d600; color: #FFF; ">
