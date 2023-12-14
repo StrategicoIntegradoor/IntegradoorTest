@@ -43,8 +43,8 @@ if ($_SESSION["permisos"]["AyudaVentasFreelance"] == "x") {
     } */
 
     .table-media {
-        overflow: 1000px;
-        min-width: 100%;
+        overflow: auto;
+        min-width: 1000px;
     }
 
     .table th,
