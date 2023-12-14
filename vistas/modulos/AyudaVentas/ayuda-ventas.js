@@ -75,7 +75,7 @@ const construirHtmlCentrosDeInspeccion = centrosDeInspeccion => {
 
                 // if (esEnlace) {
                     // Si es un enlace, envuélvelo en una etiqueta <a> para que sea cliclable
-                    html += `<li><span class="text-config">${texto}</span> - <a href="${enlace}" target="_blank" class="text-config">${enlace}</a></li>`;
+                    html += `<li><span class="text-config">${texto}</span> - <span class="text-config"><a href="${enlace}" target="_blank" class="text-config">${enlace}</a></span></li>`;
                 // } else {
                     // Si no es un enlace, muestra el valor como está
                     // html += `<li>${centro}</li>`;
