@@ -320,7 +320,10 @@ const obtenerAyudaVentas = async () => {
             partTemplate += `
 
             <style>
-            
+                .fixed-width {
+                    text-align: center; /* Alinea el contenido al centro si es necesario */
+                    word-wrap: break-word; /* Indica que el texto debe envolverse cuando se excede el ancho máximo */
+                }
             </style>
                 <td class="fixed-width">${construirHtmlCentrosDeInspeccion(centrosDeInspeccion)}</td>
                 <td class="fixed-width">${construirHtmlContinuidad(continuidades)}</td>
