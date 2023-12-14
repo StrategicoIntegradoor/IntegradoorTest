@@ -1565,13 +1565,13 @@ while ($rowRespuestap3 = mysqli_fetch_assoc($respuestaqueryp3)) {
 		if ($rowRespuestaAsistencia9['Vehiculoreemplazopt'] == "Si ampara") {
 			$html4 .= '<td class="puntos fondo" style="width:' . $valorTabla . '%;text-align: center;"><img style="width:16px;" src="../../../vistas/img/logos/cheque.png" alt=""></td>';
 		} else {
-			$html4 .= '<td class="puntos fondo" style="width:' . $valorTabla . '%;"><center><font size="7"style="text-align: center;">' . $rowRespuestaAsistencia9['Vehiculoreemplazopt'] . '</font></center></td>';
+			$html4 .= '<td class="puntos fondo" style="width:' . $valorTabla . '%;"><center><div style="font-size:5pt">&nbsp;</div><font size="7"style="text-align: center;">' . $rowRespuestaAsistencia9['Vehiculoreemplazopt'] . '</font></center></td>';
 		}
 	} else {
 		if ($rowRespuestaAsistencia9['Vehiculoreemplazopt'] == "Si ampara") {
 			$html4 .= '<td class="puntos fondo2" style="width:' . $valorTabla . '%;text-align: center;"><img style="width:16px;" src="../../../vistas/img/logos/cheque.png" alt=""></td>';
 		} else {
-			$html4 .= '<td class="puntos fondo2" style="width:' . $valorTabla . '%;"><center><font size="7"style="text-align: center;">' . $rowRespuestaAsistencia9['Vehiculoreemplazopt'] . '</font></center></td>';
+			$html4 .= '<td class="puntos fondo2" style="width:' . $valorTabla . '%;"><center><div style="font-size:5pt">&nbsp;</div><font size="7"style="text-align: center;">' . $rowRespuestaAsistencia9['Vehiculoreemplazopt'] . '</font></center></td>';
 		}
 	}
 
