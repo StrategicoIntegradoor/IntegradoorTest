@@ -53,6 +53,10 @@ if ($_SESSION["permisos"]["AyudaVentasFreelance"] == "x") {
     text-overflow: ellipsis;
     }
 
+    .text-config{
+        font-size: 13px;
+    }
+
 </style>
 
 <div class="content-wrapper">
