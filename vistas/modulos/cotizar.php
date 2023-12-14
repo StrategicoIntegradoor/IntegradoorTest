@@ -276,6 +276,7 @@ $rolAsesor = $_SESSION['permisos']['id_rol'];
 .aviso-container {
     margin: 1% 0% 1% 0%;
     background-color: #fff;
+    margin-top: -3px;
 }
 </style>
   <section class="content-header">
