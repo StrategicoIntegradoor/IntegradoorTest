@@ -1747,7 +1747,7 @@ $html4 .= '</tr>';
 //::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
 $html4 .= '<tr>';
-$html4 .= '<td class ="fondo puntos" style="width:25%; text-align: center; font-family:dejavusanscondensedb;"><font size="8">Obligaciones financieras</font></td>';
+$html4 .= '<td class ="fondo puntos" style="width:25%; text-align: center; font-family:dejavusanscondensedb;"><center><div style="font-size:5pt">&nbsp;</div><font size="8">Obligaciones financieras</font></center></td>';
 
 $query19 = "SELECT * FROM ofertas WHERE `id_cotizacion` =$identificador AND `seleccionar` = 'Si'";
 $respuestaquery19 =  $conexion->query($query19);
