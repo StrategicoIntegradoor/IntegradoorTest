@@ -1642,9 +1642,9 @@ function cotizarOfertasPesados() {
                 })
                 .then((ofertas) => {
                   if (typeof ofertas[0].Resultado !== 'undefined') {
-                    agregarAseguradoraFallidaPesados(`Mundial ${plan}`);
+                    agregarAseguradoraFallidaPesados(`Mundial`);
                     ofertas[0].Mensajes.forEach(mensaje => {
-                      mostrarAlertarCotizacionFallida(`Mundial ${plan}`, mensaje);
+                      mostrarAlertarCotizacionFallida(`Mundial`, mensaje);
                     });
                   } else {
                     validarOfertasPesados(ofertas);
