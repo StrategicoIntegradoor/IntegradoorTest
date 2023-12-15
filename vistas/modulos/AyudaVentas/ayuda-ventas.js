@@ -73,13 +73,13 @@ const construirHtmlCentrosDeInspeccion = centrosDeInspeccion => {
                 // Verifica si el valor es un enlace (comienza con "http" o "https")
                 // const esEnlace = enlace.startsWith('http') || enlace.startsWith('https');
 
-                // if (esEnlace) {
+                if (enlace == undefined) {
                     // Si es un enlace, envuélvelo en una etiqueta <a> para que sea cliclable
+                    html += `<li><span class="text-config">${texto}</span></li>`;
+                } else {
                     html += `<li><span class="text-config">${texto}</span> - <a href="${enlace}" target="_blank" class="text-config">${enlace}</a></li>`;
-                // } else {
-                    // Si no es un enlace, muestra el valor como está
-                    // html += `<li>${centro}</li>`;
-                // }
+                 // Si no es un enlace, muestra el valor como está
+                }
             // } 
         // }
     // });
