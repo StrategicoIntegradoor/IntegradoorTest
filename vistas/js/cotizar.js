@@ -2187,7 +2187,7 @@ function cotizarOfertas() {
 
             /* Allianz */
             cont.push(
-              fetch("https://grupoasistencia.com/motor_webservice_tst/Allianz_tst", requestOptions)
+              fetch("https://grupoasistencia.com/motor_webservice_tst/Allianz", requestOptions)
                 .then((res) => {
                   if (res.status === 500) {
                       throw Error("Error interno del servidor (HTTP 500)");
