@@ -2240,7 +2240,7 @@ function cotizarOfertas() {
                 })
                 .catch((err) => {
                   agregarAseguradoraFallida('AXA');
-                  mostrarAlertarCotizacionFallida('AXA', "Error de servicio (500), intente de nuevo");
+                  mostrarAlertarCotizacionFallida('AXA', "Error de servicio, intente de nuevo");
                   console.error(err);
                 })
             );
