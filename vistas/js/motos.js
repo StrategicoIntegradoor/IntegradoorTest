@@ -686,29 +686,6 @@ function registrarOfertaMotos(
     UrlPdf
   ) => {
 
-    //FUNCION QUE ACOMODA RCE EN PARRILLA CUANDO LLEGA MUNDIAL
-    if (aseguradora == 'Mundial' && producto == 'Pesados con RCE en exceso') {
-      // Eliminar los puntos y convertir a número
-      RC = parseFloat(RC.replace(/\./g, ''));
-  
-      // Sumar 1.500.000.000
-      RC += 1500000000;
-  
-      // Volver a formatear con puntos
-      var RC = RC.toLocaleString();
-  
-    }
-
-    //FUNCION QUE ACOMODA LOS NOMBRES DE LOS PLANES CUANDO LLEGA LIBERTY
-    if (aseguradora == 'Liberty') {
-
-      if(producto == 'Pesados Full1'){
-        producto = 'Pesados Full1'
-      }else if(producto == 'Pesados Integral1'){
-        producto = 'Pesados Integral1'
-      }  
-    }
-
     let cardCotizacion = `
               <div class='col-lg-12'>
                 <div class='card-ofertas'>
@@ -928,8 +905,7 @@ function registrarOfertaMotos(
     var marca = document.getElementById("txtMarcaVeh").value;
     var linea = document.getElementById("txtReferenciaVeh").value;
   
-    var mundial = document.getElementById("mundialseguros").value;
-    console.log(mundial)
+
     // var hdi = document.getElementById("hdiseguros").value;
     // var estado = document.getElementById("estadoseguros").value;
   
@@ -1034,7 +1010,6 @@ function registrarOfertaMotos(
         AniosAsegurados: AniosAsegurados,
         NivelEducativo: NivelEducativo,
         Estrato: Estrato,
-        mundial: mundial,
         ofinanciera: ofinanciera,
         // hdi: hdi,
         // estado: estado,
@@ -1077,7 +1052,6 @@ function registrarOfertaMotos(
           Departamento: DptoCirculacion,
           Ciudad: ciudadCirculacion,
           benefOneroso: benefOneroso,
-          mundial: mundial,
           idCotizacion: idCotizacion,
         },
         cache: false,
