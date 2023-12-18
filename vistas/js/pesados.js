@@ -1662,12 +1662,15 @@ function cotizarOfertasPesados() {
           // }     
 
             /* AXA */
+          cont.push(
               fetch("https://grupoasistencia.com/motor_webservice_tst/AXA_tst", requestOptions)
                 .then((res) => {
                   if (!res.ok) throw Error(res.statusText);
                   return res.json();
                 })
                 .then((ofertas) => {
+                  promesas.push(AxaPromise)
+
                   if (typeof ofertas[0].Resultado !== 'undefined') {
                     agregarAseguradoraFallidaPesados('AXA')
                     ofertas[0].Mensajes.forEach(mensaje => {
@@ -1680,7 +1683,10 @@ function cotizarOfertasPesados() {
                 })
                 .catch((err) => {
                   console.error(err);
-                });
+                })
+
+          );        
+
 
              /* LIBERTY */ 
             // let planesLiberty = ["Full","Integral"];
