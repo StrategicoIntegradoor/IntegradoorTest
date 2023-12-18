@@ -1662,7 +1662,6 @@ function cotizarOfertasPesados() {
           // }     
 
             /* AXA */
-            cont.push(
               fetch("https://grupoasistencia.com/motor_webservice_tst/AXA_tst", requestOptions)
                 .then((res) => {
                   if (!res.ok) throw Error(res.statusText);
@@ -1681,8 +1680,7 @@ function cotizarOfertasPesados() {
                 })
                 .catch((err) => {
                   console.error(err);
-                })
-            );
+                });
 
              /* LIBERTY */ 
             // let planesLiberty = ["Full","Integral"];
