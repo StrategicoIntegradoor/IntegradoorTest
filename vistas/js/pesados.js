@@ -302,6 +302,8 @@ $(document).ready(function () {
     });
   });
 
+  //FUNCIONES EN COMUN MODULOS DE COTIZACIÓN
+
   // Maximiza el formulario Datos Asegurado
 function masAseg() {
     document.getElementById("DatosAsegurado").style.display = "block";
@@ -419,6 +421,9 @@ function masAseg() {
   
   var contErrMetEstado = 0;
   var contErrProtocolo = 0;
+
+  
+  //* FUNCIONES PROPIAS MÓDULOS DE COTIZACIÓN, CONSULTA DE DATOS DEL VEHÍCULO *//
 
   // function consulPlaca() {
   //   var numplaca = document.getElementById("placaVeh").value;
@@ -1359,8 +1364,7 @@ function registrarOfertaPesados(
 //     cotizarOfertasPesados()
 //   })
   
-
-function cotizarOfertasPesados() {
+  function cotizarOfertasPesados() {
 
   var codigoFasecolda1 = document.getElementById('txtFasecolda')
   var contenido = codigoFasecolda1.value;
@@ -1804,6 +1808,8 @@ function cotizarOfertasPesados() {
     }
   }
   
+
+  //* CONSULTA MANUAL, LA MISMA PARA TODOS, EN PROCESO DE NO REPETIR EN TRES ARCHIVOS JS DIFERENTES *//
 
   $("#btnConsultarVehmanualbuscador").click(function () {
     var fasecolda=  document.getElementById("fasecoldabuscadormanual").value;
