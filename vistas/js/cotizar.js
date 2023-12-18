@@ -2210,7 +2210,7 @@ function cotizarOfertas() {
                 })
                 .catch((err) => {
                   agregarAseguradoraFallida('Allianz');
-                  mostrarAlertarCotizacionFallida('Allianz', "Error de servicio (500), intente de nuevo");
+                  mostrarAlertarCotizacionFallida('Allianz', "Error de servicio, intente de nuevo");
                   console.error(err);
                 })
             );
