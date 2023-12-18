@@ -74,6 +74,7 @@ const construirHtmlCentrosDeInspeccion = centrosDeInspeccion => {
                 // const esEnlace = enlace.startsWith('http') || enlace.startsWith('https');
 
                 if (enlace == undefined) {
+                    console.log("CAMINO DEL UNDEFINED")
                     // Si es un enlace, envuélvelo en una etiqueta <a> para que sea cliclable
                     html += `<li><span class="text-config">${texto}</span></li>`;
                 } else {
