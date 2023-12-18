@@ -75,7 +75,7 @@
 			</li>';
 		}
 		/*=============================================
-		COTIZAR LIVIANO
+		MODULO COTIZAR LIVIANO
 		=============================================*/
 	?>
 			<li>
@@ -87,6 +87,34 @@
 
 			
 	<?php	
+
+		/*=============================================
+		MODULO DE PESADOS
+		=============================================*/
+		if($_SESSION["permisos"]["Cotizarpesados"] == "x"){	
+			echo '<li>
+				<a href="pesados">
+					<i class="fa fa-truck"></i>
+					<span>Cotizar Pesados</span>
+				</a>
+			</li>';
+		}
+
+
+
+		/*=============================================
+		MODULO DE MOTOS
+		=============================================*/
+		if($_SESSION["permisos"]["Cotizarmotos"] == "x"){	
+			echo '<li>
+				<a href="motos">
+					<i class="fa fa-motorcycle" aria-hidden="true"></i>
+					<span>Cotizar Motos</span>
+				</a>
+			</li>';
+		}
+
+
 		/*=============================================
 		COTIZACIONES MASIVAS
 		=============================================*/
@@ -98,17 +126,7 @@
 				</a>
 			</li>';
 		}
-		/*=============================================
-		PESADOS
-		=============================================*/
-		if($_SESSION["permisos"]["Cotizarpesados"] == "x"){	
-			echo '<li>
-				<a href="pesados">
-					<i class="fa fa-truck"></i>
-					<span>Cotizar Pesados</span>
-				</a>
-			</li>';
-		}
+
 
 		/*=============================================
 		EXEQUIAS
