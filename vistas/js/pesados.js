@@ -1665,7 +1665,6 @@ function cotizarOfertasPesados() {
           cont.push(
               fetch("https://grupoasistencia.com/motor_webservice_tst/AXA_tst", requestOptions)
                 .then((res) => {
-                  promesas.push(AxaPromise)
                   if (!res.ok) throw Error(res.statusText);
                   return res.json();
                 })
@@ -1684,7 +1683,6 @@ function cotizarOfertasPesados() {
                 .catch((err) => {
                   console.error(err);
                 })
-
           );        
 
 
