@@ -909,7 +909,7 @@ function registrarOfertaMotos(
     // var hdi = document.getElementById("hdiseguros").value;
     // var estado = document.getElementById("estadoseguros").value;
   
-    var ofinanciera = document.getElementById("obligacionfinanciera").value;
+    // var ofinanciera = document.getElementById("obligacionfinanciera").value;
   
     //:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
     var placa = document.getElementById("placaVeh").value;
@@ -1010,7 +1010,7 @@ function registrarOfertaMotos(
         AniosAsegurados: AniosAsegurados,
         NivelEducativo: NivelEducativo,
         Estrato: Estrato,
-        ofinanciera: ofinanciera,
+        // ofinanciera: ofinanciera,
         // hdi: hdi,
         // estado: estado,
       };
