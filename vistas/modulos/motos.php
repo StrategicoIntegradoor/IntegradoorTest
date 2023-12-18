@@ -832,5 +832,6 @@ if ($_SESSION["permisos"]["Cotizarmotos"] != "x") {
 
 </body>
 
+<script src="vistas/js/motos.js?v=<?php echo (rand()); ?>"></script>
 
 
