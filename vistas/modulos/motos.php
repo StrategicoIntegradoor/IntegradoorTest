@@ -1,5 +1,112 @@
 <?php
 
+$DB_host = "localhost";
+$DB_user = "grupoasi_cotizautos";
+$DB_pass = "M1graci0n123";
+$DB_name = "grupoasi_cotizautos";
+
+$enlace = mysqli_connect("$DB_host", "$DB_user", "$DB_pass", "$DB_name");
+if (!$enlace) {
+
+  die("Conexion Fallida " . mysqli_connect_error());
+}
+
+// mysqli_set_charset($enlace, "utf8");
+
+function obtenerCredenciales($enlace, $tabla, $columnas, $idIntermediario) {
+  $query = "SELECT $columnas FROM `$tabla` WHERE `id_intermediario` = '$idIntermediario'";
+  $ejecucion = mysqli_query($enlace, $query);
+  $numerofilas = mysqli_num_rows($ejecucion);
+  $fila = mysqli_fetch_assoc($ejecucion);
+
+  if ($numerofilas > 0) {
+      return $fila;
+  } else {
+      $query2 = "SELECT * FROM `$tabla` WHERE `id_intermediario` = 3";
+      $ejecucion2 = mysqli_query($enlace, $query2);
+      $fila2 = mysqli_fetch_assoc($ejecucion2);
+      return $fila2;
+  }
+}
+
+// FUNCION PARA OBTENER CREDENCIALES SBS
+$creSBS = obtenerCredenciales($enlace, 'Credenciales_SBS2', 'cre_sbs_usuario, cre_sbs_contrasena', $_SESSION['intermediario']);
+
+$cre_sbs_usuario = $creSBS['cre_sbs_usuario'];
+$cre_sbs_contrasena = $creSBS['cre_sbs_contrasena']; // Aquí está el cambio
+
+// FUNCION PARA OBTENER CREDENCIALES ALLIANZ
+$creAllianz = obtenerCredenciales($enlace, 'Credenciales_Allianz', '*', $_SESSION['intermediario']);
+
+$cre_alli_sslcertfile = $creAllianz['cre_alli_sslcertfile'];
+$cre_alli_sslkeyfile = $creAllianz['cre_alli_sslkeyfile'];
+
+$cre_alli_passphrase = $creAllianz['cre_alli_passphrase'];
+$cre_alli_partnerid = $creAllianz['cre_alli_partnerid'];
+
+$cre_alli_agentid = $creAllianz['cre_alli_agentid'];
+$cre_alli_partnercode = $creAllianz['cre_alli_partnercode'];
+
+$cre_alli_agentcode = $creAllianz['cre_alli_agentcode'];
+
+
+// FUNCION PARA OBTENER CREDENCIALES ESTADO
+$creEstado = obtenerCredenciales($enlace, 'Credenciales_Estado', '*', $_SESSION['intermediario']);
+
+$cre_est_usuario = $creEstado['cre_est_usuario'];
+$cre_equ_contrasena = $creEstado['cre_equ_contrasena'];
+$Cre_Est_Entity_Id = $creEstado['Cre_Est_Entity_Id'];
+$cre_est_zona = $creEstado['cre_est_zona'];
+
+
+// FUNCION PARA OBTENER CREDENCIALES AXA
+$creAXA = obtenerCredenciales($enlace, 'Credenciales_AXA', '*', $_SESSION['intermediario']);
+
+$cre_axa_sslcertfile = $creAXA['cre_axa_sslcertfile'];
+$cre_axa_sslkeyfile = $creAXA['cre_axa_sslkeyfile'];
+$cre_axa_passphrase = $creAXA['cre_axa_passphrase'];
+$cre_axa_codigoDistribuidor = $creAXA['cre_axa_codigoDistribuidor'];
+$cre_axa_idTipoDistribuidor = $creAXA['cre_axa_idTipoDistribuidor'];
+$cre_axa_codigoDivipola = $creAXA['cre_axa_codigoDivipola'];
+$cre_axa_canal = $creAXA['cre_axa_canal'];
+$cre_axa_validacionEventos = $creAXA['cre_axa_validacionEventos'];
+$url_axa = $creAXA['url_axa'];
+
+$creSolidaria = obtenerCredenciales($enlace, 'Credenciales_Solidaria', '*', $_SESSION['intermediario']);
+
+$cre_sol_id = $creSolidaria['cre_sol_id'] ?? null;
+$id_Intermediario = $creSolidaria['id_Intermediario'] ?? null;
+$cre_sol_cod_sucursal = $creSolidaria['cre_sol_cod_sucursal'] ?? null;
+$cre_sol_cod_per = $creSolidaria['cre_sol_cod_per'] ?? null;
+$cre_sol_cod_tipo_agente = $creSolidaria['cre_sol_cod_tipo_agente'] ?? null;
+$cre_sol_cod_agente = $creSolidaria['cre_sol_cod_agente'] ?? null;
+$cre_sol_cod_pto_vta = $creSolidaria['cre_sol_cod_pto_vta'] ?? null;
+$cre_sol_grant_type = $creSolidaria['cre_sol_grant_type'] ?? null;
+$cre_sol_Cookie_token = $creSolidaria['cre_sol_Cookie_token'] ?? null;
+$cre_sol_token = $creSolidaria['cre_sol_token'] ?? null;
+$cre_sol_fecha_token = $creSolidaria['cre_sol_fecha_token'] ?? null;
+
+
+$query8 = "SELECT *  FROM `Credenciales_Bolivar` WHERE `id_Intermediario` = '" . $_SESSION["intermediario"] . "'";
+
+$ejecucion8 = mysqli_query($enlace, $query8);
+$numerofilas8 = mysqli_num_rows($ejecucion8);
+$fila8 = mysqli_fetch_assoc($ejecucion8);
+
+if ($numerofilas8 > 0) {
+  $cre_bol_api_key = $fila8['cre_bol_api_key'];
+  $cre_bol_claveAsesor = $fila8['cre_bol_claveAsesor'];
+} else {
+  $query9 = "SELECT * FROM `Credenciales_Bolivar` WHERE `id_Intermediario` = 3";
+
+  $ejecucion9 = mysqli_query($enlace, $query9);
+  $numerofilas9 = mysqli_num_rows($ejecucion9);
+  $fila9 = mysqli_fetch_assoc($ejecucion9);
+
+  $cre_bol_api_key = $fila9['cre_bol_api_key'];
+  $cre_bol_claveAsesor = $fila9['cre_bol_claveAsesor'];
+}
+
 if ($_SESSION["permisos"]["Cotizarmotos"] != "x") {
 
     echo '<script>
@@ -219,7 +326,7 @@ if ($_SESSION["permisos"]["Cotizarmotos"] != "x") {
                       </div>
 
                       <div class="col-xs-12 col-sm-6 col-md-3 form-group" id="contenBtnConsultarPlaca">
-                        <button class="btn btn-primary btn-block" id="btnConsultarPlaca">Siguiente</button>
+                        <button class="btn btn-primary btn-block" id="btnConsultarPlacaMotos">Siguiente</button>
                       </div>
 
                       <div class="col-xs-12 col-sm-6 col-md-3 form-group">
@@ -349,7 +456,7 @@ if ($_SESSION["permisos"]["Cotizarmotos"] != "x") {
               </div>
             
 
-            <!-- FORMULARIO RESUMEN VEHICULO -->
+            <!-- FORMULARIO RESUMEN VEHICULO TIPO MOTO-->
             <form method="Post" id="formResumVeh">
               <div id="resumenVehiculo">
                 <div class="col-lg-12" id="headerVehiculo">
@@ -519,7 +626,7 @@ if ($_SESSION["permisos"]["Cotizarmotos"] != "x") {
                 <div class="col-lg-12 conten-cotizar">
                   <div class="row">
                     <div class="col-xs-12 col-sm-6 col-md-3 form-group">
-                      <button class="btn btn-primary btn-block" id="btnCotizar">Cotizar Ofertas</button>
+                      <button class="btn btn-primary btn-block" id="btnCotizarMotos">Cotizar Ofertas</button>
                     </div>
                     <div class="col-xs-12 col-sm-6 col-md-3 form-group">
                       <div id="loaderOferta"></div>

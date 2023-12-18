@@ -1,7 +1,24 @@
+$(document).ready(function () {
 
+    $("#btnCotizarMotos").click(function () {
+        cotizarOfertasMotos();
+    });
+
+    $("#btnConsultarPlacaMotos").click(function () {
+        consulPlacaMotos();
+    });
+
+});
+
+
+// Permite consultar la informacion del vehiculo por medio de la Placa (Seguros del Estado)
   function consulPlacaMotos() {
-    var rolAsesor = document.getElementById("rolAsesorPesados").value;
     var numplaca = document.getElementById("placaVeh").value;
+    if (numplaca == "WWW404") {
+      document.getElementById("formularioVehiculo").style.display = "block";
+      $("#loaderPlaca").html("");
+    }else{
+    var rolAsesor = document.getElementById("rolAsesor").value;
     var valnumplaca = numplaca.toUpperCase(); // Convierte la Placa en Mayusculas
     var tipoDocumentoID = document.getElementById("tipoDocumentoID").value;
     var numDocumentoID = document.getElementById("numDocumentoID").value;
@@ -12,7 +29,23 @@
     var apellidosAseg = document.getElementById("txtApellidos").value;
     var generoAseg = document.getElementById("genero").value;
     var estadoCivil = document.getElementById("estadoCivil").value;
-  
+    var intermediario = document.getElementById("intermediario").value;
+    if(tipoDocumentoID == "2"){
+      var restriccion = '';
+      if(rolAsesor == 19){
+        restriccion = 'Lo sentimos, no puedes realizar cotizaciones para personas jurídicas por este cotizador. Para hacerlo debes comunicarte con el Equipo de Asesores Freelance de Grupo Asistencia, quienes podrán ayudarte a cotizar de manera manual con diferentes aseguradoras.';
+      }else{
+        restriccion = 'Lo sentimos, no puedes realizar cotizaciones para personas jurídicas por este cotizador.'
+      }
+      Swal.fire({
+        icon: 'error',
+        title: 'Lo sentimos',
+        text: restriccion
+      }).then(() => {
+        // Recargar la página después de cerrar el SweetAlert
+        location.reload();
+      });
+    }
     if (
       numplaca != "" &&
       tipoDocumentoID != "" &&
@@ -35,7 +68,7 @@
       var myHeaders = new Headers();
       myHeaders.append("Content-Type", "application/json");
   
-      var raw = JSON.stringify({ Placa: valnumplaca });
+      var raw = JSON.stringify({ Placa: valnumplaca, intermediario: intermediario });
   
       var requestOptions = {
         mode: "cors",
@@ -54,7 +87,6 @@
           return response.json();
         })
         .then(function (myJson) {
-          // console.log(myJson);
           var estadoConsulta = myJson.Success;
           var mensajeConsulta = myJson.Message;
   
@@ -67,11 +99,12 @@
             var codigoFasecolda = myJson.Data.CodigoFasecolda;
             var valorAsegurado = myJson.Data.ValorAsegurado;
   
-            if(codigoFasecolda != null){
+            if (codigoFasecolda != null) {
               if (valorAsegurado == "null" || valorAsegurado == null) {
-                document.getElementById("formularioVehiculo").style.display =
-                  "block";
-                $("#loaderPlaca").html("");
+                consulPlacaMapfre(valnumplaca);
+                // document.getElementById("formularioVehiculo").style.display =
+                //   "block";
+                // $("#loaderPlaca").html("");
               } else {
                 var claseVehiculo = "";
                 var limiteRCESTADO = "";
@@ -79,20 +112,6 @@
                 if (codigoClase == 1) {
                   claseVehiculo = "AUTOMOVILES";
                   limiteRCESTADO = 6;
-                  var restriccion = '';
-                  if(rolAsesor == 19){
-                    restriccion = 'Lo sentimos, no puedes cotizar vehÍculos livianos por este módulo. Para hacerlo debes ingresar al modulo Cotizar Pesados.';
-                  }else{
-                    restriccion = 'Lo sentimos, no puedes cotizar vehÍculos livianos por este módulo.'
-                  }
-                  Swal.fire({
-                    icon: 'error',
-                    text: restriccion,
-                    confirmButtonText: 'Cerrar'
-                  }).then(() => {
-                    // Recargar la página después de cerrar el SweetAlert
-                    location.reload();
-                  });
                 } else if (codigoClase == 2) {
                   claseVehiculo = "CAMPEROS";
                   limiteRCESTADO = 18;
@@ -105,49 +124,59 @@
                 } else if (codigoClase == 12) {
                   claseVehiculo = "MOTOCICLETA";
                   limiteRCESTADO = 6;
+                  //  var restriccion = '';
+                  // if(rolAsesor == 19){
+                  //   restriccion = 'No puedes cotizar motos por este módulo. Para hacerlo, debes comunicarte con el Equipo de Asesores Freelance de Grupo Asistencia, quienes podrán ayudarte a cotizar de manera manual con diferentes aseguradoras.';
+                  // }else{
+                  //   restriccion = 'Lo sentimos, no puedes cotizar motos por este módulo.'
+                  // }
+                  // Swal.fire({
+                  //   icon: 'error',
+                  //   title: 'Lo sentimos',
+                  //   text: restriccion
+                  // }).then(() => {
+                  //   // Recargar la página después de cerrar el SweetAlert
+                  //   location.reload();
+                  // });
+                } else if (codigoClase == 14 || codigoClase == 21) {
+                  claseVehiculo = "PESADO";
+                  limiteRCESTADO = 18;
                   var restriccion = '';
                   if(rolAsesor == 19){
-                    restriccion = 'Lo sentimos, no puedes cotizar motocicletas por este módulo. Para hacerlo debes ingresar al modulo Cotizar Pesados.';
+                    restriccion = 'Lo sentimos, no puedes cotizar vehículos pesados por este módulo. Para hacerlo debes ingresar al modulo Cotizar Pesados.';
                   }else{
-                    restriccion = 'Lo sentimos, no puedes cotizar motocicletas por este módulo.'
+                    restriccion = 'Lo sentimos, no puedes cotizar pesados por este módulo.'
                   }
                   Swal.fire({
                     icon: 'error',
-                    text: restriccion,
-                    confirmButtonText: 'Cerrar'
+                    title: 'Lo sentimos',
+                    text: restriccion
                   }).then(() => {
                     // Recargar la página después de cerrar el SweetAlert
                     location.reload();
                   });
-                } else if (codigoClase == 14 || codigoClase == 21) {
-                  claseVehiculo = "PESADO";
-                  limiteRCESTADO = 18;
                 } else if (codigoClase == 19) {
                   claseVehiculo = "VAN";
                   limiteRCESTADO = 18;
                 } else if (codigoClase == 16) {
                   claseVehiculo = "MOTOCICLETA";
                   limiteRCESTADO = 6;
-                  var restriccion = '';
-                  if(rolAsesor == 19){
-                    restriccion = 'Lo sentimos, no puedes cotizar motocicletas por este módulo. Para hacerlo debes ingresar al modulo Cotizar Pesados.';
-                  }else{
-                    restriccion = 'Lo sentimos, no puedes cotizar motocicletas por este módulo.'
-                  }
-                  Swal.fire({
-                    icon: 'error',
-                    text: restriccion,
-                    confirmButtonText: 'Cerrar'
-                  }).then(() => {
-                    // Recargar la página después de cerrar el SweetAlert
-                    location.reload();
-                  });
-                }else if (codigoClase == 25) {
-                  claseVehiculo = "TRAILER";
-                  limiteRCESTADO = 6;
+                  // var restriccion = '';
+                  // if(rolAsesor == 19){
+                  //   restriccion = 'No puedes cotizar motos por este módulo. Para hacerlo, debes comunicarte con el Equipo de Asesores Freelance de Grupo Asistencia, quienes podrán ayudarte a cotizar de manera manual con diferentes aseguradoras.';
+                  // }else{
+                  //   restriccion = 'Lo sentimos, no puedes cotizar motos por este módulo.'
+                  // }
+                  // Swal.fire({
+                  //   icon: 'error',
+                  //   title: 'Lo sentimos',
+                  //   text: restriccion
+                  // }).then(() => {
+                  //   // Recargar la página después de cerrar el SweetAlert
+                  //   location.reload();
+                  // });
                 }
   
-                console.log(codigoClase)
                 $("#CodigoClase").val(codigoClase);
                 $("#txtClaseVeh").val(claseVehiculo);
                 $("#LimiteRC").val(limiteRCESTADO);
@@ -156,7 +185,7 @@
                 $("#CodigoLinea").val(codigoLinea);
                 $("#txtFasecolda").val(codigoFasecolda);
                 $("#txtValorFasecolda").val(valorAsegurado);
-      
+  
                 consulDatosFasecolda(codigoFasecolda, modeloVehiculo).then(
                   function (resp) {
                     $("#txtMarcaVeh").val(resp.marcaVeh);
@@ -171,51 +200,149 @@
               mensajeConsulta == "Favor diligenciar correctamente la placa"
             ) {
               swal.fire({ text: "! Favor diligenciar correctamente la placa. ¡" });
-            } else if (
-              mensajeConsulta == "Vehículo no encontrado." ||
-              mensajeConsulta == "Unable to connect to the remote server"
-            ) {
-              document.getElementById("formularioVehiculo").style.display =
-              "block";
-              document.getElementById("headerAsegurado").style.display = "block";
-              document.getElementById("masA").style.display = "block";
-              document.getElementById("DatosAsegurado").style.display = "none";
             } else {
-              contErrMetEstado++;
-              if (contErrMetEstado > 1) {
-                document.getElementById("formularioVehiculo").style.display =
-                "block";
-                 document.getElementById("headerAsegurado").style.display = "block";
-                 document.getElementById("masA").style.display = "block";
-                 document.getElementById("DatosAsegurado").style.display = "none";
-                 contErrMetEstado = 0;
-              } else {
-                // setTimeout(consulPlaca, 2000);
-              }
+              
+              consulPlacaMapfre(valnumplaca);
+  
             }
-            $("#loaderPlaca").html("");
+            consulPlacaMapfre(valnumplaca);
+            // $("#loaderPlaca").html("");
           }
         })
         .catch(function (error) {
           console.log("Parece que hubo un problema: \n", error);
+          consulPlacaMapfre(valnumplaca);
   
           contErrProtocolo++;
           if (contErrProtocolo > 1) {
-            $("#loaderPlaca").html("");
-            document.getElementById("formularioVehiculo").style.display = "block";
-            
-            document.getElementById("headerAsegurado").style.display = "block";
-            document.getElementById("masA").style.display = "block";
-    
-            document.getElementById("DatosAsegurado").style.display = "none";
-              
+            consulPlacaMapfre(valnumplaca);
+            // $("#loaderPlaca").html("");
             contErrProtocolo = 0;
           } else {
-            setTimeout(consulPlacaPesados, 4000);
+            // setTimeout(consulPlacaMapfre, 4000);
           }
         });
+  
+  
     }
   }
+  }
+  
+    function consulPlacaMapfre(valnumplaca){
+
+        let bodyContent = JSON.stringify({
+            "Placa": valnumplaca
+        });
+
+        let headersList = {
+            "Accept": "*/*",
+            "User-Agent": "Thunder Client (https://www.thunderclient.com)",
+            "Content-Type": "application/json"
+        }
+
+        fetch("https://grupoasistencia.com/webserviceAutos/ultimaPolizaMapfre", {
+        method: "POST",
+        body: bodyContent,
+        headers: headersList
+        })
+        .then(function(response) {
+            return response.json();
+        })
+        .then(async function(data) {
+            var resultadoConsulta = data.respuesta.errorEjecucion;
+            var codigoClase = data.polizaReciente.COD_MODELO;
+            var marcaCod = data.polizaReciente.COD_MARCA;
+            var clase = data.polizaReciente.NOM_CLASE;
+            var linea = data.polizaReciente.NOM_LINEA;
+            var modelo = data.polizaReciente.ANIO_VEHICULO;
+            var cilindraje = data.polizaReciente.VAL_CILINDRAJE;
+            var codFasecolda = data.polizaReciente.COD_FASECOLDA;
+            var aseguradora = data.polizaReciente.nomCompania;
+            // console.log("Mapfre consulta");
+            // console.log("Marca Cod:", marcaCod);
+            // console.log("Clase:", clase);
+            // console.log("Línea:", linea);
+            // console.log("Modelo:", modelo);
+            // console.log("Cilindraje:", cilindraje);
+            // console.log("Código Fasecolda:", codFasecolda);
+            // console.log("Aseguradora:", aseguradora);
+
+            propietario = data.polizaReciente.asegNombre;
+            cedulaP = data.polizaReciente.asegCodDocum;
+
+            
+            if (marcaCod == "" && clase == "" && linea == "" && modelo == "" && cilindraje == "" && codFasecolda == "" && aseguradora == "" && aseguradora == "" && fechFinTR == "" && propietario == "" && cedulaP == "") {
+                alert("No se encuentra poliza en esta placa")
+            }
+
+            if (resultadoConsulta == false || resultadoConsulta == "false") {
+
+            var claseVehiculo = "";
+            var limiteRCESTADO = "";
+
+            if (codigoClase == 1) {
+                claseVehiculo = "AUTOMOVILES";
+                limiteRCESTADO = 6;
+            } else if (codigoClase == 2) {
+                claseVehiculo = "CAMPEROS";
+                limiteRCESTADO = 18;
+            } else if (codigoClase == 3) {
+                claseVehiculo = "PICK UPS";
+                limiteRCESTADO = 18;
+            } else if (codigoClase == 4) {
+                claseVehiculo = "UTILITARIOS DEPORTIVOS";
+                limiteRCESTADO = 6;
+            } else if (codigoClase == 12) {
+                claseVehiculo = "MOTOCICLETA";
+                limiteRCESTADO = 6;
+            } else if (codigoClase == 14 || codigoClase == 21) {
+                claseVehiculo = "PESADO";
+                limiteRCESTADO = 18;
+            } else if (codigoClase == 19) {
+                claseVehiculo = "VAN";
+                limiteRCESTADO = 18;
+            } else if (codigoClase == 16) {
+                claseVehiculo = "MOTOCICLETA";
+                limiteRCESTADO = 6;
+            }
+
+            $("#CodigoClase").val(codigoClase);
+            $("#txtClaseVeh").val(claseVehiculo);
+            $("#LimiteRC").val(limiteRCESTADO);
+            $("#CodigoMarca").val(marcaCod);
+            $("#txtModeloVeh").val(modelo);
+            $("#CodigoLinea").val(linea);
+            $("#txtFasecolda").val(codFasecolda);
+
+            consulDatosFasecolda(codFasecolda, modelo).then(
+                function (resp) {
+                console.log(resp)
+                $("#txtMarcaVeh").val(resp.marcaVeh);
+                $("#txtReferenciaVeh").val(resp.lineaVeh);
+                $("#txtValorFasecolda").val(resp.valorVeh);
+                }
+            );
+            // const valor = resp[llave];
+            // $("#txtValorFasecolda").val(valorAsegurado);
+
+            }else{
+            document.getElementById("formularioVehiculo").style.display =
+                "block";
+                document.getElementById("headerAsegurado").style.display = "block";
+                document.getElementById("masA").style.display = "block";
+                document.getElementById("DatosAsegurado").style.display = "none";
+            }
+
+        })
+        .catch(function (error) {
+            console.log("Parece que hubo un problema: \n", error);
+            document.getElementById("formularioVehiculo").style.display =
+                "block";
+                document.getElementById("headerAsegurado").style.display = "block";
+                document.getElementById("masA").style.display = "block";
+                document.getElementById("DatosAsegurado").style.display = "none";
+        });
+    }
   
   // CONSULTA LA GUIA PARA OBTENER EL CODIGO FASECOLDA MANUALMENTE
   function consulCodFasecoldaMotos() {
