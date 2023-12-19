@@ -8,6 +8,10 @@ $(document).ready(function () {
         consulPlacaMotos();
     });
 
+    document.querySelector('#btnReCotizarFallidas').addEventListener('click', () => {
+        cotizarOfertasMotos()
+      })
+
 });
 
 
