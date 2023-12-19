@@ -1088,264 +1088,163 @@ function registrarOfertaMotos(
           
 
           let promesas = []
-          /* SEGUROS MUNIDAL */
-          // fetch(
-          //   "https://grupoasistencia.com/webservice_autosv1/CotizarPesados",
-          //   requestOptions
-          // )
-          //   .then(function (response) {
-          //     if (!response.ok) throw Error(response.statusText);
-          //     return response.json();
-          //   })
-          //   .then((ofertas) => {
-          //       if (typeof ofertas[0].Resultado !== 'undefined') {
-          //         agregarAseguradoraFallidaPesados('Seguros Mundial')
-          //         ofertas[0].Mensajes.forEach(mensaje => {
-          //           mostrarAlertarCotizacionFallida('Seguros Mundial', mensaje)
-          //         })
-          //       } else {
-          //         validarOfertasPesados(ofertas);
-          //         mostrarAlertaCotizacionExitosa('Seguros Mundial')
-          //       }
-          //     })
-          //     .catch((err) => {
-          //       console.error(err);
-          //     })
-          //   .catch(function (error) {
-          //     console.log("Parece que hubo un problema: \n", error);
 
-          //   });
-
-            /*MUNDIAL*/ 
-          // if(mundial == 5){
-          //   let body = JSON.parse(requestOptions.body)
-          //   plan = 'Trailer'
-          //   body.plan = plan
-          //   requestOptions.body = JSON.stringify(body)
-          //   let mundialPromise = fetch("https://grupoasistencia.com/motor_webservice_tst/CotizarPesados_tst",requestOptions)
-          //     .then(function (response) {
-          //       if (!response.ok) throw Error(response.statusText);
-          //       return response.json();
-          //     })
-          //     .then((ofertas) => {
-          //         if (typeof ofertas[0].Resultado !== 'undefined') {
-          //           agregarAseguradoraFallidaPesados('Mundial')
-          //           ofertas[0].Mensajes.forEach(mensaje => {
-          //             mostrarAlertarCotizacionFallida('Mundial', mensaje)
-          //           })
-          //         } else {
-          //           validarOfertasPesados(ofertas);
-          //           mostrarAlertaCotizacionExitosa('Mundial')
-          //         }
-          //       })
-          //       .catch((err) => {
-          //         console.error(err);
-          //       })
-          //     .catch(function (error) {
-          //       console.log("Parece que hubo un problema: \n", error);
-
-          //     });
-              
-          //   promesas.push(mundialPromise);
-
-          // }else{
-
-          //   let planesMundial = ["Normal","RC_Exceso"];
-          //   let body = JSON.parse(requestOptions.body)
-
-          //   planesMundial.forEach(plan => {
-          //     body.plan = plan
-          //     requestOptions.body = JSON.stringify(body)
-            
-          //     let mundialPromise = fetch("https://grupoasistencia.com/motor_webservice_tst/CotizarPesados_tst", requestOptions)
-          //       .then((res) => {
-          //         if (!res.ok) throw Error(res.statusText);
-          //         return res.json();
-          //       })
-          //       .then((ofertas) => {
-          //         if (typeof ofertas[0].Resultado !== 'undefined') {
-          //           agregarAseguradoraFallidaPesados(`Mundial`);
-          //           ofertas[0].Mensajes.forEach(mensaje => {
-          //             mostrarAlertarCotizacionFallida(`Mundial`, mensaje);
-          //           });
-          //         } else {
-          //           validarOfertasPesados(ofertas);
-          //           mostrarAlertaCotizacionExitosa(`Mundial`);
-          //         }
-          //       })
-          //       .catch((err) => {
-          //         console.error(err);
-          //       });
-
-          //       promesas.push(mundialPromise);
-
-          //   });  
-
-          // }     
-
-            /* AXA */
-          promesas.push(
-              fetch("https://grupoasistencia.com/motor_webservice_tst/AXA_tst", requestOptions)
-                .then((res) => {
-                  if (!res.ok) throw Error(res.statusText);
-                  return res.json();
-                })
-                .then((ofertas) => {
-
-                  if (typeof ofertas[0].Resultado !== 'undefined') {
-                    agregarAseguradoraFallidaMotos('AXA')
-                    ofertas[0].Mensajes.forEach(mensaje => {
-                      mostrarAlertarCotizacionFallida('AXA', mensaje)
-                    })
-                  } else {
-                    validarOfertasMotos(ofertas)
-                    mostrarAlertaCotizacionExitosa('AXA')
-                  }
-                })
-                .catch((err) => {
-                  agregarAseguradoraFallidaMotos('AXA');
-                  mostrarAlertarCotizacionFallida('AXA', "Error de servicio, intente de nuevo");
-                  console.error(err);
-                })
-          );        
-
-
-             /* LIBERTY */ 
-            promesas.push(
-              fetch("https://grupoasistencia.com/motor_webservice_tst/Liberty", requestOptions)
-                .then((res) => {
-                  if (!res.ok) throw Error(res.statusText);
-                  return res.json();
-                })
-                .then((ofertas) => {
-                  if (typeof ofertas[0].Resultado !== 'undefined') {
-                    agregarAseguradoraFallidaMotos('Liberty')
-                    ofertas[0].Mensajes.forEach(mensaje => {
-                      mostrarAlertarCotizacionFallida('Liberty', mensaje)
-                    })
-                  } else {
-                    validarOfertasMotos(ofertas);
-                    mostrarAlertaCotizacionExitosa('Liberty')
-                  }
-                })
-                .catch((err) => {
-                  agregarAseguradoraFallidaMotos('Liberty');
-                  mostrarAlertarCotizacionFallida('Liberty', "Error de servicio, intente de nuevo");
-                  console.error(err);
-                })
-            );
-
-            // let planesLiberty = ["Full","Integral"];
-            // let body = JSON.parse(requestOptions.body)
-            // planesLiberty.forEach(plan => {
-            //    body.plan = plan
-            //    requestOptions.body = JSON.stringify(body)
-             
-            //   let libertyPromise = fetch("https://grupoasistencia.com/motor_webservice_tst/Liberty", requestOptions)
-            //      .then((res) => {
-            //        if (!res.ok) throw Error(res.statusText);
-            //        return res.json();
-            //      })
-            //      .then((ofertas) => {
-            //        if (typeof ofertas[0].Resultado !== 'undefined') {
-            //          agregarAseguradoraFallida(`Liberty`);
-            //           ofertas[0].Mensajes.forEach(mensaje => {
-            //           mostrarAlertarCotizacionFallida(`Liberty ${plan}`, mensaje);
-            //          });
-            //        } else {
-            //          validarOfertasPesados(ofertas);
-            //          mostrarAlertaCotizacionExitosa(`Liberty`);
-            //        }
-            //      })
-            //      .catch((err) => {
-            //        console.error(err);
-            //      });
-
-            //      promesas.push(libertyPromise);
-            // });
-        
-        
-            // Llamar a esta función cuando todas las promesas se resuelvan
-            function ejecutarDespuesDePromesas() {
-              
-
-              setTimeout(function () {
-
-              $("#btnCotizar").hide();
-              $("#loaderOferta").html("");
-              $("#loaderRecotOferta").html("");
-              swal.fire({
-                type: "success",
-                title: "! Cotización Exitosa ¡",
-                showConfirmButton: true,
-                confirmButtonText: "Cerrar",
-              });
-                //  window.location = "index.php?ruta=editar-cotizacion&idCotizacion=" + idCotizacion;
-                console.log("Se completó todo");
-                document.querySelector('.button-recotizar').style.display = 'block'
-                
-                /* Se monta el botón para generar el PDF con 
-                el valor de la variable idCotizacion */
-                const contentCotizacionPDF = document.querySelector('#contenCotizacionPDF')
-                contentCotizacionPDF.innerHTML = `  
-                  <div class="col-xs-12" style="width: 100%;">
-                    <div class="row align-items-center">
-                      <div class="col-xs-4">
-                        <label for="checkboxAsesor">¿Deseas agregar tus datos como asesor en la cotización?</label>
-                        <input class="form-check-input" type="checkbox" id="checkboxAsesor" style="margin-left: 10px;" checked>
-                      </div>
-                      <div class="col-xs-4">
-                        <button type="button" class="btn btn-danger" id="btnParrillaPDF">
-                          <span class="fa fa-file-text"></span> Generar PDF de Cotización
-                        </button>
-                      </div>
-                    </div>
-                  </div>
-                `;
-
-                $("#btnParrillaPDF").click(function () {
-                  const todosOn = $(".classSelecOferta:checked").length;
-                  const idCotizacionPDF = idCotizacion;
-                  const checkboxAsesor = $("#checkboxAsesor");
-
-                  if (permisos.Generarpdfdecotizacion != "x") {
-                    Swal.fire({
-                      icon: 'error',
-                      title: '¡Esta versión no tiene esta funcionalidad disponible!',
-                      showCancelButton: true,
-                      confirmButtonText: 'Cerrar',
-                      cancelButtonText: 'Conoce más'
-                    }).then((result) => {
-                      if (result.isConfirmed) {
-                      } else if (result.isDismissed) {
-                        window.open('https://www.integradoor.com', "_blank")
-                      }
-                    })
-                  } else {
-                    if (!todosOn) {
-                      swal.fire({
-                        title: "¡Debes seleccionar al menos una oferta!",
-                      });
-                    } else {
-                      let url = `extensiones/tcpdf/pdf/comparadorPesados.php?cotizacion=${idCotizacionPDF}`;
-                      if (checkboxAsesor.is(":checked")) {
-                        url += "&generar_pdf=1";
-                      }
-                      window.open(url, "_blank");
-                    }
-                  }
-                });
-              }, 200); // Agrega el tiempo de retraso en milisegundos aquí
+        /*SBS*/
+        fetch("https://grupoasistencia.com/motor_webservice_tst/SBS", requestOptions)
+        .then((res) => {
+            if (!res.ok) throw Error(res.statusText);
+            return res.json();
+        })
+        .then((ofertas) => {
+            let result = ofertas
+            if (typeof result[0].Resultado !== 'undefined') {
+            agregarAseguradoraFallida('SBS')
+            result[0].Mensajes.forEach(mensaje => {
+                mostrarAlertarCotizacionFallida('SBS', mensaje)
+            })
+            } else {
+            validarOfertas(result);
+            mostrarAlertaCotizacionExitosa('SBS')
             }
+        })
+        .catch((err) => {
+            agregarAseguradoraFallida('SBS');
+            mostrarAlertarCotizacionFallida('SBS', "Error de servicio (500), intente de nuevo");
+            console.error(err);
+        })
 
 
-            Promise.all(promesas)
-              .then(() => {
-                ejecutarDespuesDePromesas(); // Llama a la función después de que todas las promesas se resuelvan
-              })
-              .catch((error) => {
-                console.error(error);
-              });
+        /* AXA */
+        fetch("https://grupoasistencia.com/motor_webservice_tst/AXA_tst", requestOptions)
+        .then((res) => {
+            if (!res.ok) throw Error(res.statusText);
+            return res.json();
+        })
+        .then((ofertas) => {
+
+            if (typeof ofertas[0].Resultado !== 'undefined') {
+            agregarAseguradoraFallidaMotos('AXA')
+            ofertas[0].Mensajes.forEach(mensaje => {
+                mostrarAlertarCotizacionFallida('AXA', mensaje)
+            })
+            } else {
+            validarOfertasMotos(ofertas)
+            mostrarAlertaCotizacionExitosa('AXA')
+            }
+        })
+        .catch((err) => {
+            agregarAseguradoraFallidaMotos('AXA');
+            mostrarAlertarCotizacionFallida('AXA', "Error de servicio, intente de nuevo");
+            console.error(err);
+        })
+
+
+        /* LIBERTY */ 
+        fetch("https://grupoasistencia.com/motor_webservice_tst/Liberty", requestOptions)
+        .then((res) => {
+            if (!res.ok) throw Error(res.statusText);
+            return res.json();
+        })
+        .then((ofertas) => {
+            if (typeof ofertas[0].Resultado !== 'undefined') {
+            agregarAseguradoraFallidaMotos('Liberty')
+            ofertas[0].Mensajes.forEach(mensaje => {
+                mostrarAlertarCotizacionFallida('Liberty', mensaje)
+            })
+            } else {
+            validarOfertasMotos(ofertas);
+            mostrarAlertaCotizacionExitosa('Liberty')
+            }
+        })
+        .catch((err) => {
+            agregarAseguradoraFallidaMotos('Liberty');
+            mostrarAlertarCotizacionFallida('Liberty', "Error de servicio, intente de nuevo");
+            console.error(err);
+        })
+
+        
+        
+        // Llamar a esta función cuando todas las promesas se resuelvan
+        function ejecutarDespuesDePromesas() {
+            
+
+            setTimeout(function () {
+
+            $("#btnCotizar").hide();
+            $("#loaderOferta").html("");
+            $("#loaderRecotOferta").html("");
+            swal.fire({
+            type: "success",
+            title: "! Cotización Exitosa ¡",
+            showConfirmButton: true,
+            confirmButtonText: "Cerrar",
+            });
+            //  window.location = "index.php?ruta=editar-cotizacion&idCotizacion=" + idCotizacion;
+            console.log("Se completó todo");
+            document.querySelector('.button-recotizar').style.display = 'block'
+            
+            /* Se monta el botón para generar el PDF con 
+            el valor de la variable idCotizacion */
+            const contentCotizacionPDF = document.querySelector('#contenCotizacionPDF')
+            contentCotizacionPDF.innerHTML = `  
+                <div class="col-xs-12" style="width: 100%;">
+                <div class="row align-items-center">
+                    <div class="col-xs-4">
+                    <label for="checkboxAsesor">¿Deseas agregar tus datos como asesor en la cotización?</label>
+                    <input class="form-check-input" type="checkbox" id="checkboxAsesor" style="margin-left: 10px;" checked>
+                    </div>
+                    <div class="col-xs-4">
+                    <button type="button" class="btn btn-danger" id="btnParrillaPDF">
+                        <span class="fa fa-file-text"></span> Generar PDF de Cotización
+                    </button>
+                    </div>
+                </div>
+                </div>
+            `;
+
+            $("#btnParrillaPDF").click(function () {
+                const todosOn = $(".classSelecOferta:checked").length;
+                const idCotizacionPDF = idCotizacion;
+                const checkboxAsesor = $("#checkboxAsesor");
+
+                if (permisos.Generarpdfdecotizacion != "x") {
+                Swal.fire({
+                    icon: 'error',
+                    title: '¡Esta versión no tiene esta funcionalidad disponible!',
+                    showCancelButton: true,
+                    confirmButtonText: 'Cerrar',
+                    cancelButtonText: 'Conoce más'
+                }).then((result) => {
+                    if (result.isConfirmed) {
+                    } else if (result.isDismissed) {
+                    window.open('https://www.integradoor.com', "_blank")
+                    }
+                })
+                } else {
+                if (!todosOn) {
+                    swal.fire({
+                    title: "¡Debes seleccionar al menos una oferta!",
+                    });
+                } else {
+                    let url = `extensiones/tcpdf/pdf/comparadorPesados.php?cotizacion=${idCotizacionPDF}`;
+                    if (checkboxAsesor.is(":checked")) {
+                    url += "&generar_pdf=1";
+                    }
+                    window.open(url, "_blank");
+                }
+                }
+            });
+            }, 200); // Agrega el tiempo de retraso en milisegundos aquí
+        }
+
+
+        Promise.all(promesas)
+            .then(() => {
+            ejecutarDespuesDePromesas(); // Llama a la función después de que todas las promesas se resuelvan
+            })
+            .catch((error) => {
+            console.error(error);
+            });
       
           },
       });
