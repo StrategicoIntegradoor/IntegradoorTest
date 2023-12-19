@@ -1098,18 +1098,18 @@ function registrarOfertaMotos(
         .then((ofertas) => {
             let result = ofertas
             if (typeof result[0].Resultado !== 'undefined') {
-            agregarAseguradoraFallida('SBS')
+            agregarAseguradoraFallidaMotos('SBS')
             result[0].Mensajes.forEach(mensaje => {
                 mostrarAlertarCotizacionFallida('SBS', mensaje)
             })
             } else {
-            validarOfertas(result);
+            validarOfertasMotos(result);
             mostrarAlertaCotizacionExitosa('SBS')
             }
         })
         .catch((err) => {
-            agregarAseguradoraFallida('SBS');
-            mostrarAlertarCotizacionFallida('SBS', "Error de servicio (500), intente de nuevo");
+            agregarAseguradoraFallidaMotos('SBS');
+            mostrarAlertarCotizacionFallida('SBS', "Error de servicio, intente de nuevo");
             console.error(err);
         })
 
