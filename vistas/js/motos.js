@@ -1193,12 +1193,12 @@ function registrarOfertaMotos(
                 .then((ofertas) => {
 
                   if (typeof ofertas[0].Resultado !== 'undefined') {
-                    agregarAseguradoraFallidaPesados('AXA')
+                    agregarAseguradoraFallidaMotos('AXA')
                     ofertas[0].Mensajes.forEach(mensaje => {
                       mostrarAlertarCotizacionFallida('AXA', mensaje)
                     })
                   } else {
-                    validarOfertasPesados(ofertas)
+                    validarOfertasMotos(ofertas)
                     mostrarAlertaCotizacionExitosa('AXA')
                   }
                 })
@@ -1219,12 +1219,12 @@ function registrarOfertaMotos(
                 })
                 .then((ofertas) => {
                   if (typeof ofertas[0].Resultado !== 'undefined') {
-                    agregarAseguradoraFallida('Liberty')
+                    agregarAseguradoraFallidaMotos('Liberty')
                     ofertas[0].Mensajes.forEach(mensaje => {
                       mostrarAlertarCotizacionFallida('Liberty', mensaje)
                     })
                   } else {
-                    validarOfertas(ofertas);
+                    validarOfertasMotos(ofertas);
                     mostrarAlertaCotizacionExitosa('Liberty')
                   }
                 })
@@ -1234,7 +1234,7 @@ function registrarOfertaMotos(
                   console.error(err);
                 })
             );
-            
+
             // let planesLiberty = ["Full","Integral"];
             // let body = JSON.parse(requestOptions.body)
             // planesLiberty.forEach(plan => {
