@@ -1184,7 +1184,7 @@ function registrarOfertaMotos(
           // }     
 
             /* AXA */
-          cont.push(
+          promesas.push(
               fetch("https://grupoasistencia.com/motor_webservice_tst/AXA_tst", requestOptions)
                 .then((res) => {
                   if (!res.ok) throw Error(res.statusText);
@@ -1211,6 +1211,29 @@ function registrarOfertaMotos(
 
 
              /* LIBERTY */ 
+            promesas.push(
+              fetch("https://grupoasistencia.com/motor_webservice_tst/Liberty", requestOptions)
+                .then((res) => {
+                  if (!res.ok) throw Error(res.statusText);
+                  return res.json();
+                })
+                .then((ofertas) => {
+                  if (typeof ofertas[0].Resultado !== 'undefined') {
+                    agregarAseguradoraFallida('Liberty')
+                    ofertas[0].Mensajes.forEach(mensaje => {
+                      mostrarAlertarCotizacionFallida('Liberty', mensaje)
+                    })
+                  } else {
+                    validarOfertas(ofertas);
+                    mostrarAlertaCotizacionExitosa('Liberty')
+                  }
+                })
+                .catch((err) => {
+                  agregarAseguradoraFallida('Liberty');
+                  mostrarAlertarCotizacionFallida('Liberty', "Error de servicio, intente de nuevo");
+                  console.error(err);
+                })
+            );
             // let planesLiberty = ["Full","Integral"];
             // let body = JSON.parse(requestOptions.body)
             // planesLiberty.forEach(plan => {
