@@ -1238,7 +1238,7 @@ function registrarOfertaMotos(
         }
 
 
-        Promise.all(promesas)
+        Promise.all()
             .then(() => {
             ejecutarDespuesDePromesas(); // Llama a la función después de que todas las promesas se resuelvan
             })
