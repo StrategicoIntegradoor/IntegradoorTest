@@ -534,20 +534,20 @@ function consulPlaca() {
               } else if (codigoClase == 12) {
                 claseVehiculo = "MOTOCICLETA";
                 limiteRCESTADO = 6;
-                 var restriccion = '';
-                if(rolAsesor == 19){
-                  restriccion = 'No puedes cotizar motos por este módulo. Para hacerlo, debes comunicarte con el Equipo de Asesores Freelance de Grupo Asistencia, quienes podrán ayudarte a cotizar de manera manual con diferentes aseguradoras.';
-                }else{
-                  restriccion = 'Lo sentimos, no puedes cotizar motos por este módulo.'
-                }
-                Swal.fire({
-                  icon: 'error',
-                  text: restriccion,
-                  confirmButtonText: 'Cerrar'
-                }).then(() => {
-                  // Recargar la página después de cerrar el SweetAlert
-                  location.reload();
-                });
+                //  var restriccion = '';
+                // if(rolAsesor == 19){
+                //   restriccion = 'No puedes cotizar motos por este módulo. Para hacerlo, debes comunicarte con el Equipo de Asesores Freelance de Grupo Asistencia, quienes podrán ayudarte a cotizar de manera manual con diferentes aseguradoras.';
+                // }else{
+                //   restriccion = 'Lo sentimos, no puedes cotizar motos por este módulo.'
+                // }
+                // Swal.fire({
+                //   icon: 'error',
+                //   text: restriccion,
+                //   confirmButtonText: 'Cerrar'
+                // }).then(() => {
+                //   // Recargar la página después de cerrar el SweetAlert
+                //   location.reload();
+                // });
               } else if (codigoClase == 14 || codigoClase == 21) {
                 claseVehiculo = "PESADO";
                 limiteRCESTADO = 18;
@@ -571,20 +571,20 @@ function consulPlaca() {
               } else if (codigoClase == 16) {
                 claseVehiculo = "MOTOCICLETA";
                 limiteRCESTADO = 6;
-                var restriccion = '';
-                if(rolAsesor == 19){
-                  restriccion = 'No puedes cotizar motos por este módulo. Para hacerlo, debes comunicarte con el Equipo de Asesores Freelance de Grupo Asistencia, quienes podrán ayudarte a cotizar de manera manual con diferentes aseguradoras.';
-                }else{
-                  restriccion = 'Lo sentimos, no puedes cotizar motos por este módulo.'
-                }
-                Swal.fire({
-                  icon: 'error',
-                  text: restriccion,
-                  confirmButtonText: 'Cerrar'
-                }).then(() => {
-                  // Recargar la página después de cerrar el SweetAlert
-                  location.reload();
-                });
+                // var restriccion = '';
+                // if(rolAsesor == 19){
+                //   restriccion = 'No puedes cotizar motos por este módulo. Para hacerlo, debes comunicarte con el Equipo de Asesores Freelance de Grupo Asistencia, quienes podrán ayudarte a cotizar de manera manual con diferentes aseguradoras.';
+                // }else{
+                //   restriccion = 'Lo sentimos, no puedes cotizar motos por este módulo.'
+                // }
+                // Swal.fire({
+                //   icon: 'error',
+                //   text: restriccion,
+                //   confirmButtonText: 'Cerrar'
+                // }).then(() => {
+                //   // Recargar la página después de cerrar el SweetAlert
+                //   location.reload();
+                // });
               }
 
               $("#CodigoClase").val(codigoClase);
@@ -667,14 +667,6 @@ function consulPlacaMapfre(valnumplaca){
         var cilindraje = data.polizaReciente.VAL_CILINDRAJE;
         var codFasecolda = data.polizaReciente.COD_FASECOLDA;
         var aseguradora = data.polizaReciente.nomCompania;
-        // console.log("Mapfre consulta");
-        // console.log("Marca Cod:", marcaCod);
-        // console.log("Clase:", clase);
-        // console.log("Línea:", linea);
-        // console.log("Modelo:", modelo);
-        // console.log("Cilindraje:", cilindraje);
-        // console.log("Código Fasecolda:", codFasecolda);
-        // console.log("Aseguradora:", aseguradora);
 
         propietario = data.polizaReciente.asegNombre;
         cedulaP = data.polizaReciente.asegCodDocum;
