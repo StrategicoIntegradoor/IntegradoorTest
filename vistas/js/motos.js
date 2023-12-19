@@ -1229,7 +1229,7 @@ function registrarOfertaMotos(
                   }
                 })
                 .catch((err) => {
-                  agregarAseguradoraFallida('Liberty');
+                  agregarAseguradoraFallidaMotos('Liberty');
                   mostrarAlertarCotizacionFallida('Liberty', "Error de servicio, intente de nuevo");
                   console.error(err);
                 })
