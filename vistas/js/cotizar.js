@@ -2684,7 +2684,7 @@ function cotizarOfertas() {
         /* Allianz */
         if (comprobarFallida('Allianz')) {
           cont.push(
-            fetch("https://grupoasistencia.com/motor_webservice_tst/Allianz_tst", requestOptions)
+            fetch("https://grupoasistencia.com/motor_webservice_tst/Allianz", requestOptions)
               .then((res) => {
                 if (!res.ok) throw Error(res.statusText);
                 console.log(res);
@@ -2708,7 +2708,7 @@ function cotizarOfertas() {
         /* AXA */
         if (comprobarFallida('AXA')) {
           cont.push(
-            fetch("https://grupoasistencia.com/motor_webservice_tst/AXA", requestOptions)
+            fetch("https://grupoasistencia.com/motor_webservice_tst/AXA_tst", requestOptions)
               .then((res) => {
                 if (!res.ok) throw Error(res.statusText);
                 return res.json();
