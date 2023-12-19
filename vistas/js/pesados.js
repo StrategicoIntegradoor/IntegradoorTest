@@ -57,26 +57,6 @@ $(document).ready(function () {
       if (e.which == 32) return false;
     });
   
-    // Excepción de Motos
-    // var placaInput = document.getElementById("placaVeh");
-    // var mensajeError = document.getElementById("mensajeErrorPlaca");
-  
-    // placaInput.addEventListener("blur", function () {
-    //     var placa = placaInput.value.trim(); // Eliminar espacios en blanco al principio y al final
-        
-    //     // Usar una expresión regular para validar el formato AAA111
-    //     var formatoValido = /^[A-Z]{3}\d{3}$/.test(placa);
-        
-    //     if (formatoValido) {
-    //         mensajeError.style.display = "none";
-    //         placaInput.setCustomValidity("");
-    //     } else {
-    //         mensajeError.style.display = "block";
-    //         mensajeError.textContent = "Formato de placa incorrecto, verificar información";
-    //         placaInput.setCustomValidity("Formato de placa incorrecto, verificar información");
-    //     }
-    // });
-  
     // Obtener el campo de entrada por su ID
     var placaInput = document.getElementById("placaVeh");
   
