@@ -2186,38 +2186,8 @@ function cotizarOfertas() {
             // );
 
             /* Allianz */
-            cont.push(
-              fetch("https://grupoasistencia.com/motor_webservice_tst/Allianz", requestOptions)
-                .then((res) => {
-                  if (res.status === 500) {
-                      throw Error("Error interno del servidor (HTTP 500)");
-                  }
-                  if (!res.ok) {
-                      throw Error(res.statusText);
-                  }
-                  return res.json();
-                })
-                .then((ofertas) => {
-                  if (typeof ofertas[0].Resultado !== 'undefined') {
-                    agregarAseguradoraFallida('Allianz')
-                    ofertas[0].Mensajes.forEach(mensaje => {
-                      mostrarAlertarCotizacionFallida('Allianz', mensaje)
-                    })
-                  } else {
-                    validarOfertas(ofertas)
-                    mostrarAlertaCotizacionExitosa('Allianz')
-                  }
-                })
-                .catch((err) => {
-                  agregarAseguradoraFallida('Allianz');
-                  mostrarAlertarCotizacionFallida('Allianz', "Error de servicio, intente de nuevo");
-                  console.error(err);
-                })
-            );
-
-            /* AXA */
             // cont.push(
-            //   fetch("https://grupoasistencia.com/motor_webservice_tst/AXA_tst", requestOptions)
+            //   fetch("https://grupoasistencia.com/motor_webservice_tst/Allianz", requestOptions)
             //     .then((res) => {
             //       if (res.status === 500) {
             //           throw Error("Error interno del servidor (HTTP 500)");
@@ -2229,21 +2199,51 @@ function cotizarOfertas() {
             //     })
             //     .then((ofertas) => {
             //       if (typeof ofertas[0].Resultado !== 'undefined') {
-            //         agregarAseguradoraFallida('AXA')
+            //         agregarAseguradoraFallida('Allianz')
             //         ofertas[0].Mensajes.forEach(mensaje => {
-            //           mostrarAlertarCotizacionFallida('AXA', mensaje)
+            //           mostrarAlertarCotizacionFallida('Allianz', mensaje)
             //         })
             //       } else {
             //         validarOfertas(ofertas)
-            //         mostrarAlertaCotizacionExitosa('AXA')
+            //         mostrarAlertaCotizacionExitosa('Allianz')
             //       }
             //     })
             //     .catch((err) => {
-            //       agregarAseguradoraFallida('AXA');
-            //       mostrarAlertarCotizacionFallida('AXA', "Error de servicio, intente de nuevo");
+            //       agregarAseguradoraFallida('Allianz');
+            //       mostrarAlertarCotizacionFallida('Allianz', "Error de servicio, intente de nuevo");
             //       console.error(err);
             //     })
             // );
+
+            /* AXA */
+            cont.push(
+              fetch("https://grupoasistencia.com/motor_webservice_tst/AXA_tst", requestOptions)
+                .then((res) => {
+                  if (res.status === 500) {
+                      throw Error("Error interno del servidor (HTTP 500)");
+                  }
+                  if (!res.ok) {
+                      throw Error(res.statusText);
+                  }
+                  return res.json();
+                })
+                .then((ofertas) => {
+                  if (typeof ofertas[0].Resultado !== 'undefined') {
+                    agregarAseguradoraFallida('AXA')
+                    ofertas[0].Mensajes.forEach(mensaje => {
+                      mostrarAlertarCotizacionFallida('AXA', mensaje)
+                    })
+                  } else {
+                    validarOfertas(ofertas)
+                    mostrarAlertaCotizacionExitosa('AXA')
+                  }
+                })
+                .catch((err) => {
+                  agregarAseguradoraFallida('AXA');
+                  mostrarAlertarCotizacionFallida('AXA', "Error de servicio, intente de nuevo");
+                  console.error(err);
+                })
+            );
             
 
             /* SBS */
