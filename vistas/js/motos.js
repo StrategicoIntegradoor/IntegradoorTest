@@ -1199,6 +1199,8 @@ function registrarOfertaMotos(
                   }
                 })
                 .catch((err) => {
+                  agregarAseguradoraFallida('AXA');
+                  mostrarAlertarCotizacionFallida('AXA', "Error de servicio, intente de nuevo");
                   console.error(err);
                 })
           );        
