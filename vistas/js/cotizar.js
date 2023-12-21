@@ -1889,30 +1889,30 @@ function cotizarOfertas() {
             // );
 
             /* Previsora */
-            cont.push(
-              fetch("https://grupoasistencia.com/motor_webservice_tst/Previsora", requestOptions)
-                .then((res) => {
-                  if (!res.ok) throw Error(res.statusText);
-                  return res.json();
-                })
-                .then((ofertas) => {
-                  console.log(ofertas)
-                  if (typeof ofertas[0].Resultado !== 'undefined') {
-                    agregarAseguradoraFallida('Previsora')
-                    ofertas[0].Mensajes.forEach(mensaje => {
-                      mostrarAlertarCotizacionFallida('Previsora', mensaje)
-                    })
-                  } else {
-                    validarOfertas(ofertas);
-                    mostrarAlertaCotizacionExitosa('Previsora')
-                  }
-                })
-                .catch((err) => {
-                  agregarAseguradoraFallida('Previsora');
-                  mostrarAlertarCotizacionFallida('Previsora', "Error de servicio, intente de nuevo");
-                  console.error(err);
-                })
-            );
+            // cont.push(
+            //   fetch("https://grupoasistencia.com/motor_webservice_tst/Previsora", requestOptions)
+            //     .then((res) => {
+            //       if (!res.ok) throw Error(res.statusText);
+            //       return res.json();
+            //     })
+            //     .then((ofertas) => {
+            //       console.log(ofertas)
+            //       if (typeof ofertas[0].Resultado !== 'undefined') {
+            //         agregarAseguradoraFallida('Previsora')
+            //         ofertas[0].Mensajes.forEach(mensaje => {
+            //           mostrarAlertarCotizacionFallida('Previsora', mensaje)
+            //         })
+            //       } else {
+            //         validarOfertas(ofertas);
+            //         mostrarAlertaCotizacionExitosa('Previsora')
+            //       }
+            //     })
+            //     .catch((err) => {
+            //       agregarAseguradoraFallida('Previsora');
+            //       mostrarAlertarCotizacionFallida('Previsora', "Error de servicio, intente de nuevo");
+            //       console.error(err);
+            //     })
+            // );
 
             /* Equidad */
             // cont.push(
@@ -1940,30 +1940,30 @@ function cotizarOfertas() {
             // );
 
             /* Bolivar */
-            // cont.push(
-            //   fetch("https://grupoasistencia.com/motor_webservice_tst/Bolivar", requestOptions)
-            //     .then((res) => {
-            //       if (!res.ok) throw Error(res.statusText);
-            //       return res.json();
-            //     })
-            //     .then((ofertas) => {
-            //       console.log(ofertas)
-            //       if (typeof ofertas[0].Resultado !== 'undefined') {
-            //         agregarAseguradoraFallida('Bolivar')
-            //         ofertas[0].Mensajes.forEach(mensaje => {
-            //           mostrarAlertarCotizacionFallida('Bolivar', mensaje)
-            //         })
-            //       } else {
-            //         validarOfertas(ofertas);
-            //         mostrarAlertaCotizacionExitosa('Bolivar')
-            //       }
-            //     })
-            //     .catch((err) => {
-            //       agregarAseguradoraFallida('Bolivar')
-            //       mostrarAlertarCotizacionFallida('Bolivar', "Error de servicio (500), intente de nuevo");
-            //       console.error(err);
-            //     })
-            // );
+            cont.push(
+              fetch("https://grupoasistencia.com/motor_webservice_tst/Bolivar", requestOptions)
+                .then((res) => {
+                  if (!res.ok) throw Error(res.statusText);
+                  return res.json();
+                })
+                .then((ofertas) => {
+                  console.log(ofertas)
+                  if (typeof ofertas[0].Resultado !== 'undefined') {
+                    agregarAseguradoraFallida('Bolivar')
+                    ofertas[0].Mensajes.forEach(mensaje => {
+                      mostrarAlertarCotizacionFallida('Bolivar', mensaje)
+                    })
+                  } else {
+                    validarOfertas(ofertas);
+                    mostrarAlertaCotizacionExitosa('Bolivar')
+                  }
+                })
+                .catch((err) => {
+                  agregarAseguradoraFallida('Bolivar')
+                  mostrarAlertarCotizacionFallida('Bolivar', "Error de servicio (500), intente de nuevo");
+                  console.error(err);
+                })
+            );
 
             /* HDI */
             // cont.push(
