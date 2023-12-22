@@ -88,9 +88,11 @@ Validamos el permiso ir ingresar a los links de los clausulados - Ayudaventas
 /*==============================================================================================================
 Validamos el permiso para el boton que genera pdf persona natural de cada aseguradora - Ayudaventas
 ===============================================================================================================*/
-    function validarPermisoPdfPersonaNatural(link)
+    function validarPermisoPdfPersonaNatural(link, aseguradora)
     {
-        if(link == './vistas/modulos/AyudaVentas/pdf/sarlaft/1'){
+        console.log(aseguradora)
+
+        if(link == './vistas/modulos/AyudaVentas/pdf/sarlaft/1' && aseguradora !== 'Estado'){
 
             Swal.fire({
                 title: 'Mensaje',
@@ -98,7 +100,15 @@ Validamos el permiso para el boton que genera pdf persona natural de cada asegur
                 icon: 'info'
             });
 
-        } else{
+        }else if(link == './vistas/modulos/AyudaVentas/pdf/sarlaft/1' && aseguradora == 'Estado'){
+
+            Swal.fire({
+                title: 'Mensaje',
+                text: 'Sarlaft Virtual - Comunicate con el área comercial o técnica',
+                icon: 'info'
+            });
+
+        }else{
             permisoValidado = validarPermiso(permisos.DescargarpdfdecadaaseguradoraPN);
             if(permisoValidado){  
                 window.open(link);
@@ -114,13 +124,21 @@ Validamos el permiso para el boton que genera pdf persona juridica de cada asegu
     function validarPermisoPdfPersonaJuridica(link, aseguradora)
     {
         console.log(aseguradora)
-        if(link == './vistas/modulos/AyudaVentas/pdf/sarlaft2/2'){
+        if(link == './vistas/modulos/AyudaVentas/pdf/sarlaft2/2' && aseguradora !== 'Estado'){
 
             Swal.fire({
                 title: 'Mensaje',
                 text: 'Este sarlaft se emite durante el proceso de emisión de póliza',
                 icon: 'info'
             }); 
+
+        }else if(link == './vistas/modulos/AyudaVentas/pdf/sarlaft2/2' && aseguradora == 'Estado'){
+
+            Swal.fire({
+                title: 'Mensaje',
+                text: 'Sarlaft Virtual - Comunicate con el área comercial o técnica',
+                icon: 'info'
+            });
 
         }else{
             permisoValidado = validarPermiso(permisos.DescargarpdfdecadaaseguradoraPJ);
