@@ -111,8 +111,9 @@ Validamos el permiso para el boton que genera pdf persona natural de cada asegur
 /*==============================================================================================================
 Validamos el permiso para el boton que genera pdf persona juridica de cada aseguradora - Ayudaventas
 ===============================================================================================================*/
-    function validarPermisoPdfPersonaJuridica(link)
+    function validarPermisoPdfPersonaJuridica(link, aseguradora)
     {
+        console.log(aseguradora)
         if(link == './vistas/modulos/AyudaVentas/pdf/sarlaft2/2'){
 
             Swal.fire({
