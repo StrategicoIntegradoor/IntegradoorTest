@@ -307,8 +307,8 @@ const obtenerAyudaVentas = async () => {
                     // partTemplate += sarlaftButtons2 + '</ul></td>'
 
                     let sarlaftButtons = '<td><ul style="margin-top: 60px; display: flex; flex-direction: column;">';
-                    sarlaftButtons += ayudaVenta.path_sarlaft ? `<button class="btn btn-alert" style="background: red; color: #fff; font-weight: 500; margin-bottom: 5px;" onclick="validarPermisoPdfPersonaNatural('./vistas/modulos/AyudaVentas/pdf/sarlaft/${ayudaVenta.path_sarlaft}')">PDF PN</button>` : '';
-                    sarlaftButtons += ayudaVenta.path_sarlaft2 ? `<button class="btn btn-alert" style="background: red; color: #fff; font-weight: 500;" onclick="validarPermisoPdfPersonaJuridica('./vistas/modulos/AyudaVentas/pdf/sarlaft2/${ayudaVenta.path_sarlaft2}')">PDF PJ</button>` : '';
+                    sarlaftButtons += ayudaVenta.path_sarlaft ? `<button class="btn btn-alert" style="background: red; color: #fff; font-weight: 500; margin-bottom: 5px;" onclick="validarPermisoPdfPersonaNatural('./vistas/modulos/AyudaVentas/pdf/sarlaft/${ayudaVenta.path_sarlaft}','${ayudaVenta.aseguradora}')">PDF PN</button>` : '';
+                    sarlaftButtons += ayudaVenta.path_sarlaft2 ? `<button class="btn btn-alert" style="background: red; color: #fff; font-weight: 500;" onclick="validarPermisoPdfPersonaJuridica('./vistas/modulos/AyudaVentas/pdf/sarlaft2/${ayudaVenta.path_sarlaft2}','${ayudaVenta.aseguradora}')">PDF PJ</button>` : '';
                     sarlaftButtons += '</ul></td>';
 
                     partTemplate += sarlaftButtons;
