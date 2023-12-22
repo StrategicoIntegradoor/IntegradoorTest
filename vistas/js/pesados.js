@@ -1691,7 +1691,7 @@ function registrarOfertaPesados(
                  })
                  .then((ofertas) => {
                    if (typeof ofertas[0].Resultado !== 'undefined') {
-                     agregarAseguradoraFallida(`Liberty`);
+                     agregarAseguradoraFallidaPesados(`Liberty`);
                       ofertas[0].Mensajes.forEach(mensaje => {
                       mostrarAlertarCotizacionFallida(`Liberty ${plan}`, mensaje);
                      });
