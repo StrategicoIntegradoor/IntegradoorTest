@@ -1545,8 +1545,17 @@ function registrarOfertaPesados(
           }
 
           const mostrarAlertarCotizacionFallida = (aseguradora, mensaje) => {
-            document.querySelector('.fallidas').innerHTML += `<p><i class="fa fa-times" aria-hidden="true" style="color: red; margin-right: 10px;"></i><b>${aseguradora}:</b> ${mensaje}</p>`
-          }
+              // Obtén la referencia del contenedor
+              const contenedorFallidas = document.querySelector('.fallidas');
+          
+              // Verificar si ya existe una entrada con la misma aseguradora y mensaje
+              const entradasExistente = contenedorFallidas.querySelectorAll(`p[data-aseguradora="${aseguradora}"][data-mensaje="${mensaje}"]`);
+          
+              if (entradasExistente.length === 0) {
+                  // Si no existe, agrega una nueva entrada
+                  contenedorFallidas.innerHTML += `<p data-aseguradora="${aseguradora}" data-mensaje="${mensaje}"><i class="fa fa-times" aria-hidden="true" style="color: red; margin-right: 10px;"></i><b>${aseguradora}:</b> ${mensaje}</p>`;
+              }
+          };
           
 
           let promesas = []
