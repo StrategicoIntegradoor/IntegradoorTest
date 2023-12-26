@@ -1588,71 +1588,71 @@ function registrarOfertaPesados(
           //   });
 
             /*MUNDIAL*/ 
-          // if(mundial == 5){
-          //   let body = JSON.parse(requestOptions.body)
-          //   plan = 'Trailer'
-          //   body.plan = plan
-          //   requestOptions.body = JSON.stringify(body)
-          //   let mundialPromise = fetch("https://grupoasistencia.com/motor_webservice_tst/CotizarPesados_tst",requestOptions)
-          //     .then(function (response) {
-          //       if (!response.ok) throw Error(response.statusText);
-          //       return response.json();
-          //     })
-          //     .then((ofertas) => {
-          //         if (typeof ofertas[0].Resultado !== 'undefined') {
-          //           agregarAseguradoraFallidaPesados('Mundial')
-          //           ofertas[0].Mensajes.forEach(mensaje => {
-          //             mostrarAlertarCotizacionFallida('Mundial', mensaje)
-          //           })
-          //         } else {
-          //           validarOfertasPesados(ofertas);
-          //           mostrarAlertaCotizacionExitosa('Mundial')
-          //         }
-          //       })
-          //       .catch((err) => {
-          //         console.error(err);
-          //       })
-          //     .catch(function (error) {
-          //       console.log("Parece que hubo un problema: \n", error);
+          if(mundial == 5){
+            let body = JSON.parse(requestOptions.body)
+            plan = 'Trailer'
+            body.plan = plan
+            requestOptions.body = JSON.stringify(body)
+            let mundialPromise = fetch("https://grupoasistencia.com/motor_webservice_tst/CotizarPesados_tst",requestOptions)
+              .then(function (response) {
+                if (!response.ok) throw Error(response.statusText);
+                return response.json();
+              })
+              .then((ofertas) => {
+                  if (typeof ofertas[0].Resultado !== 'undefined') {
+                    agregarAseguradoraFallidaPesados('Mundial')
+                    ofertas[0].Mensajes.forEach(mensaje => {
+                      mostrarAlertarCotizacionFallida('Mundial', mensaje)
+                    })
+                  } else {
+                    validarOfertasPesados(ofertas);
+                    mostrarAlertaCotizacionExitosa('Mundial')
+                  }
+                })
+                .catch((err) => {
+                  console.error(err);
+                })
+              .catch(function (error) {
+                console.log("Parece que hubo un problema: \n", error);
 
-          //     });
+              });
               
-          //   promesas.push(mundialPromise);
+            promesas.push(mundialPromise);
 
-          // }else{
+          }else{
 
-          //   let planesMundial = ["Normal","RC_Exceso"];
-          //   let body = JSON.parse(requestOptions.body)
+            let planesMundial = ["Normal","RC_Exceso"];
+            let body = JSON.parse(requestOptions.body)
 
-          //   planesMundial.forEach(plan => {
-          //     body.plan = plan
-          //     requestOptions.body = JSON.stringify(body)
+            planesMundial.forEach(plan => {
+              body.plan = plan
+              requestOptions.body = JSON.stringify(body)
             
-          //     let mundialPromise = fetch("https://grupoasistencia.com/motor_webservice_tst/CotizarPesados_tst", requestOptions)
-          //       .then((res) => {
-          //         if (!res.ok) throw Error(res.statusText);
-          //         return res.json();
-          //       })
-          //       .then((ofertas) => {
-          //         if (typeof ofertas[0].Resultado !== 'undefined') {
-          //           agregarAseguradoraFallidaPesados(`Mundial`);
-          //           ofertas[0].Mensajes.forEach(mensaje => {
-          //             mostrarAlertarCotizacionFallida(`Mundial`, mensaje);
-          //           });
-          //         } else {
-          //           validarOfertasPesados(ofertas);
-          //           mostrarAlertaCotizacionExitosa(`Mundial`);
-          //         }
-          //       })
-          //       .catch((err) => {
-          //         console.error(err);
-          //       });
+              let mundialPromise = fetch("https://grupoasistencia.com/motor_webservice_tst/CotizarPesados_tst", requestOptions)
+                .then((res) => {
+                  if (!res.ok) throw Error(res.statusText);
+                  return res.json();
+                })
+                .then((ofertas) => {
+                  if (typeof ofertas[0].Resultado !== 'undefined') {
+                    agregarAseguradoraFallidaPesados(`Mundial`);
+                    ofertas[0].Mensajes.forEach(mensaje => {
+                      mostrarAlertarCotizacionFallida(`Mundial`, mensaje);
+                    });
+                  } else {
+                    validarOfertasPesados(ofertas);
+                    mostrarAlertaCotizacionExitosa(`Mundial`);
+                  }
+                })
+                .catch((err) => {
+                  console.error(err);
+                });
 
-          //       promesas.push(mundialPromise);
+                promesas.push(mundialPromise);
 
-          //   });  
+            });  
 
-          // }     
+          }     
 
             /* AXA */
               // fetch("https://grupoasistencia.com/motor_webservice_tst/AXA_tst", requestOptions)
@@ -1678,34 +1678,34 @@ function registrarOfertaPesados(
 
 
              /* LIBERTY */ 
-            let planesLiberty = ["Full","Integral"];
-            let body = JSON.parse(requestOptions.body)
-            planesLiberty.forEach(plan => {
-               body.plan = plan
-               requestOptions.body = JSON.stringify(body)
+            // let planesLiberty = ["Full","Integral"];
+            // let body = JSON.parse(requestOptions.body)
+            // planesLiberty.forEach(plan => {
+            //    body.plan = plan
+            //    requestOptions.body = JSON.stringify(body)
              
-              let libertyPromise = fetch("https://grupoasistencia.com/motor_webservice_tst/Liberty", requestOptions)
-                 .then((res) => {
-                   if (!res.ok) throw Error(res.statusText);
-                   return res.json();
-                 })
-                 .then((ofertas) => {
-                   if (typeof ofertas[0].Resultado !== 'undefined') {
-                     agregarAseguradoraFallidaPesados(`Liberty`);
-                      ofertas[0].Mensajes.forEach(mensaje => {
-                      mostrarAlertarCotizacionFallida(`Liberty ${plan}`, mensaje);
-                     });
-                   } else {
-                     validarOfertasPesados(ofertas);
-                     mostrarAlertaCotizacionExitosa(`Liberty`);
-                   }
-                 })
-                 .catch((err) => {
-                   console.error(err);
-                 });
+            //   let libertyPromise = fetch("https://grupoasistencia.com/motor_webservice_tst/Liberty", requestOptions)
+            //      .then((res) => {
+            //        if (!res.ok) throw Error(res.statusText);
+            //        return res.json();
+            //      })
+            //      .then((ofertas) => {
+            //        if (typeof ofertas[0].Resultado !== 'undefined') {
+            //          agregarAseguradoraFallidaPesados(`Liberty`);
+            //           ofertas[0].Mensajes.forEach(mensaje => {
+            //           mostrarAlertarCotizacionFallida(`Liberty ${plan}`, mensaje);
+            //          });
+            //        } else {
+            //          validarOfertasPesados(ofertas);
+            //          mostrarAlertaCotizacionExitosa(`Liberty`);
+            //        }
+            //      })
+            //      .catch((err) => {
+            //        console.error(err);
+            //      });
 
-                 promesas.push(libertyPromise);
-            });
+            //      promesas.push(libertyPromise);
+            // });
         
         
             // Llamar a esta función cuando todas las promesas se resuelvan
