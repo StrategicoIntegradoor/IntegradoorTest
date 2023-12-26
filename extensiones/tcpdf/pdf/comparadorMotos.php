@@ -1748,42 +1748,42 @@ $html4 .= '</tr>';
 //CONSULTA OBLIGACIONES FINANCIERAS
 //::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
-$html4 .= '<tr>';
-$html4 .= '<td class ="fondo puntos" style="width:25%; text-align: center; font-family:dejavusanscondensedb;"><center><div style="font-size:5pt">&nbsp;</div><font size="8">Obligaciones financieras</font></center></td>';
+// $html4 .= '<tr>';
+// $html4 .= '<td class ="fondo puntos" style="width:25%; text-align: center; font-family:dejavusanscondensedb;"><center><div style="font-size:5pt">&nbsp;</div><font size="8">Obligaciones financieras</font></center></td>';
 
-$query19 = "SELECT * FROM ofertas WHERE `id_cotizacion` =$identificador AND `seleccionar` = 'Si'";
-$respuestaquery19 =  $conexion->query($query19);
+// $query19 = "SELECT * FROM ofertas WHERE `id_cotizacion` =$identificador AND `seleccionar` = 'Si'";
+// $respuestaquery19 =  $conexion->query($query19);
 
-$cont17 = 1;
+// $cont17 = 1;
 
-while ($rowRespuesta19 = mysqli_fetch_assoc($respuestaquery19)) {
+// while ($rowRespuesta19 = mysqli_fetch_assoc($respuestaquery19)) {
 
-	$nombreAseguradora = nombreAseguradora($rowRespuesta19['Aseguradora']);
-	$nombreProducto = productoAseguradora($rowRespuesta19['Aseguradora'], $rowRespuesta19['Producto']);
+// 	$nombreAseguradora = nombreAseguradora($rowRespuesta19['Aseguradora']);
+// 	$nombreProducto = productoAseguradora($rowRespuesta19['Aseguradora'], $rowRespuesta19['Producto']);
 
-	$queryConsultaAsistencia13 = "SELECT * FROM asistencias WHERE `aseguradora` LIKE '$nombreAseguradora' AND `producto` LIKE '$nombreProducto'";
-	$respuestaqueryAsistencia13 =  $conexion->query($queryConsultaAsistencia13);
-	$rowRespuestaAsistencia13 = mysqli_fetch_assoc($respuestaqueryAsistencia13);
+// 	$queryConsultaAsistencia13 = "SELECT * FROM asistencias WHERE `aseguradora` LIKE '$nombreAseguradora' AND `producto` LIKE '$nombreProducto'";
+// 	$respuestaqueryAsistencia13 =  $conexion->query($queryConsultaAsistencia13);
+// 	$rowRespuestaAsistencia13 = mysqli_fetch_assoc($respuestaqueryAsistencia13);
 
 
-	if ($cont17 % 2 == 0) {
-		if ($rowRespuestaAsistencia13['obligacionfinanciera'] == "Si ampara") {
-			$html4 .= '<td class="puntos fondo" style="width:' . $valorTabla . '%;text-align: center;"><img style="width:16px;" src="../../../vistas/img/logos/cheque.png" alt=""></td>';
-		} else {
-			$html4 .= '<td class="puntos fondo" style="width:' . $valorTabla . '%;"><center><font size="7"style="text-align: center;font-family:dejavusanscondensed;">' . $rowRespuestaAsistencia13['obligacionfinanciera'] . '</font></center></td>';
-		}
-	} else {
-		if ($rowRespuestaAsistencia13['obligacionfinanciera'] == "Si ampara") {
-			$html4 .= '<td class="puntos fondo2" style="width:' . $valorTabla . '%;text-align: center;"><img style="width:16px;" src="../../../vistas/img/logos/cheque.png" alt=""></td>';
-		} else {
-			$html4 .= '<td class="puntos fondo2" style="width:' . $valorTabla . '%;"><center><font size="7"style="text-align: center;font-family:dejavusanscondensed;">' . $rowRespuestaAsistencia13['obligacionfinanciera'] . '</font></center></td>';
-		}
-	}
+// 	if ($cont17 % 2 == 0) {
+// 		if ($rowRespuestaAsistencia13['obligacionfinanciera'] == "Si ampara") {
+// 			$html4 .= '<td class="puntos fondo" style="width:' . $valorTabla . '%;text-align: center;"><img style="width:16px;" src="../../../vistas/img/logos/cheque.png" alt=""></td>';
+// 		} else {
+// 			$html4 .= '<td class="puntos fondo" style="width:' . $valorTabla . '%;"><center><font size="7"style="text-align: center;font-family:dejavusanscondensed;">' . $rowRespuestaAsistencia13['obligacionfinanciera'] . '</font></center></td>';
+// 		}
+// 	} else {
+// 		if ($rowRespuestaAsistencia13['obligacionfinanciera'] == "Si ampara") {
+// 			$html4 .= '<td class="puntos fondo2" style="width:' . $valorTabla . '%;text-align: center;"><img style="width:16px;" src="../../../vistas/img/logos/cheque.png" alt=""></td>';
+// 		} else {
+// 			$html4 .= '<td class="puntos fondo2" style="width:' . $valorTabla . '%;"><center><font size="7"style="text-align: center;font-family:dejavusanscondensed;">' . $rowRespuestaAsistencia13['obligacionfinanciera'] . '</font></center></td>';
+// 		}
+// 	}
 
-	$cont17 += 1;
-}
+// 	$cont17 += 1;
+// }
 
-$html4 .= '</tr>';
+// $html4 .= '</tr>';
 
 
 //::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
