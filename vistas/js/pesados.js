@@ -1655,57 +1655,57 @@ function registrarOfertaPesados(
           }     
 
             /* AXA */
-              // fetch("https://grupoasistencia.com/motor_webservice_tst/AXA_tst", requestOptions)
-              //   .then((res) => {
-              //     if (!res.ok) throw Error(res.statusText);
-              //     return res.json();
-              //   })
-              //   .then((ofertas) => {
+            fetch("https://grupoasistencia.com/motor_webservice_tst/AXA_tst", requestOptions)
+              .then((res) => {
+                if (!res.ok) throw Error(res.statusText);
+                return res.json();
+              })
+              .then((ofertas) => {
 
-              //     if (typeof ofertas[0].Resultado !== 'undefined') {
-              //       agregarAseguradoraFallidaPesados('AXA')
-              //       ofertas[0].Mensajes.forEach(mensaje => {
-              //         mostrarAlertarCotizacionFallida('AXA', mensaje)
-              //       })
-              //     } else {
-              //       validarOfertasPesados(ofertas)
-              //       mostrarAlertaCotizacionExitosa('AXA')
-              //     }
-              //   })
-              //   .catch((err) => {
-              //     console.error(err);
-              //   });
+                if (typeof ofertas[0].Resultado !== 'undefined') {
+                  agregarAseguradoraFallidaPesados('AXA')
+                  ofertas[0].Mensajes.forEach(mensaje => {
+                    mostrarAlertarCotizacionFallida('AXA', mensaje)
+                  })
+                } else {
+                  validarOfertasPesados(ofertas)
+                  mostrarAlertaCotizacionExitosa('AXA')
+                }
+              })
+              .catch((err) => {
+                console.error(err);
+              });
 
 
              /* LIBERTY */ 
-            // let planesLiberty = ["Full","Integral"];
-            // let body = JSON.parse(requestOptions.body)
-            // planesLiberty.forEach(plan => {
-            //    body.plan = plan
-            //    requestOptions.body = JSON.stringify(body)
+            let planesLiberty = ["Full","Integral"];
+            let body = JSON.parse(requestOptions.body)
+            planesLiberty.forEach(plan => {
+               body.plan = plan
+               requestOptions.body = JSON.stringify(body)
              
-            //   let libertyPromise = fetch("https://grupoasistencia.com/motor_webservice_tst/Liberty", requestOptions)
-            //      .then((res) => {
-            //        if (!res.ok) throw Error(res.statusText);
-            //        return res.json();
-            //      })
-            //      .then((ofertas) => {
-            //        if (typeof ofertas[0].Resultado !== 'undefined') {
-            //          agregarAseguradoraFallidaPesados(`Liberty`);
-            //           ofertas[0].Mensajes.forEach(mensaje => {
-            //           mostrarAlertarCotizacionFallida(`Liberty ${plan}`, mensaje);
-            //          });
-            //        } else {
-            //          validarOfertasPesados(ofertas);
-            //          mostrarAlertaCotizacionExitosa(`Liberty`);
-            //        }
-            //      })
-            //      .catch((err) => {
-            //        console.error(err);
-            //      });
+              let libertyPromise = fetch("https://grupoasistencia.com/motor_webservice_tst/Liberty", requestOptions)
+                 .then((res) => {
+                   if (!res.ok) throw Error(res.statusText);
+                   return res.json();
+                 })
+                 .then((ofertas) => {
+                   if (typeof ofertas[0].Resultado !== 'undefined') {
+                     agregarAseguradoraFallidaPesados(`Liberty`);
+                      ofertas[0].Mensajes.forEach(mensaje => {
+                      mostrarAlertarCotizacionFallida(`Liberty ${plan}`, mensaje);
+                     });
+                   } else {
+                     validarOfertasPesados(ofertas);
+                     mostrarAlertaCotizacionExitosa(`Liberty`);
+                   }
+                 })
+                 .catch((err) => {
+                   console.error(err);
+                 });
 
-            //      promesas.push(libertyPromise);
-            // });
+                 promesas.push(libertyPromise);
+            });
         
         
             // Llamar a esta función cuando todas las promesas se resuelvan
