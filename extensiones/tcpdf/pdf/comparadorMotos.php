@@ -1039,9 +1039,9 @@ $cont5 = 1;
 while ($rowRespuesta8 = mysqli_fetch_assoc($respuestaquery8)) {
 
 	$nombreAseguradora = nombreAseguradora($rowRespuesta8['Aseguradora']);
-    var_dump($nombreAseguradora);
-    die();
 	$nombreProducto = productoAseguradora($rowRespuesta8['Aseguradora'], $rowRespuesta8['Producto']);
+    var_dump($nombreProducto);
+    die();
 	$valorRC = $rowRespuesta8['ValorRC'];
 	$perdidaParcial = $rowRespuesta8['PerdidaParcial'];
 
