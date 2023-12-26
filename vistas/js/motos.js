@@ -1087,81 +1087,84 @@ function registrarOfertaMotos(
           }
           
 
-          let promesas = []
+          // let cont = [];
 
         /*SBS*/
-        fetch("https://grupoasistencia.com/motor_webservice_tst/SBS", requestOptions)
-        .then((res) => {
-            if (!res.ok) throw Error(res.statusText);
-            return res.json();
-        })
-        .then((ofertas) => {
-            let result = ofertas
-            if (typeof result[0].Resultado !== 'undefined') {
-            agregarAseguradoraFallidaMotos('SBS')
-            result[0].Mensajes.forEach(mensaje => {
-                mostrarAlertarCotizacionFallida('SBS', mensaje)
-            })
-            } else {
-            validarOfertasMotos(result);
-            mostrarAlertaCotizacionExitosa('SBS')
-            }
-        })
-        .catch((err) => {
-            agregarAseguradoraFallidaMotos('SBS');
-            mostrarAlertarCotizacionFallida('SBS', "Error de servicio, intente de nuevo");
-            console.error(err);
-        })
-
+        cont.push(
+          fetch("https://grupoasistencia.com/motor_webservice_tst/SBS", requestOptions)
+          .then((res) => {
+              if (!res.ok) throw Error(res.statusText);
+              return res.json();
+          })
+          .then((ofertas) => {
+              let result = ofertas
+              if (typeof result[0].Resultado !== 'undefined') {
+              agregarAseguradoraFallidaMotos('SBS')
+              result[0].Mensajes.forEach(mensaje => {
+                  mostrarAlertarCotizacionFallida('SBS', mensaje)
+              })
+              } else {
+              validarOfertasMotos(result);
+              mostrarAlertaCotizacionExitosa('SBS')
+              }
+          })
+          .catch((err) => {
+              agregarAseguradoraFallidaMotos('SBS');
+              mostrarAlertarCotizacionFallida('SBS', "Error de servicio, intente de nuevo");
+              console.error(err);
+          })
+        )
 
         /* AXA */
-        fetch("https://grupoasistencia.com/motor_webservice_tst/AXA_tst", requestOptions)
-        .then((res) => {
-            if (!res.ok) throw Error(res.statusText);
-            return res.json();
-        })
-        .then((ofertas) => {
+        cont.push(
+          fetch("https://grupoasistencia.com/motor_webservice_tst/AXA_tst", requestOptions)
+          .then((res) => {
+              if (!res.ok) throw Error(res.statusText);
+              return res.json();
+          })
+          .then((ofertas) => {
 
-            if (typeof ofertas[0].Resultado !== 'undefined') {
-            agregarAseguradoraFallidaMotos('AXA')
-            ofertas[0].Mensajes.forEach(mensaje => {
-                mostrarAlertarCotizacionFallida('AXA', mensaje)
-            })
-            } else {
-            validarOfertasMotos(ofertas)
-            mostrarAlertaCotizacionExitosa('AXA')
-            }
-        })
-        .catch((err) => {
-            agregarAseguradoraFallidaMotos('AXA');
-            mostrarAlertarCotizacionFallida('AXA', "Error de servicio, intente de nuevo");
-            console.error(err);
-        })
-
+              if (typeof ofertas[0].Resultado !== 'undefined') {
+              agregarAseguradoraFallidaMotos('AXA')
+              ofertas[0].Mensajes.forEach(mensaje => {
+                  mostrarAlertarCotizacionFallida('AXA', mensaje)
+              })
+              } else {
+              validarOfertasMotos(ofertas)
+              mostrarAlertaCotizacionExitosa('AXA')
+              }
+          })
+          .catch((err) => {
+              agregarAseguradoraFallidaMotos('AXA');
+              mostrarAlertarCotizacionFallida('AXA', "Error de servicio, intente de nuevo");
+              console.error(err);
+          })
+        )
 
         /* LIBERTY */ 
-        fetch("https://grupoasistencia.com/motor_webservice_tst/Liberty", requestOptions)
-        .then((res) => {
-            if (!res.ok) throw Error(res.statusText);
-            return res.json();
-        })
-        .then((ofertas) => {
-            if (typeof ofertas[0].Resultado !== 'undefined') {
-            agregarAseguradoraFallidaMotos('Liberty')
-            ofertas[0].Mensajes.forEach(mensaje => {
-                mostrarAlertarCotizacionFallida('Liberty', mensaje)
-            })
-            } else {
-            validarOfertasMotos(ofertas);
-            mostrarAlertaCotizacionExitosa('Liberty')
-            }
-        })
-        .catch((err) => {
-            agregarAseguradoraFallidaMotos('Liberty');
-            mostrarAlertarCotizacionFallida('Liberty', "Error de servicio, intente de nuevo");
-            console.error(err);
-        })
-
+        cont.push(
+          fetch("https://grupoasistencia.com/motor_webservice_tst/Liberty", requestOptions)
+          .then((res) => {
+              if (!res.ok) throw Error(res.statusText);
+              return res.json();
+          })
+          .then((ofertas) => {
+              if (typeof ofertas[0].Resultado !== 'undefined') {
+              agregarAseguradoraFallidaMotos('Liberty')
+              ofertas[0].Mensajes.forEach(mensaje => {
+                  mostrarAlertarCotizacionFallida('Liberty', mensaje)
+              })
+              } else {
+              validarOfertasMotos(ofertas);
+              mostrarAlertaCotizacionExitosa('Liberty')
+              }
+          })
+          .catch((err) => {
+              agregarAseguradoraFallidaMotos('Liberty');
+              mostrarAlertarCotizacionFallida('Liberty', "Error de servicio, intente de nuevo");
+              console.error(err);
+          })
+        )
         
         
         // Llamar a esta función cuando todas las promesas se resuelvan
@@ -1238,7 +1241,7 @@ function registrarOfertaMotos(
         }
 
 
-        Promise.all()
+        Promise.all(cont)
             .then(() => {
             ejecutarDespuesDePromesas(); // Llama a la función después de que todas las promesas se resuelvan
             })
