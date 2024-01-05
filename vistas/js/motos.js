@@ -867,7 +867,11 @@ function registrarOfertaMotos(
       aseguradoras == _aseguradora)
     if (result !== undefined) return
     aseguradorasFallidas.push(_aseguradora)
+
+    console.log(aseguradorasFallidas)
   }
+
+
   
   const eliminarAseguradoraFallidaMotos = _aseguradora => {
     aseguradorasFallidas = aseguradorasFallidas.filter(aseguradora => aseguradora !== _aseguradora)
