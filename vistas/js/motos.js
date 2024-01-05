@@ -885,9 +885,9 @@ function registrarOfertaMotos(
     return false
   }
   
-//   document.querySelector('#btnReCotizarFallidas').addEventListener('click', () => {
-//     cotizarOfertasPesados()
-//   })
+  document.querySelector('#btnReCotizarFallidas').addEventListener('click', () => {
+    cotizarOfertasMotos()
+  })
   
   function cotizarOfertasMotos() {
 
@@ -1029,7 +1029,9 @@ function registrarOfertaMotos(
         body: JSON.stringify(raw),
         redirect: "follow",
       };
-  
+
+    if(!primerIntentoRealizado){
+      primerIntentoRealizado = true
       $.ajax({
         type: "POST",
         url: "src/insertarCotizacion.php",
@@ -1255,5 +1257,388 @@ function registrarOfertaMotos(
       
           },
       });
+
+    }else{
+
+      const contenParrilla = document.querySelector('#contenParrilla')
+        raw.cotizacion = idCotizacion
+
+        var requestOptions = {
+          method: "POST",
+          headers: myHeaders,
+          body: JSON.stringify(raw),
+          redirect: "follow",
+        };
+        let cont = [];
+
+        const mostrarAlertaCotizacionExitosa = aseguradora => {
+          document.querySelector('.exitosas').innerHTML += `<span style="margin-right: 15px;"><i class="fa fa-check" aria-hidden="true" style="color: green; margin-right: 5px;
+                    "></i>${aseguradora}</span>
+                    `
+        }
+
+        const mostrarAlertarCotizacionFallida = (aseguradora, mensaje) => {
+          document.querySelector('.fallidas').innerHTML += `<p><i class="fa fa-times" aria-hidden="true" style="color: red; margin-right: 10px;"></i><b>${aseguradora}:</b> ${mensaje}</p>`
+        }
+
+        /* Solidaria */
+        if (comprobarFallida('Solidaria')) {
+          cont.push(
+            fetch(
+              "https://grupoasistencia.com/motor_webservice_tst/Solidaria",
+              requestOptions
+            )
+              .then((res) => {
+                if (!res.ok) throw Error(res.statusText);
+                return res.json();
+              })
+              .then((ofertas) => {
+                console.log(ofertas)
+                if (typeof ofertas[0].Resultado !== 'undefined') {
+                  agregarAseguradoraFallida('Solidaria')
+                } else {
+                  validarOfertas(ofertas);
+                  mostrarAlertaCotizacionExitosa('Solidaria')
+                  eliminarAseguradoraFallida('Solidaria')
+                }
+              })
+              .catch((err) => {
+                console.error(err);
+              })
+          );
+        }
+
+
+        /* Previsora */
+        if (comprobarFallida('Previsora')) {
+          cont.push(
+            fetch("https://grupoasistencia.com/motor_webservice_tst/Previsora", requestOptions)
+              .then((res) => {
+                if (!res.ok) throw Error(res.statusText);
+                return res.json();
+              })
+              .then((ofertas) => {
+                if (typeof ofertas[0].Resultado !== 'undefined') {
+                  agregarAseguradoraFallida('Previsora')
+                } else {
+                  validarOfertas(ofertas);
+                  mostrarAlertaCotizacionExitosa('Previsora')
+                  eliminarAseguradoraFallida('Previsora')
+                }
+              })
+              .catch((err) => {
+                console.error(err);
+              })
+          );
+        }
+
+        /* Equidad */
+        if (comprobarFallida('Equidad')) {
+          cont.push(
+            fetch("https://grupoasistencia.com/motor_webservice_tst/Equidad", requestOptions)
+              .then((res) => {
+                if (!res.ok) throw Error(res.statusText);
+                return res.json();
+              })
+              .then((ofertas) => {
+                if (typeof ofertas[0].Resultado !== 'undefined') {
+                  agregarAseguradoraFallida('Equidad')
+                  ofertas[0].Mensajes.forEach(mensaje => {
+                    mostrarAlertarCotizacionFallida('Equidad', mensaje)
+                  })
+                } else {
+                  validarOfertas(ofertas);
+                  mostrarAlertaCotizacionExitosa('Equidad')
+                  eliminarAseguradoraFallida('Equidad')
+                }
+              })
+              .catch((err) => {
+                console.error(err);
+              })
+          );
+        }
+
+        if (comprobarFallida('Mapfre')) {
+          cont.push(
+            fetch("https://grupoasistencia.com/motor_webservice_tst/mapfrecotizacion4", requestOptions)
+              .then((res) => {
+                if (!res.ok) throw Error(res.statusText);
+                return res.json();
+              })
+              .then((ofertas) => {
+                if (typeof ofertas[0].Resultado !== 'undefined') {
+                  agregarAseguradoraFallida('Mapfre')
+                  ofertas[0].Mensajes.forEach(mensaje => {
+                    mostrarAlertarCotizacionFallida('Mapfre', mensaje)
+                  })
+                } else {
+                  validarOfertas(ofertas);
+                  mostrarAlertaCotizacionExitosa('Mapfre')
+                  eliminarAseguradoraFallida('Mapfre')
+                }
+              })
+              .catch((err) => {
+                console.error(err);
+              })
+          );
+        }
+
+
+        /* Bolivar */
+        if (comprobarFallida('Bolivar')) {
+          cont.push(
+            fetch("https://grupoasistencia.com/motor_webservice_tst/Bolivar", requestOptions)
+              .then((res) => {
+                if (!res.ok) throw Error(res.statusText);
+                return res.json();
+              })
+              .then((ofertas) => {
+                console.log(ofertas)
+                if (typeof ofertas[0].Resultado !== 'undefined') {
+                  agregarAseguradoraFallida('Bolivar')
+                } else {
+                  validarOfertas(ofertas);
+                  mostrarAlertaCotizacionExitosa('Bolivar')
+                  eliminarAseguradoraFallida('Bolivar')
+                }
+              })
+              .catch((err) => {
+                console.error(err);
+              })
+          );
+        }
+
+        /* HDI */
+        if (comprobarFallida('HDI')) {
+          cont.push(
+            fetch("https://grupoasistencia.com/motor_webservice_tst/HDI", requestOptions)
+              .then((res) => {
+                if (!res.ok) throw Error(res.statusText);
+                return res.json();
+              })
+              .then((ofertas) => {
+                if (typeof ofertas[0].Resultado !== 'undefined') {
+                  agregarAseguradoraFallida('HDI')
+                } else {
+                  console.log('Here2')
+                  let result = []
+                  result.push(ofertas[0])
+                  validarOfertas(result)
+                  mostrarAlertaCotizacionExitosa('HDI')
+                  eliminarAseguradoraFallida('HDI')
+                }
+              })
+              .catch((err) => {
+                console.error(err);
+              })
+          );
+        }
+
+        let zurichErrors = true
+        let zurichSuccess = true
+
+        /* Zurich */
+        if (comprobarFallida('Zurich')) {
+          const planes = ["BASIC", "MEDIUM", "FULL"]
+          let body = JSON.parse(requestOptions.body)
+          planes.forEach(plan => {
+            body.plan = plan
+            body.Email = Math.round(Math.random() * 999999) + body.Email
+            requestOptions.body = JSON.stringify(body)
+            cont.push(
+              fetch('https://grupoasistencia.com/motor_webservice_tst/Zurich', requestOptions)
+                .then(res => {
+                  if (!res.ok) throw Error(res.statusText)
+                  return res.json()
+                })
+                .then(ofertas => {
+                  if (typeof ofertas.Resultado !== 'undefined') {
+                    agregarAseguradoraFallida('Zurich')
+                    zurichErrors = false
+                  } else {
+                    validarOfertas(ofertas)
+                    if (zurichSuccess) {
+                      mostrarAlertaCotizacionExitosa('Zurich')
+                      eliminarAseguradoraFallida('Zurich')
+                      zurichSuccess = false
+                    }
+                  }
+                })
+                .catch(err => console.error(err))
+            )
+          })
+        }
+
+        let successEstado = true
+
+        /* Estado */
+        if (comprobarFallida('Estado')) {
+          cont.push(
+            fetch("https://grupoasistencia.com/motor_webservice_tst/Estado", requestOptions)
+              .then((res) => {
+                if (!res.ok) throw Error(res.statusText);
+                return res.json();
+              })
+              .then((ofertas) => {
+                let result = []
+                result.push(ofertas)
+                if (typeof result[0].Resultado !== 'undefined') {
+                  agregarAseguradoraFallida('Estado')
+                } else {
+                  validarOfertas(result);
+                  if (successEstado) {
+                    mostrarAlertaCotizacionExitosa('Estado')
+                    eliminarAseguradoraFallida('Estado')
+                    successEstado = false
+                  }
+                }
+              })
+              .catch((err) => {
+                console.error(err);
+              })
+          );
+        }
+
+        /* Estado2 */
+        if (comprobarFallida('Estado2')) {
+          cont.push(
+            fetch("https://grupoasistencia.com/motor_webservice_tst/Estado2", requestOptions)
+              .then((res) => {
+                if (!res.ok) throw Error(res.statusText);
+                return res.json();
+              })
+              .then((ofertas) => {
+                let result = []
+                result.push(ofertas)
+                if (typeof result[0].Resultado !== 'undefined') {
+                  agregarAseguradoraFallida('Zurich2')
+                } else {
+                  validarOfertas(result);
+                  if (successEstado) {
+                    mostrarAlertaCotizacionExitosa('Estado')
+                    eliminarAseguradoraFallida('Estado')
+                    successEstado = false
+                  }
+                }
+              })
+              .catch((err) => {
+                console.error(err);
+              })
+          );
+        }
+
+        /* Liberty */
+        if (comprobarFallida('Liberty')) {
+          cont.push(
+            fetch("https://grupoasistencia.com/motor_webservice_tst/Liberty", requestOptions)
+              .then((res) => {
+                if (!res.ok) throw Error(res.statusText);
+                return res.json();
+              })
+              .then((ofertas) => {
+                if (typeof ofertas[0].Resultado !== 'undefined') {
+                  agregarAseguradoraFallida('Liberty')
+                } else {
+                  validarOfertas(ofertas);
+                  mostrarAlertaCotizacionExitosa('Liberty')
+                  eliminarAseguradoraFallida('Liberty')
+                }
+              })
+              .catch((err) => {
+                console.error(err);
+              })
+          );
+        }
+
+        /* Allianz */
+        if (comprobarFallida('Allianz')) {
+          cont.push(
+            fetch("https://grupoasistencia.com/motor_webservice_tst/Allianz", requestOptions)
+              .then((res) => {
+                if (!res.ok) throw Error(res.statusText);
+                console.log(res);
+                return res.json();
+              })
+              .then((ofertas) => {
+                if (typeof ofertas[0].Resultado !== 'undefined') {
+                  agregarAseguradoraFallida('Allianz')
+                } else {
+                  validarOfertas(ofertas)
+                  mostrarAlertaCotizacionExitosa('Allianz')
+                  eliminarAseguradoraFallida('Allianz')
+                }
+              })
+              .catch((err) => {
+                console.error(err);
+              })
+          );
+        }
+
+        /* AXA */
+        if (comprobarFallida('AXA')) {
+          cont.push(
+            fetch("https://grupoasistencia.com/motor_webservice_tst/AXA_tst", requestOptions)
+              .then((res) => {
+                if (!res.ok) throw Error(res.statusText);
+                return res.json();
+              })
+              .then((ofertas) => {
+                if (typeof ofertas[0].Resultado !== 'undefined') {
+                  agregarAseguradoraFallida('AXA')
+                  ofertas[0].Mensajes.forEach(mensaje => {
+                    mostrarAlertarCotizacionFallida('AXA', mensaje)
+                  })
+                } else {
+                  validarOfertas(ofertas)
+                  mostrarAlertaCotizacionExitosa('AXA')
+                  eliminarAseguradoraFallida('AXA')
+                }
+              })
+              .catch((err) => {
+                console.error(err);
+              })
+          );
+        }
+
+        /* SBS */
+        if (comprobarFallida('SBS')) {
+          cont.push(
+            fetch("https://grupoasistencia.com/motor_webservice_tst/SBS", requestOptions)
+              .then((res) => {
+                if (!res.ok) throw Error(res.statusText);
+                return res.json();
+              })
+              .then((ofertas) => {
+                let result = ofertas
+                if (typeof result[0].Resultado !== 'undefined') {
+                  agregarAseguradoraFallida('SBS')
+                } else {
+                  validarOfertas(result);
+                  mostrarAlertaCotizacionExitosa('SBS')
+                  eliminarAseguradoraFallida('SBS')
+                }
+              })
+              .catch((err) => {
+                console.error(err);
+              })
+          );
+        }
+
+        Promise.all(cont).then(() => {
+          $("#loaderOferta").html("");
+          $("#loaderRecotOferta").html("");
+          swal({
+            type: "success",
+            title: "! Re cotización completada ¡",
+            showConfirmButton: true,
+            confirmButtonText: "Cerrar",
+          });
+          console.log("Se completo la re-cotización");
+        });
+
+    }
+
+
+
     }
   }
