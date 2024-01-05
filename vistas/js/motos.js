@@ -961,6 +961,23 @@ function registrarOfertaMotos(
     var ciudadCirculacion = document.getElementById("ciudadCirculacion").value;
     var isBenefOneroso = $("input:radio[name=oneroso]:checked").val(); // Valida que alguno de los 2 este selecionado
     var benefOneroso = document.getElementById("benefOneroso").value;
+
+      /**
+     * Variables de AXA
+     */
+    var cre_axa_sslcertfile = document.getElementById("cre_axa_sslcertfile").value;
+    var cre_axa_sslkeyfile = document.getElementById("cre_axa_sslkeyfile").value;
+
+    var cre_axa_passphrase = document.getElementById("cre_axa_passphrase").value;
+    var cre_axa_codigoDistribuidor = document.getElementById("cre_axa_codigoDistribuidor").value;
+
+    var cre_axa_idTipoDistribuidor = document.getElementById("cre_axa_idTipoDistribuidor").value;
+    var cre_axa_codigoDivipola = document.getElementById("cre_axa_codigoDivipola").value;
+
+    var cre_axa_canal = document.getElementById("cre_axa_canal").value;
+    var cre_axa_validacionEventos = document.getElementById("cre_axa_validacionEventos").value;
+    var url_axa =document.getElementById("url_axa").value;
+
   
     if (ciudadCirculacion.length == 4) {
       ciudadCirculacion = "0" + ciudadCirculacion;
@@ -1018,9 +1035,17 @@ function registrarOfertaMotos(
         AniosAsegurados: AniosAsegurados,
         NivelEducativo: NivelEducativo,
         Estrato: Estrato,
-        // ofinanciera: ofinanciera,
-        // hdi: hdi,
-        // estado: estado,
+        AXA: {
+          cre_axa_sslcertfile: cre_axa_sslcertfile,
+          cre_axa_sslkeyfile: cre_axa_sslkeyfile,
+          cre_axa_passphrase: cre_axa_passphrase,
+          cre_axa_codigoDistribuidor: cre_axa_codigoDistribuidor,
+          cre_axa_idTipoDistribuidor: cre_axa_idTipoDistribuidor,
+          cre_axa_codigoDivipola: cre_axa_codigoDivipola,
+          cre_axa_canal: cre_axa_canal,
+          cre_axa_validacionEventos: cre_axa_validacionEventos,
+          url_axa:url_axa
+        }
       };
   
       var requestOptions = {
