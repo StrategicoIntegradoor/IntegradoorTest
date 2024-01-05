@@ -877,7 +877,7 @@ function registrarOfertaMotos(
     aseguradorasFallidas = aseguradorasFallidas.filter(aseguradora => aseguradora !== _aseguradora)
   }
   
-  const comprobarFallidaMotos = _aseguradora => {
+  const comprobarFallida = _aseguradora => {
     const result = aseguradorasFallidas.find(aseguradoras =>
       aseguradoras == _aseguradora)
     if (result !== undefined) return true
