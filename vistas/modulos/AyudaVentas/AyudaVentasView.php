@@ -77,7 +77,7 @@ if ($_SESSION["permisos"]["AyudaVentasFreelance"] == "x") {
     .tablas-asistencias td.fixed-width.continuidad,
     .tablas-asistencias td.fixed-width.cambio-intermediario {
         max-width: 200px;
-        min-width: 160px !important;
+        min-width: 180px !important;
         overflow: hidden;
     }
 
