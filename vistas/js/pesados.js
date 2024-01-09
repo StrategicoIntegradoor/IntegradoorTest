@@ -1655,26 +1655,37 @@ function registrarOfertaPesados(
           }     
 
             /* AXA */
-            // fetch("https://grupoasistencia.com/motor_webservice_tst/AXA_tst", requestOptions)
-            //   .then((res) => {
-            //     if (!res.ok) throw Error(res.statusText);
-            //     return res.json();
-            //   })
-            //   .then((ofertas) => {
+            let bodyAXA = JSON.parse(requestOptions.body);
+            let planesAXA = [4799, 4800, 4801, 4802, 4803, 4804];
 
-            //     if (typeof ofertas[0].Resultado !== 'undefined') {
-            //       agregarAseguradoraFallidaPesados('AXA')
-            //       ofertas[0].Mensajes.forEach(mensaje => {
-            //         mostrarAlertarCotizacionFallida('AXA', mensaje)
-            //       })
-            //     } else {
-            //       validarOfertasPesados(ofertas)
-            //       mostrarAlertaCotizacionExitosa('AXA')
-            //     }
-            //   })
-            //   .catch((err) => {
-            //     console.error(err);
-            //   });
+            planesAXA.forEach(plan => {
+                bodyAXA.plan = plan;
+                requestOptions.body = JSON.stringify(bodyAXA);
+
+                let axaPromise = fetch("https://grupoasistencia.com/motor_webservice_tst/AXA_tst", requestOptions)
+                    .then((res) => {
+                        if (!res.ok) throw Error(res.statusText);
+                        return res.json();
+                    })
+                    .then((ofertas) => {
+                        if (typeof ofertas[0].Resultado !== 'undefined') {
+                            agregarAseguradoraFallidaPesados('AXA');
+                            ofertas[0].Mensajes.forEach(mensaje => {
+                                mostrarAlertarCotizacionFallida('AXA', mensaje);
+                            });
+                        } else {
+                            validarOfertasPesados(ofertas);
+                            mostrarAlertaCotizacionExitosa('AXA');
+                        }
+                    })
+                    .catch((err) => {
+                        console.error(err);
+                    });
+
+                promesas.push(axaPromise);
+
+            });
+
 
 
              /* LIBERTY */ 
