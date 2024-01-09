@@ -74,6 +74,14 @@ if ($_SESSION["permisos"]["AyudaVentasFreelance"] == "x") {
         text-overflow: ellipsis;
     }
 
+    .tablas-asistencias td.fixed-width.continuidad,
+    .tablas-asistencias td.fixed-width.cambio-intermediario {
+        max-width: 200px;
+        min-width: 160px !important;
+        overflow: hidden;
+    }
+
+
 
 </style>
 
