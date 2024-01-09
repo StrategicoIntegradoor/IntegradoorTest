@@ -69,6 +69,7 @@ if ($_SESSION["permisos"]["AyudaVentasFreelance"] == "x") {
 
     .tablas-asistencias td {
         max-width: 200px;
+        min-width: 160px;
         overflow: hidden;
         text-overflow: ellipsis;
     }
