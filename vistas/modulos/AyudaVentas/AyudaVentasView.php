@@ -67,6 +67,12 @@ if ($_SESSION["permisos"]["AyudaVentasFreelance"] == "x") {
         word-wrap: break-word;
     }
 
+    .tablas-asistencias td {
+        max-width: 200px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
 
 </style>
 
