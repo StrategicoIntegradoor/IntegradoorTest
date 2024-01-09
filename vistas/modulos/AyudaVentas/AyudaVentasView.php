@@ -32,7 +32,7 @@ if ($_SESSION["permisos"]["AyudaVentasFreelance"] == "x") {
     }
 
     table {
-    table-layout: fixed;
+    /* table-layout: fixed; */
     width: 100%;
     /* Puedes establecer el ancho total de la tabla aquí */
     }
