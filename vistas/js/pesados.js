@@ -1656,7 +1656,7 @@ function registrarOfertaPesados(
 
             /* AXA */
             let bodyAXA = JSON.parse(requestOptions.body);
-            let planesAXA = [4799, 4800, 4801, 4802, 4803, 4804];
+            let planesAXA = [5308, 5309, 5310, 5311, 5312, 5313];
 
             planesAXA.forEach(plan => {
                 bodyAXA.plan = plan;
