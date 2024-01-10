@@ -1,5 +1,47 @@
 <?php
 
+$DB_host = "localhost";
+$DB_user = "grupoasi_cotizautos";
+$DB_pass = "M1graci0n123";
+$DB_name = "grupoasi_cotizautos";
+
+$enlace = mysqli_connect("$DB_host", "$DB_user", "$DB_pass", "$DB_name");
+if (!$enlace) {
+
+  die("Conexion Fallida " . mysqli_connect_error());
+}
+
+// mysqli_set_charset($enlace, "utf8");
+
+function obtenerCredenciales($enlace, $tabla, $columnas, $idIntermediario) {
+  $query = "SELECT $columnas FROM `$tabla` WHERE `id_intermediario` = '$idIntermediario'";
+  $ejecucion = mysqli_query($enlace, $query);
+  $numerofilas = mysqli_num_rows($ejecucion);
+  $fila = mysqli_fetch_assoc($ejecucion);
+
+  if ($numerofilas > 0) {
+      return $fila;
+  } else {
+      $query2 = "SELECT * FROM `$tabla` WHERE `id_intermediario` = 3";
+      $ejecucion2 = mysqli_query($enlace, $query2);
+      $fila2 = mysqli_fetch_assoc($ejecucion2);
+      return $fila2;
+  }
+}
+
+// FUNCION PARA OBTENER CREDENCIALES AXA
+$creAXA = obtenerCredenciales($enlace, 'Credenciales_AXA', '*', $_SESSION['intermediario']);
+
+$cre_axa_sslcertfile = $creAXA['cre_axa_sslcertfile'];
+$cre_axa_sslkeyfile = $creAXA['cre_axa_sslkeyfile'];
+$cre_axa_passphrase = $creAXA['cre_axa_passphrase'];
+$cre_axa_codigoDistribuidor = $creAXA['cre_axa_codigoDistribuidor'];
+$cre_axa_idTipoDistribuidor = $creAXA['cre_axa_idTipoDistribuidor'];
+$cre_axa_codigoDivipola = $creAXA['cre_axa_codigoDivipola'];
+$cre_axa_canal = $creAXA['cre_axa_canal'];
+$cre_axa_validacionEventos = $creAXA['cre_axa_validacionEventos'];
+$url_axa = $creAXA['url_axa'];
+
 if ($_SESSION["permisos"]["Cotizarpesados"] != "x") {
 
   echo '<script>
