@@ -42,6 +42,16 @@ $cre_axa_canal = $creAXA['cre_axa_canal'];
 $cre_axa_validacionEventos = $creAXA['cre_axa_validacionEventos'];
 $url_axa = $creAXA['url_axa'];
 
+var_dump($cre_axa_sslcertfile);
+var_dump($cre_axa_sslkeyfile);
+var_dump($cre_axa_passphrase);
+var_dump($cre_axa_codigoDistribuidor);
+var_dump($cre_axa_idTipoDistribuidor);
+var_dump($cre_axa_codigoDivipola);
+var_dump($cre_axa_canal);
+var_dump($cre_axa_validacionEventos);
+var_dump($url_axa);
+
 if ($_SESSION["permisos"]["Cotizarpesados"] != "x") {
 
   echo '<script>
@@ -697,6 +707,18 @@ $rolAsesor = $_SESSION['permisos']['id_rol'];
           <input type="text" name="NivelEducativo" id="NivelEducativo" value="4">
           <label>Estrato</label>
           <input type="text" name="Estrato" id="Estrato" value="3">
+
+          <!--AXA-->
+          <input type="text" class="form-control" id="cre_axa_sslcertfile" value="<?php echo $cre_axa_sslcertfile; ?>">
+          <input type="text" class="form-control" id="cre_axa_sslkeyfile" value="<?php echo $cre_axa_sslkeyfile; ?>">
+          <input type="text" class="form-control" id="cre_axa_passphrase" value="<?php echo $cre_axa_passphrase; ?>">
+          <input type="text" class="form-control" id="cre_axa_codigoDistribuidor" value="<?php echo $cre_axa_codigoDistribuidor; ?>">
+          <input type="text" class="form-control" id="cre_axa_idTipoDistribuidor" value="<?php echo $cre_axa_idTipoDistribuidor; ?>">
+          <input type="text" class="form-control" id="cre_axa_codigoDivipola" value="<?php echo $cre_axa_codigoDivipola; ?>">
+          <input type="text" class="form-control" id="cre_axa_canal" value="<?php echo $cre_axa_canal; ?>">
+          <input type="text" class="form-control" id="cre_axa_validacionEventos" value="<?php echo $cre_axa_validacionEventos; ?>">
+          <input type="text" class="form-control" id="url_axa" value="<?php echo $url_axa; ?>">
+
         </div>
 
       </div>
