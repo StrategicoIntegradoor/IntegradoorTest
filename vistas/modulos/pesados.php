@@ -42,15 +42,6 @@ $cre_axa_canal = $creAXA['cre_axa_canal'];
 $cre_axa_validacionEventos = $creAXA['cre_axa_validacionEventos'];
 $url_axa = $creAXA['url_axa'];
 
-var_dump($cre_axa_sslcertfile);
-var_dump($cre_axa_sslkeyfile);
-var_dump($cre_axa_passphrase);
-var_dump($cre_axa_codigoDistribuidor);
-var_dump($cre_axa_idTipoDistribuidor);
-var_dump($cre_axa_codigoDivipola);
-var_dump($cre_axa_canal);
-var_dump($cre_axa_validacionEventos);
-var_dump($url_axa);
 
 if ($_SESSION["permisos"]["Cotizarpesados"] != "x") {
 
