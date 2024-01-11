@@ -5,19 +5,16 @@
      <style>
 
 		@media (max-width: 450px) {
-				.navbar {
-					/* Ajusta la altura de la barra de navegación según tus necesidades */
-					height: 10px !important;
-				}
+			.navbar {
+				height: 30px !important; /* Ajusta la altura según tus necesidades */
+			}
 
-				/* Ajusta otros estilos según tus necesidades */
-				.navbar-custom-menu ul.navbar-nav li {
-					/* Puedes ajustar los estilos de los elementos de la barra de navegación si es necesario */
-					margin-top: 5px; /* Ejemplo de ajuste del margen superior */
-				}
+			.navbar-custom-menu ul.navbar-nav li {
+				margin-top: 5px; /* Ejemplo de ajuste del margen superior */
+			}
 
-				/* Otros estilos específicos para la versión móvil si es necesario */
-    	}
+			/* Otros estilos específicos para la versión móvil si es necesario */
+		}
 
         @media (max-width: 450px){
             .li_cotDi{
