@@ -230,39 +230,40 @@ class ModeloCotizaciones{
 
 
 			$stmt = Conexion::conectar()->prepare("
-			SELECT * FROM $tabla, $tabla2, $tabla3, $tabla4, $tabla5 
-			WHERE $tabla.id_cliente = $tabla2.id_cliente 
-				AND $tabla.id_usuario = $tabla5.id_usuario 
-				AND $tabla2.id_tipo_documento = $tabla3.id_tipo_documento 
-				AND $tabla2.id_estado_civil = $tabla4.id_estado_civil 
-				AND (
-					(YEAR($tabla.cot_fch_cotizacion) = :anoActual AND MONTH($tabla.cot_fch_cotizacion) >= :mesInicio)
-					OR
-					(YEAR($tabla.cot_fch_cotizacion) = :anoAnterior AND MONTH($tabla.cot_fch_cotizacion) >= :mesInicioAnterior)
-				)
-				AND MONTH($tabla.cot_fch_cotizacion) <= :mesFin
-				AND usuarios.id_Intermediario = :idIntermediario $condicion
-		");
+				SELECT * FROM $tabla, $tabla2, $tabla3, $tabla4, $tabla5 
+				WHERE $tabla.id_cliente = $tabla2.id_cliente 
+					AND $tabla.id_usuario = $tabla5.id_usuario 
+					AND $tabla2.id_tipo_documento = $tabla3.id_tipo_documento 
+					AND $tabla2.id_estado_civil = $tabla4.id_estado_civil 
+					AND (
+						(YEAR($tabla.cot_fch_cotizacion) = :anoActual AND MONTH($tabla.cot_fch_cotizacion) >= :mesInicio)
+						OR
+						(YEAR($tabla.cot_fch_cotizacion) = :anoAnterior AND MONTH($tabla.cot_fch_cotizacion) >= :mesInicioAnterior)
+					)
+					AND MONTH($tabla.cot_fch_cotizacion) <= :mesFin
+					AND usuarios.id_Intermediario = :idIntermediario $condicion
+			");
 
-		// Obtener el año actual y el año anterior
-		$anoActual = date("Y");
-		$anoAnterior = $anoActual - 1;
+			// Obtener el año actual y el año anterior
+			$anoActual = date("Y");
+			$mesActual = date("m");
 
-		// Calcular el mes de inicio hace tres meses
-		$mesActual = date("m"); // Obtener el mes actual
-		$mesInicio = ($mesActual - 2) <= 0 ? 12 + ($mesActual - 2) : $mesActual - 2;
-		// Calcular el mes de inicio hace tres meses para el año anterior
-		$mesInicioAnterior = ($mesActual - 2) <= 0 ? 12 + ($mesActual - 2) : $mesActual - 2;
+			$anoAnterior = $anoActual - 1;
 
-		// Calcular el mes de fin (mes actual)
-		$mesFin = $mesActual;
+			// Calcular el mes de inicio hace tres meses
+			$mesInicio = ($mesActual - 2) <= 0 ? 12 + ($mesActual - 2) : ($mesActual - 2);
+			// Calcular el mes de inicio hace tres meses para el año anterior
+			$mesInicioAnterior = $mesInicio > 2 ? $mesInicio - 2 : 12 + $mesInicio - 2;
 
-		$stmt->bindParam(":anoActual", $anoActual, PDO::PARAM_INT);
-		$stmt->bindParam(":anoAnterior", $anoAnterior, PDO::PARAM_INT);
-		$stmt->bindParam(":mesInicio", $mesInicio, PDO::PARAM_INT);
-		$stmt->bindParam(":mesInicioAnterior", $mesInicioAnterior, PDO::PARAM_INT);
-		$stmt->bindParam(":mesFin", $mesFin, PDO::PARAM_INT);
-		$stmt->bindParam(":idIntermediario", $_SESSION["intermediario"], PDO::PARAM_INT);
+			// Calcular el mes de fin (mes actual)
+			$mesFin = $mesActual;
+
+			$stmt->bindParam(":anoActual", $anoActual, PDO::PARAM_INT);
+			$stmt->bindParam(":anoAnterior", $anoAnterior, PDO::PARAM_INT);
+			$stmt->bindParam(":mesInicio", $mesInicio, PDO::PARAM_INT);
+			$stmt->bindParam(":mesInicioAnterior", $mesInicioAnterior, PDO::PARAM_INT);
+			$stmt->bindParam(":mesFin", $mesFin, PDO::PARAM_INT);
+			$stmt->bindParam(":idIntermediario", $_SESSION["intermediario"], PDO::PARAM_INT);
 
 			if($_SESSION["permisos"]["Verlistadodecotizacionesdelaagencia"] != "x"){ 
 				$stmt->bindParam(":idUsuario", $_SESSION["idUsuario"], PDO::PARAM_INT);
