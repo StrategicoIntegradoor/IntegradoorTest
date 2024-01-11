@@ -4,18 +4,6 @@
      
      <style>
 
-		@media (max-width: 450px) {
-			.navbar {
-				height: 30px !important; /* Ajusta la altura según tus necesidades */
-			}
-
-			.navbar-custom-menu ul.navbar-nav li {
-				margin-top: 5px; /* Ejemplo de ajuste del margen superior */
-			}
-
-			/* Otros estilos específicos para la versión móvil si es necesario */
-		}
-
         @media (max-width: 450px){
             .li_cotDi{
                 font-size: 15px !important;
@@ -57,6 +45,14 @@
 		.cuentatras_li{
 			margin-top: 10px;
 		}
+
+		@media (max-width: 450px) {
+			.navbar {
+				background-color: red !important; /* Cambia el color de fondo para confirmar la aplicación de la regla */
+			}
+			/* Otros estilos específicos para la versión móvil si es necesario */
+		}
+
      
      </style>
  	
