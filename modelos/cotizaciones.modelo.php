@@ -129,44 +129,119 @@ class ModeloCotizaciones{
 	RANGO FECHAS COTIZACIONES
 	=============================================*/
 
-	static public function mdlRangoFechasCotizaciones($tabla, $tabla2, $tabla3, $tabla4, $tabla5,$tabla6, $fechaInicialCotizaciones, $fechaFinalCotizaciones){
+// 	static public function mdlRangoFechasCotizaciones($tabla, $tabla2, $tabla3, $tabla4, $tabla5,$tabla6, $fechaInicialCotizaciones, $fechaFinalCotizaciones){
+			
+// 		$condicion = "";
+// 		if($_SESSION["permisos"]["Verlistadodecotizacionesdelaagencia"] != "x"){ $condicion = "AND $tabla.id_usuario = :idUsuario"; }
+
+// 		if($fechaInicialCotizaciones == null){
+
+			
+// 			$anoActual = date("Y"); // Obtener el año actual
+// 			$mesActual = date("m"); // Obtener el mes actual
+
+		
+// 			$stmt = Conexion::conectar()->prepare("SELECT * FROM $tabla, $tabla2, $tabla3, $tabla4, $tabla5 WHERE $tabla.id_cliente = $tabla2.id_cliente 
+// 			AND $tabla.id_usuario = $tabla5.id_usuario 
+// 			AND $tabla2.id_tipo_documento = $tabla3.id_tipo_documento 
+// 			AND $tabla2.id_estado_civil = $tabla4.id_estado_civil 
+// 			AND YEAR($tabla.cot_fch_cotizacion) = :anoActual 
+// 			AND MONTH($tabla.cot_fch_cotizacion) >= :mesInicio 
+// 			AND MONTH($tabla.cot_fch_cotizacion) <= :mesFin
+// 			AND usuarios.id_Intermediario = :idIntermediario $condicion");
+		
+// 			// Calcular el mes de inicio hace tres meses
+// 			$mesInicio = ($mesActual - 2) <= 0 ? 12 + ($mesActual - 2) : $mesActual - 2;
+			
+// 			// Calcular el mes de fin (mes actual)
+// 			$mesFin = $mesActual;
+
+
+// 			$stmt->bindParam(":anoActual", $anoActual, PDO::PARAM_INT);
+// 			$stmt->bindParam(":mesInicio", $mesInicio, PDO::PARAM_INT);
+// 			$stmt->bindParam(":mesFin", $mesFin, PDO::PARAM_INT);
+// 			$stmt->bindParam(":idIntermediario", $_SESSION["intermediario"], PDO::PARAM_INT);
+		
+// 			if ($_SESSION["permisos"]["Verlistadodecotizacionesdelaagencia"] != "x") {
+// 				$stmt->bindParam(":idUsuario", $_SESSION["idUsuario"], PDO::PARAM_INT);
+// 			}
+		
+// 			$stmt->execute();
+		    
+// 			return $stmt->fetchAll(PDO::FETCH_ASSOC);
+// 			print_r($stmt);
+// 			die();
+
+// 		}else if($fechaInicialCotizaciones == $fechaFinalCotizaciones){
+
+// 			$stmt = Conexion::conectar()->prepare("SELECT * FROM $tabla, $tabla2, $tabla3, $tabla4, $tabla5 WHERE $tabla.id_cliente = $tabla2.id_cliente
+// 													AND $tabla.id_usuario = $tabla5.id_usuario AND $tabla2.id_tipo_documento = $tabla3.id_tipo_documento 
+// 													AND $tabla2.id_estado_civil = $tabla4.id_estado_civil AND cot_fch_cotizacion LIKE '%$fechaFinalCotizaciones%' AND usuarios.id_Intermediario = :idIntermediario $condicion");
+
+// 			$stmt -> bindParam(":cot_fch_cotizacion", $fechaFinalCotizaciones, PDO::PARAM_STR);
+// 			$stmt->bindParam(":idIntermediario",$_SESSION["intermediario"], PDO::PARAM_INT);
+
+// 			$stmt -> execute();
+
+// 			return $stmt -> fetchAll(PDO::FETCH_ASSOC);
+
+// 		}else{
+
+// 			$fechaActual = new DateTime();
+// 			$fechaActual ->add(new DateInterval("P1D"));
+// 			$fechaActualMasUno = $fechaActual->format("Y-m-d");
+
+// 			$fechaFinalCotizaciones2 = new DateTime($fechaFinalCotizaciones);
+// 			$fechaFinalCotizaciones2 ->add(new DateInterval("P1D"));
+// 			$fechaFinalCotizacionesMasUno = $fechaFinalCotizaciones2->format("Y-m-d");
+
+// 			if($fechaFinalCotizacionesMasUno == $fechaActualMasUno){
+
+// 				$stmt = Conexion::conectar()->prepare("SELECT * FROM $tabla, $tabla2, $tabla3, $tabla4, $tabla5 WHERE $tabla.id_cliente = $tabla2.id_cliente
+// 														AND $tabla.id_usuario = $tabla5.id_usuario AND $tabla2.id_tipo_documento = $tabla3.id_tipo_documento 
+// 														AND $tabla2.id_estado_civil = $tabla4.id_estado_civil AND cot_fch_cotizacion 
+// 														BETWEEN '$fechaInicialCotizaciones' AND '$fechaFinalCotizacionesMasUno'AND usuarios.id_Intermediario = :idIntermediario $condicion");
+
+// 			}else{
+
+
+// 				$stmt = Conexion::conectar()->prepare("SELECT * FROM $tabla, $tabla2, $tabla3, $tabla4, $tabla5 WHERE $tabla.id_cliente = $tabla2.id_cliente
+// 														AND $tabla.id_usuario = $tabla5.id_usuario AND $tabla2.id_tipo_documento = $tabla3.id_tipo_documento 
+// 														AND $tabla2.id_estado_civil = $tabla4.id_estado_civil AND cot_fch_cotizacion 
+// 														BETWEEN '$fechaInicialCotizaciones' AND '$fechaFinalCotizaciones' AND usuarios.id_Intermediario = :idIntermediario $condicion");
+
+// 			}
+// 			$stmt->bindParam(":idIntermediario",$_SESSION["intermediario"], PDO::PARAM_INT);
+// 			$stmt -> execute();
+
+// 			return $stmt -> fetchAll(PDO::FETCH_ASSOC);
+
+// 		}
+
+// 	}
+
+
+    static public function mdlRangoFechasCotizaciones($tabla, $tabla2, $tabla3, $tabla4, $tabla5,$tabla6, $fechaInicialCotizaciones, $fechaFinalCotizaciones){
 			
 		$condicion = "";
 		if($_SESSION["permisos"]["Verlistadodecotizacionesdelaagencia"] != "x"){ $condicion = "AND $tabla.id_usuario = :idUsuario"; }
 
 		if($fechaInicialCotizaciones == null){
 
+			$stmt = Conexion::conectar()->prepare("SELECT * FROM $tabla, $tabla2, $tabla3, $tabla4, $tabla5 WHERE $tabla.id_cliente = $tabla2.id_cliente AND $tabla.id_usuario = $tabla5.id_usuario AND $tabla2.id_tipo_documento = $tabla3.id_tipo_documento AND $tabla2.id_estado_civil = $tabla4.id_estado_civil AND usuarios.id_Intermediario = :idIntermediario $condicion ");
 			
-			$anoActual = date("Y"); // Obtener el año actual
-			$mesActual = date("m"); // Obtener el mes actual
-		
-			$stmt = Conexion::conectar()->prepare("SELECT * FROM $tabla, $tabla2, $tabla3, $tabla4, $tabla5 WHERE $tabla.id_cliente = $tabla2.id_cliente 
-			AND $tabla.id_usuario = $tabla5.id_usuario 
-			AND $tabla2.id_tipo_documento = $tabla3.id_tipo_documento 
-			AND $tabla2.id_estado_civil = $tabla4.id_estado_civil 
-			AND YEAR($tabla.cot_fch_cotizacion) = :anoActual 
-			AND MONTH($tabla.cot_fch_cotizacion) >= :mesInicio 
-			AND MONTH($tabla.cot_fch_cotizacion) <= :mesFin
-			AND usuarios.id_Intermediario = :idIntermediario $condicion");
-		
-			// Calcular el mes de inicio hace tres meses
-			$mesInicio = ($mesActual - 2) <= 0 ? 12 + ($mesActual - 2) : $mesActual - 2;
-			
-			// Calcular el mes de fin (mes actual)
-			$mesFin = $mesActual;
-		
-			$stmt->bindParam(":anoActual", $anoActual, PDO::PARAM_INT);
-			$stmt->bindParam(":mesInicio", $mesInicio, PDO::PARAM_INT);
-			$stmt->bindParam(":mesFin", $mesFin, PDO::PARAM_INT);
 			$stmt->bindParam(":idIntermediario", $_SESSION["intermediario"], PDO::PARAM_INT);
-		
-			if ($_SESSION["permisos"]["Verlistadodecotizacionesdelaagencia"] != "x") {
+
+			if($_SESSION["permisos"]["Verlistadodecotizacionesdelaagencia"] != "x"){ 
 				$stmt->bindParam(":idUsuario", $_SESSION["idUsuario"], PDO::PARAM_INT);
+				
+				
 			}
-		
-			$stmt->execute();
-		
-			return $stmt->fetchAll(PDO::FETCH_ASSOC);
+			
+			
+			$stmt -> execute();
+
+			return $stmt -> fetchAll(PDO::FETCH_ASSOC);
 			print_r($stmt);
 			die();
 
@@ -217,6 +292,5 @@ class ModeloCotizaciones{
 		}
 
 	}
-
 
 }
