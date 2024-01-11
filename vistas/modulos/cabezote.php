@@ -46,13 +46,6 @@
 			margin-top: 10px;
 		}
 
-		@media (max-width: 450px) {
-			.navbar {
-				margin-bottom: 100px; /* Ajusta el valor según tus necesidades */
-			}
-			/* Otros estilos específicos para la versión móvil si es necesario */
-		}
-
      
      </style>
  	
