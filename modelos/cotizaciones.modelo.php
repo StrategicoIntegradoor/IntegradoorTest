@@ -268,8 +268,11 @@ class ModeloCotizaciones{
 			if($_SESSION["permisos"]["Verlistadodecotizacionesdelaagencia"] != "x"){ 
 				$stmt->bindParam(":idUsuario", $_SESSION["idUsuario"], PDO::PARAM_INT);
 			}
-			
+			// Después de preparar la consulta
+
 			$stmt -> execute();
+			echo $stmt->queryString;
+
 			var_dump($stmt -> fetchAll(PDO::FETCH_ASSOC));
 			die();
 
