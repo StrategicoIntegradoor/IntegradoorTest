@@ -48,7 +48,7 @@
 
 		@media (max-width: 450px) {
 			.navbar {
-				max-height: 20px !important; /* Cambia el color de fondo para confirmar la aplicación de la regla */
+				margin-bottom: 100px; /* Ajusta el valor según tus necesidades */
 			}
 			/* Otros estilos específicos para la versión móvil si es necesario */
 		}
