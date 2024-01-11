@@ -1147,7 +1147,7 @@ function registrarOfertaPesados(
       }else if(producto == 'Pesados Integral1'){
         producto = 'Pesados Integral1'
       }  
-  }
+    }
 
     let cardCotizacion = `
               <div class='col-lg-12'>
