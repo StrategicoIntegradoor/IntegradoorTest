@@ -545,7 +545,7 @@ $rolAsesor = $_SESSION['permisos']['id_rol'];
                       </select>
                     </div>
 
-                    <div class="col-xs-12 col-sm-6 col-md-3 form-group">
+                    <div class="col-xs-12 col-sm-6 col-md-3 form-group" style="display: none;">
                       <label for="obligacionfinanciera">Obligaciones Financieras</label>
                       <select class="form-control" id="obligacionfinanciera" required>
                         <option value="1">No</option>
