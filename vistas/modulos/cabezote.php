@@ -7,7 +7,7 @@
 		@media (max-width: 450px) {
 				.navbar {
 					/* Ajusta la altura de la barra de navegación según tus necesidades */
-					height: 40px !important;
+					height: 10px !important;
 				}
 
 				/* Ajusta otros estilos según tus necesidades */
