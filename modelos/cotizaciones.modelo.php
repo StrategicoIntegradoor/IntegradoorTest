@@ -136,7 +136,8 @@ class ModeloCotizaciones{
 
 		if($fechaInicialCotizaciones == null){
 
-			
+			var_dump("PRIMER CAMINO");
+			die();
 			$anoActual = date("Y"); // Obtener el año actual
 			$mesActual = date("m"); // Obtener el mes actual
 		
@@ -172,6 +173,9 @@ class ModeloCotizaciones{
 
 		}else if($fechaInicialCotizaciones == $fechaFinalCotizaciones){
 
+			
+			var_dump("SEGUNDO CAMINO");
+			die();
 			$stmt = Conexion::conectar()->prepare("SELECT * FROM $tabla, $tabla2, $tabla3, $tabla4, $tabla5 WHERE $tabla.id_cliente = $tabla2.id_cliente
 													AND $tabla.id_usuario = $tabla5.id_usuario AND $tabla2.id_tipo_documento = $tabla3.id_tipo_documento 
 													AND $tabla2.id_estado_civil = $tabla4.id_estado_civil AND cot_fch_cotizacion LIKE '%$fechaFinalCotizaciones%' AND usuarios.id_Intermediario = :idIntermediario $condicion");
@@ -185,6 +189,8 @@ class ModeloCotizaciones{
 
 		}else{
 
+			var_dump("TERCER CAMINO");
+			die();
 			$fechaActual = new DateTime();
 			$fechaActual ->add(new DateInterval("P1D"));
 			$fechaActualMasUno = $fechaActual->format("Y-m-d");
