@@ -1143,9 +1143,9 @@ function registrarOfertaPesados(
     if (aseguradora == 'Liberty') {
 
       if(producto == 'Pesados Full1'){
-        producto = 'Pesados Full1'
+        producto = 'Pesados Full'
       }else if(producto == 'Pesados Integral1'){
-        producto = 'Pesados Integral1'
+        producto = 'Pesados Integral'
       }  
     }
 
@@ -1206,12 +1206,10 @@ function registrarOfertaPesados(
                           <span class="badge">* ${CE}</span>
                           Conductor elegido
                         </li>
-                        ${aseguradora !== "Liberty" ?
-                        `<li class="list-group-item">
+                        <li class="list-group-item">
                           <span class="badge">* ${GR}</span>
                           Servicio de Grúa
-                        </li>`
-                          : ''}
+                        </li>
                       </ul>
                     </div>
                     <div class="col-xs-12 col-sm-6 col-md-2">
