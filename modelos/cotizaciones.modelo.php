@@ -228,8 +228,34 @@ class ModeloCotizaciones{
 
 		if($fechaInicialCotizaciones == null){
 
+<<<<<<< HEAD
 			$stmt = Conexion::conectar()->prepare("SELECT * FROM $tabla, $tabla2, $tabla3, $tabla4, $tabla5 WHERE $tabla.id_cliente = $tabla2.id_cliente AND $tabla.id_usuario = $tabla5.id_usuario AND $tabla2.id_tipo_documento = $tabla3.id_tipo_documento AND $tabla2.id_estado_civil = $tabla4.id_estado_civil AND usuarios.id_Intermediario = :idIntermediario $condicion ");
 			
+=======
+			var_dump("PRIMER CAMINO");
+			die();
+			$anoActual = date("Y"); // Obtener el año actual
+			$mesActual = date("m"); // Obtener el mes actual
+		
+			$stmt = Conexion::conectar()->prepare("SELECT * FROM $tabla, $tabla2, $tabla3, $tabla4, $tabla5 WHERE $tabla.id_cliente = $tabla2.id_cliente 
+			AND $tabla.id_usuario = $tabla5.id_usuario 
+			AND $tabla2.id_tipo_documento = $tabla3.id_tipo_documento 
+			AND $tabla2.id_estado_civil = $tabla4.id_estado_civil 
+			AND YEAR($tabla.cot_fch_cotizacion) = :anoActual 
+			AND MONTH($tabla.cot_fch_cotizacion) >= :mesInicio 
+			AND MONTH($tabla.cot_fch_cotizacion) <= :mesFin
+			AND usuarios.id_Intermediario = :idIntermediario $condicion");
+		
+			// Calcular el mes de inicio hace tres meses
+			$mesInicio = ($mesActual - 2) <= 0 ? 12 + ($mesActual - 2) : $mesActual - 2;
+			
+			// Calcular el mes de fin (mes actual)
+			$mesFin = $mesActual;
+		
+			$stmt->bindParam(":anoActual", $anoActual, PDO::PARAM_INT);
+			$stmt->bindParam(":mesInicio", $mesInicio, PDO::PARAM_INT);
+			$stmt->bindParam(":mesFin", $mesFin, PDO::PARAM_INT);
+>>>>>>> 385c140cc90689edce0617d0b37c83e2d6ea988a
 			$stmt->bindParam(":idIntermediario", $_SESSION["intermediario"], PDO::PARAM_INT);
 
 			if($_SESSION["permisos"]["Verlistadodecotizacionesdelaagencia"] != "x"){ 
@@ -247,6 +273,9 @@ class ModeloCotizaciones{
 
 		}else if($fechaInicialCotizaciones == $fechaFinalCotizaciones){
 
+			
+			var_dump("SEGUNDO CAMINO");
+			die();
 			$stmt = Conexion::conectar()->prepare("SELECT * FROM $tabla, $tabla2, $tabla3, $tabla4, $tabla5 WHERE $tabla.id_cliente = $tabla2.id_cliente
 													AND $tabla.id_usuario = $tabla5.id_usuario AND $tabla2.id_tipo_documento = $tabla3.id_tipo_documento 
 													AND $tabla2.id_estado_civil = $tabla4.id_estado_civil AND cot_fch_cotizacion LIKE '%$fechaFinalCotizaciones%' AND usuarios.id_Intermediario = :idIntermediario $condicion");
@@ -260,6 +289,8 @@ class ModeloCotizaciones{
 
 		}else{
 
+			var_dump("TERCER CAMINO");
+			die();
 			$fechaActual = new DateTime();
 			$fechaActual ->add(new DateInterval("P1D"));
 			$fechaActualMasUno = $fechaActual->format("Y-m-d");
