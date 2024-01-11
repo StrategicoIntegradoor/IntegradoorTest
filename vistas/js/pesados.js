@@ -1681,36 +1681,36 @@ function registrarOfertaPesados(
           }     
 
             /* AXA */
-            let bodyAXA = JSON.parse(requestOptions.body);
-            let planesAXA = [5308, 5309, 5310, 5311, 5312, 5313];
+            // let bodyAXA = JSON.parse(requestOptions.body);
+            // let planesAXA = [5308, 5309, 5310, 5311, 5312, 5313];
 
-            planesAXA.forEach(plan => {
-                bodyAXA.plan = plan;
-                requestOptions.body = JSON.stringify(bodyAXA);
+            // planesAXA.forEach(plan => {
+            //     bodyAXA.plan = plan;
+            //     requestOptions.body = JSON.stringify(bodyAXA);
 
-                let axaPromise = fetch("https://grupoasistencia.com/motor_webservice_tst/AXA_tst", requestOptions)
-                    .then((res) => {
-                        if (!res.ok) throw Error(res.statusText);
-                        return res.json();
-                    })
-                    .then((ofertas) => {
-                        if (typeof ofertas[0].Resultado !== 'undefined') {
-                            agregarAseguradoraFallidaPesados('AXA');
-                            ofertas[0].Mensajes.forEach(mensaje => {
-                                mostrarAlertarCotizacionFallida('AXA', mensaje);
-                            });
-                        } else {
-                            validarOfertasPesados(ofertas);
-                            mostrarAlertaCotizacionExitosa('AXA');
-                        }
-                    })
-                    .catch((err) => {
-                        console.error(err);
-                    });
+            //     let axaPromise = fetch("https://grupoasistencia.com/motor_webservice_tst/AXA_tst", requestOptions)
+            //         .then((res) => {
+            //             if (!res.ok) throw Error(res.statusText);
+            //             return res.json();
+            //         })
+            //         .then((ofertas) => {
+            //             if (typeof ofertas[0].Resultado !== 'undefined') {
+            //                 agregarAseguradoraFallidaPesados('AXA');
+            //                 ofertas[0].Mensajes.forEach(mensaje => {
+            //                     mostrarAlertarCotizacionFallida('AXA', mensaje);
+            //                 });
+            //             } else {
+            //                 validarOfertasPesados(ofertas);
+            //                 mostrarAlertaCotizacionExitosa('AXA');
+            //             }
+            //         })
+            //         .catch((err) => {
+            //             console.error(err);
+            //         });
 
-                promesas.push(axaPromise);
+            //     promesas.push(axaPromise);
 
-            });
+            // });
 
 
 
