@@ -235,22 +235,34 @@ class ModeloCotizaciones{
 				AND $tabla.id_usuario = $tabla5.id_usuario 
 				AND $tabla2.id_tipo_documento = $tabla3.id_tipo_documento 
 				AND $tabla2.id_estado_civil = $tabla4.id_estado_civil 
-				AND YEAR($tabla.cot_fch_cotizacion) = :anoActual 
-				AND MONTH($tabla.cot_fch_cotizacion) >= :mesInicio 
+				AND (
+					(YEAR($tabla.cot_fch_cotizacion) = :anoActual AND MONTH($tabla.cot_fch_cotizacion) >= :mesInicio)
+					OR
+					(YEAR($tabla.cot_fch_cotizacion) = :anoAnterior AND MONTH($tabla.cot_fch_cotizacion) >= :mesInicioAnterior)
+				)
 				AND MONTH($tabla.cot_fch_cotizacion) <= :mesFin
 				AND usuarios.id_Intermediario = :idIntermediario $condicion
-			");
+		");
 
-			// Calcular el mes de inicio hace tres meses
-			$mesActual = date("m"); // Obtener el mes actual
-			$mesInicio = ($mesActual - 2) <= 0 ? 12 + ($mesActual - 2) : $mesActual - 2;
-			// Calcular el mes de fin (mes actual)
-			$mesFin = $mesActual;
+		// Obtener el año actual y el año anterior
+		$anoActual = date("Y");
+		$anoAnterior = $anoActual - 1;
 
-			$stmt->bindParam(":anoActual", date("Y"), PDO::PARAM_INT);
-			$stmt->bindParam(":mesInicio", $mesInicio, PDO::PARAM_INT);
-			$stmt->bindParam(":mesFin", $mesFin, PDO::PARAM_INT);
-			$stmt->bindParam(":idIntermediario", $_SESSION["intermediario"], PDO::PARAM_INT);
+		// Calcular el mes de inicio hace tres meses
+		$mesActual = date("m"); // Obtener el mes actual
+		$mesInicio = ($mesActual - 2) <= 0 ? 12 + ($mesActual - 2) : $mesActual - 2;
+		// Calcular el mes de inicio hace tres meses para el año anterior
+		$mesInicioAnterior = ($mesActual - 2) <= 0 ? 12 + ($mesActual - 2) : $mesActual - 2;
+
+		// Calcular el mes de fin (mes actual)
+		$mesFin = $mesActual;
+
+		$stmt->bindParam(":anoActual", $anoActual, PDO::PARAM_INT);
+		$stmt->bindParam(":anoAnterior", $anoAnterior, PDO::PARAM_INT);
+		$stmt->bindParam(":mesInicio", $mesInicio, PDO::PARAM_INT);
+		$stmt->bindParam(":mesInicioAnterior", $mesInicioAnterior, PDO::PARAM_INT);
+		$stmt->bindParam(":mesFin", $mesFin, PDO::PARAM_INT);
+		$stmt->bindParam(":idIntermediario", $_SESSION["intermediario"], PDO::PARAM_INT);
 
 			if($_SESSION["permisos"]["Verlistadodecotizacionesdelaagencia"] != "x"){ 
 				$stmt->bindParam(":idUsuario", $_SESSION["idUsuario"], PDO::PARAM_INT);
