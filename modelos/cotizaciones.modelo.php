@@ -230,18 +230,18 @@ class ModeloCotizaciones{
 
 
 			$stmt = Conexion::conectar()->prepare("
-				SELECT * FROM $tabla, $tabla2, $tabla3, $tabla4, $tabla5 
-				WHERE $tabla.id_cliente = $tabla2.id_cliente 
-					AND $tabla.id_usuario = $tabla5.id_usuario 
-					AND $tabla2.id_tipo_documento = $tabla3.id_tipo_documento 
-					AND $tabla2.id_estado_civil = $tabla4.id_estado_civil 
+				SELECT * FROM cotizaciones, clientes, tipos_documentos, estados_civiles, usuarios 
+				WHERE cotizaciones.id_cliente = clientes.id_cliente 
+					AND cotizaciones.id_usuario = usuarios.id_usuario 
+					AND clientes.id_tipo_documento = tipos_documentos.id_tipo_documento 
+					AND clientes.id_estado_civil = estados_civiles.id_estado_civil 
 					AND (
-						(YEAR($tabla.cot_fch_cotizacion) = :anoActual AND MONTH($tabla.cot_fch_cotizacion) >= :mesInicio)
+						(YEAR(cotizaciones.cot_fch_cotizacion) = :anoActual AND MONTH(cotizaciones.cot_fch_cotizacion) >= :mesInicio)
 						OR
-						(YEAR($tabla.cot_fch_cotizacion) = :anoAnterior AND MONTH($tabla.cot_fch_cotizacion) >= :mesInicioAnterior)
-					)
-					AND MONTH($tabla.cot_fch_cotizacion) <= :mesFin
-					AND usuarios.id_Intermediario = :idIntermediario $condicion
+						(YEAR(cotizaciones.cot_fch_cotizacion) = :anoAnterior AND MONTH(cotizaciones.cot_fch_cotizacion) >= :mesInicioAnterior)
+					) 
+					AND MONTH(cotizaciones.cot_fch_cotizacion) <= :mesFin 
+					AND usuarios.id_Intermediario = :idIntermediario
 			");
 
 			// Obtener el año actual y el año anterior
@@ -258,6 +258,8 @@ class ModeloCotizaciones{
 			// Calcular el mes de fin (mes actual)
 			$mesFin = $mesActual;
 
+			var_dump($anoActual, $mesActual, $anoAnterior, $mesInicio, $mesInicioAnterior, $mesFin);
+			die();
 			$stmt->bindParam(":anoActual", $anoActual, PDO::PARAM_INT);
 			$stmt->bindParam(":anoAnterior", $anoAnterior, PDO::PARAM_INT);
 			$stmt->bindParam(":mesInicio", $mesInicio, PDO::PARAM_INT);
