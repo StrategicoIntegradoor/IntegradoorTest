@@ -1973,7 +1973,7 @@ function cotizarOfertas() {
                 })
                 .catch((err) => {
                   agregarAseguradoraFallida('Bolivar')
-                  mostrarAlertarCotizacionFallida('Bolivar', "Error de servicio (500), intente de nuevo");
+                  mostrarAlertarCotizacionFallida('Bolivar', "Error de servicio, intente de nuevo");
                   console.error(err);
                 })
             );
