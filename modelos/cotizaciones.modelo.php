@@ -257,6 +257,8 @@ class ModeloCotizaciones{
 			}
 			
 			$stmt -> execute();
+			var_dump($stmt -> fetchAll(PDO::FETCH_ASSOC));
+			die();
 
 			return $stmt -> fetchAll(PDO::FETCH_ASSOC);
 			print_r($stmt);
