@@ -136,8 +136,8 @@ class ModeloCotizaciones{
 
 		if($fechaInicialCotizaciones == null){
 
-			var_dump("PRIMER CAMINO");
-			die();
+			// var_dump("PRIMER CAMINO");
+			// die();
 			$anoActual = date("Y"); // Obtener el año actual
 			$mesActual = date("m"); // Obtener el mes actual
 		
