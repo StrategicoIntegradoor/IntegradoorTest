@@ -229,27 +229,9 @@ class ModeloCotizaciones{
 		if($fechaInicialCotizaciones == null){
 
 
-			$stmt = Conexion::conectar()->prepare("
-				SELECT * FROM cotizaciones, clientes, tipos_documentos, estados_civiles, usuarios 
-				WHERE cotizaciones.id_cliente = clientes.id_cliente 
-					AND cotizaciones.id_usuario = usuarios.id_usuario 
-					AND clientes.id_tipo_documento = tipos_documentos.id_tipo_documento 
-					AND clientes.id_estado_civil = estados_civiles.id_estado_civil 
-					AND (
-						(YEAR(cotizaciones.cot_fch_cotizacion) = :anoActual AND MONTH(cotizaciones.cot_fch_cotizacion) >= :mesInicio)
-						OR
-						(YEAR(cotizaciones.cot_fch_cotizacion) = :anoAnterior AND MONTH(cotizaciones.cot_fch_cotizacion) >= :mesInicioAnterior)
-					) 
-					AND MONTH(cotizaciones.cot_fch_cotizacion) <= :mesFin 
-					AND usuarios.id_Intermediario = :idIntermediario
-			");
-
-			// Obtener el año actual y el año anterior
 			$anoActual = date("Y");
-			$mesActual = date("m");
-
 			$anoAnterior = $anoActual - 1;
-
+			$mesActual = date("m");
 			// Calcular el mes de inicio hace tres meses
 			$mesInicio = ($mesActual - 2) <= 0 ? 12 + ($mesActual - 2) : ($mesActual - 2);
 			// Calcular el mes de inicio hace tres meses para el año anterior
@@ -258,14 +240,32 @@ class ModeloCotizaciones{
 			// Calcular el mes de fin (mes actual)
 			$mesFin = $mesActual;
 
-			var_dump($anoActual, $mesActual, $anoAnterior, $mesInicio, $mesInicioAnterior, $mesFin);
-			die();
-			$stmt->bindParam(":anoActual", $anoActual, PDO::PARAM_INT);
-			$stmt->bindParam(":anoAnterior", $anoAnterior, PDO::PARAM_INT);
-			$stmt->bindParam(":mesInicio", $mesInicio, PDO::PARAM_INT);
-			$stmt->bindParam(":mesInicioAnterior", $mesInicioAnterior, PDO::PARAM_INT);
-			$stmt->bindParam(":mesFin", $mesFin, PDO::PARAM_INT);
+			// Construir las fechas en formato de timestamp
+			$fechaInicio = "$anoActual-$mesInicio-01 00:00:00";
+			$fechaInicioAnterior = "$anoAnterior-$mesInicioAnterior-01 00:00:00";
+			$fechaFin = "$anoActual-$mesFin-31 23:59:59";
+
+			// Tu consulta SQL con los parámetros
+			$stmt = Conexion::conectar()->prepare("
+				SELECT * FROM cotizaciones, clientes, tipos_documentos, estados_civiles, usuarios 
+				WHERE cotizaciones.id_cliente = clientes.id_cliente 
+					AND cotizaciones.id_usuario = usuarios.id_usuario 
+					AND clientes.id_tipo_documento = tipos_documentos.id_tipo_documento 
+					AND clientes.id_estado_civil = estados_civiles.id_estado_civil 
+					AND (
+						(cotizaciones.cot_fch_cotizacion BETWEEN :fechaInicio AND :fechaFin)
+						OR
+						(cotizaciones.cot_fch_cotizacion BETWEEN :fechaInicioAnterior AND :fechaFin)
+					) 
+					AND usuarios.id_Intermediario = :idIntermediario
+			");
+
+			// Vincular los parámetros
+			$stmt->bindParam(":fechaInicio", $fechaInicio, PDO::PARAM_STR);
+			$stmt->bindParam(":fechaInicioAnterior", $fechaInicioAnterior, PDO::PARAM_STR);
+			$stmt->bindParam(":fechaFin", $fechaFin, PDO::PARAM_STR);
 			$stmt->bindParam(":idIntermediario", $_SESSION["intermediario"], PDO::PARAM_INT);
+
 
 			if($_SESSION["permisos"]["Verlistadodecotizacionesdelaagencia"] != "x"){ 
 				$stmt->bindParam(":idUsuario", $_SESSION["idUsuario"], PDO::PARAM_INT);
