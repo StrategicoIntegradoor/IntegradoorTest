@@ -3,23 +3,7 @@
      
      
      <style>
-		@media (max-width: 450px) {
-			.main-header {
-				/* Ajusta la altura según tus necesidades */
-				height: 50px !important;
-			}
 
-			/* Otros estilos específicos para la versión móvil si es necesario */
-			.logo-mini img,
-			.logo-lg img {
-				/* Ajusta el tamaño del logo si es necesario */
-				max-height: 40px;
-			}
-
-			/* Ajusta otros estilos según tus necesidades */
-			/* Agrega estilos adicionales según sea necesario para otros elementos dentro del encabezado */
-		}
-		
         @media (max-width: 450px){
             .li_cotDi{
                 font-size: 15px !important;
