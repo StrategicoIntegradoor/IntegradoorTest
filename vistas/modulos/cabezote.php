@@ -5,21 +5,19 @@
      <style>
 
 		@media (max-width: 450px) {
-			.main-header {
-				/* Ajusta la altura según tus necesidades */
-				height: 80px !important;
-			}
+				.navbar {
+					/* Ajusta la altura de la barra de navegación según tus necesidades */
+					height: 40px !important;
+				}
 
-			/* Otros estilos específicos para la versión móvil si es necesario */
-			.logo-mini img,
-			.logo-lg img {
-				/* Ajusta el tamaño del logo si es necesario */
-				max-height: 40px;
-			}
+				/* Ajusta otros estilos según tus necesidades */
+				.navbar-custom-menu ul.navbar-nav li {
+					/* Puedes ajustar los estilos de los elementos de la barra de navegación si es necesario */
+					margin-top: 5px; /* Ejemplo de ajuste del margen superior */
+				}
 
-			/* Ajusta otros estilos según tus necesidades */
-			/* Agrega estilos adicionales según sea necesario para otros elementos dentro del encabezado */
-		}
+				/* Otros estilos específicos para la versión móvil si es necesario */
+    	}
 
         @media (max-width: 450px){
             .li_cotDi{
