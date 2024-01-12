@@ -168,7 +168,14 @@ $pdf->SetXY(158, 3);
 $pdf->SetTextColor(104, 104, 104);
 $pdf->Cell(25, 6, "No. cotización: " . $identificador);
 
-$pdf->Image('../../../vistas/img/logos/moto.jpg', 24.5, 126.5, 0, 35, 'JPG', '', '', true, 160, '', false, false, 0, false, false, false);
+$pdf->Image(
+    '../../../vistas/img/logos/moto.jpg', // Ruta de la imagen
+    20, // Posición X (izquierda)
+    126.5, // Posición Y
+    40, // Ancho (ajustar según sea necesario)
+    0, // Altura (0 indica autoajuste proporcional)
+    'JPG', '', '', true, 160, '', false, false, 0, false, false, false
+);
 
 //$pdf->Image('images/img/QUIMERA_BONO_FINAL3.jpg', 0, 130, 0, 117, 'JPG', '', '', false, 140, '', false, false, 0, false, false, false);
 
