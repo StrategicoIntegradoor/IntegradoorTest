@@ -268,6 +268,7 @@ class ModeloCotizaciones{
 
 
 			if($_SESSION["permisos"]["Verlistadodecotizacionesdelaagencia"] != "x"){ 
+				var_dump("CORRECTO AQUI SE EJECUTA LA VALIDACION POR ROL");
 				$stmt->bindParam(":idUsuario", $_SESSION["idUsuario"], PDO::PARAM_INT);
 			}
 			// Después de preparar la consulta
