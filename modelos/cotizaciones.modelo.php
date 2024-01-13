@@ -221,31 +221,130 @@ class ModeloCotizaciones{
 // 	}
 
 
-    static public function mdlRangoFechasCotizaciones($tabla, $tabla2, $tabla3, $tabla4, $tabla5,$tabla6, $fechaInicialCotizaciones, $fechaFinalCotizaciones){
+    // static public function mdlRangoFechasCotizaciones($tabla, $tabla2, $tabla3, $tabla4, $tabla5,$tabla6, $fechaInicialCotizaciones, $fechaFinalCotizaciones){
 			
+	// 	$condicion = "";
+	// 	if($_SESSION["permisos"]["Verlistadodecotizacionesdelaagencia"] != "x"){ $condicion = "AND $tabla.id_usuario = :idUsuario"; }
+
+	// 	if($fechaInicialCotizaciones == null){
+
+
+	// 		$anoActual = date("Y");
+	// 		$anoAnterior = $anoActual - 1;
+	// 		$mesActual = date("m");
+	// 		// Calcular el mes de inicio hace tres meses
+	// 		$mesInicio = ($mesActual - 2) <= 0 ? 12 + ($mesActual - 2) : ($mesActual - 2);
+	// 		// Calcular el mes de inicio hace tres meses para el año anterior
+	// 		$mesInicioAnterior = $mesInicio > 2 ? $mesInicio - 2 : 12 + $mesInicio - 2;
+
+	// 		// Calcular el mes de fin (mes actual)
+	// 		$mesFin = $mesActual;
+
+	// 		// Construir las fechas en formato de timestamp
+	// 		$fechaInicio = "$anoActual-$mesInicio-01 00:00:00";
+	// 		$fechaInicioAnterior = "$anoAnterior-$mesInicioAnterior-01 00:00:00";
+	// 		$fechaFin = "$anoActual-$mesFin-31 23:59:59";
+
+	// 		// Tu consulta SQL con los parámetros
+	// 		$stmt = Conexion::conectar()->prepare("
+	// 			SELECT * FROM cotizaciones, clientes, tipos_documentos, estados_civiles, usuarios 
+	// 			WHERE cotizaciones.id_cliente = clientes.id_cliente 
+	// 				AND cotizaciones.id_usuario = usuarios.id_usuario 
+	// 				AND clientes.id_tipo_documento = tipos_documentos.id_tipo_documento 
+	// 				AND clientes.id_estado_civil = estados_civiles.id_estado_civil 
+	// 				AND (
+	// 					(cotizaciones.cot_fch_cotizacion BETWEEN :fechaInicio AND :fechaFin)
+	// 					OR
+	// 					(cotizaciones.cot_fch_cotizacion BETWEEN :fechaInicioAnterior AND :fechaFin)
+	// 				) 
+	// 				AND usuarios.id_Intermediario = :idIntermediario
+	// 		");
+
+	// 		// Vincular los parámetros
+	// 		$stmt->bindParam(":fechaInicio", $fechaInicio, PDO::PARAM_STR);
+	// 		$stmt->bindParam(":fechaInicioAnterior", $fechaInicioAnterior, PDO::PARAM_STR);
+	// 		$stmt->bindParam(":fechaFin", $fechaFin, PDO::PARAM_STR);
+	// 		$stmt->bindParam(":idIntermediario", $_SESSION["intermediario"], PDO::PARAM_INT);
+
+
+	// 		if($_SESSION["permisos"]["Verlistadodecotizacionesdelaagencia"] != "x"){ 
+	// 			var_dump($_SESSION["idUsuario"]);
+	// 			$stmt->bindParam(":idUsuario", $_SESSION["idUsuario"], PDO::PARAM_INT);
+	// 		}
+	// 		// Después de preparar la consulta
+
+	// 		$stmt -> execute();
+
+	// 		return $stmt -> fetchAll(PDO::FETCH_ASSOC);
+	// 		print_r($stmt);
+	// 		die();
+
+	// 	}else if($fechaInicialCotizaciones == $fechaFinalCotizaciones){
+
+			
+	// 		$stmt = Conexion::conectar()->prepare("SELECT * FROM $tabla, $tabla2, $tabla3, $tabla4, $tabla5 WHERE $tabla.id_cliente = $tabla2.id_cliente
+	// 												AND $tabla.id_usuario = $tabla5.id_usuario AND $tabla2.id_tipo_documento = $tabla3.id_tipo_documento 
+	// 												AND $tabla2.id_estado_civil = $tabla4.id_estado_civil AND cot_fch_cotizacion LIKE '%$fechaFinalCotizaciones%' AND usuarios.id_Intermediario = :idIntermediario $condicion");
+
+	// 		$stmt -> bindParam(":cot_fch_cotizacion", $fechaFinalCotizaciones, PDO::PARAM_STR);
+	// 		$stmt->bindParam(":idIntermediario",$_SESSION["intermediario"], PDO::PARAM_INT);
+
+	// 		$stmt -> execute();
+
+	// 		return $stmt -> fetchAll(PDO::FETCH_ASSOC);
+
+	// 	}else{
+
+	// 		$fechaActual = new DateTime();
+	// 		$fechaActual ->add(new DateInterval("P1D"));
+	// 		$fechaActualMasUno = $fechaActual->format("Y-m-d");
+
+	// 		$fechaFinalCotizaciones2 = new DateTime($fechaFinalCotizaciones);
+	// 		$fechaFinalCotizaciones2 ->add(new DateInterval("P1D"));
+	// 		$fechaFinalCotizacionesMasUno = $fechaFinalCotizaciones2->format("Y-m-d");
+
+	// 		if($fechaFinalCotizacionesMasUno == $fechaActualMasUno){
+
+	// 			$stmt = Conexion::conectar()->prepare("SELECT * FROM $tabla, $tabla2, $tabla3, $tabla4, $tabla5 WHERE $tabla.id_cliente = $tabla2.id_cliente
+	// 													AND $tabla.id_usuario = $tabla5.id_usuario AND $tabla2.id_tipo_documento = $tabla3.id_tipo_documento 
+	// 													AND $tabla2.id_estado_civil = $tabla4.id_estado_civil AND cot_fch_cotizacion 
+	// 													BETWEEN '$fechaInicialCotizaciones' AND '$fechaFinalCotizacionesMasUno'AND usuarios.id_Intermediario = :idIntermediario $condicion");
+
+	// 		}else{
+
+
+	// 			$stmt = Conexion::conectar()->prepare("SELECT * FROM $tabla, $tabla2, $tabla3, $tabla4, $tabla5 WHERE $tabla.id_cliente = $tabla2.id_cliente
+	// 													AND $tabla.id_usuario = $tabla5.id_usuario AND $tabla2.id_tipo_documento = $tabla3.id_tipo_documento 
+	// 													AND $tabla2.id_estado_civil = $tabla4.id_estado_civil AND cot_fch_cotizacion 
+	// 													BETWEEN '$fechaInicialCotizaciones' AND '$fechaFinalCotizaciones' AND usuarios.id_Intermediario = :idIntermediario $condicion");
+
+	// 		}
+	// 		$stmt->bindParam(":idIntermediario",$_SESSION["intermediario"], PDO::PARAM_INT);
+	// 		$stmt -> execute();
+
+	// 		return $stmt -> fetchAll(PDO::FETCH_ASSOC);
+
+	// 	}
+
+	// }
+
+	static public function mdlRangoFechasCotizaciones($tabla, $tabla2, $tabla3, $tabla4, $tabla5, $tabla6, $fechaInicialCotizaciones, $fechaFinalCotizaciones){
 		$condicion = "";
-		if($_SESSION["permisos"]["Verlistadodecotizacionesdelaagencia"] != "x"){ $condicion = "AND $tabla.id_usuario = :idUsuario"; }
-
-		if($fechaInicialCotizaciones == null){
-
-
+		if ($_SESSION["permisos"]["Verlistadodecotizacionesdelaagencia"] != "x") {
+			$condicion = "AND $tabla.id_usuario = :idUsuario";
+		}
+	
+		if ($fechaInicialCotizaciones == null) {
 			$anoActual = date("Y");
 			$anoAnterior = $anoActual - 1;
 			$mesActual = date("m");
-			// Calcular el mes de inicio hace tres meses
 			$mesInicio = ($mesActual - 2) <= 0 ? 12 + ($mesActual - 2) : ($mesActual - 2);
-			// Calcular el mes de inicio hace tres meses para el año anterior
 			$mesInicioAnterior = $mesInicio > 2 ? $mesInicio - 2 : 12 + $mesInicio - 2;
-
-			// Calcular el mes de fin (mes actual)
 			$mesFin = $mesActual;
-
-			// Construir las fechas en formato de timestamp
 			$fechaInicio = "$anoActual-$mesInicio-01 00:00:00";
 			$fechaInicioAnterior = "$anoAnterior-$mesInicioAnterior-01 00:00:00";
 			$fechaFin = "$anoActual-$mesFin-31 23:59:59";
-
-			// Tu consulta SQL con los parámetros
+	
 			$stmt = Conexion::conectar()->prepare("
 				SELECT * FROM cotizaciones, clientes, tipos_documentos, estados_civiles, usuarios 
 				WHERE cotizaciones.id_cliente = clientes.id_cliente 
@@ -258,74 +357,77 @@ class ModeloCotizaciones{
 						(cotizaciones.cot_fch_cotizacion BETWEEN :fechaInicioAnterior AND :fechaFin)
 					) 
 					AND usuarios.id_Intermediario = :idIntermediario
+					$condicion
 			");
-
-			// Vincular los parámetros
+	
 			$stmt->bindParam(":fechaInicio", $fechaInicio, PDO::PARAM_STR);
 			$stmt->bindParam(":fechaInicioAnterior", $fechaInicioAnterior, PDO::PARAM_STR);
 			$stmt->bindParam(":fechaFin", $fechaFin, PDO::PARAM_STR);
 			$stmt->bindParam(":idIntermediario", $_SESSION["intermediario"], PDO::PARAM_INT);
-
-
-			if($_SESSION["permisos"]["Verlistadodecotizacionesdelaagencia"] != "x"){ 
-				var_dump($_SESSION["idUsuario"]);
+	
+			if ($_SESSION["permisos"]["Verlistadodecotizacionesdelaagencia"] != "x") { 
 				$stmt->bindParam(":idUsuario", $_SESSION["idUsuario"], PDO::PARAM_INT);
 			}
-			// Después de preparar la consulta
-
-			$stmt -> execute();
-
-			return $stmt -> fetchAll(PDO::FETCH_ASSOC);
-			print_r($stmt);
-			die();
-
-		}else if($fechaInicialCotizaciones == $fechaFinalCotizaciones){
-
-			
-			$stmt = Conexion::conectar()->prepare("SELECT * FROM $tabla, $tabla2, $tabla3, $tabla4, $tabla5 WHERE $tabla.id_cliente = $tabla2.id_cliente
-													AND $tabla.id_usuario = $tabla5.id_usuario AND $tabla2.id_tipo_documento = $tabla3.id_tipo_documento 
-													AND $tabla2.id_estado_civil = $tabla4.id_estado_civil AND cot_fch_cotizacion LIKE '%$fechaFinalCotizaciones%' AND usuarios.id_Intermediario = :idIntermediario $condicion");
-
-			$stmt -> bindParam(":cot_fch_cotizacion", $fechaFinalCotizaciones, PDO::PARAM_STR);
-			$stmt->bindParam(":idIntermediario",$_SESSION["intermediario"], PDO::PARAM_INT);
-
-			$stmt -> execute();
-
-			return $stmt -> fetchAll(PDO::FETCH_ASSOC);
-
-		}else{
-
+	
+			$stmt->execute();
+	
+			return $stmt->fetchAll(PDO::FETCH_ASSOC);
+	
+		} else if ($fechaInicialCotizaciones == $fechaFinalCotizaciones) {
+			$stmt = Conexion::conectar()->prepare("
+				SELECT * FROM $tabla, $tabla2, $tabla3, $tabla4, $tabla5 
+				WHERE $tabla.id_cliente = $tabla2.id_cliente
+					AND $tabla.id_usuario = $tabla5.id_usuario 
+					AND $tabla2.id_tipo_documento = $tabla3.id_tipo_documento 
+					AND $tabla2.id_estado_civil = $tabla4.id_estado_civil 
+					AND cot_fch_cotizacion LIKE '%$fechaFinalCotizaciones%' 
+					AND usuarios.id_Intermediario = :idIntermediario $condicion
+			");
+	
+			$stmt->bindParam(":cot_fch_cotizacion", $fechaFinalCotizaciones, PDO::PARAM_STR);
+			$stmt->bindParam(":idIntermediario", $_SESSION["intermediario"], PDO::PARAM_INT);
+	
+			$stmt->execute();
+	
+			return $stmt->fetchAll(PDO::FETCH_ASSOC);
+	
+		} else {
 			$fechaActual = new DateTime();
-			$fechaActual ->add(new DateInterval("P1D"));
+			$fechaActual->add(new DateInterval("P1D"));
 			$fechaActualMasUno = $fechaActual->format("Y-m-d");
-
+	
 			$fechaFinalCotizaciones2 = new DateTime($fechaFinalCotizaciones);
-			$fechaFinalCotizaciones2 ->add(new DateInterval("P1D"));
+			$fechaFinalCotizaciones2->add(new DateInterval("P1D"));
 			$fechaFinalCotizacionesMasUno = $fechaFinalCotizaciones2->format("Y-m-d");
-
-			if($fechaFinalCotizacionesMasUno == $fechaActualMasUno){
-
-				$stmt = Conexion::conectar()->prepare("SELECT * FROM $tabla, $tabla2, $tabla3, $tabla4, $tabla5 WHERE $tabla.id_cliente = $tabla2.id_cliente
-														AND $tabla.id_usuario = $tabla5.id_usuario AND $tabla2.id_tipo_documento = $tabla3.id_tipo_documento 
-														AND $tabla2.id_estado_civil = $tabla4.id_estado_civil AND cot_fch_cotizacion 
-														BETWEEN '$fechaInicialCotizaciones' AND '$fechaFinalCotizacionesMasUno'AND usuarios.id_Intermediario = :idIntermediario $condicion");
-
-			}else{
-
-
-				$stmt = Conexion::conectar()->prepare("SELECT * FROM $tabla, $tabla2, $tabla3, $tabla4, $tabla5 WHERE $tabla.id_cliente = $tabla2.id_cliente
-														AND $tabla.id_usuario = $tabla5.id_usuario AND $tabla2.id_tipo_documento = $tabla3.id_tipo_documento 
-														AND $tabla2.id_estado_civil = $tabla4.id_estado_civil AND cot_fch_cotizacion 
-														BETWEEN '$fechaInicialCotizaciones' AND '$fechaFinalCotizaciones' AND usuarios.id_Intermediario = :idIntermediario $condicion");
-
+	
+			if ($fechaFinalCotizacionesMasUno == $fechaActualMasUno) {
+				$stmt = Conexion::conectar()->prepare("
+					SELECT * FROM $tabla, $tabla2, $tabla3, $tabla4, $tabla5 
+					WHERE $tabla.id_cliente = $tabla2.id_cliente
+						AND $tabla.id_usuario = $tabla5.id_usuario 
+						AND $tabla2.id_tipo_documento = $tabla3.id_tipo_documento 
+						AND $tabla2.id_estado_civil = $tabla4.id_estado_civil 
+						AND cot_fch_cotizacion BETWEEN '$fechaInicialCotizaciones' AND '$fechaFinalCotizacionesMasUno'
+						AND usuarios.id_Intermediario = :idIntermediario $condicion
+				");
+			} else {
+				$stmt = Conexion::conectar()->prepare("
+					SELECT * FROM $tabla, $tabla2, $tabla3, $tabla4, $tabla5 
+					WHERE $tabla.id_cliente = $tabla2.id_cliente
+						AND $tabla.id_usuario = $tabla5.id_usuario 
+						AND $tabla2.id_tipo_documento = $tabla3.id_tipo_documento 
+						AND $tabla2.id_estado_civil = $tabla4.id_estado_civil 
+						AND cot_fch_cotizacion BETWEEN '$fechaInicialCotizaciones' AND '$fechaFinalCotizaciones' 
+						AND usuarios.id_Intermediario = :idIntermediario $condicion
+				");
 			}
-			$stmt->bindParam(":idIntermediario",$_SESSION["intermediario"], PDO::PARAM_INT);
-			$stmt -> execute();
-
-			return $stmt -> fetchAll(PDO::FETCH_ASSOC);
-
+			
+			$stmt->bindParam(":idIntermediario", $_SESSION["intermediario"], PDO::PARAM_INT);
+			$stmt->execute();
+	
+			return $stmt->fetchAll(PDO::FETCH_ASSOC);
 		}
-
 	}
+	
 
 }
