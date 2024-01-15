@@ -1892,7 +1892,7 @@ while ($rowRespuesta21 = mysqli_fetch_assoc($respuestaquery21)) {
 	$respuestaqueryAsistencia15 =  $conexion->query($queryConsultaAsistencia15);
 	$rowRespuestaAsistencia15 = mysqli_fetch_assoc($respuestaqueryAsistencia15);
 
-	if($perdidaParcial == "Deducible: 10% min 1 SMMLV" || $perdidaParcial == "Deducible: 10% min 1.2 SMMLV"){
+	if($perdidaParcial == "Deducible: 10% min 1 SMMLV" || $perdidaParcial == " Deducible: 10% min 1.2 SMMLV"){
 
 		$gastosMedicos = "Hasta $2.500.000";
 		if ($cont19 % 2 == 0) {
