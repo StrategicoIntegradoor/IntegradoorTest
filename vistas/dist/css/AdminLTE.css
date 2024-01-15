@@ -406,7 +406,8 @@ a:focus {
 /* Media query específica para 575px donde se ajusta el margin */
 @media screen and (max-width: 575px) {
   .content-header > h1 {
-    margin: 60px;
+    margin-bottom: 10px;
+    margin-top: 60px;
   }
 }
 .content-header > h1 > small {
