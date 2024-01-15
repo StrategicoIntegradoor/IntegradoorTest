@@ -1117,30 +1117,30 @@ function registrarOfertaMotos(
           
 
         /*SBS*/
-        cont.push(
-          fetch("https://grupoasistencia.com/motor_webservice_tst/SBS", requestOptions)
-          .then((res) => {
-              if (!res.ok) throw Error(res.statusText);
-              return res.json();
-          })
-          .then((ofertas) => {
-              let result = ofertas
-              if (typeof result[0].Resultado !== 'undefined') {
-              agregarAseguradoraFallidaMotos('SBS')
-              result[0].Mensajes.forEach(mensaje => {
-                  mostrarAlertarCotizacionFallida('SBS', mensaje)
-              })
-              } else {
-              validarOfertasMotos(result);
-              mostrarAlertaCotizacionExitosa('SBS')
-              }
-          })
-          .catch((err) => {
-              agregarAseguradoraFallidaMotos('SBS');
-              mostrarAlertarCotizacionFallida('SBS', "Error de servicio, intente de nuevo");
-              console.error(err);
-          })
-        )
+        // cont.push(
+        //   fetch("https://grupoasistencia.com/motor_webservice_tst/SBS", requestOptions)
+        //   .then((res) => {
+        //       if (!res.ok) throw Error(res.statusText);
+        //       return res.json();
+        //   })
+        //   .then((ofertas) => {
+        //       let result = ofertas
+        //       if (typeof result[0].Resultado !== 'undefined') {
+        //       agregarAseguradoraFallidaMotos('SBS')
+        //       result[0].Mensajes.forEach(mensaje => {
+        //           mostrarAlertarCotizacionFallida('SBS', mensaje)
+        //       })
+        //       } else {
+        //       validarOfertasMotos(result);
+        //       mostrarAlertaCotizacionExitosa('SBS')
+        //       }
+        //   })
+        //   .catch((err) => {
+        //       agregarAseguradoraFallidaMotos('SBS');
+        //       mostrarAlertarCotizacionFallida('SBS', "Error de servicio, intente de nuevo");
+        //       console.error(err);
+        //   })
+        // )
 
         /* AXA */
         // cont.push(
