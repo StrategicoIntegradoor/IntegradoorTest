@@ -171,8 +171,8 @@ $pdf->Cell(25, 6, "No. cotización: " . $identificador);
 $pdf->Image(
     '../../../vistas/img/logos/moto.jpg', // Ruta de la imagen
     21.5, // Posición X (izquierda)
-    125, // Posición Y (ajustar según sea necesario)
-    50, // Ancho (ajustar según sea necesario)
+    120, // Posición Y (ajustar según sea necesario)
+    47, // Ancho (ajustar según sea necesario)
     0, // Altura (0 indica autoajuste proporcional)
     'JPG', '', '', true, 160, '', false, false, 0, false, false, false
 );
