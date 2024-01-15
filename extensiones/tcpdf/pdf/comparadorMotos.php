@@ -1884,7 +1884,7 @@ $query21 = "SELECT * FROM ofertas WHERE `id_cotizacion` = $identificador AND `se
 $respuestaquery21 =  $conexion->query($query21);
 $cont19 = 1;
 while ($rowRespuesta21 = mysqli_fetch_assoc($respuestaquery21)) {
-
+	$perdidaParcial = $rowRespuesta21['PerdidaParcial'];
 	$nombreAseguradora = nombreAseguradora($rowRespuesta21['Aseguradora']);
 	$nombreProducto = productoAseguradora($rowRespuesta21['Aseguradora'], $rowRespuesta21['Producto']);
 
@@ -1892,20 +1892,40 @@ while ($rowRespuesta21 = mysqli_fetch_assoc($respuestaquery21)) {
 	$respuestaqueryAsistencia15 =  $conexion->query($queryConsultaAsistencia15);
 	$rowRespuestaAsistencia15 = mysqli_fetch_assoc($respuestaqueryAsistencia15);
 
-	if ($cont19 % 2 == 0) {
-		if ($rowRespuestaAsistencia15['GastosMedicos'] == "Si ampara") {
-			$html4 .= '<td class="puntos fondo" style="width:' . $valorTabla . '%;text-align: center;"><img style="width:16px;" src="../../../vistas/img/logos/cheque.png" alt=""></td>';
-		} else {
-			$html4 .= '<td class="puntos fondo" style="width:' . $valorTabla . '%;"><center><font size="7"style="text-align: center; font-family:dejavusanscondensed;">' . $rowRespuestaAsistencia15['GastosMedicos'] . '</font></center></td>';
-		}
-	} else {
-		if ($rowRespuestaAsistencia15['GastosMedicos'] == "Si ampara") {
-			$html4 .= '<td class="puntos fondo2" style="width:' . $valorTabla . '%;text-align: center;"><img style="width:16px;" src="../../../vistas/img/logos/cheque.png" alt=""></td>';
-		} else {
-			$html4 .= '<td class="puntos fondo2" style="width:' . $valorTabla . '%;"><center><font size="7"style="text-align: center; font-family:dejavusanscondensed;">' . $rowRespuestaAsistencia15['GastosMedicos'] . '</font></center></td>';
-		}
-	}
+	if($perdidaParcial == "Deducible: 10% min 1 SMMLV" || $perdidaParcial == "Deducible: 10% min 1.2 SMMLV"){
 
+		$gastosMedicos = "Hasta $2.500.000";
+		if ($cont19 % 2 == 0) {
+			if ($rowRespuestaAsistencia15['GastosMedicos'] == "Si ampara") {
+				$html4 .= '<td class="puntos fondo" style="width:' . $valorTabla . '%;text-align: center;"><img style="width:16px;" src="../../../vistas/img/logos/cheque.png" alt=""></td>';
+			} else {
+				$html4 .= '<td class="puntos fondo" style="width:' . $valorTabla . '%;"><center><font size="7"style="text-align: center; font-family:dejavusanscondensed;">' . $gastosMedicos . '</font></center></td>';
+			}
+		} else {
+			if ($rowRespuestaAsistencia15['GastosMedicos'] == "Si ampara") {
+				$html4 .= '<td class="puntos fondo2" style="width:' . $valorTabla . '%;text-align: center;"><img style="width:16px;" src="../../../vistas/img/logos/cheque.png" alt=""></td>';
+			} else {
+				$html4 .= '<td class="puntos fondo2" style="width:' . $valorTabla . '%;"><center><font size="7"style="text-align: center; font-family:dejavusanscondensed;">' . $gastosMedicos . '</font></center></td>';
+			}
+		}
+
+	}else{
+
+		if ($cont19 % 2 == 0) {
+			if ($rowRespuestaAsistencia15['GastosMedicos'] == "Si ampara") {
+				$html4 .= '<td class="puntos fondo" style="width:' . $valorTabla . '%;text-align: center;"><img style="width:16px;" src="../../../vistas/img/logos/cheque.png" alt=""></td>';
+			} else {
+				$html4 .= '<td class="puntos fondo" style="width:' . $valorTabla . '%;"><center><font size="7"style="text-align: center; font-family:dejavusanscondensed;">' . $rowRespuestaAsistencia15['GastosMedicos'] . '</font></center></td>';
+			}
+		} else {
+			if ($rowRespuestaAsistencia15['GastosMedicos'] == "Si ampara") {
+				$html4 .= '<td class="puntos fondo2" style="width:' . $valorTabla . '%;text-align: center;"><img style="width:16px;" src="../../../vistas/img/logos/cheque.png" alt=""></td>';
+			} else {
+				$html4 .= '<td class="puntos fondo2" style="width:' . $valorTabla . '%;"><center><font size="7"style="text-align: center; font-family:dejavusanscondensed;">' . $rowRespuestaAsistencia15['GastosMedicos'] . '</font></center></td>';
+			}
+		}
+
+	}
 
 	$cont19 += 1;
 }
