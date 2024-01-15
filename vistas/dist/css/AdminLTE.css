@@ -398,16 +398,16 @@ a:focus {
 /* Media query específica donde se anula el margin */
 @media screen and (max-width: 768px) {
   .content-header > h1 {
-    /* margin-bottom: 10px;
-    margin-top: 20px; */
+    margin-bottom: 10px;
+    margin-top: 40px;
     /* Puedes mantener el mismo tamaño de fuente o cambiarlo aquí según tus necesidades */
   }
 }
 /* Media query específica para 575px donde se ajusta el margin */
 @media screen and (max-width: 575px) {
   .content-header > h1 {
-    margin-bottom: 10px;
-    margin-top: 20px;
+    /* margin-bottom: 10px;
+    margin-top: 20px; */
   }
 }
 .content-header > h1 > small {
