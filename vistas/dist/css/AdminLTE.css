@@ -399,6 +399,7 @@ a:focus {
 @media screen and (max-width: 768px) {
   .content-header > h1 {
     margin: 20px;
+    font-size: 24px;
     /* Puedes mantener el mismo tamaño de fuente o cambiarlo aquí según tus necesidades */
   }
 }
