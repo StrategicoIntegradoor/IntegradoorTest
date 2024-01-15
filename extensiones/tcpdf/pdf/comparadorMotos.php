@@ -265,7 +265,7 @@ $htmlpesado1 .='
 <td class="fondo">
 <div style="font-size:14pt">&nbsp;
 </div>
-<b style="color:white; font-family:dejavusanscondensedbi; font-size:20px;">SEGURO MOTOCICLETAS</b>
+<b style="color:white; font-family:dejavusanscondensedbi; font-size:20px;">SEGURO PARA MOTOCICLETAS</b>
 <div style="font-size:5pt">&nbsp;
 </div>
 </td>
