@@ -1118,7 +1118,7 @@ function registrarOfertaMotos(
 
         /*SBS*/
         cont.push(
-          fetch("https://grupoasistencia.com/motor_webservice/SBS", requestOptions)
+          fetch("https://grupoasistencia.com/motor_webservice_tst/SBS", requestOptions)
           .then((res) => {
               if (!res.ok) throw Error(res.statusText);
               return res.json();
