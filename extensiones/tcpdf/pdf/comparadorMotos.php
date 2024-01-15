@@ -1168,6 +1168,9 @@ $respuestaquery10 =  $conexion->query($query10);
 $cont6 = 1;
 while ($rowRespuesta10 = mysqli_fetch_assoc($respuestaquery10)) {
 
+	$perdidaParcial = $rowRespuesta10;
+	var_dump($perdidaParcial);
+	die();
 	$nombreAseguradora = nombreAseguradora($rowRespuesta10['Aseguradora']);
 	$nombreProducto = productoAseguradora($rowRespuesta10['Aseguradora'], $rowRespuesta10['Producto']);
 
