@@ -128,20 +128,20 @@ $(document).ready(function () {
                 } else if (codigoClase == 12) {
                   claseVehiculo = "MOTOCICLETA";
                   limiteRCESTADO = 6;
-                   var restriccion = '';
-                  if(rolAsesor == 19){
-                    restriccion = 'No puedes cotizar motos por este módulo. Para hacerlo, debes comunicarte con el Equipo de Asesores Freelance de Grupo Asistencia, quienes podrán ayudarte a cotizar de manera manual con diferentes aseguradoras.';
-                  }else{
-                    restriccion = 'Lo sentimos, no puedes cotizar motos por este módulo.'
-                  }
-                  Swal.fire({
-                    icon: 'error',
-                    title: 'Lo sentimos',
-                    text: restriccion
-                  }).then(() => {
-                    // Recargar la página después de cerrar el SweetAlert
-                    location.reload();
-                  });
+                  //  var restriccion = '';
+                  // if(rolAsesor == 19){
+                  //   restriccion = 'No puedes cotizar motos por este módulo. Para hacerlo, debes comunicarte con el Equipo de Asesores Freelance de Grupo Asistencia, quienes podrán ayudarte a cotizar de manera manual con diferentes aseguradoras.';
+                  // }else{
+                  //   restriccion = 'Lo sentimos, no puedes cotizar motos por este módulo.'
+                  // }
+                  // Swal.fire({
+                  //   icon: 'error',
+                  //   title: 'Lo sentimos',
+                  //   text: restriccion
+                  // }).then(() => {
+                  //   // Recargar la página después de cerrar el SweetAlert
+                  //   location.reload();
+                  // });
                 } else if (codigoClase == 14 || codigoClase == 21) {
                   claseVehiculo = "PESADO";
                   limiteRCESTADO = 18;
