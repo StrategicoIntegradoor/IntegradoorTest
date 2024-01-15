@@ -403,6 +403,12 @@ a:focus {
     /* Puedes mantener el mismo tamaño de fuente o cambiarlo aquí según tus necesidades */
   }
 }
+/* Media query específica para 575px donde se ajusta el margin */
+@media screen and (max-width: 575px) {
+  .content-header > h1 {
+    margin: 60px;
+  }
+}
 .content-header > h1 > small {
   font-size: 15px;
   display: inline-block;
