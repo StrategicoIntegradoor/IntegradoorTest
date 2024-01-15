@@ -398,7 +398,7 @@ a:focus {
 /* Media query específica donde se anula el margin */
 @media screen and (max-width: 768px) {
   .content-header > h1 {
-    margin: 0px; 
+    /* margin: 0;  */
     font-size: 24px;
   }
 }
