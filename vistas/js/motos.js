@@ -1116,8 +1116,6 @@ function registrarOfertaMotos(
           }
           
 
-          // let cont = [];
-
         /*SBS*/
         cont.push(
           fetch("https://grupoasistencia.com/motor_webservice/SBS", requestOptions)
@@ -1199,7 +1197,6 @@ function registrarOfertaMotos(
         // Llamar a esta función cuando todas las promesas se resuelvan
         function ejecutarDespuesDePromesas() {
             
-
             setTimeout(function () {
 
             $("#btnCotizar").hide();
@@ -1405,7 +1402,6 @@ function registrarOfertaMotos(
               })
           );
         }
-
 
         /* Bolivar */
         if (comprobarFallida('Bolivar')) {
