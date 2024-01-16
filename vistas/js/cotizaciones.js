@@ -336,6 +336,17 @@ $(document).ready(function () {
 
           window.open(url, "_blank");
 
+        }else if(claseFasecolda == 12 ||
+          claseFasecolda == 17){
+
+            let url = `extensiones/tcpdf/pdf/comparadorMotos.php?cotizacion=${idCotizacionPDF}`;
+
+          if (checkboxAsesorEditar.is(":checked")) {
+            url += "&generar_pdf=1";
+          }
+
+          window.open(url, "_blank");
+
         }else{
 
           let url = `extensiones/tcpdf/pdf/comparador.php?cotizacion=${idCotizacionPDF}`;
