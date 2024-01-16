@@ -1187,6 +1187,7 @@ function editarCotizacion(id) {
 
               //FUNCION QUE ACOMODA RCE EN PARRILLA CUANDO LLEGA MUNDIAL
               if (oferta.Aseguradora == 'Mundial' && oferta.Producto == 'Pesados con RCE en exceso') {
+                console.log(primaFormat)
                 // Eliminar los puntos y convertir a número
                 RC = parseFloat(primaFormat.replace(/\./g, ''));
             
@@ -1195,7 +1196,6 @@ function editarCotizacion(id) {
             
                 // Volver a formatear con puntos
                 var valorRCFormat = RC.toLocaleString();
-                console.log("inside the function")
               }
 
 
