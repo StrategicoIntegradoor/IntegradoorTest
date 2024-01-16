@@ -1195,7 +1195,7 @@ function editarCotizacion(id) {
             
                 // Volver a formatear con puntos
                 var valorRCFormat = RC.toLocaleString();
-            
+                console.log("inside the function")
               }
 
 
