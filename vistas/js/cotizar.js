@@ -3,7 +3,8 @@ $(document).ready(function () {
   //   validarNumCotizaciones();
 
   //inicio
-  // Mostrar alertas
+  // VARIABLE GLOBAL DEFINE INTERMEDIARIO
+
 
   // Valida que el dato ingresado sea numerico
   $("#numDocumentoID").numeric();
@@ -1286,6 +1287,7 @@ const mostrarOferta = (
   logo,
   UrlPdf
 ) => {
+  var id_intermediario = document.getElementById("idIntermediario").value;
   let cardCotizacion = `
 						<div class='col-lg-12'>
 							<div class='card-ofertas'>
@@ -1349,7 +1351,7 @@ const mostrarOferta = (
   if (aseguradora == "Seguros Bolivar" || aseguradora == "Axa Colpatria") {
     cardCotizacion += `
 										<div class="col-xs-12 col-sm-6 col-md-2 verpdf-oferta">
-											<button type="button" class="btn btn-info" id="btnAsegPDF${numCotizOferta}${numId}\" onclick='verPdfOferta(\"${aseguradora}\", \"${numCotizOferta}\", \"${numId}\");'>
+											<button type="button" class="btn btn-info" id="btnAsegPDF${numCotizOferta}${numId}\" onclick='verPdfOferta(\"${aseguradora}\", \"${numCotizOferta}\", \"${numId}\", \"${id_intermediario}\");'>
 												<div id="verPdf${numCotizOferta}${numId}\">VER PDF &nbsp;&nbsp;<span class="fa fa-file-text"></span></div>
 											</button>
 										</div>`;
