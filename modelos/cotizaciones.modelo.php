@@ -366,8 +366,7 @@ class ModeloCotizaciones{
 			$stmt->execute();
 		
 			return $stmt->fetchAll(PDO::FETCH_ASSOC);
-		}
-		 else if ($fechaInicialCotizaciones == $fechaFinalCotizaciones) {
+		} else if ($fechaInicialCotizaciones == $fechaFinalCotizaciones) {
 			$stmt = Conexion::conectar()->prepare("
 				SELECT * FROM $tabla, $tabla2, $tabla3, $tabla4, $tabla5 
 				WHERE $tabla.id_cliente = $tabla2.id_cliente
