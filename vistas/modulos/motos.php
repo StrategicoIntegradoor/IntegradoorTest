@@ -118,6 +118,7 @@ if ($_SESSION["permisos"]["Cotizarmotos"] != "x") {
     return;
   }
 
+  $idIntermediario = $_SESSION['permisos']['id_Intermediario'];
 ?>
 
 <body>
@@ -681,6 +682,8 @@ if ($_SESSION["permisos"]["Cotizarmotos"] != "x") {
 
           <!-- CAMPOS OCULTOS PARA OPTENER LA INFORMACION-->
           <div style="display: none;">
+            <label>Intermediario</label>
+            <input type="hidden" name="idIntermediario" id="idIntermediario" value="<?php echo $idIntermediario; ?>">
             <label>Rol Asesor</label>
             <input type="hidden" name="rolAsesor" id="rolAsesor" value="<?php echo $rolAsesor; ?>">
             <label>Id Asegurado</label>
