@@ -1239,6 +1239,7 @@ function editarCotizacion(id) {
 
               }
 
+              var id_intermediario = document.getElementById("idIntermediario").value;
 
 
               cardCotizacion += `
@@ -1412,7 +1413,7 @@ function editarCotizacion(id) {
 
 											<div class="col-xs-12 col-sm-6 col-md-2 verpdf-oferta">
 
-											<button type="button" class="btn btn-info" id="btnAsegPDF${oferta.NumCotizOferta}${numId}\" onclick='verPdfOferta(\"${oferta.Aseguradora}\", \"${oferta.NumCotizOferta}\", \"${numId}\");'>
+											<button type="button" class="btn btn-info" id="btnAsegPDF${oferta.NumCotizOferta}${numId}\" onclick='verPdfOferta(\"${oferta.Aseguradora}\", \"${oferta.NumCotizOferta}\", \"${numId}\", \"${id_intermediario}\");'>
 
 												<div id="verPdf${oferta.NumCotizOferta}${numId}\">VER PDF &nbsp;&nbsp;<span class="fa fa-file-text"></span></div>
 
