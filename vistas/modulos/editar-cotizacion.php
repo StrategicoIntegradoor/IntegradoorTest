@@ -10,6 +10,7 @@
 
 //   return;
 // }
+$idIntermediario = $_SESSION['permisos']['id_Intermediario'];
 
 ?>
 <head>
@@ -541,6 +542,8 @@
 
         <!-- CAMPOS OCULTOS PARA OPTENER LA INFORMACION-->
         <div style="display: none;">
+          <label>Intermediario</label>
+          <input type="hidden" name="idIntermediario" id="idIntermediario" value="<?php echo $idIntermediario; ?>">
           <label>Mundial</label>
           <input type="hidden" name="mundial" id="mundial">
           <label>Id Asegurado</label>
