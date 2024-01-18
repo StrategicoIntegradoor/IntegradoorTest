@@ -1790,12 +1790,12 @@ FUNCION PARA CARGAR EL PDF OFICIAL DE LA ASEGURADORA
 
 ==================================================*/
 
-function verPdfOferta(aseguradora, numCotizOferta, numId) {
+function verPdfOferta(aseguradora, numCotizOferta, numId, intermediario) {
 
   console.log(aseguradora)
   console.log(numCotizOferta)
   console.log(numId)
-
+  console.log(intermediario)
 
 
 
