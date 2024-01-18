@@ -336,44 +336,38 @@ class ModeloCotizaciones{
 	
 		if ($fechaInicialCotizaciones == null) {
 			$anoActual = date("Y");
-			$anoAnterior = $anoActual - 1;
 			$mesActual = date("m");
-			$mesInicio = ($mesActual - 2) <= 0 ? 12 + ($mesActual - 2) : ($mesActual - 2);
-			$mesInicioAnterior = $mesInicio > 2 ? $mesInicio - 2 : 12 + $mesInicio - 2;
-			$mesFin = $mesActual;
-			$fechaInicio = "$anoActual-$mesInicio-01 00:00:00";
-			$fechaInicioAnterior = "$anoAnterior-$mesInicioAnterior-01 00:00:00";
-			$fechaFin = "$anoActual-$mesFin-31 23:59:59";
-	
+			$fechaFin = date("$anoActual-$mesActual-t");
+		
+			// Calcula la fecha de inicio hace tres meses
+			$fechaInicio = date_create($fechaFin);
+			date_sub($fechaInicio, date_interval_create_from_date_string("3 months"));
+			$fechaInicio = date_format($fechaInicio, "Y-m-01 00:00:00");
+		
 			$stmt = Conexion::conectar()->prepare("
 				SELECT * FROM cotizaciones, clientes, tipos_documentos, estados_civiles, usuarios 
 				WHERE cotizaciones.id_cliente = clientes.id_cliente 
 					AND cotizaciones.id_usuario = usuarios.id_usuario 
 					AND clientes.id_tipo_documento = tipos_documentos.id_tipo_documento 
 					AND clientes.id_estado_civil = estados_civiles.id_estado_civil 
-					AND (
-						(cotizaciones.cot_fch_cotizacion BETWEEN :fechaInicio AND :fechaFin)
-						OR
-						(cotizaciones.cot_fch_cotizacion BETWEEN :fechaInicioAnterior AND :fechaFin)
-					) 
+					AND cotizaciones.cot_fch_cotizacion BETWEEN :fechaInicio AND :fechaFin
 					AND usuarios.id_Intermediario = :idIntermediario
 					$condicion
 			");
-	
+		
 			$stmt->bindParam(":fechaInicio", $fechaInicio, PDO::PARAM_STR);
-			$stmt->bindParam(":fechaInicioAnterior", $fechaInicioAnterior, PDO::PARAM_STR);
 			$stmt->bindParam(":fechaFin", $fechaFin, PDO::PARAM_STR);
 			$stmt->bindParam(":idIntermediario", $_SESSION["intermediario"], PDO::PARAM_INT);
-	
+		
 			if ($_SESSION["permisos"]["Verlistadodecotizacionesdelaagencia"] != "x") { 
 				$stmt->bindParam(":idUsuario", $_SESSION["idUsuario"], PDO::PARAM_INT);
 			}
-	
+		
 			$stmt->execute();
-	
+		
 			return $stmt->fetchAll(PDO::FETCH_ASSOC);
-	
-		} else if ($fechaInicialCotizaciones == $fechaFinalCotizaciones) {
+		}
+		 else if ($fechaInicialCotizaciones == $fechaFinalCotizaciones) {
 			$stmt = Conexion::conectar()->prepare("
 				SELECT * FROM $tabla, $tabla2, $tabla3, $tabla4, $tabla5 
 				WHERE $tabla.id_cliente = $tabla2.id_cliente
