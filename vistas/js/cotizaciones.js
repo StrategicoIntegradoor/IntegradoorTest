@@ -1875,6 +1875,8 @@ function verPdfOferta(aseguradora, numCotizOferta, numId, intermediario) {
 
       numero_cotizacion: numCotizOferta,
 
+      intermediario: intermediario
+
     });
 
     var requestOptions = {
