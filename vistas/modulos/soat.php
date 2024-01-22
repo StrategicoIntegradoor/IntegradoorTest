@@ -363,15 +363,20 @@
                             <div class="card-exequias">
                                 <div class="card-body">
                                     <h4 class="card-title" style="font-weight: bold;">TIEMPO DE RESPUESTA</h4>
+                                    <p class="card-text">Cotizaciones:</p>
                                     <ul class="card-text" style="padding-left: 0px; list-style-position: inside;">
-                                        <li>Asistencia médica en caso de enfermedad (preexistente o no preexistente)</li>
-                                        <li>Atención con especialistas </li>
-                                        <li>Medicamentos ambulatorios</li>
-                                        <li>Urgencias Odontológicas</li>
-                                        <li>Repatriación o traslados sanitarios o funerarios</li>
-                                        <li>Gastos de hotel por reposo forzoso (hospitalización)</li>
-                                        <li>Traslado y estancia de un familiar (hospitalización)</li>
-                                        <li>Coberturas por extravío de equipajes</li>
+                                        <li>De 30 a 45 minutos hábiles una vez registrado correctamente el formulario</li>
+                                    </ul>
+                                    <p class="card-text">Expendiciones:</p>
+                                    <ul class="card-text" style="padding-left: 0px; list-style-position: inside;">
+                                        <li>Vehículos sin problemas en el RUNT: de 2 hasta 5 horas hábiles.</li>
+                                        <li>Vehículos con problemas en el RUNT: de 5 horas hasta 1 día hábil.</li>
+                                    </ul>
+                                    <p class="card-text">Nota: El tiempo de respuesta empieza a correr desde que se recibe el pago del SOAT en las cuentas bancarias de Grupo Asistencia</p>
+                                    <h4 class="card-title" style="font-weight: bold;">HORARIO DE SERVICIO</h4>
+                                    <ul class="card-text" style="padding-left: 0px; list-style-position: inside;">
+                                        <li>Lunes a Viernes de 8:00 am 12:30 pm y de 1:30 pm a 4:00 pm</li>
+                                        <li>Sábados de 8:00 am a 11:00 pm</li>
                                     </ul>
                                 </div>
                             </div>
