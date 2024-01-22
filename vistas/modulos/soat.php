@@ -387,15 +387,15 @@
                             <div class="card-exequias">
                                 <div class="card-body">
                                     <h4 class="card-title" style="font-weight: bold;">DONDE PAGAR SERVICIO DE TRÁMITE</h4>
-                                    <p class="card-text">Este producto esta diseñado para todas las edades y necesidades. Para cotizarlo se requiere la siguiente información:</p>
+                                    <p class="card-text">A nombre de Seguros Grupo Asistencia Asistencia Ltda. BIC, NIT # 900.600.470-8 en las cuentas:</p>
                                     <ul class="card-text" style="padding-left: 0px; list-style-position: inside;">
-                                        <li>Nombre completo</li>
-                                        <li>Fecha de nacimiento</li>
-                                        <li>Motivo del viaje</li>
-                                        <li>País de origen y destino</li>
-                                        <li>Fecha de salida</li>
-                                        <li>Fecha de regreso</li>
+                                        <li>Banco de Bogotá CTA Corriente No. 486457310. Descarga certificado bancario AQUI</li>
+                                        <li>Bancolombia CTA Ahorros No. 26500002769. Descarga certificado bancario AQUI</li>
                                     </ul>
+                                    <p class="card-text">Nota: Si el pago se realiza desde una entidad financiera diferente, se debe esperar hasta que el dinero ingrese a la cuenta.</p>
+                                    <h4 class="card-title" style="font-weight: bold;">DEVOLUCIONES DE DINERO</h4>
+                                    <p class="card-text">Grupo Asistencia no garantiza la expedición de todos los SOAT solicitados. En caso de requerirse la devolución de dineros pagados por Aliados o Clientes por no lograr la expedición de un SOAT, se requiere adjuntar Certificación Bancaria o Carta de Autorización con información del número, tipo y banco de la cuenta donde se debe realizar la devolución.</p>
+                                    <p class="card-text">Nota: Grupo Asistencia devolverá el 100% del dinero pagado cuando no logre la expedición.</p>                                
                                 </div>
                             </div>
                         </div>
