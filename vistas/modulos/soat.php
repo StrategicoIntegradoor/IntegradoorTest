@@ -405,11 +405,18 @@
                             <div class="card-exequias">
                                 <div class="card-body text-center">
                                     <h4 class="card-title" style="font-weight: bold;">INFORMACIÓN DE CONTACTO</h4>
-                                    <p class="card-text">La <b>comisión que Assist Card ofrece para nuestra alianza de asesores es del 23%</b>. De este porcentaje, tu participación será de acuerdo al nivel de ventas de todos los negocios (sin IVA), sumando todos los ramos, que realices en el mes.</p>
+                                    <p class="card-text">La linea <b>3013232210 </b>es exclusiva para mensajes de Whatsapp y no para llamadas. Cualquier inquietud, solicitud y/o requerimiento sera atendido por este medio.</p>
                                     <ul class="card-text" style="padding-left: 0px; list-style-position: inside;">
                                         <li><b>Nivel 1: 67,5%</b></li>
                                         <li><b>Nivel 2: 70%</b></li>
                                         <li><b>Nivel 3: 75%</b></li>
+                                    </ul>
+                                    <h4 class="card-title" style="font-weight: bold;">PUBLICIDAD</h4>
+                                    <p class="card-text">El SOAT es una gran oportunidad para ampliar tu base de clientes y fidelizar a tus clientes actuales. Por eso Grupo Asistencia no sólo pone a tu disposición nuestro servicio de trámites de expedición de SOAT, sino que también vamos a enviarte 3 nuevas piezas publicitarias semanalmente para que puedas compartir en tus redes sociales.</p>
+                                    <p class="card-text">Si quieres recibir este material, sigue los siguientes pasos</p>
+                                    <ul class="card-text" style="padding-left: 0px; list-style-type: decimal; list-style-position: inside;">
+                                        <li>Envía un mensaje vía Whatsapp solicitando ser incluido en la lista de difusión de piezas publicitarias haciendo clic AQUI</li>
+                                        <li>Guarda en Whatsapp el siguiente número de contacto como SOAT Grupo  Asistencia 3013232210. Si no guardas el contacto no te llegarán las imágenes.</li>
                                     </ul>
                                 </div>
                             </div>
