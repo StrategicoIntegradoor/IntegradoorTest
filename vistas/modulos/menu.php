@@ -135,7 +135,7 @@
 			echo '<li role="presentation" style="width: 50px; height: 44px;">
 					<a href="exequias">
 						<span>SOAT</span>
-						<img class="imagen" width="21" height="21" src="vistas/img/plantilla/soat.jpg" alt="SOAT">
+						<img class="imagen" style="margin-left: 5px;" width="20" height="20" src="vistas/img/plantilla/soat.jpg" alt="SOAT">
 					</a>
 				  </li>';
 		}
