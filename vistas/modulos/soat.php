@@ -333,8 +333,16 @@
                             <div class="card-exequias">
                                 <div class="card-body">
                                     <h4 class="card-title" style="font-weight: bold;">VALOR COBRO SERVICIO DE TRÁMITE</h4>
-                                    <p class="card-text">Pertenece al grupo STARR Companies, es la compañía N° 1 en el mundo dedicada a brindar asistencia al viajero de manera integral desde 1972.</p>
-                                    <p class="card-text">Para conocer más sobre Assist Card, ingresa <b><a href="https://Grupoasistencia.com/pdfViajes/assistCard.pdf" target="_blank">AQUÍ</a></b></p>
+                                    <p class="card-text">Opción 1 sin comisión: El aliado cobra al cliente el valor adicional que desee. En ese caso el valor de cobro por servicio de trámite en todas las tarifas (menos motos) es $35.000.</p>
+                                    <p class="card-text">Opción 2 con comisión: Aliado recibe comisión de $20.000 por cada SOAT que se emita para sus clientes. El valor de cobro por servicio de trámite en todas las tarifas (menos motos) es:</p>
+                                    <ul class="card-text" style="padding-left: 0px; list-style-position: inside;">
+                                        <li>Asistencia médica en caso de enfermedad (preexistente o no preexistente)</li>
+                                        <li>Atención con especialistas </li>
+                                    </ul>
+                                    <p class="card-text">Notas: 1. Los $20.000 de comisión se liquidan y cobran a través del área SOAT de Grupo Asistencia, y se pagan una vez se logren 5 SOAT, es decir,
+                                    cada $100.000. 2. Actualmente no tenemos habilitada la expedición de Motos (usadas ni 0 km). 3. 
+                                    Vehículos con errores en el RUNT se podrán emitir bajo autorización y con un cobro de servicio de trámite mayor.
+                                    </p>
                                 </div>
                             </div>
                         </div>
