@@ -136,11 +136,12 @@
 					<a href="exequias" class="a">
 						<span>SOAT</span>
 						<h4 class="h">
-							<img class="imagen fa-lg" src="vistas/img/plantilla/soat.jpg" alt="SOAT">
+							<img class="imagen" width="14" height="14" src="vistas/img/plantilla/soat.jpg" alt="SOAT">
 						</h4>
 					</a>
 				  </li>';
 		}
+		
 		
 		
 		/*=============================================
