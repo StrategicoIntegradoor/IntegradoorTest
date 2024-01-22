@@ -133,7 +133,7 @@
 
 		if ($_SESSION["permisos"]["SeguroExequial"] == "x") {
 			echo '<li role="presentation" style="width: 50px; height: 44px;">
-					<a href="exequias">
+					<a href="soat">
 						<span>SOAT</span>
 						<img class="imagen" style="margin-left: -3px;" width="20" height="20" src="vistas/img/plantilla/soat.jpg" alt="SOAT">
 					</a>
