@@ -312,8 +312,18 @@
                             <div class="card-exequias">
                                 <div class="card-body">
                                     <h4 class="card-title" style="font-weight: bold;">PROCESO TRÁMITE SOAT</h4>
-                                    <p class="card-text">Conjunto de servicios ofrecidos que cubren los eventos fortuitos que puedan ocurrir durante un viaje en el extranjero, como gastos médicos, asistencia legal, cancelaciones de vuelos, perdidas de equipaje, muerte, entre otros.</p>
-                                    <p class="card-text">Con una asistencia de viaje, el pasajero cuenta con coberturas y montos de dinero específicos en caso de que se presenten imprevistos o emergencias en el exterior.</p>
+                                    <ul class="card-text" style="padding-left: 0px; list-style-position: inside;">
+                                        <li>Diligenciar el formulario completamente adjuntando imagen de tarjeta de propiedad (por favor nombrar el documento con la placa del vehículo).</li>
+                                        <li>Esperar cotización y confirmación (se verifica que vehículo no tenga errores en el RUNT).</li>
+                                        <li>Realizar pago según cotización y envíar soporte al Whatsapp SOAT 3013232210.</li>
+                                        <li>Esperar confirmación de recepción del pago en cuentas bancarias. </li>
+                                        <li>Emitir SOAT (siempre a nombre del propietario según TP)</li>
+                                        <li>Recibir SOAT en correo electrónico del tomador.</li>
+                                        <li>Traslado y estancia de un familiar (hospitalización)</li>
+                                        <li>Coberturas por extravío de equipajes</li>
+                                    </ul>
+                                    <p class="card-text">Notas: 1. Actualmente no tenemos habilitada la expedición de Motos (usadas ni 0 km). 2. Vehículos con errores en el RUNT se podrán emitir bajo autorización y con un cobro de servicio de trámite mayor.</p>
+                                    <p class="card-text">Para conocer los valores del SOAT por tarifa, descarga el tarifario AQUI</p>
                                 </div>
                             </div>
                         </div>
