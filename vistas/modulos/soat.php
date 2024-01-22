@@ -382,9 +382,10 @@
                                 </div>
                             </div>
                         </div>
+                        <p style="font-size: 16px; margin-bottom: 0px;">Solicita una cotización en el siguiente formulario ingresado<b style="font-size: 17px;"><a href="https://Grupoasistencia.com/pdfExequias/PresentaciónComercialExequialLosOlivos.pdf" target="_blank">AQUI</a></b></p>
+
                 </div>
 
-                <p style="font-size: 16px; margin-bottom: 0px;">Solicita una cotización en el siguiente formulario ingresado<b style="font-size: 17px;"><a href="https://Grupoasistencia.com/pdfExequias/PresentaciónComercialExequialLosOlivos.pdf" target="_blank">AQUI</a></b></p>
 
             </div>
             
