@@ -132,7 +132,7 @@
 		=============================================*/
 
 		if ($_SESSION["permisos"]["SeguroExequial"] == "x") {
-			echo '<li role="presentation">
+			echo '<li role="presentation" style="width: 50px; height: 44px;">
 					<a href="exequias" class="a">
 						<span>SOAT</span>
 						<h4 class="h">
@@ -142,8 +142,7 @@
 				  </li>';
 		}
 		
-		
-		
+				
 		/*=============================================
 		EXEQUIAS
 		=============================================*/
