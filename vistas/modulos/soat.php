@@ -312,7 +312,7 @@
                             <div class="card-exequias">
                                 <div class="card-body">
                                     <h4 class="card-title" style="font-weight: bold;">PROCESO TRÁMITE SOAT</h4>
-                                    <ul class="card-text" style="padding-left: 0px; list-style-position: inside;">
+                                    <ul class="card-text" style="padding-left: 0px; list-style-type: decimal; list-style-position: inside;">
                                         <li>Diligenciar el formulario completamente adjuntando imagen de tarjeta de propiedad (por favor nombrar el documento con la placa del vehículo).</li>
                                         <li>Esperar cotización y confirmación (se verifica que vehículo no tenga errores en el RUNT).</li>
                                         <li>Realizar pago según cotización y envíar soporte al Whatsapp SOAT 3013232210.</li>
