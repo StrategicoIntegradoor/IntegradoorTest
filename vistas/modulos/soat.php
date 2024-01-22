@@ -260,7 +260,16 @@
                 max-width: none;
                 height: 1200px;
                 transition: width 0.5s;
-            }
+    }
+
+    .content-link {
+        /* min-height: 250px; */
+        padding: 15px;
+        margin-right: auto;
+        margin-left: auto;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
 
 </style>
 
@@ -390,7 +399,7 @@
             
 
                 <!-- //FORMULARIO VIAJES -->
-            <div class="content" style="margin-top: -5px;" data-evaluar="si">
+            <div class="content-link" style="margin-top: -5px;" data-evaluar="si">
                 <p style="font-size: 16px;">Solicita una cotización en el siguiente formulario ingresado<b style="font-size: 17px;"><a href="https://Grupoasistencia.com/pdfExequias/PresentaciónComercialExequialLosOlivos.pdf" target="_blank">AQUI</a></b></p>
             </div>
 
