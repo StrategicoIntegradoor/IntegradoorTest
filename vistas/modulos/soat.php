@@ -400,7 +400,7 @@
 
                 <!-- //FORMULARIO VIAJES -->
             <div class="content-link" style="margin-top: -5px;" data-evaluar="si">
-                <p style="font-size: 16px;">Solicita una cotización en el siguiente formulario ingresado<b style="font-size: 17px;"><a href="https://Grupoasistencia.com/pdfExequias/PresentaciónComercialExequialLosOlivos.pdf" target="_blank">AQUI</a></b></p>
+                <p style="font-size: 16px;">Solicita una cotización en el siguiente formulario ingresado <b style="font-size: 17px;"><a href="https://Grupoasistencia.com/pdfExequias/PresentaciónComercialExequialLosOlivos.pdf" target="_blank">AQUI</a></b></p>
             </div>
 
         </div>           
