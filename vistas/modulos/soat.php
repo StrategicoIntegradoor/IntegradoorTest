@@ -382,7 +382,6 @@
                                 </div>
                             </div>
                         </div>
-                        <p style="font-size: 16px; margin-bottom: 0px;">Solicita una cotización en el siguiente formulario ingresado<b style="font-size: 17px;"><a href="https://Grupoasistencia.com/pdfExequias/PresentaciónComercialExequialLosOlivos.pdf" target="_blank">AQUI</a></b></p>
 
                 </div>
 
@@ -392,7 +391,7 @@
 
                 <!-- //FORMULARIO VIAJES -->
             <div class="content" style="margin-top: -5px; margin-bottom: 5px" data-evaluar="si">
-                <!-- <p style="font-size: 16px; margin-bottom: 0px;">Solicita una cotización en el siguiente formulario ingresado<b style="font-size: 17px;"><a href="https://Grupoasistencia.com/pdfExequias/PresentaciónComercialExequialLosOlivos.pdf" target="_blank">AQUI</a></b></p> -->
+                <p style="font-size: 16px; margin-bottom: 0px;">Solicita una cotización en el siguiente formulario ingresado<b style="font-size: 17px;"><a href="https://Grupoasistencia.com/pdfExequias/PresentaciónComercialExequialLosOlivos.pdf" target="_blank">AQUI</a></b></p>
 
                 <!-- <h4 style="font-family: 'Arial Arabic', Arial; font-weight: bold; margin-bottom: 5px; margin-top: 3px;">Solicita una cotización en el siguiente formulario:</h4>
                 <div style="width: 100%; max-width: 640px; margin: 0 auto; margin-top: 30px; margin-bottom: -2px">
