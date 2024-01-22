@@ -319,20 +319,20 @@
                                 </div>
                             </div>
                         </div>
-                <!-- </div> -->
-                <!-- </div> -->
+                            <!-- </div> -->
+                        <!-- </div> -->
 
 
-                <!-- //INFORMACION SEGUNDA FILA -->
-                <!-- <div class="row card-container"> -->
-                <!-- <div class="content"> -->
-                    <!-- <div class="content-header">
-                        <h4 style="font-family: 'Arial Arabic', Arial; text-align: left; font-weight: bold; margin-bottom: -12px; margin-top: -8px;">Adicionales Opcionales</h4>
-                        <HR>
-                    </div> -->
-                    <!-- //AFILIADO ADICIONAL -->
-                     <!-- cuarta tarjeta con título y párrafo -->
-                     <div class="col-md-4 col-sm-12 mb-3">
+                        <!-- //INFORMACION SEGUNDA FILA -->
+                        <!-- <div class="row card-container"> -->
+                        <!-- <div class="content"> -->
+                            <!-- <div class="content-header">
+                                <h4 style="font-family: 'Arial Arabic', Arial; text-align: left; font-weight: bold; margin-bottom: -12px; margin-top: -8px;">Adicionales Opcionales</h4>
+                                <HR>
+                            </div> -->
+                            <!-- //AFILIADO ADICIONAL -->
+                            <!-- cuarta tarjeta con título y párrafo -->
+                        <div class="col-md-4 col-sm-12 mb-3">
                             <div class="card-exequias">
                                 <div class="card-body">
                                     <h4 class="card-title" style="font-weight: bold;">TIEMPO DE RESPUESTA</h4>
@@ -383,18 +383,21 @@
                             </div>
                         </div>
                 </div>
+
+                <p style="font-size: 16px; margin-bottom: 0px;">Solicita una cotización en el siguiente formulario ingresado<b style="font-size: 17px;"><a href="https://Grupoasistencia.com/pdfExequias/PresentaciónComercialExequialLosOlivos.pdf" target="_blank">AQUI</a></b></p>
+
             </div>
             
 
                 <!-- //FORMULARIO VIAJES -->
             <div class="content" style="margin-top: -5px; margin-bottom: 5px" data-evaluar="si">
-                <!-- TITULO FORMULARIO VIAJES -->
-                <h4 style="font-family: 'Arial Arabic', Arial; font-weight: bold; margin-bottom: 5px; margin-top: 3px;">Solicita una cotización en el siguiente formulario:</h4>
+                <!-- <p style="font-size: 16px; margin-bottom: 0px;">Solicita una cotización en el siguiente formulario ingresado<b style="font-size: 17px;"><a href="https://Grupoasistencia.com/pdfExequias/PresentaciónComercialExequialLosOlivos.pdf" target="_blank">AQUI</a></b></p> -->
+
+                <!-- <h4 style="font-family: 'Arial Arabic', Arial; font-weight: bold; margin-bottom: 5px; margin-top: 3px;">Solicita una cotización en el siguiente formulario:</h4>
                 <div style="width: 100%; max-width: 640px; margin: 0 auto; margin-top: 30px; margin-bottom: -2px">
                     <img src="vistas/img/plantilla/banner_viajes.png" alt="Banner de Viajes" style="width: 100%; height: auto; display: block; margin: 0 auto;">
                     <iframe class="miIframe" src="https://docs.google.com/forms/d/e/1FAIpQLSdNXEYeuq8L5G15BQpGNKKt12cs7jzGvxYuqw2gdQaIH3qwGw/viewform?embedded=true" frameborder="0" marginheight="0" marginwidth="0">Cargando…</iframe>
-                </div>
-                <p style="font-size: 16px; margin-bottom: 0px;">Solicita una cotización en el siguiente formulario ingresado<b style="font-size: 17px;"><a href="https://Grupoasistencia.com/pdfExequias/PresentaciónComercialExequialLosOlivos.pdf" target="_blank">AQUI</a></b></p>
+                </div> -->
             </div>
 
         </div>           
