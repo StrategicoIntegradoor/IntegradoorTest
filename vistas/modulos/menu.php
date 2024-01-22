@@ -131,11 +131,17 @@
 		MÓDULO SOAT
 		=============================================*/
 
-		if($_SESSION["permisos"]["SeguroExequial"] == "x"){	
-			echo '<li role="presentation" ><a href="exequias" class="a"><span>SOAT</span>
-			<h4 class="h"><img class="imagen" width="30" heigth="15" src="vistas/img/plantilla/soat.jpg">
-			</h4></a></li>';
+		if ($_SESSION["permisos"]["SeguroExequial"] == "x") {
+			echo '<li role="presentation">
+					<a href="exequias" class="a">
+						<span>SOAT</span>
+						<h4 class="h">
+							<img class="imagen fa-lg" src="vistas/img/plantilla/soat.jpg" alt="SOAT">
+						</h4>
+					</a>
+				  </li>';
 		}
+		
 		
 		/*=============================================
 		EXEQUIAS
