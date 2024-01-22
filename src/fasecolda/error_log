@@ -462,3 +462,11 @@
 [18-Oct-2023 17:00:44 UTC] PHP Notice:  Undefined variable: valor in /home3/grupoasi/public_html/integradoor.com/Test/src/fasecolda/edadveh.php on line 170
 [18-Oct-2023 17:47:17 UTC] PHP Warning:  log() expects parameter 1 to be float, array given in /home3/grupoasi/public_html/integradoor.com/Test/src/fasecolda/edadveh.php on line 31
 [18-Oct-2023 17:47:18 UTC] PHP Notice:  Undefined variable: valor in /home3/grupoasi/public_html/integradoor.com/Test/src/fasecolda/edadveh.php on line 170
+[28-Oct-2023 14:27:56 UTC] PHP Warning:  log() expects parameter 1 to be float, array given in /home3/grupoasi/public_html/integradoor.com/Test/src/fasecolda/edadveh.php on line 31
+[28-Oct-2023 14:27:57 UTC] PHP Notice:  Undefined variable: valor in /home3/grupoasi/public_html/integradoor.com/Test/src/fasecolda/edadveh.php on line 65
+[30-Oct-2023 21:05:30 UTC] PHP Warning:  log() expects parameter 1 to be float, array given in /home3/grupoasi/public_html/integradoor.com/Test/src/fasecolda/edadveh.php on line 31
+[30-Oct-2023 21:05:30 UTC] PHP Notice:  Undefined variable: valor in /home3/grupoasi/public_html/integradoor.com/Test/src/fasecolda/edadveh.php on line 170
+[31-Oct-2023 18:59:01 UTC] PHP Warning:  log() expects parameter 1 to be float, array given in /home3/grupoasi/public_html/integradoor.com/Test/src/fasecolda/edadveh.php on line 31
+[31-Oct-2023 18:59:01 UTC] PHP Notice:  Undefined variable: valor in /home3/grupoasi/public_html/integradoor.com/Test/src/fasecolda/edadveh.php on line 65
+[08-Nov-2023 02:50:47 UTC] PHP Warning:  log() expects parameter 1 to be float, array given in /home3/grupoasi/public_html/integradoor.com/Test/src/fasecolda/edadveh.php on line 31
+[08-Nov-2023 02:50:47 UTC] PHP Notice:  Undefined variable: valor in /home3/grupoasi/public_html/integradoor.com/Test/src/fasecolda/edadveh.php on line 84

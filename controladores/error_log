@@ -163,3 +163,7 @@ Stack trace:
 [23-Jun-2023 13:24:12 UTC] PHP Notice:  Array to string conversion in /home3/grupoasi/public_html/integradoor.com/Test/controladores/invitacion.controlador.php on line 53
 [23-Jun-2023 13:26:35 UTC] PHP Parse error:  syntax error, unexpected '}', expecting ',' or ';' in /home3/grupoasi/public_html/integradoor.com/Test/controladores/invitacion.controlador.php on line 53
 [26-Jun-2023 14:39:29 UTC] PHP Notice:  Undefined variable: nombre in /home3/grupoasi/public_html/integradoor.com/Test/modelos/password.modelo.php on line 159
+[09-Nov-2023 14:49:11 UTC] PHP Notice:  Array to string conversion in /home3/grupoasi/public_html/integradoor.com/Test/modelos/registro.modelo.php on line 58
+[09-Nov-2023 15:40:25 UTC] PHP Notice:  A non well formed numeric value encountered in /home3/grupoasi/public_html/integradoor.com/Test/modelos/registro.modelo.php on line 47
+[09-Nov-2023 15:42:08 UTC] PHP Notice:  A non well formed numeric value encountered in /home3/grupoasi/public_html/integradoor.com/Test/modelos/registro.modelo.php on line 47
+[09-Nov-2023 15:42:08 UTC] PHP Notice:  Array to string conversion in /home3/grupoasi/public_html/integradoor.com/Test/modelos/registro.modelo.php on line 48
