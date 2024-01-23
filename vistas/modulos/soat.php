@@ -242,7 +242,7 @@
     .card-exequias .card-title{
 
         font-size: 19px;
-        margin-bottom: 5.5%;
+        /* margin-bottom: 5.5%; */
     }
 
     .card-exequias .card-text {
