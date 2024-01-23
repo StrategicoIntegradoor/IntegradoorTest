@@ -579,7 +579,22 @@ function masAseg() {
     var apellidosAseg = document.getElementById("txtApellidos").value;
     var generoAseg = document.getElementById("genero").value;
     var estadoCivil = document.getElementById("estadoCivil").value;
-  
+    if(tipoDocumentoID == "2"){
+      var restriccion = '';
+      if(rolAsesor == 19){
+        restriccion = 'Lo sentimos, no puedes realizar cotizaciones para personas jurídicas por este cotizador. Para hacerlo debes comunicarte con el Equipo de Asesores Freelance de Grupo Asistencia, quienes podrán ayudarte a cotizar de manera manual con diferentes aseguradoras.';
+      }else{
+        restriccion = 'Lo sentimos, no puedes realizar cotizaciones para personas jurídicas por este cotizador.'
+      }
+      Swal.fire({
+        icon: 'error',
+        title: 'Lo sentimos',
+        text: restriccion
+      }).then(() => {
+        // Recargar la página después de cerrar el SweetAlert
+        location.reload();
+      });
+    }
     if (
       numplaca != "" &&
       tipoDocumentoID != "" &&
