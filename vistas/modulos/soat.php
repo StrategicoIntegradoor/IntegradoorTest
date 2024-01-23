@@ -341,7 +341,7 @@
                                         <li>SOAT mayor a $700.000: cobro de <b>$60.000</b></li>
                                     </ul>
                                     <p class="card-text"><b>Notas: 1.</b> Los $20.000 de comisión se liquidan y cobran a través del área SOAT de Grupo Asistencia, y se pagan una vez se logren 5 SOAT, es decir,
-                                    cada $100.000. 2. Actualmente no tenemos habilitada la expedición de Motos (usadas ni 0 km). 3. 
+                                    cada $100.000. <b>2.</b> Actualmente no tenemos habilitada la expedición de Motos (usadas ni 0 km). <b>3.</b> 
                                     Vehículos con errores en el RUNT se podrán emitir bajo autorización y con un cobro de servicio de trámite mayor.
                                     </p>
                                 </div>
