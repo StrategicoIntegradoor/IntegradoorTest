@@ -316,14 +316,14 @@
                                     <ul class="card-text" style="padding-left: 0px; list-style-type: decimal; list-style-position: inside;">
                                         <li>Diligenciar el formulario completamente adjuntando imagen de tarjeta de propiedad (por favor nombrar el documento con la placa del vehículo).</li>
                                         <li>Esperar cotización y confirmación (se verifica que vehículo no tenga errores en el RUNT).</li>
-                                        <li>Realizar pago según cotización y envíar soporte al Whatsapp SOAT 3013232210.</li>
+                                        <li>Realizar pago según cotización y envíar soporte al Whatsapp SOAT <b>3013232210</b>.</li>
                                         <li>Esperar confirmación de recepción del pago en cuentas bancarias. </li>
                                         <li>Emitir SOAT (siempre a nombre del propietario según TP)</li>
                                         <li>Recibir SOAT en correo electrónico del tomador.</li>
                                         <li>Traslado y estancia de un familiar (hospitalización)</li>
                                         <li>Coberturas por extravío de equipajes</li>
                                     </ul>
-                                    <p class="card-text">Notas: 1. Actualmente no tenemos habilitada la expedición de Motos (usadas ni 0 km). 2. Vehículos con errores en el RUNT se podrán emitir bajo autorización y con un cobro de servicio de trámite mayor.</p>
+                                    <p class="card-text"><b>Notas: 1.</b> Actualmente no tenemos habilitada la expedición de Motos (usadas ni 0 km). <b>2.</b> Vehículos con errores en el RUNT se podrán emitir bajo autorización y con un cobro de servicio de trámite mayor.</p>
                                     <p class="card-text">Para conocer los valores del SOAT por tarifa, descarga el tarifario AQUI</p>
                                 </div>
                             </div>
@@ -334,13 +334,13 @@
                             <div class="card-exequias">
                                 <div class="card-body">
                                     <h4 class="card-title" style="font-weight: bold;">VALOR COBRO SERVICIO DE TRÁMITE</h4>
-                                    <p class="card-text">Opción 1 sin comisión: El aliado cobra al cliente el valor adicional que desee. En ese caso el valor de cobro por servicio de trámite en todas las tarifas (menos motos) es $35.000.</p>
-                                    <p class="card-text">Opción 2 con comisión: Aliado recibe comisión de $20.000 por cada SOAT que se emita para sus clientes. El valor de cobro por servicio de trámite en todas las tarifas (menos motos) es:</p>
+                                    <p class="card-text">Opción 1 sin comisión: El aliado cobra al cliente el valor adicional que desee. En ese caso el valor de cobro por servicio de trámite en todas las tarifas (menos motos) es <b>$35.000</b>.</p>
+                                    <p class="card-text">Opción 2 con comisión: Aliado recibe comisión de <b>$20.000</b> por cada SOAT que se emita para sus clientes. El valor de cobro por servicio de trámite en todas las tarifas (menos motos) es:</p>
                                     <ul class="card-text" style="padding-left: 15%; padding-right: 15%; list-style-position: inside;">
-                                        <li>SOAT menores a $700.000: cobro de $50.000</li>
-                                        <li>SOAT mayor a $700.000: cobro de $60.000</li>
+                                        <li>SOAT menores a $700.000: cobro de <b>$50.000</b></li>
+                                        <li>SOAT mayor a $700.000: cobro de <b>$60.000</b></li>
                                     </ul>
-                                    <p class="card-text">Notas: 1. Los $20.000 de comisión se liquidan y cobran a través del área SOAT de Grupo Asistencia, y se pagan una vez se logren 5 SOAT, es decir,
+                                    <p class="card-text"><b>Notas: 1.</b> Los $20.000 de comisión se liquidan y cobran a través del área SOAT de Grupo Asistencia, y se pagan una vez se logren 5 SOAT, es decir,
                                     cada $100.000. 2. Actualmente no tenemos habilitada la expedición de Motos (usadas ni 0 km). 3. 
                                     Vehículos con errores en el RUNT se podrán emitir bajo autorización y con un cobro de servicio de trámite mayor.
                                     </p>
@@ -366,12 +366,12 @@
                                     <h4 class="card-title" style="font-weight: bold;">TIEMPO DE RESPUESTA</h4>
                                     <p class="card-text">Cotizaciones:</p>
                                     <ul class="card-text" style="padding-left: 0px; list-style-position: inside;">
-                                        <li>De 30 a 45 minutos hábiles una vez registrado correctamente el formulario</li>
+                                        <li>De <b>30</b> a <b>45</b> minutos hábiles una vez registrado correctamente el formulario</li>
                                     </ul>
                                     <p class="card-text">Expendiciones:</p>
                                     <ul class="card-text" style="padding-left: 0px; list-style-position: inside;">
-                                        <li>Vehículos sin problemas en el RUNT: de 2 hasta 5 horas hábiles.</li>
-                                        <li>Vehículos con problemas en el RUNT: de 5 horas hasta 1 día hábil.</li>
+                                        <li>Vehículos sin problemas en el RUNT: de <b>2</b> hasta <b>5</b> horas hábiles.</li>
+                                        <li>Vehículos con problemas en el RUNT: de <b>5</b> horas hasta <b>1</b> día hábil.</li>
                                     </ul>
                                     <p class="card-text">Nota: El tiempo de respuesta empieza a correr desde que se recibe el pago del SOAT en las cuentas bancarias de Grupo Asistencia</p>
                                     <h4 class="card-title" style="font-weight: bold;">HORARIO DE SERVICIO</h4>
