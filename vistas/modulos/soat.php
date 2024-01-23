@@ -324,7 +324,7 @@
                                         <li>Coberturas por extravío de equipajes</li>
                                     </ul>
                                     <p class="card-text"><b>Notas: 1.</b> Actualmente no tenemos habilitada la expedición de Motos (usadas ni 0 km). <b>2.</b> Vehículos con errores en el RUNT se podrán emitir bajo autorización y con un cobro de servicio de trámite mayor.</p>
-                                    <p class="card-text">Para conocer los valores del SOAT por tarifa, descarga el tarifario AQUI</p>
+                                    <p class="card-text">Para conocer los valores del SOAT por tarifa, descarga el tarifario <b><a href="">AQUI</a></b></p>
                                 </div>
                             </div>
                         </div>
