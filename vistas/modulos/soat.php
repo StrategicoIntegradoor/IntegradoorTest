@@ -336,7 +336,7 @@
                                     <h4 class="card-title" style="font-weight: bold;">VALOR COBRO SERVICIO DE TRÁMITE</h4>
                                     <p class="card-text">Opción 1 sin comisión: El aliado cobra al cliente el valor adicional que desee. En ese caso el valor de cobro por servicio de trámite en todas las tarifas (menos motos) es $35.000.</p>
                                     <p class="card-text">Opción 2 con comisión: Aliado recibe comisión de $20.000 por cada SOAT que se emita para sus clientes. El valor de cobro por servicio de trámite en todas las tarifas (menos motos) es:</p>
-                                    <ul class="card-text" style="padding-left: 10%; padding-right: 10%; list-style-position: inside;">
+                                    <ul class="card-text" style="padding-left: 15%; padding-right: 15%; list-style-position: inside;">
                                         <li>SOAT menores a $700.000: cobro de $50.000</li>
                                         <li>SOAT mayor a $700.000: cobro de $60.000</li>
                                     </ul>
