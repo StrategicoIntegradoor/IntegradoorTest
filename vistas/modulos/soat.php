@@ -271,10 +271,6 @@
         padding-right: 15px;
     }
 
-    .centered-item {
-    display: inline-block;
-    }
-
 
 </style>
 
@@ -341,8 +337,8 @@
                                     <p class="card-text">Opción 1 sin comisión: El aliado cobra al cliente el valor adicional que desee. En ese caso el valor de cobro por servicio de trámite en todas las tarifas (menos motos) es $35.000.</p>
                                     <p class="card-text">Opción 2 con comisión: Aliado recibe comisión de $20.000 por cada SOAT que se emita para sus clientes. El valor de cobro por servicio de trámite en todas las tarifas (menos motos) es:</p>
                                     <ul class="card-text" style="padding-left: 0px; list-style-position: inside; text-align: center;">
-                                        <li class="centered-item">SOAT menores a $700.000: cobro de $50.000</li>
-                                        <li style="display: inline-block;">SOAT mayor a $700.000: cobro de $60.000</li>
+                                        <li style="text-align: left;">SOAT menores a $700.000: cobro de $50.000</li>
+                                        <li style="display: inline-block; text-align: left;">SOAT mayor a $700.000: cobro de $60.000</li>
                                     </ul>
                                     <p class="card-text">Notas: 1. Los $20.000 de comisión se liquidan y cobran a través del área SOAT de Grupo Asistencia, y se pagan una vez se logren 5 SOAT, es decir,
                                     cada $100.000. 2. Actualmente no tenemos habilitada la expedición de Motos (usadas ni 0 km). 3. 
