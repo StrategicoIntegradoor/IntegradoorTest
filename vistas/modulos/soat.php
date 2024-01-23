@@ -303,7 +303,7 @@
                         <div class="col-md-4 col-sm-12 mb-3">
                             <div class="card-exequias special-card">
                                 <div class="card-body">
-                                    <img src="vistas/img/plantilla/logo_assistcard.jpg" class="img-fluid mx-auto" style="max-width: 108%;">
+                                    <img src="vistas/img/plantilla/logo_soat.jpg" class="img-fluid mx-auto" style="max-width: 108%;">
                                 </div>
                             </div>
                         </div>
