@@ -316,7 +316,7 @@
                                     <ul class="card-text" style="padding-left: 0px; list-style-type: decimal; list-style-position: inside;">
                                         <li>Diligenciar el formulario completamente adjuntando imagen de tarjeta de propiedad (por favor nombrar el documento con la placa del vehículo).</li>
                                         <li>Esperar cotización y confirmación (se verifica que vehículo no tenga errores en el RUNT).</li>
-                                        <li>Realizar pago según cotización y envíar soporte al Whatsapp SOAT <b>3013232210</b>.</li>
+                                        <li>Realizar pago según cotización y envíar soporte al Whatsapp SOAT <b><u>3013232210</u></b>.</li>
                                         <li>Esperar confirmación de recepción del pago en cuentas bancarias. </li>
                                         <li>Emitir SOAT (siempre a nombre del propietario según TP)</li>
                                         <li>Recibir SOAT en correo electrónico del tomador.</li>
@@ -324,7 +324,7 @@
                                         <li>Coberturas por extravío de equipajes</li>
                                     </ul>
                                     <p class="card-text"><b>Notas: 1.</b> Actualmente no tenemos habilitada la expedición de Motos (usadas ni 0 km). <b>2.</b> Vehículos con errores en el RUNT se podrán emitir bajo autorización y con un cobro de servicio de trámite mayor.</p>
-                                    <p class="card-text">Para conocer los valores del SOAT por tarifa, descarga el tarifario <b><a href="">AQUI</a></b></p>
+                                    <p class="card-text">Para conocer los valores del SOAT por tarifa, descarga el tarifario <b><u><a href="">AQUI</a></u></b></p>
                                 </div>
                             </div>
                         </div>
@@ -390,8 +390,8 @@
                                     <h4 class="card-title" style="font-weight: bold;">DONDE PAGAR SERVICIO DE TRÁMITE</h4>
                                     <p class="card-text">A nombre de Seguros Grupo Asistencia Asistencia Ltda. BIC, NIT # 900.600.470-8 en las cuentas:</p>
                                     <ul class="card-text" style="padding-left: 0px; list-style-position: inside;">
-                                        <li>Banco de Bogotá CTA Corriente No. 486457310. Descarga certificado bancario <b><a href="">AQUI</a></b></li>
-                                        <li>Bancolombia CTA Ahorros No. 26500002769. Descarga certificado bancario <b><a href="">AQUI</a></b></li>
+                                        <li>Banco de Bogotá CTA Corriente No. 486457310. Descarga certificado bancario <b><u><a href="">AQUI</a></u></b></li>
+                                        <li>Bancolombia CTA Ahorros No. 26500002769. Descarga certificado bancario <b><u><a href="">AQUI</a></u></b></li>
                                     </ul>
                                     <p class="card-text">Nota: Si el pago se realiza desde una entidad financiera diferente, se debe esperar hasta que el dinero ingrese a la cuenta.</p>
                                     <h4 class="card-title" style="font-weight: bold;">DEVOLUCIONES DE DINERO</h4>
@@ -406,13 +406,13 @@
                             <div class="card-exequias">
                                 <div class="card-body text-center">
                                     <h4 class="card-title" style="font-weight: bold;">INFORMACIÓN DE CONTACTO</h4>
-                                    <p class="card-text">La linea <b>3013232210 </b>es exclusiva para mensajes de Whatsapp y no para llamadas. Cualquier inquietud, solicitud y/o requerimiento sera atendido por este medio.</p>
+                                    <p class="card-text">La linea <b><u>3013232210 </u></b>es exclusiva para mensajes de Whatsapp y no para llamadas. Cualquier inquietud, solicitud y/o requerimiento sera atendido por este medio.</p>
                                     <h4 class="card-title" style="font-weight: bold;">PUBLICIDAD</h4>
                                     <p class="card-text">El SOAT es una gran oportunidad para ampliar tu base de clientes y fidelizar a tus clientes actuales. Por eso Grupo Asistencia no sólo pone a tu disposición nuestro servicio de trámites de expedición de SOAT, sino que también vamos a enviarte 3 nuevas piezas publicitarias semanalmente para que puedas compartir en tus redes sociales.</p>
                                     <p class="card-text">Si quieres recibir este material, sigue los siguientes pasos</p>
                                     <ul class="card-text" style="padding-left: 0px; list-style-type: decimal; list-style-position: inside;">
                                         <li>Envía un mensaje vía Whatsapp solicitando ser incluido en la lista de difusión de piezas publicitarias haciendo clic <b><a href="">AQUI</a></b></li>
-                                        <li>Guarda en Whatsapp el siguiente número de contacto como SOAT Grupo  Asistencia <b>3013232210</b>. Si no guardas el contacto no te llegarán las imágenes.</li>
+                                        <li>Guarda en Whatsapp el siguiente número de contacto como SOAT Grupo  Asistencia <b><u>3013232210</u></b>. Si no guardas el contacto no te llegarán las imágenes.</li>
                                     </ul>
                                 </div>
                             </div>
