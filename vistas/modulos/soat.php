@@ -390,8 +390,8 @@
                                     <h4 class="card-title" style="font-weight: bold;">DONDE PAGAR SERVICIO DE TRÁMITE</h4>
                                     <p class="card-text">A nombre de Seguros Grupo Asistencia Asistencia Ltda. BIC, NIT # 900.600.470-8 en las cuentas:</p>
                                     <ul class="card-text" style="padding-left: 0px; list-style-position: inside;">
-                                        <li>Banco de Bogotá CTA Corriente No. 486457310. Descarga certificado bancario AQUI</li>
-                                        <li>Bancolombia CTA Ahorros No. 26500002769. Descarga certificado bancario AQUI</li>
+                                        <li>Banco de Bogotá CTA Corriente No. 486457310. Descarga certificado bancario <b><a href="">AQUI</a></b></li>
+                                        <li>Bancolombia CTA Ahorros No. 26500002769. Descarga certificado bancario <b><a href="">AQUI</a></b></li>
                                     </ul>
                                     <p class="card-text">Nota: Si el pago se realiza desde una entidad financiera diferente, se debe esperar hasta que el dinero ingrese a la cuenta.</p>
                                     <h4 class="card-title" style="font-weight: bold;">DEVOLUCIONES DE DINERO</h4>
