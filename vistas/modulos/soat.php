@@ -411,7 +411,7 @@
                                     <p class="card-text">El SOAT es una gran oportunidad para ampliar tu base de clientes y fidelizar a tus clientes actuales. Por eso Grupo Asistencia no sólo pone a tu disposición nuestro servicio de trámites de expedición de SOAT, sino que también vamos a enviarte 3 nuevas piezas publicitarias semanalmente para que puedas compartir en tus redes sociales.</p>
                                     <p class="card-text">Si quieres recibir este material, sigue los siguientes pasos</p>
                                     <ul class="card-text" style="padding-left: 0px; list-style-type: decimal; list-style-position: inside;">
-                                        <li>Envía un mensaje vía Whatsapp solicitando ser incluido en la lista de difusión de piezas publicitarias haciendo clic AQUI</li>
+                                        <li>Envía un mensaje vía Whatsapp solicitando ser incluido en la lista de difusión de piezas publicitarias haciendo clic <b><a href="">AQUI</a></b></li>
                                         <li>Guarda en Whatsapp el siguiente número de contacto como SOAT Grupo  Asistencia <b>3013232210</b>. Si no guardas el contacto no te llegarán las imágenes.</li>
                                     </ul>
                                 </div>
