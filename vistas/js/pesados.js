@@ -1373,7 +1373,50 @@ function registrarOfertaPesados(
     // Concatenar los dígitos en un solo número
     condicional = cuartoDigito + quintoDigito;
   }
-
+  var tipoUsoVehiculo = document.getElementById("txtTipoUsoVehiculo").value;
+  if(tipoUsoVehiculo == "Trabajo"){
+    var restriccion = '';
+    if(rolAsesor == 19){
+      restriccion = 'Lo sentimos, no puedes realizar cotizaciones para vehículo de trabajo por este cotizador. Para hacerlo debes comunicarte con el Equipo de Asesores Freelance de Grupo Asistencia, quienes podrán ayudarte a cotizar de manera manual con diferentes aseguradoras.';
+    }else{
+      restriccion = 'Lo sentimos, no puedes realizar cotizaciones para vehículo de trabajo por este cotizador.'
+    }
+    Swal.fire({
+      icon: 'error',
+      title: 'Lo sentimos',
+      text: restriccion
+    }).then(() => {
+      // Agregar un retraso antes de recargar la página (por ejemplo, 2 segundos)
+      setTimeout(() => {
+          // Recargar la página después del retraso
+          location.reload();
+      }, 2000); // 2000 milisegundos = 2 segundos
+    });
+    // Salir del código aquí para evitar la ejecución del resto del código
+    return;
+  }
+  var tipoServicio = document.getElementById("txtTipoServicio").value;
+  if(tipoServicio == "11" || tipoServicio == "12"){
+    var restriccion = '';
+    if(rolAsesor == 19){
+      restriccion = 'Lo sentimos, no puedes realizar cotizaciones para el tipo de servicio público o intermunicipal por este cotizador. Para hacerlo debes comunicarte con el Equipo de Asesores Freelance de Grupo Asistencia, quienes podrán ayudarte a cotizar de manera manual con diferentes aseguradoras.';
+    }else{
+      restriccion = 'Lo sentimos, no puedes realizar cotizaciones para el tipo de servicio público o intermunicipal por este cotizador.'
+    }
+    Swal.fire({
+      icon: 'error',
+      title: 'Lo sentimos',
+      text: restriccion
+    }).then(() => {
+      // Agregar un retraso antes de recargar la página (por ejemplo, 2 segundos)
+      setTimeout(() => {
+          // Recargar la página después del retraso
+          location.reload();
+      }, 2000); // 2000 milisegundos = 2 segundos
+    });
+    // Salir del código aquí para evitar la ejecución del resto del código
+    return;
+  }
 
     var fasecoldaVeh = document.getElementById("txtFasecolda").value;
     var valorfasecoldaVeh = document.getElementById("txtValorFasecolda").value;
