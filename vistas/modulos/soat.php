@@ -412,7 +412,7 @@
                                     <p class="card-text">Si quieres recibir este material, sigue los siguientes pasos</p>
                                     <ul class="card-text" style="padding-left: 0px; list-style-type: decimal; list-style-position: inside;">
                                         <li>Envía un mensaje vía Whatsapp solicitando ser incluido en la lista de difusión de piezas publicitarias haciendo clic AQUI</li>
-                                        <li>Guarda en Whatsapp el siguiente número de contacto como SOAT Grupo  Asistencia 3013232210. Si no guardas el contacto no te llegarán las imágenes.</li>
+                                        <li>Guarda en Whatsapp el siguiente número de contacto como SOAT Grupo  Asistencia <b>3013232210</b>. Si no guardas el contacto no te llegarán las imágenes.</li>
                                     </ul>
                                 </div>
                             </div>
