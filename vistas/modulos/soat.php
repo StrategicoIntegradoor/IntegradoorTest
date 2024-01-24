@@ -5,7 +5,7 @@
 
 </head>
 <style>
-  input[type="checkbox"] {
+    input[type="checkbox"] {
         content: "";
         width: 26px;
         height: 26px;
