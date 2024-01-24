@@ -246,7 +246,7 @@
     }
 
     .card-exequias .card-text {
-        font-size: 13px;
+        font-size: 11px;
         margin-bottom: 14px;
     }
 
@@ -303,7 +303,7 @@
                         <div class="col-md-4 col-sm-12 mb-3">
                             <div class="card-exequias special-card">
                                 <div class="card-body">
-                                    <img src="vistas/img/plantilla/logo_soat.jpg" class="img-fluid mx-auto" style="max-width: 70%;">
+                                    <img src="vistas/img/plantilla/logo_soat.jpg" class="img-fluid mx-auto" style="max-width: 77%;">
                                 </div>
                             </div>
                         </div>
@@ -413,7 +413,7 @@
                                             <u style="font-weight: bold; color: black; text-decoration: none;">1.</u> Envía un mensaje vía Whatsapp solicitando ser incluido en la lista de difusión de piezas publicitarias haciendo clic <b><u><a href="#">AQUI</a></u></b>.
                                         </li>
                                         <li style="list-style-type: none;">
-                                            <u style="font-weight: bold; color: black; text-decoration: none;">2.</u> Guarda en Whatsapp el siguiente número de contacto como SOAT Grupo Asistencia <b><u>3013232210</u></b>. Si no guardas el contacto no te llegarán las imágenes.
+                                            <u style="font-weight: bold; color: black; text-decoration: none;">2.</u> Guarda en Whatsapp el siguiente número de contacto como SOAT Grupo Asistencia <a href="https://wa.link/ozcean" target="_blank"><b><u>3013232210</u></b></a>. Si no guardas el contacto no te llegarán las imágenes.
                                         </li>
                                     </ul>
                                 </div>
@@ -428,7 +428,7 @@
 
                 <!-- //FORMULARIO VIAJES -->
             <div class="content-link" style="margin-top: -5px;" data-evaluar="si">
-                <p style="font-size: 16px;">Solicita una cotización en el siguiente formulario ingresado <b style="font-size: 17px;"><a href="https://docs.google.com/forms/d/e/1FAIpQLSfS5iEUGxHMzRwDBkRYN48v-Q3mTECfWVuM9flSCOoYiOMN6A/viewform" target="_blank">AQUI</a></b></p>
+                <p style="font-size: 19px;">Solicita una cotización en el siguiente formulario ingresado <b style="font-size: 17px;"><a href="https://docs.google.com/forms/d/e/1FAIpQLSfS5iEUGxHMzRwDBkRYN48v-Q3mTECfWVuM9flSCOoYiOMN6A/viewform" target="_blank"><u>AQUI</u></a></b></p>
             </div>
 
         </div>           
