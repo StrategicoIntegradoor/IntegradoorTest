@@ -322,7 +322,7 @@
                                         <li>Recibir SOAT en correo electrónico del tomador.</li>
                                     </ul>
                                     <p class="card-text"><b>Notas: 1.</b> Actualmente no tenemos habilitada la expedición de Motos (usadas ni 0 km). <b>2.</b> Vehículos con errores en el RUNT se podrán emitir bajo autorización y con un cobro de servicio de trámite mayor.</p>
-                                    <p class="card-text">Para conocer los valores del SOAT por tarifa, descarga el tarifario <b><u><a href="">AQUI</a></u></b></p>
+                                    <p class="card-text">Para conocer los valores del SOAT por tarifa, descarga el tarifario <b><u><a href="https://Grupoasistencia.com/pdfExequias/tarifarioSOAT.pdf">AQUI</a></u></b></p>
                                 </div>
                             </div>
                         </div>
