@@ -320,8 +320,6 @@
                                         <li>Esperar confirmación de recepción del pago en cuentas bancarias. </li>
                                         <li>Emitir SOAT (siempre a nombre del propietario según TP)</li>
                                         <li>Recibir SOAT en correo electrónico del tomador.</li>
-                                        <li>Traslado y estancia de un familiar (hospitalización)</li>
-                                        <li>Coberturas por extravío de equipajes</li>
                                     </ul>
                                     <p class="card-text"><b>Notas: 1.</b> Actualmente no tenemos habilitada la expedición de Motos (usadas ni 0 km). <b>2.</b> Vehículos con errores en el RUNT se podrán emitir bajo autorización y con un cobro de servicio de trámite mayor.</p>
                                     <p class="card-text">Para conocer los valores del SOAT por tarifa, descarga el tarifario <b><u><a href="">AQUI</a></u></b></p>
@@ -336,7 +334,7 @@
                                     <h4 class="card-title" style="font-weight: bold;">VALOR COBRO SERVICIO DE TRÁMITE</h4>
                                     <p class="card-text">Opción 1 sin comisión: El aliado cobra al cliente el valor adicional que desee. En ese caso el valor de cobro por servicio de trámite en todas las tarifas (menos motos) es <b>$35.000</b>.</p>
                                     <p class="card-text">Opción 2 con comisión: Aliado recibe comisión de <b>$20.000</b> por cada SOAT que se emita para sus clientes. El valor de cobro por servicio de trámite en todas las tarifas (menos motos) es:</p>
-                                    <ul class="card-text" style="padding-left: 15%; padding-right: 15%; list-style-position: inside;">
+                                    <ul class="card-text" style="padding-left: 11%; padding-right: 15%; list-style-position: inside;">
                                         <li>SOAT menores a $700.000: cobro de <b>$50.000</b></li>
                                         <li>SOAT mayor a $700.000: cobro de <b>$60.000</b></li>
                                     </ul>
@@ -406,13 +404,13 @@
                             <div class="card-exequias">
                                 <div class="card-body text-center">
                                     <h4 class="card-title" style="font-weight: bold;">INFORMACIÓN DE CONTACTO</h4>
-                                    <p class="card-text">La linea <b><u>3013232210 </u></b>es exclusiva para mensajes de Whatsapp y no para llamadas. Cualquier inquietud, solicitud y/o requerimiento sera atendido por este medio.</p>
+                                    <p class="card-text">La linea <b><u>3013232210</u></b> es exclusiva para mensajes de Whatsapp y no para llamadas. Cualquier inquietud, solicitud y/o requerimiento sera atendido por este medio.</p>
                                     <h4 class="card-title" style="font-weight: bold;">PUBLICIDAD</h4>
                                     <p class="card-text">El SOAT es una gran oportunidad para ampliar tu base de clientes y fidelizar a tus clientes actuales. Por eso Grupo Asistencia no sólo pone a tu disposición nuestro servicio de trámites de expedición de SOAT, sino que también vamos a enviarte 3 nuevas piezas publicitarias semanalmente para que puedas compartir en tus redes sociales.</p>
-                                    <p class="card-text">Si quieres recibir este material, sigue los siguientes pasos</p>
-                                    <ul class="card-text" style="padding-left: 0px; list-style-type: decimal; list-style-position: inside;">
-                                        <li>Envía un mensaje vía Whatsapp solicitando ser incluido en la lista de difusión de piezas publicitarias haciendo clic <b><u><a href="">AQUI</a></u></b>.</li>
-                                        <li>Guarda en Whatsapp el siguiente número de contacto como SOAT Grupo  Asistencia <b><u>3013232210</u></b>. Si no guardas el contacto no te llegarán las imágenes.</li>
+                                    <p class="card-text">Si quieres recibir este material, sigue los siguientes pasos:</p>
+                                    <ul class="card-text" style="padding-left: 0px;">
+                                        <li><u style="font-weight: bold; color: black;">1</u> Envía un mensaje vía Whatsapp solicitando ser incluido en la lista de difusión de piezas publicitarias haciendo clic <b><u><a href="#">AQUI</a></u></b>.</li>
+                                        <li><u>2</u> Guarda en Whatsapp el siguiente número de contacto como SOAT Grupo Asistencia <b><u>3013232210</u></b>. Si no guardas el contacto no te llegarán las imágenes.</li>
                                     </ul>
                                 </div>
                             </div>
