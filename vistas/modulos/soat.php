@@ -362,11 +362,11 @@
                             <div class="card-exequias">
                                 <div class="card-body">
                                     <h4 class="card-title" style="font-weight: bold;">TIEMPO DE RESPUESTA</h4>
-                                    <h6>Cotizaciones:</h6>
+                                    <h6 style="padding-left: 0px">Cotizaciones:</h6>
                                     <ul class="card-text" style="padding-left: 0px; list-style-position: inside;">
                                         <li>De <b>30</b> a <b>45</b> minutos hábiles una vez registrado correctamente el formulario</li>
                                     </ul>
-                                    <h6>Expendiciones:</h6>
+                                    <h6 style="padding-left: 0px">Expendiciones:</h6>
                                     <ul class="card-text" style="padding-left: 0px; list-style-position: inside;">
                                         <li>Vehículos sin problemas en el RUNT: de <b>2</b> hasta <b>5</b> horas hábiles.</li>
                                         <li>Vehículos con problemas en el RUNT: de <b>5</b> horas hasta <b>1</b> día hábil.</li>
