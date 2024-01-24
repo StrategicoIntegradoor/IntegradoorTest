@@ -410,10 +410,10 @@
                                     <p class="card-text">Si quieres recibir este material, sigue los siguientes pasos:</p>
                                     <ul class="card-text" style="padding-left: 0px;">
                                         <li style="list-style-type: none;">
-                                            <u style="font-weight: bold; color: black; text-decoration: none;">1</u> Envía un mensaje vía Whatsapp solicitando ser incluido en la lista de difusión de piezas publicitarias haciendo clic <b><u><a href="#">AQUI</a></u></b>.
+                                            <u style="font-weight: bold; color: black; text-decoration: none;">1.</u> Envía un mensaje vía Whatsapp solicitando ser incluido en la lista de difusión de piezas publicitarias haciendo clic <b><u><a href="#">AQUI</a></u></b>.
                                         </li>
                                         <li style="list-style-type: none;">
-                                            <u style="font-weight: bold; color: black; text-decoration: none;">2</u> Guarda en Whatsapp el siguiente número de contacto como SOAT Grupo Asistencia <b><u>3013232210</u></b>. Si no guardas el contacto no te llegarán las imágenes.
+                                            <u style="font-weight: bold; color: black; text-decoration: none;">2.</u> Guarda en Whatsapp el siguiente número de contacto como SOAT Grupo Asistencia <b><u>3013232210</u></b>. Si no guardas el contacto no te llegarán las imágenes.
                                         </li>
                                     </ul>
                                 </div>
