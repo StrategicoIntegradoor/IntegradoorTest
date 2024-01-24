@@ -1884,6 +1884,7 @@ $query21 = "SELECT * FROM ofertas WHERE `id_cotizacion` = $identificador AND `se
 $respuestaquery21 =  $conexion->query($query21);
 $cont19 = 1;
 while ($rowRespuesta21 = mysqli_fetch_assoc($respuestaquery21)) {
+	$aseguradora = $rowRespuesta21['Aseguradora'];
 	$perdidaParcial = $rowRespuesta21['PerdidaParcial'];
 	$nombreAseguradora = nombreAseguradora($rowRespuesta21['Aseguradora']);
 	$nombreProducto = productoAseguradora($rowRespuesta21['Aseguradora'], $rowRespuesta21['Producto']);
@@ -1892,7 +1893,7 @@ while ($rowRespuesta21 = mysqli_fetch_assoc($respuestaquery21)) {
 	$respuestaqueryAsistencia15 =  $conexion->query($queryConsultaAsistencia15);
 	$rowRespuestaAsistencia15 = mysqli_fetch_assoc($respuestaqueryAsistencia15);
 
-	if($perdidaParcial == "Deducible: 10% min 1 SMMLV" || $perdidaParcial == " Deducible: 10% min 1.2 SMMLV"){
+	if($aseguradora == 'Liberty' && ($perdidaParcial == "Deducible: 10% min 1 SMMLV" || $perdidaParcial == " Deducible: 10% min 1.2 SMMLV")){
 
 		$gastosMedicos = "Hasta $2.500.000";
 		if ($cont19 % 2 == 0) {
