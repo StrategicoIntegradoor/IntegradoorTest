@@ -316,7 +316,7 @@
                                     <ul class="card-text" style="padding-left: 0px; list-style-type: decimal; list-style-position: inside;">
                                         <li>Diligenciar el formulario completamente adjuntando imagen de tarjeta de propiedad (por favor nombrar el documento con la placa del vehículo).</li>
                                         <li>Esperar cotización y confirmación (se verifica que vehículo no tenga errores en el RUNT).</li>
-                                        <li>Realizar pago según cotización y envíar soporte al Whatsapp SOAT <b><u>3013232210</u></b>.</li>
+                                        <li>Realizar pago según cotización y enviar soporte al Whatsapp SOAT <a href="https://wa.link/ozcean" target="_blank"><b><u>3013232210</u></b></a>.</li>
                                         <li>Esperar confirmación de recepción del pago en cuentas bancarias. </li>
                                         <li>Emitir SOAT (siempre a nombre del propietario según TP)</li>
                                         <li>Recibir SOAT en correo electrónico del tomador.</li>
