@@ -406,7 +406,7 @@ a:focus {
 @media screen and (max-width: 768px) {
   .sidebar-menu {
     /* margin-bottom: 10px; */
-    margin-top: 25px;
+    margin-top: 25px !important;
     /* Puedes mantener el mismo tamaño de fuente o cambiarlo aquí según tus necesidades */
   }
 }
