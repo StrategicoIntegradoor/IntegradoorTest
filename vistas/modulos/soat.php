@@ -465,7 +465,7 @@
           tarjeta.style.justifyContent = 'center';
 
 
-          if (window.innerWidth <= 768) {
+          if (window.innerWidth <= 768 && tarjeta.classList.contains('special-card')) {
                 tarjeta.style.height = '200px';
           }
         }
