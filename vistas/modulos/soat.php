@@ -252,7 +252,7 @@
 
     /* Estilo para la card especial sin sombra en el borde */
     .special-card {
-    /* box-shadow: none;  */
+    box-shadow: none; 
     justify-content: normal !important;
     }
 
