@@ -403,6 +403,13 @@ a:focus {
     /* Puedes mantener el mismo tamaño de fuente o cambiarlo aquí según tus necesidades */
   }
 }
+@media screen and (max-width: 768px) {
+  .sidebar-menu {
+    /* margin-bottom: 10px; */
+    margin-top: 25px;
+    /* Puedes mantener el mismo tamaño de fuente o cambiarlo aquí según tus necesidades */
+  }
+}
 /* Media query específica para 575px donde se ajusta el margin */
 @media screen and (max-width: 575px) {
   .content-header > h1 {
