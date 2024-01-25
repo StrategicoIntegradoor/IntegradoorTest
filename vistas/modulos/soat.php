@@ -256,8 +256,8 @@
     justify-content: normal !important;
     }
 
-    .card-exequias .special-card .card-title {
-    margin-bottom: 25px !important;
+    .card-exequias.special-card .card-title {
+    margin-bottom: 25px;
     }
 
     .miIframe {
