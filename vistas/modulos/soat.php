@@ -256,6 +256,10 @@
     justify-content: normal !important;
     }
 
+    .card-exequias.special-card .card-title {
+    margin-bottom: 25px;
+    }
+
     .miIframe {
                 width: 100%;
                 max-width: none;
