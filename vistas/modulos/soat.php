@@ -257,7 +257,7 @@
     }
 
     .card-exequias.special-card .card-title {
-    margin-bottom: 25px;
+    margin-bottom: 25px !important;
     }
 
     .miIframe {
