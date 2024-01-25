@@ -413,8 +413,8 @@ a:focus {
 @media screen and (max-width: 768px) {
   .special-card {
     /* margin-bottom: 10px; */
-    margin-top: 37px !important;
-    margin-bottom: 50px !important;
+    margin-top: -10px !important;
+    margin-bottom: 140px !important;
     /* Puedes mantener el mismo tamaño de fuente o cambiarlo aquí según tus necesidades */
   }
 }
