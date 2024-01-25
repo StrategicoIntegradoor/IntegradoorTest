@@ -256,9 +256,6 @@
     justify-content: normal !important;
     }
 
-    .card-exequias.special-card .card-title {
-    margin-bottom: 25px;
-    }
 
     .miIframe {
                 width: 100%;
@@ -308,7 +305,7 @@
                         <div class="col-md-4 col-sm-12 mb-3">
                             <div class="card-exequias special-card">
                                 <div class="card-body">
-                                    <h4 class="card-title; margin-top: 0px;" style="font-weight: bold;">CONVENIO SOAT</h4>
+                                    <h4 class="card-title;" style="font-weight: bold;">CONVENIO SOAT</h4>
                                     <img src="vistas/img/plantilla/logo_soat.jpg" class="img-fluid mx-auto" style="max-width: 77%;">
                                 </div>
                             </div>
