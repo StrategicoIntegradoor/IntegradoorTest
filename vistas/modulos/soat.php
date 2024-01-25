@@ -246,7 +246,7 @@
     }
 
     .card-exequias .card-text {
-        font-size: 11px;
+        font-size: 12px;
         margin-bottom: 14px;
     }
 
@@ -322,7 +322,7 @@
                                         <li>Recibir SOAT en correo electrónico del tomador.</li>
                                     </ul>
                                     <p class="card-text"><b>Notas: 1.</b> Actualmente no tenemos habilitada la expedición de Motos (usadas ni 0 km). <b>2.</b> Vehículos con errores en el RUNT se podrán emitir bajo autorización y con un cobro de servicio de trámite mayor.</p>
-                                    <p class="card-text">Para conocer los valores del SOAT por tarifa, descarga el tarifario <b><u><a href="https://Grupoasistencia.com/pdfExequias/tarifarioSOAT.pdf" target="_blank">AQUI</a></u></b></p>
+                                    <p class="card-text">Para conocer los valores del SOAT por tarifa, descarga el tarifario <b><u><a href="https://Grupoasistencia.com/pdfExequias/tarifarioSOAT.pdf" target="_blank">AQUÍ</a></u></b></p>
                                 </div>
                             </div>
                         </div>
@@ -388,13 +388,13 @@
                                     <h4 class="card-title" style="font-weight: bold;">DONDE PAGAR SERVICIO DE TRÁMITE</h4>
                                     <p class="card-text">A nombre de Seguros Grupo Asistencia Asistencia Ltda. BIC, NIT # 900.600.470-8 en las cuentas:</p>
                                     <ul class="card-text" style="padding-left: 0px; list-style-position: inside;">
-                                        <li>Banco de Bogotá CTA Corriente No. 486457310. Descarga certificado bancario <b><u><a href="https://Grupoasistencia.com/pdfExequias/CERTIFICACIONBANCOBOGOTASOATSGA.pdf" target="_blank">AQUI</a></u></b></li>
-                                        <li>Bancolombia CTA Ahorros No. 26500002769. Descarga certificado bancario <b><u><a href="https://Grupoasistencia.com/pdfExequias/CERTIFICADOBANCARIOBANCOLOMBIASOATSGA.pdf" target="_blank">AQUI</a></u></b></li>
+                                        <li>Banco de Bogotá CTA Corriente No. 486457310. Descarga certificado bancario <b><u><a href="https://Grupoasistencia.com/pdfExequias/CERTIFICACIONBANCOBOGOTASOATSGA.pdf" target="_blank">AQUÍ</a></u></b></li>
+                                        <li>Bancolombia CTA Ahorros No. 26500002769. Descarga certificado bancario <b><u><a href="https://Grupoasistencia.com/pdfExequias/CERTIFICADOBANCARIOBANCOLOMBIASOATSGA.pdf" target="_blank">AQUÍ</a></u></b></li>
                                     </ul>
                                     <p class="card-text">Nota: Si el pago se realiza desde una entidad financiera diferente, se debe esperar hasta que el dinero ingrese a la cuenta.</p>
                                     <h4 class="card-title" style="font-weight: bold;">DEVOLUCIONES DE DINERO</h4>
-                                    <p class="card-text">Grupo Asistencia no garantiza la expedición de todos los SOAT solicitados. En caso de requerirse la devolución de dineros pagados por Aliados o Clientes por no lograr la expedición de un SOAT, se requiere adjuntar Certificación Bancaria o Carta de Autorización con información del número, tipo y banco de la cuenta donde se debe realizar la devolución.</p>
-                                    <p class="card-text">Nota: Grupo Asistencia devolverá el 100% del dinero pagado cuando no logre la expedición.</p>                                
+                                    <p class="card-text">No garantizamos la expedición de todos los SOAT solicitados. En caso de requerirse devoluciones de dineros pagados por Aliados o Clientes, se requiere adjuntar Certificación Bancaria o Carta de Autorización con información del número, tipo y banco de la cuenta donde se debe realizar la devolución.</p>
+                                    <p class="card-text">Nota: Devolvemos el 100% del dinero cuando no se logre la expedición.</p>                                
                                 </div>
                             </div>
                         </div>
@@ -410,7 +410,7 @@
                                     <p class="card-text">Si quieres recibir este material, sigue los siguientes pasos:</p>
                                     <ul class="card-text" style="padding-left: 0px;">
                                         <li style="list-style-type: none;">
-                                            <u style="font-weight: bold; color: black; text-decoration: none;">1.</u> Envía un mensaje vía Whatsapp solicitando ser incluido en la lista de difusión de piezas publicitarias haciendo clic <b><u><a href="https://wa.link/ozcean">AQUI</a></u></b>.
+                                            <u style="font-weight: bold; color: black; text-decoration: none;">1.</u> Envía un mensaje vía Whatsapp solicitando ser incluido en la lista de difusión de piezas publicitarias haciendo clic <b><u><a href="https://wa.link/ozcean" target="_blank">AQUÍ</a></u></b>.
                                         </li>
                                         <li style="list-style-type: none;">
                                             <u style="font-weight: bold; color: black; text-decoration: none;">2.</u> Guarda en Whatsapp el siguiente número de contacto como SOAT Grupo Asistencia <a href="https://wa.link/ozcean" target="_blank"><b><u>3013232210</u></b></a>. Si no guardas el contacto no te llegarán las imágenes.
@@ -428,7 +428,7 @@
 
                 <!-- //FORMULARIO VIAJES -->
             <div class="content-link" style="margin-top: -5px;" data-evaluar="si">
-                <p style="font-size: 19px;"><strong>Solicita una cotización en el siguiente formulario ingresado</strong> <b style="font-size: 17px;"><a href="https://docs.google.com/forms/d/e/1FAIpQLSfS5iEUGxHMzRwDBkRYN48v-Q3mTECfWVuM9flSCOoYiOMN6A/viewform" target="_blank"><u>AQUI</u></a></b></p>
+                <p style="font-size: 19px;"><strong>Solicita una cotización en el siguiente formulario ingresando</strong> <b style="font-size: 17px;"><a href="https://docs.google.com/forms/d/e/1FAIpQLSfS5iEUGxHMzRwDBkRYN48v-Q3mTECfWVuM9flSCOoYiOMN6A/viewform" target="_blank"><u>AQUÍ</u></a></b></p>
             </div>
 
         </div>           
