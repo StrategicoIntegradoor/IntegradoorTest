@@ -410,6 +410,14 @@ a:focus {
     /* Puedes mantener el mismo tamaño de fuente o cambiarlo aquí según tus necesidades */
   }
 }
+@media screen and (max-width: 768px) {
+  .special-card {
+    /* margin-bottom: 10px; */
+    margin-top: 37px !important;
+    margin-bottom: 30px !important;
+    /* Puedes mantener el mismo tamaño de fuente o cambiarlo aquí según tus necesidades */
+  }
+}
 /* Media query específica para 575px donde se ajusta el margin */
 @media screen and (max-width: 575px) {
   .content-header > h1 {
