@@ -463,7 +463,7 @@
           tarjeta.style.flexDirection = 'column';
           tarjeta.style.alignItems = 'center'; 
           tarjeta.style.justifyContent = 'center';
-          tarjeta.style.height = '400px';
+          tarjeta.style.height = '200px';
           }
 
         });
