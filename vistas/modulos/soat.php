@@ -458,12 +458,12 @@
         tarjetas.forEach(function(tarjeta) {
           tarjeta.style.height = alturaMaxima + 'px';
 
-          if (tarjeta.classList.contains('special-card')) {
-          tarjeta.style.display = 'flex'; 
-          tarjeta.style.flexDirection = 'column';
-          tarjeta.style.alignItems = 'center'; 
-          tarjeta.style.justifyContent = 'center'; 
-          }
+        //   if (tarjeta.classList.contains('special-card')) {
+        //   tarjeta.style.display = 'flex'; 
+        //   tarjeta.style.flexDirection = 'column';
+        //   tarjeta.style.alignItems = 'center'; 
+        //   tarjeta.style.justifyContent = 'center'; 
+        //   }
 
         });
       });
