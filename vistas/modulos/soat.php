@@ -272,7 +272,10 @@
         padding-left: 15px;
         padding-right: 15px;
     }
-
+    
+    .card-exequias.special-card img {
+    margin-top: 25px;
+    }
 
 </style>
 
