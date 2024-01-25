@@ -274,8 +274,8 @@
     }
     
     .card-exequias.special-card img {
-    margin-top: 10px;
-    margin-bottom: 16px;
+    margin-top: 22px;
+    margin-bottom: 26px;
     }
 
 </style>
@@ -311,7 +311,7 @@
                                 <div class="card-body">
                                     <h4 class="card-title;" style="font-weight: bold;">CONVENIO SOAT</h4>
                                     <img src="vistas/img/plantilla/logo_soat.jpg" class="img-fluid mx-auto" style="max-width: 66%;">
-                                    <p class="card-text; margin-top: 10px"><strong>Solicita cotización</strong> <b><a href="https://docs.google.com/forms/d/e/1FAIpQLSfS5iEUGxHMzRwDBkRYN48v-Q3mTECfWVuM9flSCOoYiOMN6A/viewform" target="_blank"><u> AQUÍ</u></a></b></p>
+                                    <p class="card-text; margin-top: 10px" style="font-size: 19px;"><strong>Solicita cotización</strong> <b><a href="https://docs.google.com/forms/d/e/1FAIpQLSfS5iEUGxHMzRwDBkRYN48v-Q3mTECfWVuM9flSCOoYiOMN6A/viewform" target="_blank"><u> AQUÍ</u></a></b></p>
                                 </div>
                             </div>
                         </div>
