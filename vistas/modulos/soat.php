@@ -275,7 +275,7 @@
     
     .card-exequias.special-card img {
     margin-top: 10px;
-    margin-bottom: 14px;
+    margin-bottom: 16px;
     }
 
 </style>
