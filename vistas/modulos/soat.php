@@ -309,7 +309,7 @@
                             <div class="card-exequias special-card">
                                 <div class="card-body">
                                     <h4 class="card-title;" style="font-weight: bold;">CONVENIO SOAT</h4>
-                                    <img src="vistas/img/plantilla/logo_soat.jpg" class="img-fluid mx-auto" style="max-width: 77%;">
+                                    <img src="vistas/img/plantilla/logo_soat.jpg" class="img-fluid mx-auto" style="max-width: 66%;">
                                 </div>
                             </div>
                         </div>
