@@ -452,6 +452,18 @@ $rolAsesor = $_SESSION['permisos']['id_rol'];
                     <div class="col-xs-12 col-sm-6 col-md-3 form-group">
                       <label for="txtFasecolda">Fasecolda</label>
                       <input type="text" class="form-control" id="txtFasecolda" placeholder="" required>
+
+                      <div class="buscarFasecolda">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="input-icon" viewBox="0 0 20 20" fill="currentColor" style="
+                                position: absolute;
+                                width: 18px;
+                                right: 22px;
+                                top: 34px;
+                                cursor:pointer;
+                            ">
+                          <path fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" clip-rule="evenodd"></path>
+                        </svg>
+                      </div>
                     </div>
                     <div class="col-xs-12 col-sm-6 col-md-3 form-group">
                       <label for="txtValorFasecolda">Valor Asegurado</label>
