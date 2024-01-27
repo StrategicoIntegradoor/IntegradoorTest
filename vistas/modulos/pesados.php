@@ -728,6 +728,39 @@ $rolAsesor = $_SESSION['permisos']['id_rol'];
 
     </div>
 
+    <!-- MODAL FASECOLDA -->
+    <div class="modal fade" id="staticBackdrop" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="staticBackdropLabel">Buscar vehículo por fasecolda</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="form-group">
+                <label class="col-form-label">Fasecolda:</label>
+                <input type="text" class="form-control" id="buscar-fasecolda">
+              </div>
+              <div class="form-group">
+                <label class="col-form-label">Modelo:</label>
+                <input type="text" class="form-control" id="modelo-fasecolda">
+              </div>
+              <div class="form-group">
+                <button type="button" class="btn btn-block btn-primary" id="btn-consultar-fasecolda">Consultar</button>
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- END MODAL FASECOLDA -->
+
   </section>
 
 </div>
