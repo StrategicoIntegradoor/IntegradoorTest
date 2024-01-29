@@ -677,17 +677,17 @@ if ($_SESSION["permisos"]["Cotizarmotos"] != "x") {
                     </div>
                   </div>
                 </div>
-                <div class="aviso-container col-lg-12">
-                  <p style="font-weight: bold;">
-                    Condiciones Generales:<br>
+                <div class="col-lg-12">
+                  <p>
+                    <strong>Condiciones Generales:</strong><br>
                     • Para motos con valores asegurados menores a $7 millones de pesos solo se presentan las condiciones que genere el cotizador web.<br>
                     • El equipo del Canal Asesores Freelance solo cotiza manualmente motos con valores asegurados mayores a $7 millones.<br>
                     • Valor asegurado máximo $50 millones. Motos por encima de ese valor, deben ser autorizadas por la Gerencia General.<br>
                     • Motos con valor de prima total menor de $1 millón de pesos solo se permite pago de contado.<br>
-                    Condiciones de Financiación:<br>
+                    <strong>Condiciones de Financiación:</strong><br>
                     • Se puede financiar motos con valor de prima total mayor a $1 millón de pesos.<br>
                     • Se pueden financiar hasta en 11 cuotas, motos con beneficiarios onerosos de modelos de 2022 en adelante, después de que la prima con IVA supere $1 millón de pesos.<br>
-                    • Las cuotas máximas de financiación dependen del valor de prima total, de acuerdo a los siguientes rangos: entre $1 y $1,4 millones máx. 7 cuotas; mayor a 1,4 y menor a $2 millones máx 9 cuotas; y para motos con valor de prima total mayor a $2 millones se pueden financiar hasta en 11 cuotas.<br>
+                    • Las cuotas máximas de financiación dependen del valor de prima total, de acuerdo a los siguientes rangos: entre $1 y $1,4 millones máx. 7 cuotas; mayor a 1,4 y menor a $2 millones máx 9 cuotas; y para motos con valor de prima total mayor a $2 millones se pueden financiar hasta en 11 cuotas.<br> 
                   </p>
                 </div>
               </div>                                                                       
