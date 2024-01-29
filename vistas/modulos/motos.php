@@ -121,6 +121,14 @@ if ($_SESSION["permisos"]["Cotizarmotos"] != "x") {
   $idIntermediario = $_SESSION['permisos']['id_Intermediario'];
 ?>
 
+<style>
+  .aviso-container {
+    margin: 1% 0% 1% 0%;
+    background-color: #fff;
+    margin-top: -3px;
+    margin-bottom: -3px;
+  }
+</style>
 <body>
 
   
@@ -668,6 +676,12 @@ if ($_SESSION["permisos"]["Cotizarmotos"] != "x") {
                       <div class="col-md-3"></div>
                     </div>
                   </div>
+                </div>
+                <div class="aviso-container col-lg-12">
+                  <p style="font-weight: bold;">
+                    NOTA: Para motos con valores asegurados menores a $7 millones de pesos solo se presentan las condiciones que genere el cotizador web; el equipo del Canal Asesores Freelance solo cotiza manualmente motos con valores asegurados mayores a $7 millones; valor asegurado máximo $50 millones; Motos por encima de ese valor, deben ser autorizadas por la Gerencia General; motos con valor de prima total menor de $1 millón de pesos solo se permite pago de contado.
+                    Las cuotas máximas de financiación dependen del valor de prima total, de acuerdo a los siguientes rangos: entre $1 y $1,4 millones máx. 7 cuotas; mayor a 1,4 y menor a $2 millones máx 9 cuotas; y para motos con valor de prima total mayor a $2 millones se pueden financiar hasta en 11 cuotas..
+                  </p>
                 </div>
               </div>                                                                       
               <div id="contenCotizacionPDF" style="margin-top: 15px;">
