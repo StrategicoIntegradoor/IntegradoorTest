@@ -1892,7 +1892,105 @@ function registrarOfertaPesados(
   
 
   //* CONSULTA MANUAL, LA MISMA PARA TODOS, EN PROCESO DE NO REPETIR EN TRES ARCHIVOS JS DIFERENTES *//
+//CAMBIOS JHON CONSULTA FASECOLDA
 
+// Abrir modal
+document.querySelector('#txtFasecolda').addEventListener('keypress', e => {
+  if (e.keyCode === 13) {
+    e.preventDefault()
+    $('#staticBackdrop').modal('show')
+  }
+})
+
+// Consultar datos del vehiculo
+document.querySelector('#btn-consultar-fasecolda').addEventListener('click', e => {
+  const fasecolda = document.querySelector('#buscar-fasecolda').value
+  const modelo = document.querySelector('#modelo-fasecolda').value
+  if (fasecolda === '' || modelo === '') { return }
+  consulDatosFasecolda(fasecolda, modelo)
+    .then(data => {
+      if (typeof data.marcaVeh === 'undefined') {
+        alert("Vehículo no Encontrado");
+      } else {
+        alert("Vehículo Encontrado");
+        $("#txtClaseVeh").val(data.claseVeh);
+        $("#txtMarcaVeh").val(data.marcaVeh);
+        $("#txtReferenciaVeh").val(data.lineaVeh);
+        $("#txtValorFasecolda").val(data.valorVeh);
+        document.querySelector('#txtFasecolda').value = fasecolda;
+        document.querySelector('#txtModeloVeh').value = modelo;
+        $('#staticBackdrop').modal('hide');
+      }
+
+    }).catch(err => {
+      console.log(err)
+    })
+})
+
+// Cuando se cierra el modal
+$('#staticBackdrop').on('hidden.bs.modal', () => {
+  document.querySelector('#buscar-fasecolda').value = ''
+  document.querySelector('#modelo-fasecolda').value = ''
+})
+
+
+// Abrir modal
+document.querySelector('.buscarFasecolda').addEventListener('click', e => {
+  $('#staticBackdrop').modal('show')
+})
+
+document.querySelector('#txtFasecolda').addEventListener('keypress', e => {
+  if (e.keyCode === 13) {
+    e.preventDefault()
+    $('#staticBackdrop').modal('show')
+  }
+})
+
+function validarNumCotizaciones() {
+
+  fecha1 = new Date;
+  fecha2 = fecha1.toLocaleDateString();
+  fecha3 = fecha2.split("/");
+  fecha = fecha3[2] + "-" + fecha3[1] + "-" + fecha3[0];
+  cotRestan = $("#cotRestanv").val();
+
+  $.ajax({
+
+    url: "ajax/compararFecha.php",
+    method: "POST",
+    data: { fecha },
+    success: function (respuesta) {
+
+      respuesta = parseInt(respuesta)
+
+      cotRestan = parseInt(cotRestan);
+
+      if (respuesta < cotRestan) {
+
+      } else {
+
+        Swal.fire({
+          icon: 'error',
+          title: '¡Has llegado al límite de cotizaciones diarias... Inténtalo de nuevo mañana!.',
+          confirmButtonText: 'Cerrar',
+        }).then((result) => {
+          if (result.isConfirmed) {
+            window.location = "inicio";
+          } else if (result.isDenied) {
+          }
+        })
+
+        setTimeout(function () {
+          window.location = "inicio";
+        }, 5000);
+
+
+      }
+    }
+  })
+
+
+}
   $("#btnConsultarVehmanualbuscador").click(function () {
     var fasecolda=  document.getElementById("fasecoldabuscadormanual").value;
     var modelo=  document.getElementById("modelobuscadormanual").value;
