@@ -1358,7 +1358,7 @@ function registrarOfertaPesados(
 //   })
   
   function cotizarOfertasPesados() {
-
+  var rolAsesor = document.getElementById("rolAsesorPesados").value;
   var codigoFasecolda1 = document.getElementById('txtFasecolda')
   var contenido = codigoFasecolda1.value;
 
