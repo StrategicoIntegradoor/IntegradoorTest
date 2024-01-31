@@ -899,7 +899,7 @@ function registrarOfertaMotos(
     }
     Swal.fire({
       icon: 'error',
-      title: 'Lo sentimos',
+      confirmButtonText: 'Cerrar',
       text: restriccion
     }).then(() => {
       // Agregar un retraso antes de recargar la página (por ejemplo, 2 segundos)
@@ -921,7 +921,7 @@ function registrarOfertaMotos(
     }
     Swal.fire({
       icon: 'error',
-      title: 'Lo sentimos',
+      confirmButtonText: 'Cerrar',
       text: restriccion
     }).then(() => {
       // Agregar un retraso antes de recargar la página (por ejemplo, 2 segundos)
