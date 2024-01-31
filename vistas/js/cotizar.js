@@ -537,7 +537,7 @@ function consulPlaca() {
                 limiteRCESTADO = 6;
                  var restriccion = '';
                 if(rolAsesor == 19){
-                  restriccion = 'No puedes cotizar motos por este módulo. Para hacerlo, debes comunicarte con el Equipo de Asesores Freelance de Grupo Asistencia, quienes podrán ayudarte a cotizar de manera manual con diferentes aseguradoras.';
+                  restriccion = 'Lo sentimos, no puedes cotizar motos por este módulo. Para hacerlo debes ingresar al modulo Cotizar Motocicletas.';
                 }else{
                   restriccion = 'Lo sentimos, no puedes cotizar motos por este módulo.'
                 }
@@ -1491,7 +1491,7 @@ function cotizarOfertas() {
     }
     Swal.fire({
       icon: 'error',
-      title: 'Lo sentimos',
+      confirmButtonText: 'Cerrar',
       text: restriccion
     }).then(() => {
       // Agregar un retraso antes de recargar la página (por ejemplo, 2 segundos)
@@ -1513,7 +1513,7 @@ function cotizarOfertas() {
     }
     Swal.fire({
       icon: 'error',
-      title: 'Lo sentimos',
+      confirmButtonText: 'Cerrar',
       text: restriccion
     }).then(() => {
       // Agregar un retraso antes de recargar la página (por ejemplo, 2 segundos)

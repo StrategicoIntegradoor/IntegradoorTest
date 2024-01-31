@@ -663,7 +663,7 @@ function masAseg() {
                   limiteRCESTADO = 6;
                   var restriccion = '';
                   if(rolAsesor == 19){
-                    restriccion = 'Lo sentimos, no puedes cotizar vehÍculos livianos por este módulo. Para hacerlo debes ingresar al modulo Cotizar Pesados.';
+                    restriccion = 'Lo sentimos, no puedes cotizar vehÍculos livianos por este módulo. Para hacerlo debes ingresar al modulo Cotizar Livianos.';
                   }else{
                     restriccion = 'Lo sentimos, no puedes cotizar vehÍculos livianos por este módulo.'
                   }
@@ -1383,7 +1383,7 @@ function registrarOfertaPesados(
     }
     Swal.fire({
       icon: 'error',
-      title: 'Lo sentimos',
+      confirmButtonText: 'Cerrar',
       text: restriccion
     }).then(() => {
       // Agregar un retraso antes de recargar la página (por ejemplo, 2 segundos)
@@ -1405,7 +1405,7 @@ function registrarOfertaPesados(
     }
     Swal.fire({
       icon: 'error',
-      title: 'Lo sentimos',
+      confirmButtonText: 'Cerrar',
       text: restriccion
     }).then(() => {
       // Agregar un retraso antes de recargar la página (por ejemplo, 2 segundos)
