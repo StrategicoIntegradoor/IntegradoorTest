@@ -116,6 +116,20 @@ $(document).ready(function () {
                 if (codigoClase == 1) {
                   claseVehiculo = "AUTOMOVILES";
                   limiteRCESTADO = 6;
+                  var restriccion = '';
+                  if(rolAsesor == 19){
+                    restriccion = 'Lo sentimos, no puedes cotizar vehÍculos livianos por este módulo. Para hacerlo debes ingresar al modulo Cotizar Livianos.';
+                  }else{
+                    restriccion = 'Lo sentimos, no puedes cotizar vehÍculos livianos por este módulo.'
+                  }
+                  Swal.fire({
+                    icon: 'error',
+                    text: restriccion,
+                    confirmButtonText: 'Cerrar'
+                  }).then(() => {
+                    // Recargar la página después de cerrar el SweetAlert
+                    location.reload();
+                  });
                 } else if (codigoClase == 2) {
                   claseVehiculo = "CAMPEROS";
                   limiteRCESTADO = 18;
