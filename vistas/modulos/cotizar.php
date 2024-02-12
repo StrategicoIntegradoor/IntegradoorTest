@@ -254,6 +254,11 @@ if ($_SESSION["permisos"]["Cotizarlivianos"] != "x") {
 }
 
 
+<<<<<<< HEAD
+if ($_SESSION['permisos']['id_rol'] == '19') {
+  echo '<script>
+=======
+>>>>>>> 1bed326312d164f2f291e2d6e5eabe1ec0c996de
 
 
 
