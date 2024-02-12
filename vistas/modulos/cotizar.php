@@ -888,12 +888,12 @@ $idIntermediario = $_SESSION['permisos']['id_Intermediario'];
                             <td id="HDIObservation"></td>
                           </tr>
                           <!-- Fila 7 - Aseguradora Liberty -->
-                          <tr id="Liberty">
-                            <td id="Liberty">Liberty</td>
-                            <td class="text-center" id="LibertyResponse"></td>
-                            <td class="text-center" id="LibertyProducts"></td>
-                            <td id="LibertyObservation"></td>
-                          </tr>
+                          <!--<tr id="Liberty">-->
+                          <!--  <td id="Liberty">Liberty</td>-->
+                          <!--  <td class="text-center" id="LibertyResponse"></td>-->
+                          <!--  <td class="text-center" id="LibertyProducts"></td>-->
+                          <!--  <td id="LibertyObservation"></td>-->
+                          <!--</tr>-->
                           <!-- Fila 8 - Aseguradora Mapfre -->
                           <tr id="Mapfre">
                             <td id="Mapfre">Mapfre</td>
