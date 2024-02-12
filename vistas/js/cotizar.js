@@ -1310,7 +1310,7 @@ $(document).ready(function () {
                     </center>  
   
                     <div class='col-12' style='margin-top:2%;'>
-                      ${((aseguradora == "Axa Colpatria" || aseguradora == "Liberty" || aseguradora == "Equidad" || aseguradora == "Mapfre") && id_intermediario == "78") ?
+                      ${((aseguradora == "Axa Colpatria" || aseguradora == "Liberty" || aseguradora == "Equidad" || aseguradora == "Mapfre" || aseguradora == "Bolivar") && id_intermediario == "78") ?
                         `<center>
                           <!-- Código para el caso específico de Axa Colpatria, Liberty, Equidad o Mapfre y id_intermediario no es 78 -->
                           <!-- Agrega aquí el contenido específico para estas aseguradoras y el id_intermediario no es 78 -->
