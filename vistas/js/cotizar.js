@@ -2389,30 +2389,30 @@ $(document).ready(function () {
                   });
     
                   /* Liberty */
-                  cont.push(
-                    fetch("https://grupoasistencia.com/motor_webservice_tst2/Liberty?callback=myCallback", requestOptions)
-                      .then((res) => {
-                        if (!res.ok) throw Error(res.statusText);
-                        return res.json();
-                      })
-                      .then((ofertas) => {
-                        if (typeof ofertas[0].Resultado !== 'undefined') {
-                          agregarAseguradoraFallida('Liberty');
-                          validarProblema('Liberty', ofertas);
-                          ofertas[0].Mensajes.forEach(mensaje => {
-                            mostrarAlertarCotizacionFallida('Liberty', mensaje)
-                          })
-                        } else {
-                          const contadorPorEntidad = validarOfertas(ofertas,'Liberty', 1);
-                          mostrarAlertaCotizacionExitosa('Liberty', contadorPorEntidad)
-                        }
-                      })
-                      .catch((err) => {
-                        agregarAseguradoraFallida('Liberty')
-                        mostrarAlertarCotizacionFallida('Liberty', "Error de conexión. Intente de nuevo o comuníquese con el equipo comercial");
-                        console.error(err);
-                      })
-                  );
+                //   cont.push(
+                //     fetch("https://grupoasistencia.com/motor_webservice_tst2/Liberty?callback=myCallback", requestOptions)
+                //       .then((res) => {
+                //         if (!res.ok) throw Error(res.statusText);
+                //         return res.json();
+                //       })
+                //       .then((ofertas) => {
+                //         if (typeof ofertas[0].Resultado !== 'undefined') {
+                //           agregarAseguradoraFallida('Liberty');
+                //           validarProblema('Liberty', ofertas);
+                //           ofertas[0].Mensajes.forEach(mensaje => {
+                //             mostrarAlertarCotizacionFallida('Liberty', mensaje)
+                //           })
+                //         } else {
+                //           const contadorPorEntidad = validarOfertas(ofertas,'Liberty', 1);
+                //           mostrarAlertaCotizacionExitosa('Liberty', contadorPorEntidad)
+                //         }
+                //       })
+                //       .catch((err) => {
+                //         agregarAseguradoraFallida('Liberty')
+                //         mostrarAlertarCotizacionFallida('Liberty', "Error de conexión. Intente de nuevo o comuníquese con el equipo comercial");
+                //         console.error(err);
+                //       })
+                //   );
       
                   /* Allianz */
                   cont.push(
@@ -2750,30 +2750,30 @@ $(document).ready(function () {
                   });
     
                   /* Liberty */
-                  cont.push(
-                    fetch("https://grupoasistencia.com/motor_webservice_tst2/Liberty?callback=myCallback", requestOptions)
-                      .then((res) => {
-                        if (!res.ok) throw Error(res.statusText);
-                        return res.json();
-                      })
-                      .then((ofertas) => {
-                        if (typeof ofertas[0].Resultado !== 'undefined') {
-                          agregarAseguradoraFallida('Liberty');
-                          validarProblema('Liberty', ofertas);
-                          ofertas[0].Mensajes.forEach(mensaje => {
-                            mostrarAlertarCotizacionFallida('Liberty', mensaje)
-                          })
-                        } else {
-                          const contadorPorEntidad = validarOfertas(ofertas,'Liberty', 1);
-                          mostrarAlertaCotizacionExitosa('Liberty', contadorPorEntidad)
-                        }
-                      })
-                      .catch((err) => {
-                        agregarAseguradoraFallida('Liberty')
-                        mostrarAlertarCotizacionFallida('Liberty', "Error de conexión. Intente de nuevo o comuníquese con el equipo comercial");
-                        console.error(err);
-                      })
-                  );
+                //   cont.push(
+                //     fetch("https://grupoasistencia.com/motor_webservice_tst2/Liberty?callback=myCallback", requestOptions)
+                //       .then((res) => {
+                //         if (!res.ok) throw Error(res.statusText);
+                //         return res.json();
+                //       })
+                //       .then((ofertas) => {
+                //         if (typeof ofertas[0].Resultado !== 'undefined') {
+                //           agregarAseguradoraFallida('Liberty');
+                //           validarProblema('Liberty', ofertas);
+                //           ofertas[0].Mensajes.forEach(mensaje => {
+                //             mostrarAlertarCotizacionFallida('Liberty', mensaje)
+                //           })
+                //         } else {
+                //           const contadorPorEntidad = validarOfertas(ofertas,'Liberty', 1);
+                //           mostrarAlertaCotizacionExitosa('Liberty', contadorPorEntidad)
+                //         }
+                //       })
+                //       .catch((err) => {
+                //         agregarAseguradoraFallida('Liberty')
+                //         mostrarAlertarCotizacionFallida('Liberty', "Error de conexión. Intente de nuevo o comuníquese con el equipo comercial");
+                //         console.error(err);
+                //       })
+                //   );
       
                   /* AXA */
                   cont.push(
