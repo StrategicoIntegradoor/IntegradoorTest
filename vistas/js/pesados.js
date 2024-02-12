@@ -1739,69 +1739,85 @@ function registrarOfertaPesados(
           // }     
 
             /* AXA */
-            let bodyAXA = JSON.parse(requestOptions.body);
-            // let planesAXA = [5308, 5309, 5310, 5311, 5312, 5313];
-            let planesAXA = [4210, 4211, 4212, 4213, 4214, 4215];
+              // console.log(condicional)
+            // let bodyAXA = JSON.parse(requestOptions.body);
+            // // let planesAXA = [5308, 5309, 5310, 5311, 5312, 5313];
+            // let planesAXA;
+            // if (condicional == 4 || condicional == 22) {
+            //     planesAXA = [4210, 4211];
+            // } else if (condicional == 23 || condicional == 25) {
+            //     planesAXA = [4212];
+            // } else if (condicional == 3) {
+            //     planesAXA = [4214];
+            // } else if (condicional == 7) {
+            //     planesAXA = [4215];
+            // } else {
+            //     planesAXA = [4213];
+            // }
+            // planesAXA.forEach(plan => {
+            //     bodyAXA.plan = plan;
+            //     requestOptions.body = JSON.stringify(bodyAXA);
 
-            planesAXA.forEach(plan => {
-                bodyAXA.plan = plan;
-                requestOptions.body = JSON.stringify(bodyAXA);
+            //     let axaPromise = fetch("https://grupoasistencia.com/motor_webservice_tst/AXA_tst", requestOptions)
+            //         .then((res) => {
+            //             if (!res.ok) throw Error(res.statusText);
+            //             return res.json();
+            //         })
+            //         .then((ofertas) => {
+            //             if (typeof ofertas[0].Resultado !== 'undefined') {
+            //                 agregarAseguradoraFallidaPesados('AXA');
+            //                 ofertas[0].Mensajes.forEach(mensaje => {
+            //                     mostrarAlertarCotizacionFallida('AXA', mensaje);
+            //                 });
+            //             } else {
+            //                 validarOfertasPesados(ofertas);
+            //                 mostrarAlertaCotizacionExitosa('AXA');
+            //             }
+            //         })
+            //         .catch((err) => {
+            //             console.error(err);
+            //         });
 
-                let axaPromise = fetch("https://grupoasistencia.com/motor_webservice_tst/AXA_tst", requestOptions)
-                    .then((res) => {
-                        if (!res.ok) throw Error(res.statusText);
-                        return res.json();
-                    })
-                    .then((ofertas) => {
-                        if (typeof ofertas[0].Resultado !== 'undefined') {
-                            agregarAseguradoraFallidaPesados('AXA');
-                            ofertas[0].Mensajes.forEach(mensaje => {
-                                mostrarAlertarCotizacionFallida('AXA', mensaje);
-                            });
-                        } else {
-                            validarOfertasPesados(ofertas);
-                            mostrarAlertaCotizacionExitosa('AXA');
-                        }
-                    })
-                    .catch((err) => {
-                        console.error(err);
-                    });
+            //     promesas.push(axaPromise);
 
-                promesas.push(axaPromise);
-
-            });
+            // });
 
 
 
              /* LIBERTY */ 
-            // let planesLiberty = ["Full","Integral"];
-            // let body = JSON.parse(requestOptions.body)
-            // planesLiberty.forEach(plan => {
-            //    body.plan = plan
-            //    requestOptions.body = JSON.stringify(body)
-             
-            //   let libertyPromise = fetch("https://grupoasistencia.com/motor_webservice_tst/Liberty", requestOptions)
-            //      .then((res) => {
-            //        if (!res.ok) throw Error(res.statusText);
-            //        return res.json();
-            //      })
-            //      .then((ofertas) => {
-            //        if (typeof ofertas[0].Resultado !== 'undefined') {
-            //          agregarAseguradoraFallidaPesados(`Liberty`);
-            //           ofertas[0].Mensajes.forEach(mensaje => {
-            //           mostrarAlertarCotizacionFallida(`Liberty ${plan}`, mensaje);
-            //          });
-            //        } else {
-            //          validarOfertasPesados(ofertas);
-            //          mostrarAlertaCotizacionExitosa(`Liberty`);
-            //        }
-            //      })
-            //      .catch((err) => {
-            //        console.error(err);
-            //      });
-
-            //      promesas.push(libertyPromise);
-            // });
+             let body = JSON.parse(requestOptions.body)
+             let planesLiberty;
+             if (condicional == 23 || condicional == 25) {
+                 planesLiberty = ["Full"];
+             } else {
+                 planesLiberty = ["Full","Integral"];
+             }
+             planesLiberty.forEach(plan => {
+               body.plan = plan
+               requestOptions.body = JSON.stringify(body)
+              
+               let libertyPromise = fetch("https://grupoasistencia.com/motor_webservice_tst/Liberty", requestOptions)
+                  .then((res) => {
+                   if (!res.ok) throw Error(res.statusText);
+                   return res.json();
+                  })
+                  .then((ofertas) => {
+                   if (typeof ofertas[0].Resultado !== 'undefined') {
+                      agregarAseguradoraFallidaPesados(`Liberty`);
+                       ofertas[0].Mensajes.forEach(mensaje => {
+                       mostrarAlertarCotizacionFallida(`Liberty ${plan}`, mensaje);
+                      });
+                   } else {
+                      validarOfertasPesados(ofertas);
+                      mostrarAlertaCotizacionExitosa(`Liberty`);
+                   }
+                  })
+                  .catch((err) => {
+                   console.error(err);
+                  });
+ 
+                  promesas.push(libertyPromise);
+             });
         
         
             // Llamar a esta función cuando todas las promesas se resuelvan
