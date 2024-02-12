@@ -254,33 +254,46 @@ if ($_SESSION["permisos"]["Cotizarlivianos"] != "x") {
 }
 
 
+<<<<<<< HEAD
 if ($_SESSION['permisos']['id_rol'] == '19') {
   echo '<script>
+=======
+>>>>>>> 1bed326312d164f2f291e2d6e5eabe1ec0c996de
 
-    window.location = "https://integradoor.com/app/cotizar";
 
-  </script>';
-
-  return;
-  
-  // Detén la ejecución del script actual
-}
 
 $rolAsesor = $_SESSION['permisos']['id_rol'];
 $idIntermediario = $_SESSION['permisos']['id_Intermediario'];
 
+
 ?>
-
-<div class="content-wrapper">
-
 <style>
-  .aviso-container {
-      margin: 1% 0% 1% 0%;
-      background-color: #fff;
-      margin-top: -3px;
-      margin-bottom: -3px;
+    .table-padding {
+  padding: 15px; /* Puedes ajustar el valor según tus preferencias */
   }
+
+  /* Agregar relleno general al contenedor padre */
+  .card-ofertas {
+    padding: 20px; /* Puedes ajustar el valor según tus preferencias */
+  }
+
+  .thTable {
+    text-align: center; /* Puedes ajustar el valor según tus preferencias */
+  }
+
+    /* Estilo para pantallas más pequeñas (menos de 495px) */
+  @media (max-width: 495px) {
+    .table-responsive {
+      overflow-x: auto;
+    }
+  }
+
+  .form-coti {
+    padding-top: 25px;
+  }  
+
 </style>
+<div class="content-wrapper">
 
   <section class="content-header">
 
@@ -367,7 +380,6 @@ $idIntermediario = $_SESSION['permisos']['id_Intermediario'];
                     <div class="col-xs-12 col-sm-6 col-md-3 form-group">
                       <input type="hidden" class="form-control" id="intermediario" value="<?php echo $_SESSION["intermediario"]; ?>">
                       <input type="hidden" class="form-control" id="cotRestanv" value="<?php echo $_SESSION["cotRestantes"]; ?>">
-                      <input type="hidden" class="form-control" id="cotRestanInter" value="<?php echo $_SESSION["cotRestantesInter"]; ?>">
                       <label for="tipoDocumentoID">Tipo de Documento</label>
                       <select class="form-control" id="tipoDocumentoID" required>
                         <option value=""></option>
@@ -615,7 +627,10 @@ $idIntermediario = $_SESSION['permisos']['id_Intermediario'];
 
           <!-- FORMULARIO RESUMEN VEHICULO -->
           <form method="Post" id="formResumVeh">
+              
+              
             <div id="resumenVehiculo">
+                
               <div class="col-lg-12" id="headerVehiculo">
                 <div class="row row-veh">
                   <div class="col-xs-12 col-sm-6 col-md-3">
@@ -775,65 +790,209 @@ $idIntermediario = $_SESSION['permisos']['id_Intermediario'];
                     </div>
                   </div>
 
+                  <div class="row">
+                    <div id="contenBtnCotizar">
+                      <div class="col-lg-12 conten-cotizar">
+                        <div class="row">
+                          <div class="col-xs-12 col-sm-6 col-md-3 form-group">
+                            <button class="btn btn-primary btn-block" id="btnCotizar">Cotizar Ofertas</button>
+                          </div>
+                          <div class="col-xs-12 col-sm-6 col-md-3 form-group">
+                            <div id="loaderOferta"></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
                 </div>
               </div>
             </div>
 
-            <div id="contenBtnCotizar">
-              <div class="col-lg-12 conten-cotizar">
-                <div class="row">
-                  <div class="col-xs-12 col-sm-6 col-md-3 form-group">
-                    <button class="btn btn-primary btn-block" id="btnCotizar">Cotizar Ofertas</button>
-                  </div>
-                  <div class="col-xs-12 col-sm-6 col-md-3 form-group">
-                    <div id="loaderOferta"></div>
-                  </div>
-                </div>
-              </div>
-            </div>
+            
           </form>
 
-          <div id="contenParrilla" style="display: none;">
+
+          <!--- RESUMEN DE COTIZACIONES -->       
+          <div id="contenParrilla">
             <div class="col-lg-12 form-parrilla">
               <div class="row row-parrilla">
                 <div class="col-xs-12 col-sm-6 col-md-3">
-                  <label for="">PARRILLA DE COTIZACIÓNES</label>
+                  <label for="">RESUMEN DE COTIZACIONES</label>
                 </div>
-              </div>
-            </div>
-            <div id="cardCotizacion">
-              <div class="col-lg-12">
-                <div class="card-ofertas">
-                  <div class="row card-body">
-                    <div class="card-body col-sm-6 col-md-6">
-                      <div style="margin: 20px 25px;" class="exitosas">
-                        <p style="color: #88d600;"><b>Aseguradoras cotizadas</b></p>
-                      </div>
+                  <div class="col-xs-12 col-sm-6 col-md-3">
+                  </div>
+                  <div class="col-xs-12 col-sm-6 col-md-3">
+                  </div>
+                  <div class="col-xs-12 col-sm-6 col-md-3 text-right">
+                    <div id="masResOferta">
+                      <p id="masResumen" onclick="masRE();">Ver mas <i class="fa fa-plus-square-o"></i></p>
                     </div>
-                    <div class="card-body col-sm-6 col-md-6">
-                      <div style="margin: 20px 25px;" class="fallidas">
-                        <p style="color: #88d600;"><b>Aseguradoras no cotizadas</b></p>
-                      </div>
+                    <div id="menosResOferta">
+                      <p id="menosResumen" onclick="menosRE();">Ver menos <i class="fa fa-minus-square-o"></i></p>
                     </div>
                   </div>
-                  <div class="row button-recotizar" style="display: none; margin:5px">
-                    <div class="col-md-6"></div>
-                      <div class="col-xs-12 col-sm-12 col-md-3 form-group">
-                        <button class="btn btn-primary btn-block" id="btnReCotizarFallidas">Recotizar Ofertas Fallidas</button>
-                      </div>
-                    <div class="col-md-3"></div>
+              </div>
+
+              <!-- *//* Mostrar alertas *//* -->
+              <div id="resumenCotizaciones">
+                <div class="col-lg-12" style="display: block;">
+                  <div class="card-ofertas">
+                    <div class="table-responsive">
+                      <table class="table table-bordered table-padding" id="tablaResumenCot">
+                        <thead>
+                          <tr>
+                            <th class="thTable" scope="col" style="color: #88d600; margin-right: 5px;">Aseguradora</th>
+                            <th class="thTable" scope="col" style="color: #88d600; margin-right: 5px;">Cotizo?</th>
+                            <th class="thTable" scope="col" style="color: #88d600;; margin-right: 5px;">Productos cotizados</th>
+                            <th class="thTable" scope="col" style="color: #88d600;; margin-right: 5px;">Observaciones</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+
+                          <!-- Fila 1 - Aseguradora Allianz -->
+                          <tr id="Allianz">
+                            <td id="AllianzName">Allianz</td>
+                            <td class="text-center" id="AllianzResponse"></td>
+                            <td class="text-center" id="AllianzProducts"></td>
+                            <td id="AllianzObservation"></td>
+                          </tr>
+                          <!-- Fila 2 - Aseguradora AXA -->
+                          <tr id="AXA">
+                            <td id="AXA">AXA</td>
+                            <td class="text-center" id="AXAResponse"></td>
+                            <td class="text-center" id="AXAProducts"></td>
+                            <td id="AXAObservation"></td>
+                          </tr>
+                          <!-- Fila 3 - Aseguradora Bolivar -->
+                          <tr id="Bolivar">
+                            <td id="Bolivar">Bolivar</td>
+                            <td class="text-center" id="BolivarResponse"></td>
+                            <td class="text-center" id="BolivarProducts"></td>
+                            <td id="BolivarObservatIon3"></td>
+                          </tr>
+                          <!-- Fila 4 - Aseguradora Equidad -->
+                          <tr id="Equidad">
+                            <td id="Equidad">Equidad</td>
+                            <td class="text-center" id="EquidadResponse"></td>
+                            <td class="text-center" id="EquidadProducts"></td>
+                            <td id="EquidadObservation"></td>
+                          </tr>
+                          <!-- Fila 5 - Aseguradora Estado -->
+                          <tr id="Estado">
+                            <td id="Estado">Estado</td>
+                            <td class="text-center" id="EstadoResponse"></td>
+                            <td class="text-center" id="EstadoProducts"></td>
+                            <td id="EstadoObservation"></td>
+                          </tr>
+                          <!-- Fila 6 - Aseguradora HDI -->
+                          <tr id="HDI">
+                            <td id="HDI">HDI</td>
+                            <td class="text-center" id="HDIResponse"></td>
+                            <td class="text-center" id="HDIProducts"></td>
+                            <td id="HDIObservation"></td>
+                          </tr>
+                          <!-- Fila 7 - Aseguradora Liberty -->
+                          <tr id="Liberty">
+                            <td id="Liberty">Liberty</td>
+                            <td class="text-center" id="LibertyResponse"></td>
+                            <td class="text-center" id="LibertyProducts"></td>
+                            <td id="LibertyObservation"></td>
+                          </tr>
+                          <!-- Fila 8 - Aseguradora Mapfre -->
+                          <tr id="Mapfre">
+                            <td id="Mapfre">Mapfre</td>
+                            <td class="text-center" id="MapfreResponse"></td>
+                            <td class="text-center" id="MapfreProducts"></td>
+                            <td id="MapfreObservation"></td>
+                          </tr>
+                          <!-- Fila 9 - Aseguradora Previsora -->
+                          <tr id="Previsora">
+                            <td id="Previsora">Previsora</td>
+                            <td class="text-center" id="PrevisoraResponse"></td>
+                            <td class="text-center" id="PrevisoraProducts"></td>
+                            <td id="PrevisoraObservation"></td>
+                          </tr>
+                          <!-- Fila 10 - Aseguradora SBS -->
+                          <tr id="SBS">
+                            <td id="SBS">SBS</td>
+                            <td class="text-center" id="SBSResponse"></td>
+                            <td class="text-center" id="SBSProducts"></td>
+                            <td id="SBSObservation"></td>
+                          </tr>
+                          <!-- Fila 11 - Aseguradora Solidaria -->
+                          <tr id="Solidaria">
+                            <td id="Solidaria">Solidaria</td>
+                            <td class="text-center" id="SolidariaResponse"></td>
+                            <td class="text-center" id="SolidariaProducts"></td>
+                            <td id="SolidariaObservation"></td>
+                          </tr>
+                          <!-- Fila 12 - Aseguradora Zurich -->
+                          <tr id="Zurich">
+                            <td id="Zurich">Zurich</td>
+                            <td class="text-center" id="ZurichResponse"></td>
+                            <td class="text-center" id="ZurichProducts"></td>
+                            <td id="ZurichObservation"></td>
+                          </tr>
+
+                        </tbody>
+                      </table>
+                    </div>
+                    <div class="row button-recotizar" style="display: none; margin:5px">
+                      <div class="col-md-6"></div>
+                        <div class="col-xs-12 col-sm-12 col-md-3 form-group">
+                          <button class="btn btn-primary btn-block" id="btnReCotizarFallidas">Recotizar Ofertas Fallidas</button>
+                        </div>
+                      <div class="col-md-3"></div>
+                    </div>
                   </div>
                 </div>
+                <div class="aviso-container col-lg-12">
+                    <p style="font-weight: bold;">
+                      NOTA: Si a tu cliente le interesa Previsora, ten en cuenta que ciertas líneas de vehículos requieren la instalación del dispositivo Cazador al tomar su seguro y este tiene un costo adicional a la póliza. Por favor confirma con tu área comercial.
+                    </p>
               </div>
-              <div class="aviso-container col-lg-12">
-                <p style="font-weight: bold;">
-                  NOTA: Si a tu cliente le interesa Previsora, ten en cuenta que ciertas líneas de vehículos requieren la instalación del dispositivo Cazador al tomar su seguro y este tiene un costo adicional a la póliza. Por favor confirma con tu área comercial.
-                </p>
               </div>
-            </div>                                                                       
-            <div id="contenCotizacionPDF" style="margin-top: 15px;">
             </div>
           </div>
+
+          <!-- PARRILLA DE COTIZACIONES -->       
+          <div id="parrillaCotizaciones">
+
+            <div class="col-lg-12 form-coti">
+              <div class="row row-parrilla">
+                <div class="col-xs-12 col-sm-6 col-md-3">
+                  <label for="">PARRILLA DE COTIZACIONES</label>
+                </div>
+              </div>
+            </div>
+
+            <div id="cardCotizacion">
+            </div>
+
+            <div id="cardAgregarCotizacion">
+            </div>
+
+            <div id="contenCotizacionPDF">
+
+              <div class="col-xs-12" style="width: 100%;">
+                <div class="row align-items-center">
+                  <div class="col-xs-4">
+                    <label for="checkboxAsesorEditar">¿Deseas agregar tus datos como asesor en la cotización?</label>
+                    <input class="form-check-input" type="checkbox" id="checkboxAsesorEditar" style="margin-left: 10px;" checked>
+                  </div>
+                  <div class="col-xs-4">
+                    <button type="button" class="btn btn-danger" id="btnParrillaPDF">
+                      <span class="fa fa-file-text"></span> Generar PDF de Cotización
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+                    
         </div>
 
         <!-- CAMPOS OCULTOS PARA OPTENER LA INFORMACION-->
@@ -990,7 +1149,6 @@ $idIntermediario = $_SESSION['permisos']['id_Intermediario'];
 </div>
 
 <script src="vistas/js/cotizar.js?v=<?php echo (rand()); ?>"></script>
-<!-- <script src="vistas/js/cotizaciones.js?v=<?php echo (rand()); ?>"></script> -->
 
 
 <?php
