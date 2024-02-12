@@ -1913,11 +1913,13 @@ $(document).ready(function () {
               loadingElement.style.width = '22px';
               loadingElement.style.height = '22px';
       
-              // Limpiar cualquier contenido existente en la celda de respuesta
-              celdaResponse.innerHTML = '';
-      
-              // Agregar el elemento de carga a la celda de respuesta
-              celdaResponse.appendChild(loadingElement);
+              if (celdaResponse) {
+                celdaResponse.innerHTML = '';
+                celdaResponse.appendChild(loadingElement);
+              } else {
+                  console.error('La celda de respuesta es null. Verifica la existencia del elemento.');
+              }
+            
           });
 
           primerIntentoRealizado = true
