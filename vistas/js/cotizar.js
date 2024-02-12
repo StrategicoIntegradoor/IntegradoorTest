@@ -2293,7 +2293,7 @@ $(document).ready(function () {
                         }
                       })
                       .catch((err) => {
-                        agregarAseguradoraFallida('HDI');
+                        // agregarAseguradoraFallida('HDI');
                         mostrarAlertarCotizacionFallida('HDI', "Servicio en mantenimiento");
                         console.error(err);
                       })
@@ -2390,7 +2390,7 @@ $(document).ready(function () {
     
                   /* Liberty */
                   cont.push(
-                    fetch("https://grupoasistencia.com/motor_webservice_tst2/Liberty?callback=myCallback", requestOptions)
+                    fetch("https://grupoasistencia.com/motor_webservice_tst3/Liberty?callback=myCallback", requestOptions)
                       .then((res) => {
                         if (!res.ok) throw Error(res.statusText);
                         return res.json();
@@ -2408,8 +2408,8 @@ $(document).ready(function () {
                         }
                       })
                       .catch((err) => {
-                        agregarAseguradoraFallida('Liberty')
-                        mostrarAlertarCotizacionFallida('Liberty', "Error de conexión. Intente de nuevo o comuníquese con el equipo comercial");
+                        // agregarAseguradoraFallida('Liberty')
+                        mostrarAlertarCotizacionFallida('Liberty', "Servicio en mantenimiento");
                         console.error(err);
                       })
                   );
