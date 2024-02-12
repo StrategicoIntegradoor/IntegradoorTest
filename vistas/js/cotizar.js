@@ -2293,7 +2293,7 @@ $(document).ready(function () {
                         }
                       })
                       .catch((err) => {
-                        agregarAseguradoraFallida('HDI');
+                        // agregarAseguradoraFallida('HDI');
                         mostrarAlertarCotizacionFallida('HDI', "Servicio en mantenimiento");
                         console.error(err);
                       })
@@ -2389,6 +2389,7 @@ $(document).ready(function () {
                   });
     
                   /* Liberty */
+<<<<<<< HEAD
                 //   cont.push(
                 //     fetch("https://grupoasistencia.com/motor_webservice_tst2/Liberty?callback=myCallback", requestOptions)
                 //       .then((res) => {
@@ -2413,6 +2414,32 @@ $(document).ready(function () {
                 //         console.error(err);
                 //       })
                 //   );
+=======
+                  cont.push(
+                    fetch("https://grupoasistencia.com/motor_webservice_tst3/Liberty?callback=myCallback", requestOptions)
+                      .then((res) => {
+                        if (!res.ok) throw Error(res.statusText);
+                        return res.json();
+                      })
+                      .then((ofertas) => {
+                        if (typeof ofertas[0].Resultado !== 'undefined') {
+                          agregarAseguradoraFallida('Liberty');
+                          validarProblema('Liberty', ofertas);
+                          ofertas[0].Mensajes.forEach(mensaje => {
+                            mostrarAlertarCotizacionFallida('Liberty', mensaje)
+                          })
+                        } else {
+                          const contadorPorEntidad = validarOfertas(ofertas,'Liberty', 1);
+                          mostrarAlertaCotizacionExitosa('Liberty', contadorPorEntidad)
+                        }
+                      })
+                      .catch((err) => {
+                        // agregarAseguradoraFallida('Liberty')
+                        mostrarAlertarCotizacionFallida('Liberty', "Servicio en mantenimiento");
+                        console.error(err);
+                      })
+                  );
+>>>>>>> 12270ffdb5a48fccca32e56ac92aa12c0c5353f3
       
                   /* Allianz */
                   cont.push(
