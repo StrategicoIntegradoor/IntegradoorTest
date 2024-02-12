@@ -491,7 +491,7 @@ $(document).ready(function () {
       };
   
       // Llama la informacion del Vehiculo por medio de la Placa
-      fetch("https://grupoasistencia.com/motor_webservice/Vehiculo", requestOptions)
+      fetch("https://grupoasistencia.com/motor_webservice123/Vehiculo", requestOptions)
         .then(function (response) {
           if (!response.ok) {
             throw Error(response.statusText);
@@ -669,14 +669,14 @@ $(document).ready(function () {
           var cilindraje = data.polizaReciente.VAL_CILINDRAJE;
           var codFasecolda = data.polizaReciente.COD_FASECOLDA;
           var aseguradora = data.polizaReciente.nomCompania;
-          // console.log("Mapfre consulta");
-          // console.log("Marca Cod:", marcaCod);
-          // console.log("Clase:", clase);
-          // console.log("Línea:", linea);
-          // console.log("Modelo:", modelo);
-          // console.log("Cilindraje:", cilindraje);
-          // console.log("Código Fasecolda:", codFasecolda);
-          // console.log("Aseguradora:", aseguradora);
+          console.log("Mapfre consulta");
+          console.log("Marca Cod:", marcaCod);
+          console.log("Clase:", clase);
+          console.log("Línea:", linea);
+          console.log("Modelo:", modelo);
+          console.log("Cilindraje:", cilindraje);
+          console.log("Código Fasecolda:", codFasecolda);
+          console.log("Aseguradora:", aseguradora);
   
           propietario = data.polizaReciente.asegNombre;
           cedulaP = data.polizaReciente.asegCodDocum;
