@@ -10,7 +10,9 @@
 
 //   return;
 // }
+
 $idIntermediario = $_SESSION['permisos']['id_Intermediario'];
+
 
 ?>
 <head>
@@ -24,6 +26,27 @@ $idIntermediario = $_SESSION['permisos']['id_Intermediario'];
   .checkbox-adjust {
     margin-left: -28px;
   }
+
+  .table-padding {
+  padding: 25px; /* Puedes ajustar el valor según tus preferencias */
+  }
+
+  /* Agregar relleno general al contenedor padre */
+  .card-ofertas {
+    padding: 20px; /* Puedes ajustar el valor según tus preferencias */
+  }
+
+  .thTable {
+    text-align: center; /* Puedes ajustar el valor según tus preferencias */
+  }
+
+    /* Estilo para pantallas más pequeñas (menos de 495px) */
+  @media (max-width: 495px) {
+    .table-responsive {
+      overflow-x: auto;
+    }
+  }
+
 </style>
 
 <div class="content-wrapper">
@@ -833,18 +856,6 @@ $idIntermediario = $_SESSION['permisos']['id_Intermediario'];
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
         <!-- PARRILLA DE COTIZACIONES -->
         <div id="contenParrilla">
           <div class="col-lg-12 form-parrilla">
@@ -871,46 +882,20 @@ $idIntermediario = $_SESSION['permisos']['id_Intermediario'];
           <div id="resumenCotizaciones">
             <div class="col-lg-12" style="display: block;">
               <div class="card-ofertas">
-                <!-- <table class="table table-bordered">
-                  <thead>
-                    <tr>
-                      <th scope="col">#</th>
-                      <th scope="col">First</th>
-                      <th scope="col">Last</th>
-                      <th scope="col">Handle</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <th scope="row">1</th>
-                      <td>Mark</td>
-                      <td>Otto</td>
-                      <td>@mdo</td>
-                    </tr>
-                    <tr>
-                      <th scope="row">2</th>
-                      <td>Jacob</td>
-                      <td>Thornton</td>
-                      <td>@fat</td>
-                    </tr>
-                    <tr>
-                      <th scope="row">3</th>
-                      <td colspan="2">Larry the Bird</td>
-                      <td>@twitter</td>
-                    </tr>
-                  </tbody>
-                </table> -->
-                <div class="row card-body">
-                  <div class="card-body col-sm-6 col-md-6">
-                    <div style="margin: 20px 25px;" class="exitosas">
-                      <p style="color: #88d600;"><b>Aseguradoras cotizadas</b></p>
-                    </div>
-                  </div>
-                  <div class="card-body col-sm-6 col-md-6">
-                    <div style="margin: 20px 25px;" class="fallidas">
-                      <p style="color: #88d600;"><b>Aseguradoras no cotizadas</b></p>
-                    </div>
-                  </div>
+                <div class="table-responsive">
+                  <table class="table table-bordered table-padding" id="tablaResumenCot">
+                    <thead>
+                      <tr>
+                        <th class="thTable" scope="col" style="color: #88d600; margin-right: 5px;">Aseguradora</th>
+                        <th class="thTable" scope="col" style="color: #88d600; margin-right: 5px;">Cotizo?</th>
+                        <th class="thTable" scope="col" style="color: #88d600;; margin-right: 5px;">Productos cotizados</th>
+                        <th class="thTable" scope="col" style="color: #88d600;; margin-right: 5px;">Observaciones</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+
+                    </tbody>
+                  </table>
                 </div>
               </div>
             </div>
@@ -957,7 +942,8 @@ $idIntermediario = $_SESSION['permisos']['id_Intermediario'];
   </section>
 
 </div>
-<script>  var init = menosVeh()
-</script>
+
 <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-<!-- <script src="vistas/js/cotizaciones.js?v=<?php echo (rand()); ?>"></script> -->
+<script>
+
+</script>
