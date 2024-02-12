@@ -3187,3 +3187,43 @@ Stack trace:
 [16-Jan-2024 09:26:53 America/Bogota] PHP Notice:  Undefined variable: consecutivo in /home3/grupoasi/public_html/integradoor.com/Test/extensiones/tcpdf/pdf/comparadorMotos.php on line 106
 [16-Jan-2024 09:26:53 America/Bogota] PHP Notice:  Undefined variable: consecutivo in /home3/grupoasi/public_html/integradoor.com/Test/extensiones/tcpdf/pdf/comparadorMotos.php on line 106
 [16-Jan-2024 09:26:53 America/Bogota] PHP Notice:  Undefined variable: consecutivo in /home3/grupoasi/public_html/integradoor.com/Test/extensiones/tcpdf/pdf/comparadorMotos.php on line 107
+[24-Jan-2024 15:02:15 America/Bogota] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, bool given in /home3/grupoasi/public_html/integradoor.com/Test/extensiones/tcpdf/pdf/comparadorMotos.php on line 42
+[24-Jan-2024 15:02:15 America/Bogota] PHP Notice:  Undefined index: f_registro in /home3/grupoasi/public_html/integradoor.com/Test/extensiones/tcpdf/pdf/comparadorMotos.php on line 102
+[24-Jan-2024 15:02:15 America/Bogota] PHP Notice:  Undefined variable: consecutivo in /home3/grupoasi/public_html/integradoor.com/Test/extensiones/tcpdf/pdf/comparadorMotos.php on line 106
+[24-Jan-2024 15:02:15 America/Bogota] PHP Notice:  Undefined variable: consecutivo in /home3/grupoasi/public_html/integradoor.com/Test/extensiones/tcpdf/pdf/comparadorMotos.php on line 106
+[24-Jan-2024 15:02:15 America/Bogota] PHP Notice:  Undefined variable: consecutivo in /home3/grupoasi/public_html/integradoor.com/Test/extensiones/tcpdf/pdf/comparadorMotos.php on line 107
+[26-Jan-2024 15:11:58 America/Bogota] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, bool given in /home3/grupoasi/public_html/integradoor.com/Test/extensiones/tcpdf/pdf/comparadorMotos.php on line 42
+[26-Jan-2024 15:11:58 America/Bogota] PHP Notice:  Undefined index: f_registro in /home3/grupoasi/public_html/integradoor.com/Test/extensiones/tcpdf/pdf/comparadorMotos.php on line 102
+[26-Jan-2024 15:11:58 America/Bogota] PHP Notice:  Undefined variable: consecutivo in /home3/grupoasi/public_html/integradoor.com/Test/extensiones/tcpdf/pdf/comparadorMotos.php on line 106
+[26-Jan-2024 15:11:58 America/Bogota] PHP Notice:  Undefined variable: consecutivo in /home3/grupoasi/public_html/integradoor.com/Test/extensiones/tcpdf/pdf/comparadorMotos.php on line 106
+[26-Jan-2024 15:11:58 America/Bogota] PHP Notice:  Undefined variable: consecutivo in /home3/grupoasi/public_html/integradoor.com/Test/extensiones/tcpdf/pdf/comparadorMotos.php on line 107
+[29-Jan-2024 14:29:22 America/Bogota] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, bool given in /home3/grupoasi/public_html/integradoor.com/Test/extensiones/tcpdf/pdf/comparadorMotos.php on line 42
+[29-Jan-2024 14:29:22 America/Bogota] PHP Notice:  Undefined index: f_registro in /home3/grupoasi/public_html/integradoor.com/Test/extensiones/tcpdf/pdf/comparadorMotos.php on line 102
+[29-Jan-2024 14:29:22 America/Bogota] PHP Notice:  Undefined variable: consecutivo in /home3/grupoasi/public_html/integradoor.com/Test/extensiones/tcpdf/pdf/comparadorMotos.php on line 106
+[29-Jan-2024 14:29:22 America/Bogota] PHP Notice:  Undefined variable: consecutivo in /home3/grupoasi/public_html/integradoor.com/Test/extensiones/tcpdf/pdf/comparadorMotos.php on line 106
+[29-Jan-2024 14:29:22 America/Bogota] PHP Notice:  Undefined variable: consecutivo in /home3/grupoasi/public_html/integradoor.com/Test/extensiones/tcpdf/pdf/comparadorMotos.php on line 107
+[30-Jan-2024 08:09:32 America/Bogota] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, bool given in /home3/grupoasi/public_html/integradoor.com/Test/extensiones/tcpdf/pdf/comparadorPesados.php on line 42
+[30-Jan-2024 08:09:32 America/Bogota] PHP Notice:  Undefined index: f_registro in /home3/grupoasi/public_html/integradoor.com/Test/extensiones/tcpdf/pdf/comparadorPesados.php on line 102
+[30-Jan-2024 08:09:32 America/Bogota] PHP Notice:  Undefined variable: consecutivo in /home3/grupoasi/public_html/integradoor.com/Test/extensiones/tcpdf/pdf/comparadorPesados.php on line 106
+[30-Jan-2024 08:09:32 America/Bogota] PHP Notice:  Undefined variable: consecutivo in /home3/grupoasi/public_html/integradoor.com/Test/extensiones/tcpdf/pdf/comparadorPesados.php on line 106
+[30-Jan-2024 08:09:32 America/Bogota] PHP Notice:  Undefined variable: consecutivo in /home3/grupoasi/public_html/integradoor.com/Test/extensiones/tcpdf/pdf/comparadorPesados.php on line 107
+[30-Jan-2024 08:50:31 America/Bogota] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, bool given in /home3/grupoasi/public_html/integradoor.com/Test/extensiones/tcpdf/pdf/comparadorPesados.php on line 42
+[30-Jan-2024 08:50:31 America/Bogota] PHP Notice:  Undefined index: f_registro in /home3/grupoasi/public_html/integradoor.com/Test/extensiones/tcpdf/pdf/comparadorPesados.php on line 102
+[30-Jan-2024 08:50:31 America/Bogota] PHP Notice:  Undefined variable: consecutivo in /home3/grupoasi/public_html/integradoor.com/Test/extensiones/tcpdf/pdf/comparadorPesados.php on line 106
+[30-Jan-2024 08:50:31 America/Bogota] PHP Notice:  Undefined variable: consecutivo in /home3/grupoasi/public_html/integradoor.com/Test/extensiones/tcpdf/pdf/comparadorPesados.php on line 106
+[30-Jan-2024 08:50:31 America/Bogota] PHP Notice:  Undefined variable: consecutivo in /home3/grupoasi/public_html/integradoor.com/Test/extensiones/tcpdf/pdf/comparadorPesados.php on line 107
+[30-Jan-2024 09:01:08 America/Bogota] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, bool given in /home3/grupoasi/public_html/integradoor.com/Test/extensiones/tcpdf/pdf/comparadorMotos.php on line 42
+[30-Jan-2024 09:01:08 America/Bogota] PHP Notice:  Undefined index: f_registro in /home3/grupoasi/public_html/integradoor.com/Test/extensiones/tcpdf/pdf/comparadorMotos.php on line 102
+[30-Jan-2024 09:01:08 America/Bogota] PHP Notice:  Undefined variable: consecutivo in /home3/grupoasi/public_html/integradoor.com/Test/extensiones/tcpdf/pdf/comparadorMotos.php on line 106
+[30-Jan-2024 09:01:08 America/Bogota] PHP Notice:  Undefined variable: consecutivo in /home3/grupoasi/public_html/integradoor.com/Test/extensiones/tcpdf/pdf/comparadorMotos.php on line 106
+[30-Jan-2024 09:01:08 America/Bogota] PHP Notice:  Undefined variable: consecutivo in /home3/grupoasi/public_html/integradoor.com/Test/extensiones/tcpdf/pdf/comparadorMotos.php on line 107
+[30-Jan-2024 09:04:04 America/Bogota] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, bool given in /home3/grupoasi/public_html/integradoor.com/Test/extensiones/tcpdf/pdf/comparadorMotos.php on line 42
+[30-Jan-2024 09:04:04 America/Bogota] PHP Notice:  Undefined index: f_registro in /home3/grupoasi/public_html/integradoor.com/Test/extensiones/tcpdf/pdf/comparadorMotos.php on line 102
+[30-Jan-2024 09:04:04 America/Bogota] PHP Notice:  Undefined variable: consecutivo in /home3/grupoasi/public_html/integradoor.com/Test/extensiones/tcpdf/pdf/comparadorMotos.php on line 106
+[30-Jan-2024 09:04:04 America/Bogota] PHP Notice:  Undefined variable: consecutivo in /home3/grupoasi/public_html/integradoor.com/Test/extensiones/tcpdf/pdf/comparadorMotos.php on line 106
+[30-Jan-2024 09:04:04 America/Bogota] PHP Notice:  Undefined variable: consecutivo in /home3/grupoasi/public_html/integradoor.com/Test/extensiones/tcpdf/pdf/comparadorMotos.php on line 107
+[01-Feb-2024 10:31:44 America/Bogota] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, bool given in /home3/grupoasi/public_html/integradoor.com/Test/extensiones/tcpdf/pdf/comparadorMotos.php on line 42
+[01-Feb-2024 10:31:44 America/Bogota] PHP Notice:  Undefined index: f_registro in /home3/grupoasi/public_html/integradoor.com/Test/extensiones/tcpdf/pdf/comparadorMotos.php on line 102
+[01-Feb-2024 10:31:44 America/Bogota] PHP Notice:  Undefined variable: consecutivo in /home3/grupoasi/public_html/integradoor.com/Test/extensiones/tcpdf/pdf/comparadorMotos.php on line 106
+[01-Feb-2024 10:31:44 America/Bogota] PHP Notice:  Undefined variable: consecutivo in /home3/grupoasi/public_html/integradoor.com/Test/extensiones/tcpdf/pdf/comparadorMotos.php on line 106
+[01-Feb-2024 10:31:44 America/Bogota] PHP Notice:  Undefined variable: consecutivo in /home3/grupoasi/public_html/integradoor.com/Test/extensiones/tcpdf/pdf/comparadorMotos.php on line 107

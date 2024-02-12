@@ -470,3 +470,4 @@
 [31-Oct-2023 18:59:01 UTC] PHP Notice:  Undefined variable: valor in /home3/grupoasi/public_html/integradoor.com/Test/src/fasecolda/edadveh.php on line 65
 [08-Nov-2023 02:50:47 UTC] PHP Warning:  log() expects parameter 1 to be float, array given in /home3/grupoasi/public_html/integradoor.com/Test/src/fasecolda/edadveh.php on line 31
 [08-Nov-2023 02:50:47 UTC] PHP Notice:  Undefined variable: valor in /home3/grupoasi/public_html/integradoor.com/Test/src/fasecolda/edadveh.php on line 84
+[23-Jan-2024 20:00:35 UTC] PHP Notice:  Undefined index: clasveh in /home3/grupoasi/public_html/integradoor.com/Test/src/fasecolda/referencia1.php on line 5

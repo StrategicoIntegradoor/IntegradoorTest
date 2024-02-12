@@ -9012,3 +9012,6 @@ Stack trace:
 [05-Jan-2024 16:42:06 UTC] PHP Notice:  Undefined index: saludo in /home3/grupoasi/public_html/integradoor.com/Test/ajax/cargarRoll.php on line 4
 [12-Jan-2024 14:08:37 UTC] PHP Notice:  Undefined index: saludo in /home3/grupoasi/public_html/integradoor.com/Test/ajax/cargarRoll.php on line 4
 [15-Jan-2024 14:05:55 UTC] PHP Notice:  Undefined index: saludo in /home3/grupoasi/public_html/integradoor.com/Test/ajax/cargarRoll.php on line 4
+[26-Jan-2024 20:43:46 UTC] PHP Notice:  Undefined index: saludo in /home3/grupoasi/public_html/integradoor.com/Test/ajax/cargarRoll.php on line 4
+[26-Jan-2024 20:44:21 UTC] PHP Notice:  Undefined index: saludo in /home3/grupoasi/public_html/integradoor.com/Test/ajax/cargarRoll.php on line 4
+[26-Jan-2024 20:45:03 UTC] PHP Notice:  Undefined index: saludo in /home3/grupoasi/public_html/integradoor.com/Test/ajax/cargarRoll.php on line 4

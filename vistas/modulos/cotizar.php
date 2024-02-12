@@ -254,7 +254,7 @@ if ($_SESSION["permisos"]["Cotizarlivianos"] != "x") {
 }
 
 
-if ($_SESSION['permisos']['id_rol'] == '') {
+if ($_SESSION['permisos']['id_rol'] == '19') {
   echo '<script>
 
     window.location = "https://integradoor.com/app/cotizar";
