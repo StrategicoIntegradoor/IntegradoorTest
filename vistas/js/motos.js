@@ -1005,6 +1005,18 @@ function registrarOfertaMotos(
     var cre_axa_validacionEventos = document.getElementById("cre_axa_validacionEventos").value;
     var url_axa =document.getElementById("url_axa").value;
 
+    /**
+     * Variables para Allianz
+     */
+  
+    var cre_alli_sslcertfile = document.getElementById("cre_alli_sslcertfile").value;
+    var cre_alli_sslkeyfile = document.getElementById("cre_alli_sslkeyfile").value;
+    var cre_alli_passphrase = document.getElementById("cre_alli_passphrase").value;
+    var cre_alli_partnerid = document.getElementById("cre_alli_partnerid").value;
+    var cre_alli_agentid = document.getElementById("cre_alli_agentid").value;
+    var cre_alli_partnercode = document.getElementById("cre_alli_partnercode").value;
+    var cre_alli_agentcode = document.getElementById("cre_alli_agentcode").value;
+
   
     if (ciudadCirculacion.length == 4) {
       ciudadCirculacion = "0" + ciudadCirculacion;
@@ -1072,7 +1084,16 @@ function registrarOfertaMotos(
           cre_axa_canal: cre_axa_canal,
           cre_axa_validacionEventos: cre_axa_validacionEventos,
           url_axa:url_axa
-        }
+        },
+        ALLIANZ: {
+          cre_alli_sslcertfile: cre_alli_sslcertfile,
+          cre_alli_sslkeyfile: cre_alli_sslkeyfile,
+          cre_alli_passphrase: cre_alli_passphrase,
+          cre_alli_partnerid: cre_alli_partnerid,
+          cre_alli_agentid: cre_alli_agentid,
+          cre_alli_partnercode: cre_alli_partnercode,
+          cre_alli_agentcode: cre_alli_agentcode
+        },
       };
   
       var requestOptions = {
@@ -1146,30 +1167,30 @@ function registrarOfertaMotos(
           
 
         /*SBS*/
-        cont.push(
-          fetch("https://grupoasistencia.com/motor_webservice_tst/SBS", requestOptions)
-          .then((res) => {
-              if (!res.ok) throw Error(res.statusText);
-              return res.json();
-          })
-          .then((ofertas) => {
-              let result = ofertas
-              if (typeof result[0].Resultado !== 'undefined') {
-              agregarAseguradoraFallidaMotos('SBS')
-              result[0].Mensajes.forEach(mensaje => {
-                  mostrarAlertarCotizacionFallida('SBS', mensaje)
-              })
-              } else {
-              validarOfertasMotos(result);
-              mostrarAlertaCotizacionExitosa('SBS')
-              }
-          })
-          .catch((err) => {
-              agregarAseguradoraFallidaMotos('SBS');
-              mostrarAlertarCotizacionFallida('SBS', "Error de servicio, intente de nuevo");
-              console.error(err);
-          })
-        )
+        // cont.push(
+        //   fetch("https://grupoasistencia.com/motor_webservice_tst/SBS", requestOptions)
+        //   .then((res) => {
+        //       if (!res.ok) throw Error(res.statusText);
+        //       return res.json();
+        //   })
+        //   .then((ofertas) => {
+        //       let result = ofertas
+        //       if (typeof result[0].Resultado !== 'undefined') {
+        //       agregarAseguradoraFallidaMotos('SBS')
+        //       result[0].Mensajes.forEach(mensaje => {
+        //           mostrarAlertarCotizacionFallida('SBS', mensaje)
+        //       })
+        //       } else {
+        //       validarOfertasMotos(result);
+        //       mostrarAlertaCotizacionExitosa('SBS')
+        //       }
+        //   })
+        //   .catch((err) => {
+        //       agregarAseguradoraFallidaMotos('SBS');
+        //       mostrarAlertarCotizacionFallida('SBS', "Error de servicio, intente de nuevo");
+        //       console.error(err);
+        //   })
+        // )
 
         /* AXA */
         // cont.push(
@@ -1198,31 +1219,63 @@ function registrarOfertaMotos(
         // )
 
         /* LIBERTY */ 
+        // cont.push(
+        //   fetch("https://grupoasistencia.com/motor_webservice_tst/Liberty", requestOptions)
+        //   .then((res) => {
+        //       if (!res.ok) throw Error(res.statusText);
+        //       return res.json();
+        //   })
+        //   .then((ofertas) => {
+        //       if (typeof ofertas[0].Resultado !== 'undefined') {
+        //       agregarAseguradoraFallidaMotos('Liberty')
+        //       ofertas[0].Mensajes.forEach(mensaje => {
+        //           mostrarAlertarCotizacionFallida('Liberty', mensaje)
+        //       })
+        //       } else {
+        //       validarOfertasMotos(ofertas);
+        //       mostrarAlertaCotizacionExitosa('Liberty')
+        //       }
+        //   })
+        //   .catch((err) => {
+        //       agregarAseguradoraFallidaMotos('Liberty');
+        //       mostrarAlertarCotizacionFallida('Liberty', "Error de servicio, intente de nuevo");
+        //       console.error(err);
+        //   })
+        // )
+        
+         /* Allianz */ 
         cont.push(
-          fetch("https://grupoasistencia.com/motor_webservice_tst/Liberty", requestOptions)
-          .then((res) => {
-              if (!res.ok) throw Error(res.statusText);
-              return res.json();
-          })
-          .then((ofertas) => {
-              if (typeof ofertas[0].Resultado !== 'undefined') {
-              agregarAseguradoraFallidaMotos('Liberty')
-              ofertas[0].Mensajes.forEach(mensaje => {
-                  mostrarAlertarCotizacionFallida('Liberty', mensaje)
-              })
-              } else {
-              validarOfertasMotos(ofertas);
-              mostrarAlertaCotizacionExitosa('Liberty')
+          fetch("https://grupoasistencia.com/motor_webservice_tst2/Allianz?callback=myCallback", requestOptions)
+            .then((res) => {
+              if (res.status === 500) {
+                  throw Error("Error interno del servidor (HTTP 500)");
               }
-          })
-          .catch((err) => {
-              agregarAseguradoraFallidaMotos('Liberty');
-              mostrarAlertarCotizacionFallida('Liberty', "Error de servicio, intente de nuevo");
+              if (!res.ok) {
+                  throw Error(res.statusText);
+              }
+              return res.json();
+            })
+            .then((ofertas) => {
+              if (typeof ofertas[0].Resultado !== 'undefined') {
+                agregarAseguradoraFallida('Allianz');
+                validarProblema('Allianz', ofertas);
+                ofertas[0].Mensajes.forEach(mensaje => {
+                  mostrarAlertarCotizacionFallida('Allianz', mensaje)
+                })
+              } else {
+                const contadorPorEntidad = validarOfertas(ofertas,'Allianz', 1);
+                mostrarAlertaCotizacionExitosa('Allianz', contadorPorEntidad)
+              }
+            })
+            .catch((err) => {
+              agregarAseguradoraFallida('Allianz')
+              mostrarAlertarCotizacionFallida('Allianz', "Error de conexión. Intente de nuevo o comuníquese con el equipo comercial");
               console.error(err);
-          })
-        )
-        
-        
+            })
+        );
+
+
+
         // Llamar a esta función cuando todas las promesas se resuelvan
         function ejecutarDespuesDePromesas() {
             
