@@ -2316,7 +2316,7 @@ const obtenerPdfprevisora = async (cotizacion) => {
 
   const pdfText = await fetch(
 
-    "https://www.grupoasistencia.com/motor_webservice_tst/WSPrevisora/get_pdf_previsora.php",
+    "https://www.grupoasistencia.com/motor_webservice_tst/WSPrevisora/get_pdf_previsora_tst.php",
 
     {
 
