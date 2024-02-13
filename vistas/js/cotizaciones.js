@@ -1101,7 +1101,13 @@ function editarCotizacion(id) {
 
       console.log("Valor de #mundial:", respuesta["cot_mundial"]);
 
-      var fecha = respuesta["cli_fch_nacimiento"].split("-");
+      if (respuesta && respuesta["cli_fch_nacimiento"]) {
+        var fecha = respuesta["cli_fch_nacimiento"].split("-");
+        // Resto del código que utiliza 'fecha'
+      } else {
+          console.error("La propiedad 'cli_fch_nacimiento' no está definida o es null/undefined.");
+      }
+    
 
       var nombreMes = obtenerNombreMes(fecha[1]);
 
