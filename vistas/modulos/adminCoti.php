@@ -42,6 +42,26 @@ if ($_SESSION["permisos"]["administracionCotizaciones"] != "x") {
             transition: 0.5s;
           }
 
+          #daterange-container {
+            display: inline-block;
+          }
+
+          .custom-daterangepicker {
+            padding: 5px 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            background-color: #fff;
+            cursor: pointer;
+          }
+
+          .custom-daterangepicker span {
+            margin-right: 10px;
+          }
+
+          .custom-daterangepicker i {
+            margin-right: 5px;
+          }
+
         </style>
 
 <div class="content-wrapper">
