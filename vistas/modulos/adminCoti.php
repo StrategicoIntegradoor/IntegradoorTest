@@ -48,9 +48,10 @@ if ($_SESSION["permisos"]["administracionCotizaciones"] != "x") {
 
           .custom-daterangepicker {
             padding: 5px 10px;
-            border: 1px solid #ccc;
+            border: 1px solid #3498db; /* Cambia el color del borde a azul */
             border-radius: 4px;
-            background-color: #fff;
+            background-color: #3498db; /* Cambia el color de fondo a azul */
+            color: #fff; /* Cambia el color del texto a blanco */
             cursor: pointer;
           }
 
