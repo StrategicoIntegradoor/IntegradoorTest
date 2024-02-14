@@ -916,7 +916,7 @@ $(document).ready(function () {
 
         "index.php?ruta=adminCoti&" +
         
-        "fechaInicialCotizaciones="
+        "fechaInicialCotizaciones=" +
 
         fechaInicialCotizaciones +
 
