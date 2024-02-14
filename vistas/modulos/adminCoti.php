@@ -42,27 +42,6 @@ if ($_SESSION["permisos"]["administracionCotizaciones"] != "x") {
             transition: 0.5s;
           }
 
-          #daterange-container {
-            display: inline-block;
-          }
-
-          .custom-daterangepicker {
-            padding: 5px 10px;
-            border: 1px solid #3498db; /* Cambia el color del borde a azul */
-            border-radius: 4px;
-            background-color: #3498db; /* Cambia el color de fondo a azul */
-            color: #fff; /* Cambia el color del texto a blanco */
-            cursor: pointer;
-          }
-
-          .custom-daterangepicker span {
-            margin-right: 10px;
-          }
-
-          .custom-daterangepicker i {
-            margin-right: 5px;
-          }
-
         </style>
 
 <div class="content-wrapper">
