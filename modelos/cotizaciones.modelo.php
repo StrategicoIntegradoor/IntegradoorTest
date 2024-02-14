@@ -381,8 +381,8 @@ class ModeloCotizaciones{
 			$stmt->bindParam(":fechaFinalCotizaciones", $fechaFinalCotizaciones, PDO::PARAM_STR);
 			$stmt->bindParam(":idIntermediario", $_SESSION["intermediario"], PDO::PARAM_INT);
 
-			// $stmt->execute();
-			var_dump($stmt->execute());
+			$stmt->execute();
+			var_dump($stmt->fetchAll(PDO::FETCH_ASSOC));
 			die();
 			return $stmt->fetchAll(PDO::FETCH_ASSOC);
 	
