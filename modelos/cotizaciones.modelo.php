@@ -377,6 +377,7 @@ class ModeloCotizaciones{
 				AND usuarios.id_Intermediario = :idIntermediario $condicion
 			");
 
+			$fechaInicialCotizaciones = date_format($fechaInicialCotizaciones, "Y-m-01 00:00:00");
 			$stmt->bindParam(":fechaInicialCotizaciones", $fechaInicialCotizaciones, PDO::PARAM_STR);
 			$stmt->bindParam(":fechaFinalCotizaciones", $fechaFinalCotizaciones, PDO::PARAM_STR);
 			$stmt->bindParam(":idIntermediario", $_SESSION["intermediario"], PDO::PARAM_INT);
