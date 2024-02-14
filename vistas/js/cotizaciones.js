@@ -1117,33 +1117,35 @@ function editarCotizacion(id) {
       }
     
 
-      $("#dianacimiento").append(
-
-        "<option value='" + fecha[2] + "' selected>" + fecha[2] + "</option>"
-
-      );
-
-      $("#mesnacimiento").append(
-
-        "<option value='" +
-
-        fecha[1] +
-
-        "' selected>" +
-
-        nombreMes[0].toUpperCase() +
-
-        nombreMes.slice(1) +
-
-        "</option>"
-
-      );
-
-      $("#anionacimiento").append(
-
-        "<option value='" + fecha[0] + "' selected>" + fecha[0] + "</option>"
-
-      );
+      if (fecha && Array.isArray(fecha) && fecha.length >= 3) {
+        $("#dianacimiento").append(
+            "<option value='" + fecha[2] + "' selected>" + fecha[2] + "</option>"
+        );
+      } else {
+          console.error("La variable 'fecha' no está definida, no es un array o no tiene al menos tres elementos.");
+      }
+      
+      if (fecha && Array.isArray(fecha) && fecha.length >= 1 && nombreMes) {
+          $("#mesnacimiento").append(
+              "<option value='" +
+              fecha[1] +
+              "' selected>" +
+              nombreMes[0].toUpperCase() +
+              nombreMes.slice(1) +
+              "</option>"
+          );
+      } else {
+          console.error("La variable 'fecha' no está definida, no es un array o no tiene al menos un elemento, o 'nombreMes' no está definida.");
+      }
+      
+      if (fecha && Array.isArray(fecha) && fecha.length >= 1) {
+          $("#anionacimiento").append(
+              "<option value='" + fecha[0] + "' selected>" + fecha[0] + "</option>"
+          );
+      } else {
+          console.error("La variable 'fecha' no está definida, no es un array o no tiene al menos un elemento.");
+      }
+    
 
 
 
