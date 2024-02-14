@@ -368,20 +368,21 @@ class ModeloCotizaciones{
 			return $stmt->fetchAll(PDO::FETCH_ASSOC);
 		} else if ($fechaInicialCotizaciones == $fechaFinalCotizaciones) {
 			$stmt = Conexion::conectar()->prepare("
-				SELECT * FROM $tabla, $tabla2, $tabla3, $tabla4, $tabla5 
-				WHERE $tabla.id_cliente = $tabla2.id_cliente
-					AND $tabla.id_usuario = $tabla5.id_usuario 
-					AND $tabla2.id_tipo_documento = $tabla3.id_tipo_documento 
-					AND $tabla2.id_estado_civil = $tabla4.id_estado_civil 
-					AND cot_fch_cotizacion LIKE '%$fechaFinalCotizaciones%' 
-					AND usuarios.id_Intermediario = :idIntermediario $condicion
+			SELECT * FROM $tabla, $tabla2, $tabla3, $tabla4, $tabla5 
+			WHERE $tabla.id_cliente = $tabla2.id_cliente
+				AND $tabla.id_usuario = $tabla5.id_usuario 
+				AND $tabla2.id_tipo_documento = $tabla3.id_tipo_documento 
+				AND $tabla2.id_estado_civil = $tabla4.id_estado_civil 
+				AND cot_fch_cotizacion BETWEEN :fechaInicialCotizaciones AND :fechaFinalCotizaciones
+				AND usuarios.id_Intermediario = :idIntermediario $condicion
 			");
-	
-			$stmt->bindParam(":cot_fch_cotizacion", $fechaFinalCotizaciones, PDO::PARAM_STR);
+
+			$stmt->bindParam(":fechaInicialCotizaciones", $fechaInicialCotizaciones, PDO::PARAM_STR);
+			$stmt->bindParam(":fechaFinalCotizaciones", $fechaFinalCotizaciones, PDO::PARAM_STR);
 			$stmt->bindParam(":idIntermediario", $_SESSION["intermediario"], PDO::PARAM_INT);
-	
+
 			$stmt->execute();
-	
+
 			return $stmt->fetchAll(PDO::FETCH_ASSOC);
 	
 		} else {
