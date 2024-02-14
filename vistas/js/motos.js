@@ -1263,8 +1263,8 @@ function registrarOfertaMotos(
                   mostrarAlertarCotizacionFallida('Allianz', mensaje)
                 })
               } else {
-                const contadorPorEntidad = validarOfertas(ofertas,'Allianz', 1);
-                mostrarAlertaCotizacionExitosa('Allianz', contadorPorEntidad)
+                validarOfertasMotos(ofertas);
+                mostrarAlertaCotizacionExitosa('Allianz')
               }
             })
             .catch((err) => {
