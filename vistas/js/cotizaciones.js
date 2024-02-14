@@ -1109,7 +1109,13 @@ function editarCotizacion(id) {
       }
     
 
-      var nombreMes = obtenerNombreMes(fecha[1]);
+      if (fecha && Array.isArray(fecha) && fecha.length > 1) {
+          var nombreMes = obtenerNombreMes(fecha[1]);
+          // Resto del código que utiliza 'nombreMes'
+      } else {
+          console.error("La variable 'fecha' no está definida, no es un array o no tiene al menos dos elementos.");
+      }
+    
 
       $("#dianacimiento").append(
 
