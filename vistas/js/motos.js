@@ -1187,7 +1187,7 @@ function registrarOfertaMotos(
         //   })
         //   .catch((err) => {
         //       agregarAseguradoraFallidaMotos('SBS');
-        //       mostrarAlertarCotizacionFallida('SBS', "Error de servicio, intente de nuevo");
+        //       mostrarAlertarCotizacionFallida('SBS', "Error de conexión. Intente de nuevo o comuníquese con el equipo comercial");
         //       console.error(err);
         //   })
         // )
@@ -1213,7 +1213,7 @@ function registrarOfertaMotos(
         //   })
         //   .catch((err) => {
         //       agregarAseguradoraFallidaMotos('AXA');
-        //       mostrarAlertarCotizacionFallida('AXA', "Error de servicio, intente de nuevo");
+        //       mostrarAlertarCotizacionFallida('AXA', "Error de conexión. Intente de nuevo o comuníquese con el equipo comercial");
         //       console.error(err);
         //   })
         // )
@@ -1238,7 +1238,7 @@ function registrarOfertaMotos(
         //   })
         //   .catch((err) => {
         //       agregarAseguradoraFallidaMotos('Liberty');
-        //       mostrarAlertarCotizacionFallida('Liberty', "Error de servicio, intente de nuevo");
+        //       mostrarAlertarCotizacionFallida('Liberty', "Error de conexión. Intente de nuevo o comuníquese con el equipo comercial");
         //       console.error(err);
         //   })
         // )
@@ -1257,7 +1257,7 @@ function registrarOfertaMotos(
             })
             .then((ofertas) => {
               if (typeof ofertas[0].Resultado !== 'undefined') {
-                agregarAseguradoraFallida('Allianz');
+                agregarAseguradoraFallidaMotos('Allianz');
                 validarProblema('Allianz', ofertas);
                 ofertas[0].Mensajes.forEach(mensaje => {
                   mostrarAlertarCotizacionFallida('Allianz', mensaje)
@@ -1268,7 +1268,7 @@ function registrarOfertaMotos(
               }
             })
             .catch((err) => {
-              agregarAseguradoraFallida('Allianz')
+              agregarAseguradoraFallidaMotos('Allianz')
               mostrarAlertarCotizacionFallida('Allianz', "Error de conexión. Intente de nuevo o comuníquese con el equipo comercial");
               console.error(err);
             })
