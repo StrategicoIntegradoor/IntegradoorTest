@@ -914,7 +914,9 @@ $(document).ready(function () {
 
       window.location =
 
-        "index.php?ruta=inicio&fechaInicialCotizaciones=" +
+        "index.php?ruta=adminCoti&" +
+        
+        "fechaInicialCotizaciones="
 
         fechaInicialCotizaciones +
 
