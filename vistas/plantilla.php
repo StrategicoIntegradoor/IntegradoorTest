@@ -1,6 +1,17 @@
 <?php
 
 session_start();
+if ($_SESSION['permisos']['id_rol'] == '19') {
+  echo '<script>
+
+    window.location = "https://integradoor.com/app/cotizar";
+
+  </script>';
+
+  return;
+  
+  // Detén la ejecución del script actual
+}
 
 ?>
 
