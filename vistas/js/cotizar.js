@@ -2277,7 +2277,7 @@ $(document).ready(function () {
       
                   /* HDI */
                   cont.push(
-                    fetch("https://grupoasistencia.com12324/motor_webservice_tst2/HDI?callback=myCallback", requestOptions)
+                    fetch("https://grupoasistencia.com/motor_webservice/HdiPlus?callback=myCallback", requestOptions)
                       .then((res) => {
                         if (!res.ok) throw Error(res.statusText);
                         return res.json();
