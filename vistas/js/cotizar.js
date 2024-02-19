@@ -2276,31 +2276,31 @@ $(document).ready(function () {
                   // );
       
                   /* HDI */
-                  // cont.push(
-                  //   fetch("https://grupoasistencia.com12324/motor_webservice_tst2/HDI?callback=myCallback", requestOptions)
-                  //     .then((res) => {
-                  //       if (!res.ok) throw Error(res.statusText);
-                  //       return res.json();
-                  //     })
-                  //     .then((ofertas) => {
-                  //       // console.log(ofertas)
-                  //       if (typeof ofertas[0].Resultado !== 'undefined') {
-                  //         agregarAseguradoraFallida('HDI');
-                  //         validarProblema('HDI', ofertas);
-                  //         ofertas[0].Mensajes.forEach(mensaje => {
-                  //           mostrarAlertarCotizacionFallida('HDI', mensaje)
-                  //         })
-                  //       } else {
-                  //         const contadorPorEntidad = validarOfertas(ofertas,'HDI', 1);
-                  //         mostrarAlertaCotizacionExitosa('HDI', contadorPorEntidad)
-                  //       }
-                  //     })
-                  //     .catch((err) => {
-                  //       // agregarAseguradoraFallida('HDI');
-                  //       mostrarAlertarCotizacionFallida('HDI', "Servicio en mantenimiento");
-                  //       console.error(err);
-                  //     })
-                  // );
+                  cont.push(
+                    fetch("https://grupoasistencia.com12324/motor_webservice_tst2/HDI?callback=myCallback", requestOptions)
+                      .then((res) => {
+                        if (!res.ok) throw Error(res.statusText);
+                        return res.json();
+                      })
+                      .then((ofertas) => {
+                        // console.log(ofertas)
+                        if (typeof ofertas[0].Resultado !== 'undefined') {
+                          agregarAseguradoraFallida('HDI');
+                          validarProblema('HDI', ofertas);
+                          ofertas[0].Mensajes.forEach(mensaje => {
+                            mostrarAlertarCotizacionFallida('HDI', mensaje)
+                          })
+                        } else {
+                          const contadorPorEntidad = validarOfertas(ofertas,'HDI', 1);
+                          mostrarAlertaCotizacionExitosa('HDI', contadorPorEntidad)
+                        }
+                      })
+                      .catch((err) => {
+                        // agregarAseguradoraFallida('HDI');
+                        mostrarAlertarCotizacionFallida('HDI', "Servicio en mantenimiento");
+                        console.error(err);
+                      })
+                  );
     
                   /* Zurich */
                   // let zurichStates = {};
