@@ -2284,10 +2284,10 @@ $(document).ready(function () {
                       })
                       .then((ofertas) => {
                         // console.log(ofertas)
-                        if (typeof ofertas[0].Resultado !== 'undefined') {
+                        if (typeof ofertas.Resultado !== 'undefined') {
                           agregarAseguradoraFallida('HDI');
                           validarProblema('HDI', ofertas);
-                          ofertas[0].Mensajes.forEach(mensaje => {
+                          ofertas.Mensajes.forEach(mensaje => {
                             mostrarAlertarCotizacionFallida('HDI', mensaje)
                           })
                         } else {
@@ -2297,7 +2297,7 @@ $(document).ready(function () {
                       })
                       .catch((err) => {
                         // agregarAseguradoraFallida('HDI');
-                        mostrarAlertarCotizacionFallida('HDI', "Servicio en mantenimiento");
+                        mostrarAlertarCotizacionFallida('HDI', "Error de conexión. Intente de nuevo o comuníquese con el equipo comercial");
                         console.error(err);
                       })
                   );
