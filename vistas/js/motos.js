@@ -1245,7 +1245,7 @@ function registrarOfertaMotos(
         
          /* Allianz */ 
         cont.push(
-          fetch("https://grupoasistencia.com/motor_webservice_tst2/Allianz?callback=myCallback", requestOptions)
+          fetch("https://grupoasistencia.com/motor_webservice_tst2/Allianz_motos?callback=myCallback", requestOptions)
             .then((res) => {
               if (res.status === 500) {
                   throw Error("Error interno del servidor (HTTP 500)");
