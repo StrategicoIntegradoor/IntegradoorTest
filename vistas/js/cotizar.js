@@ -2195,32 +2195,32 @@ $(document).ready(function () {
                   // );
       
                   /* Previsora */
-                  cont.push(
-                    fetch("https://grupoasistencia.com/motor_webservice_tst2/Previsora_tst?callback=myCallback", requestOptions)
-                      .then((res) => {
-                        if (!res.ok) throw Error(res.statusText);
-                        return res.json();
-                      })
-                      .then((ofertas) => {
-                        // console.log(ofertas)
-                        if (typeof ofertas[0].Resultado !== 'undefined') {
-                          agregarAseguradoraFallida('Previsora');
-                          validarProblema('Previsora', ofertas);
-                          ofertas[0].Mensajes.forEach(mensaje => {
-                            mostrarAlertarCotizacionFallida('Previsora', mensaje)
-                          })
-                        } else {
-                          // guardarAlertas('Previsora', 1);
-                          const contadorPorEntidad = validarOfertas(ofertas,'Previsora', 1);
-                          mostrarAlertaCotizacionExitosa('Previsora', contadorPorEntidad)
-                        }
-                      })
-                      .catch((err) => {
-                        agregarAseguradoraFallida('Previsora')
-                        mostrarAlertarCotizacionFallida('Previsora', "Error de conexión. Intente de nuevo o comuníquese con el equipo comercial");
-                        console.error(err);
-                      })
-                  );
+                  // cont.push(
+                  //   fetch("https://grupoasistencia.com/motor_webservice_tst2/Previsora_tst?callback=myCallback", requestOptions)
+                  //     .then((res) => {
+                  //       if (!res.ok) throw Error(res.statusText);
+                  //       return res.json();
+                  //     })
+                  //     .then((ofertas) => {
+                  //       // console.log(ofertas)
+                  //       if (typeof ofertas[0].Resultado !== 'undefined') {
+                  //         agregarAseguradoraFallida('Previsora');
+                  //         validarProblema('Previsora', ofertas);
+                  //         ofertas[0].Mensajes.forEach(mensaje => {
+                  //           mostrarAlertarCotizacionFallida('Previsora', mensaje)
+                  //         })
+                  //       } else {
+                  //         // guardarAlertas('Previsora', 1);
+                  //         const contadorPorEntidad = validarOfertas(ofertas,'Previsora', 1);
+                  //         mostrarAlertaCotizacionExitosa('Previsora', contadorPorEntidad)
+                  //       }
+                  //     })
+                  //     .catch((err) => {
+                  //       agregarAseguradoraFallida('Previsora')
+                  //       mostrarAlertarCotizacionFallida('Previsora', "Error de conexión. Intente de nuevo o comuníquese con el equipo comercial");
+                  //       console.error(err);
+                  //     })
+                  // );
       
                   /* Equidad */
                   // cont.push(
@@ -2444,35 +2444,35 @@ $(document).ready(function () {
                   // );
       
                   /* Allianz */
-                  cont.push(
-                    fetch("https://grupoasistencia.com/motor_webservice_tst2/Allianz?callback=myCallback", requestOptions)
-                      .then((res) => {
-                        if (res.status === 500) {
-                            throw Error("Error interno del servidor (HTTP 500)");
-                        }
-                        if (!res.ok) {
-                            throw Error(res.statusText);
-                        }
-                        return res.json();
-                      })
-                      .then((ofertas) => {
-                        if (typeof ofertas[0].Resultado !== 'undefined') {
-                          agregarAseguradoraFallida('Allianz');
-                          validarProblema('Allianz', ofertas);
-                          ofertas[0].Mensajes.forEach(mensaje => {
-                            mostrarAlertarCotizacionFallida('Allianz', mensaje)
-                          })
-                        } else {
-                          const contadorPorEntidad = validarOfertas(ofertas,'Allianz', 1);
-                          mostrarAlertaCotizacionExitosa('Allianz', contadorPorEntidad)
-                        }
-                      })
-                      .catch((err) => {
-                        agregarAseguradoraFallida('Allianz')
-                        mostrarAlertarCotizacionFallida('Allianz', "Error de conexión. Intente de nuevo o comuníquese con el equipo comercial");
-                        console.error(err);
-                      })
-                  );
+                  // cont.push(
+                  //   fetch("https://grupoasistencia.com/motor_webservice_tst2/Allianz?callback=myCallback", requestOptions)
+                  //     .then((res) => {
+                  //       if (res.status === 500) {
+                  //           throw Error("Error interno del servidor (HTTP 500)");
+                  //       }
+                  //       if (!res.ok) {
+                  //           throw Error(res.statusText);
+                  //       }
+                  //       return res.json();
+                  //     })
+                  //     .then((ofertas) => {
+                  //       if (typeof ofertas[0].Resultado !== 'undefined') {
+                  //         agregarAseguradoraFallida('Allianz');
+                  //         validarProblema('Allianz', ofertas);
+                  //         ofertas[0].Mensajes.forEach(mensaje => {
+                  //           mostrarAlertarCotizacionFallida('Allianz', mensaje)
+                  //         })
+                  //       } else {
+                  //         const contadorPorEntidad = validarOfertas(ofertas,'Allianz', 1);
+                  //         mostrarAlertaCotizacionExitosa('Allianz', contadorPorEntidad)
+                  //       }
+                  //     })
+                  //     .catch((err) => {
+                  //       agregarAseguradoraFallida('Allianz')
+                  //       mostrarAlertarCotizacionFallida('Allianz', "Error de conexión. Intente de nuevo o comuníquese con el equipo comercial");
+                  //       console.error(err);
+                  //     })
+                  // );
       
                   /* AXA */
                   // cont.push(
