@@ -1258,7 +1258,7 @@ function registrarOfertaMotos(
             .then((ofertas) => {
               if (typeof ofertas[0].Resultado !== 'undefined') {
                 agregarAseguradoraFallidaMotos('Allianz');
-                validarProblema('Allianz', ofertas);
+                // validarProblema('Allianz', ofertas);
                 ofertas[0].Mensajes.forEach(mensaje => {
                   mostrarAlertarCotizacionFallida('Allianz', mensaje)
                 })
