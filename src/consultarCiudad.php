@@ -54,6 +54,8 @@ if ($codigo == 32) {
 	$codigoV = 11;
 }else if ($codigo == 10) {
 	$codigoV = 10;
+}else if ($codigo == 25) {
+	$codigoV = 25;
 }
 
 if ($codigo == 5) {
