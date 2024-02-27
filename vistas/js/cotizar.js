@@ -3068,7 +3068,7 @@ $(document).ready(function () {
             celdaResponse.appendChild(loadingElement);
           });
         
-          let cont = [];
+          let conts = [];
   
           /* Solidaria */
           // if (comprobarFallida('Solidaria')) {
@@ -3130,7 +3130,7 @@ $(document).ready(function () {
               })
           : Promise.resolve();
 
-          cont.push(solidariaPromise);
+          conts.push(solidariaPromise);
           
   
   
@@ -3195,7 +3195,7 @@ $(document).ready(function () {
                 })
             : Promise.resolve();
 
-            cont.push(previsoraPromise);
+            conts.push(previsoraPromise);
 
   
           /* Equidad */
@@ -3256,7 +3256,7 @@ $(document).ready(function () {
               })
           : Promise.resolve();
 
-          cont.push(equidadPromise);
+          conts.push(equidadPromise);
           
   
           /* Mapfre */
@@ -3322,7 +3322,7 @@ $(document).ready(function () {
               })
           : Promise.resolve();
 
-          cont.push(mapfrePromise);
+          conts.push(mapfrePromise);
   
   
           /* Bolivar */
@@ -3386,7 +3386,7 @@ $(document).ready(function () {
               })
           : Promise.resolve();
 
-          cont.push(bolivarPromise);
+          conts.push(bolivarPromise);
           
   
           /* HDI */
@@ -3499,7 +3499,7 @@ $(document).ready(function () {
                 })
             : Promise.resolve();
   
-            cont.push(HDIPromise);
+            conts.push(HDIPromise);
 
 
           /* Zurich */
@@ -3597,7 +3597,7 @@ $(document).ready(function () {
                 })
             : Promise.resolve();
 
-          cont.push(ZBasicPromise);
+          conts.push(ZBasicPromise);
 
           // Para 'FULL'
           const ZFullPromise = comprobarFallida('FULL')
@@ -3637,7 +3637,7 @@ $(document).ready(function () {
             })
           : Promise.resolve();
 
-          cont.push(ZFullPromise);
+          conts.push(ZFullPromise);
 
           // Para 'MEDIUM'
           const ZMediumPromise = comprobarFallida('MEDIUM')
@@ -3677,7 +3677,7 @@ $(document).ready(function () {
             })
           : Promise.resolve();
 
-          cont.push(ZMediumPromise);
+          conts.push(ZMediumPromise);
 
           
   
@@ -3800,7 +3800,7 @@ $(document).ready(function () {
                   })
               : Promise.resolve();
 
-            cont.push(aseguradoraPromise);
+            conts.push(aseguradoraPromise);
           });
 
           
@@ -3864,7 +3864,7 @@ $(document).ready(function () {
                 })
             : Promise.resolve();
   
-            cont.push(libertyPromise);
+            conts.push(libertyPromise);
   
           /* Allianz */
           // if (comprobarFallida('Allianz')) {
@@ -3926,7 +3926,7 @@ $(document).ready(function () {
               })
           : Promise.resolve();
 
-          cont.push(allianzPromise);
+          conts.push(allianzPromise);
 
           
           
@@ -3989,7 +3989,7 @@ $(document).ready(function () {
               })
           : Promise.resolve();
 
-          cont.push(axaPromise);
+          conts.push(axaPromise);
   
           /* SBS */
           // if (comprobarFallida('SBS')) {
@@ -4051,7 +4051,7 @@ $(document).ready(function () {
               })
           : Promise.resolve();
 
-          cont.push(sbsPromise);
+          conts.push(sbsPromise);
 
   
           Promise.all(cont).then(() => {
