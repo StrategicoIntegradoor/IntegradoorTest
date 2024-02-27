@@ -4054,7 +4054,7 @@ $(document).ready(function () {
           conts.push(sbsPromise);
 
   
-          Promise.all(cont).then(() => {
+          Promise.all(conts).then(() => {
             
             $("#loaderOferta").html("");
             $("#loaderRecotOferta").html("");
