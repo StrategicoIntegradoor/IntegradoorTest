@@ -1155,6 +1155,7 @@ function registrarOfertaPesados(
     }
 
     //FUNCION QUE ACOMODA LOS NOMBRES DE LOS PLANES CUANDO LLEGA LIBERTY
+    let productoGlobal = producto;
     if (aseguradora == 'Liberty') {
 
       if(producto == 'Pesados Full1'){
@@ -1230,11 +1231,11 @@ function registrarOfertaPesados(
                     <div class="col-xs-12 col-sm-6 col-md-2">
                       <div class="selec-oferta">
                       <label for="seleccionar">SELECCIONAR</label>&nbsp;&nbsp;
-                      <input type="checkbox" class="classSelecOferta" name="selecOferta" id="selec${numCotizOferta}${numId}${producto}\" onclick='seleccionarOferta(\"${aseguradora}\", \"${prima}\", \"${producto}\", \"${numCotizOferta}\", this);' />
+                      <input type="checkbox" class="classSelecOferta" name="selecOferta" id="selec${numCotizOferta}${numId}${productoGlobal}\" onclick='seleccionarOferta(\"${aseguradora}\", \"${prima}\", \"${productoGlobal}\", \"${numCotizOferta}\", this);' />
                       </div>
                       <div class="recom-oferta">
                       <label for="recomendar">RECOMENDAR</label>&nbsp;&nbsp;
-                      <input type="checkbox" class="classRecomOferta" name="recomOferta" id="recom${numCotizOferta}${numId}${producto}\" onclick='recomendarOferta(\"${aseguradora}\", \"${prima}\", \"${producto}\", \"${numCotizOferta}\", this);' />
+                      <input type="checkbox" class="classRecomOferta" name="recomOferta" id="recom${numCotizOferta}${numId}${productoGlobal}\" onclick='recomendarOferta(\"${aseguradora}\", \"${prima}\", \"${productoGlobal}\", \"${numCotizOferta}\", this);' />
                       </div>
                     </div>`;
     if (aseguradora == "Seguros Bolivar" || aseguradora == "Axa Colpatria") {
