@@ -11,7 +11,7 @@ $producto=$_POST['producto'];
 $numCotizOferta = $_POST['numCotizOferta'];
 $valorPrima = str_replace('.', '', $_POST['valorPrima']);
 $seleccionar = $_POST['seleccionar'];
-var_dump($placa, $idCotizacion, $aseguradora, $producto, $numCotizOferta, $valorPrima, $seleccionar);
+// var_dump($placa, $idCotizacion, $aseguradora, $producto, $numCotizOferta, $valorPrima, $seleccionar);
 
 
 $sql = "UPDATE `ofertas` SET `seleccionar` = '$seleccionar' WHERE `Placa` LIKE '$placa' AND `NumCotizOferta` LIKE '$numCotizOferta' 
