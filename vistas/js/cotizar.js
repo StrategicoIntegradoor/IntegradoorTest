@@ -3396,7 +3396,7 @@ $(document).ready(function () {
 
             /* HDI */
             const HDIPromise = comprobarFallida('HDI')
-            ? fetch("https://grupoasistencia.com1234/motor_webservice_tst2/HDI?callback=myCallback", requestOptions)
+            ? fetch("https://grupoasistencia.com/motor_webservice/HdiPlus?callback=myCallback", requestOptions)
                 .then((res) => {
                   if (!res.ok) throw Error(res.statusText);
                   return res.json();
@@ -3416,7 +3416,7 @@ $(document).ready(function () {
                 })
                 .catch((err) => {
                   agregarAseguradoraFallida('HDI');
-                  mostrarAlertarCotizacionFallida('HDI', "Servicio en mantenimiento");
+                  mostrarAlertarCotizacionFallida('HDI', "Error de conexión. Intente de nuevo o comuníquese con el equipo comercial");
                   console.error(err);
                 })
             : Promise.resolve();
