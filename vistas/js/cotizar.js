@@ -2082,6 +2082,33 @@ $(document).ready(function () {
               };
 
               if(intermediario != 78){
+                            
+                  /* HDI */
+                  cont.push(
+                    fetch("https://grupoasistencia.com/motor_webservice/HdiPlus?callback=myCallback", requestOptions)
+                      .then((res) => {
+                        if (!res.ok) throw Error(res.statusText);
+                        return res.json();
+                      })
+                      .then((ofertas) => {
+                        // console.log(ofertas)
+                        if (typeof ofertas[0].Resultado !== 'undefined') {
+                          agregarAseguradoraFallida('HDI');
+                          validarProblema('HDI', ofertas);
+                          ofertas[0].Mensajes.forEach(mensaje => {
+                            mostrarAlertarCotizacionFallida('HDI', mensaje)
+                          })
+                        } else {
+                          const contadorPorEntidad = validarOfertas(ofertas,'HDI', 1);
+                          mostrarAlertaCotizacionExitosa('HDI', contadorPorEntidad)
+                        }
+                      })
+                      .catch((err) => {
+                        agregarAseguradoraFallida('HDI');
+                        mostrarAlertarCotizacionFallida('HDI', "Error de conexión. Intente de nuevo o comuníquese con el equipo comercial");
+                        console.error(err);
+                      })
+                  );
                     
                   /* Solidaria */
                   cont.push(
@@ -2224,33 +2251,6 @@ $(document).ready(function () {
                       .catch((err) => {
                         agregarAseguradoraFallida('Bolivar');
                         mostrarAlertarCotizacionFallida('Bolivar', "Error de conexión. Intente de nuevo o comuníquese con el equipo comercial");
-                        console.error(err);
-                      })
-                  );
-      
-                  /* HDI */
-                  cont.push(
-                    fetch("https://grupoasistencia.com/motor_webservice/HdiPlus?callback=myCallback", requestOptions)
-                      .then((res) => {
-                        if (!res.ok) throw Error(res.statusText);
-                        return res.json();
-                      })
-                      .then((ofertas) => {
-                        // console.log(ofertas)
-                        if (typeof ofertas[0].Resultado !== 'undefined') {
-                          agregarAseguradoraFallida('HDI');
-                          validarProblema('HDI', ofertas);
-                          ofertas[0].Mensajes.forEach(mensaje => {
-                            mostrarAlertarCotizacionFallida('HDI', mensaje)
-                          })
-                        } else {
-                          const contadorPorEntidad = validarOfertas(ofertas,'HDI', 1);
-                          mostrarAlertaCotizacionExitosa('HDI', contadorPorEntidad)
-                        }
-                      })
-                      .catch((err) => {
-                        agregarAseguradoraFallida('HDI');
-                        mostrarAlertarCotizacionFallida('HDI', "Error de conexión. Intente de nuevo o comuníquese con el equipo comercial");
                         console.error(err);
                       })
                   );
