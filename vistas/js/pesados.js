@@ -1741,47 +1741,47 @@ function registrarOfertaPesados(
 
             /* AXA */
               // console.log(condicional)
-            // let bodyAXA = JSON.parse(requestOptions.body);
-            // // let planesAXA = [5308, 5309, 5310, 5311, 5312, 5313];
-            // let planesAXA;
-            // if (condicional == 4 || condicional == 22) {
-            //     planesAXA = [4210, 4211];
-            // } else if (condicional == 23 || condicional == 25) {
-            //     planesAXA = [4212];
-            // } else if (condicional == 3) {
-            //     planesAXA = [4214];
-            // } else if (condicional == 7) {
-            //     planesAXA = [4215];
-            // } else {
-            //     planesAXA = [4213];
-            // }
-            // planesAXA.forEach(plan => {
-            //     bodyAXA.plan = plan;
-            //     requestOptions.body = JSON.stringify(bodyAXA);
+            let bodyAXA = JSON.parse(requestOptions.body);
+            // let planesAXA = [5308, 5309, 5310, 5311, 5312, 5313];
+            let planesAXA;
+            if (condicional == 4 || condicional == 22) {
+                planesAXA = [4799, 4800];
+            } else if (condicional == 23 || condicional == 25) {
+                planesAXA = [4801];
+            } else if (condicional == 3) {
+                planesAXA = [4802];
+            } else if (condicional == 7) {
+                planesAXA = [4804];
+            } else {
+                planesAXA = [4803];
+            }
+            planesAXA.forEach(plan => {
+                bodyAXA.plan = plan;
+                requestOptions.body = JSON.stringify(bodyAXA);
 
-            //     let axaPromise = fetch("https://grupoasistencia.com/motor_webservice_tst/AXA_tst", requestOptions)
-            //         .then((res) => {
-            //             if (!res.ok) throw Error(res.statusText);
-            //             return res.json();
-            //         })
-            //         .then((ofertas) => {
-            //             if (typeof ofertas[0].Resultado !== 'undefined') {
-            //                 agregarAseguradoraFallidaPesados('AXA');
-            //                 ofertas[0].Mensajes.forEach(mensaje => {
-            //                     mostrarAlertarCotizacionFallida('AXA', mensaje);
-            //                 });
-            //             } else {
-            //                 validarOfertasPesados(ofertas);
-            //                 mostrarAlertaCotizacionExitosa('AXA');
-            //             }
-            //         })
-            //         .catch((err) => {
-            //             console.error(err);
-            //         });
+                let axaPromise = fetch("https://grupoasistencia.com/motor_webservice_tst/AXA_tst", requestOptions)
+                    .then((res) => {
+                        if (!res.ok) throw Error(res.statusText);
+                        return res.json();
+                    })
+                    .then((ofertas) => {
+                        if (typeof ofertas[0].Resultado !== 'undefined') {
+                            agregarAseguradoraFallidaPesados('AXA');
+                            ofertas[0].Mensajes.forEach(mensaje => {
+                                mostrarAlertarCotizacionFallida('AXA', mensaje);
+                            });
+                        } else {
+                            validarOfertasPesados(ofertas);
+                            mostrarAlertaCotizacionExitosa('AXA');
+                        }
+                    })
+                    .catch((err) => {
+                        console.error(err);
+                    });
 
-            //     promesas.push(axaPromise);
+                promesas.push(axaPromise);
 
-            // });
+            });
 
 
 
