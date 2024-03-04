@@ -2084,149 +2084,149 @@ $(document).ready(function () {
               if(intermediario != 78){
                             
                   /* HDI */
-                  cont.push(
-                    fetch("https://grupoasistencia.com/motor_webservice/HdiPlus?callback=myCallback", requestOptions)
-                      .then((res) => {
-                        if (!res.ok) throw Error(res.statusText);
-                        return res.json();
-                      })
-                      .then((ofertas) => {
-                        // console.log(ofertas)
-                        if (typeof ofertas[0].Resultado !== 'undefined') {
-                          agregarAseguradoraFallida('HDI');
-                          validarProblema('HDI', ofertas);
-                          ofertas[0].Mensajes.forEach(mensaje => {
-                            mostrarAlertarCotizacionFallida('HDI', mensaje)
-                          })
-                        } else {
-                          const contadorPorEntidad = validarOfertas(ofertas,'HDI', 1);
-                          mostrarAlertaCotizacionExitosa('HDI', contadorPorEntidad)
-                        }
-                      })
-                      .catch((err) => {
-                        agregarAseguradoraFallida('HDI');
-                        mostrarAlertarCotizacionFallida('HDI', "Error de conexión. Intente de nuevo o comuníquese con el equipo comercial");
-                        console.error(err);
-                      })
-                  );
+                  // cont.push(
+                  //   fetch("https://grupoasistencia.com/motor_webservice/HdiPlus?callback=myCallback", requestOptions)
+                  //     .then((res) => {
+                  //       if (!res.ok) throw Error(res.statusText);
+                  //       return res.json();
+                  //     })
+                  //     .then((ofertas) => {
+                  //       // console.log(ofertas)
+                  //       if (typeof ofertas[0].Resultado !== 'undefined') {
+                  //         agregarAseguradoraFallida('HDI');
+                  //         validarProblema('HDI', ofertas);
+                  //         ofertas[0].Mensajes.forEach(mensaje => {
+                  //           mostrarAlertarCotizacionFallida('HDI', mensaje)
+                  //         })
+                  //       } else {
+                  //         const contadorPorEntidad = validarOfertas(ofertas,'HDI', 1);
+                  //         mostrarAlertaCotizacionExitosa('HDI', contadorPorEntidad)
+                  //       }
+                  //     })
+                  //     .catch((err) => {
+                  //       agregarAseguradoraFallida('HDI');
+                  //       mostrarAlertarCotizacionFallida('HDI', "Error de conexión. Intente de nuevo o comuníquese con el equipo comercial");
+                  //       console.error(err);
+                  //     })
+                  // );
                     
                   /* Solidaria */
-                  cont.push(
-                    fetch(
-                      "https://grupoasistencia.com/motor_webservice_tst2/Solidaria?callback=myCallback",
-                      requestOptions
-                    )
-                      .then((res) => {
-                        if (!res.ok) throw Error(res.statusText);
-                        return res.json();
-                      })
-                      .then((ofertas) => {
-                        // console.log('Ofertas de Solidaria:', ofertas[0].Resultado); // Imprime las ofertas en la consola
-                        if (typeof ofertas[0].Resultado !== 'undefined') {
-                          agregarAseguradoraFallida('Solidaria');
-                          validarProblema('Solidaria', ofertas);
-                          ofertas[0].Mensajes.forEach(mensaje => {
-                            mostrarAlertarCotizacionFallida('Solidaria', mensaje)
-                          })
-                        } else {
-                          const contadorPorEntidad = validarOfertas(ofertas,'Solidaria', 1);
-                          mostrarAlertaCotizacionExitosa('Solidaria', contadorPorEntidad)
-                        }
-                      })
-                      .catch((err) => {
-                        agregarAseguradoraFallida('Solidaria')
-                        mostrarAlertarCotizacionFallida('Solidaria', "Error de conexión. Intente de nuevo o comuníquese con el equipo comercial");
-                        console.error(err);
-                      })
-                  );
+                  // cont.push(
+                  //   fetch(
+                  //     "https://grupoasistencia.com/motor_webservice_tst2/Solidaria?callback=myCallback",
+                  //     requestOptions
+                  //   )
+                  //     .then((res) => {
+                  //       if (!res.ok) throw Error(res.statusText);
+                  //       return res.json();
+                  //     })
+                  //     .then((ofertas) => {
+                  //       // console.log('Ofertas de Solidaria:', ofertas[0].Resultado); // Imprime las ofertas en la consola
+                  //       if (typeof ofertas[0].Resultado !== 'undefined') {
+                  //         agregarAseguradoraFallida('Solidaria');
+                  //         validarProblema('Solidaria', ofertas);
+                  //         ofertas[0].Mensajes.forEach(mensaje => {
+                  //           mostrarAlertarCotizacionFallida('Solidaria', mensaje)
+                  //         })
+                  //       } else {
+                  //         const contadorPorEntidad = validarOfertas(ofertas,'Solidaria', 1);
+                  //         mostrarAlertaCotizacionExitosa('Solidaria', contadorPorEntidad)
+                  //       }
+                  //     })
+                  //     .catch((err) => {
+                  //       agregarAseguradoraFallida('Solidaria')
+                  //       mostrarAlertarCotizacionFallida('Solidaria', "Error de conexión. Intente de nuevo o comuníquese con el equipo comercial");
+                  //       console.error(err);
+                  //     })
+                  // );
       
                   /* Mapfre */
-                  cont.push(
-                    fetch("https://grupoasistencia.com/motor_webservice_tst2/mapfrecotizacion4?callback=myCallback", requestOptions)
+                  // cont.push(
+                  //   fetch("https://grupoasistencia.com/motor_webservice_tst2/mapfrecotizacion4?callback=myCallback", requestOptions)
       
-                      .then((res) => {
-                        if (!res.ok) throw Error(res.statusText);
-                        return res.json();
-                      })
-                      .then((ofertas) => {
-                        // console.log(ofertas)
-                        let result = []
-                        result.push(ofertas)
-                        if (typeof ofertas[0].Resultado !== 'undefined') {
-                          agregarAseguradoraFallida('Mapfre')
-                          validarProblema('Mapfre', ofertas);
-                          ofertas[0].Mensajes.forEach(mensaje => {
-                            mostrarAlertarCotizacionFallida('Mapfre', mensaje)
-                          })
-                        } else {
-                          const contadorPorEntidad = validarOfertas(ofertas,'Mapfre', 1);
-                          // let successMap = true;
-                          // if (successMap) {
-                          mostrarAlertaCotizacionExitosa('Mapfre', contadorPorEntidad)
-                            // successMap = false
-                          // }
-                        }
-                      })
-                      .catch((err) => {
-                        agregarAseguradoraFallida('Mapfre')
-                        mostrarAlertarCotizacionFallida('Mapfre', "Error de conexión. Intente de nuevo o comuníquese con el equipo comercial");
-                        console.error(err);
-                      })
-                  );
+                  //     .then((res) => {
+                  //       if (!res.ok) throw Error(res.statusText);
+                  //       return res.json();
+                  //     })
+                  //     .then((ofertas) => {
+                  //       // console.log(ofertas)
+                  //       let result = []
+                  //       result.push(ofertas)
+                  //       if (typeof ofertas[0].Resultado !== 'undefined') {
+                  //         agregarAseguradoraFallida('Mapfre')
+                  //         validarProblema('Mapfre', ofertas);
+                  //         ofertas[0].Mensajes.forEach(mensaje => {
+                  //           mostrarAlertarCotizacionFallida('Mapfre', mensaje)
+                  //         })
+                  //       } else {
+                  //         const contadorPorEntidad = validarOfertas(ofertas,'Mapfre', 1);
+                  //         // let successMap = true;
+                  //         // if (successMap) {
+                  //         mostrarAlertaCotizacionExitosa('Mapfre', contadorPorEntidad)
+                  //           // successMap = false
+                  //         // }
+                  //       }
+                  //     })
+                  //     .catch((err) => {
+                  //       agregarAseguradoraFallida('Mapfre')
+                  //       mostrarAlertarCotizacionFallida('Mapfre', "Error de conexión. Intente de nuevo o comuníquese con el equipo comercial");
+                  //       console.error(err);
+                  //     })
+                  // );
       
                   /* Previsora */
-                  cont.push(
-                    fetch("https://grupoasistencia.com/motor_webservice_tst2/Previsora?callback=myCallback", requestOptions)
-                      .then((res) => {
-                        if (!res.ok) throw Error(res.statusText);
-                        return res.json();
-                      })
-                      .then((ofertas) => {
-                        // console.log(ofertas)
-                        if (typeof ofertas[0].Resultado !== 'undefined') {
-                          agregarAseguradoraFallida('Previsora');
-                          validarProblema('Previsora', ofertas);
-                          ofertas[0].Mensajes.forEach(mensaje => {
-                            mostrarAlertarCotizacionFallida('Previsora', mensaje)
-                          })
-                        } else {
-                          // guardarAlertas('Previsora', 1);
-                          const contadorPorEntidad = validarOfertas(ofertas,'Previsora', 1);
-                          mostrarAlertaCotizacionExitosa('Previsora', contadorPorEntidad)
-                        }
-                      })
-                      .catch((err) => {
-                        agregarAseguradoraFallida('Previsora')
-                        mostrarAlertarCotizacionFallida('Previsora', "Error de conexión. Intente de nuevo o comuníquese con el equipo comercial");
-                        console.error(err);
-                      })
-                  );
+                  // cont.push(
+                  //   fetch("https://grupoasistencia.com/motor_webservice_tst2/Previsora?callback=myCallback", requestOptions)
+                  //     .then((res) => {
+                  //       if (!res.ok) throw Error(res.statusText);
+                  //       return res.json();
+                  //     })
+                  //     .then((ofertas) => {
+                  //       // console.log(ofertas)
+                  //       if (typeof ofertas[0].Resultado !== 'undefined') {
+                  //         agregarAseguradoraFallida('Previsora');
+                  //         validarProblema('Previsora', ofertas);
+                  //         ofertas[0].Mensajes.forEach(mensaje => {
+                  //           mostrarAlertarCotizacionFallida('Previsora', mensaje)
+                  //         })
+                  //       } else {
+                  //         // guardarAlertas('Previsora', 1);
+                  //         const contadorPorEntidad = validarOfertas(ofertas,'Previsora', 1);
+                  //         mostrarAlertaCotizacionExitosa('Previsora', contadorPorEntidad)
+                  //       }
+                  //     })
+                  //     .catch((err) => {
+                  //       agregarAseguradoraFallida('Previsora')
+                  //       mostrarAlertarCotizacionFallida('Previsora', "Error de conexión. Intente de nuevo o comuníquese con el equipo comercial");
+                  //       console.error(err);
+                  //     })
+                  // );
       
                   /* Equidad */
-                  cont.push(
-                    fetch("https://grupoasistencia.com/motor_webservice_tst2/Equidad?callback=myCallback", requestOptions)
-                      .then((res) => {
-                        if (!res.ok) throw Error(res.statusText);
-                        return res.json();
-                      })
-                      .then((ofertas) => {
-                        if (typeof ofertas[0].Resultado !== 'undefined') {
-                          agregarAseguradoraFallida('Equidad');
-                          validarProblema('Equidad', ofertas);
-                          ofertas[0].Mensajes.forEach(mensaje => {
-                            mostrarAlertarCotizacionFallida('Equidad', mensaje)
-                          })
-                        } else {
-                          const contadorPorEntidad = validarOfertas(ofertas,'Equidad', 1);
-                          mostrarAlertaCotizacionExitosa('Equidad', contadorPorEntidad)
-                        }
-                      })
-                      .catch((err) => {
-                        agregarAseguradoraFallida('Equidad')
-                        mostrarAlertarCotizacionFallida('Equidad', "Error de conexión. Intente de nuevo o comuníquese con el equipo comercial");
-                        console.error(err);
-                      })
-                  );
+                  // cont.push(
+                  //   fetch("https://grupoasistencia.com/motor_webservice_tst2/Equidad?callback=myCallback", requestOptions)
+                  //     .then((res) => {
+                  //       if (!res.ok) throw Error(res.statusText);
+                  //       return res.json();
+                  //     })
+                  //     .then((ofertas) => {
+                  //       if (typeof ofertas[0].Resultado !== 'undefined') {
+                  //         agregarAseguradoraFallida('Equidad');
+                  //         validarProblema('Equidad', ofertas);
+                  //         ofertas[0].Mensajes.forEach(mensaje => {
+                  //           mostrarAlertarCotizacionFallida('Equidad', mensaje)
+                  //         })
+                  //       } else {
+                  //         const contadorPorEntidad = validarOfertas(ofertas,'Equidad', 1);
+                  //         mostrarAlertaCotizacionExitosa('Equidad', contadorPorEntidad)
+                  //       }
+                  //     })
+                  //     .catch((err) => {
+                  //       agregarAseguradoraFallida('Equidad')
+                  //       mostrarAlertarCotizacionFallida('Equidad', "Error de conexión. Intente de nuevo o comuníquese con el equipo comercial");
+                  //       console.error(err);
+                  //     })
+                  // );
       
                   /* Bolivar */
                   cont.push(
@@ -2256,213 +2256,213 @@ $(document).ready(function () {
                   );
     
                   /* Zurich */
-                  let zurichStates = {};
-                  const planes = ["BASIC", "MEDIUM", "FULL"];
-                  let body = JSON.parse(requestOptions.body);
+                  // let zurichStates = {};
+                  // const planes = ["BASIC", "MEDIUM", "FULL"];
+                  // let body = JSON.parse(requestOptions.body);
     
-                  planes.forEach(plan => {
-                    body.plan = plan;
-                    body.Email = "@gmail.com";
-                    body.Email2 = Math.round(Math.random() * 999999) + body.Email;
-                    requestOptions.body = JSON.stringify(body);
+                  // planes.forEach(plan => {
+                  //   body.plan = plan;
+                  //   body.Email = "@gmail.com";
+                  //   body.Email2 = Math.round(Math.random() * 999999) + body.Email;
+                  //   requestOptions.body = JSON.stringify(body);
     
-                    // Inicializa los estados de Zurich para cada plan
-                    zurichStates[plan] = {
-                      success: true,
-                      errors: true
-                    };
+                  //   // Inicializa los estados de Zurich para cada plan
+                  //   zurichStates[plan] = {
+                  //     success: true,
+                  //     errors: true
+                  //   };
     
-                    cont.push(
-                      fetch('https://grupoasistencia.com/motor_webservice_tst2/Zurich?callback=myCallback', requestOptions)
-                        .then((res) => {
-                          if (res.status === 500) {
-                            throw Error("Error interno del servidor (HTTP 500)");
-                          }
-                          if (!res.ok) {
-                            throw Error(res.statusText);
-                          }
-                          return res.json();
-                        })
-                        .then(ofertas => {
-                          if (typeof ofertas.Resultado !== 'undefined') {
-                            validarProblema('Zurich', ofertas);
-                            agregarAseguradoraFallida(plan);
-                            if (zurichStates[plan].errors) {
-                              ofertas.Mensajes.forEach(mensaje => {
-                                mostrarAlertarCotizacionFallida(`Zurich`, mensaje);
-                              });
-                            }
-                            zurichStates[plan].errors = false;
-                          } else {
-                            const contadorPorEntidad = validarOfertas(ofertas, 'Zurich', 1);
-                            if (zurichStates[plan].success) {
-                              mostrarAlertaCotizacionExitosa(`Zurich`, contadorPorEntidad);
-                              zurichStates[plan].success = false;
-                            }
-                          }
-                        })
-                        .catch((err) => {
-                          agregarAseguradoraFallida(plan);
-                          mostrarAlertarCotizacionFallida('Zurich', "Error de conexión. Intente de nuevo o comuníquese con el equipo comercial");
-                          console.error(err);
-                        })
-                    );
-                  });
+                  //   cont.push(
+                  //     fetch('https://grupoasistencia.com/motor_webservice_tst2/Zurich?callback=myCallback', requestOptions)
+                  //       .then((res) => {
+                  //         if (res.status === 500) {
+                  //           throw Error("Error interno del servidor (HTTP 500)");
+                  //         }
+                  //         if (!res.ok) {
+                  //           throw Error(res.statusText);
+                  //         }
+                  //         return res.json();
+                  //       })
+                  //       .then(ofertas => {
+                  //         if (typeof ofertas.Resultado !== 'undefined') {
+                  //           validarProblema('Zurich', ofertas);
+                  //           agregarAseguradoraFallida(plan);
+                  //           if (zurichStates[plan].errors) {
+                  //             ofertas.Mensajes.forEach(mensaje => {
+                  //               mostrarAlertarCotizacionFallida(`Zurich`, mensaje);
+                  //             });
+                  //           }
+                  //           zurichStates[plan].errors = false;
+                  //         } else {
+                  //           const contadorPorEntidad = validarOfertas(ofertas, 'Zurich', 1);
+                  //           if (zurichStates[plan].success) {
+                  //             mostrarAlertaCotizacionExitosa(`Zurich`, contadorPorEntidad);
+                  //             zurichStates[plan].success = false;
+                  //           }
+                  //         }
+                  //       })
+                  //       .catch((err) => {
+                  //         agregarAseguradoraFallida(plan);
+                  //         mostrarAlertarCotizacionFallida('Zurich', "Error de conexión. Intente de nuevo o comuníquese con el equipo comercial");
+                  //         console.error(err);
+                  //       })
+                  //   );
+                  // });
     
                   /* Estado */
-                  const aseguradorasEstado = ["Estado", "Estado2"]; // Agrega más aseguradoras según sea necesario
-                  aseguradorasEstado.forEach((aseguradora) => {
-                    let successAseguradora = true;
-                    cont.push(
-                      fetch(`https://grupoasistencia.com/motor_webservice_tst2/${aseguradora}?callback=myCallback`, requestOptions)
-                        .then((res) => {
-                          if (!res.ok) throw Error(res.statusText);
-                          return res.json();
-                        })
-                        .then((ofertas) => {
-                          let result = [];
-                          result.push(ofertas);
-                          if (typeof result[0].Resultado !== 'undefined') {
-                            agregarAseguradoraFallida("Estado");
-                            validarProblema(aseguradora, result);
-                            result[0].Mensajes.forEach(mensaje => {
-                              mostrarAlertarCotizacionFallida(aseguradora, mensaje);
-                            });
-                          } else {
-                            const contadorPorEntidad = validarOfertas(result, aseguradora, 1);
-                            if (successAseguradora) {
-                              mostrarAlertaCotizacionExitosa(aseguradora, contadorPorEntidad);
-                              successAseguradora = false;
-                            }
-                          }
-                        })
-                        .catch((err) => {
-                          agregarAseguradoraFallida("Estado");
-                          mostrarAlertarCotizacionFallida(aseguradora, "Error de conexión. Intente de nuevo o comuníquese con el equipo comercial");
-                          console.error(err);
-                        })
-                    );
-                  });
+                  // const aseguradorasEstado = ["Estado", "Estado2"]; // Agrega más aseguradoras según sea necesario
+                  // aseguradorasEstado.forEach((aseguradora) => {
+                  //   let successAseguradora = true;
+                  //   cont.push(
+                  //     fetch(`https://grupoasistencia.com/motor_webservice_tst2/${aseguradora}?callback=myCallback`, requestOptions)
+                  //       .then((res) => {
+                  //         if (!res.ok) throw Error(res.statusText);
+                  //         return res.json();
+                  //       })
+                  //       .then((ofertas) => {
+                  //         let result = [];
+                  //         result.push(ofertas);
+                  //         if (typeof result[0].Resultado !== 'undefined') {
+                  //           agregarAseguradoraFallida("Estado");
+                  //           validarProblema(aseguradora, result);
+                  //           result[0].Mensajes.forEach(mensaje => {
+                  //             mostrarAlertarCotizacionFallida(aseguradora, mensaje);
+                  //           });
+                  //         } else {
+                  //           const contadorPorEntidad = validarOfertas(result, aseguradora, 1);
+                  //           if (successAseguradora) {
+                  //             mostrarAlertaCotizacionExitosa(aseguradora, contadorPorEntidad);
+                  //             successAseguradora = false;
+                  //           }
+                  //         }
+                  //       })
+                  //       .catch((err) => {
+                  //         agregarAseguradoraFallida("Estado");
+                  //         mostrarAlertarCotizacionFallida(aseguradora, "Error de conexión. Intente de nuevo o comuníquese con el equipo comercial");
+                  //         console.error(err);
+                  //       })
+                  //   );
+                  // });
     
                   /* Liberty */
-                  cont.push(
-                    fetch("https://grupoasistencia.com/motor_webservice_tst2/Liberty?callback=myCallback", requestOptions)
-                      .then((res) => {
-                        if (!res.ok) throw Error(res.statusText);
-                        return res.json();
-                      })
-                      .then((ofertas) => {
-                        if (typeof ofertas[0].Resultado !== 'undefined') {
-                          agregarAseguradoraFallida('Liberty');
-                          validarProblema('Liberty', ofertas);
-                          ofertas[0].Mensajes.forEach(mensaje => {
-                            mostrarAlertarCotizacionFallida('Liberty', mensaje)
-                          })
-                        } else {
-                          const contadorPorEntidad = validarOfertas(ofertas,'Liberty', 1);
-                          mostrarAlertaCotizacionExitosa('Liberty', contadorPorEntidad)
-                        }
-                      })
-                      .catch((err) => {
-                        agregarAseguradoraFallida('Liberty')
-                        mostrarAlertarCotizacionFallida('Liberty', "Error de conexión. Intente de nuevo o comuníquese con el equipo comercial");
-                        console.error(err);
-                      })
-                  );
+                  // cont.push(
+                  //   fetch("https://grupoasistencia.com/motor_webservice_tst2/Liberty?callback=myCallback", requestOptions)
+                  //     .then((res) => {
+                  //       if (!res.ok) throw Error(res.statusText);
+                  //       return res.json();
+                  //     })
+                  //     .then((ofertas) => {
+                  //       if (typeof ofertas[0].Resultado !== 'undefined') {
+                  //         agregarAseguradoraFallida('Liberty');
+                  //         validarProblema('Liberty', ofertas);
+                  //         ofertas[0].Mensajes.forEach(mensaje => {
+                  //           mostrarAlertarCotizacionFallida('Liberty', mensaje)
+                  //         })
+                  //       } else {
+                  //         const contadorPorEntidad = validarOfertas(ofertas,'Liberty', 1);
+                  //         mostrarAlertaCotizacionExitosa('Liberty', contadorPorEntidad)
+                  //       }
+                  //     })
+                  //     .catch((err) => {
+                  //       agregarAseguradoraFallida('Liberty')
+                  //       mostrarAlertarCotizacionFallida('Liberty', "Error de conexión. Intente de nuevo o comuníquese con el equipo comercial");
+                  //       console.error(err);
+                  //     })
+                  // );
       
                   /* Allianz */
-                  cont.push(
-                    fetch("https://grupoasistencia.com/motor_webservice_tst2/Allianz?callback=myCallback", requestOptions)
-                      .then((res) => {
-                        if (res.status === 500) {
-                            throw Error("Error interno del servidor (HTTP 500)");
-                        }
-                        if (!res.ok) {
-                            throw Error(res.statusText);
-                        }
-                        return res.json();
-                      })
-                      .then((ofertas) => {
-                        if (typeof ofertas[0].Resultado !== 'undefined') {
-                          agregarAseguradoraFallida('Allianz');
-                          validarProblema('Allianz', ofertas);
-                          ofertas[0].Mensajes.forEach(mensaje => {
-                            mostrarAlertarCotizacionFallida('Allianz', mensaje)
-                          })
-                        } else {
-                          const contadorPorEntidad = validarOfertas(ofertas,'Allianz', 1);
-                          mostrarAlertaCotizacionExitosa('Allianz', contadorPorEntidad)
-                        }
-                      })
-                      .catch((err) => {
-                        agregarAseguradoraFallida('Allianz')
-                        mostrarAlertarCotizacionFallida('Allianz', "Error de conexión. Intente de nuevo o comuníquese con el equipo comercial");
-                        console.error(err);
-                      })
-                  );
+                  // cont.push(
+                  //   fetch("https://grupoasistencia.com/motor_webservice_tst2/Allianz?callback=myCallback", requestOptions)
+                  //     .then((res) => {
+                  //       if (res.status === 500) {
+                  //           throw Error("Error interno del servidor (HTTP 500)");
+                  //       }
+                  //       if (!res.ok) {
+                  //           throw Error(res.statusText);
+                  //       }
+                  //       return res.json();
+                  //     })
+                  //     .then((ofertas) => {
+                  //       if (typeof ofertas[0].Resultado !== 'undefined') {
+                  //         agregarAseguradoraFallida('Allianz');
+                  //         validarProblema('Allianz', ofertas);
+                  //         ofertas[0].Mensajes.forEach(mensaje => {
+                  //           mostrarAlertarCotizacionFallida('Allianz', mensaje)
+                  //         })
+                  //       } else {
+                  //         const contadorPorEntidad = validarOfertas(ofertas,'Allianz', 1);
+                  //         mostrarAlertaCotizacionExitosa('Allianz', contadorPorEntidad)
+                  //       }
+                  //     })
+                  //     .catch((err) => {
+                  //       agregarAseguradoraFallida('Allianz')
+                  //       mostrarAlertarCotizacionFallida('Allianz', "Error de conexión. Intente de nuevo o comuníquese con el equipo comercial");
+                  //       console.error(err);
+                  //     })
+                  // );
       
                   /* AXA */
-                  cont.push(
-                    fetch("https://grupoasistencia.com/motor_webservice_tst2/AXA_tst?callback=myCallback", requestOptions)
-                      .then((res) => {
-                        if (res.status === 500) {
-                            throw Error("Error interno del servidor (HTTP 500)");
-                        }
-                        if (!res.ok) {
-                            throw Error(res.statusText);
-                        }
-                        return res.json();
-                      })
-                      .then((ofertas) => {
-                        if (typeof ofertas[0].Resultado !== 'undefined') {
-                          agregarAseguradoraFallida('AXA')
-                          validarProblema('AXA', ofertas);
-                          ofertas[0].Mensajes.forEach(mensaje => {
-                            mostrarAlertarCotizacionFallida('AXA', mensaje)
-                          })
-                        } else {
-                          const contadorPorEntidad = validarOfertas(ofertas,'AXA', 1);
-                          mostrarAlertaCotizacionExitosa('AXA', contadorPorEntidad)
-                        }
-                      })
-                      .catch((err) => {
-                        agregarAseguradoraFallida('AXA');
-                        mostrarAlertarCotizacionFallida('AXA', "Error de conexión. Intente de nuevo o comuníquese con el equipo comercial");
-                        console.error(err);
-                      })
-                  );
+                  // cont.push(
+                  //   fetch("https://grupoasistencia.com/motor_webservice_tst2/AXA_tst?callback=myCallback", requestOptions)
+                  //     .then((res) => {
+                  //       if (res.status === 500) {
+                  //           throw Error("Error interno del servidor (HTTP 500)");
+                  //       }
+                  //       if (!res.ok) {
+                  //           throw Error(res.statusText);
+                  //       }
+                  //       return res.json();
+                  //     })
+                  //     .then((ofertas) => {
+                  //       if (typeof ofertas[0].Resultado !== 'undefined') {
+                  //         agregarAseguradoraFallida('AXA')
+                  //         validarProblema('AXA', ofertas);
+                  //         ofertas[0].Mensajes.forEach(mensaje => {
+                  //           mostrarAlertarCotizacionFallida('AXA', mensaje)
+                  //         })
+                  //       } else {
+                  //         const contadorPorEntidad = validarOfertas(ofertas,'AXA', 1);
+                  //         mostrarAlertaCotizacionExitosa('AXA', contadorPorEntidad)
+                  //       }
+                  //     })
+                  //     .catch((err) => {
+                  //       agregarAseguradoraFallida('AXA');
+                  //       mostrarAlertarCotizacionFallida('AXA', "Error de conexión. Intente de nuevo o comuníquese con el equipo comercial");
+                  //       console.error(err);
+                  //     })
+                  // );
                   
                   /* SBS */
-                  cont.push(
-                    fetch("https://grupoasistencia.com/motor_webservice_tst2/SBS?callback=myCallback", requestOptions)
-                      .then((res) => {
-                        if (res.status === 500) {
-                            throw Error("Error interno del servidor (HTTP 500)");
-                        }
-                        if (!res.ok) {
-                            throw Error(res.statusText);
-                        }
-                        return res.json();
-                      })
-                      .then((ofertas) => {
-                        let result = ofertas
-                        if (typeof result[0].Resultado !== 'undefined') {
-                          agregarAseguradoraFallida('SBS');
-                          validarProblema('SBS', ofertas);
-                          result[0].Mensajes.forEach(mensaje => {
-                            mostrarAlertarCotizacionFallida('SBS', mensaje)
-                          })
-                        } else {
-                          const contadorPorEntidad = validarOfertas(ofertas,'SBS', 1);
-                          mostrarAlertaCotizacionExitosa('SBS', contadorPorEntidad)
-                        }
-                      })
-                      .catch((err) => {
-                        agregarAseguradoraFallida('SBS');
-                        mostrarAlertarCotizacionFallida('SBS', "Error de conexión. Intente de nuevo o comuníquese con el equipo comercial");
-                        console.error(err);
-                      })
-                  );
+                  // cont.push(
+                  //   fetch("https://grupoasistencia.com/motor_webservice_tst2/SBS?callback=myCallback", requestOptions)
+                  //     .then((res) => {
+                  //       if (res.status === 500) {
+                  //           throw Error("Error interno del servidor (HTTP 500)");
+                  //       }
+                  //       if (!res.ok) {
+                  //           throw Error(res.statusText);
+                  //       }
+                  //       return res.json();
+                  //     })
+                  //     .then((ofertas) => {
+                  //       let result = ofertas
+                  //       if (typeof result[0].Resultado !== 'undefined') {
+                  //         agregarAseguradoraFallida('SBS');
+                  //         validarProblema('SBS', ofertas);
+                  //         result[0].Mensajes.forEach(mensaje => {
+                  //           mostrarAlertarCotizacionFallida('SBS', mensaje)
+                  //         })
+                  //       } else {
+                  //         const contadorPorEntidad = validarOfertas(ofertas,'SBS', 1);
+                  //         mostrarAlertaCotizacionExitosa('SBS', contadorPorEntidad)
+                  //       }
+                  //     })
+                  //     .catch((err) => {
+                  //       agregarAseguradoraFallida('SBS');
+                  //       mostrarAlertarCotizacionFallida('SBS', "Error de conexión. Intente de nuevo o comuníquese con el equipo comercial");
+                  //       console.error(err);
+                  //     })
+                  // );
                   
                   
                   Promise.all(cont).then(() => {
