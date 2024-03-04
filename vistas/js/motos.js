@@ -1167,56 +1167,56 @@ function registrarOfertaMotos(
           
 
         /*SBS*/
-        cont.push(
-          fetch("https://grupoasistencia.com/motor_webservice_tst/SBS", requestOptions)
-          .then((res) => {
-              if (!res.ok) throw Error(res.statusText);
-              return res.json();
-          })
-          .then((ofertas) => {
-              let result = ofertas
-              if (typeof result[0].Resultado !== 'undefined') {
-              agregarAseguradoraFallidaMotos('SBS')
-              result[0].Mensajes.forEach(mensaje => {
-                  mostrarAlertarCotizacionFallida('SBS', mensaje)
-              })
-              } else {
-              validarOfertasMotos(result);
-              mostrarAlertaCotizacionExitosa('SBS')
-              }
-          })
-          .catch((err) => {
-              agregarAseguradoraFallidaMotos('SBS');
-              mostrarAlertarCotizacionFallida('SBS', "Error de conexión. Intente de nuevo o comuníquese con el equipo comercial");
-              console.error(err);
-          })
-        )
-
-        /* AXA */
         // cont.push(
-        //   fetch("https://grupoasistencia.com/motor_webservice_tst/AXA_tst", requestOptions)
+        //   fetch("https://grupoasistencia.com/motor_webservice_tst/SBS", requestOptions)
         //   .then((res) => {
         //       if (!res.ok) throw Error(res.statusText);
         //       return res.json();
         //   })
         //   .then((ofertas) => {
-
-        //       if (typeof ofertas[0].Resultado !== 'undefined') {
-        //       agregarAseguradoraFallidaMotos('AXA')
-        //       ofertas[0].Mensajes.forEach(mensaje => {
-        //           mostrarAlertarCotizacionFallida('AXA', mensaje)
+        //       let result = ofertas
+        //       if (typeof result[0].Resultado !== 'undefined') {
+        //       agregarAseguradoraFallidaMotos('SBS')
+        //       result[0].Mensajes.forEach(mensaje => {
+        //           mostrarAlertarCotizacionFallida('SBS', mensaje)
         //       })
         //       } else {
-        //       validarOfertasMotos(ofertas)
-        //       mostrarAlertaCotizacionExitosa('AXA')
+        //       validarOfertasMotos(result);
+        //       mostrarAlertaCotizacionExitosa('SBS')
         //       }
         //   })
         //   .catch((err) => {
-        //       agregarAseguradoraFallidaMotos('AXA');
-        //       mostrarAlertarCotizacionFallida('AXA', "Error de conexión. Intente de nuevo o comuníquese con el equipo comercial");
+        //       agregarAseguradoraFallidaMotos('SBS');
+        //       mostrarAlertarCotizacionFallida('SBS', "Error de conexión. Intente de nuevo o comuníquese con el equipo comercial");
         //       console.error(err);
         //   })
         // )
+
+        /* AXA */
+        cont.push(
+          fetch("https://grupoasistencia.com/motor_webservice_tst/AXA_tst", requestOptions)
+          .then((res) => {
+              if (!res.ok) throw Error(res.statusText);
+              return res.json();
+          })
+          .then((ofertas) => {
+
+              if (typeof ofertas[0].Resultado !== 'undefined') {
+              agregarAseguradoraFallidaMotos('AXA')
+              ofertas[0].Mensajes.forEach(mensaje => {
+                  mostrarAlertarCotizacionFallida('AXA', mensaje)
+              })
+              } else {
+              validarOfertasMotos(ofertas)
+              mostrarAlertaCotizacionExitosa('AXA')
+              }
+          })
+          .catch((err) => {
+              agregarAseguradoraFallidaMotos('AXA');
+              mostrarAlertarCotizacionFallida('AXA', "Error de conexión. Intente de nuevo o comuníquese con el equipo comercial");
+              console.error(err);
+          })
+        )
 
         /* LIBERTY */ 
         // cont.push(
