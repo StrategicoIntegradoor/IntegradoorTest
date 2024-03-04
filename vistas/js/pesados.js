@@ -1745,15 +1745,15 @@ function registrarOfertaPesados(
             // let planesAXA = [5308, 5309, 5310, 5311, 5312, 5313];
             let planesAXA;
             if (condicional == 4 || condicional == 22) {
-                planesAXA = [4799, 4800];
+                planesAXA = [5308, 5309];
             } else if (condicional == 23 || condicional == 25) {
-                planesAXA = [4801];
+                planesAXA = [5310];
             } else if (condicional == 3) {
-                planesAXA = [4802];
+                planesAXA = [5312];
             } else if (condicional == 7) {
-                planesAXA = [4804];
+                planesAXA = [5313];
             } else {
-                planesAXA = [4803];
+                planesAXA = [5311];
             }
             planesAXA.forEach(plan => {
                 bodyAXA.plan = plan;
