@@ -2671,43 +2671,43 @@ const verPdfHdi = async (cotizacion) => {
 
     })
 
-  //   .then(response => response.blob())
+    .then(response => response.blob())
 
-  //   .then(resBlob => {
+    .then(resBlob => {
 
-  //     const res = new Blob([resBlob], {
+      const res = new Blob([resBlob], {
 
-  //       type: "application/pdf",
+        type: "application/pdf",
 
-  //     })
-
-
-
-  //     return res
-
-  //   })
+      })
 
 
 
-  // const downloadUrl = URL.createObjectURL(blobPdfHdi)
+      return res
 
-  // const a = document.createElement('a')
-
-  // a.href = downloadUrl
-
-  // a.download = 'Hdi_' + cotizacion + '.pdf'
-
-  // document.body.appendChild(a)
-
-  // a.click()
+    })
 
 
 
-  // $("#Hdi-pdf" + cotizacion).html(
+  const downloadUrl = URL.createObjectURL(blobPdfHdi)
 
-  //   'VER PDF &nbsp;&nbsp;<span class="fa fa-file-text"></span>'
+  const a = document.createElement('a')
 
-  // );
+  a.href = downloadUrl
+
+  a.download = 'Hdi_' + cotizacion + '.pdf'
+
+  document.body.appendChild(a)
+
+  a.click()
+
+
+
+  $("#Hdi-pdf" + cotizacion).html(
+
+    'VER PDF &nbsp;&nbsp;<span class="fa fa-file-text"></span>'
+
+  );
 
 
 }
