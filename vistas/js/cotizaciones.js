@@ -2671,12 +2671,8 @@ const verPdfHdi = async (cotizacion) => {
 
     })
 
-    .then(async response => {
-      // Imprimir la información específica del cuerpo de la respuesta
-      const blob = await response.blob();
-      console.log('Contenido del Blob:', blob);
-      return blob;
-    })
+    .then(response => response.blob())
+
 
     .then(resBlob => {
 
