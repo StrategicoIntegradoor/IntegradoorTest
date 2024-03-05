@@ -2667,7 +2667,7 @@ const verPdfHdi = async (cotizacion) => {
 
       method: "POST",
 
-      body: formData,
+      // body: formData,
 
     })
 
