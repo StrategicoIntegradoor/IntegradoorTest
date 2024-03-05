@@ -2601,7 +2601,11 @@ const verPdfZurich = async (cotizacion) => {
 
       })
 
-      .then(response => response.blob())
+      .then(response => {
+        // Imprimir el contenido del response antes de convertirlo en Blob
+        console.log('Contenido del response antes de Blob:', response);
+        return response.blob();
+      })
 
       .then(resBlob => {
 
@@ -2671,7 +2675,11 @@ const verPdfHdi = async (cotizacion) => {
 
     })
 
-    .then(response => response.blob())
+    .then(response => {
+      // Imprimir el contenido del response antes de convertirlo en Blob
+      console.log('Contenido del response antes de Blob:', response);
+      return response.blob();
+    })
 
 
     .then(resBlob => {
