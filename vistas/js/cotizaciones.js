@@ -2672,6 +2672,8 @@ const verPdfHdi = async (cotizacion) => {
 
       // Convertir el texto a Blob
       const blobPdfHdi = new Blob([responseBodyText], { type: "application/pdf" });
+      console.log("Tamaño del Blob:", blobPdfHdi.size);
+      console.log("Tipo del Blob:", blobPdfHdi.type);
 
       // Crear URL de descarga y simular clic en enlace
       const downloadUrl = URL.createObjectURL(blobPdfHdi);
