@@ -2671,57 +2671,43 @@ const verPdfHdi = async (cotizacion) => {
 
     })
 
-    const responseData = await blobPdfHdi.text(); // Lee la respuesta como texto
-    // const cadenaBase64 = responseData.pdfHDIbase64;
-    console.log(responseData);
-   // Decodificar la cadena base64
-const contenidoPDF = atob(responseData);
+    .then(response => response.blob())
 
-// Crear un Blob con el contenido del PDF
-const blobPDF = new Blob([contenidoPDF], { type: 'application/pdf' });
+    .then(resBlob => {
 
-// Crear una URL del Blob
-const urlPDF = URL.createObjectURL(blobPDF);
+      const res = new Blob([resBlob], {
 
-// Abrir una nueva ventana con el PDF
-window.open(urlPDF, '_blank');
-    // // .then(response => response.blob())
+        type: "application/pdf",
 
-    // .then(resBlob => {
-
-    //   const res = new Blob([resBlob], {
-
-    //     type: "application/pdf",
-
-    //   })
+      })
 
 
 
-    //   return res
+      return res
 
-    // })
-
-
-
-  // const downloadUrl = URL.createObjectURL(blobPdfHdi)
-
-  // const a = document.createElement('a')
-
-  // a.href = downloadUrl
-
-  // a.download = 'Hdi_' + cotizacion + '.pdf'
-
-  // document.body.appendChild(a)
-
-  // a.click()
+    })
 
 
 
-  // $("#Hdi-pdf" + cotizacion).html(
+  const downloadUrl = URL.createObjectURL(blobPdfHdi)
 
-  //   'VER PDF &nbsp;&nbsp;<span class="fa fa-file-text"></span>'
+  const a = document.createElement('a')
 
-  // );
+  a.href = downloadUrl
+
+  a.download = 'HDI_' + cotizacion + '.pdf'
+
+  document.body.appendChild(a)
+
+  a.click()
+
+
+
+  $("#Zurich-pdf" + cotizacion).html(
+
+    'VER PDF &nbsp;&nbsp;<span class="fa fa-file-text"></span>'
+
+  );
 
 
 }
