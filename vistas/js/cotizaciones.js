@@ -2703,7 +2703,7 @@ const verPdfHdi = async (cotizacion) => {
 
 
 
-  $("#Zurich-pdf" + cotizacion).html(
+  $("#Hdi-pdf" + cotizacion).html(
 
     'VER PDF &nbsp;&nbsp;<span class="fa fa-file-text"></span>'
 
