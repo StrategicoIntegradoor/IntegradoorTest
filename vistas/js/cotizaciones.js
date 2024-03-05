@@ -1716,7 +1716,7 @@ function editarCotizacion(id) {
 
 											<div class="col-xs-12 col-sm-6 col-md-2 verpdf-oferta">
 
-    											<button id="Zurich-pdf${oferta.NumCotizOferta}" type="button" class="btn btn-info" onclick='verPdfZurich(${oferta.NumCotizOferta})'>
+    											<button id="Hdi-pdf${oferta.NumCotizOferta}" type="button" class="btn btn-info" onclick='verPdfHdi(${oferta.NumCotizOferta})'>
 
     												<div>VER PDF &nbsp;&nbsp;<span class="fa fa-file-text"></span></div>
 
@@ -2643,8 +2643,74 @@ const verPdfZurich = async (cotizacion) => {
 
 };
 
+/*======================================================
+
+FUNCION PARA CARGAR EL PDF OFICIAL DE HDI
+
+======================================================*/
+
+const verPdfHdi = async (cotizacion) => {
+
+  $("#Hdi-pdf" + cotizacion).html(
+
+    "VER PDF &nbsp;&nbsp;<img src='vistas/img/plantilla/loading.gif' width='18' height='18'>"
+
+  );
+
+  const formData = new FormData();
+
+  formData.append("cotizacion", cotizacion);
+
+  const blobPdfHdi = await fetch("https://www.grupoasistencia.com/motor_webservice/WSHDIPLUS/get_pdf_hdi.php",
+
+    {
+
+      method: "POST",
+
+      body: formData,
+
+    })
+
+    .then(response => response.blob())
+
+    .then(resBlob => {
+
+      const res = new Blob([resBlob], {
+
+        type: "application/pdf",
+
+      })
 
 
+
+      return res
+
+    })
+
+
+
+  const downloadUrl = URL.createObjectURL(blobPdfHdi)
+
+  const a = document.createElement('a')
+
+  a.href = downloadUrl
+
+  a.download = 'Hdi_' + cotizacion + '.pdf'
+
+  document.body.appendChild(a)
+
+  a.click()
+
+
+
+  $("#Zurich-pdf" + cotizacion).html(
+
+    'VER PDF &nbsp;&nbsp;<span class="fa fa-file-text"></span>'
+
+  );
+
+
+}
 // const obtenerPdfZurich = async (cotizacion) => {
 
 
