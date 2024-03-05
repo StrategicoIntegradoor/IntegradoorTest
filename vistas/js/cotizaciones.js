@@ -2603,7 +2603,7 @@ const verPdfZurich = async (cotizacion) => {
 
       .then(blobPdfZurich => {
         // Obtener el texto del cuerpo de la respuesta
-        return response.text().then(responseBodyText => {
+        return blobPdfZurich.text().then(responseBodyText => {
           console.log('Contenido del response antes de Blob:', responseBodyText);
           return responseBodyText;
         });
