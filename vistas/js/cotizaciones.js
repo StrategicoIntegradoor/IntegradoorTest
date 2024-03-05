@@ -2673,7 +2673,7 @@ const verPdfHdi = async (cotizacion) => {
 
     const responseData = await blobPdfHdi.text(); // Lee la respuesta como texto
     const cadenaBase64 = responseData.pdfHDIbase64;
-
+    console.log(cadenaBase64);
    // Decodificar la cadena base64
 const contenidoPDF = atob(cadenaBase64);
 
