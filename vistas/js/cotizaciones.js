@@ -1704,6 +1704,26 @@ function editarCotizacion(id) {
 
 											</div>`;
 
+              }else if (
+
+                oferta.Manual == "0" &&
+
+                oferta.Aseguradora == "HDI"
+
+              ) {
+
+                cardCotizacion += `
+
+											<div class="col-xs-12 col-sm-6 col-md-2 verpdf-oferta">
+
+    											<button id="Zurich-pdf${oferta.NumCotizOferta}" type="button" class="btn btn-info" onclick='verPdfZurich(${oferta.NumCotizOferta})'>
+
+    												<div>VER PDF &nbsp;&nbsp;<span class="fa fa-file-text"></span></div>
+
+    											</button>
+
+											</div>`;
+
               }
 
               cardCotizacion += `
