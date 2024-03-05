@@ -1,6 +1,7 @@
 <?php
 header('Content-Type: application/pdf');
 // Resto del código para generar y enviar el PDF
+header('Content-Disposition: attachment; filename="documento.pdf"');
 
 // if ($_SESSION["rol"] != 1 && $_SESSION["rol"] != 2) {
 
