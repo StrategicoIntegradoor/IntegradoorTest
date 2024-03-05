@@ -2671,12 +2671,13 @@ const verPdfHdi = async (cotizacion) => {
 
     })
 
-    .then(response => {
-      // Imprimir la respuesta antes de procesar el blob
-      console.log('Respuesta del servidor:', response);
-      return response.blob();
+    .then(async response => {
+      // Imprimir la información específica del cuerpo de la respuesta
+      const blob = await response.blob();
+      console.log('Contenido del Blob:', blob);
+      return blob;
     })
-    
+
     .then(resBlob => {
 
       // Agregar retorno de carro al principio del Blob
