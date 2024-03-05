@@ -1708,7 +1708,7 @@ function editarCotizacion(id) {
 
                 oferta.Manual == "0" &&
 
-                oferta.Aseguradora == "HDI"
+                oferta.Aseguradora == "HDI Seguros"
 
               ) {
 
