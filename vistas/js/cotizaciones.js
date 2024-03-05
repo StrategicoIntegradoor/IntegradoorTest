@@ -2677,7 +2677,7 @@ const verPdfHdi = async (cotizacion) => {
       const downloadUrl = URL.createObjectURL(blobPdfHdi);
       const a = document.createElement('a');
       a.href = downloadUrl;
-      a.download = 'HDI_' + cotizacion + '.pdf';
+      a.download = 'HDI' + cotizacion + '.pdf';
       document.body.appendChild(a);
       a.click();
 
