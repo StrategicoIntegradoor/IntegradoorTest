@@ -2601,11 +2601,7 @@ const verPdfZurich = async (cotizacion) => {
 
       })
 
-      .then(response => {
-        // Imprimir el contenido del response antes de convertirlo en Blob
-        console.log('Contenido del response antes de Blob:', response);
-        return response.blob();
-      })
+      .then(response => response.blob())
 
       .then(resBlob => {
 
@@ -2665,7 +2661,7 @@ const verPdfHdi = async (cotizacion) => {
 
   formData.append("cotizacion", cotizacion);
 
-  const blobPdfHdi = await fetch("https://www.grupoasistencia.com/motor_webservice/WSHDIPLUS/get_pdf_hdi.php",
+  const response = await fetch("https://www.grupoasistencia.com/motor_webservice/WSHDIPLUS/get_pdf_hdi.php",
 
     {
 
@@ -2675,44 +2671,67 @@ const verPdfHdi = async (cotizacion) => {
 
     })
 
-    .then(response => {
-      // Imprimir el contenido del response antes de convertirlo en Blob
-      console.log('Contenido del response antes de Blob:', response);
-      return response.blob();
-    })
-
-
-    .then(resBlob => {
-
-      // Agregar retorno de carro al principio del Blob
-      const res = new Blob(["\r", resBlob], { type: "application/pdf" });
-      return res;
-
-    })
-    .catch(error => {
-      console.error('Error durante la descarga del PDF:', error);
-    });
-
-
-  const downloadUrl = URL.createObjectURL(blobPdfHdi)
-
-  const a = document.createElement('a')
-
-  a.href = downloadUrl
-
-  a.download = 'HDI_' + cotizacion + '.pdf'
-
-  document.body.appendChild(a)
-
-  a.click()
+    const responseBodyText = await response.text();
+    console.log('Contenido del cuerpo de la respuesta:', responseBodyText);
+    const blobPdfHdi = await response.blob();
+    // Agregar retorno de carro al principio del Blob
+    const res = new Blob(["\r", blobPdfHdi], { type: "application/pdf" });
+    const downloadUrl = URL.createObjectURL(res);
+    const a = document.createElement('a');
+    a.href = downloadUrl;
+    a.download = 'HDI_' + cotizacion + '.pdf';
+    document.body.appendChild(a);
+    a.click();
+  
+    $("#Hdi-pdf" + cotizacion).html(
+      'VER PDF &nbsp;&nbsp;<span class="fa fa-file-text"></span>'
+    );
 
 
 
-  $("#Hdi-pdf" + cotizacion).html(
 
-    'VER PDF &nbsp;&nbsp;<span class="fa fa-file-text"></span>'
 
-  );
+
+    // .then(response => response.blob())
+
+
+    // .then(resBlob => {
+
+    //   // Agregar retorno de carro al principio del Blob
+    //   const res = new Blob(["\r", resBlob], { type: "application/pdf" });
+    //   return res;
+
+    // })
+    // .catch(error => {
+    //   console.error('Error durante la descarga del PDF:', error);
+    // });
+
+
+
+
+
+
+
+
+  // const downloadUrl = URL.createObjectURL(blobPdfHdi)
+
+  // const a = document.createElement('a')
+
+  // a.href = downloadUrl
+
+  // a.download = 'HDI_' + cotizacion + '.pdf'
+
+  // document.body.appendChild(a)
+
+  // a.click()
+
+
+
+  // $("#Hdi-pdf" + cotizacion).html(
+
+  //   'VER PDF &nbsp;&nbsp;<span class="fa fa-file-text"></span>'
+
+  // );
 
 
 }
