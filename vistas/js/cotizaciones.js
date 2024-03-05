@@ -1716,7 +1716,7 @@ function editarCotizacion(id) {
 
 											<div class="col-xs-12 col-sm-6 col-md-2 verpdf-oferta">
 
-    											<button id="Hdi-pdf${oferta.NumCotizOferta}" type="button" class="btn btn-info" onclick='verPdfHdi(${oferta.NumCotizOferta})'>
+    											<button id="Hdi-pdf${oferta.NumCotizOferta}" type="button" class="btn btn-info" onclick='verPdfHdi("${oferta.NumCotizOferta}")'>
 
     												<div>VER PDF &nbsp;&nbsp;<span class="fa fa-file-text"></span></div>
 
