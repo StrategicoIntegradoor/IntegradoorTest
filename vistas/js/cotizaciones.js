@@ -2650,7 +2650,7 @@ FUNCION PARA CARGAR EL PDF OFICIAL DE HDI
 ======================================================*/
 
 const verPdfHdi = async (cotizacion) => {
-
+  console.log(cotizacion)
   $("#Hdi-pdf" + cotizacion).html(
 
     "VER PDF &nbsp;&nbsp;<img src='vistas/img/plantilla/loading.gif' width='18' height='18'>"
