@@ -2650,7 +2650,7 @@ FUNCION PARA CARGAR EL PDF OFICIAL DE HDI
 ======================================================*/
 
 const verPdfHdi = async (cotizacion) => {
-  console.log(cotizacion)
+
   $("#Hdi-pdf" + cotizacion).html(
 
     "VER PDF &nbsp;&nbsp;<img src='vistas/img/plantilla/loading.gif' width='18' height='18'>"
@@ -2672,24 +2672,31 @@ const verPdfHdi = async (cotizacion) => {
     })
 
     const responseData = await blobPdfHdi.text(); // Lee la respuesta como texto
+    const cadenaBase64 = responseData.pdfHDIbase64;
 
-    console.log("Respuesta del servidor:", responseData);
+    // console.log("Respuesta del servidor:", responseData);
+    const enlacePDF = document.createElement('a');
+    enlacePDF.href = `data:application/pdf;base64,${cadenaBase64}`;
+    enlacePDF.target = '_blank'; // Abre el enlace en una nueva pestaña
+    enlacePDF.textContent = 'Abrir PDF';
+    
+    // Agregar el enlace al documento HTML (puedes agregarlo al elemento que desees)
+    document.body.appendChild(enlacePDF);
+    // // .then(response => response.blob())
 
-  //   .then(response => response.blob())
+    // .then(resBlob => {
 
-  //   .then(resBlob => {
+    //   const res = new Blob([resBlob], {
 
-  //     const res = new Blob([resBlob], {
+    //     type: "application/pdf",
 
-  //       type: "application/pdf",
-
-  //     })
+    //   })
 
 
 
-  //     return res
+    //   return res
 
-  //   })
+    // })
 
 
 
