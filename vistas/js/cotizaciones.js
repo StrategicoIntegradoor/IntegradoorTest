@@ -2674,14 +2674,17 @@ const verPdfHdi = async (cotizacion) => {
     const responseData = await blobPdfHdi.text(); // Lee la respuesta como texto
     const cadenaBase64 = responseData.pdfHDIbase64;
 
-    // console.log("Respuesta del servidor:", responseData);
-    const enlacePDF = document.createElement('a');
-    enlacePDF.href = `data:application/pdf;base64,${cadenaBase64}`;
-    enlacePDF.target = '_blank'; // Abre el enlace en una nueva pestaña
-    enlacePDF.textContent = 'Abrir PDF';
-    
-    // Agregar el enlace al documento HTML (puedes agregarlo al elemento que desees)
-    document.body.appendChild(enlacePDF);
+   // Decodificar la cadena base64
+const contenidoPDF = atob(cadenaBase64);
+
+// Crear un Blob con el contenido del PDF
+const blobPDF = new Blob([contenidoPDF], { type: 'application/pdf' });
+
+// Crear una URL del Blob
+const urlPDF = URL.createObjectURL(blobPDF);
+
+// Abrir una nueva ventana con el PDF
+window.open(urlPDF, '_blank');
     // // .then(response => response.blob())
 
     // .then(resBlob => {
