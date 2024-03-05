@@ -2675,18 +2675,14 @@ const verPdfHdi = async (cotizacion) => {
 
     .then(resBlob => {
 
-      const res = new Blob([resBlob], {
-
-        type: "application/pdf",
-
-      })
-
-
-
-      return res
+      // Agregar retorno de carro al principio del Blob
+      const res = new Blob(["\r", resBlob], { type: "application/pdf" });
+      return res;
 
     })
-
+    .catch(error => {
+      console.error('Error durante la descarga del PDF:', error);
+    });
 
 
   const downloadUrl = URL.createObjectURL(blobPdfHdi)
