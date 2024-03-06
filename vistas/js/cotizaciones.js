@@ -1390,6 +1390,18 @@ function editarCotizacion(id) {
                 var valorRCFormat = (oferta.ValorRC);
               } 
 
+              //FUNCION QUE ACOMODA RCE EN PARRILLA CUANDO LLEGA MUNDIAL
+              if (oferta.Aseguradora == 'Mundial' && oferta.Producto == 'Pesados con RCE en exceso') {
+                // Eliminar los puntos y convertir a número
+                RC = parseFloat(RC.replace(/\./g, ''));
+            
+                // Sumar 1.500.000.000
+                RC += 1500000000;
+            
+                // Volver a formatear con puntos
+                var valorRCFormat = RC.toLocaleString();
+            
+              }
 
 
               if (
