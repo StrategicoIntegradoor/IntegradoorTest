@@ -1390,6 +1390,9 @@ function editarCotizacion(id) {
                 var valorRCFormat = (oferta.ValorRC);
               } 
 
+              console.log(oferta.Aseguradora)
+              console.log(oferta.Producto)
+
               //FUNCION QUE ACOMODA RCE EN PARRILLA CUANDO LLEGA MUNDIAL
               if (oferta.Aseguradora == 'Mundial' && oferta.Producto == 'Pesados con RCE en exceso') {
                 // Eliminar los puntos y convertir a número
