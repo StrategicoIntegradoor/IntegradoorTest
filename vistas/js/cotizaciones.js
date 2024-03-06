@@ -2601,13 +2601,7 @@ const verPdfZurich = async (cotizacion) => {
 
       })
 
-      .then(blobPdfZurich => {
-        // Obtener el texto del cuerpo de la respuesta
-        return blobPdfZurich.text().then(responseBodyText => {
-          console.log('Contenido del response antes de Blob:', responseBodyText);
-          return responseBodyText;
-        });
-      })
+      .then(response => response.blob())
 
       .then(resBlob => {
 
@@ -2664,41 +2658,27 @@ const verPdfHdi = async (cotizacion) => {
   formData.append("cotizacion", cotizacion);
 
   try {
-    // Realizar la solicitud y obtener la respuesta
-    const response = await fetch("https://www.grupoasistencia.com/motor_webservice/WSHDIPLUS/get_pdf_hdi.php", {
+    const blobPdfHdi = await fetch("https://www.grupoasistencia.com/motor_webservice/WSHDIPLUS/get_pdf_hdi.php", {
       method: "POST",
       body: formData,
-    });
+    })
+      .then(response => response.blob());
 
-    // Verificar si la solicitud fue exitosa (código de estado 200)
-    if (response.ok) {
-      // Obtener el contenido del cuerpo de la respuesta como texto
-      const responseBodyText = await response.text();
-      console.log('Contenido del cuerpo de la respuesta:', responseBodyText);
+    const downloadUrl = URL.createObjectURL(blobPdfHdi);
+    const a = document.createElement('a');
+    a.href = downloadUrl;
+    a.download = 'HDI' + cotizacion + '.pdf';
+    document.body.appendChild(a);
+    a.click();
 
-      // Convertir el texto a Blob
-      const blobPdfHdi = new Blob([responseBodyText], { type: "application/pdf" });
-      console.log("Tamaño del Blob:", blobPdfHdi.size);
-      console.log("Tipo del Blob:", blobPdfHdi.type);
-
-      // Crear URL de descarga y simular clic en enlace
-      const downloadUrl = URL.createObjectURL(blobPdfHdi);
-      const a = document.createElement('a');
-      a.href = downloadUrl;
-      a.download = 'HDI' + cotizacion + '.pdf';
-      document.body.appendChild(a);
-      a.click();
-
-      $("#Hdi-pdf" + cotizacion).html(
-        'VER PDF &nbsp;&nbsp;<span class="fa fa-file-text"></span>'
-      );
-    } else {
-      console.error('Error en la solicitud. Código de estado:', response.status);
-    }
+    $("#Hdi-pdf" + cotizacion).html(
+      'VER PDF &nbsp;&nbsp;<span class="fa fa-file-text"></span>'
+    );
   } catch (error) {
     console.error('Error durante la descarga del PDF:', error);
   }
 };
+
 
 // const obtenerPdfZurich = async (cotizacion) => {
 
