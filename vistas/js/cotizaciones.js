@@ -1394,7 +1394,7 @@ function editarCotizacion(id) {
               console.log(oferta.Producto)
 
               //FUNCION QUE ACOMODA RCE EN PARRILLA CUANDO LLEGA MUNDIAL
-              if (oferta.Aseguradora == 'Mundial' && oferta.Producto == 'Pesados con RCE en exceso') {
+              if (oferta.Aseguradora == 'Mundial' && (oferta.Producto == 'Pesados con RCE en exceso' || oferta.Producto == 'Pesados con RCE en exceso1')) {
                 // Eliminar los puntos y convertir a número
                 var RC = oferta.ValorRC
                 RC = parseFloat(RC.replace(/\./g, ''));
