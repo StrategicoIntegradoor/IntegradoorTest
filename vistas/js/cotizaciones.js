@@ -1393,6 +1393,7 @@ function editarCotizacion(id) {
               //FUNCION QUE ACOMODA RCE EN PARRILLA CUANDO LLEGA MUNDIAL
               if (oferta.Aseguradora == 'Mundial' && oferta.Producto == 'Pesados con RCE en exceso') {
                 // Eliminar los puntos y convertir a número
+                RC = oferta.ValorRC
                 RC = parseFloat(RC.replace(/\./g, ''));
             
                 // Sumar 1.500.000.000
