@@ -1404,7 +1404,7 @@ $(document).ready(function () {
     }else if (aseguradora == "HDI Seguros") {
       cardCotizacion += `
                           <div class="col-xs-12 col-sm-6 col-md-2 verpdf-oferta">
-                              <button id="Hdi-pdf${numCotizOferta}" type="button" class="btn btn-info" onclick='verPdfPrevisora("${numCotizOferta}")'>
+                              <button id="Hdi-pdf${numCotizOferta}" type="button" class="btn btn-info" onclick='verPdfHdi("${numCotizOferta}")'>
                                   <div>VER PDF &nbsp;&nbsp;<span class="fa fa-file-text"></span></div>
                               </button>
                           </div>`;
