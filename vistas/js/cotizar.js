@@ -2118,34 +2118,34 @@ $(document).ready(function () {
                   );
                     
                   /* Solidaria */
-                  // cont.push(
-                  //   fetch(
-                  //     "https://grupoasistencia.com/motor_webservice_tst2/Solidaria?callback=myCallback",
-                  //     requestOptions
-                  //   )
-                  //     .then((res) => {
-                  //       if (!res.ok) throw Error(res.statusText);
-                  //       return res.json();
-                  //     })
-                  //     .then((ofertas) => {
-                  //       // console.log('Ofertas de Solidaria:', ofertas[0].Resultado); // Imprime las ofertas en la consola
-                  //       if (typeof ofertas[0].Resultado !== 'undefined') {
-                  //         agregarAseguradoraFallida('Solidaria');
-                  //         validarProblema('Solidaria', ofertas);
-                  //         ofertas[0].Mensajes.forEach(mensaje => {
-                  //           mostrarAlertarCotizacionFallida('Solidaria', mensaje)
-                  //         })
-                  //       } else {
-                  //         const contadorPorEntidad = validarOfertas(ofertas,'Solidaria', 1);
-                  //         mostrarAlertaCotizacionExitosa('Solidaria', contadorPorEntidad)
-                  //       }
-                  //     })
-                  //     .catch((err) => {
-                  //       agregarAseguradoraFallida('Solidaria')
-                  //       mostrarAlertarCotizacionFallida('Solidaria', "Error de conexión. Intente de nuevo o comuníquese con el equipo comercial");
-                  //       console.error(err);
-                  //     })
-                  // );
+                  cont.push(
+                    fetch(
+                      "https://grupoasistencia.com/motor_webservice_tst2/Solidaria?callback=myCallback",
+                      requestOptions
+                    )
+                      .then((res) => {
+                        if (!res.ok) throw Error(res.statusText);
+                        return res.json();
+                      })
+                      .then((ofertas) => {
+                        // console.log('Ofertas de Solidaria:', ofertas[0].Resultado); // Imprime las ofertas en la consola
+                        if (typeof ofertas[0].Resultado !== 'undefined') {
+                          agregarAseguradoraFallida('Solidaria');
+                          validarProblema('Solidaria', ofertas);
+                          ofertas[0].Mensajes.forEach(mensaje => {
+                            mostrarAlertarCotizacionFallida('Solidaria', mensaje)
+                          })
+                        } else {
+                          const contadorPorEntidad = validarOfertas(ofertas,'Solidaria', 1);
+                          mostrarAlertaCotizacionExitosa('Solidaria', contadorPorEntidad)
+                        }
+                      })
+                      .catch((err) => {
+                        agregarAseguradoraFallida('Solidaria')
+                        mostrarAlertarCotizacionFallida('Solidaria', "Error de conexión. Intente de nuevo o comuníquese con el equipo comercial");
+                        console.error(err);
+                      })
+                  );
       
                   /* Mapfre */
                   // cont.push(
@@ -2236,31 +2236,31 @@ $(document).ready(function () {
                   // );
       
                   /* Bolivar */
-                  cont.push(
-                    fetch("https://grupoasistencia.com/motor_webservice_tst2/Bolivar?callback=myCallback", requestOptions)
-                      .then((res) => {
-                        if (!res.ok) throw Error(res.statusText);
-                        return res.json();
-                      })
-                      .then((ofertas) => {
-                        // console.log(ofertas)
-                        if (typeof ofertas[0].Resultado !== 'undefined') {
-                          agregarAseguradoraFallida('Bolivar');
-                          validarProblema('Bolivar', ofertas);
-                          ofertas[0].Mensajes.forEach(mensaje => {
-                            mostrarAlertarCotizacionFallida('Bolivar', mensaje)
-                          })
-                        } else {
-                          const contadorPorEntidad = validarOfertas(ofertas,'Bolivar', 1);
-                          mostrarAlertaCotizacionExitosa('Bolivar', contadorPorEntidad)
-                        }
-                      })
-                      .catch((err) => {
-                        agregarAseguradoraFallida('Bolivar');
-                        mostrarAlertarCotizacionFallida('Bolivar', "Error de conexión. Intente de nuevo o comuníquese con el equipo comercial");
-                        console.error(err);
-                      })
-                  );
+                  // cont.push(
+                  //   fetch("https://grupoasistencia.com/motor_webservice_tst2/Bolivar?callback=myCallback", requestOptions)
+                  //     .then((res) => {
+                  //       if (!res.ok) throw Error(res.statusText);
+                  //       return res.json();
+                  //     })
+                  //     .then((ofertas) => {
+                  //       // console.log(ofertas)
+                  //       if (typeof ofertas[0].Resultado !== 'undefined') {
+                  //         agregarAseguradoraFallida('Bolivar');
+                  //         validarProblema('Bolivar', ofertas);
+                  //         ofertas[0].Mensajes.forEach(mensaje => {
+                  //           mostrarAlertarCotizacionFallida('Bolivar', mensaje)
+                  //         })
+                  //       } else {
+                  //         const contadorPorEntidad = validarOfertas(ofertas,'Bolivar', 1);
+                  //         mostrarAlertaCotizacionExitosa('Bolivar', contadorPorEntidad)
+                  //       }
+                  //     })
+                  //     .catch((err) => {
+                  //       agregarAseguradoraFallida('Bolivar');
+                  //       mostrarAlertarCotizacionFallida('Bolivar', "Error de conexión. Intente de nuevo o comuníquese con el equipo comercial");
+                  //       console.error(err);
+                  //     })
+                  // );
     
                   /* Zurich */
                   // let zurichStates = {};
