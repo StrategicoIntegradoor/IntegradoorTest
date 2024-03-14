@@ -1365,7 +1365,7 @@ $(document).ready(function () {
                                           <input type="checkbox" class="classRecomOferta" name="recomOferta" id="recom${numCotizOferta}${numId}${producto}\" onclick='recomendarOferta(\"${aseguradora}\", \"${prima}\", \"${producto}\", \"${numCotizOferta}\", this);' />
                                         </div>
                                       </div>`;
-    if ((aseguradora == "Seguros Bolivar" || aseguradora == "Axa Colpatria") && id_intermediario != 78) {
+    if ((aseguradora == "Seguros Bolivar" || aseguradora == "Axa Colpatria")) {
       cardCotizacion += `
                                           <div class="col-xs-12 col-sm-6 col-md-2 verpdf-oferta">
                                               <button type="button" class="btn btn-info" id="btnAsegPDF${numCotizOferta}${numId}\" onclick='verPdfOferta(\"${aseguradora}\", \"${numCotizOferta}\", \"${numId}\", \"${id_intermediario}\");'>
