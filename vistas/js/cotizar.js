@@ -2491,7 +2491,7 @@ $(document).ready(function () {
                     document.querySelector('.button-recotizar').style.display = 'block'
                     /* Se monta el botón para generar el pdf con 
                     el valor de la variable idCotizacion */
-                    const contentCotizacionPDF = document.querySelector('#contenCotizacionPDF')
+                    const contentCotizacionPDF = document.querySelector('#contenCotizacionPDFLivianos')
                     contentCotizacionPDF.innerHTML = `  
                                                       <div class="col-xs-12" style="width: 100%;">
                                                         <div class="row align-items-center">
@@ -2788,7 +2788,7 @@ $(document).ready(function () {
                 document.querySelector('.button-recotizar').style.display = 'block'
                 /* Se monta el botón para generar el pdf con 
                 el valor de la variable idCotizacion */
-                const contentCotizacionPDF = document.querySelector('#contenCotizacionPDF')
+                const contentCotizacionPDF = document.querySelector('#contenCotizacionPDFLivianos')
                 contentCotizacionPDF.innerHTML = `  
                                                   <div class="col-xs-12" style="width: 100%;">
                                                     <div class="row align-items-center">
