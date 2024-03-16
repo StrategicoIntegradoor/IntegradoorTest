@@ -968,7 +968,7 @@ $idIntermediario = $_SESSION['permisos']['id_Intermediario'];
             <div id="cardAgregarCotizacion">
             </div>
 
-            <div id="contenCotizacionPDF">
+            <div id="contenCotizacionPDFLivianos">
 
               <div class="col-xs-12" style="width: 100%;">
                 <div class="row align-items-center">
