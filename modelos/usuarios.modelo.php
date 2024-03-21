@@ -67,7 +67,7 @@ class ModeloUsuarios{
 			FROM $tabla
 			JOIN $tabla2 ON $tabla.id_rol = $tabla2.id_rol
 			JOIN $tabla4 ON $tabla.id_rol = $tabla4.idRol
-			JOIN $tabla3 ON $tabla3.id_Intermediario = $tabla5.id_intermediario
+			JOIN $tabla5 ON $tabla5.id_intermediario = $tabla3.id_Intermediario
 			WHERE $item = :$item
 		");
 		
