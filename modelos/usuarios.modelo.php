@@ -75,12 +75,17 @@ class ModeloUsuarios{
 		$stmt->execute();
 		
 		$resultado = $stmt->fetch(PDO::FETCH_ASSOC);
-		var_dump($resultado);
-		die();
+		if ($resultado === false) {
+			// Imprimir mensaje de error
+			$errorInfo = $stmt->errorInfo();
+			echo "Error: " . $errorInfo[2]; // El índice 2 contiene el mensaje de error
+		} else {
+			// Procesar el resultado
+			print_r($resultado);
+		}
+		
 		$stmt->close();
 		$stmt = null;
-		
-		return $resultado;
 		
 
 	}
