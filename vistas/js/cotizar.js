@@ -2098,15 +2098,15 @@ $(document).ready(function () {
               if(intermediario != 78){
                        
                                 
-                const aseguradorasCoti = [];
+                const aseguradorasCoti = ['Allianz', 'AXA', 'Bolivar', 'Equidad', 'Estado', 'HDI', 'Liberty', 'Mapfre', 'Previsora', 'SBS', 'Solidaria', 'Zurich'];
 
-                for (const aseguradora in aseguradoras) {
-                  if (aseguradoras.hasOwnProperty(aseguradora)) {
-                    if (aseguradoras[aseguradora]['A'] == '1') {
-                      aseguradorasCoti.push(aseguradora);
-                    }
-                  }
-                }
+                // for (const aseguradora in aseguradoras) {
+                //   if (aseguradoras.hasOwnProperty(aseguradora)) {
+                //     if (aseguradoras[aseguradora]['A'] == '1') {
+                //       aseguradorasCoti.push(aseguradora);
+                //     }
+                //   }
+                // }
 
                 console.log(aseguradorasCoti);
                 // const cont = []; // Array para almacenar las promesas
