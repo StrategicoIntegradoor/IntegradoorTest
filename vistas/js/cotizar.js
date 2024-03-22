@@ -2100,11 +2100,20 @@ $(document).ready(function () {
                 console.log(aseguradoras_autorizar)     
                 const aseguradorasCoti = [];
 
-                aseguradoras_autorizar.forEach(aseguradora => {
-                  if (aseguradora['A'] === '1') {
-                    aseguradorasCoti.push(aseguradora.name);
-                  }
-                });
+                // Verificar si aseguradoras_autorizar es un objeto y convertirlo a un array si es necesario
+                if (typeof aseguradoras_autorizar === 'object' && !Array.isArray(aseguradoras_autorizar)) {
+                  // Convertir el objeto a un array de valores
+                  const aseguradorasArray = Object.values(aseguradoras_autorizar);
+
+                  // Iterar sobre el array de valores y agregar las aseguradoras al array aseguradorasCoti
+                  aseguradorasArray.forEach(aseguradora => {
+                    if (aseguradora['A'] === '1') {
+                      aseguradorasCoti.push(aseguradora.name);
+                    }
+                  });
+                } else {
+                  console.error('aseguradoras_autorizar no es un objeto válido');
+                }
 
                 console.log(aseguradorasCoti);
                 // const cont = []; // Array para almacenar las promesas
