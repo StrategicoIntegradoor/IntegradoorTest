@@ -2109,7 +2109,7 @@ $(document).ready(function () {
                 }
 
                 console.log(aseguradorasCoti);
-                const cont = []; // Array para almacenar las promesas
+                // const cont = []; // Array para almacenar las promesas
 
                 aseguradorasCoti.forEach(aseguradora => {
                   if(aseguradora == "Mapfre"){
