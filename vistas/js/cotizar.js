@@ -1907,6 +1907,9 @@ $(document).ready(function () {
   
         if (!primerIntentoRealizado) {
           menosVeh();
+
+          
+
           const aseguradoras = ['Allianz', 'AXA', 'Bolivar', 'Equidad', 'Estado', 'HDI', 'Liberty', 'Mapfre', 'Previsora', 'SBS', 'Solidaria', 'Zurich'];
 
           aseguradoras.forEach(aseguradora => {
