@@ -2098,20 +2098,23 @@ $(document).ready(function () {
               if(intermediario != 78){
                        
                                 
-                const aseguradorasCoti = ['Allianz', 'AXA', 'Bolivar', 'Equidad', 'Estado', 'HDI', 'Liberty', 'Mapfre', 'Previsora', 'SBS', 'Solidaria', 'Zurich'];
+                const aseguradorasCoti = [];
 
-                // for (const aseguradora in aseguradoras) {
-                //   if (aseguradoras.hasOwnProperty(aseguradora)) {
-                //     if (aseguradoras[aseguradora]['A'] == '1') {
-                //       aseguradorasCoti.push(aseguradora);
-                //     }
-                //   }
-                // }
+                for (const aseguradora in aseguradoras) {
+                  if (aseguradoras.hasOwnProperty(aseguradora)) {
+                    if (aseguradoras[aseguradora]['A'] == '1') {
+                      aseguradorasCoti.push(aseguradora);
+                    }
+                  }
+                }
 
                 console.log(aseguradorasCoti);
                 // const cont = []; // Array para almacenar las promesas
 
                 aseguradorasCoti.forEach(aseguradora => {
+
+                  let url;
+
                   if(aseguradora == "Mapfre"){
 
                     const url = `https://grupoasistencia.com/motor_webservice_tst2/mapfrecotizacion4?callback=myCallback`;
