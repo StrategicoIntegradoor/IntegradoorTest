@@ -1911,10 +1911,45 @@ $(document).ready(function () {
           menosVeh();
 
           
+          const aseguradorasCoti = Object.keys(aseguradoras_autorizar).filter(aseguradora => aseguradoras_autorizar[aseguradora]['A'] === '1');
 
           const aseguradoras = ['Allianz', 'AXA', 'Bolivar', 'Equidad', 'Estado', 'HDI', 'Liberty', 'Mapfre', 'Previsora', 'SBS', 'Solidaria', 'Zurich'];
 
-          aseguradoras.forEach(aseguradora => {
+          aseguradorasCoti.forEach(aseguradora => {
+
+                // Crear una fila
+                const fila = document.createElement('tr');
+
+                // Crear la celda de nombre de aseguradora
+                const celdaNombre = document.createElement('td');
+                celdaNombre.textContent = aseguradora;
+                fila.appendChild(celdaNombre);
+
+                // Crear la celda de respuesta
+                const celdaRespuesta = document.createElement('td');
+                celdaRespuesta.className = 'text-center';
+                celdaRespuesta.id = `${aseguradora}Response`;
+                fila.appendChild(celdaRespuesta);
+
+                // Crear la celda de productos cotizados
+                const celdaProductos = document.createElement('td');
+                celdaProductos.className = 'text-center';
+                celdaProductos.id = `${aseguradora}Products`;
+                fila.appendChild(celdaProductos);
+
+                // Crear la celda de observaciones
+                const celdaObservaciones = document.createElement('td');
+                celdaObservaciones.id = `${aseguradora}Observation`;
+                fila.appendChild(celdaObservaciones);
+
+                // Agregar la fila al cuerpo de la tabla
+                tbody.appendChild(fila);
+
+
+
+
+
+
               const celdaResponse = document.getElementById(`${aseguradora}Response`);
       
               // Agregar un elemento de carga (por ejemplo, un gif) en la celda de respuesta
@@ -2095,7 +2130,6 @@ $(document).ready(function () {
 
               
                        
-                const aseguradorasCoti = Object.keys(aseguradoras_autorizar).filter(aseguradora => aseguradoras_autorizar[aseguradora]['A'] === '1');
                 // console.log(aseguradorasCoti); // Esto imprimirá el array con los nombres de aseguradoras autorizadas
 
 
