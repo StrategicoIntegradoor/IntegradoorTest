@@ -183,8 +183,8 @@ CUERPO DOCUMENTO
             $aseguradoras[$clave] = $valor;
         }
     }
-    var_dump($valor);
-    die();
+    // var_dump($valor);
+    // die();
     ?>
     <script>
     var permisosPlantilla = '<?php echo json_encode($permisos);?>';
