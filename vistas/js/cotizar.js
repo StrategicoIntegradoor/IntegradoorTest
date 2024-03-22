@@ -1,6 +1,7 @@
 $(document).ready(function () {
-  var aseguradoras = document.getElementById("aseguradoras").value;
-  console.log(aseguradoras)
+  var aseguradoras = JSON.parse(document.getElementById('aseguradoras').value);
+  console.log(aseguradoras);
+  
 
     const parrillaCotizaciones = document.getElementById('parrillaCotizaciones');
     parrillaCotizaciones.style.display = 'none';
