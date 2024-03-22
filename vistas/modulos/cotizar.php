@@ -31,18 +31,18 @@ function obtenerCredenciales($enlace, $tabla, $columnas, $idIntermediario) {
 }
 
 // FUNCION PARA OBTENER CREDENCIALES SBS
-if ($aseguradoras['SBS']['C'] == 1) {
+if ($aseguradoras['SBS']['C'] == "1") {
 
-  $creSBS = obtenerCredenciales($enlace, 'Credenciales_SBS2', 'cre_sbs_usuario, cre_sbs_contrasena', $_SESSION['intermediario']);
+  $creSBS = obtenerCredenciales($enlace, 'Credenciales_SBS2', 'cre_sbs_usuario', 'cre_sbs_contrasena', $_SESSION['intermediario']);
   
 }else{
 
-  $creSBS = obtenerCredenciales($enlace, 'Credenciales_SBS2', 'cre_sbs_usuario, cre_sbs_contrasena', '3');
+  $creSBS = obtenerCredenciales($enlace, 'Credenciales_SBS2', 'cre_sbs_usuario', 'cre_sbs_contrasena', '3');
 
 }
 $cre_sbs_usuario = $creSBS['cre_sbs_usuario'];
 $cre_sbs_contrasena = $creSBS['cre_sbs_contrasena'];
-var_dump($aseguradoras['SBS']['C']);
+var_dump($cre_sbs_usuario);
 die();
 
 // FUNCION PARA OBTENER CREDENCIALES ALLIANZ
