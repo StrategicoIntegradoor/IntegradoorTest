@@ -31,7 +31,7 @@ function obtenerCredenciales($enlace, $tabla, $columnas, $idIntermediario) {
 }
 
 // FUNCION PARA OBTENER CREDENCIALES SBS
-if ($aseguradoras['SBS']['C'] == '1') {
+if ($aseguradoras['SBS']['C'] == 1) {
 
   $creSBS = obtenerCredenciales($enlace, 'Credenciales_SBS2', 'cre_sbs_usuario, cre_sbs_contrasena', $_SESSION['intermediario']);
   
