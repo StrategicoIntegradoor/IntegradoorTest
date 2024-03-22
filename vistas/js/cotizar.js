@@ -2209,7 +2209,7 @@ $(document).ready(function () {
                           console.error(err);
                       })
                   );
-              });               
+                  });               
                   
                   Promise.all(cont).then(() => {
                     console.log(aseguradorasFallidas)
