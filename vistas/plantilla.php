@@ -179,8 +179,17 @@ CUERPO DOCUMENTO
       "Allianz" => array("A" => $permisos["Allianz_A"], "C" => $permisos["Allianz_C"]),
       "AXA" => array("A" => $permisos["AXA_A"], "C" => $permisos["AXA_C"]),
       "Bolivar" => array("A" => $permisos["Bolivar_A"], "C" => $permisos["Bolivar_C"]),
-      // Agregar las demás aseguradoras aquí...
-  );
+      "Equidad" => array("A" => $permisos["Equidad_A"], "C" => $permisos["Equidad_C"]),
+      "Estado" => array("A" => $permisos["Estado_A"], "C" => $permisos["Estado_C"]),
+      "HDI" => array("A" => $permisos["HDI_A"], "C" => $permisos["HDI_C"]),
+      "Liberty" => array("A" => $permisos["Liberty_A"], "C" => $permisos["Liberty_C"]),
+      "Mapfre" => array("A" => $permisos["Mapfre_A"], "C" => $permisos["Mapfre_C"]),
+      "Previsora" => array("A" => $permisos["Previsora_A"], "C" => $permisos["Previsora_C"]),
+      "SBS" => array("A" => $permisos["SBS_A"], "C" => $permisos["SBS_C"]),
+      "Solidaria" => array("A" => $permisos["Solidaria_A"], "C" => $permisos["Solidaria_C"]),
+      "Zurich" => array("A" => $permisos["Zurich_A"], "C" => $permisos["Zurich_C"])
+    );
+  
   
   foreach ($aseguradoras as $nombre => $permisos) {
       if ($permisos["A"] == "1" || $permisos["C"] == "1") {
