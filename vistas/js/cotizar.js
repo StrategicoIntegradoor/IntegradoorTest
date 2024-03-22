@@ -2111,21 +2111,21 @@ $(document).ready(function () {
 
                   if(aseguradora == "Mapfre"){
 
-                    const url = `https://grupoasistencia.com/motor_webservice_tst2/mapfrecotizacion4?callback=myCallback`;
+                    url = `https://grupoasistencia.com/motor_webservice_tst2/mapfrecotizacion4?callback=myCallback`;
 
                   }else if(aseguradora == "HDI"){
 
-                    const url = `https://grupoasistencia.com/motor_webservice/HdiPlus?callback=myCallback`;
+                    url = `https://grupoasistencia.com/motor_webservice/HdiPlus?callback=myCallback`;
 
 
                   }else if(aseguradora == "AXA"){
 
-                    const url = `https://grupoasistencia.com/motor_webservice_tst2/AXA_tst?callback=myCallback`;
+                    url = `https://grupoasistencia.com/motor_webservice_tst2/AXA_tst?callback=myCallback`;
 
 
                   }else{
                   // Construir la URL de la solicitud para cada aseguradora
-                  const url = `https://grupoasistencia.com/motor_webservice_tst2/${aseguradora}?callback=myCallback`;
+                  url = `https://grupoasistencia.com/motor_webservice_tst2/${aseguradora}?callback=myCallback`;
                   }
                   
                   // Realizar la solicitud fetch y agregar la promesa al array
