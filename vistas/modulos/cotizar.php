@@ -42,7 +42,7 @@ if ($aseguradoras['SBS']['C'] == 1) {
 }
 $cre_sbs_usuario = $creSBS['cre_sbs_usuario'];
 $cre_sbs_contrasena = $creSBS['cre_sbs_contrasena'];
-var_dump($cre_sbs_usuario);
+var_dump($aseguradoras['SBS']['C']);
 die();
 
 // FUNCION PARA OBTENER CREDENCIALES ALLIANZ
