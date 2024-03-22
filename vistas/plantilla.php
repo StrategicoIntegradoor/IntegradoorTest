@@ -196,8 +196,8 @@ CUERPO DOCUMENTO
           // echo $nombre . "\n";
       }
   }
-  var_dump($aseguradoras);
-  die();
+  // var_dump($aseguradoras);
+  // die();
     ?>
     <script>
     var permisosPlantilla = '<?php echo json_encode($permisos);?>';
