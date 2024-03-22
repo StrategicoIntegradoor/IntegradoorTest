@@ -1779,8 +1779,8 @@ $(document).ready(function () {
     var cre_sol_token = document.getElementById("cre_sol_token").value;
     var cre_sol_fecha_token = document.getElementById("cre_sol_fecha_token").value;
 
-    var aseguradoras = JSON.parse(document.getElementById('aseguradoras').value); 
-    console.log(aseguradoras)
+    var aseguradoras_autorizar = JSON.parse(document.getElementById('aseguradoras').value); 
+    console.log(aseguradoras_autorizar)
 
     if (ciudadCirculacion.length == 4) {
       ciudadCirculacion = "0" + ciudadCirculacion;
@@ -2097,16 +2097,14 @@ $(document).ready(function () {
 
               if(intermediario != 78){
                        
-                                
+                console.log(aseguradoras_autorizar)     
                 const aseguradorasCoti = [];
 
-                for (const aseguradora in aseguradoras) {
-                  if (aseguradoras.hasOwnProperty(aseguradora)) {
-                    if (aseguradoras[aseguradora]['A'] == '1') {
-                      aseguradorasCoti.push(aseguradora);
-                    }
+                aseguradoras_autorizar.forEach(aseguradora => {
+                  if (aseguradora['A'] === '1') {
+                    aseguradorasCoti.push(aseguradora.name);
                   }
-                }
+                });
 
                 console.log(aseguradorasCoti);
                 // const cont = []; // Array para almacenar las promesas
