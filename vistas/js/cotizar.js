@@ -1781,7 +1781,7 @@ $(document).ready(function () {
 
     var aseguradoras = JSON.parse(document.getElementById('aseguradoras').value); 
     console.log(aseguradoras)
-    
+
     if (ciudadCirculacion.length == 4) {
       ciudadCirculacion = "0" + ciudadCirculacion;
     } else if (ciudadCirculacion.length == 3) {
@@ -2097,14 +2097,39 @@ $(document).ready(function () {
 
               if(intermediario != 78){
                        
-                
-                const aseguradorasCoti = ['Allianz', 'Bolivar', 'Equidad', 'HDI', 'Liberty', 'Previsora', 'SBS', 'Solidaria'];
+                                
+                const aseguradorasCoti = [];
 
+                for (const aseguradora in aseguradoras) {
+                  if (aseguradoras.hasOwnProperty(aseguradora)) {
+                    if (aseguradoras[aseguradora]['A'] == '1') {
+                      aseguradorasCoti.push(aseguradora);
+                    }
+                  }
+                }
+
+                console.log(aseguradorasCoti);
                 const cont = []; // Array para almacenar las promesas
 
                 aseguradorasCoti.forEach(aseguradora => {
+                  if(aseguradora == "Mapfre"){
+
+                    const url = `https://grupoasistencia.com/motor_webservice_tst2/mapfrecotizacion4?callback=myCallback`;
+
+                  }else if(aseguradora == "HDI"){
+
+                    const url = `https://grupoasistencia.com/motor_webservice/HdiPlus?callback=myCallback`;
+
+
+                  }else if(aseguradora == "AXA"){
+
+                    const url = `https://grupoasistencia.com/motor_webservice_tst2/AXA_tst?callback=myCallback`;
+
+
+                  }else{
                   // Construir la URL de la solicitud para cada aseguradora
                   const url = `https://grupoasistencia.com/motor_webservice_tst2/${aseguradora}?callback=myCallback`;
+                  }
                   
                   // Realizar la solicitud fetch y agregar la promesa al array
                   cont.push(
