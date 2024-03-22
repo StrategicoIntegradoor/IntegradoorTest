@@ -1914,6 +1914,7 @@ $(document).ready(function () {
           const aseguradorasCoti = Object.keys(aseguradoras_autorizar).filter(aseguradora => aseguradoras_autorizar[aseguradora]['A'] === '1');
 
           const aseguradoras = ['Allianz', 'AXA', 'Bolivar', 'Equidad', 'Estado', 'HDI', 'Liberty', 'Mapfre', 'Previsora', 'SBS', 'Solidaria', 'Zurich'];
+          const tbody = document.querySelector('#tablaResumenCot tbody');
 
           aseguradorasCoti.forEach(aseguradora => {
 
