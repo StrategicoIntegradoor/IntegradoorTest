@@ -113,8 +113,6 @@ if ($aseguradoras['Bolivar']['C'] == "1") {
 }
 $cre_bol_api_key = $creBolivar['cre_bol_api_key'] ?? null;
 $cre_bol_claveAsesor = $creBolivar['cre_bol_claveAsesor'] ?? null;
-var_dump($cre_bol_api_key);
-die();
 
 
 // FUNCION PARA OBTENER CREDENCIALES SOLIDARIA
