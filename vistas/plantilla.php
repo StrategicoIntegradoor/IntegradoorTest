@@ -184,9 +184,11 @@ CUERPO DOCUMENTO
   
   foreach ($aseguradoras as $nombre => $permisos) {
       if ($permisos["A"] == "1" || $permisos["C"] == "1") {
-          echo $nombre . "\n";
+          // echo $nombre . "\n";
       }
   }
+  var_dump($aseguradoras);
+  die();
     ?>
     <script>
     var permisosPlantilla = '<?php echo json_encode($permisos);?>';
