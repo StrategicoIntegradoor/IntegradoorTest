@@ -83,7 +83,7 @@ class ModeloUsuarios{
 			echo "Error: " . $errorInfo[2]; // El índice 2 contiene el mensaje de error
 		} else {
 			// Procesar el resultado
-			print_r($resultado);
+			// print_r($resultado);
 		}
 		
 		$stmt->close();
