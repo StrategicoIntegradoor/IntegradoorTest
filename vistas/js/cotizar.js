@@ -1780,6 +1780,7 @@ $(document).ready(function () {
     var cre_sol_fecha_token = document.getElementById("cre_sol_fecha_token").value;
 
     var aseguradoras = JSON.parse(document.getElementById('aseguradoras').value); 
+    console.log(aseguradoras)
     
     if (ciudadCirculacion.length == 4) {
       ciudadCirculacion = "0" + ciudadCirculacion;
