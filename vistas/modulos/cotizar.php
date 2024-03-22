@@ -993,7 +993,7 @@ $idIntermediario = $_SESSION['permisos']['id_Intermediario'];
         <!-- CAMPOS OCULTOS PARA OPTENER LA INFORMACION-->
         <div style="display: none;">
           <label>Aseguradoras</label>
-          <input type="hidden" name="aseguradoras" id="aseguradoras" value="<?php echo $aseguradoras; ?>">
+          <input type="hidden" name="aseguradoras" id="aseguradoras" value="<?php echo json_encode($aseguradoras); ?>">
           <label>Intermediario</label>
           <input type="hidden" name="idIntermediario" id="idIntermediario" value="<?php echo $idIntermediario; ?>">
           <label>Rol Asesor</label>
