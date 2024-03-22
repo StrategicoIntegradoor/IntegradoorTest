@@ -175,7 +175,16 @@ CUERPO DOCUMENTO
 
     echo '<input type="hidden" id="fechaLimi" value="'.$_SESSION["fechaLimi"].'">';
     $permisos = $_SESSION["permisos"];
-
+    $aseguradoras = array();
+    foreach ($arreglo_datos as $clave => $valor) {
+        // Verificar si la clave termina con "_A" o "_C" para identificar las aseguradoras
+        if (strpos($clave, "_A") !== false || strpos($clave, "_C") !== false) {
+            // Asignar el valor al campo correspondiente en el array de datos de aseguradoras
+            $aseguradoras[$clave] = $valor;
+        }
+    }
+    var_dump($aseguradoras);
+    die();
     ?>
     <script>
     var permisosPlantilla = '<?php echo json_encode($permisos);?>';
