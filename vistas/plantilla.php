@@ -183,7 +183,7 @@ CUERPO DOCUMENTO
             $aseguradoras[$clave] = $valor;
         }
     }
-    var_dump($aseguradoras);
+    var_dump($$_SESSION);
     die();
     ?>
     <script>
