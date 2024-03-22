@@ -1,5 +1,6 @@
 $(document).ready(function () {
-
+  var aseguradoras = document.getElementById("aseguradoras").value;
+  console.log(aseguradoras)
 
     const parrillaCotizaciones = document.getElementById('parrillaCotizaciones');
     parrillaCotizaciones.style.display = 'none';
@@ -1777,7 +1778,6 @@ $(document).ready(function () {
     var cre_sol_Cookie_token = document.getElementById("cre_sol_Cookie_token").value;
     var cre_sol_token = document.getElementById("cre_sol_token").value;
     var cre_sol_fecha_token = document.getElementById("cre_sol_fecha_token").value;
-  
   
     
     if (ciudadCirculacion.length == 4) {
