@@ -65,10 +65,8 @@ class ModeloUsuarios{
 		$stmt = Conexion::conectar()->prepare("
 			SELECT *
 			FROM $tabla
-			JOIN $tabla3 ON $tabla.id_Intermediario = $tabla3.id_Intermediario
 			JOIN $tabla2 ON $tabla.id_rol = $tabla2.id_rol
 			JOIN $tabla4 ON $tabla.id_rol = $tabla4.idRol
-			JOIN $tabla5 ON $tabla3.id_Intermediario = $tabla5.id_Intermediario
 			WHERE $item = :$item
 		");
 		
