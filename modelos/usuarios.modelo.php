@@ -86,7 +86,7 @@ class ModeloUsuarios{
 			// print_r($resultado);
 		}
 		
-		$stmt->close();
+		// $stmt->close();
 		$stmt = null;
 		
 		
