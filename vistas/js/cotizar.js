@@ -2151,33 +2151,39 @@ $(document).ready(function () {
                       });
                       return; // Salir del bucle después de procesar Zurich
                   } else if (aseguradora === "Estado") {
-                      const aseguradorasEstado = ["Estado", "Estado2"]; // Agrega más aseguradoras según sea necesario
-                      aseguradorasEstado.forEach(aseguradoraEstado => {
-                          cont.push(
-                              fetch(`https://grupoasistencia.com/motor_webservice_tst2/${aseguradoraEstado}?callback=myCallback`, requestOptions)
-                              .then(res => {
-                                  if (!res.ok) throw Error(res.statusText);
-                                  return res.json();
-                              })
-                              .then(ofertas => {
-                                  if (typeof ofertas.Resultado !== 'undefined') {
-                                      agregarAseguradoraFallida("Estado");
-                                      validarProblema(aseguradoraEstado, ofertas);
-                                      ofertas.Mensajes.forEach(mensaje => {
-                                          mostrarAlertarCotizacionFallida(aseguradoraEstado, mensaje);
-                                      });
-                                  } else {
-                                      const contadorPorEntidad = validarOfertas(ofertas, aseguradoraEstado, 1);
-                                      mostrarAlertaCotizacionExitosa(aseguradoraEstado, contadorPorEntidad);
-                                  }
-                              })
-                              .catch(err => {
-                                  agregarAseguradoraFallida("Estado");
-                                  mostrarAlertarCotizacionFallida(aseguradoraEstado, "Error de conexión. Intente de nuevo o comuníquese con el equipo comercial");
-                                  console.error(err);
-                              })
-                          );
-                      });
+                    const aseguradorasEstado = ["Estado", "Estado2"]; // Agrega más aseguradoras según sea necesario
+                    aseguradorasEstado.forEach((aseguradora) => {
+                      let successAseguradora = true;
+                      cont.push(
+                        fetch(`https://grupoasistencia.com/motor_webservice_tst2/${aseguradora}?callback=myCallback`, requestOptions)
+                          .then((res) => {
+                            if (!res.ok) throw Error(res.statusText);
+                            return res.json();
+                          })
+                          .then((ofertas) => {
+                            let result = [];
+                            result.push(ofertas);
+                            if (typeof result[0].Resultado !== 'undefined') {
+                              agregarAseguradoraFallida("Estado");
+                              validarProblema(aseguradora, result);
+                              result[0].Mensajes.forEach(mensaje => {
+                                mostrarAlertarCotizacionFallida(aseguradora, mensaje);
+                              });
+                            } else {
+                              const contadorPorEntidad = validarOfertas(result, aseguradora, 1);
+                              if (successAseguradora) {
+                                mostrarAlertaCotizacionExitosa(aseguradora, contadorPorEntidad);
+                                successAseguradora = false;
+                              }
+                            }
+                          })
+                          .catch((err) => {
+                            agregarAseguradoraFallida("Estado");
+                            mostrarAlertarCotizacionFallida(aseguradora, "Error de conexión. Intente de nuevo o comuníquese con el equipo comercial");
+                            console.error(err);
+                          })
+                      );
+                    });
                       return; // Salir del bucle después de procesar Estado
                   } else {
                       // Construir la URL de la solicitud para cada aseguradora
