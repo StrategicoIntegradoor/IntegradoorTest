@@ -1,6 +1,6 @@
 <?php
-var_dump($aseguradoras);
-die();
+// var_dump($aseguradoras);
+// die();
 $DB_host = "localhost";
 $DB_user = "grupoasi_cotizautos";
 $DB_pass = "M1graci0n123";
@@ -31,10 +31,19 @@ function obtenerCredenciales($enlace, $tabla, $columnas, $idIntermediario) {
 }
 
 // FUNCION PARA OBTENER CREDENCIALES SBS
-$creSBS = obtenerCredenciales($enlace, 'Credenciales_SBS2', 'cre_sbs_usuario, cre_sbs_contrasena', $_SESSION['intermediario']);
+if ($aseguradoras['SBS']['C'] == '1') {
 
+  $creSBS = obtenerCredenciales($enlace, 'Credenciales_SBS2', 'cre_sbs_usuario, cre_sbs_contrasena', $_SESSION['intermediario']);
+  
+}else{
+
+  $creSBS = obtenerCredenciales($enlace, 'Credenciales_SBS2', 'cre_sbs_usuario, cre_sbs_contrasena', '3');
+
+}
 $cre_sbs_usuario = $creSBS['cre_sbs_usuario'];
-$cre_sbs_contrasena = $creSBS['cre_sbs_contrasena']; // Aquí está el cambio
+$cre_sbs_contrasena = $creSBS['cre_sbs_contrasena'];
+var_dump($cre_sbs_usuario);
+die();
 
 // FUNCION PARA OBTENER CREDENCIALES ALLIANZ
 $creAllianz = obtenerCredenciales($enlace, 'Credenciales_Allianz', '*', $_SESSION['intermediario']);
