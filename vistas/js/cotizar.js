@@ -2106,54 +2106,111 @@ $(document).ready(function () {
                 // const cont = []; // Array para almacenar las promesas
 
                 aseguradorasCoti.forEach(aseguradora => {
-
                   let url;
-
-                  if(aseguradora == "Mapfre"){
-
-                    url = `https://grupoasistencia.com/motor_webservice_tst2/mapfrecotizacion4?callback=myCallback`;
-
-                  }else if(aseguradora == "HDI"){
-
-                    url = `https://grupoasistencia.com/motor_webservice/HdiPlus?callback=myCallback`;
-
-
-                  }else if(aseguradora == "AXA"){
-
-                    url = `https://grupoasistencia.com/motor_webservice_tst2/AXA_tst?callback=myCallback`;
-
-
-                  }else{
-                  // Construir la URL de la solicitud para cada aseguradora
-                  url = `https://grupoasistencia.com/motor_webservice_tst2/${aseguradora}?callback=myCallback`;
+              
+                  if (aseguradora === "Mapfre") {
+                      url = `https://grupoasistencia.com/motor_webservice_tst2/mapfrecotizacion4?callback=myCallback`;
+                  } else if (aseguradora === "HDI") {
+                      url = `https://grupoasistencia.com/motor_webservice/HdiPlus?callback=myCallback`;
+                  } else if (aseguradora === "AXA") {
+                      url = `https://grupoasistencia.com/motor_webservice_tst2/AXA_tst?callback=myCallback`;
+                  } else if (aseguradora === "Zurich") {
+                      const planes = ["BASIC", "MEDIUM", "FULL"];
+                      planes.forEach(plan => {
+                          let body = JSON.parse(requestOptions.body);
+                          body.plan = plan;
+                          body.Email = "@gmail.com";
+                          body.Email2 = Math.round(Math.random() * 999999) + body.Email;
+                          requestOptions.body = JSON.stringify(body);
+                          url = `https://grupoasistencia.com/motor_webservice_tst2/Zurich?callback=myCallback`;
+              
+                          cont.push(
+                              fetch(url, requestOptions)
+                              .then(res => {
+                                  if (!res.ok) throw Error(res.statusText);
+                                  return res.json();
+                              })
+                              .then(ofertas => {
+                                  if (typeof ofertas.Resultado !== 'undefined') {
+                                      validarProblema('Zurich', ofertas);
+                                      agregarAseguradoraFallida(plan);
+                                      ofertas.Mensajes.forEach(mensaje => {
+                                          mostrarAlertarCotizacionFallida(`Zurich`, mensaje);
+                                      });
+                                  } else {
+                                      const contadorPorEntidad = validarOfertas(ofertas, 'Zurich', 1);
+                                      mostrarAlertaCotizacionExitosa(`Zurich`, contadorPorEntidad);
+                                  }
+                              })
+                              .catch(err => {
+                                  agregarAseguradoraFallida(plan);
+                                  mostrarAlertarCotizacionFallida('Zurich', "Error de conexión. Intente de nuevo o comuníquese con el equipo comercial");
+                                  console.error(err);
+                              })
+                          );
+                      });
+                      return; // Salir del bucle después de procesar Zurich
+                  } else if (aseguradora === "Estado") {
+                      const aseguradorasEstado = ["Estado", "Estado2"]; // Agrega más aseguradoras según sea necesario
+                      aseguradorasEstado.forEach(aseguradoraEstado => {
+                          cont.push(
+                              fetch(`https://grupoasistencia.com/motor_webservice_tst2/${aseguradoraEstado}?callback=myCallback`, requestOptions)
+                              .then(res => {
+                                  if (!res.ok) throw Error(res.statusText);
+                                  return res.json();
+                              })
+                              .then(ofertas => {
+                                  if (typeof ofertas.Resultado !== 'undefined') {
+                                      agregarAseguradoraFallida("Estado");
+                                      validarProblema(aseguradoraEstado, ofertas);
+                                      ofertas.Mensajes.forEach(mensaje => {
+                                          mostrarAlertarCotizacionFallida(aseguradoraEstado, mensaje);
+                                      });
+                                  } else {
+                                      const contadorPorEntidad = validarOfertas(ofertas, aseguradoraEstado, 1);
+                                      mostrarAlertaCotizacionExitosa(aseguradoraEstado, contadorPorEntidad);
+                                  }
+                              })
+                              .catch(err => {
+                                  agregarAseguradoraFallida("Estado");
+                                  mostrarAlertarCotizacionFallida(aseguradoraEstado, "Error de conexión. Intente de nuevo o comuníquese con el equipo comercial");
+                                  console.error(err);
+                              })
+                          );
+                      });
+                      return; // Salir del bucle después de procesar Estado
+                  } else {
+                      // Construir la URL de la solicitud para cada aseguradora
+                      url = `https://grupoasistencia.com/motor_webservice_tst2/${aseguradora}?callback=myCallback`;
                   }
-                  
+              
                   // Realizar la solicitud fetch y agregar la promesa al array
                   cont.push(
-                    fetch(url, requestOptions)
+                      fetch(url, requestOptions)
                       .then(res => {
-                        if (!res.ok) throw Error(res.statusText);
-                        return res.json();
+                          if (!res.ok) throw Error(res.statusText);
+                          return res.json();
                       })
                       .then(ofertas => {
-                        if (typeof ofertas[0].Resultado !== 'undefined') {
-                          agregarAseguradoraFallida(aseguradora);
-                          validarProblema(aseguradora, ofertas);
-                          ofertas[0].Mensajes.forEach(mensaje => {
-                            mostrarAlertarCotizacionFallida(aseguradora, mensaje)
-                          })
-                        } else {
-                          const contadorPorEntidad = validarOfertas(ofertas, aseguradora, 1);
-                          mostrarAlertaCotizacionExitosa(aseguradora, contadorPorEntidad)
-                        }
+                          if (typeof ofertas[0].Resultado !== 'undefined') {
+                              agregarAseguradoraFallida(aseguradora);
+                              validarProblema(aseguradora, ofertas);
+                              ofertas[0].Mensajes.forEach(mensaje => {
+                                  mostrarAlertarCotizacionFallida(aseguradora, mensaje)
+                              });
+                          } else {
+                              const contadorPorEntidad = validarOfertas(ofertas, aseguradora, 1);
+                              mostrarAlertaCotizacionExitosa(aseguradora, contadorPorEntidad)
+                          }
                       })
                       .catch(err => {
-                        agregarAseguradoraFallida(aseguradora);
-                        mostrarAlertarCotizacionFallida(aseguradora, "Error de conexión. Intente de nuevo o comuníquese con el equipo comercial");
-                        console.error(err);
+                          agregarAseguradoraFallida(aseguradora);
+                          mostrarAlertarCotizacionFallida(aseguradora, "Error de conexión. Intente de nuevo o comuníquese con el equipo comercial");
+                          console.error(err);
                       })
                   );
-                });
+              });
+              
                   /* HDI */
                   // cont.push(
                   //   fetch("https://grupoasistencia.com/motor_webservice/HdiPlus?callback=myCallback", requestOptions)
