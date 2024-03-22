@@ -60,16 +60,35 @@ class ModeloUsuarios{
 		$tabla2 = "roles";
 		$tabla3 = "intermediario";
 		$tabla4 = "permisosintegradoor";
-
-		$stmt = Conexion::conectar()->prepare("SELECT * FROM $tabla, $tabla2,$tabla4 WHERE $tabla.id_rol = $tabla2.id_rol AND $tabla.id_rol = $tabla4.idRol AND $item = :$item");
-		$stmt -> bindParam(":".$item, $valor, PDO::PARAM_STR);
-		$stmt -> execute();
+		$tabla5 = "credenciales";
 		
-
-		return $stmt -> fetch(PDO::FETCH_ASSOC);
-
-		$stmt -> close();
+		$stmt = Conexion::conectar()->prepare("
+			SELECT *
+			FROM $tabla
+			JOIN $tabla3 ON $tabla.id_Intermediario = $tabla3.id_Intermediario
+			JOIN $tabla2 ON $tabla.id_rol = $tabla2.id_rol
+			JOIN $tabla4 ON $tabla.id_rol = $tabla4.idRol
+			JOIN $tabla5 ON $tabla3.id_Intermediario = $tabla5.id_Intermediario
+			WHERE $item = :$item
+		");
+		
+		$stmt->bindParam(":".$item, $valor, PDO::PARAM_STR);
+		$stmt->execute();
+		
+		$resultado = $stmt->fetch(PDO::FETCH_ASSOC);
+		
+		if ($resultado === false) {
+			// Imprimir mensaje de error
+			$errorInfo = $stmt->errorInfo();
+			echo "Error: " . $errorInfo[2]; // El índice 2 contiene el mensaje de error
+		} else {
+			// Procesar el resultado
+			// print_r($resultado);
+		}
+		
+		// $stmt->close();
 		$stmt = null;
+		
 
 		
 		
