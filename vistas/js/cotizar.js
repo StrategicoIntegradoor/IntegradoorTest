@@ -2091,7 +2091,7 @@ $(document).ready(function () {
             
                 // Verificar si ya existe una fila para la aseguradora
                 const filaExistente = document.getElementById(aseguradora);
-                console.log(aseguradora)
+                console.log(filaExistente)
                 if (filaExistente) {
                     // Si la fila existe, actualiza el mensaje de observaciones
                     
