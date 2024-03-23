@@ -1920,6 +1920,7 @@ $(document).ready(function () {
 
                 // Crear una fila
                 const fila = document.createElement('tr');
+                fila.id = aseguradora; // Establecer el id del tr igual al nombre de la aseguradora
 
                 // Crear la celda de nombre de aseguradora
                 const celdaNombre = document.createElement('td');
