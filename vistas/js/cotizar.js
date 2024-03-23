@@ -1924,6 +1924,7 @@ $(document).ready(function () {
                 // Crear la celda de nombre de aseguradora
                 const celdaNombre = document.createElement('td');
                 celdaNombre.textContent = aseguradora;
+                celdaNombre.id = aseguradora; // Establecer el id igual al nombre de la aseguradora
                 fila.appendChild(celdaNombre);
 
                 // Crear la celda de respuesta
